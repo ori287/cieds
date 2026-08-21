@@ -117,9 +117,10 @@ ul.list{list-style:none;margin:0;padding:0;display:flex;flex-direction:column;ga
    <details class="datamenu" id="dataMenu"><summary>データ ▾</summary>
     <div class="menu">
      <button id="refreshBtn">☁ 最新版に更新（マスター再取得）</button>
-     <button id="exportBtn">この端末の追加を書き出し（JSON）</button>
-     <button id="importBtn">この端末の追加を読み込み</button>
-     <button id="clearBtn" class="danger">この端末の追加を消去</button>
+     <button id="shareBtn">🔗 端末間で共有（変更を同期）</button>
+     <button id="exportBtn">変更を書き出し（JSON）</button>
+     <button id="importBtn">変更を読み込み</button>
+     <button id="resetBtn" class="danger">変更をリセット（マスターに戻す）</button>
     </div>
    </details>
   </div>
@@ -140,6 +141,21 @@ ul.list{list-style:none;margin:0;padding:0;display:flex;flex-direction:column;ga
   <button class="btn primary" id="saveBtn">保存</button>
  </div>
 </div></div>
+<div class="overlay" id="shareOverlay"><div class="modal" role="dialog" aria-modal="true">
+ <h2>端末間で変更を共有</h2>
+ <p class="synchelp">アプリでの追加・編集・削除を、あなたの複数端末で自動共有します。無料のJSONBin（jsonbin.io）のAPIキーを使います。キーは各端末内だけに保存され、GitHubの公開ファイルには含まれません。基本ライブラリ（マスター）はGitHubで管理されます。</p>
+ <p class="syncstate">状態：<b id="sh_state">未設定</b></p>
+ <div class="field"><label for="sh_key">APIキー（1台目・JSONBinのMaster Key）</label><input id="sh_key" type="text" placeholder="$2a$10$..."/></div>
+ <div class="modalbtns"><button class="btn primary" id="sh_start">この端末で共有を開始（1台目）</button></div>
+ <div id="sh_codeoutWrap" style="display:none">
+  <p class="syncstate" style="margin-top:6px">接続コード（2台目以降に貼り付け）</p>
+  <textarea id="sh_codeout" readonly style="width:100%;min-height:56px;font-family:var(--mono);font-size:12px;border:1px solid #cbd5e1;border-radius:10px;padding:8px"></textarea>
+  <div class="modalbtns"><button class="btn ghost" id="sh_copy">接続コードをコピー</button></div>
+ </div>
+ <div class="field"><label for="sh_code">接続コード（2台目以降はここに貼り付け）</label><input id="sh_code" type="text" placeholder="1台目で表示されるコード"/></div>
+ <div class="modalbtns"><button class="btn ghost" id="sh_join">接続コードで参加（2台目以降）</button><button class="btn ghost" id="sh_now">今すぐ同期</button></div>
+ <div class="modalbtns"><button class="btn del" id="sh_off" style="display:none">共有を解除</button><button class="btn ghost" id="sh_close">閉じる</button></div>
+</div></div>
 <input id="fileInput" type="file" accept="application/json,.json" style="display:none"/>
 <div id="toast"></div>
 <script>
@@ -150,103 +166,94 @@ const G_CAT_ORDER=["PM","ICD","CRT","CSP","Leadless","Lead","EP","Clinical","Tro
 const CAT_COLORS={"PM":["#ccfbf1","#0f766e"],"ICD":["#ffe4e6","#be123c"],"CRT":["#ede9fe","#6d28d9"],"CSP":["#fae8ff","#a21caf"],"Leadless":["#cffafe","#0e7490"],"Lead":["#f3e8ff","#7e22ce"],"EP":["#fee2e2","#b91c1c"],"Clinical":["#ffedd5","#c2410c"],"Trouble":["#fef3c7","#b45309"],"Battery":["#d1fae5","#047857"],"Procedure":["#e0f2fe","#0369a1"],"Follow-up":["#e0e7ff","#4338ca"],"Device":["#f1f5f9","#475569"],"Safety":["#fef9c3","#a16207"],"Manufacturer":["#f5f5f4","#57534e"],"History":["#f5f5f5","#525252"],"レート応答":["#fef9c3","#a16207"],"ペーシング管理":["#ccfbf1","#0f766e"],"リモート":["#e0e7ff","#4338ca"],"MRI":["#e0f2fe","#0369a1"],"機器":["#f1f5f9","#475569"],"心房治療":["#fce7f3","#be185d"]};
 const FALLBACK=["#f1f5f9","#475569"];
 const DEV_TOKENS=["PM","ICD","CRT","CSP","Leadless"];
-const MK="cieds_master_v3",LK_G="cieds_localG",LK_F="cieds_localF",TK="cieds_master_t";
+const MK="cieds_master_v3",OV="cieds_overlay",TK="cieds_master_t",SH_KEY="cieds_share";
 const store={get(k){try{return JSON.parse(localStorage.getItem(k)||"null")}catch(e){return null}},set(k,v){try{localStorage.setItem(k,JSON.stringify(v));return true}catch(e){return false}}};
 function uid(){return crypto.randomUUID?crypto.randomUUID():"id"+Date.now()+Math.random().toString(16).slice(2)}
-function withId(a){return (a||[]).map(d=>Object.assign({id:d.id||uid()},d))}
 
-let masterG=withId(G_FALLBACK),masterF=withId(F_FALLBACK);
-const cached=store.get(MK);
-if(cached){if(Array.isArray(cached.gloss))masterG=withId(cached.gloss);if(Array.isArray(cached.feats))masterF=withId(cached.feats)}
-let localG=(store.get(LK_G)||[]).map(x=>Object.assign({},x,{_local:true}));
-let localF=(store.get(LK_F)||[]).map(x=>Object.assign({},x,{_local:true}));
-function gAll(){return masterG.concat(localG)}
-function fAll(){return masterF.concat(localF)}
+let rawG=(G_FALLBACK||[]).slice(),rawF=(F_FALLBACK||[]).slice();
+const cached=store.get(MK);if(cached){if(Array.isArray(cached.gloss))rawG=cached.gloss;if(Array.isArray(cached.feats))rawF=cached.feats}
+function normOv(o){o=o||{};return {addG:o.addG||[],addF:o.addF||[],editG:o.editG||{},editF:o.editF||{},delG:o.delG||[],delF:o.delF||[],ts:o.ts||0}}
+let overlay=normOv(store.get(OV));
+let sh=store.get(SH_KEY)||{key:"",binId:"",on:false,ts:0};
 
 let view="g",query="",gCat="すべて",gDev="すべて",fCat="すべて",editingId=null;
 const $=s=>document.querySelector(s);
 const listEl=$("#list"),countEl=$("#count"),totalsEl=$("#totals"),searchEl=$("#search"),clearEl=$("#clear");
-const overlay=$("#overlay"),modalTitle=$("#modalTitle"),modalFields=$("#modalFields"),deleteBtn=$("#deleteBtn"),dataMenu=$("#dataMenu"),discEl=$("#disc");
+const modalTitle=$("#modalTitle"),modalFields=$("#modalFields"),deleteBtn=$("#deleteBtn"),dataMenu=$("#dataMenu"),discEl=$("#disc");
 function esc(s){return (s||"").replace(/[&<>"]/g,m=>({"&":"&amp;","<":"&lt;",">":"&gt;",'"':"&quot;"}[m]))}
 function catColor(c){return CAT_COLORS[c]||FALLBACK}
 function chip(label,active,n,cls){return `<button class="chip ${cls||""}${active?" active":""}" data-v="${esc(label)}">${esc(label)}${n!=null?`<span class="n">${n}</span>`:""}</button>`}
+function persistOverlay(){overlay.ts=Date.now();store.set(OV,overlay);if(sh.on)pushSharedSoon()}
 
 (function(){const g=$("#ticks");[8,26,33,58,76,83,108,126,151,158].forEach((x,i)=>{const l=document.createElementNS("http://www.w3.org/2000/svg","line");l.setAttribute("x1",x);l.setAttribute("y1",i%3===0?3:6);l.setAttribute("x2",x);l.setAttribute("y2",12);l.setAttribute("stroke-width","0.8");g.appendChild(l)})})();
+
+function gList(){const del=new Set(overlay.delG);const out=[];rawG.forEach(m=>{if(del.has(m.term))return;const ov=overlay.editG[m.term];out.push(Object.assign({},m,ov||{},{_id:"m:"+m.term,_master:true,_edited:!!ov}))});overlay.addG.forEach(a=>out.push(Object.assign({},a,{_id:"a:"+a.id,_add:true})));return out}
+function fList(){const del=new Set(overlay.delF);const out=[];rawF.forEach(m=>{if(del.has(m.fn))return;const ov=overlay.editF[m.fn];out.push(Object.assign({},m,ov||{},{_id:"m:"+m.fn,_master:true,_edited:!!ov}))});overlay.addF.forEach(a=>out.push(Object.assign({},a,{_id:"a:"+a.id,_add:true})));return out}
 
 function setView(v){
  view=v;query="";searchEl.value="";clearEl.style.display="none";
  $("#segG").classList.toggle("active",v==="g");$("#segF").classList.toggle("active",v==="f");
  $("#glossFilters").style.display=v==="g"?"":"none";$("#featFilters").style.display=v==="f"?"":"none";
  searchEl.placeholder=v==="g"?"用語・略語・英語・タグで検索（例: PVARP, LBBAP, 閾値）":"機能名・各社の機能名で検索（例: CLS, SonR, MVP）";
- $("#openAdd").textContent=v==="g"?"＋ 用語を追加（この端末）":"＋ 機能を追加（この端末）";
- discEl.textContent=v==="g"?"共有ライブラリはマスター（中央）で管理され、起動時に自動更新されます。「＋追加」はこの端末だけのメモで、マスター更新でも消えません。":"メーカー別の機能名の対照表です。名称・仕様は世代や国・機種で異なる場合があるため、最終確認は各社の最新資料に従ってください。";
+ $("#openAdd").textContent=v==="g"?"＋ 用語を追加":"＋ 機能を追加";
+ discEl.textContent=v==="g"?("各項目は編集・削除できます（この端末の変更として保存）。"+(sh.on?"共有オンのため変更は端末間で同期されます。":"「端末間で共有」をオンにすると変更を同期できます。")+"基本ライブラリ（マスター）はGitHubで管理され、起動時に自動更新されます。"):"メーカー別の機能名の対照表です。名称・仕様は世代や国・機種で異なる場合があるため、最終確認は各社の最新資料に従ってください。";
  renderChips();renderList();
 }
 function renderChips(){
  if(view==="g"){
-  const all=gAll(),cats=[...new Set(all.map(t=>t.cat))];
+  const all=gList(),cats=[...new Set(all.map(t=>t.cat))];
   const ord=G_CAT_ORDER.filter(c=>cats.includes(c));cats.forEach(c=>{if(!ord.includes(c))ord.push(c)});
   const counts={};ord.forEach(c=>counts[c]=all.filter(t=>t.cat===c).length);
   let h=chip("すべて",gCat==="すべて",all.length);ord.forEach(c=>h+=chip(c,gCat===c,counts[c]));
-  $("#chips").innerHTML=h;
-  [...$("#chips").querySelectorAll(".chip")].forEach(b=>b.onclick=()=>{gCat=b.dataset.v;renderChips();renderList()});
+  $("#chips").innerHTML=h;[...$("#chips").querySelectorAll(".chip")].forEach(b=>b.onclick=()=>{gCat=b.dataset.v;renderChips();renderList()});
   let d=chip("すべて",gDev==="すべて",all.length,"dev");
   DEV_TOKENS.forEach(tk=>{const n=all.filter(t=>(t.device||"").split(/[\/,]/).map(x=>x.trim()).includes(tk)).length;d+=chip(tk,gDev===tk,n,"dev")});
-  $("#devchips").innerHTML=d;
-  [...$("#devchips").querySelectorAll(".chip")].forEach(b=>b.onclick=()=>{gDev=b.dataset.v;renderChips();renderList()});
+  $("#devchips").innerHTML=d;[...$("#devchips").querySelectorAll(".chip")].forEach(b=>b.onclick=()=>{gDev=b.dataset.v;renderChips();renderList()});
  }else{
-  const all=fAll(),cats=[...new Set(all.map(t=>t.cat))];
+  const all=fList(),cats=[...new Set(all.map(t=>t.cat))];
   const counts={};cats.forEach(c=>counts[c]=all.filter(t=>t.cat===c).length);
   let h=chip("すべて",fCat==="すべて",all.length);cats.forEach(c=>h+=chip(c,fCat===c,counts[c]));
-  $("#fchips").innerHTML=h;
-  [...$("#fchips").querySelectorAll(".chip")].forEach(b=>b.onclick=()=>{fCat=b.dataset.v;renderChips();renderList()});
+  $("#fchips").innerHTML=h;[...$("#fchips").querySelectorAll(".chip")].forEach(b=>b.onclick=()=>{fCat=b.dataset.v;renderChips();renderList()});
  }
 }
 function renderList(){
  const q=query.trim().toLowerCase();
  if(view==="g"){
-  const rows=gAll().filter(t=>{
-   if(gCat!=="すべて"&&t.cat!==gCat)return false;
-   if(gDev!=="すべて"&&!(t.device||"").split(/[\/,]/).map(x=>x.trim()).includes(gDev))return false;
-   if(!q)return true;
-   return [t.term,t.en,t.abbr,t.short,t.tags].some(f=>(f||"").toLowerCase().includes(q));
-  });
-  totalsEl.textContent=gAll().length+" terms";countEl.textContent=rows.length+" 件";
+  const rows=gList().filter(t=>{if(gCat!=="すべて"&&t.cat!==gCat)return false;if(gDev!=="すべて"&&!(t.device||"").split(/[\/,]/).map(x=>x.trim()).includes(gDev))return false;if(!q)return true;return [t.term,t.en,t.abbr,t.short,t.tags].some(f=>(f||"").toLowerCase().includes(q))});
+  totalsEl.textContent=gList().length+" terms";countEl.textContent=rows.length+" 件";
   listEl.innerHTML=rows.length?rows.map(gcard).join(""):emptyHTML();
  }else{
-  const rows=fAll().filter(t=>{
-   if(fCat!=="すべて"&&t.cat!==fCat)return false;
-   if(!q)return true;
-   return [t.fn,t.en,t.note,t.mdt,t.abt,t.bsx,t.bio,t.mcp].some(f=>(f||"").toLowerCase().includes(q));
-  });
-  totalsEl.textContent=fAll().length+" 機能";countEl.textContent=rows.length+" 件";
+  const rows=fList().filter(t=>{if(fCat!=="すべて"&&t.cat!==fCat)return false;if(!q)return true;return [t.fn,t.en,t.note,t.mdt,t.abt,t.bsx,t.bio,t.mcp].some(f=>(f||"").toLowerCase().includes(q))});
+  totalsEl.textContent=fList().length+" 機能";countEl.textContent=rows.length+" 件";
   listEl.innerHTML=rows.length?rows.map(fcard).join(""):emptyHTML();
  }
  [...listEl.querySelectorAll("[data-edit]")].forEach(b=>b.onclick=()=>openEdit(b.dataset.edit));
 }
 function emptyHTML(){return `<li class="empty"><p class="big">該当がありません</p><p class="sm">別のキーワードやフィルターでお試しください。</p></li>`}
-function localTag(t){return t._local?`<span class="tag" style="background:#ecfeff;color:#0e7490">この端末</span>`:""}
+function badges(t){let s="";if(t._add)s+=sh.on?`<span class="tag" style="background:#dcfce7;color:#15803d">共有</span>`:`<span class="tag" style="background:#ecfeff;color:#0e7490">この端末</span>`;if(t._edited)s+=`<span class="tag" style="background:#fef9c3;color:#a16207">編集</span>`;return s}
 function gcard(t){
  const[bg,fg]=catColor(t.cat),meta=[];
  if(t.device)meta.push(`<span class="tag">${esc(t.device)}</span>`);
  if(t.maker&&t.maker!=="General")meta.push(`<span class="tag mk">${esc(t.maker)}</span>`);
+ const b=badges(t);
  return `<li class="cardrow"><div class="cardhead">
   <p class="term">${esc(t.term)}${t.abbr?`<span class="abbr">${esc(t.abbr)}</span>`:""}</p>
-  <div class="cardtools"><span class="pill" style="background:${bg};color:${fg}">${esc(t.cat)}</span>${t._local?editBtn(t.id):""}</div></div>
-  ${t.en?`<p class="en">${esc(t.en)}</p>`:""}${(meta.length||t._local)?`<div class="metarow">${localTag(t)}${meta.join("")}</div>`:""}
+  <div class="cardtools"><span class="pill" style="background:${bg};color:${fg}">${esc(t.cat)}</span>${editBtn(t._id)}</div></div>
+  ${t.en?`<p class="en">${esc(t.en)}</p>`:""}${(meta.length||b)?`<div class="metarow">${b}${meta.join("")}</div>`:""}
   ${t.short?`<p class="short">${esc(t.short)}</p>`:""}</li>`;
 }
 function fcard(t){
  const[bg,fg]=catColor(t.cat);
  const rows=VENDORS.map(([k,lab])=>{const val=t[k];const none=!val||val==="—";return `<div class="vrow"><span class="vlabel">${lab}</span><span class="vval${none?" none":""}">${none?"—":esc(val)}</span></div>`}).join("");
+ const b=badges(t);
  return `<li class="cardrow"><div class="cardhead">
   <p class="fn">${esc(t.fn)}</p>
-  <div class="cardtools"><span class="pill" style="background:${bg};color:${fg}">${esc(t.cat)}</span>${t._local?editBtn(t.id):""}</div></div>
-  ${t.en?`<p class="en">${esc(t.en)}</p>`:""}${t._local?`<div class="metarow">${localTag(t)}</div>`:""}
+  <div class="cardtools"><span class="pill" style="background:${bg};color:${fg}">${esc(t.cat)}</span>${editBtn(t._id)}</div></div>
+  ${t.en?`<p class="en">${esc(t.en)}</p>`:""}${b?`<div class="metarow">${b}</div>`:""}
   <div class="vgrid">${rows}</div>
   ${t.note?`<p class="note">${esc(t.note)}</p>`:""}</li>`;
 }
-function editBtn(id){return `<button class="iconbtn" data-edit="${id}" aria-label="編集"><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 20h9"/><path d="M16.5 3.5a2.1 2.1 0 0 1 3 3L7 19l-4 1 1-4Z"/></svg></button>`}
+function editBtn(id){return `<button class="iconbtn" data-edit="${esc(id)}" aria-label="編集"><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 20h9"/><path d="M16.5 3.5a2.1 2.1 0 0 1 3 3L7 19l-4 1 1-4Z"/></svg></button>`}
 
 function fieldHTML(id,label,ph,ta){return `<div class="field"><label for="${id}">${label}</label>${ta?`<textarea id="${id}" placeholder="${ph||""}"></textarea>`:`<input id="${id}" type="text" placeholder="${ph||""}"/>`}</div>`}
 function buildModalFields(){
@@ -264,61 +271,69 @@ function buildModalFields(){
    ${fieldHTML("f_note","メモ","",true)}`;
  }
 }
-function openAdd(){editingId=null;modalTitle.textContent=view==="g"?"用語を追加（この端末）":"機能を追加（この端末）";buildModalFields();
+function openModal(){$("#overlay").classList.add("open")}
+function closeModal(){$("#overlay").classList.remove("open")}
+function openAdd(){editingId=null;modalTitle.textContent=view==="g"?"用語を追加":"機能を追加";buildModalFields();
  if(view==="g"&&gCat!=="すべて")$("#f_cat").value=gCat;if(view==="f"&&fCat!=="すべて")$("#f_cat").value=fCat;
- deleteBtn.style.display="none";overlay.classList.add("open");setTimeout(()=>{const el=$("#f_term")||$("#f_fn");el&&el.focus()},50)}
-function openEdit(id){const arr=view==="g"?localG:localF;const t=arr.find(x=>x.id===id);if(!t)return;editingId=id;modalTitle.textContent="編集（この端末）";buildModalFields();
+ deleteBtn.style.display="none";openModal();setTimeout(()=>{const el=$("#f_term")||$("#f_fn");el&&el.focus()},50)}
+function openEdit(id){const arr=view==="g"?gList():fList();const t=arr.find(x=>x._id===id);if(!t)return;editingId=id;modalTitle.textContent="編集";buildModalFields();
  const keys=view==="g"?["term","abbr","en","cat","device","maker","short"]:["fn","en","cat","mdt","abt","bsx","bio","mcp","note"];
- keys.forEach(k=>{const el=$("#f_"+k);if(el)el.value=t[k]||""});
- deleteBtn.style.display="";overlay.classList.add("open")}
-function closeModal(){overlay.classList.remove("open")}
+ keys.forEach(k=>{const el=$("#f_"+k);if(el)el.value=t[k]||""});deleteBtn.style.display="";openModal()}
 function val(k){const el=$("#f_"+k);return el?el.value.trim():""}
-function saveLocal(){if(view==="g")store.set(LK_G,localG);else store.set(LK_F,localF)}
 function save(){
  if(view==="g"){
-  const v={term:val("term"),abbr:val("abbr"),en:val("en"),cat:val("cat"),device:val("device"),maker:val("maker"),short:val("short"),tags:"",_local:true};
+  const v={term:val("term"),abbr:val("abbr"),en:val("en"),cat:val("cat"),device:val("device"),maker:val("maker"),short:val("short")};
   if(!v.term||!v.cat||!v.short){alert("用語・カテゴリ・一言でいうと は必須です。");return}
-  if(editingId){Object.assign(localG.find(x=>x.id===editingId),v)}else{v.id=uid();localG.push(v)}
+  if(editingId&&editingId.slice(0,2)==="m:"){overlay.editG[editingId.slice(2)]=v}
+  else if(editingId&&editingId.slice(0,2)==="a:"){const id=editingId.slice(2);const it=overlay.addG.find(x=>x.id===id);if(it)Object.assign(it,v)}
+  else{v.id=uid();v.tags="";overlay.addG.push(v)}
  }else{
-  const v={fn:val("fn"),en:val("en"),cat:val("cat"),mdt:val("mdt"),abt:val("abt"),bsx:val("bsx"),bio:val("bio"),mcp:val("mcp"),note:val("note"),_local:true};
+  const v={fn:val("fn"),en:val("en"),cat:val("cat"),mdt:val("mdt"),abt:val("abt"),bsx:val("bsx"),bio:val("bio"),mcp:val("mcp"),note:val("note")};
   if(!v.fn||!v.cat){alert("機能名・カテゴリ は必須です。");return}
-  if(editingId){Object.assign(localF.find(x=>x.id===editingId),v)}else{v.id=uid();localF.push(v)}
+  if(editingId&&editingId.slice(0,2)==="m:"){overlay.editF[editingId.slice(2)]=v}
+  else if(editingId&&editingId.slice(0,2)==="a:"){const id=editingId.slice(2);const it=overlay.addF.find(x=>x.id===id);if(it)Object.assign(it,v)}
+  else{v.id=uid();overlay.addF.push(v)}
  }
- saveLocal();closeModal();renderChips();renderList()
+ persistOverlay();closeModal();renderChips();renderList()
 }
-function del(){if(!editingId)return;if(!confirm("この端末の追加を削除しますか？"))return;
- if(view==="g")localG=localG.filter(x=>x.id!==editingId);else localF=localF.filter(x=>x.id!==editingId);
- saveLocal();closeModal();renderChips();renderList()}
+function del(){if(!editingId)return;if(!confirm("削除しますか？（この端末の変更として保存されます）"))return;
+ const k=editingId.slice(2),isM=editingId.slice(0,2)==="m:";
+ if(view==="g"){if(isM){if(!overlay.delG.includes(k))overlay.delG.push(k);delete overlay.editG[k]}else{overlay.addG=overlay.addG.filter(x=>x.id!==k)}}
+ else{if(isM){if(!overlay.delF.includes(k))overlay.delF.push(k);delete overlay.editF[k]}else{overlay.addF=overlay.addF.filter(x=>x.id!==k)}}
+ persistOverlay();closeModal();renderChips();renderList()
+}
 
 function toast(msg,err){const t=$("#toast");if(!t)return;t.textContent=msg;t.style.background=err?"#be123c":"#0f766e";t.classList.add("show");clearTimeout(t._t);t._t=setTimeout(()=>t.classList.remove("show"),1800)}
 function status(txt){const el=$("#syncStatus");if(el)el.textContent=txt||""}
 async function loadMaster(manual){
- try{
-  const r=await fetch("data.json?t="+Date.now(),{cache:"no-store"});
-  if(!r.ok)throw new Error(r.status);
-  const d=await r.json();
-  if(Array.isArray(d.gloss))masterG=withId(d.gloss);
-  if(Array.isArray(d.feats))masterF=withId(d.feats);
-  store.set(MK,{gloss:masterG,feats:masterF});
-  const now=new Date();store.set(TK,now.getTime());
-  renderChips();renderList();
-  status("☁︎ 最新版・"+String(now.getHours()).padStart(2,"0")+":"+String(now.getMinutes()).padStart(2,"0")+"取得");
-  if(manual)toast("最新版に更新しました");
- }catch(e){
-  const t=store.get(TK);const d=t?new Date(t):null;
-  status("オフライン："+(d?("最終 "+String(d.getHours()).padStart(2,"0")+":"+String(d.getMinutes()).padStart(2,"0")+"の保存版を表示"):"保存版を表示"));
-  if(manual)toast("更新できませんでした（オフライン）",true);
- }
+ try{const r=await fetch("data.json?t="+Date.now(),{cache:"no-store"});if(!r.ok)throw new Error(r.status);const d=await r.json();
+  if(Array.isArray(d.gloss))rawG=d.gloss;if(Array.isArray(d.feats))rawF=d.feats;
+  store.set(MK,{gloss:rawG,feats:rawF});const now=new Date();store.set(TK,now.getTime());
+  renderChips();renderList();status("☁︎ 最新版・"+String(now.getHours()).padStart(2,"0")+":"+String(now.getMinutes()).padStart(2,"0")+"取得");if(manual)toast("最新版に更新しました");
+ }catch(e){const t=store.get(TK);const d=t?new Date(t):null;status("オフライン："+(d?("最終 "+String(d.getHours()).padStart(2,"0")+":"+String(d.getMinutes()).padStart(2,"0")+"の保存版を表示"):"保存版を表示"));if(manual)toast("更新できませんでした（オフライン）",true)}
 }
-function exportLocal(){const data=view==="g"?localG:localF;const name=(view==="g"?"cieds-local-terms-":"cieds-local-feats-")+new Date().toISOString().slice(0,10)+".json";
- const b=new Blob([JSON.stringify(data,null,2)],{type:"application/json"});const u=URL.createObjectURL(b);const a=document.createElement("a");a.href=u;a.download=name;a.click();URL.revokeObjectURL(u);dataMenu.removeAttribute("open")}
-function importLocal(file){const r=new FileReader();r.onload=()=>{try{const d=JSON.parse(r.result);if(!Array.isArray(d))throw 0;
-  const arr=d.map(x=>Object.assign({},x,{id:x.id||uid(),_local:true}));
-  if(view==="g"){localG=arr.filter(x=>x.term);store.set(LK_G,localG)}else{localF=arr.filter(x=>x.fn);store.set(LK_F,localF)}
-  renderChips();renderList();alert("読み込みました（この端末の追加）。")}catch(e){alert("読み込めませんでした。書き出したJSONを選んでください。")}dataMenu.removeAttribute("open")};r.readAsText(file)}
-function clearLocal(){if(!confirm("この端末で追加した項目をすべて消去します。マスター（共有）の内容は残ります。よろしいですか？"))return;
- if(view==="g"){localG=[];store.set(LK_G,localG)}else{localF=[];store.set(LK_F,localF)}
- renderChips();renderList();dataMenu.removeAttribute("open")}
+function exportOverlay(){const b=new Blob([JSON.stringify(overlay,null,2)],{type:"application/json"});const u=URL.createObjectURL(b);const a=document.createElement("a");a.href=u;a.download="cieds-changes-"+new Date().toISOString().slice(0,10)+".json";a.click();URL.revokeObjectURL(u);dataMenu.removeAttribute("open")}
+function importOverlay(file){const r=new FileReader();r.onload=()=>{try{overlay=normOv(JSON.parse(r.result));persistOverlay();renderChips();renderList();alert("変更を読み込みました。")}catch(e){alert("読み込めませんでした。書き出したJSONを選んでください。")}dataMenu.removeAttribute("open")};r.readAsText(file)}
+function resetOverlay(){if(!confirm("この端末の変更（追加・編集・削除）をすべて取り消し、マスターの状態に戻します。共有オンの場合は他の端末にも反映されます。よろしいですか？"))return;overlay=normOv(null);persistOverlay();renderChips();renderList();dataMenu.removeAttribute("open")}
+
+// ---- 端末間共有（変更を同期 / JSONBin） ----
+function saveSh(){store.set(SH_KEY,sh)}
+const SAPI="https://api.jsonbin.io/v3/b";
+function shPayload(){overlay.ts=overlay.ts||Date.now();return overlay}
+async function shCreate(){const r=await fetch(SAPI,{method:"POST",headers:{"Content-Type":"application/json","X-Master-Key":sh.key,"X-Bin-Private":"true","X-Bin-Name":"cieds-shared-changes"},body:JSON.stringify(shPayload())});if(!r.ok)throw new Error("create "+r.status);const j=await r.json();return j.metadata.id}
+async function shGet(){const r=await fetch(SAPI+"/"+sh.binId+"/latest",{headers:{"X-Master-Key":sh.key}});if(!r.ok)throw new Error("get "+r.status);const j=await r.json();return j.record}
+async function shPut(){const r=await fetch(SAPI+"/"+sh.binId,{method:"PUT",headers:{"Content-Type":"application/json","X-Master-Key":sh.key},body:JSON.stringify(shPayload())});if(!r.ok)throw new Error("put "+r.status)}
+function shApply(d){overlay=normOv(d);store.set(OV,overlay);renderChips();renderList()}
+let shT=null;
+function pushSharedSoon(){if(!sh.on||!sh.binId)return;clearTimeout(shT);shT=setTimeout(()=>{shPut().then(()=>toast("共有に反映しました")).catch(()=>toast("共有エラー",true))},1200)}
+async function pullShared(manual){if(!sh.on||!sh.binId)return;try{const d=await shGet();if(((d&&d.ts)||0)>=(overlay.ts||0)){shApply(d)}else{await shPut()}if(manual)toast("共有を同期しました")}catch(e){if(manual)toast("共有の同期に失敗",true)}}
+function encCode(){return btoa(unescape(encodeURIComponent(JSON.stringify({k:sh.key,b:sh.binId}))))}
+function decCode(code){return JSON.parse(decodeURIComponent(escape(atob(code.trim()))))}
+function openShare(){dataMenu.removeAttribute("open");$("#sh_key").value=sh.key||"";$("#sh_code").value="";updateShare();$("#shareOverlay").classList.add("open")}
+function updateShare(){const on=sh.on&&sh.binId;$("#sh_state").textContent=on?"有効（この端末は共有中）":"未設定";$("#sh_codeout").value=on?encCode():"";$("#sh_codeoutWrap").style.display=on?"":"none";$("#sh_off").style.display=on?"":"none"}
+async function shareStart(){const k=$("#sh_key").value.trim();if(!k){alert("APIキーを入力してください。");return}sh.key=k;sh.on=true;overlay.ts=Date.now();saveSh();const b=$("#sh_start");b.textContent="作成中…";try{const id=await shCreate();sh.binId=id;saveSh();updateShare();setView(view);toast("共有を開始しました");alert("共有を開始しました。\n\nもう1台では、下の「接続コード」をコピーして貼り付け、「参加」を押してください。")}catch(e){sh.on=false;saveSh();alert("作成できませんでした。APIキーを確認してください。")}b.textContent="この端末で共有を開始（1台目）"}
+async function shareJoin(){const c=$("#sh_code").value.trim();if(!c){alert("接続コードを貼り付けてください。");return}let o;try{o=decCode(c)}catch(e){alert("接続コードが正しくありません。");return}sh.key=o.k;sh.binId=o.b;sh.on=true;saveSh();const b=$("#sh_join");b.textContent="参加中…";try{const d=await shGet();shApply(d);updateShare();setView(view);toast("共有に参加しました");alert("共有に参加しました。以後、変更が自動で同期されます。")}catch(e){sh.on=false;saveSh();alert("参加できませんでした。接続コードを確認してください。")}b.textContent="接続コードで参加（2台目以降）"}
+function shareOff(){if(!confirm("この端末の共有を解除します。変更内容は端末に残ります。"))return;sh={key:"",binId:"",on:false,ts:overlay.ts||0};saveSh();updateShare();setView(view);toast("共有を解除しました")}
 
 searchEl.addEventListener("input",e=>{query=e.target.value;clearEl.style.display=query?"block":"none";renderList()});
 clearEl.addEventListener("click",()=>{query="";searchEl.value="";clearEl.style.display="none";searchEl.focus();renderList()});
@@ -328,16 +343,25 @@ $("#openAdd").addEventListener("click",openAdd);
 $("#cancelBtn").addEventListener("click",closeModal);
 $("#saveBtn").addEventListener("click",save);
 deleteBtn.addEventListener("click",del);
-overlay.addEventListener("click",e=>{if(e.target===overlay)closeModal()});
-document.addEventListener("keydown",e=>{if(e.key==="Escape"&&overlay.classList.contains("open"))closeModal()});
+$("#overlay").addEventListener("click",e=>{if(e.target===$("#overlay"))closeModal()});
+document.addEventListener("keydown",e=>{if(e.key==="Escape"){if($("#overlay").classList.contains("open"))closeModal();if($("#shareOverlay").classList.contains("open"))$("#shareOverlay").classList.remove("open")}});
 $("#refreshBtn").addEventListener("click",()=>{dataMenu.removeAttribute("open");loadMaster(true)});
-$("#exportBtn").addEventListener("click",exportLocal);
+$("#shareBtn").addEventListener("click",openShare);
+$("#exportBtn").addEventListener("click",exportOverlay);
 $("#importBtn").addEventListener("click",()=>$("#fileInput").click());
-$("#fileInput").addEventListener("change",e=>{if(e.target.files[0])importLocal(e.target.files[0]);e.target.value=""});
-$("#clearBtn").addEventListener("click",clearLocal);
+$("#fileInput").addEventListener("change",e=>{if(e.target.files[0])importOverlay(e.target.files[0]);e.target.value=""});
+$("#resetBtn").addEventListener("click",resetOverlay);
+$("#sh_start").addEventListener("click",shareStart);
+$("#sh_join").addEventListener("click",shareJoin);
+$("#sh_now").addEventListener("click",()=>pullShared(true));
+$("#sh_off").addEventListener("click",shareOff);
+$("#sh_close").addEventListener("click",()=>$("#shareOverlay").classList.remove("open"));
+$("#shareOverlay").addEventListener("click",e=>{if(e.target===$("#shareOverlay"))$("#shareOverlay").classList.remove("open")});
+$("#sh_copy").addEventListener("click",()=>{const c=encCode();if(navigator.clipboard)navigator.clipboard.writeText(c);toast("接続コードをコピーしました")});
 
 setView("g");
 loadMaster(false);
+if(sh.on)pullShared(false);
 </script>
 </body>
 </html>
