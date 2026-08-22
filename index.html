@@ -94,6 +94,15 @@ ul.list{list-style:none;margin:0;padding:0;display:flex;flex-direction:column;ga
 :focus-visible{outline:2px solid var(--teal);outline-offset:2px}
 #toast{position:fixed;left:50%;bottom:24px;transform:translateX(-50%) translateY(20px);background:#0f766e;color:#fff;font-size:13px;font-weight:600;padding:9px 16px;border-radius:999px;opacity:0;pointer-events:none;transition:.25s;z-index:60}#toast.show{opacity:1;transform:translateX(-50%) translateY(0)}.syncstat{font-family:var(--mono);font-size:11px;color:#0f766e;margin:-6px 0 12px}.synchelp{font-size:12px;line-height:1.6;color:var(--sub);margin:0 0 10px;background:#f0fdfa;border-radius:8px;padding:9px 10px}.syncstate{font-size:13px;margin:0 0 12px}@media(prefers-reduced-motion:reduce){*{transition:none!important}}
 
+.cardrow{cursor:pointer}
+.short{display:-webkit-box;-webkit-line-clamp:2;-webkit-box-orient:vertical;overflow:hidden}
+.detailmodal{max-height:88vh;overflow:auto}
+.dhead{display:flex;align-items:flex-start;justify-content:space-between;gap:10px}
+.dterm{font-family:var(--mono);font-size:20px;font-weight:700;line-height:1.3;margin:0}
+.dterm .abbr{color:var(--teal);margin-left:8px;font-size:15px}
+.dshort{font-size:15px;line-height:1.85;color:var(--ink);margin:12px 0 0;white-space:pre-wrap}
+.dnote{font-size:13px;line-height:1.7;color:var(--sub);margin:12px 0 0;background:#f8fafc;border-radius:8px;padding:10px 12px}
+
 .sortbar{display:flex;justify-content:flex-end;margin:2px 0 10px}
 .sortsel{width:auto;min-width:118px;font-size:13px;font-weight:600;color:var(--sub);padding-top:8px;padding-bottom:8px}
 .star{border:0;background:transparent;cursor:pointer;padding:2px;line-height:0;color:#cbd5e1}
@@ -156,6 +165,13 @@ ul.list{list-style:none;margin:0;padding:0;display:flex;flex-direction:column;ga
   <button class="btn del" id="deleteBtn" style="display:none">削除</button>
   <button class="btn ghost" id="cancelBtn">キャンセル</button>
   <button class="btn primary" id="saveBtn">保存</button>
+ </div>
+</div></div>
+<div class="overlay" id="detailOverlay"><div class="modal detailmodal" role="dialog" aria-modal="true">
+ <div id="detailBody"></div>
+ <div class="modalbtns">
+  <button class="btn ghost" id="d_edit">編集</button>
+  <button class="btn primary" id="d_close">閉じる</button>
  </div>
 </div></div>
 <div class="overlay" id="shareOverlay"><div class="modal" role="dialog" aria-modal="true">
@@ -231,6 +247,21 @@ function setView(v){
  discEl.textContent=v==="g"?("各項目は編集・削除できます（この端末の変更として保存）。"+(sh.on?"共有オンのため変更は端末間で同期されます。":"「端末間で共有」をオンにすると変更を同期できます。")+"基本ライブラリ（マスター）はGitHubで管理され、起動時に自動更新されます。"):"メーカー別の機能名の対照表です。名称・仕様は世代や国・機種で異なる場合があるため、最終確認は各社の最新資料に従ってください。";
  renderChips();renderList();
 }
+let detailId=null;
+function openDetail(id){const arr=view==="g"?gList():fList();const t=arr.find(x=>x._id===id);if(!t)return;detailId=id;recordRecent(keyOf(view,t));renderDetail(t);$("#detailOverlay").classList.add("open")}
+function closeDetail(){$("#detailOverlay").classList.remove("open")}
+function renderDetail(t){
+ const[bg,fg]=catColor(t.cat);const key=keyOf(view,t);let body;
+ if(view==="g"){
+  const meta=[];if(t.device)meta.push(`<span class="tag">${esc(t.device)}</span>`);if(t.maker&&t.maker!=="General")meta.push(`<span class="tag mk">${esc(t.maker)}</span>`);
+  body=`<div class="dhead"><p class="dterm">${esc(t.term)}${t.abbr?`<span class="abbr">${esc(t.abbr)}</span>`:""}</p><div class="cardtools"><span class="pill" style="background:${bg};color:${fg}">${esc(t.cat)}</span>${starBtn(key)}</div></div>${t.en?`<p class="en">${esc(t.en)}</p>`:""}${meta.length?`<div class="metarow">${meta.join("")}</div>`:""}${t.short?`<p class="dshort">${esc(t.short)}</p>`:""}`;
+ }else{
+  const vr=VENDORS.map(([k,lab])=>{const val=t[k];const none=!val||val==="—";return `<div class="vrow"><span class="vlabel">${lab}</span><span class="vval${none?" none":""}">${none?"—":esc(val)}</span></div>`}).join("");
+  body=`<div class="dhead"><p class="dterm" style="font-size:18px">${esc(t.fn)}</p><div class="cardtools"><span class="pill" style="background:${bg};color:${fg}">${esc(t.cat)}</span>${starBtn(key)}</div></div>${t.en?`<p class="en">${esc(t.en)}</p>`:""}<div class="vgrid">${vr}</div>${t.note?`<p class="dnote">${esc(t.note)}</p>`:""}`;
+ }
+ $("#detailBody").innerHTML=body;
+ const st=$("#detailBody").querySelector("[data-fav]");if(st)st.onclick=e=>{e.stopPropagation();toggleFav(st.dataset.fav);renderDetail(t)};
+}
 function renderChips(){
  renderModeChips();renderSort();
  if(view==="g"){
@@ -267,7 +298,7 @@ function renderList(){
   totalsEl.textContent=fList().length+" functions";countEl.textContent=rows.length+" results";
   listEl.innerHTML=rows.length?rows.map(fcard).join(""):emptyHTML();
  }
- [...listEl.querySelectorAll(".cardrow")].forEach(li=>li.addEventListener("click",()=>recordRecent(li.dataset.key)));
+ [...listEl.querySelectorAll(".cardrow")].forEach(li=>li.addEventListener("click",()=>openDetail(li.dataset.id)));
  [...listEl.querySelectorAll("[data-edit]")].forEach(b=>b.onclick=e=>{e.stopPropagation();openEdit(b.dataset.edit)});
  [...listEl.querySelectorAll("[data-fav]")].forEach(b=>b.onclick=e=>{e.stopPropagation();toggleFav(b.dataset.fav)});
 }
@@ -278,7 +309,7 @@ function gcard(t){
  if(t.device)meta.push(`<span class="tag">${esc(t.device)}</span>`);
  if(t.maker&&t.maker!=="General")meta.push(`<span class="tag mk">${esc(t.maker)}</span>`);
  const b=badges(t);
- return `<li class="cardrow" data-key="g|${esc(t.term)}"><div class="cardhead">
+ return `<li class="cardrow" data-key="g|${esc(t.term)}" data-id="${esc(t._id)}"><div class="cardhead">
   <p class="term">${esc(t.term)}${t.abbr?`<span class="abbr">${esc(t.abbr)}</span>`:""}</p>
   <div class="cardtools"><span class="pill" style="background:${bg};color:${fg}">${esc(t.cat)}</span>${starBtn("g|"+t.term)}${editBtn(t._id)}</div></div>
   ${t.en?`<p class="en">${esc(t.en)}</p>`:""}${(meta.length||b)?`<div class="metarow">${b}${meta.join("")}</div>`:""}
@@ -288,7 +319,7 @@ function fcard(t){
  const[bg,fg]=catColor(t.cat);
  const rows=VENDORS.map(([k,lab])=>{const val=t[k];const none=!val||val==="—";return `<div class="vrow"><span class="vlabel">${lab}</span><span class="vval${none?" none":""}">${none?"—":esc(val)}</span></div>`}).join("");
  const b=badges(t);
- return `<li class="cardrow" data-key="f|${esc(t.fn)}"><div class="cardhead">
+ return `<li class="cardrow" data-key="f|${esc(t.fn)}" data-id="${esc(t._id)}"><div class="cardhead">
   <p class="fn">${esc(t.fn)}</p>
   <div class="cardtools"><span class="pill" style="background:${bg};color:${fg}">${esc(t.cat)}</span>${starBtn("f|"+t.fn)}${editBtn(t._id)}</div></div>
   ${t.en?`<p class="en">${esc(t.en)}</p>`:""}${b?`<div class="metarow">${b}</div>`:""}
@@ -390,9 +421,12 @@ $("#cancelBtn").addEventListener("click",closeModal);
 $("#saveBtn").addEventListener("click",save);
 deleteBtn.addEventListener("click",del);
 $("#overlay").addEventListener("click",e=>{if(e.target===$("#overlay"))closeModal()});
-document.addEventListener("keydown",e=>{if(e.key==="Escape"){if($("#overlay").classList.contains("open"))closeModal();if($("#shareOverlay").classList.contains("open"))$("#shareOverlay").classList.remove("open")}});
+document.addEventListener("keydown",e=>{if(e.key==="Escape"){if($("#overlay").classList.contains("open"))closeModal();if($("#detailOverlay").classList.contains("open"))closeDetail();if($("#shareOverlay").classList.contains("open"))$("#shareOverlay").classList.remove("open")}});
 $("#refreshBtn").addEventListener("click",()=>{dataMenu.removeAttribute("open");loadMaster(true)});
 $("#sortSel").addEventListener("change",e=>{if(view==="g")gSort=e.target.value;else fSort=e.target.value;renderList()});
+$("#d_close").addEventListener("click",closeDetail);
+$("#d_edit").addEventListener("click",()=>{closeDetail();openEdit(detailId)});
+$("#detailOverlay").addEventListener("click",e=>{if(e.target===$("#detailOverlay"))closeDetail()});
 $("#shareBtn").addEventListener("click",openShare);
 $("#exportBtn").addEventListener("click",exportOverlay);
 $("#importBtn").addEventListener("click",()=>$("#fileInput").click());
