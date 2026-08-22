@@ -1,6 +1,6 @@
 {
- "v": 3,
- "updated": "",
+ "v": 4,
+ "updated": "2026-08-22",
  "gloss": [
   {
    "term": "R波同期型心室ペーシング",
@@ -2921,6 +2921,386 @@
    "maker": "General",
    "short": "標準は紙送り25mm/秒・較正10mm/mV。横1mm=0.04秒(40ms)、縦10mm=1mV。",
    "tags": "記録紙 25mm 較正 10mm/mV"
+  },
+  {
+   "term": "UTR",
+   "en": "Upper Tracking Rate",
+   "abbr": "UTR",
+   "cat": "PM",
+   "device": "PM / ICD / CRT",
+   "maker": "General",
+   "short": "自己P波に追従して心室ペーシングする上限。MTRと同義（メーカーで呼称が異なる）。超えるとウェンケバッハ/2:1応答。",
+   "tags": "UTR MTR 上限追従 tracking"
+  },
+  {
+   "term": "USR",
+   "en": "Upper Sensor Rate",
+   "abbr": "USR",
+   "cat": "PM",
+   "device": "PM / ICD / CRT",
+   "maker": "General",
+   "short": "レート応答センサで到達できる上限レート。MSRと同義。",
+   "tags": "USR MSR センサ上限 sensor"
+  },
+  {
+   "term": "2:1ブロックレート",
+   "en": "2:1 Block Rate",
+   "abbr": "",
+   "cat": "PM",
+   "device": "PM / ICD / CRT",
+   "maker": "General",
+   "short": "これ以上の心房レートで心室追従が2:1になる境界。約60000÷TARP(ms) bpm。",
+   "tags": "2:1 block TARP 上限"
+  },
+  {
+   "term": "上限レートウェンケバッハ",
+   "en": "Upper Rate Wenckebach",
+   "abbr": "",
+   "cat": "PM",
+   "device": "PM / ICD / CRT",
+   "maker": "General",
+   "short": "上限追従レート付近でAVディレイが徐々に延び、時折心室追従が1拍抜ける挙動。",
+   "tags": "wenckebach 上限 追従"
+  },
+  {
+   "term": "センサ指示レート",
+   "en": "Sensor-Indicated Rate",
+   "abbr": "SIR",
+   "cat": "PM",
+   "device": "PM / ICD / CRT",
+   "maker": "General",
+   "short": "センサが算出した『今出すべきレート』。実際のペーシングレートの目安。",
+   "tags": "SIR sensor indicated rate"
+  },
+  {
+   "term": "睡眠時レート",
+   "en": "Sleep / Rest Rate",
+   "abbr": "",
+   "cat": "PM",
+   "device": "PM / ICD / CRT",
+   "maker": "General",
+   "short": "就寝帯に下限レートを下げる設定（Sleep Rate/Rest Rate）。",
+   "tags": "sleep rest rate 睡眠 夜間"
+  },
+  {
+   "term": "ADLレート",
+   "en": "ADL Rate",
+   "abbr": "",
+   "cat": "PM",
+   "device": "PM / ICD / CRT",
+   "maker": "General",
+   "short": "日常活動レベルで到達する目安レート（レート応答の設定点）。",
+   "tags": "ADL rate 活動 レート応答"
+  },
+  {
+   "term": "レートヒステリシス",
+   "en": "Rate Hysteresis",
+   "abbr": "",
+   "cat": "PM",
+   "device": "PM / ICD / CRT",
+   "maker": "General",
+   "short": "自己心拍が出たら次の刺激までのレートを設定より下げ、自己脈を優先する。",
+   "tags": "hysteresis ヒステリシス レート"
+  },
+  {
+   "term": "サーチヒステリシス",
+   "en": "Search Hysteresis",
+   "abbr": "",
+   "cat": "PM",
+   "device": "PM / ICD / CRT",
+   "maker": "General",
+   "short": "定期的に自己脈が出るか探すため一時的にレートを下げる機能。",
+   "tags": "search hysteresis サーチ"
+  },
+  {
+   "term": "レート応答性AVディレイ",
+   "en": "Rate-Adaptive AV Delay",
+   "abbr": "",
+   "cat": "PM",
+   "device": "PM / ICD / CRT",
+   "maker": "General",
+   "short": "レートが上がるとAVディレイを自動短縮し、生理的な房室伝導に近づける。",
+   "tags": "rate adaptive AV dynamic AV 動的AV"
+  },
+  {
+   "term": "センス補正（SAVオフセット）",
+   "en": "Sense Compensation",
+   "abbr": "",
+   "cat": "PM",
+   "device": "PM / ICD / CRT",
+   "maker": "General",
+   "short": "自己P波感知の遅れを見込み、SAVをPAVより短く設定する差分。",
+   "tags": "sense compensation SAV offset"
+  },
+  {
+   "term": "PVAB",
+   "en": "Post-Ventricular Atrial Blanking",
+   "abbr": "PVAB",
+   "cat": "PM",
+   "device": "PM / ICD / CRT",
+   "maker": "General",
+   "short": "心室イベント直後に心房で全く感知しない期間。ファーフィールドR波の誤検出を防ぐ。",
+   "tags": "PVAB ブランキング far-field"
+  },
+  {
+   "term": "VRP",
+   "en": "Ventricular Refractory Period",
+   "abbr": "VRP",
+   "cat": "PM",
+   "device": "PM / ICD / CRT",
+   "maker": "General",
+   "short": "心室イベント後、心室感知を計時に反映しない期間。T波やPVCの誤検出を抑える。",
+   "tags": "VRP 心室不応期 refractory"
+  },
+  {
+   "term": "ARP",
+   "en": "Atrial Refractory Period",
+   "abbr": "ARP",
+   "cat": "PM",
+   "device": "PM / ICD / CRT",
+   "maker": "General",
+   "short": "心房イベント後の心房不応期。",
+   "tags": "ARP 心房不応期 refractory"
+  },
+  {
+   "term": "動的PVARP",
+   "en": "Dynamic / Auto PVARP",
+   "abbr": "",
+   "cat": "PM",
+   "device": "PM / ICD / CRT",
+   "maker": "General",
+   "short": "レートに応じてPVARPを自動で伸縮させる設定。高レートで短縮し追従性を保つ。",
+   "tags": "dynamic auto PVARP 動的"
+  },
+  {
+   "term": "心室ブランキング（心房刺激後）",
+   "en": "Post-Atrial Ventricular Blanking",
+   "abbr": "PAVB",
+   "cat": "PM",
+   "device": "PM / ICD / CRT",
+   "maker": "General",
+   "short": "心房刺激直後に心室で感知しない短い窓。クロストーク（心房スパイクの心室誤感知）を防ぐ。",
+   "tags": "PAVB crosstalk クロストーク ブランキング"
+  },
+  {
+   "term": "ノイズリバージョン",
+   "en": "Noise Reversion",
+   "abbr": "",
+   "cat": "PM",
+   "device": "PM / ICD / CRT",
+   "maker": "General",
+   "short": "連続雑音を感知すると一時的に非同期ペーシングへ切替え、過抑制を防ぐ。",
+   "tags": "noise reversion 雑音 非同期"
+  },
+  {
+   "term": "レスポンスファクター（スロープ）",
+   "en": "Response Factor / Slope",
+   "abbr": "",
+   "cat": "PM",
+   "device": "PM / ICD / CRT",
+   "maker": "General",
+   "short": "活動量に対しレートをどれだけ上げるかの傾き設定。",
+   "tags": "response factor slope スロープ 傾き"
+  },
+  {
+   "term": "リアクションタイム",
+   "en": "Reaction Time",
+   "abbr": "",
+   "cat": "PM",
+   "device": "PM / ICD / CRT",
+   "maker": "General",
+   "short": "活動開始後、レートが上がり始めるまでの速さ設定。",
+   "tags": "reaction time 立ち上がり"
+  },
+  {
+   "term": "リカバリータイム",
+   "en": "Recovery Time",
+   "abbr": "",
+   "cat": "PM",
+   "device": "PM / ICD / CRT",
+   "maker": "General",
+   "short": "活動終了後、レートが下限へ戻る速さ設定。",
+   "tags": "recovery time 回復"
+  },
+  {
+   "term": "活動閾値",
+   "en": "Activity Threshold",
+   "abbr": "",
+   "cat": "PM",
+   "device": "PM / ICD / CRT",
+   "maker": "General",
+   "short": "センサが『活動』と判定し始める感度のしきい値。",
+   "tags": "activity threshold 活動閾値"
+  },
+  {
+   "term": "NCAP",
+   "en": "Non-Competitive Atrial Pacing",
+   "abbr": "NCAP",
+   "cat": "PM",
+   "device": "PM / ICD / CRT",
+   "maker": "General",
+   "short": "心房不応期内の自己P波の直後は、少し遅らせて心房刺激し競合を避ける機能。",
+   "tags": "NCAP 非競合 心房"
+  },
+  {
+   "term": "PVC反応（PVARP延長）",
+   "en": "PVC Response",
+   "abbr": "",
+   "cat": "PM",
+   "device": "PM / ICD / CRT",
+   "maker": "General",
+   "short": "心室期外収縮を検出するとPVARPを一時延長し、PMTの誘発を防ぐ。",
+   "tags": "PVC response PVARP延長 PMT"
+  },
+  {
+   "term": "PMT対応",
+   "en": "PMT Intervention",
+   "abbr": "",
+   "cat": "PM",
+   "device": "PM / ICD / CRT",
+   "maker": "General",
+   "short": "PMTを検出するとPVARP延長や1拍休止で連鎖を断つ機能。",
+   "tags": "PMT intervention 起因性頻拍"
+  },
+  {
+   "term": "心室レート調整（VRR）",
+   "en": "Ventricular Rate Regulation",
+   "abbr": "VRR",
+   "cat": "PM",
+   "device": "PM / ICD / CRT",
+   "maker": "General",
+   "short": "心房細動時に心室ペーシングで心室レートの変動を滑らかにする（Conducted AF Response）。",
+   "tags": "VRR conducted AF 心室レート"
+  },
+  {
+   "term": "レートドロップ反応",
+   "en": "Rate Drop Response",
+   "abbr": "RDR",
+   "cat": "PM",
+   "device": "PM",
+   "maker": "General",
+   "short": "急な徐脈（血管迷走神経性失神など）を検出し、一定時間高めのレートで刺激する。",
+   "tags": "rate drop response 迷走神経 失神"
+  },
+  {
+   "term": "心房オーバードライブ",
+   "en": "Atrial Preference Pacing",
+   "abbr": "APP",
+   "cat": "PM",
+   "device": "PM",
+   "maker": "General",
+   "short": "自己P波よりわずかに速く心房刺激し、心房性不整脈の発生を抑える。",
+   "tags": "APP overdrive 心房 抑制"
+  },
+  {
+   "term": "検出レート／間隔",
+   "en": "Detection Rate / Interval",
+   "abbr": "TDI",
+   "cat": "ICD",
+   "device": "ICD",
+   "maker": "General",
+   "short": "頻拍と判定するレート（間隔）のしきい値。ゾーンごとに設定する。",
+   "tags": "detection rate interval TDI ゾーン"
+  },
+  {
+   "term": "検出時間（Duration）",
+   "en": "Detection Duration",
+   "abbr": "",
+   "cat": "ICD",
+   "device": "ICD",
+   "maker": "General",
+   "short": "治療前に頻拍が続くべき時間。長めにすると不適切作動・不要治療が減る。",
+   "tags": "duration 検出時間 NID"
+  },
+  {
+   "term": "ATPバースト",
+   "en": "ATP Burst",
+   "abbr": "",
+   "cat": "ICD",
+   "device": "ICD",
+   "maker": "General",
+   "short": "一定間隔の連続刺激でVTを停止するATP。回数・連結期・刺激数を設定。",
+   "tags": "ATP burst バースト"
+  },
+  {
+   "term": "ATPランプ",
+   "en": "ATP Ramp",
+   "abbr": "",
+   "cat": "ICD",
+   "device": "ICD",
+   "maker": "General",
+   "short": "刺激間隔を1拍ごとに短縮していくATP。",
+   "tags": "ATP ramp ランプ"
+  },
+  {
+   "term": "連結期（カップリング）",
+   "en": "Coupling Interval",
+   "abbr": "",
+   "cat": "ICD",
+   "device": "ICD",
+   "maker": "General",
+   "short": "ATP最初の刺激を頻拍周期の何%で出すかの設定。",
+   "tags": "coupling interval 連結期 ATP"
+  },
+  {
+   "term": "ショックエネルギー",
+   "en": "Shock Energy",
+   "abbr": "",
+   "cat": "ICD",
+   "device": "ICD",
+   "maker": "General",
+   "short": "各ショックの出力(J)。初回・最大などを設定する。",
+   "tags": "shock energy J 除細動 出力"
+  },
+  {
+   "term": "コミッテッド／ノンコミッテッド",
+   "en": "Committed / Non-committed Shock",
+   "abbr": "",
+   "cat": "ICD",
+   "device": "ICD",
+   "maker": "General",
+   "short": "充電後に再確認せず放電するか（committed）、再確認して不要なら中止するか。",
+   "tags": "committed noncommitted shock 再確認"
+  },
+  {
+   "term": "SVTリミット",
+   "en": "SVT Limit",
+   "abbr": "",
+   "cat": "ICD",
+   "device": "ICD",
+   "maker": "General",
+   "short": "SVT鑑別を適用する上限レート。これを超えると鑑別せず治療する。",
+   "tags": "SVT limit 鑑別 上限"
+  },
+  {
+   "term": "VVディレイ",
+   "en": "VV Delay",
+   "abbr": "VV",
+   "cat": "CRT",
+   "device": "CRT",
+   "maker": "General",
+   "short": "右室と左室の刺激タイミング差の設定。最適化で調整する。",
+   "tags": "VV delay interval 両室"
+  },
+  {
+   "term": "LVペーシング極性",
+   "en": "LV Pacing Polarity",
+   "abbr": "",
+   "cat": "CRT",
+   "device": "CRT",
+   "maker": "General",
+   "short": "左室刺激に使う電極の組合せ設定。横隔神経刺激やアノーダル刺激の回避に変更する。",
+   "tags": "LV polarity 極性 横隔神経 アノーダル"
+  },
+  {
+   "term": "LV-only／BiV設定",
+   "en": "LV-only vs BiV Pacing",
+   "abbr": "",
+   "cat": "CRT",
+   "device": "CRT",
+   "maker": "General",
+   "short": "左室単独か両室同時かのペーシング設定。AdaptivCRT等で自動切替も。",
+   "tags": "LV-only BiV fusion 融合"
   }
  ],
  "feats": [
