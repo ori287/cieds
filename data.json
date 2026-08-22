@@ -1,5 +1,5 @@
 {
- "v": 4,
+ "v": 5,
  "updated": "2026-08-22",
  "gloss": [
   {
@@ -3301,6 +3301,46 @@
    "maker": "General",
    "short": "左室単独か両室同時かのペーシング設定。AdaptivCRT等で自動切替も。",
    "tags": "LV-only BiV fusion 融合"
+  },
+  {
+   "term": "挿入型心電計（ICM）",
+   "en": "Insertable Cardiac Monitor",
+   "abbr": "ICM",
+   "cat": "Follow-up",
+   "device": "ICM",
+   "maker": "General",
+   "short": "皮下に挿入する小型の長期心電図記録計。動悸・失神の原因検索、潜因性脳梗塞の原因精査、発作性心房細動の検出に用いる。最長数年間の連続モニタリングが可能で、不整脈を自動検出するほか、症状時に患者自身が記録できる。",
+   "tags": "挿入型心電計（ICM） ICM ICM 挿入型心電計 ループレコーダー"
+  },
+  {
+   "term": "Reveal LINQ / LINQ II",
+   "en": "Reveal LINQ II",
+   "abbr": "LINQ",
+   "cat": "Follow-up",
+   "device": "ICM",
+   "maker": "Medtronic",
+   "short": "メドトロニックの挿入型心電計。専用の挿入ツールで低侵襲に留置し、遠隔モニタリング（CareLink）で検出イベントを自動送信する。国内で広く用いられる代表的なICMで、小型・長寿命が特徴。",
+   "tags": "Reveal LINQ / LINQ II LINQ ICM 挿入型心電計 ループレコーダー"
+  },
+  {
+   "term": "Confirm Rx / Assert-IQ",
+   "en": "Confirm Rx / Assert-IQ",
+   "abbr": "",
+   "cat": "Follow-up",
+   "device": "ICM",
+   "maker": "Abbott",
+   "short": "アボットの挿入型心電計。スマートフォンアプリと連携し、症状の記録やデータ送信を患者側から行えるのが特徴。国内で使用可能で、遠隔フォローに対応する。",
+   "tags": "Confirm Rx / Assert-IQ  ICM 挿入型心電計 ループレコーダー"
+  },
+  {
+   "term": "BIOMONITOR",
+   "en": "BIOMONITOR",
+   "abbr": "",
+   "cat": "Follow-up",
+   "device": "ICM",
+   "maker": "Biotronik",
+   "short": "バイオトロニックの挿入型心電計。Home Monitoringによる毎日の自動遠隔送信に対応し、大きく明瞭なR波感知を特徴とする。国内で使用可能。",
+   "tags": "BIOMONITOR  ICM 挿入型心電計 ループレコーダー"
   }
  ],
  "feats": [
@@ -3442,10 +3482,10 @@
    "cat": "Leadless",
    "mdt": "Micra VR／AV／AV2（AVは心房の機械的収縮を感知しVDD）",
    "abt": "AVEIR VR／AR／DR（i2i＝拍動ごとの機体間通信で房室同期）",
-   "bsx": "—（EMPOWER：開発中のmodular leadless）",
+   "bsx": "—",
    "bio": "—",
    "mcp": "—",
-   "note": "i2iはAbbott AVEIR DRの2機体間通信の名称。MicraはリードレスVDD（心房の機械的センシング）。"
+   "note": "i2iはAbbott AVEIR DRの2機体間通信の名称。国内はMicra（2017〜、AV/AV2含む）とAVEIR（VR 2022〜、AR/DR）が使用可能。"
   }
  ]
 }
