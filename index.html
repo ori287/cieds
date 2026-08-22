@@ -93,6 +93,13 @@ ul.list{list-style:none;margin:0;padding:0;display:flex;flex-direction:column;ga
 .btn.del{background:#fff;border-color:#fecdd3;color:#be123c;flex:0 0 auto;padding:11px 14px}.btn.del:hover{background:#fff1f2}
 :focus-visible{outline:2px solid var(--teal);outline-offset:2px}
 #toast{position:fixed;left:50%;bottom:24px;transform:translateX(-50%) translateY(20px);background:#0f766e;color:#fff;font-size:13px;font-weight:600;padding:9px 16px;border-radius:999px;opacity:0;pointer-events:none;transition:.25s;z-index:60}#toast.show{opacity:1;transform:translateX(-50%) translateY(0)}.syncstat{font-family:var(--mono);font-size:11px;color:#0f766e;margin:-6px 0 12px}.synchelp{font-size:12px;line-height:1.6;color:var(--sub);margin:0 0 10px;background:#f0fdfa;border-radius:8px;padding:9px 10px}.syncstate{font-size:13px;margin:0 0 12px}@media(prefers-reduced-motion:reduce){*{transition:none!important}}
+
+.fsel{width:100%;border:1px solid #cbd5e1;border-radius:10px;padding:10px 34px 10px 12px;font-size:14px;font-family:var(--sans);color:var(--ink);background:#fff;outline:none;-webkit-appearance:none;appearance:none;background-image:url('data:image/svg+xml;utf8,<svg xmlns="http://www.w3.org/2000/svg" width="12" height="8" viewBox="0 0 12 8"><path d="M1 1l5 5 5-5" stroke="%2394a3b8" stroke-width="2" fill="none" stroke-linecap="round" stroke-linejoin="round"/></svg>');background-repeat:no-repeat;background-position:right 12px center}
+.fsel:focus{border-color:var(--teal);box-shadow:0 0 0 3px #99f6e4}
+.chkrow{display:flex;flex-wrap:wrap;gap:8px}
+.chk{display:inline-flex;align-items:center;gap:7px;font-size:13px;color:var(--sub);border:1px solid #cbd5e1;border-radius:9px;padding:8px 11px;cursor:pointer;user-select:none;background:#fff}
+.chk input{accent-color:var(--teal);width:17px;height:17px;margin:0}
+.chk input:checked + span{color:var(--teal);font-weight:600}
 </style>
 </head>
 <body>
@@ -169,6 +176,8 @@ const G_CAT_ORDER=["PM","ICD","CRT","CSP","Leadless","Lead","EP","Clinical","Tro
 const CAT_COLORS={"PM":["#ccfbf1","#0f766e"],"ICD":["#ffe4e6","#be123c"],"CRT":["#ede9fe","#6d28d9"],"CSP":["#fae8ff","#a21caf"],"Leadless":["#cffafe","#0e7490"],"Lead":["#f3e8ff","#7e22ce"],"EP":["#fee2e2","#b91c1c"],"Clinical":["#ffedd5","#c2410c"],"Trouble":["#fef3c7","#b45309"],"Battery":["#d1fae5","#047857"],"Procedure":["#e0f2fe","#0369a1"],"Follow-up":["#e0e7ff","#4338ca"],"Device":["#f1f5f9","#475569"],"Safety":["#fef9c3","#a16207"],"Manufacturer":["#f5f5f4","#57534e"],"History":["#f5f5f5","#525252"],"レート応答":["#fef9c3","#a16207"],"ペーシング管理":["#ccfbf1","#0f766e"],"リモート":["#e0e7ff","#4338ca"],"MRI":["#e0f2fe","#0369a1"],"機器":["#f1f5f9","#475569"],"心房治療":["#fce7f3","#be185d"]};
 const FALLBACK=["#f1f5f9","#475569"];
 const DEV_TOKENS=["PM","ICD","CRT","ICM","Leadless"];
+const MAKERS=["General","Medtronic","Abbott","Boston","Biotronik","MicroPort"];
+const FEAT_CATS_BASE=["ペーシング管理","レート応答","CRT","ICD","リモート","MRI","機器","心房治療","CSP","Leadless"];
 const MK="cieds_master_v3",OV="cieds_overlay",TK="cieds_master_t",SH_KEY="cieds_share";
 const store={get(k){try{return JSON.parse(localStorage.getItem(k)||"null")}catch(e){return null}},set(k,v){try{localStorage.setItem(k,JSON.stringify(v));return true}catch(e){return false}}};
 function uid(){return crypto.randomUUID?crypto.randomUUID():"id"+Date.now()+Math.random().toString(16).slice(2)}
@@ -261,34 +270,38 @@ function fcard(t){
 }
 function editBtn(id){return `<button class="iconbtn" data-edit="${esc(id)}" aria-label="編集"><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 20h9"/><path d="M16.5 3.5a2.1 2.1 0 0 1 3 3L7 19l-4 1 1-4Z"/></svg></button>`}
 
-function fieldHTML(id,label,ph,ta){return `<div class="field"><label for="${id}">${label}</label>${ta?`<textarea id="${id}" placeholder="${ph||""}"></textarea>`:`<input id="${id}" type="text" placeholder="${ph||""}"/>`}</div>`}
-function buildModalFields(){
+function fTxt(id,label,ph,v,ta){const c=ta?`<textarea id="${id}" placeholder="${ph||''}">${esc(v||'')}</textarea>`:`<input id="${id}" type="text" placeholder="${ph||''}" value="${esc(v||'')}"/>`;return `<div class="field"><label for="${id}">${label}</label>${c}</div>`}
+function fSel(id,label,opts,v){const o=opts.map(x=>`<option value="${esc(x)}"${x===(v||'')?' selected':''}>${esc(x)}</option>`).join('');return `<div class="field"><label for="${id}">${label}</label><select id="${id}" class="fsel">${o}</select></div>`}
+function fChk(id,label,opts,sel){const s=new Set(sel||[]);const b=opts.map(x=>`<label class="chk"><input type="checkbox" name="${id}" value="${esc(x)}"${s.has(x)?' checked':''}/><span>${esc(x)}</span></label>`).join('');return `<div class="field"><label>${label}</label><div class="chkrow">${b}</div></div>`}
+function getChecked(name){return [...document.querySelectorAll('input[name='+name+']:checked')].map(c=>c.value).join(" / ")}
+function buildModalFields(cur){cur=cur||{};
  if(view==="g"){
-  modalFields.innerHTML=`<div class="row2">${fieldHTML("f_term","用語 *","例: PVARP")}${fieldHTML("f_abbr","略語","例: PVARP")}</div>
-   ${fieldHTML("f_en","英語名","例: Post-Ventricular Atrial Refractory Period")}
-   <div class="row2">${fieldHTML("f_cat","カテゴリ *","例: PM")}${fieldHTML("f_device","対象デバイス","例: PM / ICD / CRT")}</div>
-   ${fieldHTML("f_maker","メーカー","例: General / Medtronic")}
-   ${fieldHTML("f_short","一言でいうと *","例: 心室イベント後の心房不応期。逆行性P波の感知やPMTを防ぐ。",true)}`;
+  const cats=G_CAT_ORDER.slice();gList().forEach(x=>{if(x.cat&&!cats.includes(x.cat))cats.push(x.cat)});if(cur.cat&&!cats.includes(cur.cat))cats.unshift(cur.cat);
+  const devSel=(cur.device||"").split(/[\/,]/).map(x=>x.trim()).filter(Boolean);
+  const devOpts=DEV_TOKENS.slice();devSel.forEach(t=>{if(!devOpts.includes(t))devOpts.push(t)});
+  const mk=MAKERS.slice();if(cur.maker&&!mk.includes(cur.maker))mk.unshift(cur.maker);
+  modalFields.innerHTML=`<div class="row2">${fTxt("f_term","用語 *","例: PVARP",cur.term)}${fTxt("f_abbr","略語","例: PVARP",cur.abbr)}</div>`
+   +fTxt("f_en","英語名","例: Post-Ventricular Atrial Refractory Period",cur.en)
+   +`<div class="row2">${fSel("f_cat","カテゴリ *",cats,cur.cat||(gCat!=="すべて"?gCat:cats[0]))}${fSel("f_maker","メーカー",mk,cur.maker||"General")}</div>`
+   +fChk("f_device","対象デバイス",devOpts,devSel)
+   +fTxt("f_short","一言でいうと *","例: 心室イベント後の心房不応期。逆行性P波の感知やPMTを防ぐ。",cur.short,true);
  }else{
-  modalFields.innerHTML=`${fieldHTML("f_fn","機能名 *","例: レートレスポンス（生理的センサ）")}
-   <div class="row2">${fieldHTML("f_en","英語/汎用名","例: Rate response sensor")}${fieldHTML("f_cat","カテゴリ *","例: ペーシング管理")}</div>
-   ${fieldHTML("f_mdt","メドトロニック","例: 加速度センサ")}${fieldHTML("f_abt","アボット","例: 加速度センサ")}${fieldHTML("f_bsx","ボストン","例: Blended Sensor")}
-   ${fieldHTML("f_bio","バイオトロニック","例: CLS")}${fieldHTML("f_mcp","マイクロポート","例: SonR")}
-   ${fieldHTML("f_note","メモ","例: 補足の説明（任意）",true)}`;
+  const cats=FEAT_CATS_BASE.slice();fList().forEach(x=>{if(x.cat&&!cats.includes(x.cat))cats.push(x.cat)});if(cur.cat&&!cats.includes(cur.cat))cats.unshift(cur.cat);
+  modalFields.innerHTML=fTxt("f_fn","機能名 *","例: レートレスポンス（生理的センサ）",cur.fn)
+   +`<div class="row2">${fTxt("f_en","英語/汎用名","例: Rate response sensor",cur.en)}${fSel("f_cat","カテゴリ *",cats,cur.cat||(fCat!=="すべて"?fCat:cats[0]))}</div>`
+   +fTxt("f_mdt","メドトロニック","例: 加速度センサ",cur.mdt)+fTxt("f_abt","アボット","例: 加速度センサ",cur.abt)+fTxt("f_bsx","ボストン","例: Blended Sensor",cur.bsx)
+   +fTxt("f_bio","バイオトロニック","例: CLS",cur.bio)+fTxt("f_mcp","マイクロポート","例: SonR",cur.mcp)
+   +fTxt("f_note","メモ","例: 補足の説明（任意）",cur.note,true);
  }
 }
 function openModal(){$("#overlay").classList.add("open")}
 function closeModal(){$("#overlay").classList.remove("open")}
-function openAdd(){editingId=null;modalTitle.textContent=view==="g"?"用語を追加":"機能を追加";buildModalFields();
- if(view==="g"&&gCat!=="すべて")$("#f_cat").value=gCat;if(view==="f"&&fCat!=="すべて")$("#f_cat").value=fCat;
- deleteBtn.style.display="none";openModal();setTimeout(()=>{const el=$("#f_term")||$("#f_fn");el&&el.focus()},50)}
-function openEdit(id){const arr=view==="g"?gList():fList();const t=arr.find(x=>x._id===id);if(!t)return;editingId=id;modalTitle.textContent="編集";buildModalFields();
- const keys=view==="g"?["term","abbr","en","cat","device","maker","short"]:["fn","en","cat","mdt","abt","bsx","bio","mcp","note"];
- keys.forEach(k=>{const el=$("#f_"+k);if(el)el.value=t[k]||""});deleteBtn.style.display="";openModal()}
+function openAdd(){editingId=null;modalTitle.textContent=view==="g"?"用語を追加":"機能を追加";buildModalFields({});deleteBtn.style.display="none";openModal();setTimeout(()=>{const el=$("#f_term")||$("#f_fn");el&&el.focus()},50)}
+function openEdit(id){const arr=view==="g"?gList():fList();const t=arr.find(x=>x._id===id);if(!t)return;editingId=id;modalTitle.textContent="編集";buildModalFields(t);deleteBtn.style.display="";openModal()}
 function val(k){const el=$("#f_"+k);return el?el.value.trim():""}
 function save(){
  if(view==="g"){
-  const v={term:val("term"),abbr:val("abbr"),en:val("en"),cat:val("cat"),device:val("device"),maker:val("maker"),short:val("short")};
+  const v={term:val("term"),abbr:val("abbr"),en:val("en"),cat:val("cat"),device:getChecked("f_device"),maker:val("maker"),short:val("short")};
   if(!v.term||!v.cat||!v.short){alert("用語・カテゴリ・一言でいうと は必須です。");return}
   if(editingId&&editingId.slice(0,2)==="m:"){overlay.editG[editingId.slice(2)]=v}
   else if(editingId&&editingId.slice(0,2)==="a:"){const id=editingId.slice(2);const it=overlay.addG.find(x=>x.id===id);if(it)Object.assign(it,v)}
