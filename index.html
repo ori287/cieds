@@ -94,6 +94,11 @@ ul.list{list-style:none;margin:0;padding:0;display:flex;flex-direction:column;ga
 :focus-visible{outline:2px solid var(--teal);outline-offset:2px}
 #toast{position:fixed;left:50%;bottom:24px;transform:translateX(-50%) translateY(20px);background:#0f766e;color:#fff;font-size:13px;font-weight:600;padding:9px 16px;border-radius:999px;opacity:0;pointer-events:none;transition:.25s;z-index:60}#toast.show{opacity:1;transform:translateX(-50%) translateY(0)}.syncstat{font-family:var(--mono);font-size:11px;color:#0f766e;margin:-6px 0 12px}.synchelp{font-size:12px;line-height:1.6;color:var(--sub);margin:0 0 10px;background:#f0fdfa;border-radius:8px;padding:9px 10px}.syncstate{font-size:13px;margin:0 0 12px}@media(prefers-reduced-motion:reduce){*{transition:none!important}}
 
+.sortbar{display:flex;justify-content:flex-end;margin:2px 0 10px}
+.sortsel{width:auto;min-width:118px;font-size:13px;font-weight:600;color:var(--sub);padding-top:8px;padding-bottom:8px}
+.star{border:0;background:transparent;cursor:pointer;padding:2px;line-height:0;color:#cbd5e1}
+.star:hover{color:#94a3b8}.star.on{color:#f59e0b}
+
 .fsel{width:100%;border:1px solid #cbd5e1;border-radius:10px;padding:10px 34px 10px 12px;font-size:14px;font-family:var(--sans);color:var(--ink);background:#fff;outline:none;-webkit-appearance:none;appearance:none;background-image:url('data:image/svg+xml;utf8,<svg xmlns="http://www.w3.org/2000/svg" width="12" height="8" viewBox="0 0 12 8"><path d="M1 1l5 5 5-5" stroke="%2394a3b8" stroke-width="2" fill="none" stroke-linecap="round" stroke-linejoin="round"/></svg>');background-repeat:no-repeat;background-position:right 12px center}
 .fsel:focus{border-color:var(--teal);box-shadow:0 0 0 3px #99f6e4}
 .chkrow{display:flex;flex-wrap:wrap;gap:8px}
@@ -114,6 +119,7 @@ ul.list{list-style:none;margin:0;padding:0;display:flex;flex-direction:column;ga
    <input id="search" type="text" aria-label="検索"/>
    <button class="clearbtn" id="clear" aria-label="クリア"><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><path d="M18 6 6 18M6 6l12 12"/></svg></button>
   </div>
+  <div class="chips" id="modechips" style="margin-top:10px"></div>
   <div id="glossFilters">
    <p class="filterlabel">カテゴリ</p><div class="chips" id="chips"></div>
    <p class="filterlabel">対象デバイス</p><div class="chips" id="devchips"></div>
@@ -137,6 +143,7 @@ ul.list{list-style:none;margin:0;padding:0;display:flex;flex-direction:column;ga
  </div>
 </header>
 <main class="wrap">
+ <div class="sortbar"><select id="sortSel" class="fsel sortsel"></select></div>
  <p class="count" id="count"></p>
  <p id="syncStatus" class="syncstat"></p>
  <ul class="list" id="list"></ul>
@@ -189,6 +196,19 @@ let overlay=normOv(store.get(OV));
 let sh=store.get(SH_KEY)||{key:"",binId:"",on:false,ts:0};
 
 let view="g",query="",gCat="すべて",gDev="すべて",fCat="すべて",fMk="すべて",editingId=null;
+let gMode="all",gSort="reco",fMode="all",fSort="reco";
+const FAV="cieds_fav",RECENT="cieds_recent";
+let fav=new Set(store.get(FAV)||[]);let recent=store.get(RECENT)||[];
+function saveFav(){store.set(FAV,[...fav])}
+function toggleFav(key){if(fav.has(key))fav.delete(key);else fav.add(key);saveFav();renderModeChips();renderList()}
+function recordRecent(key){if(!key)return;recent=recent.filter(k=>k!==key);recent.unshift(key);recent=recent.slice(0,80);store.set(RECENT,recent);if((view==="g"?gMode:fMode)==="recent")renderList()}
+function keyOf(v,t){return v==="g"?("g|"+t.term):("f|"+t.fn)}
+function applyMode(v,rows){const mode=v==="g"?gMode:fMode;if(mode==="fav")return rows.filter(t=>fav.has(keyOf(v,t)));if(mode==="recent"){const idx=new Map(recent.map((k,i)=>[k,i]));return rows.filter(t=>idx.has(keyOf(v,t))).sort((a,b)=>idx.get(keyOf(v,a))-idx.get(keyOf(v,b)))}return rows}
+function sortRows(v,rows){const s=v==="g"?gSort:fSort;if((v==="g"?gMode:fMode)==="recent")return rows;const nm=t=>v==="g"?t.term:t.fn;if(s==="term")return rows.slice().sort((a,b)=>nm(a).localeCompare(nm(b),"ja"));if(s==="cat")return rows.slice().sort((a,b)=>{const ia=G_CAT_ORDER.indexOf(a.cat),ib=G_CAT_ORDER.indexOf(b.cat);return (ia<0?99:ia)-(ib<0?99:ib)||nm(a).localeCompare(nm(b),"ja")});if(s==="maker")return rows.slice().sort((a,b)=>((a.maker||"~~").localeCompare(b.maker||"~~","ja"))||nm(a).localeCompare(nm(b),"ja"));return rows}
+function renderModeChips(){const mode=view==="g"?gMode:fMode;const defs=[["all","すべて"],["fav","★お気に入り"],["recent","最近見た"]];$("#modechips").innerHTML=defs.map(([k,lab])=>`<button class="chip${mode===k?" active":""}" data-m="${k}">${lab}</button>`).join("");[...$("#modechips").querySelectorAll(".chip")].forEach(b=>b.onclick=()=>{if(view==="g")gMode=b.dataset.m;else fMode=b.dataset.m;renderModeChips();renderList()})}
+function renderSort(){const cur=view==="g"?gSort:fSort;const opts=view==="g"?[["reco","おすすめ順"],["term","用語名順"],["cat","カテゴリ順"],["maker","メーカー順"]]:[["reco","おすすめ順"],["term","機能名順"],["cat","カテゴリ順"]];$("#sortSel").innerHTML=opts.map(([v,l])=>`<option value="${v}"${v===cur?" selected":""}>${l}</option>`).join("")}
+function starBtn(key){const on=fav.has(key);return `<button class="star${on?' on':''}" data-fav="${esc(key)}" aria-label="お気に入り"><svg width="18" height="18" viewBox="0 0 24 24" fill="${on?'currentColor':'none'}" stroke="currentColor" stroke-width="2" stroke-linejoin="round" stroke-linecap="round"><path d="M12 17.3l-6.2 3.7 1.6-7.1L2 9.2l7.2-.6L12 2l2.8 6.6 7.2.6-5.4 4.7 1.6 7.1z"/></svg></button>`}
+
 const $=s=>document.querySelector(s);
 const listEl=$("#list"),countEl=$("#count"),totalsEl=$("#totals"),searchEl=$("#search"),clearEl=$("#clear");
 const modalTitle=$("#modalTitle"),modalFields=$("#modalFields"),deleteBtn=$("#deleteBtn"),dataMenu=$("#dataMenu"),discEl=$("#disc");
@@ -212,6 +232,7 @@ function setView(v){
  renderChips();renderList();
 }
 function renderChips(){
+ renderModeChips();renderSort();
  if(view==="g"){
   const all=gList(),cats=[...new Set(all.map(t=>t.cat))];
   const ord=G_CAT_ORDER.filter(c=>cats.includes(c));cats.forEach(c=>{if(!ord.includes(c))ord.push(c)});
@@ -234,15 +255,21 @@ function renderChips(){
 function renderList(){
  const q=query.trim().toLowerCase();
  if(view==="g"){
-  const rows=gList().filter(t=>{if(gCat!=="すべて"&&t.cat!==gCat)return false;if(gDev!=="すべて"&&!(t.device||"").split(/[\/,]/).map(x=>x.trim()).includes(gDev))return false;if(!q)return true;return [t.term,t.en,t.abbr,t.short,t.tags].some(f=>(f||"").toLowerCase().includes(q))});
+  let rows=applyMode("g",gList());
+  rows=rows.filter(t=>{if(gCat!=="すべて"&&t.cat!==gCat)return false;if(gDev!=="すべて"&&!(t.device||"").split(/[\/,]/).map(x=>x.trim()).includes(gDev))return false;if(!q)return true;return [t.term,t.en,t.abbr,t.short,t.tags].some(f=>(f||"").toLowerCase().includes(q))});
+  rows=sortRows("g",rows);
   totalsEl.textContent=gList().length+" terms";countEl.textContent=rows.length+" results";
   listEl.innerHTML=rows.length?rows.map(gcard).join(""):emptyHTML();
  }else{
-  const rows=fList().filter(t=>{if(fCat!=="すべて"&&t.cat!==fCat)return false;if(fMk!=="すべて"){const kv=VENDORS.find(v=>v[1]===fMk);if(kv&&!(t[kv[0]]&&t[kv[0]]!=="—"))return false;}if(!q)return true;return [t.fn,t.en,t.note,t.mdt,t.abt,t.bsx,t.bio,t.mcp].some(f=>(f||"").toLowerCase().includes(q))});
+  let rows=applyMode("f",fList());
+  rows=rows.filter(t=>{if(fCat!=="すべて"&&t.cat!==fCat)return false;if(fMk!=="すべて"){const kv=VENDORS.find(v=>v[1]===fMk);if(kv&&!(t[kv[0]]&&t[kv[0]]!=="—"))return false;}if(!q)return true;return [t.fn,t.en,t.note,t.mdt,t.abt,t.bsx,t.bio,t.mcp].some(f=>(f||"").toLowerCase().includes(q))});
+  rows=sortRows("f",rows);
   totalsEl.textContent=fList().length+" functions";countEl.textContent=rows.length+" results";
   listEl.innerHTML=rows.length?rows.map(fcard).join(""):emptyHTML();
  }
- [...listEl.querySelectorAll("[data-edit]")].forEach(b=>b.onclick=()=>openEdit(b.dataset.edit));
+ [...listEl.querySelectorAll(".cardrow")].forEach(li=>li.addEventListener("click",()=>recordRecent(li.dataset.key)));
+ [...listEl.querySelectorAll("[data-edit]")].forEach(b=>b.onclick=e=>{e.stopPropagation();openEdit(b.dataset.edit)});
+ [...listEl.querySelectorAll("[data-fav]")].forEach(b=>b.onclick=e=>{e.stopPropagation();toggleFav(b.dataset.fav)});
 }
 function emptyHTML(){return `<li class="empty"><p class="big">該当がありません</p><p class="sm">別のキーワードやフィルターでお試しください。</p></li>`}
 function badges(t){let s="";if(t._add)s+=sh.on?`<span class="tag" style="background:#dcfce7;color:#15803d">共有</span>`:`<span class="tag" style="background:#ecfeff;color:#0e7490">この端末</span>`;return s}
@@ -251,9 +278,9 @@ function gcard(t){
  if(t.device)meta.push(`<span class="tag">${esc(t.device)}</span>`);
  if(t.maker&&t.maker!=="General")meta.push(`<span class="tag mk">${esc(t.maker)}</span>`);
  const b=badges(t);
- return `<li class="cardrow"><div class="cardhead">
+ return `<li class="cardrow" data-key="g|${esc(t.term)}"><div class="cardhead">
   <p class="term">${esc(t.term)}${t.abbr?`<span class="abbr">${esc(t.abbr)}</span>`:""}</p>
-  <div class="cardtools"><span class="pill" style="background:${bg};color:${fg}">${esc(t.cat)}</span>${editBtn(t._id)}</div></div>
+  <div class="cardtools"><span class="pill" style="background:${bg};color:${fg}">${esc(t.cat)}</span>${starBtn("g|"+t.term)}${editBtn(t._id)}</div></div>
   ${t.en?`<p class="en">${esc(t.en)}</p>`:""}${(meta.length||b)?`<div class="metarow">${b}${meta.join("")}</div>`:""}
   ${t.short?`<p class="short">${esc(t.short)}</p>`:""}</li>`;
 }
@@ -261,9 +288,9 @@ function fcard(t){
  const[bg,fg]=catColor(t.cat);
  const rows=VENDORS.map(([k,lab])=>{const val=t[k];const none=!val||val==="—";return `<div class="vrow"><span class="vlabel">${lab}</span><span class="vval${none?" none":""}">${none?"—":esc(val)}</span></div>`}).join("");
  const b=badges(t);
- return `<li class="cardrow"><div class="cardhead">
+ return `<li class="cardrow" data-key="f|${esc(t.fn)}"><div class="cardhead">
   <p class="fn">${esc(t.fn)}</p>
-  <div class="cardtools"><span class="pill" style="background:${bg};color:${fg}">${esc(t.cat)}</span>${editBtn(t._id)}</div></div>
+  <div class="cardtools"><span class="pill" style="background:${bg};color:${fg}">${esc(t.cat)}</span>${starBtn("f|"+t.fn)}${editBtn(t._id)}</div></div>
   ${t.en?`<p class="en">${esc(t.en)}</p>`:""}${b?`<div class="metarow">${b}</div>`:""}
   <div class="vgrid">${rows}</div>
   ${t.note?`<p class="note">${esc(t.note)}</p>`:""}</li>`;
@@ -365,6 +392,7 @@ deleteBtn.addEventListener("click",del);
 $("#overlay").addEventListener("click",e=>{if(e.target===$("#overlay"))closeModal()});
 document.addEventListener("keydown",e=>{if(e.key==="Escape"){if($("#overlay").classList.contains("open"))closeModal();if($("#shareOverlay").classList.contains("open"))$("#shareOverlay").classList.remove("open")}});
 $("#refreshBtn").addEventListener("click",()=>{dataMenu.removeAttribute("open");loadMaster(true)});
+$("#sortSel").addEventListener("change",e=>{if(view==="g")gSort=e.target.value;else fSort=e.target.value;renderList()});
 $("#shareBtn").addEventListener("click",openShare);
 $("#exportBtn").addEventListener("click",exportOverlay);
 $("#importBtn").addEventListener("click",()=>$("#fileInput").click());
