@@ -1,6 +1,6 @@
 {
  "v": 5,
- "updated": "2026-08-22",
+ "updated": "2026-08-23",
  "gloss": [
   {
    "term": "R波同期型心室ペーシング",
@@ -2598,7 +2598,7 @@
    "abbr": "S-ICD",
    "cat": "ICD",
    "device": "ICD",
-   "maker": "Boston",
+   "maker": "Boston Scientific",
    "short": "リードを皮下（胸骨傍・側胸部）に留置し、静脈・心内にリードを置かないICD。徐脈ペーシングやATPは原則不可。",
    "tags": "S-ICD EMBLEM 皮下"
   },
@@ -2608,7 +2608,7 @@
    "abbr": "",
    "cat": "ICD",
    "device": "ICD",
-   "maker": "Boston",
+   "maker": "Boston Scientific",
    "short": "S-ICDの2ゾーン設定。Conditional（条件付き）ゾーンは形態識別で不要作動を抑え、Shockゾーンはレートのみで即ショックする。",
    "tags": "S-ICD zone conditional shock"
   },
@@ -2618,7 +2618,7 @@
    "abbr": "",
    "cat": "ICD",
    "device": "ICD",
-   "maker": "Boston",
+   "maker": "Boston Scientific",
    "short": "S-ICDの高域通過フィルタ。T波などの低周波成分を抑え、オーバーセンシングによる不適切作動を減らす。",
    "tags": "S-ICD フィルタ T波 オーバーセンシング"
   },
@@ -2638,7 +2638,7 @@
    "abbr": "",
    "cat": "ICD",
    "device": "ICD",
-   "maker": "Boston",
+   "maker": "Boston Scientific",
    "short": "VFゾーンでも充電中にワンショットのATPを行い、無痛停止を試みる機能。",
    "tags": "Quick Convert ATP VF 充電"
   },
@@ -3208,7 +3208,7 @@
    "abbr": "",
    "cat": "不整脈・EP",
    "device": "ICM",
-   "maker": "Biotronik",
+   "maker": "BIOTRONIK",
    "short": "バイオトロニックの挿入型心電計。Home Monitoringによる毎日の自動遠隔送信に対応し、大きく明瞭なR波感知を特徴とする。国内で使用可能。",
    "tags": "BIOMONITOR  ICM 挿入型心電計 ループレコーダー"
   },
@@ -3490,7 +3490,7 @@
    "device": "PM / ICD / CRT",
    "maker": "General",
    "short": "心房起源の早期収縮。頻発すると心房頻拍・心房細動の引き金になりうる。",
-   "tags": "上室期外収縮 PAC Premature atrial contraction APC PAC"
+   "tags": "上室期外収縮 PAC Premature atrial contraction APC PAC APC 心房期外収縮 atrial premature contraction"
   },
   {
    "term": "心室期外収縮",
