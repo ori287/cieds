@@ -1,5 +1,5 @@
 {
- "v": 10,
+ "v": 13,
  "updated": "2026-08-24",
  "gloss": [
   {
@@ -9,7 +9,7 @@
    "cat": "モード",
    "device": "PM",
    "maker": "General",
-   "short": "心室でR波を感知すると、それを契機に心室刺激を出すVVT型のトリガーペーシング。現在は限定的な用途。",
+   "short": "心室でR波を感知すると、抑制するのではなく、それを合図に心室刺激を出すVVT型のトリガーペーシング。刺激は不応期に落ちるため実害は少なく、感知が働いていることを心電図で確認できる利点があるが、現在の用途は限定的。",
    "tags": "PM / General / R-wave / triggered / ventricular / pacing / threshold / capture"
   },
   {
@@ -19,7 +19,7 @@
    "cat": "ペーシング",
    "device": "PM",
    "maker": "General",
-   "short": "心室自己波を感知した拍では刺激を抑制し、自己波がなければ設定レートで心室刺激を行うVVI型ペーシング。",
+   "short": "心室の自己波（R波）を感知した拍では刺激を出さずに待ち、決めた時間内に自己波が現れなければ心室を刺激するVVI型のペーシング。自己心拍を邪魔せず、必要なときだけ補うのが特徴で、単腔ペースメーカの基本動作にあたる。",
    "tags": "PM / General / R-wave / inhibited / ventricular / pacing / threshold / capture"
   },
   {
@@ -39,7 +39,7 @@
    "cat": "ペーシング",
    "device": "PM",
    "maker": "General",
-   "short": "可逆的な徐脈や周術期などで、短期間だけ電気刺激による心拍補助を行う治療。",
+   "short": "薬剤性徐脈や急性心筋梗塞、術後など、原因が取り除ければ回復が見込める状況で、数日〜数週間だけ心拍を電気刺激で支える治療。経静脈的に一時リードを入れる方法、心臓手術で心外膜にワイヤを縫着する方法、胸壁パッドから刺激する経皮的方法がある。",
    "tags": "PM / General / temporary / pacing / threshold / capture"
   },
   {
@@ -49,7 +49,7 @@
    "cat": "植込み・手技",
    "device": "PM",
    "maker": "General",
-   "short": "体外式で一時的に用いるペースメーカ。急性期の徐脈や、恒久植込みまでのつなぎに使い、外部からレート・出力・感度を調整できる。",
+   "short": "体外に置いて一時的に用いるペースメーカ。急性期の徐脈や、恒久植込みまでのつなぎとして使い、外部からレート・出力・感度を調整できる。テンポラリペースメーカとも呼ぶ。",
    "tags": "PM / General / temporary / pacemaker / threshold / capture テンポラリーペースメーカ temporary 体外式ペースメーカ external pacemaker OSYPKA"
   },
   {
@@ -59,7 +59,7 @@
    "cat": "リード",
    "device": "PM / ICD / CRT",
    "maker": "General",
-   "short": "一時的ペーシングで心腔内または心外膜に留置する短期使用リード。",
+   "short": "一時的ペーシングのために、心腔内または心外膜へ短期間だけ留置するリード。体外式ペースメーカに接続して用い、不要になれば抜去する。",
    "tags": "Lead / PM / ICD / CRT / General / temporary / lead / threshold / capture"
   },
   {
@@ -69,7 +69,7 @@
    "cat": "不整脈・EP",
    "device": "PM / ICD / CRT",
    "maker": "General",
-   "short": "すべての心房興奮が心室へ伝導するが、PR間隔が延長している房室伝導障害。",
+   "short": "すべての心房興奮が心室へ伝導するものの、PQ間隔が0.20秒を超えて延長している状態。多くは無症状で経過を見るが、極端な延長では房室同期が損なわれ症状を伴うことがある。",
    "tags": "Clinical / PM / ICD / CRT / General / st / degree / A-V / block"
   },
   {
@@ -79,7 +79,7 @@
    "cat": "不整脈・EP",
    "device": "PM / ICD / CRT",
    "maker": "General",
-   "short": "ある方向には興奮が伝わらず、逆方向には伝導可能な伝導ブロック。リエントリー成立条件の一つ。",
+   "short": "ある方向には興奮が伝わらないが、逆方向からは伝導できる状態。緩徐伝導と組み合わさることでリエントリー回路が成立する、不整脈発生の重要な条件の一つ。",
    "tags": "Clinical / PM / ICD / CRT / General / unidirectional / block"
   },
   {
@@ -89,7 +89,7 @@
    "cat": "トラブル",
    "device": "PM / ICD / CRT",
    "maker": "General",
-   "short": "植込んだリードやデバイスが初期位置からずれること。dislodgement / displacement。",
+   "short": "植込んだリードやデバイスが最初の位置からずれること。ペーシング不全やセンシング不全の原因となり、X線で分かるものと、分からないほどわずかなもの（マイクロディスロッジ）がある。",
    "tags": "Lead / PM / ICD / CRT / General / dislodgement / displacement / threshold / capture dislodge 脱落 電極位置移動 アンカリングスリーブ マイクロディスロッジ"
   },
   {
@@ -99,7 +99,7 @@
    "cat": "ペーシング",
    "device": "PM / ICD / CRT",
    "maker": "General",
-   "short": "電流が組織へ流出する側の電極。一般的なペーシングではtip電極が陰極となることが多い。",
+   "short": "電流が電極から心筋組織へ流れ出す側の電極。心筋の興奮はこの陰極側で起こり、陽極側で刺激するより低い出力で捕捉できる。一般的なリードでは先端のチップ電極が陰極となる。",
    "tags": "Lead / PM / ICD / CRT / General / cathode / threshold / capture"
   },
   {
@@ -109,7 +109,7 @@
    "cat": "ペーシング",
    "device": "PM",
    "maker": "General",
-   "short": "1回の刺激パルスが持続する時間。通常はpulse widthとしてmsで設定する。",
+   "short": "1回の刺激パルスを出し続ける時間で、パルス幅（pulse width）としてミリ秒単位で設定する。標準は0.4ms前後。同じ電圧でもパルス幅を延ばすと捕捉しやすくなるが、電池の消耗も増える。",
    "tags": "PM / General / impulse / duration / threshold / capture"
   },
   {
@@ -119,18 +119,18 @@
    "cat": "植込み・手技",
    "device": "PM / ICD / CRT",
    "maker": "General",
-   "short": "パルスジェネレータとリード、またはリードレスデバイスを体内へ留置する手技。",
+   "short": "ジェネレータとリード、あるいはリードレスデバイスを体内へ留置する手技。静脈アクセス、リード留置と測定、ポケット作成、本体接続と収納という流れで進める。",
    "tags": "Procedure / PM / ICD / CRT / General / implantation / threshold / capture"
   },
   {
    "term": "ウェンデスキー効果",
-   "en": "Wendesky effect",
+   "en": "Wedensky effect",
    "abbr": "",
    "cat": "AV・タイミング",
    "device": "PM",
    "maker": "General",
-   "short": "閾値以下の刺激が反復されることで、その後の刺激に対する興奮性が一時的に変化する古典的現象。",
-   "tags": "PM / General / Wendesky / effect / threshold / capture"
+   "short": "閾値に届かない弱い刺激を繰り返し与えることで、その後の刺激に対する心筋の興奮性が一時的に変化する古典的現象。ウェデンスキー現象とも呼ばれる。",
+   "tags": "PM / General / Wendesky / effect / threshold / capture Wedensky ウェデンスキー現象 閾値下刺激"
   },
   {
    "term": "永久的人工ペースメーカ",
@@ -139,7 +139,7 @@
    "cat": "ペーシング",
    "device": "PM",
    "maker": "General",
-   "short": "体内に恒久的に植え込むペースメーカ。徐脈性不整脈に対し、長期にわたって刺激を供給する。一時的ペースメーカと対になる語。",
+   "short": "体内に恒久的に植え込むペースメーカ。症候性の徐脈性不整脈に対して長期にわたり刺激を供給する。一時的ペースメーカと対になる言葉で、単に「ペースメーカ」といえば通常これを指す。",
    "tags": "PM / General / permanent / pacemaker / threshold / capture"
   },
   {
@@ -149,7 +149,7 @@
    "cat": "リード",
    "device": "PM / ICD / CRT",
    "maker": "General",
-   "short": "長期留置を前提とした植込み型ペーシング/センシング用リード。",
+   "short": "長期の留置を前提に作られた植込み型のリード。体内での屈曲や体液に長年耐えられるよう、絶縁体・導体・固定機構が設計されている。",
    "tags": "Lead / PM / ICD / CRT / General / permanent / lead / threshold / capture"
   },
   {
@@ -159,7 +159,7 @@
    "cat": "AV・タイミング",
    "device": "PM / ICD / CRT",
    "maker": "General",
-   "short": "心房興奮からHis束興奮までの時間。主に房室結節内伝導を反映する。",
+   "short": "心内電位図で、心房興奮（A波）からヒス束興奮（H波）までの時間。主に房室結節内の伝導を反映し、目安はおよそ50〜120ms。自律神経や薬剤の影響を受けやすい。",
    "tags": "EP / PM / ICD / CRT / General / A-H / interval"
   },
   {
@@ -169,7 +169,7 @@
    "cat": "AV・タイミング",
    "device": "PM / ICD / CRT",
    "maker": "General",
-   "short": "His束興奮から心室興奮開始までの時間。His-Purkinje系の伝導を反映する。",
+   "short": "ヒス束興奮（H波）から心室興奮（V波）の始まりまでの時間で、ヒス・プルキンエ系の伝導を反映する。目安はおよそ35〜55msで、延長は将来の高度房室ブロックのリスクを示唆する。",
    "tags": "EP / PM / ICD / CRT / General / H-V / interval"
   },
   {
@@ -189,7 +189,7 @@
    "cat": "不整脈・EP",
    "device": "PM / ICD / CRT",
    "maker": "General",
-   "short": "自己調律より速くペーシングして頻拍を抑え込む手技・現象。頻拍の停止や、洞結節・異所性中枢を一時的に抑制する目的で利用される。",
+   "short": "自己調律より速いレートでペーシングすることで、洞房結節や異所性の興奮中枢を一時的に抑え込む現象・手技。頻拍の停止や、洞結節機能の評価に利用される。",
    "tags": "EP / PM / ICD / CRT / General / overdrive / suppression"
   },
   {
@@ -199,7 +199,7 @@
    "cat": "トラブル",
    "device": "PM / ICD / CRT",
    "maker": "General",
-   "short": "デバイス刺激が横隔神経または横隔膜を捕捉し、腹部/胸部の収縮感を生じる現象。",
+   "short": "デバイスの刺激が横隔神経や横隔膜を捕捉し、しゃっくり様の収縮を生じる現象。右室リードや左室リードの留置部位が原因となる。出力や極性の変更で回避する。",
    "tags": "Trouble / PM / ICD / CRT / General / diaphragmatic / stimulation"
   },
   {
@@ -209,7 +209,7 @@
    "cat": "不整脈・EP",
    "device": "PM / ICD / CRT",
    "maker": "General",
-   "short": "心房興奮が心室へ伝導せず、心房と心室が独立して興奮する高度房室伝導障害。",
+   "short": "心房の興奮が心室へまったく伝導せず、心房と心室がそれぞれ独立したリズムで動いている状態。心室は補充調律に頼るため心拍数が遅く不安定で、失神や心停止の危険がある。",
    "tags": "Clinical / PM / ICD / CRT / General / complete / atrio-ventricular / block"
   },
   {
@@ -219,7 +219,7 @@
    "cat": "センシング",
    "device": "PM",
    "maker": "General",
-   "short": "心房/心室の自己電位をデバイスが電気信号として認識すること。",
+   "short": "心房や心室の自己の電気活動をリードが捉え、デバイスが「心内イベントが起きた」と認識すること。感知できて初めてペーシングを抑制したり、頻拍を検出したりできるため、デバイス動作の出発点となる。",
    "tags": "PM / General / sensing / threshold / capture"
   },
   {
@@ -229,7 +229,7 @@
    "cat": "センシング",
    "device": "PM",
    "maker": "General",
-   "short": "デバイスが自己心内波を認識できる最小信号レベルの概念。実務では実測P/R波高と設定感度の関係で評価する。",
+   "short": "デバイスが自己の心内波を認識できる最小の信号レベル。実務では、実際に測定したP波・R波の高さと設定した感度との関係（どれだけ余裕があるか）で評価する。",
    "tags": "PM / General / sensing / threshold / capture センシング閾値 sensing threshold"
   },
   {
@@ -239,7 +239,7 @@
    "cat": "AV・タイミング",
    "device": "PM",
    "maker": "General",
-   "short": "デバイスが入力信号を検出対象として受け付ける時間帯。alert period。",
+   "short": "デバイスが入力信号を「心内イベント」として受け付ける時間帯。不応期やブランキングが終わってから次のイベントまでの窓にあたり、この間に自己波を感知するとペーシングが抑制される。",
    "tags": "PM / General / alert / period / threshold / capture"
   },
   {
@@ -249,7 +249,7 @@
    "cat": "センシング",
    "device": "PM",
    "maker": "General",
-   "short": "加速度などの機械的信号から心房収縮や活動を認識する方式。Micra AVなどで利用される。",
+   "short": "電気ではなく、加速度センサが捉える心臓の振動から心房収縮などを認識する方式。心房リードを持たないリードレスペースメーカ（Micra AV）で房室同期をとるために利用される。",
    "tags": "PM / General / mechanical / sensing / threshold / capture 加速度センサ accelerometer"
   },
   {
@@ -259,7 +259,7 @@
    "cat": "ペーシング",
    "device": "PM / ICD / CRT",
    "maker": "General",
-   "short": "植込み直後に測定するペーシング閾値。lead maturationに伴い後日変化し得る。",
+   "short": "植込み直後に測定するペーシング閾値。この時点では低い値でも、電極周囲の炎症反応により1〜4週で一時的に上昇し、6〜8週ほどで安定した慢性期閾値に落ち着く。ステロイド溶出電極ではこの上昇が抑えられる。",
    "tags": "Lead / PM / ICD / CRT / General / acute / threshold / capture"
   },
   {
@@ -269,7 +269,7 @@
    "cat": "トラブル",
    "device": "PM",
    "maker": "General",
-   "short": "自己心拍と非同期または不適切なタイミングのペーシングが同時に存在し、刺激タイミングが競合する状態。",
+   "short": "自己心拍とペーシングが同時に存在し、刺激のタイミングがぶつかり合う状態。非同期モードや感知不全のときに起こり、受攻期に刺激が落ちると心室細動を誘発する危険がある。",
    "tags": "PM / General / competition / threshold / capture"
   },
   {
@@ -289,7 +289,7 @@
    "cat": "リード",
    "device": "PM / ICD / CRT",
    "maker": "General",
-   "short": "静脈経由で右房・右室・冠静脈洞系などへ留置する植込み型リード。",
+   "short": "静脈を経由して右房・右室・冠静脈洞などへ留置する植込み型リード。開胸が不要で標準的なアプローチだが、鎖骨と第一肋骨の間で圧迫を受ける部位は断線の好発部位となる。",
    "tags": "Lead / PM / ICD / CRT / General / transvenous / lead / pervenous / threshold / capture"
   },
   {
@@ -299,7 +299,7 @@
    "cat": "不整脈・EP",
    "device": "PM / ICD / CRT",
    "maker": "General",
-   "short": "脱分極した心筋細胞膜電位が静止状態へ戻る過程。心電図では主にST-Tに関連する。",
+   "short": "脱分極した心筋細胞が、Kイオンの流出などによって元の静止膜電位へ戻る過程。心電図ではST部分とT波にあたり、この時期の不安定さがTdPなどの不整脈につながる。",
    "tags": "EP / PM / ICD / CRT / General / repolarization"
   },
   {
@@ -309,7 +309,7 @@
    "cat": "トラブル",
    "device": "PM / ICD / CRT",
    "maker": "General",
-   "short": "生理的心内波以外にデバイスが記録・感知する不要信号。リード異常、筋電位、EMIなどが原因。",
+   "short": "本来の心内電位以外にデバイスが感知・記録してしまう不要な信号。リードの異常、筋電位、電磁干渉などが原因で、オーバーセンシングによるペーシング抑制や不適切作動を招く。",
    "tags": "Trouble / PM / ICD / CRT / General / noise / oversensing / lead trouble"
   },
   {
@@ -319,7 +319,7 @@
    "cat": "デバイス構造",
    "device": "PM / ICD / CRT",
    "maker": "General",
-   "short": "電池と電子回路を内蔵し、刺激・センシング・記録を行う植込み型本体。pulse generator / IPG。",
+   "short": "電池と電子回路を内蔵し、刺激の出力・センシング・記録・通信を担う植込み型の本体。チタン製の気密ケースに収められ、リードを接続するコネクタ部（ヘッダー）を備える。",
    "tags": "Device / PM / ICD / CRT / General / generator / pulse / implantable パルス発生器 pulse generator"
   },
   {
@@ -329,7 +329,7 @@
    "cat": "MRI・EMI",
    "device": "PM / ICD / CRT",
    "maker": "General",
-   "short": "外部磁場によってデバイスの磁気センサーや動作が影響を受けること。",
+   "short": "外部の磁場によって、デバイス内部の磁気センサー（リードスイッチやホール素子）や回路の動作が影響を受けること。磁石を近づけたときのマグネットモードもこの仕組みを利用している。",
    "tags": "Trouble / PM / ICD / CRT / General / magnetic / interference"
   },
   {
@@ -339,7 +339,7 @@
    "cat": "ペーシング",
    "device": "PM",
    "maker": "General",
-   "short": "心筋を再現性よく捕捉できる最小刺激強度。通常は電圧とpulse widthの組合せで測定する。",
+   "short": "心筋を繰り返し確実に捕捉できる最小の刺激の強さ。電圧（V）とパルス幅（ms）の組合せで表し、通常は電圧を段階的に下げて捕捉が消える点を探す。設定出力はこの値に安全域を上乗せして決める。",
    "tags": "PM / General / threshold / pacing / capture"
   },
   {
@@ -349,7 +349,7 @@
    "cat": "電池",
    "device": "PM / ICD / CRT",
    "maker": "General",
-   "short": "使用していなくても電池内部の化学反応で容量が徐々に失われる現象。",
+   "short": "使用していなくても、電池内部の化学反応によって容量が少しずつ失われる現象。植込み型デバイスの電池は、この自己放電が極めて少ないことが求められる。",
    "tags": "Battery / PM / ICD / CRT / General / self-discharge"
   },
   {
@@ -359,7 +359,7 @@
    "cat": "不整脈・EP",
    "device": "PM / ICD / CRT",
    "maker": "General",
-   "short": "心室から心房へ逆行性に興奮が伝わるVA conduction。PMT成立に関与する。",
+   "short": "心室の興奮が房室結節や副伝導路を逆向きにたどり、心房へ伝わること。正常な房室伝導を持つ人の4〜9割にみられ、PMTやRNRVASが成立する前提条件となる。",
    "tags": "EP / PM / ICD / CRT / General / ventriculo-atrial / conduction / PMT"
   },
   {
@@ -369,7 +369,7 @@
    "cat": "不整脈・EP",
    "device": "PM / ICD / CRT",
    "maker": "General",
-   "short": "外部刺激なしに心筋・刺激伝導系細胞が自発的に脱分極する性質。",
+   "short": "外からの刺激がなくても、細胞が自発的に脱分極して興奮を起こす性質。洞房結節が最も速く（毎分60〜80回程度）、房室接合部（40〜50回）、心室（30〜40回）と下位ほど遅くなり、この階層が補充調律の仕組みとなる。",
    "tags": "EP / PM / ICD / CRT / General / automaticity"
   },
   {
@@ -379,7 +379,7 @@
    "cat": "ペーシング",
    "device": "PM",
    "maker": "General",
-   "short": "ペーシング刺激の強さ。主に振幅（V）とpulse width（ms）で規定する。",
+   "short": "ペーシング刺激の強さのこと。電圧の振幅（V）とパルス幅（ms）の2つで決まる。閾値ぎりぎりでは捕捉不全の危険があり、高すぎると電池を早く消耗するため、安全域と寿命の釣り合いで設定する。",
    "tags": "PM / General / output / threshold / capture"
   },
   {
@@ -389,7 +389,7 @@
    "cat": "不整脈・EP",
    "device": "PM / ICD / CRT",
    "maker": "General",
-   "short": "心室再分極の一部で、強い刺激により心室性不整脈を誘発し得るvulnerable period。",
+   "short": "心室の再分極途中（心電図のT波頂上付近）にあたる、刺激が加わると心室細動を起こしやすい危険な時期。ここに刺激が乗るのがR on Tやspike on Tで、非同期ペーシングや期外収縮で問題になる。",
    "tags": "EP / PM / ICD / CRT / General / vulnerable / period vulnerable period R on T"
   },
   {
@@ -399,7 +399,7 @@
    "cat": "ペーシング",
    "device": "PM",
    "maker": "General",
-   "short": "電池エネルギーを設定された刺激パルスとして電極へ供給する回路。",
+   "short": "電池のエネルギーを、設定された電圧・パルス幅の刺激パルスに変換して電極へ送り出す回路。ペースメーカでは通常、電池電圧を昇圧して必要な出力を作る。",
    "tags": "PM / General / output / circuit / threshold / capture"
   },
   {
@@ -419,7 +419,7 @@
    "cat": "ペーシング",
    "device": "PM",
    "maker": "General",
-   "short": "刺激時に回路へ流れる電流。電圧、インピーダンス、pulse widthなどに依存する。",
+   "short": "刺激時に回路を流れる電流。定電圧方式では電圧をリードインピーダンスで割った値になるため、インピーダンスが低いほど電流が増え、電池の消耗も速くなる。",
    "tags": "PM / General / output / current / threshold / capture"
   },
   {
@@ -449,7 +449,7 @@
    "cat": "ICD",
    "device": "ICD",
    "maker": "General",
-   "short": "心室細動を停止できる最小ショックエネルギーの概念。DFT。",
+   "short": "心室細動を確実に停止できる最小のショックエネルギー。実際には確率的なもので、この値以上なら必ず止まるという性質ではないため、最大出力から10J以上の余裕（セーフティマージン）を確保して設定する。",
    "tags": "ICD / General / defibrillation / threshold / capture"
   },
   {
@@ -459,7 +459,7 @@
    "cat": "不整脈・EP",
    "device": "PM / ICD / CRT",
    "maker": "General",
-   "short": "洞不全症候群の一型で、徐脈と心房頻拍/心房細動などの頻脈が交互に出現する。",
+   "short": "洞不全症候群の一型で、心房細動などの頻脈と徐脈が交互に現れるもの。頻拍が止まった直後に長い心停止が生じて失神することが特徴で、頻拍を薬で抑えると徐脈が悪化するためペーシングを併用することが多い。",
    "tags": "Clinical / PM / ICD / CRT / General / bradycardia-tachycardia / syndrome / AF"
   },
   {
@@ -489,7 +489,7 @@
    "cat": "トラブル",
    "device": "PM / ICD / CRT",
    "maker": "General",
-   "short": "真の心内電位ではなく、機器・動作・電気的ノイズ等によって記録上生じるartifact。",
+   "short": "真の心内電位ではなく、機器の動作や電気的ノイズによって記録上に現れてしまう波形。心電図の判読では、これを本物の不整脈と誤らないことが重要となる。",
    "tags": "EP / PM / ICD / CRT / General / artifact / noise / oversensing / lead trouble"
   },
   {
@@ -499,7 +499,7 @@
    "cat": "AV・タイミング",
    "device": "PM",
    "maker": "General",
-   "short": "心室で感知に反応できる期間。不応期・ブランキングが終わってから次のイベントまでの窓で、この間に自己R波を感知するとペーシングが抑制される。",
+   "short": "心室で感知に反応できる期間。不応期・ブランキングが終わってから次のイベントまでの窓で、この間に自己のR波を感知すると心室ペーシングが抑制される。",
    "tags": "PM / General / ventricular / alert / period / threshold / capture"
   },
   {
@@ -509,7 +509,7 @@
    "cat": "モード",
    "device": "PM",
    "maker": "General",
-   "short": "心室自己波がなければ刺激し、自己波を感知すると刺激を抑制するVVI型モード。",
+   "short": "心室の自己波がなければ刺激し、自己波を感知すれば刺激を控えるVVI型のモード。「必要なときだけ働く」という意味でデマンド（要求）型と呼ばれる。",
    "tags": "PM / General / ventricular / demand / pacing / mode / threshold / capture"
   },
   {
@@ -519,7 +519,7 @@
    "cat": "モード",
    "device": "PM",
    "maker": "General",
-   "short": "心室自己波を感知した際に心室刺激をトリガーするVVT型モード。",
+   "short": "心室の自己波を感知した際に、それを合図として心室刺激を出すVVT型のモード。抑制型と違い刺激は必ず出るが、自己興奮の不応期に重なるため心臓は反応しない。",
    "tags": "PM / General / ventricular / triggered / pacing / mode / threshold / capture"
   },
   {
@@ -529,7 +529,7 @@
    "cat": "モード",
    "device": "PM",
    "maker": "General",
-   "short": "心室センシングを行わず、設定レートで心室を刺激するVOOモード。",
+   "short": "心室の感知を一切行わず、自己心拍の有無にかかわらず設定レートで刺激し続けるVOOモード。自己脈があるとT波上への刺激（spike on T）が起こりうるため、MRI検査時など限られた場面で用いる。",
    "tags": "PM / General / ventricular / asynchronous / pacing / mode / threshold / capture"
   },
   {
@@ -539,7 +539,7 @@
    "cat": "ペーシング",
    "device": "PM",
    "maker": "General",
-   "short": "右室、左室、His束/左脚領域などから心室を電気刺激すること。",
+   "short": "心室を電気刺激すること。右室心尖部や中隔のほか、CRTでは冠静脈経由の左室から、刺激伝導系ペーシングではヒス束や左脚領域から行う。刺激する部位によって興奮の広がり方とQRS波形が変わる。",
    "tags": "PM / General / ventricular / pacing / threshold / capture"
   },
   {
@@ -559,7 +559,7 @@
    "cat": "リード",
    "device": "PM / ICD / CRT",
    "maker": "General",
-   "short": "心室のセンシング・ペーシングに用いるリード。通常はRV leadを指すが、用途によりLV/CSP leadも含む。",
+   "short": "心室の感知とペーシングに用いるリード。通常は右室リードを指すが、文脈によって左室リードや刺激伝導系ペーシング用リードを含めることもある。",
    "tags": "Lead / PM / ICD / CRT / General / ventricular / lead / threshold / capture"
   },
   {
@@ -569,7 +569,7 @@
    "cat": "ペーシング",
    "device": "PM",
    "maker": "General",
-   "short": "心室自己波を感知すると心室刺激を抑制するVVIペーシング。",
+   "short": "心室の自己波を感知するとその拍の刺激を取りやめる（抑制する）動作を持つVVI型ペーシング。自己波が出ない場合だけ設定レートで刺激するため、自己心拍との競合を避けられる。",
    "tags": "PM / General / ventricular / inhibited / pacing / threshold / capture"
   },
   {
@@ -579,7 +579,7 @@
    "cat": "トラブル",
    "device": "PM / ICD / CRT",
    "maker": "General",
-   "short": "刺激パルスは出ているが、電極‐心筋界面で脱分極が成立せずcaptureできない状態。exit block。",
+   "short": "刺激パルスは出ているのに、電極と心筋の境界で脱分極が成立せず捕捉できない状態。慢性期の線維化などで閾値が上がった場合に起こる。",
    "tags": "Trouble / PM / ICD / CRT / General / exit / block / threshold / capture"
   },
   {
@@ -589,7 +589,7 @@
    "cat": "リード",
    "device": "PM / ICD / CRT",
    "maker": "General",
-   "short": "スクリューを心内膜へ固定するactive-fixation型経静脈リード。",
+   "short": "先端のスクリューを心内膜にねじ込んで固定する経静脈リード（能動的固定型）。留置部位を自由に選べ、中隔など目的の場所に固定できる。",
    "tags": "Lead / PM / ICD / CRT / General / endocardial / screw-in / lead / threshold / capture"
   },
   {
@@ -599,7 +599,7 @@
    "cat": "ペーシング",
    "device": "PM",
    "maker": "General",
-   "short": "心腔内に置いた電極から心内膜側を刺激する一般的な経静脈ペーシング。",
+   "short": "心腔の内側（心内膜面）に接した電極から刺激する方法で、経静脈リードによる通常のペーシングがこれにあたる。開胸して心臓の外側から刺激する心外膜ペーシングと対になる言葉。",
    "tags": "PM / General / endocardial / pacing / threshold / capture"
   },
   {
@@ -609,7 +609,7 @@
    "cat": "リード",
    "device": "PM / ICD / CRT",
    "maker": "General",
-   "short": "心腔内の心内膜面に接して留置されるペーシング/センシングリード。",
+   "short": "心腔の内側、心内膜面に接して留置されるリード。経静脈的に挿入する通常のリードがこれにあたる。",
    "tags": "Lead / PM / ICD / CRT / General / endocardial / lead / threshold / capture"
   },
   {
@@ -619,7 +619,7 @@
    "cat": "不整脈・EP",
    "device": "PM / ICD / CRT",
    "maker": "General",
-   "short": "心臓が1分間に送り出す血液量。1回拍出量×心拍数で決まり、房室同期や適切なレートが保たれると増える。ペースメーカ設定が血行動態に影響する理由。",
+   "short": "心臓が1分間に送り出す血液量で、1回拍出量×心拍数で決まる。房室同期が保たれ、活動に見合った心拍数が確保されると増えるため、ペースメーカの設定がそのまま血行動態に影響する。",
    "tags": "Clinical / PM / ICD / CRT / General / cardiac / output"
   },
   {
@@ -629,7 +629,7 @@
    "cat": "不整脈・EP",
    "device": "PM / ICD / CRT",
    "maker": "General",
-   "short": "刺激伝導系のどこかで興奮伝導が遅延または途絶する状態の総称。",
+   "short": "刺激伝導系のどこかで興奮の伝導が遅れる、あるいは途絶える状態の総称。障害される部位によって洞房ブロック、房室ブロック、脚ブロックなどに分けられる。",
    "tags": "Clinical / PM / ICD / CRT / General / heart / block"
   },
   {
@@ -639,7 +639,7 @@
    "cat": "AV・タイミング",
    "device": "PM / ICD / CRT",
    "maker": "General",
-   "short": "心室拡張末期の心房収縮によって心室充満が追加される成分。AV同期の意義に関係する。",
+   "short": "心室拡張の終わりに心房が収縮し、心室の充満を追加する働き。安静時でも心拍出量の2割前後を担い、左室の拡張障害がある例ではさらに寄与が大きい。房室同期を保つ意義そのものといえる。",
    "tags": "Clinical / PM / ICD / CRT / General / atrial / kick"
   },
   {
@@ -649,7 +649,7 @@
    "cat": "モード",
    "device": "PM",
    "maker": "General",
-   "short": "心房活動を感知して一定のAV delay後に心室刺激する追従型ペーシング。VAT/VDD系の概念。",
+   "short": "心房の活動を感知し、一定のAVディレイをおいて心室を刺激する追従型のペーシング。自己の洞調律に心室が付いていくため、運動時の心拍数増加を自然に活かせる。VDDやDDDの追従動作がこれにあたる。",
    "tags": "PM / General / atrial-synchronized / ventricular / pacing / threshold / capture"
   },
   {
@@ -659,7 +659,7 @@
    "cat": "モード",
    "device": "PM",
    "maker": "General",
-   "short": "心房刺激後に設定AV delayを置いて心室刺激するAV sequential pacing。",
+   "short": "心房を刺激した後、設定したAVディレイをおいて心室を刺激する動作。心房と心室が順番に収縮するため房室同期が保たれ、心房キックによる心室充満を活かせる。",
    "tags": "PM / General / atrio-ventricular / sequential / pacing / threshold / capture"
   },
   {
@@ -669,7 +669,7 @@
    "cat": "ペーシング",
    "device": "PM",
    "maker": "General",
-   "short": "心房を感知して心室刺激を準備し、AV delay内に自己心室波があれば心室刺激を抑制するVDD型動作。",
+   "short": "心房の活動を感知して心室刺激の準備をし、AVディレイ内に自己の心室波が出ればその刺激を取りやめる動作。VDDモードの基本的な働きで、房室同期を保ちつつ不要な心室ペーシングを避けられる。",
    "tags": "PM / General / atrial-synchronized / ventricular-inhibited / pacing / threshold / capture"
   },
   {
@@ -679,7 +679,7 @@
    "cat": "リード",
    "device": "PM / ICD / CRT",
    "maker": "General",
-   "short": "先端がJ字状に湾曲した心房リード。右心耳に引っ掛けて安定して留置できる形状で、受動的固定で用いられることが多い。",
+   "short": "先端がJ字状に湾曲した心房リード。右心耳に引っ掛けるようにして安定して留置でき、受動的固定型（タイン付き）で用いられることが多い。",
    "tags": "Lead / PM / ICD / CRT / General / atrial / lead / threshold / capture"
   },
   {
@@ -689,7 +689,7 @@
    "cat": "モード",
    "device": "PM",
    "maker": "General",
-   "short": "心房自己波を感知すると心房刺激を抑制するAAIペーシング。",
+   "short": "心房の自己波を感知するとその拍の心房刺激を控えるAAI型のペーシング。房室伝導が保たれた洞不全症候群で、自己の房室伝導を活かしながら徐脈だけを補える。",
    "tags": "PM / General / P-wave / inhibited / atrial / pacing / threshold / capture"
   },
   {
@@ -699,7 +699,7 @@
    "cat": "リード",
    "device": "PM / ICD / CRT",
    "maker": "General",
-   "short": "リード内腔に通して操作性と形状を与える細い鋼線。挿入や位置決めの際に用い、留置後は抜去する。先端を曲げて向きを調整できる。",
+   "short": "リードの内腔に通して硬さと形を与える細い鋼線。先端を曲げることで進む向きを調整でき、留置が決まれば抜去する。血液が付着して内腔で凝固すると操作が困難になるため注意する。",
    "tags": "Procedure / PM / ICD / CRT / General / stylet / threshold / capture"
   },
   {
@@ -709,7 +709,7 @@
    "cat": "不整脈・EP",
    "device": "PM / ICD / CRT",
    "maker": "General",
-   "short": "高度徐脈・一過性心停止などによる脳低灌流で失神や痙攣を来す発作。",
+   "short": "高度な徐脈や一過性の心停止によって脳への血流が急に途絶え、失神や痙攣を来す発作。ペースメーカ治療が確立する前は致命的で、恒久ペーシングの代表的な適応となる。",
    "tags": "Clinical / PM / ICD / CRT / General / Stokes-Adams / syndrome Adams-Stokes アダムス・ストークス症候群"
   },
   {
@@ -719,7 +719,7 @@
    "cat": "デバイス構造",
    "device": "PM / ICD / CRT",
    "maker": "General",
-   "short": "材料が体内で過度な炎症・毒性・血栓形成等を起こしにくい性質。biocompatibility。",
+   "short": "材料が体内に入っても過度な炎症・毒性・血栓形成などを起こしにくい性質。デバイスやリードに使う金属・樹脂を選ぶうえで欠かせない条件となる。",
    "tags": "Device / PM / ICD / CRT / General / biocompatibility"
   },
   {
@@ -739,7 +739,7 @@
    "cat": "リード",
    "device": "PM / ICD / CRT",
    "maker": "General",
-   "short": "導体を覆う高抵抗の被膜（シリコーンやポリウレタン等）。損傷すると電流が漏れてインピーダンスが低下し、オーバーセンシングや捕捉不全を招く。",
+   "short": "導体を覆う電気を通さない被膜で、シリコーンやポリウレタンが使われる。損傷すると電流が漏れてインピーダンスが低下し、オーバーセンシングや捕捉不全を招く。",
    "tags": "Lead / PM / ICD / CRT / General / insulation / noise / oversensing / lead trouble / threshold / capture"
   },
   {
@@ -749,7 +749,7 @@
    "cat": "リード",
    "device": "PM / ICD / CRT",
    "maker": "General",
-   "short": "リード絶縁被覆の破損。電流漏れ、低インピーダンス、ノイズ等の原因となる。",
+   "short": "リードの絶縁被覆が破れた状態。損傷部から電流が漏れるため、インピーダンス低下、筋肉のぴくつき、ノイズによるオーバーセンシングなどが起こる。極性を双極から単極へ変更して一時的にしのぐこともある。",
    "tags": "Trouble / PM / ICD / CRT / General / insulation / fracture / noise / oversensing / lead trouble 被覆損傷 insulation breach ESC MIO リードリーク 漏電 インピーダンス低下"
   },
   {
@@ -759,7 +759,7 @@
    "cat": "不整脈・EP",
    "device": "PM / ICD / CRT",
    "maker": "General",
-   "short": "直前の興奮の直後で、どれほど強い刺激でも新たな活動電位を生じない期間。心筋を保護し、期外刺激による頻拍を防ぐ生理的な仕組み。",
+   "short": "直前の興奮の直後で、どれほど強い刺激を与えても新たな活動電位が生じない期間。連続した興奮による心筋の疲弊や、期外刺激による頻拍を防ぐ生理的な安全装置となっている。",
    "tags": "EP / PM / ICD / CRT / General / absolute / refractory / period ARP blanking"
   },
   {
@@ -769,7 +769,7 @@
    "cat": "AV・タイミング",
    "device": "PM",
    "maker": "General",
-   "short": "デバイスにプログラムするペーシング速度。下限レートや上限レート等がある。",
+   "short": "デバイスにプログラムするペーシングの速さ。徐脈時に維持する下限レート（LRL）、心房追従の上限（MTR）、センサー駆動の上限（MSR）などがあり、それぞれ目的が異なる。",
    "tags": "PM / General / rate / pacing / threshold / capture"
   },
   {
@@ -779,7 +779,7 @@
    "cat": "センシング",
    "device": "PM / ICD / CRT",
    "maker": "General",
-   "short": "適切な自己波認識ができない状態の総称。undersensingとoversensingの双方を含む。",
+   "short": "自己の心内波を適切に認識できない状態の総称。感知すべき波を拾えないアンダーセンシングと、心筋興奮以外の信号を拾ってしまうオーバーセンシングの両方を含む。",
    "tags": "Trouble / PM / ICD / CRT / General / sensing / failure / noise / oversensing / lead trouble"
   },
   {
@@ -789,7 +789,7 @@
    "cat": "不整脈・EP",
    "device": "PM / ICD / CRT",
    "maker": "General",
-   "short": "オーバードライブ刺激終了から最初の自己興奮までを含めた洞結節機能評価指標の古典的表現。",
+   "short": "オーバードライブ刺激を止めてから最初の自己興奮が出るまでを、補充調律も含めて評価する古典的な指標。現在は洞結節機能回復時間として測ることが多い。",
    "tags": "EP / PM / ICD / CRT / General / total / recovery / time"
   },
   {
@@ -799,7 +799,7 @@
    "cat": "リード",
    "device": "PM / ICD / CRT",
    "maker": "General",
-   "short": "tipとringの2電極間でセンシング/刺激するリード。局所信号を得やすくEMI/筋電位の影響を受けにくい。",
+   "short": "先端のチップ電極とその手前のリング電極という近接した2点で刺激・感知を行うリード。狭い範囲の電位を見るため、筋電位や電磁干渉の影響を受けにくい。現在の標準的な構成。",
    "tags": "Lead / PM / ICD / CRT / General / bipolar / lead / threshold / capture バイポーラ bipolar"
   },
   {
@@ -809,7 +809,7 @@
    "cat": "不整脈・EP",
    "device": "PM / ICD / CRT",
    "maker": "General",
-   "short": "心筋細胞膜電位が興奮方向へ変化し、活動電位が成立する過程。",
+   "short": "静止状態にある心筋細胞にNaイオンなどが流れ込み、膜電位がマイナスからプラス方向へ急激に変化して活動電位が成立する過程。心電図ではP波やQRS波として現れ、これに続いて心筋が収縮する。",
    "tags": "EP / PM / ICD / CRT / General / depolarization"
   },
   {
@@ -819,7 +819,7 @@
    "cat": "リード",
    "device": "PM / ICD / CRT",
    "maker": "General",
-   "short": "リードtipとデバイス缶など広い電極間で刺激/センシングする構成。",
+   "short": "リード先端の電極とデバイス本体（缶）という、離れた2点で刺激・感知を行う構成。広い範囲の電位を拾うため感知波高は大きいが、筋電位や外来ノイズを拾いやすく、本体付近の筋肉刺激も起こりやすい。",
    "tags": "Lead / PM / ICD / CRT / General / unipolar / lead / threshold / capture ユニポーラ unipolar"
   },
   {
@@ -829,7 +829,7 @@
    "cat": "ペーシング",
    "device": "PM",
    "maker": "General",
-   "short": "単一心腔のみを対象にするペーシング。single chamber pacing。",
+   "short": "心房か心室のどちらか一方だけを刺激・感知の対象とするペーシング。AAIやVVIが該当し、リードが1本で済むぶん手技が簡便だが、房室同期は得られない。",
    "tags": "PM / General / single / chamber / pacing / threshold / capture シングル・チャンバー・ペーシング SSI single chamber pacing"
   },
   {
@@ -839,7 +839,7 @@
    "cat": "デバイス構造",
    "device": "PM / ICD / CRT",
    "maker": "General",
-   "short": "CIED本体ケースに広く用いられる、生体適合性と耐食性に優れた金属。",
+   "short": "本体ケースに広く用いられる金属。生体適合性が高く腐食に強いうえ、電気を通すため単極ペーシングでは対極（陽極）としても働く。",
    "tags": "Device / PM / ICD / CRT / General / titanium"
   },
   {
@@ -849,7 +849,7 @@
    "cat": "モード",
    "device": "PM",
    "maker": "General",
-   "short": "自己心拍があるときは刺激を抑制し、必要時のみ刺激するペーシング。",
+   "short": "自己心拍があるときは刺激を控え、必要なときだけ刺激するペーシングの考え方。自己脈との競合やspike on Tを避けられるため、現在のペースメーカの基本動作となっている。",
    "tags": "PM / General / demand / pacing / threshold / capture"
   },
   {
@@ -859,7 +859,7 @@
    "cat": "デバイス構造",
    "device": "PM / ICD / CRT",
    "maker": "General",
-   "short": "プログラマーや遠隔システムとデバイス間で設定・診断情報を送受信する通信機構。",
+   "short": "プログラマや遠隔モニタリングのサーバーとの間で、設定内容や記録データをやり取りする通信の仕組み。ワンドを密着させる方式と、無線で交信する方式がある。",
    "tags": "Follow-up / PM / ICD / CRT / General / telemetry / system"
   },
   {
@@ -889,7 +889,7 @@
    "cat": "電池",
    "device": "PM / ICD / CRT",
    "maker": "General",
-   "short": "電池消耗が進み、計画的なジェネレータ交換を検討する段階。ERT/RRTなど表現はメーカーで異なる。",
+   "short": "電池の消耗が進み、計画的にジェネレータ交換を検討する段階。ERT、RRT、ERIなど呼び方や定義はメーカーによって異なるため、機種ごとの基準を確認する。",
    "tags": "Battery / PM / ICD / CRT / General / elective / replacement / time"
   },
   {
@@ -899,7 +899,7 @@
    "cat": "不整脈・EP",
    "device": "PM / ICD / CRT",
    "maker": "General",
-   "short": "心筋を興奮（脱分極波）が伝わっていくこと。洞結節→心房→房室結節→ヒス束→脚→心室と伝わり、この経路の障害がブロックや不整脈を生む。",
+   "short": "興奮（脱分極波）が心筋を伝わっていくこと。洞房結節→心房→房室結節→ヒス束→脚→プルキンエ線維→心室筋の順に伝わり、この経路のどこかが障害されるとブロックや不整脈を生む。",
    "tags": "EP / PM / ICD / CRT / General / conduction"
   },
   {
@@ -909,7 +909,7 @@
    "cat": "不整脈・EP",
    "device": "PM / ICD / CRT",
    "maker": "General",
-   "short": "洞徐脈、洞停止、洞房ブロック、徐脈頻脈症候群などを含む洞結節機能障害。SSS/SND。",
+   "short": "洞房結節の機能低下により、洞性徐脈・洞停止・洞房ブロック・徐脈頻脈症候群などを来す病態の総称。症状と徐脈の関連が確認できればペースメーカの適応となる。",
    "tags": "Clinical / PM / ICD / CRT / General / sick / sinus / syndrome"
   },
   {
@@ -919,7 +919,7 @@
    "cat": "不整脈・EP",
    "device": "PM / ICD / CRT",
    "maker": "General",
-   "short": "心房オーバードライブ刺激終了から最初の洞性興奮までの時間。SNRT。",
+   "short": "心房を速いレートでペーシングして洞房結節を抑え込み、刺激を止めてから最初の自己洞性興奮が現れるまでの時間。洞結節の回復力を評価する指標で、延長は洞機能不全を示唆する。",
    "tags": "EP / PM / ICD / CRT / General / sinus / node / recovery / time"
   },
   {
@@ -929,7 +929,7 @@
    "cat": "リード",
    "device": "PM / ICD / CRT",
    "maker": "General",
-   "short": "リード内で電流を伝える芯線。断線するとインピーダンスが上昇し、出力不全や雑音の原因になる。複数の線を撚った構造は屈曲による疲労に強い。",
+   "short": "リードの内部で電流を伝える芯線。断線するとインピーダンスが上昇し、出力不全や雑音の原因になる。細い線を撚り合わせた多線条構造は、繰り返しの屈曲に強い。",
    "tags": "Lead / PM / ICD / CRT / General / conductor / threshold / capture"
   },
   {
@@ -939,7 +939,7 @@
    "cat": "ペーシング",
    "device": "PM",
    "maker": "General",
-   "short": "心房と心室の2腔をセンシング/ペーシング対象とするdual chamber pacing。",
+   "short": "心房と心室の両方にリードを置き、双方を刺激・感知の対象とするペーシング。DDDが代表で、房室同期を保てるため心房収縮による心室充満（心房キック）を活かせる。",
    "tags": "PM / General / dual / chamber / pacing / threshold / capture"
   },
   {
@@ -949,7 +949,7 @@
    "cat": "不整脈・EP",
    "device": "PM / ICD / CRT",
    "maker": "General",
-   "short": "心房興奮の一部が心室へ伝導しない房室ブロック。Mobitz I/IIなどに分類する。",
+   "short": "心房興奮の一部が心室へ伝導せず、QRSが脱落する房室ブロック。PQ間隔が徐々に延びて脱落するWenckebach型（Mobitz I）と、延長なしに突然脱落するMobitz II型に分けられ、後者は重症度が高い。",
    "tags": "Clinical / PM / ICD / CRT / General / nd / degree / A-V / block"
   },
   {
@@ -959,7 +959,7 @@
    "cat": "リード",
    "device": "PM / ICD / CRT",
    "maker": "General",
-   "short": "先端スクリューを心内膜へ固定するactive fixationリード。",
+   "short": "先端のスクリューを心筋にねじ込んで固定するリード。能動的固定リードとも呼ぶ。留置部位の自由度が高く、慢性期の抜去も比較的行いやすい。",
    "tags": "Lead / PM / ICD / CRT / General / screw-in / lead / threshold / capture"
   },
   {
@@ -979,7 +979,7 @@
    "cat": "リード",
    "device": "PM / ICD / CRT",
    "maker": "General",
-   "short": "先端スクリューで心筋に固定するタイプのリード。留置部位の自由度が高く、慢性期の抜去も比較的行いやすい。近年広く使われるリードの一つ。",
+   "short": "先端のスクリューを心筋にねじ込んで固定するリード。留置部位を選べるうえ、慢性期でも比較的抜去しやすい。ICDの心室リードでは第一選択となることが多い。",
    "tags": "Lead / PM / ICD / CRT / General / active / fixation / lead / threshold / capture"
   },
   {
@@ -989,7 +989,7 @@
    "cat": "ICD",
    "device": "ICD",
    "maker": "General",
-   "short": "ATPの1シーケンスで刺激列を継続する時間/拍数に関する設定。",
+   "short": "1回のATPで刺激を何拍続けるかの設定。拍数が多いほど停止率は上がるが、その分だけ血行動態への負担と加速のリスクが増える。",
    "tags": "ICD / General / burst / duration"
   },
   {
@@ -999,7 +999,7 @@
    "cat": "ICD",
    "device": "ICD",
    "maker": "General",
-   "short": "ATP刺激列の速さ。多くは頻拍周期に対する割合または刺激間隔で設定する。",
+   "short": "ATPの刺激列の速さ。多くは頻拍周期に対する割合（例：88%）で設定し、速いほど停止しやすいが、頻拍の加速や心室細動化のリスクも増える。",
    "tags": "ICD / General / burst / rate"
   },
   {
@@ -1039,7 +1039,7 @@
    "cat": "モード",
    "device": "PM",
    "maker": "General",
-   "short": "センシングしたイベントに対して抑制・トリガー等どのように応答するかを示すmode概念。",
+   "short": "感知したイベントに対して、刺激を抑制するのか（I）、逆に刺激の引き金にするのか（T）、その両方か（D）を示すモードの概念。NBGコードの3文字目にあたる。",
    "tags": "PM / General / mode / threshold / capture"
   },
   {
@@ -1049,7 +1049,7 @@
    "cat": "リード",
    "device": "PM / ICD / CRT",
    "maker": "General",
-   "short": "リード挿入後に縦方向へ裂いて除去できる静脈アクセス用イントロデューサーシース。",
+   "short": "リードを挿入した後に、縦方向へ裂いて取り除けるように作られた静脈アクセス用シース。リードを抜かずにシースだけを除去できる。",
    "tags": "Procedure / PM / ICD / CRT / General / peel-away / sheath / split-sheath / lead / threshold / capture"
   },
   {
@@ -1069,7 +1069,7 @@
    "cat": "CRT・CSP",
    "device": "PM / ICD / CRT",
    "maker": "General",
-   "short": "His束電位を記録した心内電位。AH/HV時間の測定などに用いる。",
+   "short": "ヒス束の電位を記録した心内電位図。心房興奮（A波）、ヒス束興奮（H波）、心室興奮（V波）が並び、A-H時間とH-V時間から房室伝導障害の部位を特定できる。",
    "tags": "EP / PM / ICD / CRT / General / His / bundle / electrogram"
   },
   {
@@ -1079,7 +1079,7 @@
    "cat": "AV・タイミング",
    "device": "PM",
    "maker": "General",
-   "short": "自己心拍を優先するため、自己波後に一時的に基本レートより低いレートまで待つ機能。",
+   "short": "自己心拍をできるだけ活かすため、自己波を感知した後は設定した下限レートよりさらに低いレートまで待ってからペーシングする機能。不要なペーシングを減らせる一方、待つ間の心拍数は低くなる。",
    "tags": "PM / General / hysteresis / threshold / capture ヒステリシス hysteresis"
   },
   {
@@ -1089,7 +1089,7 @@
    "cat": "リード",
    "device": "PM",
    "maker": "General",
-   "short": "古いペースメーカシステムで接続部を被覆・固定するために用いられた部材の呼称。現在は歴史的用語。",
+   "short": "古いペースメーカで、リードと本体の接続部を覆って固定するために用いられた部材の呼称。現在は使われない歴史的な用語。",
    "tags": "History / PM / General / boot"
   },
   {
@@ -1099,7 +1099,7 @@
    "cat": "AV・タイミング",
    "device": "PM",
    "maker": "General",
-   "short": "特定イベント後にセンシング入力を無視または分類限定する時間。生理的不応期とデバイス不応期を区別する。",
+   "short": "あるイベントの後、センシング入力を無視する、または計時に反映しない時間帯。心筋そのものが興奮できない生理的不応期と、デバイスが設定するプログラム上の不応期は別物なので区別して考える。",
    "tags": "PM / General / refractory / period / threshold / capture"
   },
   {
@@ -1109,7 +1109,7 @@
    "cat": "不整脈・EP",
    "device": "PM / ICD / CRT",
    "maker": "General",
-   "short": "正常刺激伝導系以外に心房と心室などを結ぶ異常伝導路。WPWなどでリエントリー基質となる。",
+   "short": "正常な刺激伝導系とは別に、心房と心室などを直接つなぐ異常な伝導路。WPW症候群のKent束が代表で、リエントリー性頻拍の回路（基質）となる。",
    "tags": "EP / PM / ICD / CRT / General / accessory / pathway"
   },
   {
@@ -1119,7 +1119,7 @@
    "cat": "リード",
    "device": "PM / ICD / CRT",
    "maker": "General",
-   "short": "リード先端部などに設けられた固定・支持用の張り出し構造を指す古い表現。",
+   "short": "リード先端などに設けられた、固定や支持のための張り出し構造を指す古い表現。",
    "tags": "Lead / PM / ICD / CRT / General / flange / threshold / capture"
   },
   {
@@ -1129,7 +1129,7 @@
    "cat": "ペーシング",
    "device": "PM / ICD / CRT",
    "maker": "General",
-   "short": "必要なペーシング刺激が出ない、または刺激が出てもcaptureしない状態の総称。",
+   "short": "必要な刺激が出ない、または刺激は出ているのに心筋が捕捉されない状態の総称。前者は出力不全（断線・接続不良・オーバーセンシングによる抑制）、後者は捕捉不全（閾値上昇・リード移動）が主な原因となる。",
    "tags": "Trouble / PM / ICD / CRT / General / pacing / failure / threshold / capture"
   },
   {
@@ -1139,7 +1139,7 @@
    "cat": "モード",
    "device": "PM",
    "maker": "General",
-   "short": "AAI/VVI/DDDなど、刺激・センシング腔と応答を規定するpacing mode。",
+   "short": "AAI・VVI・DDDのように、どの心腔を刺激し、どの心腔を感知し、感知に対してどう応答するかを規定するモード。患者の病態（洞不全か房室ブロックか、房室伝導が残っているか）に応じて選ぶ。",
    "tags": "PM / General / pacing / mode / threshold / capture"
   },
   {
@@ -1149,7 +1149,7 @@
    "cat": "AV・タイミング",
    "device": "PM",
    "maker": "General",
-   "short": "ペーシングレートの上限/下限など、デバイスが刺激できる速度の制約を指す旧来の表現。",
+   "short": "デバイスが刺激できる速さの上限・下限といった制約を指す、やや古い言い方。現在は下限レート・上限追従レートなど、個々の設定名で呼ぶことが多い。",
    "tags": "PM / General / pace / limit / threshold / capture"
   },
   {
@@ -1159,7 +1159,7 @@
    "cat": "不整脈・EP",
    "device": "PM / ICD / CRT",
    "maker": "General",
-   "short": "安全な自己調律が乏しく、ペーシング停止で重大な徐脈/無収縮を生じ得る状態。",
+   "short": "自己の調律がほとんど、あるいはまったく期待できず、ペーシングが止まると重大な徐脈や心停止に陥る状態。閾値測定やデバイス交換の際は、常にバックアップ手段を用意しておく必要がある。",
    "tags": "Clinical / PM / ICD / CRT / General / pacemaker / dependent Pacing dependency Pacemaker dependency"
   },
   {
@@ -1169,7 +1169,7 @@
    "cat": "不整脈・EP",
    "device": "PM / ICD / CRT",
    "maker": "General",
-   "short": "旧来の機械的/電気的構造で聴取されることがあったクリック音等の歴史的表現。現行機では一般的でない。",
+   "short": "旧来のデバイスで聴取されることがあったクリック音などを指す歴史的な表現。現在の機種では通常聴取されない。",
    "tags": "Clinical / PM / ICD / CRT / General / pacemaker / sounds / click"
   },
   {
@@ -1199,7 +1199,7 @@
    "cat": "植込み・手技",
    "device": "PM / ICD / CRT",
    "maker": "General",
-   "short": "皮下/筋膜下にパルスジェネレータを収納するため作成するスペース。",
+   "short": "本体を収めるために皮下や筋膜下に作るスペース。大きすぎると本体が動いて捻れ（Twiddler症候群）の原因となり、浅すぎると皮膚の圧迫壊死を招くため、適切な深さと大きさで作成する。",
    "tags": "Procedure / PM / ICD / CRT / General / pacemaker / pocket / threshold / capture"
   },
   {
@@ -1209,7 +1209,7 @@
    "cat": "フォロー",
    "device": "PM / ICD / CRT",
    "maker": "General",
-   "short": "ペースメーカ作動や心拍を監視する外部モニタ装置の旧来の呼称。現在はプログラマー/remote monitoringへ発展。",
+   "short": "ペースメーカの作動や心拍を監視した外部装置の旧来の呼称。現在はプログラマや遠隔モニタリングがその役割を担っている。",
    "tags": "Follow-up / PM / ICD / CRT / General / pacemaker / monitor"
   },
   {
@@ -1219,7 +1219,7 @@
    "cat": "不整脈・EP",
    "device": "PM / ICD / CRT",
    "maker": "General",
-   "short": "心房からHis束へ興奮を伝え、生理的遅延を形成する刺激伝導系組織。AV node。",
+   "short": "心房からヒス束へ興奮を受け渡す刺激伝導系の中継点。ここで伝導が意図的に遅くなることで心房収縮の後に心室が収縮でき、また心房細動時に速い興奮が心室へそのまま伝わるのを防ぐフィルタの役割も果たす。",
    "tags": "EP / PM / ICD / CRT / General / atrio-ventricular / node AVN 結節間伝導路 Wenckebach束 Thorel束"
   },
   {
@@ -1239,7 +1239,7 @@
    "cat": "モード",
    "device": "PM",
    "maker": "General",
-   "short": "主機能の異常や特定条件で作動するバックアップ動作。機種により意味・挙動が異なる。",
+   "short": "主たる機能に異常が起きたときや特定の条件下で作動するバックアップの動作。デバイスリセットで移行する基本機能用設定もこれにあたる。意味や挙動は機種によって異なる。",
    "tags": "PM / General / backup / mode / threshold / capture"
   },
   {
@@ -1249,7 +1249,7 @@
    "cat": "不整脈・EP",
    "device": "PM / ICD / CRT",
    "maker": "General",
-   "short": "SNRTから基礎洞周期長を差し引いた洞結節機能指標。CSNRT/CSRT。",
+   "short": "洞結節機能回復時間から、もともとの洞周期の長さを差し引いた値。基礎心拍数の影響を除けるため、洞結節機能をより正確に評価できる。",
    "tags": "EP / PM / ICD / CRT / General / corrected / sinus / node / recovery"
   },
   {
@@ -1259,7 +1259,7 @@
    "cat": "ペーシング",
    "device": "PM",
    "maker": "General",
-   "short": "ペーシング刺激によって標的心筋の脱分極が成立すること。capture。",
+   "short": "ペーシング刺激によって狙った心筋の脱分極が成立し、収縮につながること。心電図ではスパイクに続いてP波やQRSが出れば捕捉、出なければ捕捉不全と判断する。",
    "tags": "PM / General / capture / threshold"
   },
   {
@@ -1269,7 +1269,7 @@
    "cat": "電池",
    "device": "PM",
    "maker": "General",
-   "short": "磁石をデバイス上に置いた際に作動する規定動作。PMとICDで反応が異なる。",
+   "short": "デバイスの上に磁石を置いたときに作動する既定の動作。ペースメーカでは非同期ペーシング（DOO/VOOなど）になり、ICDでは頻拍検出・治療が一時的に停止する。反応の仕方は機種で異なる。",
    "tags": "PM / General / magnet / mode 静磁界 10ガウス"
   },
   {
@@ -1279,7 +1279,7 @@
    "cat": "電池",
    "device": "PM / ICD / CRT",
    "maker": "General",
-   "short": "磁石装着時の非同期ペーシングレート等。電池状態の指標として利用された/されるが機種依存。",
+   "short": "磁石を当てたときの非同期ペーシングのレート。かつては電池消耗に応じてレートが下がる仕組みを利用して残量の目安としていたが、挙動は機種によって異なる。",
    "tags": "Battery / PM / ICD / CRT / General / magnet / rate"
   },
   {
@@ -1289,7 +1289,7 @@
    "cat": "ペーシング",
    "device": "PM / ICD / CRT",
    "maker": "General",
-   "short": "植込み後のlead maturationを経て安定した時期に測定するペーシング閾値。",
+   "short": "リードと心筋の関係が落ち着いた時期（おおむね植込み6〜8週以降）に測定するペーシング閾値。急性期の一時的な上昇を過ぎて安定するため、長期の出力設定はこの値を基準に決める。",
    "tags": "Lead / PM / ICD / CRT / General / chronic / threshold / capture"
   },
   {
@@ -1299,7 +1299,7 @@
    "cat": "デバイス構造",
    "device": "PM / ICD / CRT",
    "maker": "General",
-   "short": "デバイス内部を体液から隔離する気密封止。hermetic seal。",
+   "short": "内部の回路を体液から完全に隔離するための気密封止。ここが破れると回路が故障するため、デバイスの信頼性を支える基本構造となる。",
    "tags": "Device / PM / ICD / CRT / General / hermetic / seal"
   },
   {
@@ -1309,7 +1309,7 @@
    "cat": "ペーシング",
    "device": "PM / ICD / CRT",
    "maker": "General",
-   "short": "自己興奮とペーシング興奮が同一拍の心室脱分極にともに寄与した波形。fusion beat。",
+   "short": "自己伝導による興奮とペーシングによる興奮がぶつかり合い、1拍の心室脱分極に両方が寄与した波形。心電図ではペーシング波形とも自己波形とも異なる中間的なQRSとなる。融合収縮そのものは害が少ないが、センシング不全が隠れていないか確認する。",
    "tags": "EP / PM / ICD / CRT / General / fusion / beat 融合収縮 fusion 偽性融合収縮 pseudo-fusion"
   },
   {
@@ -1319,7 +1319,7 @@
    "cat": "リード",
    "device": "PM / ICD / CRT",
    "maker": "General",
-   "short": "電極表面に微細孔を設け、組織反応や薬剤溶出等を工夫した電極構造。",
+   "short": "電極表面に微細な孔を設けた構造。心筋との接触面積を増やして閾値を下げ、ステロイド溶出と組み合わせて炎症による閾値上昇を抑える工夫がなされている。",
    "tags": "Lead / PM / ICD / CRT / General / porous / electrode / threshold / capture"
   },
   {
@@ -1329,7 +1329,7 @@
    "cat": "ペーシング",
    "device": "PM / ICD / CRT",
    "maker": "General",
-   "short": "電流が戻る側の電極。bipolar pacingではringが陽極になる構成が一般的。",
+   "short": "電流が組織から戻る側の電極。双極リードではリング電極、単極リードではデバイス本体（缶）が陽極となる。通常は陽極側で心筋興奮は起こらないが、出力が高いと陽極刺激が生じることがある。",
    "tags": "Lead / PM / ICD / CRT / General / anode / threshold / capture"
   },
   {
@@ -1339,7 +1339,7 @@
    "cat": "ペーシング",
    "device": "PM / ICD / CRT",
    "maker": "General",
-   "short": "リードのring electrodeなど、陽極として機能する帯状電極。",
+   "short": "リードのリング電極のように、陽極として働く帯状の電極部分を指す言い方。双極ペーシングで電流が戻る側にあたる。",
    "tags": "Lead / PM / ICD / CRT / General / anodal / band / threshold / capture"
   },
   {
@@ -1349,7 +1349,7 @@
    "cat": "リード",
    "device": "PM / ICD / CRT",
    "maker": "General",
-   "short": "心内電位のセンシングと刺激伝達を行い、ジェネレータと心臓を電気的に接続する導線。",
+   "short": "心臓とジェネレータを電気的につなぐ導線。心内電位をデバイスへ伝える役割と、刺激パルスを心筋へ届ける役割を兼ねる。体内で最も機械的ストレスを受ける部品で、トラブルの多くはこのリードに起こる。",
    "tags": "Lead / PM / ICD / CRT / General / lead / threshold / capture"
   },
   {
@@ -1359,7 +1359,7 @@
    "cat": "レート応答",
    "device": "PM",
    "maker": "General",
-   "short": "活動/生理センサーに応じてペーシングレートを自動上昇させるrate-responsive pacing。",
+   "short": "体動や生理的な指標をセンサで捉え、活動量に応じてペーシングレートを自動的に上げ下げする機能。運動時に自分で心拍数を上げられない変時性不全の患者で、運動耐容能の改善が期待できる。",
    "tags": "PM / General / rate / responsive / pacing / threshold / capture"
   },
   {
@@ -1369,7 +1369,7 @@
    "cat": "電池",
    "device": "PM / ICD / CRT",
    "maker": "General",
-   "short": "電池セル内部の抵抗成分。電池消耗に伴う変化が寿命推定の情報となる。",
+   "short": "電池セルの内部にある抵抗成分。消耗が進むにつれて上昇し、その変化が残り寿命を推定する重要な手がかりとなる。ICDでは充電時間の延長として現れる。",
    "tags": "Battery / PM / ICD / CRT / General / cell / impedance"
   },
   {
@@ -1379,7 +1379,7 @@
    "cat": "トラブル",
    "device": "PM / ICD / CRT",
    "maker": "General",
-   "short": "一方のチャネル刺激が別チャネル/心腔へ意図せず影響する現象を指す旧来の用語。",
+   "short": "一方のチャネルの刺激が、意図せず別のチャネルや心腔へ影響してしまう現象を指す旧来の用語。リードの逆接続でも同様のことが起こる。",
    "tags": "Trouble / PM / ICD / CRT / General / cross / stimulation"
   },
   {
@@ -1389,7 +1389,7 @@
    "cat": "デバイス構造",
    "device": "PM",
    "maker": "General",
-   "short": "初期の植込み機器で、体液侵入を避けるため接続部等を乾燥環境に保つ概念に関連する歴史的用語。",
+   "short": "初期の植込み機器で、体液の侵入を避けるため接続部などを乾いた状態に保とうとした考え方に関連する歴史的な用語。",
    "tags": "History / PM / General / dry / pocket"
   },
   {
@@ -1399,7 +1399,7 @@
    "cat": "リード",
    "device": "PM / ICD / CRT",
    "maker": "General",
-   "short": "リード導体が機械的に破損し、導通が不安定または途絶した状態。",
+   "short": "リード内部の導体が機械的に破損し、導通が不安定または途絶した状態。インピーダンスの上昇、ノイズの混入、出力不全を来す。鎖骨と第一肋骨の間の圧迫や、三尖弁輪での屈曲などが原因となる。",
    "tags": "Trouble / PM / ICD / CRT / General / lead / fracture / noise / oversensing / lead trouble / threshold / capture コンダクタ断線 conductor fracture 半断線 不完全断線 インピーダンス上昇 ノイズカウンタ 物理ストレス 鎖骨肋骨間圧迫 Sprint Fidelis Riata リコール 基線動揺 短周期センシング"
   },
   {
@@ -1409,7 +1409,7 @@
    "cat": "リード",
    "device": "PM / ICD / CRT",
    "maker": "General",
-   "short": "リードを経皮的に血管へ導入するためのシース一式。穿刺後にガイドワイヤ経由で挿入し、縦割りして除去できるピールアウェイ型が一般的。",
+   "short": "リードを血管内へ導き入れるためのシース一式。穿刺後にガイドワイヤに沿って挿入し、リードを通した後は縦に裂いて取り除けるピールアウェイ型が一般的。",
    "tags": "Procedure / PM / ICD / CRT / General / lead / introducer / threshold / capture"
   },
   {
@@ -1419,7 +1419,7 @@
    "cat": "電池",
    "device": "PM / ICD / CRT",
    "maker": "General",
-   "short": "現在の電池状態と消費条件から推定される残存作動期間。longevity。",
+   "short": "現在の電池残量と、ペーシング率や出力などの消費条件から算出される残りの作動可能期間。設定を変えると推定値も変わるため、目安として捉える。",
    "tags": "Battery / PM / ICD / CRT / General / longevity"
   },
   {
@@ -1429,7 +1429,7 @@
    "cat": "デバイス構造",
    "device": "PM / ICD / CRT",
    "maker": "General",
-   "short": "ポケット内でジェネレータ位置が変化すること。migration。",
+   "short": "ポケットの中で本体の位置がずれること。皮下の空間が大きすぎる場合や患者が本体を触って回してしまう場合に起こり、リードの牽引や捻れを招くことがある。",
    "tags": "Trouble / PM / ICD / CRT / General / migration"
   },
   {
@@ -1439,7 +1439,7 @@
    "cat": "リード",
    "device": "PM / ICD / CRT",
    "maker": "General",
-   "short": "複数の細い導線を束ねて柔軟性・耐久性を持たせたmultifilar conductor構造のリード。",
+   "short": "細い導線を複数束ねて撚った構造のリード。1本ずつが細いため柔らかく、繰り返しの屈曲に対して疲労しにくい。",
    "tags": "Lead / PM / ICD / CRT / General / multifilar / lead / threshold / capture"
   },
   {
@@ -1449,7 +1449,7 @@
    "cat": "リード",
    "device": "PM / ICD / CRT",
    "maker": "General",
-   "short": "X線等で断線様に見えるが実際の導体断線ではない外観。pseudofracture。",
+   "short": "X線や透視で断線のように見えるが、実際には導体が切れていない見かけ上の所見。リードの重なりや屈曲、コネクタ部の形状などが原因となる。",
    "tags": "Lead / PM / ICD / CRT / General / pseudofracture / noise / oversensing / lead trouble / threshold / capture"
   },
   {
@@ -1459,7 +1459,7 @@
    "cat": "リード",
    "device": "PM / ICD / CRT",
    "maker": "General",
-   "short": "透視/X線で機種識別に用いるradiopaque marker/identification。",
+   "short": "透視やX線写真で機種やメーカーを判別できるよう、リードや本体に埋め込まれた造影性のマーカー。手帳がない患者の機種同定に役立つ。",
    "tags": "Device / PM / ICD / CRT / General / radiopaque / identification / letters X線識別マーカ radiographic marker"
   },
   {
@@ -1469,7 +1469,7 @@
    "cat": "不整脈・EP",
    "device": "PM / ICD / CRT",
    "maker": "General",
-   "short": "心室再分極のT波上へ心室刺激/期外収縮が重なる状態。vulnerable periodでは心室性不整脈誘発リスクとなる。",
+   "short": "心室の再分極途中にあたるT波の上に、期外収縮やペーシングスパイクが重なる状態。この時期は受攻期にあたるため、心室頻拍や心室細動を誘発する危険がある。",
    "tags": "Trouble / PM / ICD / CRT / General / on / pattern / spike"
   },
   {
@@ -1479,7 +1479,7 @@
    "cat": "トラブル",
    "device": "PM",
    "maker": "General",
-   "short": "回路故障等で異常に速い固定ペーシングを生じる歴史的なデバイス故障。現行機では極めて稀。",
+   "short": "回路の故障などにより、異常に速い固定レートでペーシングしてしまう歴史的なデバイス故障。現在の機種では回路上の対策がなされ、極めてまれ。",
    "tags": "History / PM / General / runaway / pacemaker"
   },
   {
@@ -1489,7 +1489,7 @@
    "cat": "センシング",
    "device": "PM",
    "maker": "General",
-   "short": "心内電位を増幅・フィルタし、自己心拍として認識するデバイス内の回路。感度やフィルタの設定によって、オーバー／アンダーセンシングの挙動が変わる。",
+   "short": "心内電位を増幅・フィルタ処理し、自己心拍として認識するデバイス内の回路。感度やフィルタの設定によって、オーバーセンシング・アンダーセンシングの起こりやすさが変わる。",
    "tags": "PM / General / sensing / circuit / threshold / capture"
   },
   {
@@ -1499,7 +1499,7 @@
    "cat": "リード",
    "device": "PM / ICD / CRT",
    "maker": "General",
-   "short": "単一の経静脈リードで心房センシングと心室ペーシング等を行うよう設計されたリード。",
+   "short": "1本の経静脈リードで、心房の感知と心室のペーシング・感知を行えるよう設計されたリード。VDDモードで用いられ、リードが1本で済むが心房刺激はできない。",
    "tags": "Lead / PM / ICD / CRT / General / single-pass / lead / threshold / capture VDD単一リード Single-lead VDD"
   },
   {
@@ -1509,7 +1509,7 @@
    "cat": "リード",
    "device": "PM / ICD / CRT",
    "maker": "General",
-   "short": "リードを筋膜へ縫着固定し、血管入口部での移動や屈曲を抑える部材。",
+   "short": "リードを筋膜に縫い留めるための部材。静脈への入り口でリードが動いたり鋭角に折れ曲がったりするのを防ぎ、位置ずれや断線を予防する。",
    "tags": "Lead / PM / ICD / CRT / General / suture / sleeve / threshold / capture"
   },
   {
@@ -1519,7 +1519,7 @@
    "cat": "リード",
    "device": "PM / ICD / CRT",
    "maker": "General",
-   "short": "受動的固定リードの先端にある柔らかい突起。心内の肉柱に絡んで脱転位を防ぐ。数本が放射状に付いていることが多い。",
+   "short": "受動的固定リードの先端にある柔らかい突起。心腔内の肉柱に絡めて固定する。侵襲が少なく心穿孔のリスクが低い一方、留置できる部位は限られる。",
    "tags": "Lead / PM / ICD / CRT / General / tine / threshold / capture"
   },
   {
@@ -1529,7 +1529,7 @@
    "cat": "AV・タイミング",
    "device": "PM / ICD / CRT",
    "maker": "General",
-   "short": "デバイスが徐脈時に維持しようとする基本の下限ペーシングレート。Lower Rate Limit。",
+   "short": "自己心拍が出ないときにデバイスが維持しようとする最低の心拍数。これを下回らないようにペーシングが入る。低く設定すれば不要なペーシングは減るが、必要な心拍数を確保できない可能性がある。",
    "tags": "PM / ICD / CRT / General / Lower / Rate / Limit / threshold / capture"
   },
   {
@@ -1539,7 +1539,7 @@
    "cat": "AV・タイミング",
    "device": "PM / ICD / CRT",
    "maker": "General",
-   "short": "上限レートの総称。心房追従上限（MTR）とセンサー駆動上限（MSR）を文脈で区別する。",
+   "short": "上限レートの総称。心房イベントに追従できる上限（MTR）と、レート応答センサーが駆動できる上限（MSR）があり、文脈によってどちらを指すかが異なる。",
    "tags": "PM / ICD / CRT / General / Upper / Rate / Limit / threshold / capture"
   },
   {
@@ -1549,7 +1549,7 @@
    "cat": "AV・タイミング",
    "device": "PM / CRT",
    "maker": "General",
-   "short": "心房イベントを心室ペーシングが1:1追従できる最大レート。Maximum Tracking Rate。",
+   "short": "心房で感知したイベントに心室ペーシングが1対1で追従できる最大レート。これを超える心房レートではウェンケバッハ様の挙動や2:1ブロックとなる。TARPによって実際の上限が制約される点に注意する。",
    "tags": "PM / CRT / General / Maximum / Tracking / Rate"
   },
   {
@@ -1559,7 +1559,7 @@
    "cat": "レート応答",
    "device": "PM / ICD / CRT",
    "maker": "General",
-   "short": "レートレスポンスによるセンサー駆動レートの上限。Maximum Sensor Rate。",
+   "short": "レート応答センサによってペーシングレートを上げられる上限。高すぎると軽い動作で心拍が上がりすぎ、低すぎると運動時に必要な心拍数を確保できない。年齢や活動性に合わせて設定する。",
    "tags": "PM / ICD / CRT / General / Maximum / Sensor / Rate"
   },
   {
@@ -1569,7 +1569,7 @@
    "cat": "AV・タイミング",
    "device": "PM / CRT",
    "maker": "General",
-   "short": "心房自己波（AS）から心室刺激までのAV delay。Sensed AV Delay。",
+   "short": "自己のP波を感知（AS）してから心室を刺激するまでのAVディレイ。自己P波は心房の興奮が始まってしばらく経ってから感知されるため、通常はPAVより短く設定する。",
    "tags": "PM / CRT / General / Sensed / AV / Delay / threshold / capture"
   },
   {
@@ -1579,7 +1579,7 @@
    "cat": "AV・タイミング",
    "device": "PM / CRT",
    "maker": "General",
-   "short": "心房刺激（AP）から心室刺激までのAV delay。Paced AV Delay。",
+   "short": "心房を刺激（AP）してから心室を刺激するまでのAVディレイ。心房刺激では興奮の始まりと同時に計時が始まるため、自己P波感知の場合（SAV）より長めに設定する。",
    "tags": "PM / CRT / General / Paced / AV / Delay / threshold / capture"
   },
   {
@@ -1589,7 +1589,7 @@
    "cat": "AV・タイミング",
    "device": "PM / ICD / CRT",
    "maker": "General",
-   "short": "心室イベント後、心房イベントを追従トリガーとして扱わない不応期。PMT/FFRW対策に重要。",
+   "short": "心室イベントの後に設けられ、この間に心房でイベントを感知しても心室ペーシングの引き金にはしない不応期。逆行性の心房興奮を追従してしまうPMTや、ファーフィールドR波の誤追従を防ぐ要となる設定。",
    "tags": "PM / ICD / CRT / General / Post-Ventricular / Atrial / Refractory / Period / PMT"
   },
   {
@@ -1599,7 +1599,7 @@
    "cat": "AV・タイミング",
    "device": "PM / CRT",
    "maker": "General",
-   "short": "AV delayとPVARPを合わせた、心房イベントの追従可能上限に影響する総不応期間。",
+   "short": "AVディレイとPVARPを足し合わせた、心房側の総不応期間。この長さが心房追従の限界を決め、TARPより短い間隔の心房イベントは追従できない（2:1ブロックレート＝60,000÷TARP［ms］）。",
    "tags": "PM / CRT / General / Total / Atrial / Refractory / Period"
   },
   {
@@ -1619,7 +1619,7 @@
    "cat": "フォロー",
    "device": "PM / ICD / CRT",
    "maker": "General",
-   "short": "観察期間中の心室ペーシング割合。高いVP%は適応や心機能、CSP/CRTの必要性と合わせて解釈する。",
+   "short": "観察期間中に心室ペーシングが行われた割合。洞不全症候群では低いほど望ましく、高い場合は設定の見直しやCSP・CRTの必要性を検討する材料になる。CRTでは逆に高く保つことが目標となる。",
    "tags": "Follow-up / PM / ICD / CRT / General / Ventricular / Pacing / Percentage"
   },
   {
@@ -1629,7 +1629,7 @@
    "cat": "フォロー",
    "device": "PM / ICD / CRT",
    "maker": "General",
-   "short": "観察期間中の心房ペーシング割合。洞機能やLRL、rate response設定の影響を受ける。",
+   "short": "観察期間中に心房ペーシングが行われた割合。洞機能の状態や下限レート、レート応答の設定によって大きく変わるため、症状や活動量と合わせて解釈する。",
    "tags": "Follow-up / PM / ICD / CRT / General / Atrial / Pacing / Percentage"
   },
   {
@@ -1639,7 +1639,7 @@
    "cat": "センシング",
    "device": "PM / ICD / CRT",
    "maker": "General",
-   "short": "心房チャネルが心室脱分極（far-field R wave）を感知する現象。誤AMS/AHREの原因となる。",
+   "short": "心房チャネルが心室の脱分極を拾ってしまう現象。実際の心房レートより多い回数が数えられるため、モードスイッチの誤作動や心房頻拍イベントの誤記録の原因となる。PVABの設定で防ぐ。",
    "tags": "Trouble / PM / ICD / CRT / General / Far-Field / R-Wave"
   },
   {
@@ -1659,7 +1659,7 @@
    "cat": "ICD",
    "device": "ICD / CRT-D",
    "maker": "General",
-   "short": "心室頻拍として検出・治療判定するレート/周期帯。治療内容・判別・検出時間と一体で設定する。",
+   "short": "心室頻拍として検出し治療を判定するレート（周期）の帯。ここに入った頻拍にはまずATPを試み、停止しなければショックへ移行する設定が一般的で、SVT鑑別も併せて働かせる。",
    "tags": "ICD / CRT-D / General / Ventricular / Tachycardia / Zone"
   },
   {
@@ -1699,7 +1699,7 @@
    "cat": "ICD",
    "device": "ICD / CRT-D",
    "maker": "General",
-   "short": "VF/高速VTでショック充電中にATPを行い、停止すればショック回避を狙う機能。",
+   "short": "心室細動ゾーンや高速VTで、ショックの充電を行っている最中にATPを実施する機能。停止すれば充電を中止してショックを回避でき、患者の負担を減らせる。",
    "tags": "ICD / CRT-D / General / ATP / during / charging"
   },
   {
@@ -1709,7 +1709,7 @@
    "cat": "ICD",
    "device": "ICD / CRT-D",
    "maker": "General",
-   "short": "心房情報、AV関係、形態、規則性、発症様式などでSVTとVTを鑑別し不適切治療を減らすロジック。",
+   "short": "上室頻拍と心室頻拍を見分けるための判定ロジック。心房と心室のレート比較、発症の急峻さ（Onset）、R-R間隔の安定性（Stability）、QRS波形の一致度などを組み合わせ、不適切作動を減らす。",
    "tags": "ICD / CRT-D / General / Supraventricular / Tachycardia / Discrimination / noise / oversensing / lead trouble / AF"
   },
   {
@@ -1719,7 +1719,7 @@
    "cat": "ICD",
    "device": "ICD / CRT-D",
    "maker": "General",
-   "short": "除細動コイルを含む高電圧ショック経路のインピーダンス。HV lead/coil/接続評価に用いる。",
+   "short": "除細動コイルを含む高電圧回路のインピーダンス。極端な高値はコイルの断線や接続不良を、低値は絶縁不良を示唆するため、ショック回路の健全性を評価する指標となる。",
    "tags": "ICD / CRT-D / General / High-voltage / shock / impedance"
   },
   {
@@ -1729,7 +1729,7 @@
    "cat": "ICD",
    "device": "ICD / CRT-D",
    "maker": "General",
-   "short": "短期間にVT/VFが反復し、複数回のICD治療や緊急介入を要する状態。",
+   "short": "24時間に3回以上など、短期間に心室頻拍・心室細動が繰り返し起こり、複数回のICD治療や緊急介入を要する状態。抗不整脈薬、鎮静、原因の是正、アブレーションなど集中的な対応が必要となる。",
    "tags": "Clinical / ICD / CRT-D / General / Electrical / storm"
   },
   {
@@ -1739,7 +1739,7 @@
    "cat": "フォロー",
    "device": "CRT",
    "maker": "General",
-   "short": "観察期間中の両室ペーシング割合。CRTでは高い実効ペーシング率の維持が重要。",
+   "short": "観察期間中の両室ペーシングの割合。CRTの効果はこの値に強く依存し、一般に98％以上を目指す。低い場合は心房細動、心室期外収縮、PVARP内センシング、上限レートなどの原因を順に確認する。",
    "tags": "CRT / General / Biventricular / pacing / percentage / threshold / capture / AF"
   },
   {
@@ -1749,7 +1749,7 @@
    "cat": "CRT・CSP",
    "device": "CRT",
    "maker": "General",
-   "short": "単なるVPカウントでなく、融合/偽融合を除き実際に再同期に寄与する刺激が成立したかを見る概念。",
+   "short": "見かけ上のペーシング回数ではなく、実際に左室心筋を捕捉して再同期に寄与した拍がどれだけあったかを評価する考え方。融合や偽融合、捕捉不全を除いた「本当に効いている割合」を見る。",
    "tags": "CRT / General / Effective / pacing"
   },
   {
@@ -1759,7 +1759,7 @@
    "cat": "CRT・CSP",
    "device": "CRT",
    "maker": "General",
-   "short": "冠静脈洞を経由して左室側壁の静脈に留置する左室リード。CRTで左室を刺激し、両室の同期を回復させる。刺激部位を選べる四極リードが主流。",
+   "short": "冠静脈洞を経由して左室側壁の静脈へ留置するリード。心外膜側から左室を刺激するため右室リードより閾値が高くなりやすく、横隔神経刺激にも注意を要する。四極タイプが主流となっている。",
    "tags": "CRT / General / Left / ventricular / lead / threshold / capture 左室リード CS lead 左室"
   },
   {
@@ -1769,7 +1769,7 @@
    "cat": "CRT・CSP",
    "device": "CRT",
    "maker": "General",
-   "short": "選択したLVベクトルで左室心筋をcaptureできる最小刺激強度。",
+   "short": "選択した左室ペーシングベクトルで、左室心筋を捕捉できる最小の刺激強度。心外膜側から刺激するため右室より高くなりやすく、閾値上昇はそのまま両室ペーシングの欠落につながる。",
    "tags": "CRT / General / Left / ventricular / pacing / threshold / capture"
   },
   {
@@ -1779,7 +1779,7 @@
    "cat": "CRT・CSP",
    "device": "PM / CRT",
    "maker": "General",
-   "short": "His束や左脚領域を刺激し、刺激伝導系を利用して生理的な心室興奮を目指すConduction System Pacing。",
+   "short": "ヒス束や左脚領域を刺激し、本来の刺激伝導系を使って心室を興奮させる治療の総称。右室ペーシングによる非同期収縮を避けられ、生理的な興奮に近づけられる。",
    "tags": "CSP / PM / CRT / General / Conduction / System / Pacing / threshold / capture"
   },
   {
@@ -1789,7 +1789,7 @@
    "cat": "CRT・CSP",
    "device": "PM / CRT",
    "maker": "General",
-   "short": "His束を直接/近傍から捕捉するHis Bundle Pacing。",
+   "short": "ヒス束を直接、あるいはその近傍から捕捉するペーシング。刺激伝導系を通るためQRS幅が狭く、元の波形に近い興奮が得られる。一方で閾値が高くなりやすく、心房波のオーバーセンシングや将来の伝導障害進行が課題となる。",
    "tags": "CSP / PM / CRT / General / His / Bundle / Pacing / threshold / capture クラスIIa クラスIIb EF36-50 フォーカスアップデート 2021年 シースデリバー"
   },
   {
@@ -1799,7 +1799,7 @@
    "cat": "CRT・CSP",
    "device": "PM / CRT",
    "maker": "General",
-   "short": "左脚の直接captureを確認して行うLeft Bundle Branch Pacing。",
+   "short": "左脚が確実に捕捉されていることを確認して行うペーシング。ヒス束より末梢の中隔深部を刺激するため閾値が安定しやすく、ヒス束ペーシングが無効な場合の選択肢となる。",
    "tags": "CSP / PM / CRT / General / Left / Bundle / Branch / Pacing / threshold / capture"
   },
   {
@@ -1819,7 +1819,7 @@
    "cat": "CRT・CSP",
    "device": "PM / CRT",
    "maker": "General",
-   "short": "左室活性化時間。CSPでは刺激からV6 R波頂点などまでの時間として評価する。",
+   "short": "左室が興奮するまでにかかる時間。刺激伝導系ペーシングでは、刺激スパイクからV6誘導のR波頂点までの時間として測り、左脚が捕捉できているかの判断材料にする。",
    "tags": "CSP / PM / CRT / General / Left / Ventricular / Activation / Time / threshold / capture"
   },
   {
@@ -1829,7 +1829,7 @@
    "cat": "CRT・CSP",
    "device": "PM / CRT",
    "maker": "General",
-   "short": "刺激スパイクからV6誘導R波頂点までの時間。LBB capture評価に用いられる指標。",
+   "short": "刺激スパイクからV6誘導のR波頂点までの時間。左脚が捕捉されていれば短く一定になるため、左脚捕捉を確認する客観的な指標として用いられる。",
    "tags": "CSP / PM / CRT / General / V6 / R-wave / Peak / Time / threshold / capture"
   },
   {
@@ -1839,7 +1839,7 @@
    "cat": "CRT・CSP",
    "device": "PM / CRT",
    "maker": "General",
-   "short": "His束のみがcaptureされ、局所心室筋の直接captureを伴わないHBP。",
+   "short": "ヒス束だけが捕捉され、周囲の心室筋が直接は捕捉されていない状態のヒス束ペーシング。刺激から興奮開始までにわずかな間隔があり、QRS波形は自己波形とほぼ同じになる。",
    "tags": "CSP / PM / CRT / General / Selective / His / Bundle / Pacing / threshold / capture"
   },
   {
@@ -1859,7 +1859,7 @@
    "cat": "リードレス",
    "device": "Leadless",
    "maker": "General",
-   "short": "経静脈リードと皮下ポケットを用いず、心腔内へ本体を直接留置するペースメーカ。",
+   "short": "経静脈リードと皮下ポケットを使わず、本体そのものを心腔内へ直接留置するペースメーカ。リード断線やポケット感染といった従来の弱点を回避できるが、現状は主に心室ペーシングに限られる。",
    "tags": "Leadless / General / Pacemaker"
   },
   {
@@ -1869,7 +1869,7 @@
    "cat": "リードレス",
    "device": "Leadless",
    "maker": "Medtronic",
-   "short": "Medtronicの右室内留置型リードレスペースメーカ製品群。",
+   "short": "Medtronicの右室内留置型リードレスペースメーカ。長さ約25.9mm、容積1cc、重さ1.75gのカプセル型で、先端に固定用のニチノールタインを4本備える。2017年からわが国で使用が始まった。",
    "tags": "Leadless / Medtronic / Micra / Transcatheter / Pacing / System ニチノールタイン FlexFix リトリーバルヘッド 27Fr 大腿静脈 Micra TPS 25.9mm 20Fr 1cc Tip-Ring18mm 心室中壁 穿孔 VDD"
   },
   {
@@ -1879,7 +1879,7 @@
    "cat": "リードレス",
    "device": "Leadless",
    "maker": "Medtronic",
-   "short": "加速度センサーで心房機械イベントを検出し、VDD様のAV同期を目指すMicra系リードレスPM。",
+   "short": "加速度センサーで心房の機械的な収縮を捉え、それに合わせて心室を刺激することでVDD様の房室同期を実現したリードレスペースメーカ。房室ブロック患者へも適応が広がった。",
    "tags": "Leadless / Medtronic / Micra / AV / threshold / capture"
   },
   {
@@ -1889,7 +1889,7 @@
    "cat": "リードレス",
    "device": "Leadless",
    "maker": "Abbott",
-   "short": "Abbott AVEIRの心室用リードレスペースメーカ。スクリュー固定・マッピング・回収設計を特徴とする。",
+   "short": "Abbott AVEIRシリーズの心室用リードレスペースメーカ。スクリューによる固定で、留置前に位置の良否を確かめられるマッピング機能と、回収を前提とした設計が特徴。",
    "tags": "Leadless / Abbott / Aveir / VR"
   },
   {
@@ -1899,7 +1899,7 @@
    "cat": "リードレス",
    "device": "Leadless",
    "maker": "Abbott",
-   "short": "Abbott AVEIRの心房用リードレスペースメーカ。単独心房ペーシングまたはDR構成に使用。",
+   "short": "Abbott AVEIRシリーズの心房用リードレスペースメーカ。単独で心房ペーシングを行うほか、心室用と組み合わせてデュアルチャンバー構成をとる。",
    "tags": "Leadless / Abbott / Aveir / AR"
   },
   {
@@ -1909,7 +1909,7 @@
    "cat": "リードレス",
    "device": "Leadless",
    "maker": "Abbott",
-   "short": "AVEIR ARとVRを組み合わせ、i2i通信でbeat-to-beatのデュアルチャンバー同期を行うシステム。",
+   "short": "AVEIRの心房用と心室用を組み合わせ、2つの本体が通信し合うことで拍ごとの房室同期を実現するリードレスシステム。リードレスでDDD様の動作を可能にした。",
    "tags": "Leadless / Abbott / Aveir / DR / threshold / capture"
   },
   {
@@ -1919,7 +1919,7 @@
    "cat": "リードレス",
    "device": "Leadless",
    "maker": "Abbott",
-   "short": "AVEIRの心房・心室デバイス間で、低エネルギーの導電性通信を用いて毎拍イベントを共有する技術。",
+   "short": "AVEIRの心房側と心室側のデバイス間で、血液を介した低エネルギーの導電性通信により、拍ごとにイベント情報を共有する技術。無線に比べ消費電力が少ない。",
    "tags": "Leadless / Abbott / Implant-to-Implant / communication"
   },
   {
@@ -1929,7 +1929,7 @@
    "cat": "植込み・手技",
    "device": "Leadless",
    "maker": "General",
-   "short": "最終固定前に候補部位のセンシング・閾値・インピーダンス等を評価して留置位置を選ぶ工程。",
+   "short": "リードを最終的に固定する前に、候補となる複数の部位で感知波高・閾値・インピーダンスを測定し、より条件のよい留置場所を選ぶ工程。",
    "tags": "Procedure / Leadless / General / Pre-mapping / threshold / capture"
   },
   {
@@ -1939,7 +1939,7 @@
    "cat": "リードレス",
    "device": "Leadless",
    "maker": "General",
-   "short": "留置済みリードレスデバイス等を専用カテーテルで回収・抜去する手技。",
+   "short": "留置済みのリードレスデバイスを、スネアなどの専用器具で把持して回収・抜去する手技。留置後に組織で覆われると回収は難しくなるため、電池消耗時は追加留置を前提に考えることが多い。",
    "tags": "Procedure / Leadless / General / Device / retrieval / threshold / capture"
   },
   {
@@ -1959,7 +1959,7 @@
    "cat": "フォロー",
    "device": "PM / ICD / CRT",
    "maker": "General",
-   "short": "一定期間に心房頻拍・心房細動が生じていた時間の割合（心房負荷）。遠隔モニタリングで追跡でき、抗凝固療法や治療方針を判断する材料になる。",
+   "short": "一定期間のうち心房頻拍・心房細動が生じていた時間の割合。遠隔モニタリングで継続的に追跡でき、脳梗塞リスクの評価や抗凝固療法の判断、治療方針の見直しに用いる。",
    "tags": "Follow-up / PM / ICD / CRT / General / Atrial / Tachyarrhythmia / Burden / AF"
   },
   {
@@ -1969,7 +1969,7 @@
    "cat": "フォロー",
    "device": "PM / ICD / CRT",
    "maker": "General",
-   "short": "CIEDが設定基準以上の高心房レートとして記録したエピソード。臨床的AFの確定診断とは同義ではない。",
+   "short": "デバイスが設定基準を超える速い心房レートとして記録したエピソード。ただしファーフィールドR波の誤検出なども含まれうるため、心内電位を確認せずに臨床的な心房細動と断定はできない。",
    "tags": "Follow-up / PM / ICD / CRT / General / Atrial / High / Rate / Episode / AF"
   },
   {
@@ -1979,7 +1979,7 @@
    "cat": "ペーシング",
    "device": "PM / ICD / CRT",
    "maker": "General",
-   "short": "定期的にcapture閾値を測定し、安全域を保ちながら出力を自動調整する機能の総称。",
+   "short": "デバイスが定期的に捕捉閾値を自動測定し、安全域を保ったまま出力を自動調整する機能の総称。過剰な出力による電池消耗を抑えつつ、閾値上昇による捕捉不全も防げる。",
    "tags": "PM / ICD / CRT / General / Automatic / Capture / Management / threshold / capture"
   },
   {
@@ -1989,7 +1989,7 @@
    "cat": "ペーシング",
    "device": "PM / ICD / CRT",
    "maker": "General",
-   "short": "Abbott等で用いられるcapture確認/出力自動調整機能名。非capture時にbackup pulseを出す機構を持つ。",
+   "short": "拍ごとに誘発反応（ER）を確認して捕捉を判定し、捕捉できなかった場合には直後にバックアップパルスを出して安全を確保する自動出力調整機能。閾値ぎりぎりまで出力を下げられるため電池寿命の延長につながる。",
    "tags": "PM / ICD / CRT / General / Automatic / capture / verification / threshold"
   },
   {
@@ -2039,7 +2039,7 @@
    "cat": "モード",
    "device": "PM / ICD / CRT",
    "maker": "General",
-   "short": "MRI検査時に、センシング/ペーシングやICD頻拍治療を検査条件に合わせて一時変更する専用モード。",
+   "short": "MRI検査に合わせて、ペーシングモードや頻拍治療の設定を一時的に変更する専用モード。自己脈の有無に応じて非同期モードかペーシングOFFモードを選び、ICDでは頻拍の検出・治療をOFFにする。検査後は必ず元に戻す。",
    "tags": "Safety / PM / ICD / CRT / General / MRI / mode / protection"
   },
   {
@@ -2049,7 +2049,7 @@
    "cat": "モード",
    "device": "PM / ICD / CRT",
    "maker": "General",
-   "short": "自己心拍を感知せず設定レートで刺激するAOO/VOO/DOO等の非同期ペーシング。",
+   "short": "自己心拍を感知せず、設定レートで刺激し続けるAOO・VOO・DOOなどの非同期ペーシング。自己脈がある患者では競合やspike on Tのリスクがあるため、MRI検査時やマグネット適用時などに限って用いる。",
    "tags": "PM / ICD / CRT / General / Asynchronous / pacing / threshold / capture"
   },
   {
@@ -2059,7 +2059,7 @@
    "cat": "モード",
    "device": "PM / ICD / CRT",
    "maker": "General",
-   "short": "ペーシングモードを、刺激腔・感知腔・感知応答・レート応答・多部位刺激の文字コードで表す体系。",
+   "short": "ペーシングモードを5文字で表す国際的な表記法。1文字目＝刺激する心腔、2文字目＝感知する心腔、3文字目＝感知への応答、4文字目＝レート応答の有無、5文字目＝多部位刺激の有無を示す。",
    "tags": "PM / ICD / CRT / General"
   },
   {
@@ -2069,7 +2069,7 @@
    "cat": "モード",
    "device": "PM",
    "maker": "General",
-   "short": "心房を刺激・感知し、心房自己波で刺激を抑制するモード。AV伝導が保たれたSNDなどで使用。",
+   "short": "心房を刺激・感知し、心房の自己波を感知すると刺激を抑制するモード。房室伝導が保たれた洞不全症候群がよい適応で、不要な心室ペーシングを完全に避けられるが、後から房室ブロックが出ると対応できない。",
    "tags": "PM / General"
   },
   {
@@ -2079,7 +2079,7 @@
    "cat": "モード",
    "device": "PM / ICD / CRT",
    "maker": "General",
-   "short": "心室を刺激・感知し、心室自己波で刺激を抑制する単腔心室モード。",
+   "short": "心室を刺激・感知し、心室の自己波を感知すると刺激を抑制する単腔モード。徐脈性心房細動などで用いられ、シンプルで確実だが房室同期は得られず、ペースメーカ症候群の原因になることがある。",
    "tags": "PM / ICD / CRT / General / AF"
   },
   {
@@ -2089,7 +2089,7 @@
    "cat": "モード",
    "device": "PM / ICD / CRT",
    "maker": "General",
-   "short": "心房・心室を刺激/感知し、感知に対して抑制・追従の両方を行える標準的dual chamber mode。",
+   "short": "心房・心室の両方を刺激・感知し、感知に対して抑制と追従の両方を行える標準的な2腔モード。房室同期を保ちながら、洞不全にも房室ブロックにも対応できるが、心房頻拍を追従してしまう問題がある。",
    "tags": "PM / ICD / CRT / General"
   },
   {
@@ -2099,7 +2099,7 @@
    "cat": "モード",
    "device": "PM / ICD / CRT",
    "maker": "General",
-   "short": "心房・心室を刺激/感知するが、心房感知イベントを心室追従のトリガーにしないdual chamber mode。",
+   "short": "心房・心室の両方を刺激・感知するが、心房で感知したイベントを心室追従の引き金にはしないモード。心房頻拍を追従しないため、モードスイッチの切替先としてよく用いられる。",
    "tags": "PM / ICD / CRT / General / AF"
   },
   {
@@ -2109,7 +2109,7 @@
    "cat": "モード",
    "device": "PM",
    "maker": "General",
-   "short": "心房を感知し心室を刺激/感知するが、心房刺激は行わないAV synchronous ventricular pacing。",
+   "short": "心房を感知し、心室を刺激・感知するが、心房の刺激は行わないモード。洞機能が正常な房室ブロックがよい適応で、1本のシングルパスリードでも実現できる。洞徐脈が出ると対応できない点に注意する。",
    "tags": "PM / General"
   },
   {
@@ -2159,7 +2159,7 @@
    "cat": "電池",
    "device": "PM / ICD / CRT / Leadless",
    "maker": "General",
-   "short": "メーカーが交換を推奨する電池ステータス。名称と定義は製品群で異なる。",
+   "short": "メーカーが交換を推奨する電池ステータス。この表示が出てから実際に機能が制限されるまでには一定の猶予期間があるが、名称と定義は製品によって異なる。",
    "tags": "Battery / PM / ICD / CRT / Leadless / General"
   },
   {
@@ -2169,7 +2169,7 @@
    "cat": "電池",
    "device": "PM / ICD / CRT / Leadless",
    "maker": "General",
-   "short": "サービス寿命末期。通常機能が維持できない/停止へ向かう終末ステータス。",
+   "short": "電池寿命の末期を示すステータス。通常の機能を維持できなくなり、テレメトリーや頻拍治療が制限される。ここに至る前に交換するのが原則。",
    "tags": "Battery / PM / ICD / CRT / Leadless / General EOL end of life 寿命末期 電池寿命末期 EOL end-of-life"
   },
   {
@@ -2179,7 +2179,7 @@
    "cat": "センシング",
    "device": "PM / ICD / CRT",
    "maker": "General",
-   "short": "心房リードで感知される自己P波の大きさ（mV）。値が小さいとアンダーセンシングの原因になり、フォローで経時的に確認する感知余裕の指標。",
+   "short": "心房リードで感知される自己P波の大きさ（mV）。植込み時は2.0mV以上が目安。小さいとアンダーセンシングの原因となり、心房細動時にはさらに減弱するため、フォローでの経過観察が重要となる。",
    "tags": "Follow-up / PM / ICD / CRT / General / AF"
   },
   {
@@ -2189,7 +2189,7 @@
    "cat": "センシング",
    "device": "PM / ICD / CRT / Leadless",
    "maker": "General",
-   "short": "心室チャネルで測定するR波振幅。ICDでは頻拍感知にも重要。",
+   "short": "心室リードで感知される自己R波の大きさ（mV）。植込み時は5.0mV以上が目安で、ICDでは心室細動を確実に感知できるかに直結するため、フォローでも経時的に確認する。",
    "tags": "Follow-up / PM / ICD / CRT / Leadless / General"
   },
   {
@@ -2209,7 +2209,7 @@
    "cat": "ペーシング",
    "device": "PM / ICD / CRT / Leadless",
    "maker": "General",
-   "short": "刺激スパイクは出ているが、その後に標的心筋の脱分極が起きない状態。",
+   "short": "刺激スパイクは出ているのに、その後に心筋の脱分極が起こらない状態（捕捉不全）。閾値上昇、リードの移動や断線、心筋の障害などが原因となり、出力を上げても捕捉できなければ再手術を検討する。",
    "tags": "Trouble / PM / ICD / CRT / Leadless / General / threshold / capture"
   },
   {
@@ -2229,7 +2229,7 @@
    "cat": "リード",
    "device": "PM / ICD / CRT",
    "maker": "General",
-   "short": "リード由来の非生理的高周波/断続信号。oversensingやICD不適切治療の原因。",
+   "short": "リードに由来する非生理的な高周波・断続的な信号。断線や絶縁不良、コネクタの接触不良で生じ、オーバーセンシングによるペーシング抑制やICDの不適切作動の原因となる。",
    "tags": "Trouble / PM / ICD / CRT / General / noise / oversensing / lead trouble"
   },
   {
@@ -2239,7 +2239,7 @@
    "cat": "ペーシング",
    "device": "PM / ICD / CRT",
    "maker": "Boston Scientific",
-   "short": "Boston ScientificのAV delay延長型自己伝導探索機能。不要なRV pacing低減を目的とする。",
+   "short": "Boston ScientificのAVディレイ延長型の自己伝導探索機能。定期的にAVディレイを延ばして自己の房室伝導が出るか確認し、不要な右室ペーシングを減らす。",
    "tags": "Manufacturer / PM / ICD / CRT / Boston Scientific / PMT"
   },
   {
@@ -2249,7 +2249,7 @@
    "cat": "ペーシング",
    "device": "PM / ICD / CRT",
    "maker": "Boston Scientific",
-   "short": "Boston Scientificの自動閾値測定/出力管理機能群。",
+   "short": "Boston Scientificの自動閾値測定・出力管理機能の総称。心房・右室・左室それぞれで閾値を自動測定し、出力を適切に保つ。",
    "tags": "Manufacturer / PM / ICD / CRT / Boston Scientific / threshold / capture / AF"
   },
   {
@@ -2269,7 +2269,7 @@
    "cat": "CRT・CSP",
    "device": "CRT / PM",
    "maker": "Abbott",
-   "short": "Abbottの心内EGM情報からAV/VV timingの推奨値を算出する最適化支援機能。",
+   "short": "Abbottの最適化支援機能。心内電位から得られる情報をもとに、AVディレイとVVディレイの推奨値を短時間で算出する。",
    "tags": "Manufacturer / CRT / PM / Abbott"
   },
   {
@@ -2289,7 +2289,7 @@
    "cat": "ペーシング",
    "device": "PM / CRT",
    "maker": "BIOTRONIK",
-   "short": "BIOTRONIKの自動capture threshold測定・出力調整機能。",
+   "short": "BIOTRONIKの自動閾値測定・出力調整機能。定期的に閾値を測定し、安全域を確保した出力へ自動で設定し直すことで、電池消耗を抑えつつ捕捉不全も防ぐ。",
    "tags": "Manufacturer / PM / CRT / BIOTRONIK / threshold / capture"
   },
   {
@@ -2299,7 +2299,7 @@
    "cat": "MRI・EMI",
    "device": "PM / CRT",
    "maker": "BIOTRONIK",
-   "short": "対応機種でMRI環境を検知し、設定期間内に自動でMRI modeへ移行する機能。",
+   "short": "対応機種で、MRI環境に入ったことを自動的に検知してMRIモードへ移行する機能。設定した期間が過ぎると自動的に元の設定へ戻るため、モード戻し忘れの防止にもつながる。",
    "tags": "Manufacturer / PM / CRT / BIOTRONIK / MRI"
   },
   {
@@ -2309,7 +2309,7 @@
    "cat": "CRT・CSP",
    "device": "CRT",
    "maker": "BIOTRONIK",
-   "short": "複数LV vectorの電気的評価を支援するCRT最適化機能。",
+   "short": "複数の左室ペーシングベクトルについて閾値などを自動測定し、最適な組合せの選択を支援する機能。",
    "tags": "Manufacturer / CRT / BIOTRONIK / threshold / capture"
   },
   {
@@ -2349,7 +2349,7 @@
    "cat": "ICD",
    "device": "ICD",
    "maker": "Boston Scientific",
-   "short": "S-ICDの高域通過フィルタ。T波などの低周波成分を抑え、オーバーセンシングによる不適切作動を減らす。",
+   "short": "S-ICDに搭載された高域通過フィルタ。低い周波数成分であるT波を減らすことで、T波オーバーセンシングによる不適切作動を減らす。",
    "tags": "S-ICD フィルタ T波 オーバーセンシング"
   },
   {
@@ -2359,7 +2359,7 @@
    "cat": "ICD",
    "device": "ICD",
    "maker": "Medtronic",
-   "short": "頻拍周期に合わせて刺激間隔を自動調整する心室ATP。固定バースト/ランプより停止率向上を狙う。",
+   "short": "頻拍の周期を解析して刺激間隔を自動で調整する心室ATP。固定のバーストやランプより高い停止率を狙い、ショックの回数を減らすことを目的とする。",
    "tags": "iATP ATP intrinsic"
   },
   {
@@ -2369,7 +2369,7 @@
    "cat": "ICD",
    "device": "ICD",
    "maker": "Boston Scientific",
-   "short": "VFゾーンでも充電中にワンショットのATPを行い、無痛停止を試みる機能。",
+   "short": "VFゾーンでも充電中に1回だけATPを行い、無痛での停止を試みる機能。停止すればショックは送出されない。",
    "tags": "Quick Convert ATP VF 充電"
   },
   {
@@ -2379,7 +2379,7 @@
    "cat": "ICD",
    "device": "ICD",
    "maker": "General",
-   "short": "充電中などにVFゾーンでもATPを試み、可能なら無痛で停止させる考え方。ショックの負担軽減が目的。",
+   "short": "ショックの前にできる限りATPで停止を試み、患者に痛みを与えずに頻拍を止めようとする考え方。速いVTでもATPが有効なことが多いという知見に基づく。",
    "tags": "pain-free ATP VF 無痛"
   },
   {
@@ -2389,7 +2389,7 @@
    "cat": "不整脈・EP",
    "device": "ICD",
    "maker": "General",
-   "short": "ICDプログラミングの試験。高レートカットオフや検出遅延の延長で、不適切治療と総死亡を大幅に減らせることを示した。",
+   "short": "ICDのプログラミングを比較した試験。検出レートを高く設定する、あるいは治療までの検出時間を長くとることで、不適切治療だけでなく総死亡も有意に減らせることを示し、現在の設定方針の根拠となっている。",
    "tags": "MADIT-RIT programming trial"
   },
   {
@@ -2399,7 +2399,7 @@
    "cat": "リード",
    "device": "ICD",
    "maker": "General",
-   "short": "RV先端-RVリング間で感知するICDリード構成。遠隔電位の混入が少ない。",
+   "short": "ICDリードで、先端電極とリング電極の間で感知する構成。狭い範囲を見るため遠くの電位が混ざりにくく、T波や心房電位のオーバーセンシングを避けやすい。",
    "tags": "true bipolar RV tip ring"
   },
   {
@@ -2409,7 +2409,7 @@
    "cat": "リード",
    "device": "ICD",
    "maker": "General",
-   "short": "RV先端-RVコイル間で感知するICDリード構成。構造は単純だが遠隔電位を拾いやすい。",
+   "short": "ICDリードで、先端電極と除細動コイルの間で感知する構成。リング電極が不要なため構造は単純だが、感知範囲が広く、心房電位やT波を拾いやすい。",
    "tags": "integrated bipolar RV coil クロストーク 心房電位オーバーセンス コイル 右心房 TWOS対策"
   },
   {
@@ -2419,7 +2419,7 @@
    "cat": "リード",
    "device": "PM / ICD / CRT",
    "maker": "General",
-   "short": "ペーシング/感知リードの国際標準コネクタ。ピン径1.6mm・コネクタ径3.2mm。現行の低電圧側標準。",
+   "short": "ペーシング・感知用リードの国際標準コネクタ。ピン径1.6mm、コネクタ径3.2mm。現在の低電圧側の標準規格で、メーカーが違っても接続できる。",
    "tags": "IS-1 コネクタ 3.2mm"
   },
   {
@@ -2429,7 +2429,7 @@
    "cat": "リード",
    "device": "PM / ICD / CRT",
    "maker": "General",
-   "short": "IS-1普及前の3.2mm系コネクタ。IS-1と互換形状もあるが、ロングピン等の差異に注意。",
+   "short": "IS-1が普及する前の3.2mm系コネクタ。形状はIS-1と似ているが、シールリングの位置やピンの長さが異なるものがあり、本体交換時は互換性の確認が必要。",
    "tags": "VS-1 コネクタ 3.2mm"
   },
   {
@@ -2439,7 +2439,7 @@
    "cat": "リード",
    "device": "ICD",
    "maker": "General",
-   "short": "旧来の高電圧（除細動）用コネクタ。感知/ペーシング(IS-1)と別に接続する。",
+   "short": "旧来の高電圧（除細動）用コネクタ。感知・ペーシング用のIS-1と別々に本体へ接続するため、ICDリード1本につき挿入孔が2〜3個必要になる。",
    "tags": "DF-1 除細動 コネクタ"
   },
   {
@@ -2449,7 +2449,7 @@
    "cat": "リード",
    "device": "ICD",
    "maker": "General",
-   "short": "感知・ペーシング・除細動を1本にまとめた現行ICDリードコネクタ。挿入孔が減り本体を小型化。",
+   "short": "感知・ペーシング・除細動を1本のコネクタにまとめた現行のICDリード規格。本体の挿入孔が1つで済むため小型化と手技の簡略化につながるが、一部だけを交換することはできない。",
    "tags": "DF-4 DF4 コネクタ"
   },
   {
@@ -2459,7 +2459,7 @@
    "cat": "リード",
    "device": "CRT",
    "maker": "General",
-   "short": "四極LVリード用の標準コネクタ。1コネクタで複数電極を扱える。",
+   "short": "四極左室リード用の標準コネクタ。1つのコネクタで4つの電極を扱えるため、多彩なペーシングベクトルを選択できる。",
    "tags": "IS-4 IS4 四極 LV コネクタ"
   },
   {
@@ -2469,7 +2469,7 @@
    "cat": "リード",
    "device": "PM",
    "maker": "General",
-   "short": "IS-1普及前の単極・双極コネクタ（6mm、5mm、Cordis型、Medtronic型等）。本体交換時は規格一致の確認が必要。",
+   "short": "IS-1が普及する前に使われていた単極・双極コネクタ（6mm、5mm、各社独自型など）。本体交換の際は規格が一致するか、変換アダプタが必要かを必ず確認する。",
    "tags": "6mm 5mm Cordis 旧規格 コネクタ"
   },
   {
@@ -2479,7 +2479,7 @@
    "cat": "CRT・CSP",
    "device": "CRT",
    "maker": "General",
-   "short": "LV先端を陰極、RVリングを陽極として左室を刺激するCRT極性。出力によりアノーダル刺激やキャプチャロスに注意。",
+   "short": "左室リードの先端を陰極、右室リードのリング電極を陽極として左室を刺激する構成。四極リードがなかった時代からある方法だが、出力によっては陽極刺激で右室も捕捉してしまう点に注意する。",
    "tags": "shared bipolar LV tip RV ring アノーダル"
   },
   {
@@ -2489,7 +2489,7 @@
    "cat": "CRT・CSP",
    "device": "CRT",
    "maker": "General",
-   "short": "LVリード留置の道筋。冠静脈洞(CS)→大心静脈(GCV)→前室間静脈(AIV)、側方に側/後側枝、下壁に中心静脈(MCV/PIV)。",
+   "short": "左室リードを進める道筋。冠静脈洞から大心静脈、前室間静脈へと続き、側方には側壁静脈・後側壁静脈、下壁側には中心静脈が分岐する。一般に側壁・後側壁の枝が留置の標的となり、心尖部は効果が乏しい。",
    "tags": "CS GCV AIV MCV SCV 冠静脈 解剖 冠静脈洞 CS coronary sinus GCV MCV SCV AIV 側壁静脈 後側壁静脈 lateral vein 側壁静脈 後側壁静脈 中心静脈 posterior vein"
   },
   {
@@ -2499,7 +2499,7 @@
    "cat": "CRT・CSP",
    "device": "CRT",
    "maker": "General",
-   "short": "左房後外側に走る冠静脈の枝。心房不整脈アブレーションの標的にもなる。",
+   "short": "左房の後外側を走る冠静脈の枝。心房不整脈のアブレーションで標的となるほか、左室リードを進める際に迷入することがある。",
    "tags": "VOM Marshall 冠静脈 アブレーション"
   },
   {
@@ -2509,7 +2509,7 @@
    "cat": "不整脈・EP",
    "device": "PM / ICD / CRT",
    "maker": "General",
-   "short": "単極胸部誘導の基準（不関電極）。四肢電極を抵抗で結んだ電気的中心。",
+   "short": "単極誘導の基準となる不関電極。3つの四肢電極を抵抗を介して結び、電気的にほぼゼロとなる点を作り出したもので、胸部誘導や単極四肢誘導の基準として用いる。",
    "tags": "Wilson 中心電極 単極 誘導 不関電極 indifferent electrode 単極誘導"
   },
   {
@@ -2519,7 +2519,7 @@
    "cat": "不整脈・EP",
    "device": "PM / ICD / CRT",
    "maker": "General",
-   "short": "標準は紙送り25mm/秒・較正10mm/mV。横1mm=0.04秒(40ms)、縦10mm=1mV。",
+   "short": "標準は紙送り25mm/秒、較正10mm/mV。横方向は1mm＝0.04秒（40ms）、大きい1マス（5mm）＝0.2秒、縦方向は10mm＝1mVとなる。この基準を押さえると波形から時間と電位を読み取れる。",
    "tags": "記録紙 25mm 較正 10mm/mV"
   },
   {
@@ -2549,7 +2549,7 @@
    "cat": "AV・タイミング",
    "device": "PM / ICD / CRT",
    "maker": "General",
-   "short": "これ以上の心房レートで心室追従が2:1になる境界。約60000÷TARP(ms) bpm。",
+   "short": "この心房レートを超えると心室追従が2拍に1拍になる境界のレート。おおよそ60,000÷TARP（ms）で計算でき、心拍数が急に半分に落ちるため患者は症状を自覚しやすい。",
    "tags": "2:1 block TARP 上限"
   },
   {
@@ -2559,7 +2559,7 @@
    "cat": "AV・タイミング",
    "device": "PM / ICD / CRT",
    "maker": "General",
-   "short": "上限追従レート付近でAVディレイが徐々に延び、時折心室追従が1拍抜ける挙動。",
+   "short": "心房レートが上限追従レートに近づくと、AVディレイが徐々に延びていき、やがて1拍分の心室追従が抜ける挙動。心拍数が急に半減する2:1ブロックより緩やかな移行となる。",
    "tags": "wenckebach 上限 追従 Wenckebach作動 wenckebach"
   },
   {
@@ -2569,7 +2569,7 @@
    "cat": "レート応答",
    "device": "PM / ICD / CRT",
    "maker": "General",
-   "short": "センサが算出した『今出すべきレート』。実際のペーシングレートの目安。",
+   "short": "センサが「今この活動量ならこの心拍数が適切」と算出したレート。実際のペーシングレートと見比べることで、レート応答の設定が患者に合っているかを評価できる。",
    "tags": "SIR sensor indicated rate"
   },
   {
@@ -2579,7 +2579,7 @@
    "cat": "レート応答",
    "device": "PM / ICD / CRT",
    "maker": "General",
-   "short": "就寝帯に下限レートを下げる設定（Sleep Rate/Rest Rate）。",
+   "short": "就寝している時間帯に下限レートを下げる設定。夜間の不要なペーシングを減らし、電池の消耗も抑えられる。",
    "tags": "sleep rest rate 睡眠 夜間"
   },
   {
@@ -2599,7 +2599,7 @@
    "cat": "レート応答",
    "device": "PM / ICD / CRT",
    "maker": "General",
-   "short": "自己心拍が出たら次の刺激までのレートを設定より下げ、自己脈を優先する。",
+   "short": "自己心拍が出ているときは、次の刺激までの待ち時間を設定より長くとって（レートを下げて）自己脈を優先する機能。不要なペーシングを減らせる。",
    "tags": "hysteresis ヒステリシス レート"
   },
   {
@@ -2619,7 +2619,7 @@
    "cat": "レート応答",
    "device": "PM / ICD / CRT",
    "maker": "General",
-   "short": "レートが上がるとAVディレイを自動短縮し、生理的な房室伝導に近づける。",
+   "short": "心拍数が上がるとAVディレイを自動的に短くする機能。自然な房室伝導では心拍数が上がるほどPQ間隔が短くなるため、それに近づけて上限追従レートを確保しやすくする。",
    "tags": "rate adaptive AV dynamic AV 動的AV"
   },
   {
@@ -2629,7 +2629,7 @@
    "cat": "AV・タイミング",
    "device": "PM / ICD / CRT",
    "maker": "General",
-   "short": "自己P波感知の遅れを見込み、SAVをPAVより短く設定する差分。",
+   "short": "自己P波は心房興奮の始まりから少し遅れて感知されるため、その遅れを見込んでSAVをPAVより短く設定する差分のこと。これにより実際の房室間隔を揃える。",
    "tags": "sense compensation SAV offset"
   },
   {
@@ -2639,7 +2639,7 @@
    "cat": "AV・タイミング",
    "device": "PM / ICD / CRT",
    "maker": "General",
-   "short": "心室イベント直後に心房で全く感知しない期間。ファーフィールドR波の誤検出を防ぐ。",
+   "short": "心室イベントの直後に設けられ、この間は心房側で一切感知を行わない期間。心室の興奮が心房リードに映り込むファーフィールドR波を拾わないようにするための窓で、長すぎると本当の心房イベントを見落とす。",
    "tags": "PVAB ブランキング far-field"
   },
   {
@@ -2649,7 +2649,7 @@
    "cat": "AV・タイミング",
    "device": "PM / ICD / CRT",
    "maker": "General",
-   "short": "心室イベント後、心室感知を計時に反映しない期間。T波やPVCの誤検出を抑える。",
+   "short": "心室イベントの後、心室側の感知を計時に反映しない期間。T波や心室期外収縮直後の電位を誤って拾わないようにする。長すぎると本当の不整脈を見落とす可能性がある。",
    "tags": "VRP 心室不応期 refractory"
   },
   {
@@ -2669,7 +2669,7 @@
    "cat": "AV・タイミング",
    "device": "PM / ICD / CRT",
    "maker": "General",
-   "short": "レートに応じてPVARPを自動で伸縮させる設定。高レートで短縮し追従性を保つ。",
+   "short": "心拍数に応じてPVARPの長さを自動で伸縮させる設定。安静時は長めにしてPMTを防ぎ、心拍数が上がると短縮してTARPを縮め、上限追従レートを確保する。両立の難しい2つの目的を両立させる工夫。",
    "tags": "dynamic auto PVARP 動的"
   },
   {
@@ -2679,7 +2679,7 @@
    "cat": "AV・タイミング",
    "device": "PM / ICD / CRT",
    "maker": "General",
-   "short": "心房刺激直後に心室で感知しない短い窓。クロストーク（心房スパイクの心室誤感知）を防ぐ。",
+   "short": "心房刺激の直後に、心室側で全く感知を行わない短い窓。心房スパイクを心室が誤って拾うクロストークを防ぐためのもので、この窓の後にはクロストークセンシングウインドウが続く。",
    "tags": "PAVB crosstalk クロストーク ブランキング"
   },
   {
@@ -2739,7 +2739,7 @@
    "cat": "AV・タイミング",
    "device": "PM / ICD / CRT",
    "maker": "General",
-   "short": "心房不応期内の自己P波の直後は、少し遅らせて心房刺激し競合を避ける機能。",
+   "short": "心房不応期内に自己のP波が現れた直後は、そのまま予定どおり心房を刺激すると心房の受攻期に当たる恐れがあるため、刺激を少し遅らせて競合を避ける機能。心房細動の誘発を防ぐ狙いがある。",
    "tags": "NCAP 非競合 心房"
   },
   {
@@ -2759,7 +2759,7 @@
    "cat": "AV・タイミング",
    "device": "PM / ICD / CRT",
    "maker": "General",
-   "short": "PMTを検出するとPVARP延長や1拍休止で連鎖を断つ機能。",
+   "short": "ペースメーカ介在性頻拍を検出すると、PVARPを一時的に延長する、あるいは心室ペーシングを1拍休ませることで、逆行性伝導による頻拍の輪を断ち切る機能。",
    "tags": "PMT intervention 起因性頻拍"
   },
   {
@@ -2769,7 +2769,7 @@
    "cat": "ペーシング",
    "device": "PM / ICD / CRT",
    "maker": "General",
-   "short": "心房細動時に心室ペーシングで心室レートの変動を滑らかにする（Conducted AF Response）。",
+   "short": "心房細動でR-R間隔がばらつく際に、心室ペーシングを織り交ぜて心室レートの変動をなだらかにする機能。極端に短い間隔や長い間隔を減らし、血行動態を安定させることを狙う。",
    "tags": "VRR conducted AF 心室レート"
   },
   {
@@ -2779,7 +2779,7 @@
    "cat": "レート応答",
    "device": "PM",
    "maker": "General",
-   "short": "急な徐脈（血管迷走神経性失神など）を検出し、一定時間高めのレートで刺激する。",
+   "short": "血管迷走神経性失神などで起こる急激な心拍数の低下を検出し、一定時間だけ高めのレートでペーシングして失神を防ごうとする機能。",
    "tags": "rate drop response 迷走神経 失神"
   },
   {
@@ -2789,7 +2789,7 @@
    "cat": "ペーシング",
    "device": "PM",
    "maker": "General",
-   "short": "自己P波よりわずかに速く心房刺激し、心房性不整脈の発生を抑える。",
+   "short": "自己のP波よりわずかに速いレートで心房を刺激し続けることで、心房期外収縮の出現を抑え、心房細動などの発生を減らそうとする機能。自己レートに合わせて刺激レートが自動追随する。",
    "tags": "APP overdrive 心房 抑制"
   },
   {
@@ -2799,7 +2799,7 @@
    "cat": "ICD",
    "device": "ICD",
    "maker": "General",
-   "short": "頻拍と判定するレート（間隔）のしきい値。ゾーンごとに設定する。",
+   "short": "頻拍と判定する心拍数（またはR-R間隔）のしきい値。ゾーンごとに設定し、低すぎると洞頻拍や上室頻拍まで拾って不適切作動を招き、高すぎると治療すべき心室頻拍を見逃す。",
    "tags": "detection rate interval TDI ゾーン"
   },
   {
@@ -2809,7 +2809,7 @@
    "cat": "ICD",
    "device": "ICD",
    "maker": "General",
-   "short": "治療前に頻拍が続くべき時間。長めにすると不適切作動・不要治療が減る。",
+   "short": "治療を開始する前に、頻拍がどれだけ続くことを確認するかの設定。長めにとると自然停止する非持続性の頻拍に対する不要な治療が減り、MADIT-RIT試験ではこれが総死亡の減少にもつながることが示された。",
    "tags": "duration 検出時間 NID"
   },
   {
@@ -2819,7 +2819,7 @@
    "cat": "ICD",
    "device": "ICD",
    "maker": "General",
-   "short": "一定の短い間隔で数発を連続刺激する抗頻拍ペーシング（バースト）。VTの無痛停止に広く用いられ、多くの機種で第一選択のATPとなる。",
+   "short": "一定の短い間隔で数発の刺激を連続して送る抗頻拍ペーシング。設定が単純で頻拍を加速させにくく、多くの機種で第一選択となる。",
    "tags": "ATP burst バースト Burst Burst ATP"
   },
   {
@@ -2829,7 +2829,7 @@
    "cat": "ICD",
    "device": "ICD",
    "maker": "General",
-   "short": "刺激間隔を1拍ごとに短縮していく抗頻拍ペーシング。頻拍周期に食い込みながら停止を狙う方式で、バーストと並ぶ代表的なATP。",
+   "short": "刺激の間隔を1拍ごとに少しずつ短縮していく抗頻拍ペーシング。頻拍周期に食い込みながら興奮間隙を狙うが、バーストより頻拍を加速させる可能性がやや高い。",
    "tags": "ATP ramp ランプ Ramp Ramp ATP"
   },
   {
@@ -2859,7 +2859,7 @@
    "cat": "ICD",
    "device": "ICD",
    "maker": "General",
-   "short": "充電後に再確認せず放電するか（committed）、再確認して不要なら中止するか。",
+   "short": "充電完了後の動作の違い。コミッテッドは頻拍が止まっていても必ず放電し、ノンコミッテッドは放電直前に再確認して不要なら中止する。後者は不要なショックを避けられる。",
    "tags": "committed noncommitted shock 再確認"
   },
   {
@@ -2869,7 +2869,7 @@
    "cat": "ICD",
    "device": "ICD",
    "maker": "General",
-   "short": "SVT鑑別を適用する上限レート。これを超えると鑑別せず治療する。",
+   "short": "SVT鑑別のロジックを適用する上限レート。これを超える速さの頻拍は、鑑別を行わずに治療する。危険な頻拍の治療が鑑別によって遅れることを防ぐ安全装置。",
    "tags": "SVT limit 鑑別 上限"
   },
   {
@@ -2889,7 +2889,7 @@
    "cat": "CRT・CSP",
    "device": "CRT",
    "maker": "General",
-   "short": "左室刺激に使う電極の組合せ設定。横隔神経刺激やアノーダル刺激の回避に変更する。",
+   "short": "左室刺激に使う電極の組合せ設定。横隔神経刺激が出た場合や、陽極刺激（Anodalペーシング）が疑われる場合に変更して回避する。",
    "tags": "LV polarity 極性 横隔神経 アノーダル"
   },
   {
@@ -2899,7 +2899,7 @@
    "cat": "CRT・CSP",
    "device": "CRT",
    "maker": "General",
-   "short": "左室単独か両室同時かのペーシング設定。AdaptivCRT等で自動切替も。",
+   "short": "左室だけを刺激するか、両室を同時に刺激するかの設定。自己の房室伝導が保たれていれば、LV-onlyでも自己の右室興奮と融合して同等の再同期が得られることがあり、電池消耗も抑えられる。",
    "tags": "LV-only BiV fusion 融合"
   },
   {
@@ -2999,7 +2999,7 @@
    "cat": "ICD",
    "device": "ICD",
    "maker": "General",
-   "short": "ICDが心拍として計数する最短の間隔。これより短い信号は雑音などとして扱い、二重計数や過剰検出を避ける。",
+   "short": "ICDが心拍として数える最短のR-R間隔。これより短い信号はノイズなどとして扱い、二重計数や過剰検出を防ぐ。",
    "tags": "ミニマムインターバル  Minimum interval"
   },
   {
@@ -3009,7 +3009,7 @@
    "cat": "不整脈・EP",
    "device": "ICD",
    "maker": "General",
-   "short": "心室が無秩序に興奮し有効な拍出が失われる致死的不整脈。ICDの主要な治療対象で、検出後に高エネルギーショックで停止させる。",
+   "short": "心室が無秩序に細かく震え、血液を送り出せなくなる致死的な不整脈。数秒で意識を失い、放置すれば死に至る。ICDの最も重要な治療対象で、検出後は高エネルギーのショックで停止させる。",
    "tags": "心室細動 VF Ventricular fibrillation reversible 可逆的要因 虚血 電解質"
   },
   {
@@ -3019,7 +3019,7 @@
    "cat": "不整脈・EP",
    "device": "ICD",
    "maker": "General",
-   "short": "心室起源の頻拍。レートや血行動態に応じてATPやショックで治療する。持続性・非持続性、単形性・多形性に分けられる。",
+   "short": "心室を起源とする毎分100回以上の頻拍。持続時間で持続性・非持続性に、QRS波形で単形性・多形性に分けられる。血行動態やレートに応じてATPやショックで治療する。",
    "tags": "心室頻拍 VT Ventricular tachycardia monomorphic polymorphic sustained non-sustained 単形性 多形性 持続性 非持続性 右脚ブロック型 左脚ブロック型"
   },
   {
@@ -3029,7 +3029,7 @@
    "cat": "不整脈・EP",
    "device": "ICD",
    "maker": "General",
-   "short": "3連発以上で30秒未満に自然停止する心室頻拍。ICDでは治療されず記録され、リスク評価やフォローの材料になる。",
+   "short": "3連発以上で30秒未満に自然停止する心室頻拍。ICDでは治療されずに記録され、突然死のリスク評価や、心筋症でのICD適応判断の材料となる。",
    "tags": "非持続性心室頻拍 NSVT Non-sustained VT 非持続性VT NSVT Non-sustained VT"
   },
   {
@@ -3039,7 +3039,7 @@
    "cat": "不整脈・EP",
    "device": "ICD",
    "maker": "General",
-   "short": "QT延長を背景に生じる多形性心室頻拍。基線を軸にねじれる波形が特徴で、失神や心室細動へ移行しうる。",
+   "short": "QT延長を背景に生じる多形性心室頻拍。QRSの軸が基線を中心にねじれるように変化するのが特徴で、自然停止することもあるが心室細動へ移行して突然死に至ることもある。",
    "tags": "トルサード・ド・ポアント TdP Torsade de pointes TdP 多形性心室頻拍 polymorphic VT QT依存"
   },
   {
@@ -3049,7 +3049,7 @@
    "cat": "ペーシング",
    "device": "PM / ICD / CRT",
    "maker": "General",
-   "short": "設定した電圧を保って刺激する出力方式。現在のペースメーカの標準で、リードインピーダンスに応じて流れる電流が変化する。",
+   "short": "設定した電圧を保つように刺激する出力方式で、現在のペースメーカの標準。リードインピーダンスが変われば流れる電流が変わるため、インピーダンスの推移が電池消耗にも影響する。",
    "tags": "定電圧方式  Constant voltage output"
   },
   {
@@ -3059,7 +3059,7 @@
    "cat": "ペーシング",
    "device": "PM / ICD / CRT",
    "maker": "General",
-   "short": "設定した電流を保って刺激する出力方式。インピーダンスが変化しても電流が一定になる。旧来の一部機種で用いられた。",
+   "short": "設定した電流を保つように刺激する出力方式。インピーダンスが変動しても電流は一定に保たれる。旧来の一部機種で用いられた。",
    "tags": "定電流方式  Constant current output"
   },
   {
@@ -3069,7 +3069,7 @@
    "cat": "ペーシング",
    "device": "PM / ICD / CRT",
    "maker": "General",
-   "short": "出力を段階的に下げていき、捕捉が消える点を探して刺激閾値を求める測定法。",
+   "short": "ペーシング出力を段階的に下げていき、捕捉が消える一つ手前の出力を閾値とする測定法。心室ではQRSの消失、心房ではP波の消失で判定する。ICDの除細動閾値測定でも同じ考え方の試験がある。",
    "tags": "ステップダウン試験  Step-down threshold test 漸減法 step down 出力漸減"
   },
   {
@@ -3079,7 +3079,7 @@
    "cat": "ペーシング",
    "device": "PM / ICD / CRT",
    "maker": "General",
-   "short": "設定出力が刺激閾値に対して十分な余裕を持つか確認する試験。通常は閾値の約2倍を目安に安全域をとる。",
+   "short": "設定している出力が刺激閾値に対して十分な余裕を持っているかを確認する試験。電圧では閾値の2倍を確保するのが一般的な目安となる。",
    "tags": "セーフティマージン試験  Safety margin test"
   },
   {
@@ -3089,7 +3089,7 @@
    "cat": "ペーシング",
    "device": "PM / ICD / CRT",
    "maker": "General",
-   "short": "電圧を下げる、またはパルス幅を短くして捕捉が消える点を求める測定。強さ-時間曲線の考え方に基づく。",
+   "short": "電圧を段階的に下げる方法と、パルス幅を短くしていく方法がある。両者の関係を示したのが強さ-時間曲線で、パルス幅が短い領域では必要な電圧が急に立ち上がるため、実務では電圧を下げる方法が一般的。",
    "tags": "閾値測定（電圧・パルス幅）  Threshold measurement"
   },
   {
@@ -3099,7 +3099,7 @@
    "cat": "センシング",
    "device": "PM / ICD / CRT",
    "maker": "General",
-   "short": "感知波形の立ち上がりの鋭さ（電位の変化速度）。大きいほど鋭く、良好な感知の指標。低いと感知不全の一因になる。",
+   "short": "感知した波形の立ち上がりの鋭さ（電位が変化する速さ、V/秒）。デバイスは振幅だけでなく鋭さも見て感知するため、目安として心房で0.5V/秒、心室で1.0V/秒以上あることが望ましい。",
    "tags": "スルーレート  Slew rate"
   },
   {
@@ -3109,7 +3109,7 @@
    "cat": "センシング",
    "device": "PM / ICD / CRT",
    "maker": "General",
-   "short": "感知したい心内電位と雑音の比。高いほど自己波を確実に感知でき、オーバーセンシングを避けやすい。",
+   "short": "感知したい心内電位と、それ以外の雑音との比。この比が大きいほど自己波を確実に感知でき、感度を鋭くしてもオーバーセンシングを起こしにくい。",
    "tags": "信号雑音比 S/N Signal-to-noise ratio"
   },
   {
@@ -3119,7 +3119,7 @@
    "cat": "センシング",
    "device": "PM / ICD / CRT",
    "maker": "General",
-   "short": "心内電位を記録する電極構成。双極は近接2電極間で遠隔雑音に強く、単極は缶を対極に用いて広い範囲の電位を捉える。",
+   "short": "心内電位を記録する電極の組み方。双極は近接した2電極間で記録するため遠くの電位やノイズに強く、単極は先端電極とデバイス本体（缶）の間で記録するため広い範囲の電位を捉えるが雑音も拾いやすい。",
    "tags": "単極・双極電位記録法  Unipolar/Bipolar electrogram ユニポーラ バイポーラ unipolar bipolar"
   },
   {
@@ -3129,7 +3129,7 @@
    "cat": "不整脈・EP",
    "device": "",
    "maker": "General",
-   "short": "強い刺激なら興奮を起こせるが、伝導や興奮が遅れる期間。絶対不応期に続く回復途上の時期。",
+   "short": "絶対不応期に続く回復途上の期間で、通常より強い刺激であれば興奮を起こせるが、伝導は遅く興奮も不完全になる。この時期の刺激は緩徐伝導を生み、リエントリーのきっかけになりうる。",
    "tags": "相対不応期  Relative refractory period RRP"
   },
   {
@@ -3139,7 +3139,7 @@
    "cat": "不整脈・EP",
    "device": "",
    "maker": "General",
-   "short": "期外刺激を与えても伝導がその先へ進まない、最も長い連結期。伝導系の性質を評価する電気生理指標。",
+   "short": "期外刺激を与えてもその先へ伝導が進まない、最も長い連結期。房室結節などの伝導能力を数値で評価する電気生理学的な指標で、期外刺激法で測定する。",
    "tags": "有効不応期 ERP Effective refractory period"
   },
   {
@@ -3149,7 +3149,7 @@
    "cat": "不整脈・EP",
    "device": "",
    "maker": "General",
-   "short": "ある部位を通過して出てくる興奮の最短間隔。その部位の伝導能を表す電気生理指標。",
+   "short": "ある部位を通り抜けて出てくる2つの興奮の、最も短い間隔。その部位が「どれだけ速い興奮まで通せるか」を表す指標で、有効不応期と対にして房室結節の性質を評価する。",
    "tags": "機能的不応期 FRP Functional refractory period"
   },
   {
@@ -3159,7 +3159,7 @@
    "cat": "不整脈・EP",
    "device": "PM / ICD / CRT",
    "maker": "General",
-   "short": "上位のペースメーカが止まったとき、下位（房室接合部や心室）が肩代わりして出す調律。徐脈時の生命維持に働く。",
+   "short": "上位の歩調取りが止まったときに、下位の中枢が肩代わりして出す調律。房室接合部からなら毎分40〜50でQRSは狭く、心室からなら毎分30〜40でQRSが広い。徐脈時に命をつなぐ仕組みとなる。",
    "tags": "補充調律  Escape rhythm 接合部補充調律 心室補充調律 junction"
   },
   {
@@ -3169,7 +3169,7 @@
    "cat": "不整脈・EP",
    "device": "",
    "maker": "General",
-   "short": "興奮が旋回して持続する不整脈の主要機序。瘢痕や副伝導路を旋回路とし、多くのVT・SVTの原因になる。",
+   "short": "興奮が一定の回路をぐるぐると旋回し続けることで頻拍が持続する仕組み。緩徐伝導と一方向性ブロック、そして回路となる解剖学的・機能的な基質がそろうと成立し、多くの頻拍の原因となる。",
    "tags": "リエントリー  Reentry reentry 一方向性ブロック 緩徐伝導"
   },
   {
@@ -3179,7 +3179,7 @@
    "cat": "不整脈・EP",
    "device": "PM / ICD / CRT",
    "maker": "General",
-   "short": "心房が無秩序に興奮し、心室応答が不規則になる不整脈。デバイスではモードスイッチや心房頻拍記録の対象で、抗凝固の判断にも関わる。",
+   "short": "心房が無秩序に興奮し、心室への伝導も不規則になる不整脈。デバイスではモードスイッチや心房頻拍イベントとして記録され、CRTでは両室ペーシングの欠落を招く。脳塞栓のリスク評価と抗凝固の判断にも直結する。",
    "tags": "心房細動 AF Atrial fibrillation paroxysmal persistent permanent 発作性 持続性 永続性 両室ペーシング欠落 CRT 房室結節アブレーション 新規発症 植込み後2.5年 10%"
   },
   {
@@ -3189,7 +3189,7 @@
    "cat": "不整脈・EP",
    "device": "PM / ICD / CRT",
    "maker": "General",
-   "short": "心房内の旋回興奮による規則的な頻拍。1:1伝導では速い心室応答となり、デバイスの心房追従にも影響する。",
+   "short": "心房内を興奮が規則的に旋回することで起こる頻拍。心房レートは毎分300回前後で、2:1や1:1で伝導すると速い心室応答となる。R-R間隔が一定になりやすく、ICDでは心室頻拍との鑑別が難しい。",
    "tags": "心房粗動 AFL Atrial flutter AFL 通常型 非通常型 Wells Wells 反時計回転 時計回転 鋸歯状"
   },
   {
@@ -3199,7 +3199,7 @@
    "cat": "不整脈・EP",
    "device": "PM / ICD / CRT",
    "maker": "General",
-   "short": "心房起源の規則的な頻拍。デバイスはこれを検出してモードスイッチや心房ATPで対応する。",
+   "short": "心房の一点、あるいは小さな回路から生じる規則的な頻拍。デバイスはこれを検出してモードスイッチを行い、機種によっては心房ATPで停止を試みる。",
    "tags": "心房頻拍 AT Atrial tachycardia AT focal マクロリエントリー AT isoelectric line 等電位線 特発性 続発性"
   },
   {
@@ -3209,7 +3209,7 @@
    "cat": "不整脈・EP",
    "device": "ICD",
    "maker": "General",
-   "short": "心房・房室接合部起源の頻拍の総称。ICDではVTとの鑑別が重要で、鑑別を誤ると不適切作動の原因になる。",
+   "short": "心房や房室接合部を起源とする頻拍の総称。ICDでは心室頻拍との鑑別が重要で、鑑別を誤ると不適切作動につながるため、Onset・Stability・波形識別などのアルゴリズムが用いられる。",
    "tags": "上室頻拍 SVT Supraventricular tachycardia SVT PSVT 発作性上室頻拍 paroxysmal"
   },
   {
@@ -3219,7 +3219,7 @@
    "cat": "不整脈・EP",
    "device": "PM / ICD / CRT",
    "maker": "General",
-   "short": "心房起源の早期収縮。頻発すると心房頻拍・心房細動の引き金になりうる。",
+   "short": "心房から早いタイミングで出る収縮。頻発すると心房頻拍や心房細動の引き金になり、PVARP内に落ちると心房追従できず心室ペーシングの欠落を招くこともある。",
    "tags": "上室期外収縮 PAC Premature atrial contraction APC PAC APC 心房期外収縮 atrial premature contraction"
   },
   {
@@ -3229,7 +3229,7 @@
    "cat": "不整脈・EP",
    "device": "PM / ICD / CRT",
    "maker": "General",
-   "short": "心室起源の早期収縮。デバイスはこれを感知してPVARP延長などで対応し、PMTの予防にも関わる。",
+   "short": "心室から早いタイミングで出る収縮。デバイスはこれを心室不応期内の感知として識別し、PVARPを延長して逆行性伝導によるPMTを防ぐ。CRTでは、この延長が両室ペーシングの欠落につながることがある。",
    "tags": "心室期外収縮 PVC Premature ventricular contraction VPC PVC 期外収縮 特発性 器質的 scar 瘢痕 多源性"
   },
   {
@@ -3239,7 +3239,7 @@
    "cat": "CRT・CSP",
    "device": "CRT",
    "maker": "General",
-   "short": "心室内・心室間の収縮タイミングのずれ。左脚ブロックなどで生じ、CRTの適応と効果判定の中心概念。",
+   "short": "心室内・心室間で収縮のタイミングがずれている状態。左脚ブロックでは中隔が先に収縮して側壁が遅れるため、拍出が非効率になる。CRTの適応判断と効果判定の中心となる概念。",
    "tags": "ディスシンクロニー  Dyssynchrony 心室同期不全 dyssynchrony"
   },
   {
@@ -3249,7 +3249,7 @@
    "cat": "不整脈・EP",
    "device": "PM / ICD / CRT",
    "maker": "General",
-   "short": "脚や末梢の伝導障害でQRSが幅広くなる状態。左脚ブロック型はCRTの良い適応となりうる。",
+   "short": "脚や末梢の伝導障害によりQRSが幅広くなる状態。とくに左脚ブロック型では左室の興奮が遅れて心室同期不全を来すため、心機能が低下していればCRTのよい適応となる。",
    "tags": "心室内伝導障害 IVCD Intraventricular conduction disturbance"
   },
   {
@@ -3259,7 +3259,7 @@
    "cat": "不整脈・EP",
    "device": "PM / ICD / CRT",
    "maker": "General",
-   "short": "右脚または左脚の伝導障害。左脚ブロックは心室同期障害を来し、CRTの効果が期待できる。",
+   "short": "右脚または左脚の伝導が障害され、その側の心室の興奮が遅れる状態。左脚ブロックでは中隔性q波が消えて幅広いR波となり、心室同期障害からCRTの適応につながる。右脚ブロックは左室の興奮がほぼ正常に保たれる。",
    "tags": "脚ブロック BBB Bundle branch block"
   },
   {
@@ -3269,7 +3269,7 @@
    "cat": "不整脈・EP",
    "device": "PM / ICD / CRT",
    "maker": "General",
-   "short": "連続する複数のP波が心室へ伝わらない重い房室ブロック。症候性なら恒久ペーシングの適応となる。",
+   "short": "連続する2つ以上のP波が心室へ伝導しない、程度の重い房室ブロック。長い心停止や失神を来す危険があり、症状があれば恒久ペースメーカの適応となる。",
    "tags": "高度房室ブロック  Advanced AV block"
   },
   {
@@ -3279,7 +3279,7 @@
    "cat": "不整脈・EP",
    "device": "PM",
    "maker": "General",
-   "short": "洞結節の興奮が心房へ伝わらず、心房興奮が欠落する状態。洞不全症候群の一型。",
+   "short": "洞房結節で興奮は起きているのに、それが心房筋へ伝わらず心房の興奮が抜け落ちる状態。心電図ではP波ごと欠落し、洞不全症候群の一型として扱われる。",
    "tags": "洞房ブロック SA block Sinoatrial block"
   },
   {
@@ -3289,7 +3289,7 @@
    "cat": "不整脈・EP",
    "device": "PM",
    "maker": "General",
-   "short": "洞結節由来で心拍が遅い状態。症候性であれば恒久ペーシングの適応になりうる。",
+   "short": "洞房結節からのリズムは保たれているが、心拍数が遅い（一般に毎分50回未満）状態。運動選手や睡眠中では生理的だが、めまいや失神などの症状を伴えば恒久ペーシングの適応となる。",
    "tags": "洞性徐脈  Sinus bradycardia"
   },
   {
@@ -3299,7 +3299,7 @@
    "cat": "不整脈・EP",
    "device": "PM",
    "maker": "General",
-   "short": "迷走神経反射による一過性の徐脈・血圧低下で起こる失神。心停止型ではレートドロップ反応などのペーシングが検討される。",
+   "short": "迷走神経反射により急激な徐脈と血圧低下が起こって生じる失神。若年者に多く一般には予後良好だが、心停止型で失神を繰り返す例ではレートドロップ反応などのペーシングが検討される。",
    "tags": "血管迷走神経性失神  Vasovagal syncope vasovagal tilt"
   },
   {
@@ -3309,7 +3309,7 @@
    "cat": "不整脈・EP",
    "device": "PM",
    "maker": "General",
-   "short": "頸動脈洞への刺激で強い徐脈・血圧低下を来す病態。心抑制型はペーシングの適応になりうる。",
+   "short": "頸部の圧迫やひげ剃りなどで頸動脈洞が刺激され、強い徐脈や血圧低下を来す病態。心停止を伴う心抑制型では恒久ペーシングの適応になりうる。",
    "tags": "頸動脈洞症候群  Carotid sinus syndrome carotid sinus 過敏性頸動脈洞"
   },
   {
@@ -3319,7 +3319,7 @@
    "cat": "不整脈・EP",
    "device": "ICD",
    "maker": "General",
-   "short": "QT延長によりTdPや突然死のリスクが高まる病態。二次予防や高リスク例でICDが考慮される。",
+   "short": "QT間隔が延長し、TdPや突然死を起こしやすくなる病態。先天性（イオンチャネル異常）と、薬剤や電解質異常による後天性がある。心停止の既往など高リスク例ではICDが考慮される。",
    "tags": "QT延長症候群 LQTS Long QT syndrome LQTS Romano-Ward Jervell-Lange-Nielsen LQT1 LQT2 LQT3 LQT1 LQT2 LQT3 KCNQ1 KCNH2 SCN5A メキシレチン ナドロール"
   },
   {
@@ -3329,7 +3329,7 @@
    "cat": "不整脈・EP",
    "device": "ICD",
    "maker": "General",
-   "short": "右側胸部誘導の特徴的ST上昇を示し、心室細動・突然死を来しうる遺伝性不整脈。適応例でICDが用いられる。",
+   "short": "右側胸部誘導に特徴的なST上昇を示し、夜間や安静時の心室細動による突然死を来しうる遺伝性不整脈。若年〜中年男性に多く、失神や突然死の家族歴がある例ではICDが用いられる。除細動閾値が高いことがある。",
    "tags": "ブルガダ症候群  Brugada syndrome Brugada coved saddleback SCN5A coved saddle back type1 type2 ピルジカイニド ボックリ病 High DFT 高除細動閾値"
   },
   {
@@ -3349,7 +3349,7 @@
    "cat": "不整脈・EP",
    "device": "ICD",
    "maker": "General",
-   "short": "心筋の異常肥大を来す疾患。突然死リスク評価に基づき、一次・二次予防でICDが考慮される。",
+   "short": "明らかな原因なく心筋が異常に肥厚する疾患。突然死のリスク因子（若年、失神、突然死の家族歴、著しい壁厚、非持続性VTなど）を評価し、高リスク例ではICDが考慮される。",
    "tags": "肥大型心筋症 HCM Hypertrophic cardiomyopathy HCM HOCM 非閉塞性 サルコメア ASH"
   },
   {
@@ -3359,7 +3359,7 @@
    "cat": "不整脈・EP",
    "device": "CRT",
    "maker": "General",
-   "short": "心室拡大と収縮低下を来す疾患。低心機能・伝導遅延例ではCRTやICDの適応になる。",
+   "short": "心室が拡大し収縮力が低下する疾患。心機能低下と心室内伝導遅延を伴う例ではCRTの、致死性不整脈のリスクが高い例ではICDの適応となる。",
    "tags": "拡張型心筋症 DCM Dilated cardiomyopathy"
   },
   {
@@ -3369,7 +3369,7 @@
    "cat": "不整脈・EP",
    "device": "ICD",
    "maker": "General",
-   "short": "冠動脈閉塞による心筋壊死。梗塞後の低心機能はICD適応の代表的背景で、瘢痕はVTの基質になる。",
+   "short": "冠動脈の閉塞により心筋が壊死する疾患。梗塞後の低心機能はICD適応の代表的な背景であり、残った瘢痕とその周囲の緩徐伝導部位が心室頻拍の回路（基質）となる。",
    "tags": "心筋梗塞 MI Myocardial infarction"
   },
   {
@@ -3379,7 +3379,7 @@
    "cat": "不整脈・EP",
    "device": "ICD",
    "maker": "General",
-   "short": "心原性の予期せぬ急死。多くは致死性心室性不整脈が原因で、ICDによる一次・二次予防の対象。",
+   "short": "心原性の予期しない急死。多くは心室頻拍・心室細動が原因で、心停止から時間が経つほど救命率が下がるため、ICDによる一次予防・二次予防の対象となる。",
    "tags": "心臓突然死 SCD Sudden cardiac death"
   },
   {
@@ -3389,7 +3389,7 @@
    "cat": "CRT・CSP",
    "device": "CRT",
    "maker": "General",
-   "short": "CRTが奏効し、左室容積の縮小と収縮機能の改善が得られる現象。効果判定の重要な指標。",
+   "short": "CRTが奏効した結果、拡大していた左室の容積が縮小し、収縮機能が改善する現象。症状の改善より客観的で、効果判定の重要な指標となる。",
    "tags": "リバースリモデリング  Reverse remodeling"
   },
   {
@@ -3419,7 +3419,7 @@
    "cat": "トラブル",
    "device": "PM / ICD / CRT",
    "maker": "General",
-   "short": "本体を収めるポケットの感染。発赤・腫脹・排膿を呈し、抗菌薬のみでの治癒は難しく、デバイス抜去を要することが多い。",
+   "short": "本体を収めるポケットに起きた感染。発赤・腫脹・疼痛・排膿を呈し、抗菌薬だけで治すことは難しく、原則としてリードを含む全システムの抜去を要する。血腫は発症の危険因子となる。",
    "tags": "ポケット感染  Pocket infection 表層性ポケット感染 CDRIE 血腫 抗菌薬 全システム抜去"
   },
   {
@@ -3429,7 +3429,7 @@
    "cat": "トラブル",
    "device": "PM / ICD / CRT",
    "maker": "General",
-   "short": "心嚢内への出血・液貯留で心臓が圧迫され拍出が低下する状態。リード穿孔の重篤な合併症で緊急対応を要する。",
+   "short": "心嚢内に血液が貯留して心臓が圧迫され、拍出量が急激に低下する状態。血圧低下・頸静脈怒張・微弱心音（ベックの三徴）や奇脈がみられる。リードによる心穿孔の重篤な合併症で、心エコーで診断し緊急にドレナージを行う。",
    "tags": "心タンポナーデ  Cardiac tamponade ベックの三徴 血圧低下 頸静脈怒張 微弱心音 奇脈 心囊ドレナージ 経胸壁心エコー"
   },
   {
@@ -3439,7 +3439,7 @@
    "cat": "リード",
    "device": "ICD",
    "maker": "General",
-   "short": "右室リードが三尖弁を通過するため、弁の可動制限や逆流（TR）を来すことがある。リード位置や本数に配慮する。",
+   "short": "右室リードは三尖弁を通過するため、弁尖の可動が制限されたり、リードに巻き込まれたりして三尖弁逆流を来すことがある。リードの本数や通す位置に配慮する。",
    "tags": "三尖弁（デバイス関連）  Tricuspid valve / lead-related TR"
   },
   {
@@ -3469,7 +3469,7 @@
    "cat": "リード",
    "device": "PM / ICD / CRT",
    "maker": "General",
-   "short": "感染・断線・不要リードなどを体内から抜き取る手技。癒着が強い慢性期はレーザーシースなどの専用器具を用いる。",
+   "short": "感染や断線、不要になったリードを体内から抜き取る手技。植込みから1年以上経つと静脈や心筋に強く癒着するため、ロッキングスタイレットやレーザーシースなどの専用器具を用いる。重篤な合併症のリスクを伴う。",
    "tags": "リード抜去  Lead extraction 完全抜去 全システム抜去 経皮的 外科的 レーザー ロッキングスタイレット スネア"
   },
   {
@@ -3489,7 +3489,7 @@
    "cat": "リード",
    "device": "PM / ICD / CRT",
    "maker": "General",
-   "short": "機械的に癒着を剥離してリードを抜去するシース。回転刃を備えるタイプもある。",
+   "short": "癒着した組織を機械的に剥がしながらリードを抜去するためのシース。手で押し進めて鈍的に破砕するタイプと、先端の刃を回転させて瘢痕を削るタイプがある。",
    "tags": "抜去用シース（メカニカル/回転式）  Mechanical/rotational sheath"
   },
   {
@@ -3499,7 +3499,7 @@
    "cat": "リード",
    "device": "PM / ICD / CRT",
    "maker": "General",
-   "short": "リード内腔で固定し、抜去時の牽引力を先端まで伝える器具。リードの伸びや断裂を防ぐ。",
+   "short": "リードの内腔に挿入して内部で固定し、抜去時の牽引力を先端まで確実に伝える器具。リードが途中で伸びたり断裂したりするのを防ぐ。",
    "tags": "ロッキングスタイレット  Locking stylet"
   },
   {
@@ -3529,7 +3529,7 @@
    "cat": "デバイス構造",
    "device": "PM / ICD / CRT",
    "maker": "General",
-   "short": "気密封止を保ったまま電気信号を本体の内外へ通す構造部品。信頼性の要となる。",
+   "short": "気密封止を保ったまま、電気信号を本体の内側と外側でやり取りするための貫通部品。ニオビウムの導線とサファイアの絶縁体からなり、貫通型コンデンサとしてフィルタの役割も果たすため、携帯電話などの高周波を遮断できる。",
    "tags": "フィードスルー  Feedthrough ニオビウム サファイア 貫通型コンデンサ feedthrough filter 450MHz 携帯電話"
   },
   {
@@ -3539,7 +3539,7 @@
    "cat": "ペーシング",
    "device": "PM / ICD / CRT",
    "maker": "General",
-   "short": "胸壁のパッドから体外式に心臓を刺激する緊急ペーシング。恒久植込みまでのつなぎに用いる。",
+   "short": "胸壁に貼ったパッドから体外式に心臓を刺激する緊急ペーシング。恒久植込みや経静脈的一時ペーシングまでのつなぎに用いる。痛みを伴うため鎮静・鎮痛を併用し、自己脈と同期させるデマンドモードを基本とする。",
    "tags": "非侵襲的経皮ペーシング  Transcutaneous pacing demand mode non demand mode 同期モード 非同期モード 固定モード"
   },
   {
@@ -3549,7 +3549,7 @@
    "cat": "ペーシング",
    "device": "PM / ICD / CRT",
    "maker": "General",
-   "short": "心臓手術時に心外膜へ縫着する一時ペーシング用の細い電線。術後の徐脈に備える。",
+   "short": "心臓手術の際に心外膜へ縫い付けておく細いペーシング用電線。術後に一過性の徐脈や房室ブロックが起きた場合、体外式ペースメーカにつないですぐ刺激できる。不要になれば体表から引き抜く。",
    "tags": "一時的心外膜ペーシングワイヤ  Temporary epicardial wire ハートワイヤー heart wire"
   },
   {
@@ -3559,7 +3559,7 @@
    "cat": "植込み・手技",
    "device": "PM / ICD / CRT",
    "maker": "General",
-   "short": "静脈穿刺に伴う気胸・血胸・血腫・動脈穿刺・空気塞栓などの合併症。穿刺法の工夫で予防する。",
+   "short": "静脈穿刺に伴って起こる合併症の総称。気胸、血胸、動脈穿刺、動静脈瘻、空気塞栓、血腫などがあり、静脈造影やエコーの併用、胸郭外での穿刺といった工夫で予防する。",
    "tags": "植込み時アクセス合併症  Access complications"
   },
   {
@@ -3569,7 +3569,7 @@
    "cat": "トラブル",
    "device": "PM / ICD / CRT",
    "maker": "General",
-   "short": "ポケット内の出血・血腫。抗凝固・抗血小板薬使用時に増える。感染リスクを高めるため管理が重要。",
+   "short": "ポケット内に血液が溜まった状態。抗凝固薬・抗血小板薬の使用時に増える。強い緊満は疼痛や皮膚の圧迫壊死を招き、その後のデバイス感染の危険因子にもなるため、確実な止血が重要となる。",
    "tags": "皮下血腫  Pocket hematoma 抗凝固薬 止血不十分 ポケット感染 血腫除去 再止血"
   },
   {
@@ -3579,7 +3579,7 @@
    "cat": "MRI・EMI",
    "device": "PM / ICD / CRT",
    "maker": "General",
-   "short": "店舗の盗難防止ゲートなどの電磁場発生源。まれにデバイスへ干渉するため、立ち止まらず通過するよう指導する。",
+   "short": "店舗や図書館の出入口にある盗難防止ゲート。かつては万引き防止ゲートと呼ばれた。まれにデバイスへ干渉するため、ゲートの中央を立ち止まらずに通過するよう指導する。",
    "tags": "電子商品監視システム（EAS） EAS Electronic article surveillance 盗難防止ゲート 万引き防止ゲート 図書館 家電量販店 ゲート中央 立ち止まらない"
   },
   {
@@ -3589,7 +3589,7 @@
    "cat": "フォロー",
    "device": "PM / ICD / CRT",
    "maker": "General",
-   "short": "長時間の携帯型心電図記録。不整脈やペーシング動作の評価、症状との対応づけに用いる。",
+   "short": "小型記録計を装着して24時間程度の心電図を連続記録する検査。症状と不整脈の関係づけや、ペーシング動作の評価に用いる。長期の記録には植込み型ループレコーダーを用いる。",
    "tags": "ホルター心電図  Holter monitoring"
   },
   {
@@ -3599,7 +3599,7 @@
    "cat": "不整脈・EP",
    "device": "PM / ICD / CRT",
    "maker": "General",
-   "short": "心拍数の影響を除いてQTを評価する補正法。TdPリスクの評価に用いる。",
+   "short": "QT間隔は心拍数によって変わるため、その影響を除いて評価するための補正。Bazettの式（QT÷√RR）が広く使われ、小児など心拍が速い場合はFridericiaの式が用いられる。TdPのリスク評価に用いる。",
    "tags": "QT補正（Bazett/Fridericia） QTc Corrected QT"
   },
   {
@@ -3609,7 +3609,7 @@
    "cat": "不整脈・EP",
    "device": "PM / ICD / CRT",
    "maker": "General",
-   "short": "体外から同期ショックで頻拍を停止させる処置。植込みデバイス例では設定確認や磁石対応、パッド位置に注意する。",
+   "short": "体外からR波に同期させたショックを与えて頻拍を停止させる処置。植込みデバイスがある患者では、パッドを本体から離して前後方向に貼り、実施後にデバイスの設定と作動を必ず確認する。",
    "tags": "体外カルディオバージョン  External cardioversion"
   },
   {
@@ -3619,7 +3619,7 @@
    "cat": "ICD",
    "device": "ICD",
    "maker": "General",
-   "short": "ショック体験による不安・回避・PTSD様症状。QOLに影響するため、十分な説明と心理的支援が重要になる。",
+   "short": "ショック体験による不安、活動の回避、PTSD様の症状。ショックの回数が多いほど強く、QOLや予後にも関わるため、事前の十分な説明と体験後の心理的支援、不適切作動を減らす設定が重要となる。",
    "tags": "ICDショックの心理的影響  Psychological impact of ICD shocks"
   },
   {
@@ -3629,7 +3629,7 @@
    "cat": "ペーシング",
    "device": "PM",
    "maker": "General",
-   "short": "閾値や感知波高の変動を見込み、設定値と実測値の間に確保する余裕（safety margin）。",
+   "short": "閾値や感知波高が日内変動・体位・薬剤・電解質などで変わることを見込んで、設定値と実測値の間に確保しておく余裕のこと。余裕が小さすぎると捕捉不全や感知不全を、大きすぎると電池消耗を招く。",
    "tags": "PM / General / safety / margin / threshold / capture / AF 安全域 safety margin"
   },
   {
@@ -3639,7 +3639,7 @@
    "cat": "センシング",
    "device": "PM",
    "maker": "General",
-   "short": "心内波を検出するためのセンシング閾値設定。mV表示では通常、数値が小さいほど高感度。",
+   "short": "自己の心内波を検出するために設定する閾値。mV表示では数値が小さいほど感度が鋭く、小さな波も拾える。鋭くしすぎるとノイズやT波を拾い、鈍くしすぎると自己波を見落とす。",
    "tags": "PM / General / sensitivity / noise / oversensing / lead trouble / threshold / capture 感度 感度 sensitivity"
   },
   {
@@ -3649,7 +3649,7 @@
    "cat": "リード",
    "device": "PM / ICD / CRT",
    "maker": "General",
-   "short": "リード刺激回路のインピーダンス。通常Ωで表示し、絶縁・導体・接続状態の評価に用いる。",
+   "short": "リードの刺激回路全体の電流の流れにくさをΩで表した値。リード線・電極・心筋との接触・コネクタ・本体内回路のすべてが含まれるため、断線では上昇、絶縁不良では低下する。推移の比較が重要。",
    "tags": "Lead / PM / ICD / CRT / General / lead / impedance / noise / oversensing / lead trouble リード抵抗 リード抵抗 impedance"
   },
   {
@@ -3659,7 +3659,7 @@
    "cat": "センシング",
    "device": "PM / CSP / Leadless",
    "maker": "General",
-   "short": "電極固定直後の局所心筋傷害に伴うST偏位/電位変化。スクリュー固定の組織接触評価の一助。",
+   "short": "スクリューを固定した直後などに、局所の心筋が一時的に傷害されて生じるST上昇様の電位変化。電極が心筋にしっかり接していることを示す所見として、留置位置の判断材料になる。",
    "tags": "Procedure / PM / CSP / Leadless / General / Current / of / injury / threshold / capture Injury current injury current ST上昇 損傷電流"
   },
   {
@@ -3669,7 +3669,7 @@
    "cat": "リード",
    "device": "PM / ICD / CRT",
    "maker": "General",
-   "short": "リード挿入孔に埋め込まれたシリコーン製の封止材。接続部への体液侵入を防ぐ。",
+   "short": "本体のリード挿入孔に埋め込まれたシリコーン製の封止材。コネクタ部への体液の侵入を防ぐ役割を持つ。",
    "tags": "グロメット  Grommet seal シーリング"
   },
   {
@@ -3679,7 +3679,7 @@
    "cat": "ICD",
    "device": "ICD",
    "maker": "General",
-   "short": "ICDが高電圧ショックを出すために電気を一時的に蓄える大容量コンデンサ。充電時間や本体サイズに影響する。",
+   "short": "除細動に必要な高電圧を一時的に蓄えるための大容量コンデンサ。ここに充電する時間が長くなることは電池消耗の指標となり、長期間使わないと性能が落ちるため定期的な再形成（リフォーム）が行われる。",
    "tags": "キャパシタ  Capacitor コンデンサ 蓄電 capacitor"
   },
   {
@@ -3689,7 +3689,7 @@
    "cat": "ペーシング",
    "device": "PM / ICD / CRT",
    "maker": "General",
-   "short": "刺激1回のエネルギー。電圧の2乗×パルス幅÷抵抗で決まり、出力設定と電池消耗の目安になる。",
+   "short": "1回の刺激で消費されるエネルギー。おおむね電圧の2乗×パルス幅÷リードインピーダンスで決まるため、電圧を下げる効果が大きい。電池寿命を考えるうえでの基本の考え方となる。",
    "tags": "ペーシングエネルギー  Pacing energy E=V2RT energy"
   },
   {
@@ -3699,7 +3699,7 @@
    "cat": "リード",
    "device": "PM / ICD / CRT",
    "maker": "General",
-   "short": "V=I×R。出力電圧が一定なら、組織抵抗によって流れる電流とリードインピーダンスが決まる関係。デバイスチェックの基礎。",
+   "short": "電圧＝電流×抵抗（V＝I×R）という基本則。定電圧方式のデバイスでは、リードインピーダンスが下がると電流が増えて電池消耗が速まる。デバイスチェックで数値を読み解くうえでの土台となる。",
    "tags": "オームの法則（デバイス）  Ohm's law ohm 抵抗"
   },
   {
@@ -3709,7 +3709,7 @@
    "cat": "電池",
    "device": "PM",
    "maker": "General",
-   "short": "ペースメーカに広く使われる一次電池。高い信頼性と低い自己放電が特徴で、初期電圧は約2.8〜3.2V。",
+   "short": "ペースメーカに広く使われる一次電池。自己放電が非常に少なく信頼性が高い。電圧が消耗とともになだらかに下がるため、その推移から交換時期を推定できる。初期電圧は約2.8V。",
    "tags": "ヨウ素リチウム電池  Lithium-iodine battery リチウムヨウ素 lithium iodine"
   },
   {
@@ -3719,7 +3719,7 @@
    "cat": "電池",
    "device": "ICD",
    "maker": "General",
-   "short": "ICD/CRT-Dに使われる電池。内部抵抗が非常に低く、ショック用の電気を短時間でキャパシタに蓄えられる。",
+   "short": "ICDやCRT-Dに使われる電池。内部抵抗が非常に低く、除細動に必要な大きな電流を短時間で取り出してキャパシタに充電できる。充電時間の延長は電池消耗の指標となる。",
    "tags": "銀酸化バナジウム・リチウム電池 SVO Silver vanadium oxide-lithium battery バナジウム silver vanadium"
   },
   {
@@ -3729,7 +3729,7 @@
    "cat": "電池",
    "device": "PM / ICD / CRT",
    "maker": "General",
-   "short": "電池の使い始めの段階。以降ERI（推奨交換時期）→EOS（寿命末期）へと消耗が進む。",
+   "short": "電池を使い始めた段階を示すステータス。ここから消耗が進むにつれてERI（推奨交換時期）、EOS（寿命末期）へと移行していく。",
    "tags": "BOL BOL Begin of life 使い始め begin of life 使用開始時電池状態 BOL beginning of life"
   },
   {
@@ -3739,7 +3739,7 @@
    "cat": "リード",
    "device": "PM / ICD / CRT",
    "maker": "General",
-   "short": "リード先端の電極。双極リードでは陰極として刺激・感知を行う。",
+   "short": "リードの最先端にある電極。双極では陰極として働き、実際に心筋を興奮させる。表面積が小さいほど電流密度が上がり、閾値が下がりやすい。",
    "tags": "チップ電極  Tip electrode 先端電極 陰極 tip"
   },
   {
@@ -3749,7 +3749,7 @@
    "cat": "リード",
    "device": "PM / ICD / CRT",
    "maker": "General",
-   "short": "先端から約1cm手前のリング状電極。双極リードでは陽極となる。",
+   "short": "チップから約1cm手前にあるリング状の電極。双極リードでは陽極として電流が戻る側になる。",
    "tags": "リング電極  Ring electrode 陽極 ring"
   },
   {
@@ -3759,7 +3759,7 @@
    "cat": "リード",
    "device": "PM / ICD / CRT",
    "maker": "General",
-   "short": "双極リード内部構造の一つ。中心の陰極コンダクタをコイル状に配し、被覆・陽極コンダクタ・被覆を同心円状に重ねる。",
+   "short": "双極リード内部の構造の一つ。中心に陰極の導体を置き、その外側に絶縁体・陽極導体・絶縁体を同心円状に重ねる。細く作れるが、内外の導体が擦れると絶縁不良の原因になる。",
    "tags": "同軸構造  Coaxial construction coaxial 同軸 同軸リード coaxial lead"
   },
   {
@@ -3769,7 +3769,7 @@
    "cat": "リード",
    "device": "PM / ICD / CRT",
    "maker": "General",
-   "short": "双極リード内部構造の一つ。絶縁被覆した陰極・陽極コンダクタを並べてコイル状に巻いた構造。",
+   "short": "双極リード内部の構造の一つ。絶縁被覆した陰極と陽極の導体を並べて一緒にコイル状に巻く。同軸構造より内部での擦れが起きにくい。",
    "tags": "平行巻構造  Parallel-wound construction parallel wound"
   },
   {
@@ -3779,7 +3779,7 @@
    "cat": "リード",
    "device": "ICD",
    "maker": "General",
-   "short": "内部に複数の導体を通すため複数の管腔を持つICDリードの断面構造。電極配置はメーカーで異なる。",
+   "short": "複数の導体をそれぞれ別の管腔に通したICDリードの断面構造。導体同士の接触を避けられるが構造が複雑で、耐久性が課題となる。",
    "tags": "マルチルーメン構造  Multi-lumen construction multilumen"
   },
   {
@@ -3789,7 +3789,7 @@
    "cat": "リード",
    "device": "PM / ICD / CRT",
    "maker": "General",
-   "short": "電極に使われる化学的に安定な合金。",
+   "short": "電極材料として広く使われる、化学的に安定で腐食に強い合金。体内で長期間、電気的な性能を保てることが求められるため選ばれている。",
    "tags": "プラチナ-イリジウム合金 PtIr Platinum-iridium alloy platinum iridium"
   },
   {
@@ -3799,7 +3799,7 @@
    "cat": "センシング",
    "device": "PM / ICD / CRT",
    "maker": "General",
-   "short": "設定した感度を上回る信号を検出し、心筋興奮があったと認識すること。",
+   "short": "設定した感度を上回る信号を検出し、心筋の興奮があったとデバイスが判断すること。心内マーカ上ではASやVSとして記録される。",
    "tags": "センス  Sense sensing 検出"
   },
   {
@@ -3809,7 +3809,7 @@
    "cat": "センシング",
    "device": "PM / ICD / CRT",
    "maker": "General",
-   "short": "リード電極が捉える心房・心室の局所電位。体表面心電図のP波・QRSに相当する時相に現れる。",
+   "short": "リード電極が捉える心房・心室の局所の電位波形。体表面心電図のP波やQRSに相当する時相に現れるが、電極のごく近くの興奮を見ているため、体表心電図とは波形も振幅も異なる。",
    "tags": "心内電位 EGM Intracardiac electrogram EGM 心内心電図 electrogram"
   },
   {
@@ -3819,7 +3819,7 @@
    "cat": "センシング",
    "device": "PM / ICD / CRT",
    "maker": "General",
-   "short": "入力された微小な心内電位を増幅する回路。周波数特性を持ち、すべての周波数を均一には増幅しない。",
+   "short": "リードが捉えた微小な心内電位を増幅する回路。すべての周波数を均一に増幅するのではなく周波数特性を持ち、心内波の帯域を選んで拾いやすくしている。",
    "tags": "アンプ（増幅回路）  Amplifier 増幅回路 amplifier アンプ"
   },
   {
@@ -3829,7 +3829,7 @@
    "cat": "センシング",
    "device": "PM / ICD / CRT",
    "maker": "General",
-   "short": "周波数で信号を通過・遮断する回路。高域遮断でT波・呼吸性変動を、低域遮断で筋電位などを抑え、心内電位のみを取り出す。",
+   "short": "周波数によって信号を通したり遮ったりする回路。高い周波数を抑えて筋電位やノイズを、低い周波数を抑えてT波や呼吸性の基線変動を減らし、目的の心内電位だけを取り出す。",
    "tags": "フィルタ  Filter 高域遮断 低域遮断 filter"
   },
   {
@@ -3839,7 +3839,7 @@
    "cat": "センシング",
    "device": "PM / ICD / CRT",
    "maker": "General",
-   "short": "目的でない離れた心腔などの電位。誤検出するとファーフィールドオーバーセンシングになる。",
+   "short": "本来その電極で捉えるべきではない、離れた心腔などの電位。心房リードが心室の興奮を拾うファーフィールドR波が代表で、誤って感知すると心房頻拍の誤検出やモードスイッチの誤作動につながる。",
    "tags": "ファーフィールド電位  Far-field potential FFRW 遠隔電位 far-field"
   },
   {
@@ -3849,7 +3849,7 @@
    "cat": "センシング",
    "device": "ICD",
    "maker": "General",
-   "short": "センス後に感度を自動で漸減させる方式。小さな心室細動を確実に感知しつつ、洞調律時のT波誤検出を防ぐ。",
+   "short": "感知の直後は感度を鈍くし、時間とともに自動で鋭くしていく方式。振幅の小さい心室細動も確実に拾いながら、直後のT波を誤って感知しないようにする狙いがあり、主にICDで用いられる。",
    "tags": "可変センシング方式  Auto-adjusting sensitivity auto-adjusting sensitivity オートセンシング 可変 自動感度調整 auto-adjusting 開始感度 定常時間 フィルタ設定 T波オーバーセンシング ICD CRT-D メーカー差"
   },
   {
@@ -3859,7 +3859,7 @@
    "cat": "センシング",
    "device": "PM",
    "maker": "General",
-   "short": "感度を一定に保つ方式。主にペースメーカで用いられる。",
+   "short": "設定した感度を一定に保つ方式。主にペースメーカで用いられ、動作が単純で分かりやすいが、振幅が大きく変動する不整脈の検出には向かない。",
    "tags": "固定センシング方式  Fixed sensitivity fixed sensitivity 固定感度"
   },
   {
@@ -3869,7 +3869,7 @@
    "cat": "トラブル",
    "device": "PM",
    "maker": "General",
-   "short": "ユニポーラペーシングなどで、本体（陽極）付近の大胸筋が刺激されぴくつく現象。",
+   "short": "本体付近の大胸筋がペーシングに合わせてぴくつく現象。単極ペーシングでは本体が陽極となるため起こりやすく、絶縁不良やルーズピンでも生じる。出力の低下や極性の変更で対応する。",
    "tags": "大胸筋刺激（twitching）  Pectoral muscle twitching twitching ポケット筋収縮 ルーズピン 絶縁体不良 単極ペーシング 極性変更"
   },
   {
@@ -3879,7 +3879,7 @@
    "cat": "モード",
    "device": "PM / ICD / CRT",
    "maker": "General",
-   "short": "NBGコード第5文字が表す、同一心腔内の複数部位ペーシング機能の有無。",
+   "short": "NBGコードの5文字目が表す、同一心腔内の複数部位を刺激する機能の有無。A＝心房、V＝心室、D＝両方で、両室ペーシングやマルチポイントペーシングがこれにあたる。",
    "tags": "マルチサイトペーシング（NBG第5文字）  Multisite pacing (NBG 5th) multisite NBG"
   },
   {
@@ -3889,7 +3889,7 @@
    "cat": "AV・タイミング",
    "device": "PM",
    "maker": "General",
-   "short": "心房イベントから心室刺激までの待機時間。AV delay。",
+   "short": "心房のイベントから心室を刺激するまでの待機時間で、心電図のPQ間隔にあたる設定。長すぎると房室同期が崩れ、短すぎると心房収縮による充満が不十分になる。自己伝導を活かしたい場合は長めに設定する。",
    "tags": "PM / General / atrio-ventricular / delay / PMT 房室遅延 AV delay AVディレイ"
   },
   {
@@ -3899,7 +3899,7 @@
    "cat": "AV・タイミング",
    "device": "PM / ICD / CRT",
    "maker": "General",
-   "short": "自己P波を感知してから次の心房ペーシングまでの間隔。ペーシングインターバルからAVディレイを引いた時間に相当する。",
+   "short": "自己のP波を感知してから次の心房ペーシングまでの間隔。ペーシング間隔からAVディレイを引いた時間（V-A間隔）に相当し、心室を基準に計時する方式で用いられる。",
    "tags": "心房エスケープインターバル  Atrial escape interval AEI"
   },
   {
@@ -3909,7 +3909,7 @@
    "cat": "AV・タイミング",
    "device": "PM / ICD / CRT",
    "maker": "General",
-   "short": "感知した自己心拍を起点に、次のペーシングまでを計時する間隔。",
+   "short": "感知した自己心拍を起点として、次のペーシングを出すまでを計時する間隔。この時間内に次の自己波が現れなければペーシングが入る。",
    "tags": "エスケープインターバル  Escape interval escape"
   },
   {
@@ -3929,7 +3929,7 @@
    "cat": "AV・タイミング",
    "device": "PM / CRT",
    "maker": "General",
-   "short": "心房刺激後の心室絶対不応期の後半に設けられた窓。ここで感知があると心室安全ペーシング（VSP）が作動する。",
+   "short": "心房刺激の後、心室ブランキングに続いて設けられる短い窓。ここで信号を感知した場合は、それがクロストークかもしれないと判断し、無視せずに短いAVディレイで強制的に心室を刺激する（心室安全ペーシング）。",
    "tags": "クロストークセンシングウインドウ  Crosstalk sensing window crosstalk window"
   },
   {
@@ -3949,7 +3949,7 @@
    "cat": "AV・タイミング",
    "device": "PM / ICD / CRT",
    "maker": "General",
-   "short": "心房イベントから次の心房ペーシングまでを計時する方式。自己QRSが出てもA-A間隔は変わらない。",
+   "short": "心房イベントから次の心房ペーシングまでを一定に保つ計時方式。自己のQRSが早く出ても心房のリズムは乱れないため、レートが安定しやすい。現在の多くの機種がこの方式をとる。",
    "tags": "A-Aカウンター  A-A counter A-A counter"
   },
   {
@@ -3959,7 +3959,7 @@
    "cat": "AV・タイミング",
    "device": "PM / ICD / CRT",
    "maker": "General",
-   "short": "心室イベントを基準に計時する方式。V-A間隔が一定になるよう心房ペーシングし、自己QRSが早く出るとレートが上がりうる。",
+   "short": "心室イベントを基準に計時する方式。V-A間隔を一定に保って心房を刺激するため、自己QRSが早く出るとその分だけ次の心房刺激も早まり、全体のレートがやや速くなることがある。",
    "tags": "V-Vカウンター  V-V counter V-V counter"
   },
   {
@@ -3979,7 +3979,7 @@
    "cat": "不整脈・EP",
    "device": "PM",
    "maker": "General",
-   "short": "運動時に心拍数を十分に上げられない、または上昇に時間がかかる状態。レートレスポンス機能の適応になる。",
+   "short": "運動をしても心拍数を十分に上げられない、または上昇に時間がかかる状態。徐脈がなくても運動耐容能が落ちるため、レート応答機能（レートレスポンス）の適応となる。",
    "tags": "変時性不全  Chronotropic incompetence chronotropic incompetence"
   },
   {
@@ -3989,7 +3989,7 @@
    "cat": "レート応答",
    "device": "PM",
    "maker": "General",
-   "short": "胸郭インピーダンスの変化から呼吸数・分時換気量を推定してレートを調整するセンサ。加速度センサと併用されることが多い。",
+   "short": "胸郭のインピーダンス変化から呼吸数と換気量を推定し、レートを調整するセンサ。生理的な負荷をよく反映するが反応がやや遅いため、加速度センサと組み合わせて使われることが多い。",
    "tags": "分時換気量センサ  Minute ventilation sensor MV sensor minute ventilation 分時換気量"
   },
   {
@@ -3999,7 +3999,7 @@
    "cat": "レート応答",
    "device": "PM",
    "maker": "General",
-   "short": "体動・振動に反応してレートを調整する、最も広く使われるセンサ。植込みの向きに影響されない。",
+   "short": "体の動きや振動を捉えてレートを調整する、最も広く使われているセンサ。反応が速く植込みの向きに影響されにくい一方、体動を伴わない負荷（精神的ストレスや階段を降りる動作など）には反応しにくい。",
    "tags": "加速度センサ  Accelerometer accelerometer 加速度 activity"
   },
   {
@@ -4009,7 +4009,7 @@
    "cat": "モード",
    "device": "PM / ICD / CRT",
    "maker": "General",
-   "short": "メドトロニックのモードスイッチ基準。心室イベント間に心房センシングが2回以上ある拍を数え、一定数でモードスイッチする。",
+   "short": "Medtronicのモードスイッチ判定基準。心室イベントの間に心房センシングが2回以上ある拍を数え、一定数に達するとモードスイッチする方式。",
    "tags": "AT/AFエビデンスカウント  AT/AF Evidence Count Medtronic evidence count"
   },
   {
@@ -4019,7 +4019,7 @@
    "cat": "モード",
    "device": "PM / ICD / CRT",
    "maker": "General",
-   "short": "アボットのモードスイッチ基準。心房インターバルの移動平均で、PACに過敏にならずAFに素早く反応する。",
+   "short": "Abbottのモードスイッチ判定基準。心房インターバルの移動平均を用いることで、単発の心房期外収縮に過敏に反応せず、心房細動には素早く切り替わるよう設計されている。",
    "tags": "FARI FARI Filtered Atrial Rate Interval Abbott 移動平均心房インターバル"
   },
   {
@@ -4029,7 +4029,7 @@
    "cat": "モード",
    "device": "PM / ICD / CRT",
    "maker": "General",
-   "short": "マイクロポート（Sorin）のモードスイッチ関連の窓。この中で心房:心室がn:1となる拍をサスピションフェーズとして数える。",
+   "short": "MicroPort（旧Sorin）のモードスイッチ判定に用いる窓。この窓の中で心房と心室がn:1の関係になる拍を、心房頻拍を疑う拍として数える。",
    "tags": "WARAD WARAD Window of Atrial Rate Acceleration Detection MicroPort Sorin"
   },
   {
@@ -4039,7 +4039,7 @@
    "cat": "モード",
    "device": "PM / ICD / CRT",
    "maker": "General",
-   "short": "マイクロポートのモードスイッチ判定の中間段階。WARAD内で心房頻拍を疑う拍を計数する。",
+   "short": "MicroPortのモードスイッチ判定における中間段階。WARADの窓内で心房頻拍を疑う拍を計数している状態で、条件を満たすとモードスイッチへ移行する。",
    "tags": "サスピションフェーズ  Suspicion phase MicroPort suspicion"
   },
   {
@@ -4059,7 +4059,7 @@
    "cat": "AV・タイミング",
    "device": "PM / ICD / CRT",
    "maker": "General",
-   "short": "一時的にAVディレイを延長して自己房室伝導が出るか探し、出れば優先する機能。間欠的房室ブロックで有用。",
+   "short": "一定の間隔でAVディレイを一時的に延長し、自己の房室伝導が出てくるかを探る機能。出てくればそれを優先し、不要な心室ペーシングを減らせる。間欠的な房室ブロックの患者で特に有用。",
    "tags": "AVディレイヒステリシス  AV delay hysteresis Search AV+ VIP AV hysteresis"
   },
   {
@@ -4069,7 +4069,7 @@
    "cat": "植込み・手技",
    "device": "PM",
    "maker": "General",
-   "short": "先端バルーンを膨らませ血流に乗せて右室へ順行性に挿入できる一時ペーシング用カテーテル。",
+   "short": "先端のバルーンを膨らませ、血流に乗せて右室まで進められる一時ペーシング用カテーテル。透視がない状況でも挿入しやすい。",
    "tags": "バルーン付きペーシングカテーテル  Balloon-tipped pacing catheter balloon Swan-Ganz 体外式"
   },
   {
@@ -4079,7 +4079,7 @@
    "cat": "トラブル",
    "device": "PM / CRT",
    "maker": "General",
-   "short": "T波（受攻期）にペーシングスパイクが乗る現象。心室細動を誘発しうる危険な所見。",
+   "short": "T波（心室の受攻期）にペーシングスパイクが重なる現象。この時期の刺激は心室細動を誘発しうるため、非同期モードや心室のアンダーセンシングがある状況では特に警戒すべき所見となる。",
    "tags": "spike on T  Spike on T スパイクオンT R on T"
   },
   {
@@ -4089,7 +4089,7 @@
    "cat": "フォロー",
    "device": "PM / ICD / CRT",
    "maker": "General",
-   "short": "一定期間の心拍数分布を示すフォローの記録。レート設定やレートレスポンスの調整に用いる。",
+   "short": "一定期間の心拍数の分布を示した記録。日中に十分な心拍数が得られているか、レート応答の設定が強すぎないかなどを判断し、上限追従レートの設定にも役立てる。",
    "tags": "レートヒストグラム  Rate histogram rate histogram"
   },
   {
@@ -4109,7 +4109,7 @@
    "cat": "ICD",
    "device": "ICD",
    "maker": "General",
-   "short": "過去に心停止・持続性VT・VFを起こした患者に、再発による突然死を防ぐ目的で行うICD治療。",
+   "short": "心停止や持続性VT・VFをすでに起こした患者に対し、再発による突然死を防ぐ目的で行うICD治療。AVID試験などで有効性が確立しており、一次予防より強い適応となる。",
    "tags": "二次予防  Secondary prevention secondary prevention AVID VT VF 既往 アミオダロン"
   },
   {
@@ -4119,7 +4119,7 @@
    "cat": "リード",
    "device": "ICD",
    "maker": "General",
-   "short": "感知・ペーシング電極と除細動用コイル電極を備えたICD用リード。多線条（マルチルーメン）構造で耐久性が課題となる。",
+   "short": "感知・ペーシング用の電極に加え、除細動用のコイル電極を備えたICD用リード。構造が複雑で太いため断線や絶縁不良が起こりやすく、長期合併症の一つに数えられる。",
    "tags": "ショックリード  Shock lead / ICD lead shock lead ICDリード"
   },
   {
@@ -4129,7 +4129,7 @@
    "cat": "ICD",
    "device": "ICD",
    "maker": "General",
-   "short": "極性が第1相と第2相で逆になる除細動波形。単相性より除細動閾値を下げられ、現在の標準となっている。",
+   "short": "放電の途中で電流の向きが反転する除細動波形。単相性より低いエネルギーで除細動でき、心筋への障害も少ないため現在の標準となっている。",
    "tags": "二相性ショック  Biphasic shock waveform biphasic バイフェージック"
   },
   {
@@ -4139,7 +4139,7 @@
    "cat": "ICD",
    "device": "ICD",
    "maker": "General",
-   "short": "ショック放電時の初期電圧と終末電圧の比率（傾斜率）。固定tiltと可変tiltがあり、設定でDFTが変わることがある。",
+   "short": "ショック波形の放電開始時と終了時の電圧の落ち込み具合（傾斜率）。あらかじめ決まった比率で切る固定tiltと、インピーダンスに応じて変える可変tiltがあり、設定によって除細動閾値が変わることがある。",
    "tags": "tilt（チルト）  Tilt tilt 傾斜率 固定tilt 可変tilt"
   },
   {
@@ -4149,7 +4149,7 @@
    "cat": "ICD",
    "device": "ICD",
    "maker": "General",
-   "short": "キャパシタに充電されるエネルギー。実際に心臓へ届く放電エネルギーとは区別され、機種により表示・設定基準が異なる。",
+   "short": "キャパシタに充電されたエネルギー。実際に心臓へ届く放電エネルギーよりも大きく、どちらを表示・設定に用いるかはメーカーによって異なるため、比較の際は注意する。",
    "tags": "蓄電エネルギー  Stored energy stored energy 蓄電"
   },
   {
@@ -4159,7 +4159,7 @@
    "cat": "ICD",
    "device": "ICD",
    "maker": "General",
-   "short": "実際に患者へ放電されたエネルギー。キャパシタに蓄えた蓄電エネルギーより小さくなる。",
+   "short": "実際に患者へ放電されたエネルギー。回路や組織での損失があるため、キャパシタに蓄えた蓄電エネルギーより小さくなる。",
    "tags": "放電エネルギー  Delivered energy delivered energy"
   },
   {
@@ -4169,7 +4169,7 @@
    "cat": "ICD",
    "device": "ICD",
    "maker": "General",
-   "short": "QRS(R波)に同期させて放電し、頻拍を停止させる治療。意識のある頻拍で低エネルギーから行うことが多い。",
+   "short": "R波に同期させて放電し、頻拍を停止させる治療。T波（受攻期）への放電を避けて心室細動の誘発を防ぐためで、意識のある頻拍では低いエネルギーから行うことが多い。",
    "tags": "同期下ショック（カルディオバージョン） CV Synchronized cardioversion cardioversion CV 同期"
   },
   {
@@ -4179,7 +4179,7 @@
    "cat": "ICD",
    "device": "ICD",
    "maker": "General",
-   "short": "ショック後の一時的な徐脈に備え、一定時間バックアップとして行うペーシング。",
+   "short": "ショックの直後は一時的に徐脈や心停止となることがあるため、一定時間だけバックアップとしてペーシングを行う設定。",
    "tags": "ポストショックペーシング  Post-shock pacing post-shock backup"
   },
   {
@@ -4189,7 +4189,7 @@
    "cat": "ICD",
    "device": "ICD",
    "maker": "General",
-   "short": "頻拍を心拍数で区切った検出帯。VFゾーン・VTゾーン・Fast VT(FVT)ゾーン・モニタゾーンなどを設定する。",
+   "short": "心拍数で区切った頻拍の検出帯。速い順にVFゾーン、Fast VT（FVT）ゾーン、VTゾーンがあり、記録だけを行うモニタゾーンを置くこともある。ゾーンごとに治療内容と検出時間を設定する。",
    "tags": "検出ゾーン  Detection zones (VF/VT/FVT) VF zone VT zone FVT monitor 検出ゾーン設定"
   },
   {
@@ -4199,7 +4199,7 @@
    "cat": "ICD",
    "device": "ICD",
    "maker": "General",
-   "short": "VTゾーンとVFゾーンの間に置く高レートVTの帯。ATPで無痛停止を狙える速いVTを別に扱う。",
+   "short": "VTゾーンとVFゾーンの間に設ける、速い心室頻拍のための帯。本来ならショックとなるレートでも、まずATPで無痛停止を試みることができ、患者の負担軽減につながる。",
    "tags": "Fast VTゾーン FVT Fast VT zone FVT fast VT"
   },
   {
@@ -4209,7 +4209,7 @@
    "cat": "ICD",
    "device": "ICD",
    "maker": "General",
-   "short": "連続して設定拍数を満たすと頻拍と判定する方式。1拍でも基準を外れるとカウントが0に戻る。VT検出に用いる。",
+   "short": "設定した拍数だけ連続して検出帯に入れば頻拍と判定する方式。1拍でも基準を外れるとカウントが0に戻るため、規則的なVTの検出に適している。",
    "tags": "累積カウント方式  Consecutive interval counting consecutive count 累積検出"
   },
   {
@@ -4219,7 +4219,7 @@
    "cat": "ICD",
    "device": "ICD",
    "maker": "General",
-   "short": "直近Y拍のうちX拍が検出帯に入れば頻拍と判定する方式。間欠的アンダーセンシングがあっても検出を継続できる。VF検出に用いる。",
+   "short": "直近Y拍のうちX拍が検出帯に入れば頻拍と判定する方式。途中で数拍アンダーセンシングがあっても検出を続けられるため、振幅が変動する心室細動の検出に適している。",
    "tags": "X/Y検出（ウインドウセンシング）  X-of-Y detection X/Y window sensing ウインドウ"
   },
   {
@@ -4229,7 +4229,7 @@
    "cat": "ICD",
    "device": "ICD",
    "maker": "General",
-   "short": "頻拍時のR-R間隔（周期）。検出やATPの設定基準になる。",
+   "short": "頻拍時のR-R間隔（ミリ秒）。検出のしきい値やATPの刺激間隔は、この周期に対する割合（%）で設定されることが多い。",
    "tags": "頻拍周期 CL Cycle Length cycle length CL R-R"
   },
   {
@@ -4259,7 +4259,7 @@
    "cat": "ICD",
    "device": "ICD",
    "maker": "General",
-   "short": "頻拍時のQRS波形を洞調律のテンプレートと比較して鑑別する方法。一致率が高ければSVTとして治療を保留する。",
+   "short": "頻拍時のQRS波形を、あらかじめ記録した洞調律のテンプレートと比較して鑑別する方法。形が一致すれば上室起源と判断して治療を保留する。テンプレートの質が判定精度を左右する。",
    "tags": "QRS波形識別  Morphology discrimination morphology wavelet QRS波形 テンプレート Morphology Morphology discrimination"
   },
   {
@@ -4269,7 +4269,7 @@
    "cat": "ICD",
    "device": "ICD",
    "maker": "General",
-   "short": "心房波と心室波の関係（P-P・R-R間隔、順序）をパターン化してSVTとVTを鑑別する方法。心房情報が必要でデュアルチャンバで用いる。",
+   "short": "心房と心室のイベントの並び方や間隔の関係をパターン化して、上室頻拍と心室頻拍を鑑別する方法。心房の情報が必要なため、心房リードを持つデュアルチャンバ機で用いる。",
    "tags": "パターン識別  Pattern recognition (PR Logic) pattern PR Logic 房室関係 PR Logic Medtronic Double Tachy Wavelet AF/AFL Sinus Tachy Other 1:1"
   },
   {
@@ -4279,7 +4279,7 @@
    "cat": "ICD",
    "device": "ICD",
    "maker": "General",
-   "short": "リエントリー回路内で興奮可能な部分。ATPの刺激がここに侵入し、興奮前面と衝突して頻拍を停止させる。",
+   "short": "リエントリー回路の中で、興奮の波の前と、まだ不応期から回復していない部分との間にある、興奮できる隙間。ATPの刺激はここに入り込んで興奮の前面とぶつかり、回路を断ち切って頻拍を停止させる。",
    "tags": "興奮間隙  Excitable gap excitable gap wave front 興奮前面 excitable gap entrainment excitable gap III群 リエントリー 不応期延長 心房粗動"
   },
   {
@@ -4289,7 +4289,7 @@
    "cat": "ICD",
    "device": "ICD",
    "maker": "General",
-   "short": "バーストの周期をシーケンスごとに少しずつ短縮していくATPの設定。スキャンバーストとして用いる。",
+   "short": "ATPを繰り返す際に、シーケンスごとにバーストの周期を少しずつ短くしていく設定。一定の周期では止まらない頻拍に対して、停止しやすい条件を探しに行く考え方。",
    "tags": "スキャン（ATP）  Scan ATP scan スキャンバースト"
   },
   {
@@ -4299,7 +4299,7 @@
    "cat": "トラブル",
    "device": "ICD",
    "maker": "General",
-   "short": "感度を鋭くしすぎた際、1拍のR波とT波を二重に数えてしまう現象。頻拍の過剰検出・不適切作動の原因になる。",
+   "short": "感度が鋭すぎるために、1拍のR波とT波を2回として数えてしまう現象。実際より速いレートとして検出され、ICDでは不適切作動につながる。",
    "tags": "T波ダブルカウント  T-wave double counting T wave double count TWOS TWOS R波ダブルカウント 不適切作動"
   },
   {
@@ -4319,7 +4319,7 @@
    "cat": "CRT・CSP",
    "device": "CRT",
    "maker": "General",
-   "short": "右室と左室をほぼ同時にペーシングして心室の同期不全を改善し、心拍出量やQOL、心不全症状の改善を図る治療。",
+   "short": "左脚ブロックなどで崩れた心室の収縮タイミングを、右室と左室をほぼ同時に刺激することで揃え直す治療。心拍出量と心不全症状、QOLを改善し、長期的には左室の縮小（リバースリモデリング）と生命予後の改善が期待できる。",
    "tags": "心臓再同期療法 CRT Cardiac resynchronization therapy CRT resynchronization 両心室"
   },
   {
@@ -4329,7 +4329,7 @@
    "cat": "CRT・CSP",
    "device": "CRT",
    "maker": "General",
-   "short": "除細動機能のない両心室ペースメーカ。RVリードは通常のペースメーカリードを用いる。",
+   "short": "除細動機能を持たない両心室ペースメーカ。心不全の再同期治療のみを目的とし、右室には通常のペーシングリードを用いる。CARE-HF試験では、除細動機能がなくても突然死を減らす効果が示された。",
    "tags": "CRT-P CRT-P CRT pacemaker CRT-P pacemaker"
   },
   {
@@ -4339,7 +4339,7 @@
    "cat": "CRT・CSP",
    "device": "CRT",
    "maker": "General",
-   "short": "除細動機能を備えたCRT。RVにショックコイル付きリードを用い、心不全と致死性心室不整脈の双方に対応する。",
+   "short": "除細動機能を備えたCRT。右室にショックコイル付きリードを用い、心不全に対する再同期治療と、致死性心室不整脈に対する治療の両方を担う。",
    "tags": "CRT-D CRT-D CRT defibrillator CRT-D defibrillator"
   },
   {
@@ -4349,7 +4349,7 @@
    "cat": "CRT・CSP",
    "device": "CRT",
    "maker": "General",
-   "short": "右室と左室を同時期に刺激して心室の同期を回復させるペーシング。CRTの基本動作。",
+   "short": "右室と左室をほぼ同時に刺激して心室の同期を回復させるペーシング。CRTの中核となる動作で、この割合（両室ペーシング率）を高く保つことが効果に直結する。",
    "tags": "両心室ペーシング BiV Biventricular pacing BiV biventricular BiV pacing Biventricular pacing"
   },
   {
@@ -4359,7 +4359,7 @@
    "cat": "CRT・CSP",
    "device": "CRT",
    "maker": "General",
-   "short": "4つの電極を備えた左室リード。刺激部位や極性を柔軟に選べ、横隔神経刺激の回避や閾値改善に有利。",
+   "short": "4つの電極を備えた左室リード。刺激する部位と極性の組合せを多数の中から選べるため、横隔神経刺激を避けたり、閾値の低い場所や電気的遅延が大きい場所を選んだりできる。",
    "tags": "四極LVリード  Quadripolar LV lead quadripolar 4極 LVリード LV vector Q-LV multipoint Quadripolar lead Quadripolar LV lead"
   },
   {
@@ -4369,7 +4369,7 @@
    "cat": "CRT・CSP",
    "device": "CRT",
    "maker": "General",
-   "short": "冠静脈洞(CS)へLVリードを導くための専用シース。CSまでのトンネルを作り側枝へリードを進める。",
+   "short": "冠静脈洞へ左室リードを導くための専用シース。まず冠静脈洞にカニュレーションしてトンネルを作り、造影で枝の走行を確認してからリードを目的の枝へ進める。留置後は縦に切開して抜去する。",
    "tags": "ガイディングカテーテル（CS）  Guiding catheter guiding catheter CS 冠静脈洞"
   },
   {
@@ -4379,7 +4379,7 @@
    "cat": "不整脈・EP",
    "device": "PM / ICD / CRT",
    "maker": "General",
-   "short": "心室興奮が伝わる時間を表す指標。左脚ブロックで延長(wide)し、CRTの適応や効果判定に用いる。",
+   "short": "心室全体が興奮し終わるまでの時間を表す指標。正常は0.10秒未満で、左脚ブロックや右室ペーシングでは延長する。CRTの適応判断（120ms以上など）や効果判定の指標となる。",
    "tags": "QRS幅  QRS duration QRS width narrow wide 左脚ブロック"
   },
   {
@@ -4389,7 +4389,7 @@
    "cat": "不整脈・EP",
    "device": "CRT",
    "maker": "General",
-   "short": "心不全の自覚症状による重症度分類（I〜IV）。CRTなどの適応判断に用いる。",
+   "short": "心不全の重症度を自覚症状で分けた分類。I度は日常生活で症状なし、II度は通常の活動で症状あり、III度は軽い活動でも症状あり、IV度は安静時にも症状がある状態。CRTなどの適応判断に用いる。",
    "tags": "NYHA心機能分類 NYHA NYHA functional class NYHA class 心不全"
   },
   {
@@ -4399,7 +4399,7 @@
    "cat": "不整脈・EP",
    "device": "CRT",
    "maker": "General",
-   "short": "左室が拍出する血液の割合。低下例（例:35%以下）はCRT/ICDの適応の目安になる。",
+   "short": "左室が拡張末期に溜めた血液のうち、1回の収縮で送り出す割合。心機能の代表的な指標で、35％以下がCRTやICDの適応を考える一つの目安となる。",
    "tags": "左室駆出率 LVEF Left ventricular ejection fraction LVEF EF 駆出率"
   },
   {
@@ -4409,7 +4409,7 @@
    "cat": "不整脈・EP",
    "device": "CRT",
    "maker": "General",
-   "short": "胸部X線での心臓と胸郭の幅の比。心拡大の指標で、CRT奏効例では縮小する。",
+   "short": "胸部X線正面像での、心臓の最大幅と胸郭の最大幅の比。50％を超えると心拡大とされ、CRTが奏効した症例では縮小してくる。",
    "tags": "心胸比 CTR Cardiothoracic ratio CTR 心拡大"
   },
   {
@@ -4419,7 +4419,7 @@
    "cat": "不整脈・EP",
    "device": "CRT",
    "maker": "General",
-   "short": "僧帽弁が閉じきらず左室から左房へ血液が逆流する状態。同期不全で悪化し、CRTで改善しうる。",
+   "short": "僧帽弁が閉じきらず、収縮期に左室から左房へ血液が逆流する状態。心室の同期不全や左室拡大で悪化するため、CRTによる再同期で改善することがある。",
    "tags": "僧帽弁逆流 MR Mitral regurgitation MR mitral regurgitation 僧帽弁閉鎖不全"
   },
   {
@@ -4429,7 +4429,7 @@
    "cat": "不整脈・EP",
    "device": "CRT",
    "maker": "General",
-   "short": "心臓への負荷で上昇する心不全のバイオマーカー。CRT奏効例では低下する。",
+   "short": "心室への負荷が高まると分泌が増えるホルモンで、心不全の代表的なバイオマーカー。治療効果の判定にも用いられ、CRTが奏効した症例では低下する。",
    "tags": "BNP BNP B-type natriuretic peptide BNP ナトリウム利尿ペプチド"
   },
   {
@@ -4439,7 +4439,7 @@
    "cat": "ICD",
    "device": "ICD",
    "maker": "General",
-   "short": "陳旧性心筋梗塞で低心機能の患者に対する、ICDの一次予防効果を示した代表的試験。",
+   "short": "陳旧性心筋梗塞で左室駆出率30％以下の患者1,232名を対象に、ICD群と従来治療群を比較した試験。ICD群で死亡率が19.1％減少し、一次予防としてのICDの有効性を示した代表的なRCT。",
    "tags": "MADIT-II  MADIT-II trial MADIT-II primary prevention EF30% 陳旧性心筋梗塞 1232名 19.1%減少 2001年 クラスI"
   },
   {
@@ -4449,7 +4449,7 @@
    "cat": "ICD",
    "device": "ICD",
    "maker": "General",
-   "short": "心不全患者でICDが総死亡を減らすことを示した一次予防の代表的試験。",
+   "short": "左室駆出率35％以下、NYHA II〜IIIの心不全患者を対象に、ICDが総死亡を減らすことを示した一次予防の代表的試験。虚血性・非虚血性の両方を含む。",
    "tags": "SCD-HeFT  SCD-HeFT trial SCD-HeFT 心不全 primary EF35% NYHA II III 2005年 一次予防 非虚血性"
   },
   {
@@ -4459,7 +4459,7 @@
    "cat": "不整脈・EP",
    "device": "PM / ICD / CRT",
    "maker": "General",
-   "short": "治療の有無にかかわらず7日以内に洞調律へ戻る心房細動。発作性→持続性→永続性へと進行しやすい。",
+   "short": "治療の有無にかかわらず7日以内（多くは48時間以内）に自然に洞調律へ戻る心房細動。放置すると持続性、さらに永続性へと進行しやすい。",
    "tags": "発作性心房細動  Paroxysmal AF paroxysmal 発作性"
   },
   {
@@ -4469,7 +4469,7 @@
    "cat": "不整脈・EP",
    "device": "PM / ICD / CRT",
    "maker": "General",
-   "short": "7日を超えて持続する心房細動。1年以上続くものは長期持続性と呼ぶ。",
+   "short": "7日を超えて持続する心房細動。除細動や薬物で洞調律に戻せる可能性は残る。1年以上続くものは長期持続性心房細動と呼ぶ。",
    "tags": "持続性心房細動  Persistent AF persistent 持続性"
   },
   {
@@ -4479,7 +4479,7 @@
    "cat": "不整脈・EP",
    "device": "PM / ICD / CRT",
    "maker": "General",
-   "short": "洞調律維持を考慮しない（除細動不可能と判断される）心房細動。",
+   "short": "洞調律に戻すことをもはや目指さないと、患者と医師の間で判断された心房細動。レートコントロールと抗凝固が治療の中心となる。",
    "tags": "永続性心房細動  Permanent AF permanent 永続性"
   },
   {
@@ -4499,7 +4499,7 @@
    "cat": "不整脈・EP",
    "device": "ICM",
    "maker": "General",
-   "short": "原因が特定できない脳梗塞。背景に隠れた発作性心房細動を疑い、挿入型心電計(ICM)で長期モニタリングして検出する。",
+   "short": "十分に検査しても原因が特定できない脳梗塞。背景に見つかっていない発作性心房細動が隠れていることが多く、挿入型心電計による長期モニタリングで検出することが推奨される。",
    "tags": "潜因性脳梗塞  Cryptogenic stroke cryptogenic 原因不明 脳梗塞 ICM"
   },
   {
@@ -4509,7 +4509,7 @@
    "cat": "不整脈・EP",
    "device": "PM / ICD / CRT",
    "maker": "General",
-   "short": "三尖弁輪を反時計回りに旋回するマクロリエントリー。下壁誘導で陰性の鋸歯状F波を示す。",
+   "short": "三尖弁輪の周囲を反時計回りに旋回するマクロリエントリー性の心房粗動。下壁誘導（II・III・aVF）で陰性の鋸歯状F波を示し、峡部アブレーションの効果が高い。",
    "tags": "通常型心房粗動  Typical atrial flutter typical AFL 三尖弁輪"
   },
   {
@@ -4519,7 +4519,7 @@
    "cat": "不整脈・EP",
    "device": "PM / ICD / CRT",
    "maker": "General",
-   "short": "P波やF波の間にみられる平坦な基線。心房粗動では等電位線を認めないのが特徴。",
+   "short": "波と波の間に現れる平坦な基線。心房粗動では心房の興奮が途切れず旋回し続けるため、F波の間に等電位線を認めないことが心房頻拍との鑑別点になる。",
    "tags": "等電位線  Isoelectric line isoelectric 基線"
   },
   {
@@ -4529,7 +4529,7 @@
    "cat": "不整脈・EP",
    "device": "",
    "maker": "General",
-   "short": "大きな解剖学的旋回路を電気的興奮が周回して持続する頻拍の機序。心房粗動などが該当する。",
+   "short": "三尖弁輪や瘢痕の周囲といった、解剖学的に大きな回路を興奮が周回して持続する頻拍の仕組み。心房粗動や瘢痕関連の心室頻拍がこれにあたる。",
    "tags": "マクロリエントリー  Macroreentry macroreentry 旋回"
   },
   {
@@ -4539,7 +4539,7 @@
    "cat": "不整脈・EP",
    "device": "",
    "maker": "General",
-   "short": "1点の異常自動能や撃発活動から興奮が広がる不整脈の機序。巣状心房頻拍など。",
+   "short": "1点の異常自動能や撃発活動から興奮が四方へ広がって生じる不整脈の仕組み。巣状心房頻拍が代表で、リエントリーとは異なりペーシングでの停止が難しい。",
    "tags": "巣状（focal）  Focal mechanism focal 撃発活動 自動能"
   },
   {
@@ -4549,7 +4549,7 @@
    "cat": "不整脈・EP",
    "device": "",
    "maker": "General",
-   "short": "後脱分極が引き金となって生じる異常興奮。遅延後脱分極(DAD)はCPVTなどに関与する。",
+   "short": "先行する興奮の後に現れる異常な脱分極（後脱分極）が引き金となって生じる興奮。細胞内Ca過負荷による遅延後脱分極はCPVTやジギタリス中毒に、早期後脱分極はTdPに関与する。",
    "tags": "撃発活動  Triggered activity triggered activity DAD 後脱分極"
   },
   {
@@ -4559,7 +4559,7 @@
    "cat": "不整脈・EP",
    "device": "",
    "maker": "General",
-   "short": "障害心筋などを興奮がゆっくり伝わる状態。伝導遅延部を作りリエントリーを成立させる。",
+   "short": "障害された心筋の中を興奮がゆっくり伝わる状態。伝導の遅い部分ができることで、興奮が一周して戻ってきた時に元の場所が回復しており、リエントリーが成立する条件となる。",
    "tags": "緩徐伝導  Slow conduction slow conduction 伝導遅延"
   },
   {
@@ -4579,7 +4579,7 @@
    "cat": "不整脈・EP",
    "device": "",
    "maker": "General",
-   "short": "QRS終末部に現れる小さな遅延した電位。加算平均心電図で検出され、リエントリー基質の存在を示唆する。",
+   "short": "QRSの終末部に現れる、小さく遅れた電位。障害された心筋の中を興奮が遅れて伝わっていることを示し、リエントリーの基質があることを示唆する。加算平均心電図で検出する。",
    "tags": "遅延電位  Late potential late potential 加算平均心電図 SAECG late potential LP Late potential"
   },
   {
@@ -4589,7 +4589,7 @@
    "cat": "不整脈・EP",
    "device": "ICD",
    "maker": "General",
-   "short": "冠動脈の狭窄・閉塞で心筋が虚血・壊死する疾患群。梗塞後の瘢痕はVTの基質となり、ICD適応の代表的背景。",
+   "short": "冠動脈の狭窄・閉塞により心筋が虚血・壊死する疾患群。梗塞後の瘢痕は心室頻拍の基質となり、低心機能はICD適応の代表的な背景となる。",
    "tags": "虚血性心疾患 IHD Ischemic heart disease IHD 心筋梗塞 虚血"
   },
   {
@@ -4609,7 +4609,7 @@
    "cat": "不整脈・EP",
    "device": "ICD",
    "maker": "General",
-   "short": "右前胸部誘導のQRS終末部にみられる小さなノッチ。右室の局所的伝導遅延を反映し、ARVCで認められる。",
+   "short": "右前胸部誘導のQRS終末部にみられる小さなノッチ状の波。右室の一部で興奮が遅れて伝わっていることを反映し、不整脈原性右室心筋症の特徴的所見の一つとされる。",
    "tags": "ε波  Epsilon wave epsilon ε ARVC"
   },
   {
@@ -4619,7 +4619,7 @@
    "cat": "不整脈・EP",
    "device": "PM / ICD / CRT",
    "maker": "General",
-   "short": "抗不整脈薬が逆に不整脈を誘発・悪化させる作用。I群薬の伝導遅延やIII群薬のQT延長によるTdPなどがある。",
+   "short": "抗不整脈薬が、かえって不整脈を誘発・悪化させてしまう作用。I群薬による伝導遅延やIII群薬のQT延長によるTdP、洞停止や房室ブロックなどがあり、CAST試験はこの危険性を示した代表例となる。",
    "tags": "催不整脈作用  Proarrhythmia proarrhythmia 催不整脈 proarrhythmia 洞停止 完全房室ブロック 徐脈頻脈症候群 Ic群 抗コリン作用"
   },
   {
@@ -4629,7 +4629,7 @@
    "cat": "不整脈・EP",
    "device": "",
    "maker": "General",
-   "short": "心筋細胞が脱分極で興奮した際の電位変化。第0相〜第4相の5相からなり、体表面から見たものが心電図となる。",
+   "short": "心筋細胞が興奮したときに生じる一連の電位変化。第0相の急速な脱分極から第4相の静止膜電位まで5つの相からなり、多数の細胞の活動電位を体表面からまとめて見たものが心電図となる。",
    "tags": "活動電位 AP Action potential action potential 0相 4相"
   },
   {
@@ -4649,7 +4649,7 @@
    "cat": "不整脈・EP",
    "device": "",
    "maker": "General",
-   "short": "再分極後に細胞内Ca過負荷などで生じる異常な脱分極。撃発活動を介してCPVTなどの不整脈を起こす。",
+   "short": "再分極が終わった後に、細胞内のCa過負荷などによって生じる異常な脱分極。これが閾値に達すると撃発活動として興奮が起こり、CPVTやジギタリス中毒による不整脈の原因となる。",
    "tags": "遅延後脱分極 DAD Delayed afterdepolarization DAD afterdepolarization triggered"
   },
   {
@@ -4659,7 +4659,7 @@
    "cat": "不整脈・EP",
    "device": "",
    "maker": "General",
-   "short": "相対不応期の終わりにみられる、通常より弱い刺激でも興奮しやすい一過性の時期。",
+   "short": "相対不応期の終わり近くにみられる、通常より弱い刺激でも興奮しやすくなる一過性の時期。理論上はこの時期の刺激で予期しない興奮が起こりうる。",
    "tags": "過常期  Supernormal phase supernormal phase"
   },
   {
@@ -4669,7 +4669,7 @@
    "cat": "不整脈・EP",
    "device": "",
    "maker": "General",
-   "short": "1回の活動電位が続く時間。不応期の長さと関連し、延長はQT延長・TdPに関与する。",
+   "short": "1回の活動電位が続く時間で、不応期の長さと密接に関係する。延長するとQT間隔が延びてTdPのリスクとなり、III群抗不整脈薬はこの延長によって不応期を長くしリエントリーを止める。",
    "tags": "活動電位持続時間 APD Action potential duration APD action potential duration"
   },
   {
@@ -4679,7 +4679,7 @@
    "cat": "不整脈・EP",
    "device": "PM",
    "maker": "General",
-   "short": "右心房と上大静脈移行部の心外膜下にある、心臓の正常な歩調取り（ペースメーカ）。障害されると洞不全症候群になる。",
+   "short": "右心房と上大静脈の移行部の心外膜下にある、心臓本来の歩調取り。自動能が最も速いため通常のリズムを支配し、ここが障害されると洞不全症候群となる。自律神経の影響を強く受ける。",
    "tags": "洞房結節 SAN Sinoatrial node SAN 洞結節 sinus node"
   },
   {
@@ -4699,7 +4699,7 @@
    "cat": "不整脈・EP",
    "device": "",
    "maker": "General",
-   "short": "脚から心室筋へ興奮を速く伝える終末の伝導網。心室のほぼ同時興奮（narrow QRS）を担う。",
+   "short": "脚から心室筋へ興奮を高速で伝える終末の伝導網。これがあるおかげで両心室がほぼ同時に興奮でき、幅の狭いQRSとなる。この網を介さない右室ペーシングではQRSが広くなる。",
    "tags": "プルキンエ線維  Purkinje fibers Purkinje 脚 線維網"
   },
   {
@@ -4709,7 +4709,7 @@
    "cat": "不整脈・EP",
    "device": "",
    "maker": "General",
-   "short": "ヒス束から分岐して心室中隔を下行する伝導路。左脚はさらに前枝・後枝に分かれる。障害で脚ブロックとなる。",
+   "short": "ヒス束から分かれて心室中隔を下行する伝導路。右脚は1本の細い束、左脚は前枝と後枝に分かれる扇状の広がりを持つ。障害されるとその側の心室の興奮が遅れ、脚ブロックとなる。",
    "tags": "脚（右脚・左脚）  Bundle branches bundle branch RBB LBB 右脚 左脚"
   },
   {
@@ -4719,7 +4719,7 @@
    "cat": "植込み・手技",
    "device": "",
    "maker": "General",
-   "short": "4つの弁口を囲む線維性骨格のうち、左右の房室弁口と大動脈弁口を結ぶ部位。房室束(ヒス束)がここを貫く。",
+   "short": "4つの弁口を囲む線維性骨格のうち、左右の房室弁口と大動脈弁口を結ぶ部位。ヒス束がここを貫いて心室へ向かうため、刺激伝導系ペーシングを理解するうえで重要な構造となる。",
    "tags": "線維三角  Fibrous trigone fibrous trigone 線維性骨格"
   },
   {
@@ -4729,7 +4729,7 @@
    "cat": "植込み・手技",
    "device": "",
    "maker": "General",
-   "short": "右心房でSVCとIVC開口部の右側を連ねる隆起。自由壁と中隔面を隔てる目印になる。",
+   "short": "右心房で上大静脈と下大静脈の開口部の右側を縦に連ねる筋性の隆起。なめらかな中隔面と、櫛状筋の走る自由壁とを隔てる目印になる。",
    "tags": "分界稜  Crista terminalis crista terminalis 分界稜"
   },
   {
@@ -4739,7 +4739,7 @@
    "cat": "植込み・手技",
    "device": "",
    "maker": "General",
-   "short": "右心房自由壁を走る櫛状の筋束。右心耳に連なる。",
+   "short": "右心房の自由壁から右心耳にかけて走る、櫛の歯のような筋束。心房リードのタインはこの筋束に絡んで固定される。",
    "tags": "櫛状筋  Pectinate muscle pectinate muscle 櫛状筋"
   },
   {
@@ -4749,7 +4749,7 @@
    "cat": "植込み・手技",
    "device": "",
    "maker": "General",
-   "short": "心房中隔中央の窪み。卵円孔開存があるとリード挿入時にまれに左房へ迷入することがある。",
+   "short": "心房中隔の中央にある薄い窪み。卵円孔開存があるとリードが左房側へ迷入することがあり、心房中隔ペーシングの目印にもなる。",
    "tags": "卵円窩  Fossa ovalis fossa ovalis 卵円孔 PFO"
   },
   {
@@ -4759,7 +4759,7 @@
    "cat": "植込み・手技",
    "device": "",
    "maker": "General",
-   "short": "下大静脈開口部にある遺残弁。Chiari網とともにリード操作の障害になることがある。",
+   "short": "下大静脈の開口部にある胎生期の遺残弁。Chiari網とともにリードの操作を妨げ、冠静脈洞へのアクセスを難しくすることがある。",
    "tags": "Eustachian弁  Eustachian valve Eustachian Chiari 遺残弁"
   },
   {
@@ -4769,7 +4769,7 @@
    "cat": "植込み・手技",
    "device": "CRT",
    "maker": "General",
-   "short": "冠静脈洞(CS)入口部にある弁組織。CSリード挿入の障害になることがある。",
+   "short": "冠静脈洞の入口部にある弁組織。発達していると冠静脈洞へのカニュレーションを妨げ、CRTのリード挿入が困難になる原因となる。",
    "tags": "Thebesian弁  Thebesian valve Thebesian CS 冠静脈洞弁"
   },
   {
@@ -4789,7 +4789,7 @@
    "cat": "植込み・手技",
    "device": "PM / ICD / CRT",
    "maker": "General",
-   "short": "胸郭外穿刺の標的血管。合流部より近位で穿刺すると肋鎖靭帯の影響でリード損傷のリスクが上がるため、合流部近位で穿刺する。",
+   "short": "胸郭の外で穿刺できる静脈で、鎖骨下静脈穿刺よりリード圧迫のリスクが低い。第二肋骨上あたりで穿刺することが多く、静脈造影やエコーで走行を確認して行う。",
    "tags": "腋窩静脈  Axillary vein axillary 腋窩静脈 胸郭外穿刺"
   },
   {
@@ -4799,7 +4799,7 @@
    "cat": "植込み・手技",
    "device": "PM / ICD / CRT",
    "maker": "General",
-   "short": "鎖骨下静脈を穿刺してリードを挿入する方法。近位すぎると肋鎖靭帯でリードが挟まれ、断線（サブクラビアンクラッシュ）を来しやすい。",
+   "short": "鎖骨下静脈を穿刺してリードを挿入する方法。内側（近位）すぎる位置で穿刺すると、鎖骨と第一肋骨の間でリードが繰り返し圧迫され、サブクラビアンクラッシュと呼ばれる断線を来しやすい。",
    "tags": "鎖骨下穿刺  Subclavian puncture subclavian 鎖骨下 crush 肋鎖靭帯"
   },
   {
@@ -4809,7 +4809,7 @@
    "cat": "植込み・手技",
    "device": "Leadless",
    "maker": "General",
-   "short": "下肢の静脈。リードレスペースメーカ植込み時のアクセス血管として用いられる（右大腿静脈）。",
+   "short": "下肢から骨盤へ向かう太い静脈。リードレスペースメーカの植込みでは、右大腿静脈から27Frのイントロデューサーを入れてデリバリーカテーテルを進める。リードのスネア回収でも用いる。",
    "tags": "大腿静脈  Femoral vein femoral 大腿静脈 leadless"
   },
   {
@@ -4819,7 +4819,7 @@
    "cat": "植込み・手技",
    "device": "PM / ICD / CRT",
    "maker": "General",
-   "short": "左側にも上大静脈が遺残する先天奇形（成人の約0.3〜0.5%）。左側アプローチ時に想定し、拡張したCSを手がかりに術前診断する。",
+   "short": "胎生期の左上大静脈が残った先天奇形で、頻度は0.3〜0.5％程度。冠静脈洞が拡張しているのが手がかりとなり、左側からのアプローチでは冠静脈洞経由で右室へ入るため、リード操作が難しくなる。",
    "tags": "左上大静脈遺残 PLSVC Persistent left SVC PLSVC 遺残 左上大静脈"
   },
   {
@@ -4829,7 +4829,7 @@
    "cat": "植込み・手技",
    "device": "PM / ICD / CRT",
    "maker": "General",
-   "short": "卵円窩の卵円孔が閉じずに残る状態（各年代で約9%）。リードが左室へ迷入する原因になりうる。",
+   "short": "心房中隔の卵円孔が完全に閉じずに残っている状態で、成人の2割前後にみられる。リードが誤って左房・左室へ迷入する原因となるため、透視での位置確認が重要となる。",
    "tags": "卵円孔開存 PFO Patent foramen ovale PFO 卵円孔開存"
   },
   {
@@ -4849,7 +4849,7 @@
    "cat": "CRT・CSP",
    "device": "CRT",
    "maker": "General",
-   "short": "四極LVリードで、陰極と陽極の電極の組合せ。10通り前後から、横隔神経刺激の回避・閾値・遅延時間を考慮して最良のベクトルを選ぶ。",
+   "short": "四極LVリードで、どの電極を陰極・陽極に使うかの組合せ。10通り前後から選べ、横隔神経刺激の回避、閾値の低さ、電気的遅延の大きさを見比べて最適なものを決める。",
    "tags": "LVペーシングベクトル  LV pacing vector vector LV ベクトル cathode anode LV vector Left ventricular pacing vector"
   },
   {
@@ -4859,7 +4859,7 @@
    "cat": "CRT・CSP",
    "device": "CRT",
    "maker": "General",
-   "short": "QRSの始まりからLVリードで得られる左室電位までの間隔。長い（伝導遅延部）ほどCRTの効果が高いとされる留置部位の指標。",
+   "short": "体表面心電図のQRSの始まりから、LVリードで記録される局所電位までの時間。この値が大きいほど電気的に遅れた部位であり、そこに留置するとCRTの効果が高いとされる。",
    "tags": "Q-LV間隔  Q-LV interval Q-LV 遅延 QLV"
   },
   {
@@ -4869,7 +4869,7 @@
    "cat": "CRT・CSP",
    "device": "CRT",
    "maker": "General",
-   "short": "右室と左室リード間の伝導時間。簡易的にLVの遅延部位を評価でき、最適なLVペーシング部位選択に用いる。",
+   "short": "右室リードと左室リードの間で興奮が伝わるのにかかる時間。簡便に電気的遅延部位を評価でき、最適な左室ペーシング部位を選ぶ手がかりになる。",
    "tags": "RV-LV遅延時間  RV-LV delay RV-LV delay 遅延時間"
   },
   {
@@ -4889,7 +4889,7 @@
    "cat": "CRT・CSP",
    "device": "CRT",
    "maker": "General",
-   "short": "CRT導入後に心不全の改善（症状・エコー・再入院・BNP等）が得られた症例。改善しない例をノンレスポンダーと呼ぶ。",
+   "short": "CRT導入後に効果が得られた症例。症状の改善、左室容積の縮小、BNPの低下、心不全入院の減少などで判定するが、どの指標を用いるかで該当する割合は変わる。",
    "tags": "レスポンダー  CRT responder responder レスポンダー"
   },
   {
@@ -4899,7 +4899,7 @@
    "cat": "CRT・CSP",
    "device": "CRT",
    "maker": "General",
-   "short": "CRTで効果が得られない症例（3〜4割）。至適化不足・不整脈・低ペーシング率・LVリード位置・薬物不足などが要因。",
+   "short": "CRTを行っても改善が得られない症例で、およそ3〜4割にみられる。両室ペーシング率の低下、LVリードの留置部位、至適化不足、心房細動、薬物療法の不足などが要因となり、順に確認していく。",
    "tags": "ノンレスポンダー  CRT non-responder non-responder ノンレスポンダー"
   },
   {
@@ -4919,7 +4919,7 @@
    "cat": "フォロー",
    "device": "CRT",
    "maker": "General",
-   "short": "リードと本体間で測る胸腔内の体液量の指標。心不全で肺水腫になると低下し、増悪の早期発見に用いる（OptiVol/CorVue等）。",
+   "short": "リードと本体の間で測定する胸腔内の電気の通りにくさ。肺うっ血で水分が増えると値が下がるため、心不全増悪の早期発見に用いられる（OptiVol、CorVueなど）。",
    "tags": "胸郭インピーダンス  Intrathoracic impedance intrathoracic impedance OptiVol CorVue 胸腔"
   },
   {
@@ -4929,7 +4929,7 @@
    "cat": "CRT・CSP",
    "device": "CRT",
    "maker": "General",
-   "short": "1本の四極LVリードの離れた2点から左室を刺激し、より広く左室心筋を興奮させる方式。ノンレスポンダー対策に用いるが電池消耗が増える。",
+   "short": "1本の四極LVリードの離れた2点から左室を刺激し、より広い範囲を同時に興奮させる方式。ノンレスポンダー対策として用いられるが、刺激回数が増えるため電池の消耗は大きくなる。",
    "tags": "マルチポイントペーシング MPP Multipoint pacing MPP multipoint MultiSite MultiPole 多点 MPP MPP MultiPoint Pacing"
   },
   {
@@ -4939,7 +4939,7 @@
    "cat": "デバイス構造",
    "device": "PM / ICD / CRT",
    "maker": "General",
-   "short": "デバイスと通信して設定変更やデータ読み出しを行う専用機。テレメトリーワンドやRFアンテナ、体表面心電図ケーブル等を備える。",
+   "short": "デバイスと通信して設定変更やデータ読み出しを行う専用機。テレメトリーワンドやRFアンテナ、体表面心電図ケーブルを備え、緊急ショックボタンも搭載されている。",
    "tags": "プログラマ  Programmer programmer プログラマ プログラマー programmer"
   },
   {
@@ -4949,7 +4949,7 @@
    "cat": "デバイス構造",
    "device": "PM / ICD / CRT",
    "maker": "General",
-   "short": "デバイス直上に置いて有線的に交信する装置。植込み部の直上に密着させ、無線式ではワンド不要でイントロゲートできる。",
+   "short": "植込み部の直上に密着させてデバイスと交信する装置。無線通信に対応した機種ではワンドなしでイントロゲートできる。",
    "tags": "テレメトリーワンド  Telemetry wand telemetry wand programming head ワンド"
   },
   {
@@ -4959,7 +4959,7 @@
    "cat": "フォロー",
    "device": "PM / ICD / CRT",
    "maker": "General",
-   "short": "プログラマでデバイスを認識し、設定やデータを読み出すこと。デバイスチェックの最初の操作。",
+   "short": "プログラマでデバイスを認識し、設定内容や記録されたデータを読み出すこと。デバイスチェックの最初の操作にあたり、まず現在の設定と前回からの変化を確認する。",
    "tags": "イントロゲート  Interrogate interrogate イントロゲート 読み出し"
   },
   {
@@ -4969,7 +4969,7 @@
    "cat": "植込み・手技",
    "device": "PM / ICD / CRT",
    "maker": "General",
-   "short": "植込み時にリードに接続し、心内波高値・刺激閾値・リード抵抗を測定する装置。",
+   "short": "植込み時にリードへ直接つないで、心内波高値・刺激閾値・リードインピーダンスを測定する装置。この測定値が許容範囲に入っているかで留置位置の可否を判断する。",
    "tags": "ペーシングシステムアナライザ PSA Pacing system analyzer PSA analyzer アナライザ ペーシングシステム解析器 PSA pacing system analyzer"
   },
   {
@@ -4989,7 +4989,7 @@
    "cat": "ペーシング",
    "device": "PM / ICD / CRT",
    "maker": "General",
-   "short": "刺激閾値に対する出力の余裕。安全域は閾値の3倍とされるが、臨床的には2倍を用いることが多い。",
+   "short": "刺激閾値に対する出力の余裕。電圧では閾値の2倍、パルス幅では3倍を確保するのが一般的な目安。透析患者のように電解質が大きく動く例では、より大きな余裕をとる。",
    "tags": "出力マージン  Output safety margin output margin 出力マージン セーフティ"
   },
   {
@@ -4999,7 +4999,7 @@
    "cat": "ペーシング",
    "device": "PM / ICD / CRT",
    "maker": "General",
-   "short": "出力を段階的に下げ、心筋捕捉が消える1つ前の出力を閾値とする測定。自己脈・自己伝導の有無で測定モードを選ぶ。",
+   "short": "出力を段階的に下げ、心筋の捕捉が消える一つ前の出力を閾値とする測定。心室はVVIなど、心房はDDDなどで行い、自己脈や自己房室伝導の有無に応じて測定モードを選ぶ。",
    "tags": "捕捉閾値測定  Capture threshold test capture threshold 刺激閾値"
   },
   {
@@ -5009,7 +5009,7 @@
    "cat": "センシング",
    "device": "PM / ICD / CRT",
    "maker": "General",
-   "short": "デバイスが認識したイベント（AP/AS/VP/VS等）を示す注釈。メーカーで表記が異なる。イベントの解釈に用いる。",
+   "short": "デバイスが「何をどう認識したか」を記号で示した注釈。AP（心房ペーシング）、AS（心房センス）、VP、VSなどで表され、心内電位図と並べて見ることで動作の解釈ができる。表記はメーカーで異なる。",
    "tags": "心内マーカ  Intracardiac marker marker AP AS VP VS AEGM VEGM"
   },
   {
@@ -5019,7 +5019,7 @@
    "cat": "トラブル",
    "device": "PM / ICD / CRT",
    "maker": "General",
-   "short": "ERI/EOL到達時などにモードや基本レートが自動で切り替わる安全動作。テレメトリー前に手帳や前回状態を確認する必要がある。",
+   "short": "ERIやEOSに達したときなどに、モードや基本レートが自動で切り替わる安全動作。予期しない設定になっていることがあるため、フォロー時は手帳や前回の記録と照合して確認する。",
    "tags": "バックアップモード  Backup / safety mode backup safety mode ERI EOL"
   },
   {
@@ -5029,7 +5029,7 @@
    "cat": "フォロー",
    "device": "CRT",
    "maker": "General",
-   "short": "就寝時の体の傾き（起坐呼吸の程度）をモニタする機能。睡眠時無呼吸や夜間発作性呼吸困難の把握に用いる。",
+   "short": "就寝時の体の傾き（上体をどれだけ起こして寝ているか）を記録する機能。起坐呼吸の程度を反映し、心不全の増悪や睡眠時無呼吸の把握に役立つ。",
    "tags": "睡眠傾斜  Sleep incline sleep incline 睡眠傾斜 起坐呼吸"
   },
   {
@@ -5039,7 +5039,7 @@
    "cat": "フォロー",
    "device": "CRT",
    "maker": "General",
-   "short": "心拍間隔のゆらぎ。自律神経機能を反映し、低いHRVは心不全増悪・死亡リスクと関連する予後指標。",
+   "short": "心拍と心拍の間隔のゆらぎ。自律神経の働きを反映し、この変動が小さいことは心不全の増悪や死亡のリスクが高いことと関連する予後指標となる。",
    "tags": "心拍間隔変動 HRV Heart rate variability HRV heart rate variability 自律神経"
   },
   {
@@ -5049,7 +5049,7 @@
    "cat": "フォロー",
    "device": "CRT",
    "maker": "General",
-   "short": "臥位で呼吸困難が増し、起坐位・半坐位で軽減する状態。左心不全の主要な徴候。",
+   "short": "横になると呼吸が苦しくなり、上体を起こすと楽になる状態。肺うっ血によって起こる左心不全の代表的な徴候で、増悪の重要なサインとなる。",
    "tags": "起坐呼吸  Orthopnea orthopnea 起坐呼吸 夜間発作性呼吸困難 PND"
   },
   {
@@ -5059,7 +5059,7 @@
    "cat": "フォロー",
    "device": "PM / ICD / CRT",
    "maker": "General",
-   "short": "加速度センサが記録する身体活動量の推移。心不全増悪では活動量が低下する。",
+   "short": "加速度センサが記録する1日あたりの身体活動時間の推移。心不全が悪化すると活動量が落ちるため、他の指標と組み合わせて増悪の兆候を捉えられる。",
    "tags": "アクティビティデータ  Activity data activity data 活動量"
   },
   {
@@ -5069,7 +5069,7 @@
    "cat": "不整脈・EP",
    "device": "PM",
    "maker": "General",
-   "short": "洞結節の興奮が一時的に途絶し、P波もQRSも出ない状態（ポーズ）。徐脈頻脈症候群では頻拍停止時に長いポーズを生じる。",
+   "short": "洞房結節の興奮が一時的に途絶え、P波もQRSも現れない状態（ポーズ）。徐脈頻脈症候群では頻拍が停止した直後に長いポーズが生じ、失神の原因となる。",
    "tags": "洞停止  Sinus arrest / pause sinus arrest pause 洞停止 ポーズ"
   },
   {
@@ -5099,7 +5099,7 @@
    "cat": "不整脈・EP",
    "device": "PM",
    "maker": "General",
-   "short": "房室接合部から生じる補充調律。QRS幅は比較的狭く、毎分40〜50前後のことが多い。",
+   "short": "房室接合部から生じる補充調律。刺激伝導系をたどるためQRS幅は比較的狭く、心拍数は毎分40〜50前後のことが多い。心室補充調律よりは安定している。",
    "tags": "接合部補充調律  Junctional escape rhythm junctional escape 接合部補充"
   },
   {
@@ -5109,7 +5109,7 @@
    "cat": "不整脈・EP",
    "device": "PM",
    "maker": "General",
-   "short": "心室（プルキンエ線維など）から生じる補充調律。QRS幅が広くレートも遅く、接合部補充調律より重篤で緊急性が高い。",
+   "short": "心室そのものから生じる補充調律。QRS幅が広く心拍数も毎分30〜40と遅いうえ不安定で、いつ止まってもおかしくない。完全房室ブロックでこの調律に頼っている状態は緊急性が高い。",
    "tags": "心室補充調律  Ventricular escape rhythm ventricular escape 心室補充 wide QRS"
   },
   {
@@ -5119,7 +5119,7 @@
    "cat": "不整脈・EP",
    "device": "PM",
    "maker": "General",
-   "short": "自律神経反射で徐脈・血圧低下を来す失神の総称（血管迷走神経性・状況失神・頸動脈洞症候群）。診断にチルト検査を用いる。",
+   "short": "自律神経の反射によって徐脈や血圧低下が起こり失神する病態の総称。血管迷走神経性失神、状況失神、頸動脈洞症候群が含まれ、診断にはヘッドアップチルト試験が用いられる。",
    "tags": "神経調節性失神  Neurally mediated syncope neurally mediated 反射性失神 tilt"
   },
   {
@@ -5129,7 +5129,7 @@
    "cat": "不整脈・EP",
    "device": "",
    "maker": "General",
-   "short": "排尿・排便・嚥下・咳嗽など特定の状況で誘発される失神。迷走神経活動の亢進による。",
+   "short": "排尿、排便、嚥下、咳嗽など、特定の動作をきっかけに誘発される失神。迷走神経活動の急な亢進によって起こり、原因となる状況を避けることが基本的な対応となる。",
    "tags": "状況失神  Situational syncope situational 状況失神 排尿失神"
   },
   {
@@ -5139,7 +5139,7 @@
    "cat": "不整脈・EP",
    "device": "PM",
    "maker": "General",
-   "short": "傾斜台で立位負荷をかけ、神経調節性失神を再現・診断する検査。",
+   "short": "傾斜台の上で体を起こした状態を保ち、立位の負荷をかけて失神を再現させる検査。神経調節性失神の診断と、心拍が落ちる心抑制型か血圧が落ちる血管抑制型かの判定に用いる。",
    "tags": "チルト試験  Head-up tilt test tilt table チルト 傾斜"
   },
   {
@@ -5169,7 +5169,7 @@
    "cat": "不整脈・EP",
    "device": "ICD",
    "maker": "General",
-   "short": "30秒以上持続する、または血行動態破綻で停止を要する心室頻拍。",
+   "short": "30秒以上持続する、または血行動態が破綻して30秒未満でも停止処置を要する心室頻拍。ICDの二次予防の適応となる代表的な不整脈。",
    "tags": "持続性VT  Sustained VT sustained 持続性"
   },
   {
@@ -5179,7 +5179,7 @@
    "cat": "不整脈・EP",
    "device": "ICD",
    "maker": "General",
-   "short": "器質的心疾患が否定されたVT。右室流出路起源（左脚ブロック＋下方軸）が最も多く、アブレーションの効果が高い。",
+   "short": "器質的心疾患が否定された心室頻拍。右室流出路起源（左脚ブロック型＋下方軸）が最も多く、一般に予後は良好で、アブレーションの成功率が高い。",
    "tags": "特発性VT  Idiopathic VT idiopathic 特発性 右室流出路"
   },
   {
@@ -5189,7 +5189,7 @@
    "cat": "不整脈・EP",
    "device": "",
    "maker": "General",
-   "short": "左脚後枝領域のプルキンエ網にリエントリー回路を持つ特発性VT。Ca拮抗薬ベラパミルが停止・発作予防に有効。",
+   "short": "左脚後枝領域のプルキンエ網にリエントリー回路を持つ特発性VT。比較的QRS幅が狭く、Ca拮抗薬であるベラパミルの静注で停止し、予防にも有効という特徴を持つ。",
    "tags": "ベラパミル感受性VT  Verapamil-sensitive VT verapamil ベラパミル 左脚後枝 fascicular"
   },
   {
@@ -5199,7 +5199,7 @@
    "cat": "不整脈・EP",
    "device": "",
    "maker": "General",
-   "short": "右室（または左室）流出路を起源とするVT。特発性VTで最多。運動やカテコラミンで誘発されやすい。",
+   "short": "右室（または左室）の流出路を起源とする心室頻拍で、特発性VTのなかで最も多い。運動やカテコラミンで誘発されやすく、左脚ブロック型かつ下方軸の波形を示す。",
    "tags": "心室流出路起源VT  Outflow tract VT outflow tract RVOT 流出路"
   },
   {
@@ -5209,7 +5209,7 @@
    "cat": "不整脈・EP",
    "device": "",
    "maker": "General",
-   "short": "期外刺激を組み合わせて頻拍を誘発・停止する電気生理検査の手技。リエントリー性頻拍の評価に用いる。",
+   "short": "基本刺激に期外刺激を組み合わせて、頻拍を誘発したり停止させたりする電気生理検査の手技。リエントリー性の頻拍かどうかの判定や、不応期の測定に用いる。",
    "tags": "プログラム刺激 PES Programmed electrical stimulation PES 期外刺激 electrophysiology 期外刺激法 extrastimulus S1 S2 連結期"
   },
   {
@@ -5239,7 +5239,7 @@
    "cat": "不整脈・EP",
    "device": "",
    "maker": "General",
-   "short": "活動電位が発生する境目の膜電位。ペーシング刺激はこの電位まで細胞を脱分極させることで心筋を捕捉する。",
+   "short": "これを超えると活動電位が一気に発生する境目の膜電位。ペーシング刺激は細胞をこの電位まで脱分極させることで心筋を捕捉しており、刺激閾値の背景にある仕組みとなる。",
    "tags": "閾値電位 Threshold potential threshold potential 閾値電位"
   },
   {
@@ -5419,7 +5419,7 @@
    "cat": "不整脈・EP",
    "device": "PM / ICD / CRT",
    "maker": "General",
-   "short": "心室全体の興奮が終了した部分で、健常者では基線に一致する。心筋虚血・心筋障害・ジギタリス製剤などで上昇や下降を示す。",
+   "short": "心室全体が脱分極し終わってから再分極が始まるまでの部分で、健常者では基線と一致する。心筋虚血・心筋梗塞・ジギタリスなどで上昇や下降を示す。",
    "tags": "ST部分 ST segment ST segment ST上昇 ST低下 虚血 ジギタリス"
   },
   {
@@ -5939,7 +5939,7 @@
    "cat": "ペーシング",
    "device": "PM / ICD / CRT",
    "maker": "General",
-   "short": "心室中隔にリードを固定して刺激する方法。心尖部ペーシングより生理的な興奮伝播が期待され、能動的固定リードを用いる。",
+   "short": "右室中隔にリードを固定して刺激する方法。心尖部ペーシングより興奮の広がりが生理的でQRS幅も狭くなりやすく、心機能への影響を減らせると考えられている。固定には能動的固定リードを用いる。",
    "tags": "中隔ペーシング Septal pacing septal pacing 中隔 RVSP 心室中隔"
   },
   {
@@ -7928,7 +7928,7 @@
    "bsx": "Rhythm ID（Onset／Stability）",
    "bio": "SMART（SMART Detection）",
    "mcp": "PARAD／PARAD+",
-   "note": "上室性頻拍を鑑別し不適切作動を防ぐ。形態（morphology）と房室関係で判定する。"
+   "note": "上室頻拍を心室頻拍と区別して不適切作動を防ぐロジック。QRS波形の一致度（モルフォロジー）、心房と心室の関係、発症の急峻さ、R-R間隔の安定性などを組み合わせて判定し、各社が独自のアルゴリズム名を持つ。"
   },
   {
    "fn": "リモートモニタリング",
@@ -7939,7 +7939,7 @@
    "bsx": "LATITUDE",
    "bio": "Home Monitoring",
    "mcp": "SmartView（SmartView Connect）",
-   "note": "各社専用プラットフォーム。原則として自社デバイスのみ対応。"
+   "note": "各社が専用のプラットフォームを持ち、原則として自社デバイスのみに対応する。送信機の種類（設置型・携帯型・アプリ）やアラートの分類、発生から通知までの時間もメーカーごとに異なるため、施設で採用する機種の特性を把握しておく。"
   },
   {
    "fn": "条件付きMRI対応",
@@ -7961,7 +7961,7 @@
    "bsx": "ZOOM／LATITUDE Programming System",
    "bio": "Renamic（ICS 3000）",
    "mcp": "Orchestra Plus／SmartView",
-   "note": "各社専用機。自社デバイスと通信し設定変更・データ読み出しを行う。"
+   "note": "各社専用の設定・解析装置。自社デバイスと通信して設定変更やデータ読み出しを行う。緊急ショックボタンの配置や操作方法は機種ごとに異なるため、DFTテストに関わるスタッフは事前に習熟しておく必要がある。"
   },
   {
    "fn": "モードスイッチ（心房頻拍時の追従回避）",
@@ -8038,7 +8038,7 @@
    "bsx": "Bandpass Filter",
    "bio": "High Pass Filter",
    "mcp": "Bandpass Filter",
-   "note": "T波の二重計数による不適切作動を防ぐ機能・フィルタ。各社で方式が異なる。"
+   "note": "T波を心室興奮と二重に数えてしまい、不適切作動を招くのを防ぐ機能やフィルタ。フィルタ特性の変更、センシング開始感度や減衰時間のプログラミング、微分処理による識別など、方式は各社で大きく異なる。"
   },
   {
    "fn": "リードノイズ管理",
@@ -8049,7 +8049,7 @@
    "bsx": "Dynamic Noise Algorithm",
    "bio": "RV lead monitoring",
    "mcp": "Stability+/Acc",
-   "note": "リード断線などの雑音を検出し、不適切作動を防ぐ機能。"
+   "note": "断線などによる非生理的な雑音を検出し、不適切作動を未然に防ぐ機能。短周期のセンシングが多発した場合にアラートを出したり、治療を保留したりする。ショックリードの断線兆候を早期に捉える目的で各社が搭載している。"
   },
   {
    "fn": "日本で発売中のICD（主な機種）",
@@ -8071,7 +8071,7 @@
    "bsx": "ACUITY X4",
    "bio": "Sentus ProMRI",
    "mcp": "—",
-   "note": "CRTで用いる代表的な四極左室リード。刺激部位選択の自由度が高い。"
+   "note": "CRTで用いる代表的な四極左室リード。電極の組合せから10通り前後のペーシングベクトルを選べるため、横隔神経刺激の回避、閾値の低い部位の選択、電気的遅延部位の活用がしやすい。"
   },
   {
    "fn": "自動AV/VV至適化",
