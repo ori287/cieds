@@ -3280,7 +3280,7 @@
    "device": "ICD",
    "maker": "General",
    "short": "心室が無秩序に興奮し有効な拍出が失われる致死的不整脈。ICDの主要な治療対象で、検出後に高エネルギーショックで停止させる。",
-   "tags": "心室細動 VF Ventricular fibrillation"
+   "tags": "心室細動 VF Ventricular fibrillation reversible 可逆的要因 虚血 電解質"
   },
   {
    "term": "心室頻拍",
@@ -3290,7 +3290,7 @@
    "device": "ICD",
    "maker": "General",
    "short": "心室起源の頻拍。レートや血行動態に応じてATPやショックで治療する。持続性・非持続性、単形性・多形性に分けられる。",
-   "tags": "心室頻拍 VT Ventricular tachycardia"
+   "tags": "心室頻拍 VT Ventricular tachycardia monomorphic polymorphic sustained non-sustained 単形性 多形性 持続性 非持続性 右脚ブロック型 左脚ブロック型"
   },
   {
    "term": "非持続性心室頻拍",
@@ -3310,7 +3310,7 @@
    "device": "ICD",
    "maker": "General",
    "short": "QT延長を背景に生じる多形性心室頻拍。基線を軸にねじれる波形が特徴で、失神や心室細動へ移行しうる。",
-   "tags": "トルサード・ド・ポアント TdP Torsade de pointes TdP 多形性心室頻拍"
+   "tags": "トルサード・ド・ポアント TdP Torsade de pointes TdP 多形性心室頻拍 polymorphic VT QT依存"
   },
   {
    "term": "定電圧方式",
@@ -3460,7 +3460,7 @@
    "device": "PM / ICD / CRT",
    "maker": "General",
    "short": "心房内の旋回興奮による規則的な頻拍。1:1伝導では速い心室応答となり、デバイスの心房追従にも影響する。",
-   "tags": "心房粗動 AFL Atrial flutter AFL 通常型 非通常型 Wells"
+   "tags": "心房粗動 AFL Atrial flutter AFL 通常型 非通常型 Wells Wells 反時計回転 時計回転 鋸歯状"
   },
   {
    "term": "心房頻拍",
@@ -3470,7 +3470,7 @@
    "device": "PM / ICD / CRT",
    "maker": "General",
    "short": "心房起源の規則的な頻拍。デバイスはこれを検出してモードスイッチや心房ATPで対応する。",
-   "tags": "心房頻拍 AT Atrial tachycardia AT focal マクロリエントリー"
+   "tags": "心房頻拍 AT Atrial tachycardia AT focal マクロリエントリー AT isoelectric line 等電位線 特発性 続発性"
   },
   {
    "term": "上室頻拍",
@@ -3500,7 +3500,7 @@
    "device": "PM / ICD / CRT",
    "maker": "General",
    "short": "心室起源の早期収縮。デバイスはこれを感知してPVARP延長などで対応し、PMTの予防にも関わる。",
-   "tags": "心室期外収縮 PVC Premature ventricular contraction VPC PVC 期外収縮"
+   "tags": "心室期外収縮 PVC Premature ventricular contraction VPC PVC 期外収縮 特発性 器質的 scar 瘢痕 多源性"
   },
   {
    "term": "ディスシンクロニー",
@@ -3590,7 +3590,7 @@
    "device": "ICD",
    "maker": "General",
    "short": "QT延長によりTdPや突然死のリスクが高まる病態。二次予防や高リスク例でICDが考慮される。",
-   "tags": "QT延長症候群 LQTS Long QT syndrome LQTS Romano-Ward Jervell-Lange-Nielsen LQT1 LQT2 LQT3"
+   "tags": "QT延長症候群 LQTS Long QT syndrome LQTS Romano-Ward Jervell-Lange-Nielsen LQT1 LQT2 LQT3 LQT1 LQT2 LQT3 KCNQ1 KCNH2 SCN5A メキシレチン ナドロール"
   },
   {
    "term": "ブルガダ症候群",
@@ -3600,7 +3600,7 @@
    "device": "ICD",
    "maker": "General",
    "short": "右側胸部誘導の特徴的ST上昇を示し、心室細動・突然死を来しうる遺伝性不整脈。適応例でICDが用いられる。",
-   "tags": "ブルガダ症候群  Brugada syndrome Brugada coved saddleback SCN5A"
+   "tags": "ブルガダ症候群  Brugada syndrome Brugada coved saddleback SCN5A coved saddle back type1 type2 ピルジカイニド ボックリ病"
   },
   {
    "term": "カテコラミン誘発性多形性心室頻拍",
@@ -5421,6 +5421,126 @@
    "maker": "General",
    "short": "傾斜台で立位負荷をかけ、神経調節性失神を再現・診断する検査。",
    "tags": "チルト試験  Head-up tilt test tilt table チルト 傾斜"
+  },
+  {
+   "term": "単形性VT",
+   "en": "Monomorphic VT",
+   "abbr": "",
+   "cat": "不整脈・EP",
+   "device": "ICD",
+   "maker": "General",
+   "short": "単一のQRS波形が続く心室頻拍。V1の形から左脚ブロック型（右室起源）・右脚ブロック型（左室起源）に大別されるが、器質的心疾患では起源と形が一致しないことがある。",
+   "tags": "単形性VT  Monomorphic VT monomorphic 単形性 左脚ブロック型 右脚ブロック型"
+  },
+  {
+   "term": "多形性VT",
+   "en": "Polymorphic VT",
+   "abbr": "",
+   "cat": "不整脈・EP",
+   "device": "ICD",
+   "maker": "General",
+   "short": "複数のQRS波形をとる心室頻拍。中でも軸がねじれるものがトルサード・ド・ポアント。停止に電気的除細動を要し、急性虚血が原因なら再灌流を優先する。",
+   "tags": "多形性VT  Polymorphic VT polymorphic 多形性 TdP"
+  },
+  {
+   "term": "持続性VT",
+   "en": "Sustained VT",
+   "abbr": "",
+   "cat": "不整脈・EP",
+   "device": "ICD",
+   "maker": "General",
+   "short": "30秒以上持続する、または血行動態破綻で停止を要する心室頻拍。",
+   "tags": "持続性VT  Sustained VT sustained 持続性"
+  },
+  {
+   "term": "非持続性VT",
+   "en": "Non-sustained VT",
+   "abbr": "NSVT",
+   "cat": "不整脈・EP",
+   "device": "ICD",
+   "maker": "General",
+   "short": "3連発以上で30秒未満に自然停止する心室頻拍。リスク評価やフォローの材料になる。",
+   "tags": "非持続性VT NSVT Non-sustained VT non-sustained NSVT 非持続性"
+  },
+  {
+   "term": "特発性VT",
+   "en": "Idiopathic VT",
+   "abbr": "",
+   "cat": "不整脈・EP",
+   "device": "ICD",
+   "maker": "General",
+   "short": "器質的心疾患が否定されたVT。右室流出路起源（左脚ブロック＋下方軸）が最も多く、アブレーションの効果が高い。",
+   "tags": "特発性VT  Idiopathic VT idiopathic 特発性 右室流出路"
+  },
+  {
+   "term": "ベラパミル感受性VT",
+   "en": "Verapamil-sensitive VT",
+   "abbr": "",
+   "cat": "不整脈・EP",
+   "device": "",
+   "maker": "General",
+   "short": "左脚後枝領域のプルキンエ網にリエントリー回路を持つ特発性VT。Ca拮抗薬ベラパミルが停止・発作予防に有効。",
+   "tags": "ベラパミル感受性VT  Verapamil-sensitive VT verapamil ベラパミル 左脚後枝 fascicular"
+  },
+  {
+   "term": "心室流出路起源VT",
+   "en": "Outflow tract VT",
+   "abbr": "",
+   "cat": "不整脈・EP",
+   "device": "",
+   "maker": "General",
+   "short": "右室（または左室）流出路を起源とするVT。特発性VTで最多。運動やカテコラミンで誘発されやすい。",
+   "tags": "心室流出路起源VT  Outflow tract VT outflow tract RVOT 流出路"
+  },
+  {
+   "term": "ARVC",
+   "en": "Arrhythmogenic RV cardiomyopathy",
+   "abbr": "ARVC",
+   "cat": "不整脈・EP",
+   "device": "ICD",
+   "maker": "General",
+   "short": "右室心筋の脂肪変性・線維化を特徴とする遺伝性心筋症。ε波や右前胸部誘導の陰性T波を示し、持続性VT/VFによる突然死のリスクが高い。",
+   "tags": "ARVC ARVC Arrhythmogenic RV cardiomyopathy ARVC epsilon fibrofatty 右室"
+  },
+  {
+   "term": "CPVT",
+   "en": "Catecholaminergic polymorphic VT",
+   "abbr": "CPVT",
+   "cat": "不整脈・EP",
+   "device": "ICD",
+   "maker": "General",
+   "short": "運動や情動、カテコラミンで二方向性・多形性VTを生じる遺伝性不整脈。RyR2遺伝子異常が多く、非選択性β遮断薬を第一選択とし、高リスク例でICDを併用する。",
+   "tags": "CPVT CPVT Catecholaminergic polymorphic VT CPVT RyR2 二方向性 β遮断薬"
+  },
+  {
+   "term": "late potential",
+   "en": "Late potential",
+   "abbr": "LP",
+   "cat": "不整脈・EP",
+   "device": "",
+   "maker": "General",
+   "short": "加算平均心電図でQRS終末部に検出される小さな遅延電位。伝導遅延部（リエントリー基質）の存在を示唆する。",
+   "tags": "late potential LP Late potential late potential 遅延電位 加算平均心電図 SAECG"
+  },
+  {
+   "term": "プログラム刺激",
+   "en": "Programmed electrical stimulation",
+   "abbr": "PES",
+   "cat": "不整脈・EP",
+   "device": "",
+   "maker": "General",
+   "short": "期外刺激を組み合わせて頻拍を誘発・停止する電気生理検査の手技。リエントリー性頻拍の評価に用いる。",
+   "tags": "プログラム刺激 PES Programmed electrical stimulation PES 期外刺激 electrophysiology"
+  },
+  {
+   "term": "心臓突然死の高リスク因子",
+   "en": "High-risk markers for SCD",
+   "abbr": "",
+   "cat": "不整脈・EP",
+   "device": "ICD",
+   "maker": "General",
+   "short": "突然死のリスクが高いことを示す所見（心停止・持続性VT/VFの既往、重度の心機能低下、失神、突然死の家族歴など）。ICD適応の判断に用いる。",
+   "tags": "心臓突然死の高リスク因子  High-risk markers for SCD risk sudden death ICD適応"
   }
  ],
  "feats": [
