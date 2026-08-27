@@ -2,7 +2,7 @@
 <html lang="ja">
 <head>
 <meta charset="UTF-8"/>
-<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover"/>
+<meta name="viewport" content="width=device-width, initial-scale=1, minimum-scale=1, maximum-scale=1, user-scalable=no, viewport-fit=cover"/>
 <meta name="theme-color" content="#0d9488"/>
 <meta name="apple-mobile-web-app-capable" content="yes"/>
 <meta name="apple-mobile-web-app-status-bar-style" content="default"/>
@@ -195,6 +195,7 @@ header{background-attachment:scroll}
 .arow .atxt{flex:1;min-width:0}
 .arow b{display:block;font-size:14.5px;font-weight:800;color:var(--ink);line-height:1.35}
 .arow small{display:block;margin-top:2px;font-size:11.5px;color:var(--muted)}
+.arow em{display:block;margin-top:5px;font-size:12.5px;font-style:normal;line-height:1.6;color:var(--sub)}
 .arow .chev{flex:0 0 8px;color:var(--muted)}
 /* ===== アルゴ：詳細 ===== */
 .adet .back{display:inline-flex;align-items:center;gap:5px;background:none;border:0;
@@ -217,6 +218,17 @@ header{background-attachment:scroll}
 .tabbar{z-index:40}
 body.modal-open .tabbar{display:none}
 body.modal-open{padding-bottom:0}
+
+/* ===== ズーム抑止と背景の全面固定 ===== */
+html,body{width:100%;max-width:100%;overflow-x:hidden;
+ touch-action:manipulation;                    /* 縦スクロールのみ許可＝ピンチ無効 */
+ -webkit-text-size-adjust:100%;text-size-adjust:100%}
+body::before{position:fixed;top:-10vh;left:-10vw;right:-10vw;bottom:-10vh;
+ background:linear-gradient(180deg,#eafaf5 0,#f8fafc 340px)}
+/* 入力欄はiOSの自動ズームを避けるため16px以上を確保 */
+input,select,textarea{font-size:16px}
+/* ダブルタップによる拡大を止める */
+button,.chip,.arow,.cardrow,.tabbar button{touch-action:manipulation}
 </style>
 </head>
 <body>
@@ -865,9 +877,11 @@ loadMaster(false);
   var out="",cur=null;
   rows.forEach(function(x){
    if(x.maker!==cur){cur=x.maker;out+='<p class="mkhead">'+esc(cur)+'</p>'}
+   var sum=x.scope||x.purpose||"";
    out+='<button class="arow" data-id="'+esc(x.id)+'">'+GEAR+
     '<span class="atxt"><b>'+esc(x.name)+'</b><small>'+esc(x.maker)+
-    (x.cat?' ・ '+esc(x.cat):'')+'</small></span>'+CHEV+'</button>';
+    (x.cat?' ・ '+esc(x.cat):'')+'</small>'+
+    (sum?'<em>'+esc(sum)+'</em>':'')+'</span>'+CHEV+'</button>';
   });
   $("#aList").innerHTML=out;
  }
@@ -999,6 +1013,18 @@ loadMaster(false);
  });
  document.addEventListener("click",function(){setTimeout(sync,0)},true);
  sync();
+})();
+</script>
+
+<script>
+/* ピンチ／ダブルタップによる拡大を抑止（iOS Safari対策） */
+(function(){
+ document.addEventListener("gesturestart",function(e){e.preventDefault()},{passive:false});
+ document.addEventListener("gesturechange",function(e){e.preventDefault()},{passive:false});
+ document.addEventListener("gestureend",function(e){e.preventDefault()},{passive:false});
+ document.addEventListener("touchmove",function(e){
+  if(e.touches&&e.touches.length>1){e.preventDefault()}
+ },{passive:false});
 })();
 </script>
 </body>
