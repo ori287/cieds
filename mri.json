@@ -1,5 +1,670 @@
 {
- "v": 1,
+ "v": 2,
  "updated": "2026-08-27",
- "items": []
+ "note": "本体・リードの組合せで撮像可能な静磁場強度を判定する。実施前に必ず添付文書と各社の最新情報で確認すること。",
+ "items": [
+  {
+   "id": "MP-KORA100",
+   "maker": "MicroPort",
+   "type": "ペースメーカ",
+   "group": "KORA 100",
+   "devices": [
+    {
+     "model": "TPM006J",
+     "name": "KORA 100 DR"
+    },
+    {
+     "model": "TPM007J",
+     "name": "KORA 100 SR"
+    }
+   ],
+   "ra": [
+    {
+     "model": "RF45D",
+     "name": "BEFLEX RF45D"
+    },
+    {
+     "model": "RF46D",
+     "name": "BEFLEX RF46D"
+    },
+    {
+     "model": "TLD041C",
+     "name": "VEGA R52"
+    },
+    {
+     "model": "TLD042C",
+     "name": "VEGA R58"
+    },
+    {
+     "model": "TLSCREWVINE44",
+     "name": "J-LINE SCREWVINE 44SEP"
+    },
+    {
+     "model": "TLSCREWVINE52",
+     "name": "J-LINE SCREWVINE 52SEP"
+    },
+    {
+     "model": "TLSCREWVINE58",
+     "name": "J-LINE SCREWVINE 58SEP"
+    }
+   ],
+   "rv": [
+    {
+     "model": "RF45D",
+     "name": "BEFLEX RF45D"
+    },
+    {
+     "model": "RF46D",
+     "name": "BEFLEX RF46D"
+    },
+    {
+     "model": "TLD041C",
+     "name": "VEGA R52"
+    },
+    {
+     "model": "TLD042C",
+     "name": "VEGA R58"
+    },
+    {
+     "model": "TLSCREWVINE44",
+     "name": "J-LINE SCREWVINE 44SEP"
+    },
+    {
+     "model": "TLSCREWVINE52",
+     "name": "J-LINE SCREWVINE 52SEP"
+    },
+    {
+     "model": "TLSCREWVINE58",
+     "name": "J-LINE SCREWVINE 58SEP"
+    }
+   ],
+   "lv": [],
+   "tesla": [
+    "1.5T"
+   ],
+   "cond": {
+    "植込み後": "6週間以上",
+    "植込み部位": "胸部",
+    "遺残リード": "不可",
+    "ペーシング閾値": "2.0V(0.35ms)以下（Bipolar）",
+    "リードインピーダンス": "心房・右室 200〜3,000Ω（Bipolar）",
+    "傾斜磁場スルーレート": "≤200T/m/s",
+    "SAR": "全身 ≤2.0W/kg／頭部 ≤3.2W/kg（通常操作モード）",
+    "体位": "背臥位または腹臥位のみ（側臥位不可）",
+    "MRIモード": "マニュアル設定／自動設定",
+    "患者監視": "心電図・パルスオキシメータ",
+    "体外式除細動器": "必須",
+    "最大空間勾配磁場": "制限なし",
+    "除外領域": "胸腹部領域",
+    "アイソセンタ": "眼より上・股関節より下",
+    "撮像時間": "1回40分以内／次回まで30分以上あける",
+    "電池": "電池抵抗 <5kΩ"
+   },
+   "verify": true
+  },
+  {
+   "id": "MP-KORA250",
+   "maker": "MicroPort",
+   "type": "ペースメーカ",
+   "group": "KORA 250 / KORA 250 ENO",
+   "devices": [
+    {
+     "model": "TPM010J",
+     "name": "KORA 250 DR"
+    },
+    {
+     "model": "TPM013J",
+     "name": "KORA 250 SR"
+    },
+    {
+     "model": "TPM014J",
+     "name": "KORA 250 ENO DR"
+    },
+    {
+     "model": "TPM015J",
+     "name": "KORA 250 ENO SR"
+    }
+   ],
+   "ra": [
+    {
+     "model": "RF45D",
+     "name": "BEFLEX RF45D"
+    },
+    {
+     "model": "RF46D",
+     "name": "BEFLEX RF46D"
+    },
+    {
+     "model": "TLD040C",
+     "name": "VEGA R45"
+    },
+    {
+     "model": "TLD041C",
+     "name": "VEGA R52"
+    },
+    {
+     "model": "TLD042C",
+     "name": "VEGA R58"
+    },
+    {
+     "model": "TLD056C",
+     "name": "Xfine JX24D"
+    },
+    {
+     "model": "TLD057C",
+     "name": "Xfine JX25D"
+    },
+    {
+     "model": "TLD054C",
+     "name": "Xfine TX25D"
+    },
+    {
+     "model": "TLD055C",
+     "name": "Xfine TX26D"
+    },
+    {
+     "model": "TLSCREWVINE44",
+     "name": "J-LINE SCREWVINE 44SEP"
+    },
+    {
+     "model": "TLSCREWVINE52",
+     "name": "J-LINE SCREWVINE 52SEP"
+    },
+    {
+     "model": "TLSCREWVINE58",
+     "name": "J-LINE SCREWVINE 58SEP"
+    },
+    {
+     "model": "TLJPETITE44ERJB",
+     "name": "J-LINE PETITE 44ERJB"
+    },
+    {
+     "model": "TLJPETITE52ERJB",
+     "name": "J-LINE PETITE 52ERJB"
+    },
+    {
+     "model": "TLJPETITE52ERB",
+     "name": "J-LINE PETITE 52ERB"
+    },
+    {
+     "model": "TLJPETITE58ERB",
+     "name": "J-LINE PETITE 58ERB"
+    }
+   ],
+   "rv": [
+    {
+     "model": "RF45D",
+     "name": "BEFLEX RF45D"
+    },
+    {
+     "model": "RF46D",
+     "name": "BEFLEX RF46D"
+    },
+    {
+     "model": "TLD040C",
+     "name": "VEGA R45"
+    },
+    {
+     "model": "TLD041C",
+     "name": "VEGA R52"
+    },
+    {
+     "model": "TLD042C",
+     "name": "VEGA R58"
+    },
+    {
+     "model": "TLD056C",
+     "name": "Xfine JX24D"
+    },
+    {
+     "model": "TLD057C",
+     "name": "Xfine JX25D"
+    },
+    {
+     "model": "TLD054C",
+     "name": "Xfine TX25D"
+    },
+    {
+     "model": "TLD055C",
+     "name": "Xfine TX26D"
+    },
+    {
+     "model": "TLSCREWVINE44",
+     "name": "J-LINE SCREWVINE 44SEP"
+    },
+    {
+     "model": "TLSCREWVINE52",
+     "name": "J-LINE SCREWVINE 52SEP"
+    },
+    {
+     "model": "TLSCREWVINE58",
+     "name": "J-LINE SCREWVINE 58SEP"
+    },
+    {
+     "model": "TLJPETITE44ERJB",
+     "name": "J-LINE PETITE 44ERJB"
+    },
+    {
+     "model": "TLJPETITE52ERJB",
+     "name": "J-LINE PETITE 52ERJB"
+    },
+    {
+     "model": "TLJPETITE52ERB",
+     "name": "J-LINE PETITE 52ERB"
+    },
+    {
+     "model": "TLJPETITE58ERB",
+     "name": "J-LINE PETITE 58ERB"
+    }
+   ],
+   "lv": [],
+   "tesla": [
+    "1.5T",
+    "3.0T"
+   ],
+   "cond": {
+    "植込み後": "6週間以上",
+    "植込み部位": "胸部",
+    "遺残リード": "不可",
+    "ペーシング閾値": "2.0V(0.35ms)以下（Bipolar）",
+    "リードインピーダンス": "心房・右室 200〜3,000Ω（Bipolar）",
+    "傾斜磁場スルーレート": "≤200T/m/s",
+    "SAR": "全身 ≤2.0W/kg／頭部 ≤3.2W/kg（通常操作モード）",
+    "体位": "背臥位または腹臥位のみ（側臥位不可）",
+    "MRIモード": "マニュアル設定／自動設定",
+    "患者監視": "心電図・パルスオキシメータ",
+    "体外式除細動器": "必須",
+    "最大空間勾配磁場": "≤20T/m",
+    "除外領域": "制限なし",
+    "アイソセンタ": "制限なし",
+    "撮像時間": "1回40分以内／アイソセンタが眼〜股関節の場合は次回まで24時間以上",
+    "電池": "電池抵抗 <5kΩ"
+   },
+   "verify": true
+  },
+  {
+   "id": "MP-ALIZEA",
+   "maker": "MicroPort",
+   "type": "ペースメーカ",
+   "group": "ALIZEA",
+   "devices": [
+    {
+     "model": "TPM020C",
+     "name": "ALIZEA DR"
+    },
+    {
+     "model": "TPM021C",
+     "name": "ALIZEA SR"
+    }
+   ],
+   "ra": [
+    {
+     "model": "RF45D",
+     "name": "BEFLEX RF45D"
+    },
+    {
+     "model": "RF46D",
+     "name": "BEFLEX RF46D"
+    },
+    {
+     "model": "TLD040C",
+     "name": "VEGA R45"
+    },
+    {
+     "model": "TLD041C",
+     "name": "VEGA R52"
+    },
+    {
+     "model": "TLD042C",
+     "name": "VEGA R58"
+    },
+    {
+     "model": "TLD056C",
+     "name": "Xfine JX24D"
+    },
+    {
+     "model": "TLD057C",
+     "name": "Xfine JX25D"
+    },
+    {
+     "model": "TLD054C",
+     "name": "Xfine TX25D"
+    },
+    {
+     "model": "TLD055C",
+     "name": "Xfine TX26D"
+    },
+    {
+     "model": "TLSCREWVINE44",
+     "name": "J-LINE SCREWVINE 44SEP"
+    },
+    {
+     "model": "TLSCREWVINE52",
+     "name": "J-LINE SCREWVINE 52SEP"
+    },
+    {
+     "model": "TLSCREWVINE58",
+     "name": "J-LINE SCREWVINE 58SEP"
+    },
+    {
+     "model": "TLJPETITE44ERJB",
+     "name": "J-LINE PETITE 44ERJB"
+    },
+    {
+     "model": "TLJPETITE52ERJB",
+     "name": "J-LINE PETITE 52ERJB"
+    },
+    {
+     "model": "TLJPETITE52ERB",
+     "name": "J-LINE PETITE 52ERB"
+    },
+    {
+     "model": "TLJPETITE58ERB",
+     "name": "J-LINE PETITE 58ERB"
+    }
+   ],
+   "rv": [
+    {
+     "model": "RF45D",
+     "name": "BEFLEX RF45D"
+    },
+    {
+     "model": "RF46D",
+     "name": "BEFLEX RF46D"
+    },
+    {
+     "model": "TLD040C",
+     "name": "VEGA R45"
+    },
+    {
+     "model": "TLD041C",
+     "name": "VEGA R52"
+    },
+    {
+     "model": "TLD042C",
+     "name": "VEGA R58"
+    },
+    {
+     "model": "TLD056C",
+     "name": "Xfine JX24D"
+    },
+    {
+     "model": "TLD057C",
+     "name": "Xfine JX25D"
+    },
+    {
+     "model": "TLD054C",
+     "name": "Xfine TX25D"
+    },
+    {
+     "model": "TLD055C",
+     "name": "Xfine TX26D"
+    },
+    {
+     "model": "TLSCREWVINE44",
+     "name": "J-LINE SCREWVINE 44SEP"
+    },
+    {
+     "model": "TLSCREWVINE52",
+     "name": "J-LINE SCREWVINE 52SEP"
+    },
+    {
+     "model": "TLSCREWVINE58",
+     "name": "J-LINE SCREWVINE 58SEP"
+    },
+    {
+     "model": "TLJPETITE44ERJB",
+     "name": "J-LINE PETITE 44ERJB"
+    },
+    {
+     "model": "TLJPETITE52ERJB",
+     "name": "J-LINE PETITE 52ERJB"
+    },
+    {
+     "model": "TLJPETITE52ERB",
+     "name": "J-LINE PETITE 52ERB"
+    },
+    {
+     "model": "TLJPETITE58ERB",
+     "name": "J-LINE PETITE 58ERB"
+    }
+   ],
+   "lv": [],
+   "tesla": [
+    "1.5T",
+    "3.0T"
+   ],
+   "cond": {
+    "植込み後": "6週間以上",
+    "植込み部位": "胸部",
+    "遺残リード": "不可",
+    "ペーシング閾値": "2.0V(0.35ms)以下（Bipolar）",
+    "リードインピーダンス": "心房・右室 200〜3,000Ω（Bipolar）",
+    "傾斜磁場スルーレート": "≤200T/m/s",
+    "SAR": "全身 ≤2.0W/kg／頭部 ≤3.2W/kg（通常操作モード）",
+    "体位": "背臥位または腹臥位のみ（側臥位不可）",
+    "MRIモード": "マニュアル設定／自動設定",
+    "患者監視": "心電図・パルスオキシメータ",
+    "体外式除細動器": "必須",
+    "最大空間勾配磁場": "≤20T/m",
+    "除外領域": "制限なし",
+    "アイソセンタ": "制限なし",
+    "撮像時間": "1回40分以内／次回まで30分以上あける",
+    "電池": "RRTに達していないこと",
+    "アラート": "あり"
+   },
+   "verify": true
+  },
+  {
+   "id": "MP-ULYS",
+   "maker": "MicroPort",
+   "type": "ICD",
+   "group": "ULYS",
+   "devices": [
+    {
+     "model": "TDF049J",
+     "name": "ULYS VR 2240"
+    },
+    {
+     "model": "TDF050J",
+     "name": "ULYS DR 2540"
+    }
+   ],
+   "ra": [
+    {
+     "model": "RF45D",
+     "name": "BEFLEX RF45D"
+    },
+    {
+     "model": "RF46D",
+     "name": "BEFLEX RF46D"
+    },
+    {
+     "model": "TLD040C",
+     "name": "VEGA R45"
+    },
+    {
+     "model": "TLD041C",
+     "name": "VEGA R52"
+    },
+    {
+     "model": "TLD042C",
+     "name": "VEGA R58"
+    },
+    {
+     "model": "TLD056C",
+     "name": "Xfine JX24D"
+    },
+    {
+     "model": "TLD057C",
+     "name": "Xfine JX25D"
+    },
+    {
+     "model": "TLD054C",
+     "name": "Xfine TX25D"
+    },
+    {
+     "model": "TLD055C",
+     "name": "Xfine TX26D"
+    }
+   ],
+   "rv": [
+    {
+     "model": "TLT001C",
+     "name": "INVICTA 1CR 58"
+    },
+    {
+     "model": "TLT002C",
+     "name": "INVICTA 2CR 58"
+    },
+    {
+     "model": "TLT005C",
+     "name": "INVICTA 1CR 68"
+    },
+    {
+     "model": "TLT006C",
+     "name": "INVICTA 2CR 68"
+    }
+   ],
+   "lv": [],
+   "tesla": [
+    "1.5T",
+    "3.0T"
+   ],
+   "cond": {
+    "植込み後": "6週間以上",
+    "植込み部位": "胸部",
+    "遺残リード": "不可",
+    "ペーシング閾値": "2.0V(0.35ms)以下（Bipolar）",
+    "リードインピーダンス": "心房・右室 200〜3,000Ω／RV・SVCコイル 20〜200Ω",
+    "傾斜磁場スルーレート": "≤200T/m/s",
+    "SAR": "全身 ≤2.0W/kg／頭部 ≤3.2W/kg（通常操作モード）",
+    "体位": "背臥位または腹臥位のみ（側臥位不可）",
+    "MRIモード": "マニュアル設定／自動設定",
+    "患者監視": "心電図・パルスオキシメータ",
+    "体外式除細動器": "必須",
+    "最大空間勾配磁場": "≤20T/m",
+    "除外領域": "制限なし",
+    "アイソセンタ": "制限なし",
+    "撮像時間": "1回40分以内",
+    "電池": "RRTに達していないこと",
+    "アラート": "あり"
+   },
+   "verify": true
+  },
+  {
+   "id": "MP-GALI",
+   "maker": "MicroPort",
+   "type": "CRT-D",
+   "group": "GALI",
+   "devices": [
+    {
+     "model": "TDF054J",
+     "name": "GALI 4LV SonR CRT-D 2844"
+    }
+   ],
+   "ra": [
+    {
+     "model": "RF45D",
+     "name": "BEFLEX RF45D"
+    },
+    {
+     "model": "RF46D",
+     "name": "BEFLEX RF46D"
+    },
+    {
+     "model": "TLD040C",
+     "name": "VEGA R45"
+    },
+    {
+     "model": "TLD041C",
+     "name": "VEGA R52"
+    },
+    {
+     "model": "TLD042C",
+     "name": "VEGA R58"
+    },
+    {
+     "model": "TLD056C",
+     "name": "Xfine JX24D"
+    },
+    {
+     "model": "TLD057C",
+     "name": "Xfine JX25D"
+    },
+    {
+     "model": "TLD054C",
+     "name": "Xfine TX25D"
+    },
+    {
+     "model": "TLD055C",
+     "name": "Xfine TX26D"
+    },
+    {
+     "model": "TLD015C",
+     "name": "SONRTIP"
+    }
+   ],
+   "rv": [
+    {
+     "model": "TLT001C",
+     "name": "INVICTA 1CR 58"
+    },
+    {
+     "model": "TLT002C",
+     "name": "INVICTA 2CR 58"
+    },
+    {
+     "model": "TLT005C",
+     "name": "INVICTA 1CR 68"
+    },
+    {
+     "model": "TLT006C",
+     "name": "INVICTA 2CR 68"
+    }
+   ],
+   "lv": [
+    {
+     "model": "TLT019C",
+     "name": "NAVIGO 2D 78"
+    },
+    {
+     "model": "TLT020C",
+     "name": "NAVIGO 2D 88"
+    },
+    {
+     "model": "TLT021C",
+     "name": "NAVIGO ARC 78"
+    },
+    {
+     "model": "TLT022C",
+     "name": "NAVIGO ARC 88"
+    }
+   ],
+   "tesla": [
+    "1.5T",
+    "3.0T"
+   ],
+   "cond": {
+    "植込み後": "6週間以上",
+    "植込み部位": "胸部",
+    "遺残リード": "不可",
+    "ペーシング閾値": "2.0V(0.35ms)以下（Bipolar）",
+    "リードインピーダンス": "心房・右室 200〜3,000Ω／RV・SVCコイル 20〜200Ω",
+    "傾斜磁場スルーレート": "≤200T/m/s",
+    "SAR": "全身 ≤2.0W/kg／頭部 ≤3.2W/kg（通常操作モード）",
+    "体位": "背臥位または腹臥位のみ（側臥位不可）",
+    "MRIモード": "マニュアル設定／自動設定",
+    "患者監視": "心電図・パルスオキシメータ",
+    "体外式除細動器": "必須",
+    "最大空間勾配磁場": "≤20T/m",
+    "除外領域": "制限なし",
+    "アイソセンタ": "制限なし",
+    "撮像時間": "1回40分以内",
+    "電池": "RRTに達していないこと",
+    "アラート": "あり"
+   },
+   "verify": true
+  }
+ ]
 }

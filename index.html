@@ -233,6 +233,38 @@ button,.chip,.arow,.cardrow,.tabbar button{touch-action:manipulation}
 /* ===== 詳細画面のスワイプ戻り ===== */
 .adet{touch-action:pan-y;will-change:transform}
 .adet.swiping{transition:none}
+
+/* ===== MRI 組合せ検索 ===== */
+.mriform{background:var(--card);border:1px solid var(--border);border-radius:14px;
+ padding:14px;margin-bottom:12px}
+.mriform label{display:block;font-size:11.5px;font-weight:800;color:var(--muted);
+ letter-spacing:.03em;margin:0 0 4px}
+.mriform .row{margin-bottom:11px}
+.mriform .row:last-child{margin-bottom:0}
+.mriform select{width:100%;padding:11px 12px;border:1px solid var(--border);
+ border-radius:10px;background:#fff;color:var(--ink);font-weight:700}
+.mriform select:disabled{background:#f8fafc;color:var(--muted)}
+.mrireset{width:100%;margin-top:12px;padding:10px;border:1px solid var(--border);
+ background:#fff;border-radius:10px;font-size:13px;font-weight:800;color:var(--sub);cursor:pointer}
+/* 判定結果 */
+.verdict{border-radius:14px;padding:16px;margin-bottom:12px;border:1px solid}
+.verdict.ok{background:#ecfdf5;border-color:#a7f3d0}
+.verdict.ng{background:#fef2f2;border-color:#fecaca}
+.verdict.wait{background:#f8fafc;border-color:var(--border)}
+.verdict .vt{margin:0;font-size:12px;font-weight:800;letter-spacing:.05em;
+ text-transform:uppercase;color:var(--muted)}
+.verdict .vv{margin:6px 0 0;font-size:26px;font-weight:800;line-height:1.2}
+.verdict.ok .vv{color:#047857}
+.verdict.ng .vv{color:#b91c1c}
+.verdict.wait .vv{font-size:15px;color:var(--sub)}
+.verdict .vs{margin:8px 0 0;font-size:13px;line-height:1.7;color:var(--sub)}
+.tesla{display:flex;gap:8px;margin:10px 0 0}
+.tesla span{flex:1;text-align:center;padding:9px 0;border-radius:10px;
+ font-size:14px;font-weight:800;border:1px solid}
+.tesla span.y{background:#fff;border-color:#a7f3d0;color:#047857}
+.tesla span.n{background:#fff;border-color:var(--border);color:#cbd5e1}
+.mrinote{font-size:11.5px;line-height:1.7;color:var(--muted);
+ background:#f8fafc;border-radius:10px;padding:10px 12px;margin-top:12px}
 </style>
 </head>
 <body>
@@ -323,13 +355,17 @@ button,.chip,.arow,.cardrow,.tabbar button{touch-action:manipulation}
 </main>
 
 <main class="wrap" id="secMri" hidden>
- <div class="fbar">
-  <select id="mMaker" class="fsel"></select>
-  <select id="mTesla" class="fsel"></select>
+ <div id="mVerdict"></div>
+ <div class="mriform">
+  <div class="row"><label>メーカー</label><select id="mMaker"></select></div>
+  <div class="row"><label>種別</label><select id="mType" disabled></select></div>
+  <div class="row"><label>本体</label><select id="mDev" disabled></select></div>
+  <div class="row" id="mRaRow"><label>心房リード（RA）</label><select id="mRa" disabled></select></div>
+  <div class="row" id="mRvRow"><label>心室リード（RV）</label><select id="mRv" disabled></select></div>
+  <div class="row" id="mLvRow" hidden><label>左室リード（LV）</label><select id="mLv" disabled></select></div>
+  <button class="mrireset" id="mReset">選び直す</button>
  </div>
- <div class="chipline" id="mCats"></div>
- <p class="count" id="mCount"></p>
- <div id="mList"></div>
+ <div id="mDetail"></div>
 </main>
 
 <nav class="tabbar" id="tabbar" role="tablist">
@@ -994,27 +1030,133 @@ loadMaster(false);
   var r=e.target.closest(".arow"); if(r)openAlgo(r.dataset.id);
  });
 
- /* ================= MRI ================= */
- var mM="",mT="",mC="";
- function renderM(){
-  var all=items("mri");
-  fillSel($("#mMaker"),"すべてのメーカー",uniq(all,"maker"),mM);
-  fillSel($("#mTesla"),"すべての磁場強度",uniq(all,"tesla"),mT);
-  chips($("#mCats"),uniq(all,"cat"),mC,function(v){mC=v;renderM()});
-  var rows=all.filter(function(x){
-   return (!mM||x.maker===mM)&&(!mT||x.tesla===mT)&&(!mC||x.cat===mC)});
-  $("#mCount").textContent=all.length?rows.length+" 件":"";
-  $("#mList").innerHTML=all.length?(rows.map(function(x){
-   return '<div class="pcard"><h3>'+esc(x.system||x.device_model)+'</h3>'+
-    '<div class="pmeta"><span class="mk">'+esc(x.maker)+'</span><span>'+esc(x.cat)+'</span>'+
-    (x.tesla?'<span>'+esc(x.tesla)+'</span>':'')+
-    (x.region?'<span>'+esc(x.region)+'</span>':'')+'</div>'+
-    dl([["本体",x.device_model],["適合リード",x.lead_model],["撮像部位",x.region],
-        ["SAR",x.sar],["スルーレート",x.slew],["待機期間",x.wait],
-        ["条件",x.condition],["除外",x.exclusion],["モード",x.mode]])+
-    srcLine(x)+'</div>'}).join("")||'<p class="count">該当なし</p>')
-   :blank("mri","template_mri.csv");
+ /* ================= MRI 組合せ検索 ================= */
+ var sel={maker:"",type:"",dev:"",ra:"",rv:"",lv:""};
+ var NONE="__none__";   /* 「使用していない」を表す値 */
+
+ function mriItems(){return items("mri")}
+ function opts(el,ph,list,cur,dis){
+  el.disabled=!!dis;
+  el.innerHTML='<option value="">'+ph+'</option>'+list.map(function(o){
+   return '<option value="'+esc(o.v)+'"'+(o.v===cur?' selected':'')+'>'+esc(o.t)+'</option>'}).join("");
  }
+ function uniqBy(list,key){
+  var seen={},out=[];
+  list.forEach(function(x){if(!seen[x[key]]){seen[x[key]]=1;out.push(x)}});
+  return out;
+ }
+ /* 現在の選択に矛盾しないグループ群 */
+ function candidates(){
+  return mriItems().filter(function(g){
+   if(sel.maker&&g.maker!==sel.maker)return false;
+   if(sel.type&&g.type!==sel.type)return false;
+   if(sel.dev&&!g.devices.some(function(d){return d.model===sel.dev}))return false;
+   return true;
+  });
+ }
+ function leadIn(list,v){
+  if(v===NONE)return list.length===0||true;   /* 未使用は常に許容 */
+  return list.some(function(l){return l.model===v});
+ }
+
+ function renderM(){
+  var all=mriItems();
+  if(!all.length){
+   $("#mVerdict").innerHTML="";
+   $("#mDetail").innerHTML=blank("mri","template_mri.csv");
+   return;
+  }
+  /* メーカー */
+  opts($("#mMaker"),"選択してください",
+   uniqBy(all.map(function(g){return {v:g.maker,t:g.maker}}),"v"),sel.maker);
+  /* 種別 */
+  var byMaker=all.filter(function(g){return !sel.maker||g.maker===sel.maker});
+  opts($("#mType"),"選択してください",
+   uniqBy(byMaker.map(function(g){return {v:g.type,t:g.type}}),"v"),sel.type,!sel.maker);
+  /* 本体 */
+  var byType=byMaker.filter(function(g){return !sel.type||g.type===sel.type});
+  var devs=[];
+  byType.forEach(function(g){g.devices.forEach(function(d){
+   devs.push({v:d.model,t:d.name+"（"+d.model+"）"})})});
+  opts($("#mDev"),"選択してください",uniqBy(devs,"v"),sel.dev,!sel.type);
+  /* リード（本体が決まってから） */
+  var cs=candidates();
+  var ra=[],rv=[],lv=[];
+  cs.forEach(function(g){
+   g.ra.forEach(function(l){ra.push({v:l.model,t:l.name})});
+   g.rv.forEach(function(l){rv.push({v:l.model,t:l.name})});
+   (g.lv||[]).forEach(function(l){lv.push({v:l.model,t:l.name})});
+  });
+  var noneOpt={v:NONE,t:"使用していない／不明"};
+  opts($("#mRa"),"選択してください",uniqBy(ra,"v").concat(noneOpt),sel.ra,!sel.dev);
+  opts($("#mRv"),"選択してください",uniqBy(rv,"v").concat(noneOpt),sel.rv,!sel.dev);
+  var hasLv=lv.length>0;
+  $("#mLvRow").hidden=!hasLv;
+  if(hasLv)opts($("#mLv"),"選択してください",uniqBy(lv,"v").concat(noneOpt),sel.lv,!sel.dev);
+
+  renderVerdict(cs,hasLv);
+ }
+
+ function renderVerdict(cs,hasLv){
+  var need=[];
+  if(!sel.maker)need.push("メーカー");
+  if(!sel.type)need.push("種別");
+  if(!sel.dev)need.push("本体");
+  if(sel.dev&&!sel.ra)need.push("心房リード");
+  if(sel.dev&&!sel.rv)need.push("心室リード");
+  if(hasLv&&sel.dev&&!sel.lv)need.push("左室リード");
+  if(need.length){
+   $("#mVerdict").innerHTML='<div class="verdict wait"><p class="vt">判定</p>'+
+    '<p class="vv">'+esc(need.join("・"))+'を選んでください</p></div>';
+   $("#mDetail").innerHTML="";
+   return;
+  }
+  /* 全条件を満たすグループを探す */
+  var hit=cs.filter(function(g){
+   return leadIn(g.ra,sel.ra)&&leadIn(g.rv,sel.rv)&&(!hasLv||leadIn(g.lv||[],sel.lv));
+  })[0];
+  if(!hit){
+   $("#mVerdict").innerHTML='<div class="verdict ng"><p class="vt">判定</p>'+
+    '<p class="vv">非対応</p>'+
+    '<p class="vs">この本体とリードの組合せは、条件付きMRI対応の構成として登録されていません。'+
+    '添付文書と各社の最新情報で必ず確認してください。</p></div>';
+   $("#mDetail").innerHTML="";
+   return;
+  }
+  var t15=hit.tesla.indexOf("1.5T")>=0, t30=hit.tesla.indexOf("3.0T")>=0;
+  $("#mVerdict").innerHTML='<div class="verdict ok"><p class="vt">判定</p>'+
+   '<p class="vv">'+esc(hit.tesla.join(" / "))+' で撮像可</p>'+
+   '<div class="tesla"><span class="'+(t15?"y":"n")+'">1.5T '+(t15?"○":"×")+'</span>'+
+   '<span class="'+(t30?"y":"n")+'">3.0T '+(t30?"○":"×")+'</span></div>'+
+   '<p class="vs">'+esc(hit.group)+'（'+esc(hit.maker)+'・'+esc(hit.type)+'）の条件が適用されます。</p></div>';
+  var c=hit.cond||{};
+  var rows=Object.keys(c).map(function(k){return [k,c[k]]});
+  $("#mDetail").innerHTML='<div class="pcard"><h3>撮像条件</h3>'+dl(rows)+
+   '<p class="mrinote">記載は組合せ判定の目安です。実施前に必ず添付文書および各社の最新情報を確認してください。'+
+   (hit.verify?'<br>※このデータは取り込み後の検証が未了です。':'')+'</p></div>';
+ }
+
+ function bindM(){
+  var map={"#mMaker":"maker","#mType":"type","#mDev":"dev","#mRa":"ra","#mRv":"rv","#mLv":"lv"};
+  document.addEventListener("change",function(e){
+   for(var s in map){
+    if(e.target.matches&&e.target.matches(s)){
+     var k=map[s]; sel[k]=e.target.value;
+     /* 上位を変えたら下位をリセット */
+     var order=["maker","type","dev","ra","rv","lv"];
+     var idx=order.indexOf(k);
+     order.slice(idx+1).forEach(function(x){sel[x]=""});
+     renderM(); return;
+    }
+   }
+  });
+  document.addEventListener("click",function(e){
+   if(e.target.closest("#mReset")){
+    sel={maker:"",type:"",dev:"",ra:"",rv:"",lv:""};renderM();
+   }
+  });
+ }
+ bindM();
 
  /* ================= タブ切替 ================= */
  var SEC={g:null,p:"#secProducts",a:"#secAlgos",m:"#secMri"};
