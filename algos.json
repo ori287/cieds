@@ -1,5 +1,23 @@
 {
  "v": 1,
  "updated": "2026-08-27",
- "items": []
+ "items": [
+  {
+   "id": "ABT-ACAP-CONFIRM",
+   "name": "ACap Confirm",
+   "maker": "Abbott",
+   "cat": "自動閾値管理",
+   "generic": "自動閾値管理",
+   "device": "PM / ICD / CRT",
+   "scope": "心房ペーシング出力に適切な安全域を保つ",
+   "how": "心房の捕捉を定期的に自動判定し、閾値に安全域を上乗せした出力へ調整する。捕捉できなかった拍にはバックアップ刺激を出す。",
+   "params": "ACap Confirm: On / Monitor / Off；バックアップパルス極性: 双極；探索間隔: 8時間 / 24時間",
+   "pathway": "Parameters > Brady > Capture & Sense > Cap Confirm Settings",
+   "caution": "心房波高が小さい症例では判定が不安定になることがある。Monitorは測定のみで出力調整は行わない。",
+   "glossary": "Capture management,誘発反応,刺激閾値",
+   "source": "（出典URLを記入）",
+   "checked": "2026-08-27",
+   "unverified": true
+  }
+ ]
 }
