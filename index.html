@@ -134,9 +134,9 @@ body{padding-bottom:calc(58px + env(safe-area-inset-bottom))}
 .tabbar{position:fixed;left:0;right:0;bottom:0;z-index:60;display:flex;
  background:rgba(255,255,255,.97);backdrop-filter:saturate(180%) blur(10px);
  border-top:1px solid #e6f2ee;padding-bottom:env(safe-area-inset-bottom)}
-.tabbar button{flex:1;background:none;border:0;padding:7px 2px 6px;cursor:pointer;
+.tabbar button{flex:1;background:none;border:0;padding:7px 1px 6px;cursor:pointer;
  display:flex;flex-direction:column;align-items:center;gap:3px;color:var(--muted);
- font-size:10px;font-weight:700;letter-spacing:.02em;-webkit-tap-highlight-color:transparent}
+ font-size:9.5px;font-weight:700;letter-spacing:-.01em;white-space:nowrap;-webkit-tap-highlight-color:transparent}
 .tabbar button svg{width:21px;height:21px;stroke-width:1.9}
 .tabbar button.on{color:var(--teal-d)}
 .tabbar button:focus-visible{outline:2px solid var(--teal);outline-offset:-2px;border-radius:8px}
@@ -198,6 +198,7 @@ header{background-attachment:scroll}
 .arow em{display:block;margin-top:5px;font-size:12.5px;font-style:normal;line-height:1.6;color:var(--sub)}
 .arow .chev{flex:0 0 8px;color:var(--muted)}
 /* ===== アルゴ：詳細 ===== */
+.adet{padding-top:calc(env(safe-area-inset-top) + 10px)}
 .adet .back{display:inline-flex;align-items:center;gap:5px;background:none;border:0;
  color:var(--teal-d);font-size:14px;font-weight:800;padding:2px 0 12px;cursor:pointer}
 .adet h2{margin:0;font-size:21px;font-weight:800;line-height:1.3;color:var(--ink)}
@@ -268,6 +269,13 @@ button,.chip,.arow,.cardrow,.tabbar button{touch-action:manipulation}
 .tesla span.n{background:#fff;border-color:var(--border);color:#cbd5e1}
 .mrinote{font-size:11.5px;line-height:1.7;color:var(--muted);
  background:#f8fafc;border-radius:10px;padding:10px 12px;margin-top:12px}
+
+/* ===== 各タブのページ見出し（上部余白の確保） ===== */
+.pagehead{padding:calc(env(safe-area-inset-top) + 14px) 0 2px;margin:0 0 14px;
+ border-bottom:1px solid var(--border)}
+.pagehead h2{margin:0;font-size:22px;font-weight:800;letter-spacing:-.01em;color:var(--ink)}
+.pagehead p{margin:4px 0 12px;font-size:12.5px;line-height:1.6;color:var(--muted)}
+#secProducts,#secAlgos,#secMri{padding-top:2px}
 </style>
 </head>
 <body>
@@ -332,6 +340,7 @@ button,.chip,.arow,.cardrow,.tabbar button{touch-action:manipulation}
 <input id="fileInput" type="file" accept="application/json,.json" style="display:none"/>
 
 <main class="wrap" id="secProducts" hidden>
+ <div class="pagehead"><h2>製品</h2><p>本体とリードを型番・カテゴリから探す</p></div>
  <div class="fbar">
   <select id="pKind" class="fsel"></select>
   <select id="pMaker" class="fsel"></select>
@@ -342,6 +351,7 @@ button,.chip,.arow,.cardrow,.tabbar button{touch-action:manipulation}
 </main>
 
 <main class="wrap" id="secAlgos" hidden>
+ <div class="pagehead"><h2>アルゴリズム</h2><p>メーカー別の機能と、他社との対比</p></div>
  <div id="aBrowse">
   <div class="amode">
    <button id="aModeM" class="on">メーカー別</button>
@@ -358,6 +368,7 @@ button,.chip,.arow,.cardrow,.tabbar button{touch-action:manipulation}
 </main>
 
 <main class="wrap" id="secMri" hidden>
+ <div class="pagehead"><h2>MRI検索</h2><p>本体とリードの組合せから撮像可能な磁場強度を調べる</p></div>
  <div class="mriform">
   <div class="row"><label>メーカー</label><select id="mMaker"></select></div>
   <div class="row"><label>種別</label><select id="mType" disabled></select></div>
@@ -378,9 +389,9 @@ button,.chip,.arow,.cardrow,.tabbar button{touch-action:manipulation}
  <button data-tab="p" role="tab" aria-selected="false">
   <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="7" width="12" height="10" rx="5"/><path d="M15 12h3M18 12c2 0 3-1.4 3-3s-1-3-3-3"/></svg>製品</button>
  <button data-tab="a" role="tab" aria-selected="false">
-  <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="3"/><path d="M12 3v2.5M12 18.5V21M3 12h2.5M18.5 12H21M5.6 5.6l1.8 1.8M16.6 16.6l1.8 1.8M18.4 5.6l-1.8 1.8M7.4 16.6l-1.8 1.8"/></svg>アルゴ</button>
+  <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="3"/><path d="M12 3v2.5M12 18.5V21M3 12h2.5M18.5 12H21M5.6 5.6l1.8 1.8M16.6 16.6l1.8 1.8M18.4 5.6l-1.8 1.8M7.4 16.6l-1.8 1.8"/></svg>アルゴリズム</button>
  <button data-tab="m" role="tab" aria-selected="false">
-  <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="9"/><circle cx="12" cy="12" r="3.4"/><path d="M12 3v3.4M12 17.6V21"/></svg>MRI</button>
+  <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="9"/><circle cx="12" cy="12" r="3.4"/><path d="M12 3v3.4M12 17.6V21"/></svg>MRI検索</button>
 </nav>
 <div id="toast"></div>
 <script>
