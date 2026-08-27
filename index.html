@@ -244,8 +244,11 @@ button,.chip,.arow,.cardrow,.tabbar button{touch-action:manipulation}
 .mriform select{width:100%;padding:11px 12px;border:1px solid var(--border);
  border-radius:10px;background:#fff;color:var(--ink);font-weight:700}
 .mriform select:disabled{background:#f8fafc;color:var(--muted)}
-.mrireset{width:100%;margin-top:12px;padding:10px;border:1px solid var(--border);
- background:#fff;border-radius:10px;font-size:13px;font-weight:800;color:var(--sub);cursor:pointer}
+.mrireset{width:100%;margin-top:14px;padding:13px;border:0;
+ background:var(--teal);border-radius:11px;font-size:15px;font-weight:800;color:#fff;cursor:pointer}
+.mrireset:active{background:var(--teal-d)}
+.mriclear{display:block;margin:9px auto 0;background:none;border:0;font-size:12.5px;
+ font-weight:700;color:var(--muted);text-decoration:underline;cursor:pointer}
 /* 判定結果 */
 .verdict{border-radius:14px;padding:16px;margin-bottom:12px;border:1px solid}
 .verdict.ok{background:#ecfdf5;border-color:#a7f3d0}
@@ -355,7 +358,6 @@ button,.chip,.arow,.cardrow,.tabbar button{touch-action:manipulation}
 </main>
 
 <main class="wrap" id="secMri" hidden>
- <div id="mVerdict"></div>
  <div class="mriform">
   <div class="row"><label>メーカー</label><select id="mMaker"></select></div>
   <div class="row"><label>種別</label><select id="mType" disabled></select></div>
@@ -363,8 +365,10 @@ button,.chip,.arow,.cardrow,.tabbar button{touch-action:manipulation}
   <div class="row" id="mRaRow"><label>心房リード（RA）</label><select id="mRa" disabled></select></div>
   <div class="row" id="mRvRow"><label>心室リード（RV）</label><select id="mRv" disabled></select></div>
   <div class="row" id="mLvRow" hidden><label>左室リード（LV）</label><select id="mLv" disabled></select></div>
-  <button class="mrireset" id="mReset">選び直す</button>
+  <button class="mrireset" id="mSearch">検索</button>
+  <button class="mriclear" id="mReset">条件をクリア</button>
  </div>
+ <div id="mVerdict"></div>
  <div id="mDetail"></div>
 </main>
 
@@ -1031,7 +1035,7 @@ loadMaster(false);
  });
 
  /* ================= MRI 組合せ検索 ================= */
- var sel={maker:"",type:"",dev:"",ra:"",rv:"",lv:""};
+ var sel={maker:"",type:"",dev:"",ra:"",rv:"",lv:""},searched=false;
  var NONE="__none__";   /* 「使用していない」を表す値 */
 
  function mriItems(){return items("mri")}
@@ -1055,8 +1059,12 @@ loadMaster(false);
   });
  }
  function leadIn(list,v){
-  if(v===NONE)return list.length===0||true;   /* 未使用は常に許容 */
+  if(!v||v===NONE)return true;              /* 未選択・未使用は許容 */
   return list.some(function(l){return l.model===v});
+ }
+ /* 候補にリード型番の登録があるか */
+ function hasLeadList(cs){
+  return cs.some(function(g){return (g.ra&&g.ra.length)||(g.rv&&g.rv.length)});
  }
 
  function renderM(){
@@ -1088,22 +1096,26 @@ loadMaster(false);
    (g.lv||[]).forEach(function(l){lv.push({v:l.model,t:l.name})});
   });
   var noneOpt={v:NONE,t:"使用していない／不明"};
-  opts($("#mRa"),"選択してください",uniqBy(ra,"v").concat(noneOpt),sel.ra,!sel.dev);
-  opts($("#mRv"),"選択してください",uniqBy(rv,"v").concat(noneOpt),sel.rv,!sel.dev);
-  var hasLv=lv.length>0;
+  var leadKnown=hasLeadList(cs);
+  $("#mRaRow").hidden=!leadKnown; $("#mRvRow").hidden=!leadKnown;
+  if(leadKnown){
+   opts($("#mRa"),"選択してください",uniqBy(ra,"v").concat(noneOpt),sel.ra,!sel.dev);
+   opts($("#mRv"),"選択してください",uniqBy(rv,"v").concat(noneOpt),sel.rv,!sel.dev);
+  }
+  var hasLv=leadKnown&&lv.length>0;
   $("#mLvRow").hidden=!hasLv;
   if(hasLv)opts($("#mLv"),"選択してください",uniqBy(lv,"v").concat(noneOpt),sel.lv,!sel.dev);
 
-  renderVerdict(cs,hasLv);
+  if(searched)renderVerdict(cs,hasLv,leadKnown);
  }
 
- function renderVerdict(cs,hasLv){
+ function renderVerdict(cs,hasLv,leadKnown){
   var need=[];
   if(!sel.maker)need.push("メーカー");
   if(!sel.type)need.push("種別");
   if(!sel.dev)need.push("本体");
-  if(sel.dev&&!sel.ra)need.push("心房リード");
-  if(sel.dev&&!sel.rv)need.push("心室リード");
+  if(leadKnown&&sel.dev&&!sel.ra)need.push("心房リード");
+  if(leadKnown&&sel.dev&&!sel.rv)need.push("心室リード");
   if(hasLv&&sel.dev&&!sel.lv)need.push("左室リード");
   if(need.length){
    $("#mVerdict").innerHTML='<div class="verdict wait"><p class="vt">判定</p>'+
@@ -1146,13 +1158,21 @@ loadMaster(false);
      var order=["maker","type","dev","ra","rv","lv"];
      var idx=order.indexOf(k);
      order.slice(idx+1).forEach(function(x){sel[x]=""});
+     searched=false;
+     $("#mVerdict").innerHTML="";$("#mDetail").innerHTML="";
      renderM(); return;
     }
    }
   });
   document.addEventListener("click",function(e){
+   if(e.target.closest("#mSearch")){
+    searched=true;renderM();
+    var v=$("#mVerdict");if(v)v.scrollIntoView({behavior:"smooth",block:"nearest"});
+    return;
+   }
    if(e.target.closest("#mReset")){
-    sel={maker:"",type:"",dev:"",ra:"",rv:"",lv:""};renderM();
+    sel={maker:"",type:"",dev:"",ra:"",rv:"",lv:""};searched=false;
+    $("#mVerdict").innerHTML="";$("#mDetail").innerHTML="";renderM();
    }
   });
  }
