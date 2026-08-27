@@ -231,7 +231,7 @@ input,select,textarea{font-size:16px}
 button,.chip,.arow,.cardrow,.tabbar button{touch-action:manipulation}
 
 /* ===== 詳細画面のスワイプ戻り ===== */
-.adet{touch-action:pan-y}
+.adet{touch-action:pan-y;will-change:transform}
 .adet.swiping{transition:none}
 </style>
 </head>
@@ -939,27 +939,53 @@ loadMaster(false);
   if(aMode==="m")renderAList(); else renderACompare();
  }
 
- /* 詳細を横スワイプで閉じる */
+ /* 詳細を右スワイプで閉じる */
  (function(){
-  var el=$("#aDetail"); if(!el)return;
   var x0=0,y0=0,t0=0,track=false;
-  el.addEventListener("touchstart",function(e){
-   if(e.touches.length!==1){track=false;return}
-   x0=e.touches[0].clientX; y0=e.touches[0].clientY; t0=Date.now(); track=true;
-  },{passive:true});
-  el.addEventListener("touchmove",function(e){
-   if(!track||e.touches.length!==1)return;
-   var dx=e.touches[0].clientX-x0, dy=e.touches[0].clientY-y0;
-   if(Math.abs(dy)>Math.abs(dx)){track=false;el.style.transform="";return} /* 縦スクロール優先 */
-   el.style.transform=dx>0?"translateX("+(dx*0.25)+"px)":"";              /* 右方向のみ追従 */
-  },{passive:true});
-  el.addEventListener("touchend",function(e){
-   el.style.transform="";
+  function detailOpen(){
+   var el=document.getElementById("aDetail");
+   return el && !el.hidden;
+  }
+  function start(x,y){x0=x;y0=y;t0=Date.now();track=true}
+  function move(x,y){
+   if(!track)return;
+   var dx=x-x0, dy=y-y0;
+   if(Math.abs(dy)>Math.abs(dx)*1.2){track=false;setX(0);return}  /* 縦優先 */
+   setX(dx>0?dx*0.3:0);
+  }
+  function end(x,y){
+   var el=document.getElementById("aDetail");
+   setX(0);
    if(!track)return; track=false;
-   var t=e.changedTouches[0];
-   var dx=t.clientX-x0, dy=t.clientY-y0, dt=Date.now()-t0;
-   if(dx>70&&Math.abs(dy)<50&&dt<600)closeAlgo();                          /* 右スワイプで戻る */
+   var dx=x-x0, dy=y-y0, dt=Date.now()-t0;
+   if(dx>55 && Math.abs(dx)>Math.abs(dy)*1.2 && dt<1200 && typeof closeAlgo==="function")closeAlgo();
+  }
+  function setX(px){
+   var el=document.getElementById("aDetail"); if(!el)return;
+   el.style.transform = px ? "translateX("+px+"px)" : "";
+  }
+  document.addEventListener("touchstart",function(e){
+   if(!detailOpen()||e.touches.length!==1){track=false;return}
+   start(e.touches[0].clientX,e.touches[0].clientY);
   },{passive:true});
+  document.addEventListener("touchmove",function(e){
+   if(!detailOpen()||e.touches.length!==1)return;
+   move(e.touches[0].clientX,e.touches[0].clientY);
+  },{passive:true});
+  document.addEventListener("touchend",function(e){
+   if(!detailOpen())return;
+   var t=e.changedTouches[0]; end(t.clientX,t.clientY);
+  },{passive:true});
+  document.addEventListener("touchcancel",function(){track=false;setX(0)},{passive:true});
+  /* マウス環境でも同じ操作で戻れるように */
+  document.addEventListener("pointerdown",function(e){
+   if(e.pointerType!=="mouse"||!detailOpen())return;
+   start(e.clientX,e.clientY);
+  });
+  document.addEventListener("pointerup",function(e){
+   if(e.pointerType!=="mouse"||!detailOpen())return;
+   end(e.clientX,e.clientY);
+  });
  })();
  document.addEventListener("click",function(e){
   if(e.target.closest("#aModeM")){aMode="m";aM="";aC="";renderA();return}
