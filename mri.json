@@ -4,78 +4,812 @@
  "note": "本体とリードの組合せから撮像可能な静磁場強度を判定する。実施前に必ず添付文書と各社の最新情報を確認すること。",
  "items": [
   {
-   "id": "MP-KORA100",
-   "maker": "MicroPort",
+   "id": "MDT-PM-ADVISA",
+   "maker": "Medtronic",
    "type": "ペースメーカ",
-   "group": "KORA 100",
+   "group": "Advisa MRI DR / SR",
    "devices": [
     {
-     "model": "TPM006J",
-     "name": "KORA 100 DR"
+     "model": "Advisa MRI DR",
+     "name": "Advisa MRI DR"
     },
     {
-     "model": "TPM007J",
-     "name": "KORA 100 SR"
+     "model": "Advisa MRI SR",
+     "name": "Advisa MRI SR"
     }
    ],
    "ra": [
     {
-     "model": "RF45D",
-     "name": "BEFLEX RF45D"
+     "model": "5076",
+     "name": "5076"
     },
     {
-     "model": "RF46D",
-     "name": "BEFLEX RF46D"
+     "model": "5086MRI",
+     "name": "5086MRI"
     },
     {
-     "model": "TLD041C",
-     "name": "VEGA R52"
+     "model": "4574",
+     "name": "4574"
     },
     {
-     "model": "TLD042C",
-     "name": "VEGA R58"
+     "model": "5554",
+     "name": "5554"
     },
     {
-     "model": "TLSCREWVINE44",
-     "name": "J-LINE SCREWVINE 44SEP"
-    },
-    {
-     "model": "TLSCREWVINE52",
-     "name": "J-LINE SCREWVINE 52SEP"
-    },
-    {
-     "model": "TLSCREWVINE58",
-     "name": "J-LINE SCREWVINE 58SEP"
+     "model": "3830",
+     "name": "3830"
     }
    ],
    "rv": [
     {
-     "model": "RF45D",
-     "name": "BEFLEX RF45D"
+     "model": "5076",
+     "name": "5076"
     },
     {
-     "model": "RF46D",
-     "name": "BEFLEX RF46D"
+     "model": "5086MRI",
+     "name": "5086MRI"
     },
     {
-     "model": "TLD041C",
-     "name": "VEGA R52"
+     "model": "4574",
+     "name": "4574"
     },
     {
-     "model": "TLD042C",
-     "name": "VEGA R58"
+     "model": "5554",
+     "name": "5554"
     },
     {
-     "model": "TLSCREWVINE44",
-     "name": "J-LINE SCREWVINE 44SEP"
+     "model": "3830",
+     "name": "3830"
+    }
+   ],
+   "lv": [],
+   "tesla": [
+    "1.5T",
+    "3.0T"
+   ],
+   "cond": {
+    "ガントリ": "トンネル（ボア）型",
+    "傾斜磁場スルーレート": "≤200T/m/s",
+    "SAR": "全身 ≤2.0W/kg（1.5T）／≤4.0W/kg（3.0T）、頭部 ≤3.2W/kg",
+    "B1+rms": "3.0Tでアイソセンタを第7頸椎より下に配置する場合、B1+RMSを表示できる装置で ≦2.8μT",
+    "植込み後": "リード植込み後6週間以上経過",
+    "植込み部位": "胸部",
+    "遺残リード": "不可",
+    "ペーシング閾値": "2.0V/0.4ms 以下（右室）",
+    "横隔膜刺激": "5V/1.0ms で起きないこと（SureScanモード中にペーシングを行うチャンバーにて）",
+    "MRIモード": "設定必要（SureScanモード）",
+    "検査中のモード": "患者の状態に応じてSureScan内の自己心拍固定またはペーシング固定へ切替",
+    "患者監視": "心電図・パルス酸素濃度計",
+    "体外式除細動器": "必須",
+    "最大空間勾配磁場": "20T/m（2,000ガウス/cm）以下",
+    "リードインピーダンス": "心房・右室 200〜3,000Ω（Bi/Uni）"
+   },
+   "verify": true
+  },
+  {
+   "id": "MDT-PM-DR",
+   "maker": "Medtronic",
+   "type": "ペースメーカ",
+   "group": "Azure XT/S DR・Attesta DR MRI・Sphera DR MRI",
+   "devices": [
+    {
+     "model": "Azure XT DR",
+     "name": "Azure XT DR"
     },
     {
-     "model": "TLSCREWVINE52",
-     "name": "J-LINE SCREWVINE 52SEP"
+     "model": "Azure S DR",
+     "name": "Azure S DR"
     },
     {
-     "model": "TLSCREWVINE58",
-     "name": "J-LINE SCREWVINE 58SEP"
+     "model": "Attesta DR MRI",
+     "name": "Attesta DR MRI"
+    },
+    {
+     "model": "Sphera DR MRI",
+     "name": "Sphera DR MRI"
+    }
+   ],
+   "ra": [
+    {
+     "model": "5076",
+     "name": "5076"
+    },
+    {
+     "model": "5086MRI",
+     "name": "5086MRI"
+    },
+    {
+     "model": "4574",
+     "name": "4574"
+    },
+    {
+     "model": "5554",
+     "name": "5554"
+    },
+    {
+     "model": "3830",
+     "name": "3830"
+    }
+   ],
+   "rv": [
+    {
+     "model": "5076",
+     "name": "5076"
+    },
+    {
+     "model": "5086MRI",
+     "name": "5086MRI"
+    },
+    {
+     "model": "4574",
+     "name": "4574"
+    },
+    {
+     "model": "5554",
+     "name": "5554"
+    },
+    {
+     "model": "3830",
+     "name": "3830"
+    }
+   ],
+   "lv": [],
+   "tesla": [
+    "1.5T",
+    "3.0T"
+   ],
+   "cond": {
+    "ガントリ": "トンネル（ボア）型",
+    "傾斜磁場スルーレート": "≤200T/m/s",
+    "SAR": "全身 ≤2.0W/kg（1.5T）／≤4.0W/kg（3.0T）、頭部 ≤3.2W/kg",
+    "B1+rms": "3.0Tでアイソセンタを第7頸椎より下に配置する場合、B1+RMSを表示できる装置で ≦2.8μT",
+    "植込み後": "リード植込み後6週間以上経過",
+    "植込み部位": "胸部",
+    "遺残リード": "不可",
+    "ペーシング閾値": "2.0V/0.4ms 以下（右室）",
+    "横隔膜刺激": "5V/1.0ms で起きないこと（SureScanモード中にペーシングを行うチャンバーにて）",
+    "MRIモード": "設定必要（SureScanモード）",
+    "検査中のモード": "患者の状態に応じてSureScan内の自己心拍固定またはペーシング固定へ切替",
+    "患者監視": "心電図・パルス酸素濃度計",
+    "体外式除細動器": "必須",
+    "最大空間勾配磁場": "20T/m（2,000ガウス/cm）以下",
+    "リードインピーダンス": "心房・右室 200〜3,000Ω（Bi/Uni）"
+   },
+   "verify": true
+  },
+  {
+   "id": "MDT-PM-SR",
+   "maker": "Medtronic",
+   "type": "ペースメーカ",
+   "group": "Azure XT/S SR・Attesta SR MRI・Sphera SR MRI",
+   "devices": [
+    {
+     "model": "Azure XT SR",
+     "name": "Azure XT SR"
+    },
+    {
+     "model": "Azure S SR",
+     "name": "Azure S SR"
+    },
+    {
+     "model": "Attesta SR MRI",
+     "name": "Attesta SR MRI"
+    },
+    {
+     "model": "Sphera SR MRI",
+     "name": "Sphera SR MRI"
+    }
+   ],
+   "ra": [
+    {
+     "model": "5076",
+     "name": "5076"
+    },
+    {
+     "model": "5086MRI",
+     "name": "5086MRI"
+    },
+    {
+     "model": "4574",
+     "name": "4574"
+    },
+    {
+     "model": "5554",
+     "name": "5554"
+    },
+    {
+     "model": "3830",
+     "name": "3830"
+    }
+   ],
+   "rv": [
+    {
+     "model": "5076",
+     "name": "5076"
+    },
+    {
+     "model": "5086MRI",
+     "name": "5086MRI"
+    },
+    {
+     "model": "4574",
+     "name": "4574"
+    },
+    {
+     "model": "5554",
+     "name": "5554"
+    },
+    {
+     "model": "3830",
+     "name": "3830"
+    }
+   ],
+   "lv": [],
+   "tesla": [
+    "1.5T",
+    "3.0T"
+   ],
+   "cond": {
+    "ガントリ": "トンネル（ボア）型",
+    "傾斜磁場スルーレート": "≤200T/m/s",
+    "SAR": "全身 ≤2.0W/kg（1.5T）／≤4.0W/kg（3.0T）、頭部 ≤3.2W/kg",
+    "B1+rms": "3.0Tでアイソセンタを第7頸椎より下に配置する場合、B1+RMSを表示できる装置で ≦2.8μT",
+    "植込み後": "リード植込み後6週間以上経過",
+    "植込み部位": "胸部",
+    "遺残リード": "不可",
+    "ペーシング閾値": "2.0V/0.4ms 以下（右室）",
+    "横隔膜刺激": "5V/1.0ms で起きないこと（SureScanモード中にペーシングを行うチャンバーにて）",
+    "MRIモード": "設定必要（SureScanモード）",
+    "検査中のモード": "患者の状態に応じてSureScan内の自己心拍固定またはペーシング固定へ切替",
+    "患者監視": "心電図・パルス酸素濃度計",
+    "体外式除細動器": "必須",
+    "最大空間勾配磁場": "20T/m（2,000ガウス/cm）以下",
+    "リードインピーダンス": "心房・右室 200〜3,000Ω（Bi/Uni）",
+    "心房リード": "Attesta / Sphera のみ心房リードの組合せが記載されている"
+   },
+   "verify": true
+  },
+  {
+   "id": "MDT-ICD",
+   "maker": "Medtronic",
+   "type": "ICD",
+   "group": "Evera MRI・Visia AF MRI・Cobalt XT",
+   "devices": [
+    {
+     "model": "Evera MRI DR",
+     "name": "Evera MRI DR"
+    },
+    {
+     "model": "Evera MRI VR",
+     "name": "Evera MRI VR"
+    },
+    {
+     "model": "Visia AF MRI",
+     "name": "Visia AF MRI"
+    },
+    {
+     "model": "Cobalt XT DR",
+     "name": "Cobalt XT DR"
+    },
+    {
+     "model": "Cobalt XT VR",
+     "name": "Cobalt XT VR"
+    }
+   ],
+   "ra": [
+    {
+     "model": "5076",
+     "name": "5076"
+    },
+    {
+     "model": "5086MRI",
+     "name": "5086MRI"
+    },
+    {
+     "model": "4074",
+     "name": "4074"
+    },
+    {
+     "model": "5054",
+     "name": "5054"
+    },
+    {
+     "model": "3830",
+     "name": "3830"
+    }
+   ],
+   "rv": [
+    {
+     "model": "3930M",
+     "name": "3930M（DF-4 74/79cm）"
+    },
+    {
+     "model": "6947M",
+     "name": "6947M（DF-4 55/62cm）"
+    },
+    {
+     "model": "6935M",
+     "name": "6935M（DF-4 55/62cm）"
+    },
+    {
+     "model": "6947",
+     "name": "6947（DF-1 58/65cm）"
+    },
+    {
+     "model": "6935",
+     "name": "6935（DF-1 58/65cm）"
+    },
+    {
+     "model": "6719",
+     "name": "6719（DF-1ピンプラグ）"
+    }
+   ],
+   "lv": [],
+   "tesla": [
+    "1.5T",
+    "3.0T"
+   ],
+   "cond": {
+    "ガントリ": "トンネル（ボア）型",
+    "傾斜磁場スルーレート": "≤200T/m/s",
+    "SAR": "全身 ≤2.0W/kg（1.5T）／≤4.0W/kg（3.0T）、頭部 ≤3.2W/kg",
+    "B1+rms": "3.0Tでアイソセンタを第7頸椎より下に配置する場合、B1+RMSを表示できる装置で ≦2.8μT",
+    "植込み後": "リード植込み後6週間以上経過",
+    "植込み部位": "胸部",
+    "遺残リード": "不可",
+    "ペーシング閾値": "2.0V/0.4ms 以下（右室）",
+    "横隔膜刺激": "5V/1.0ms で起きないこと（SureScanモード中にペーシングを行うチャンバーにて）",
+    "MRIモード": "設定必要（SureScanモード）",
+    "検査中のモード": "患者の状態に応じてSureScan内の自己心拍固定またはペーシング固定へ切替",
+    "患者監視": "心電図・パルス酸素濃度計",
+    "体外式除細動器": "必須",
+    "最大空間勾配磁場": "20T/m（2,000ガウス/cm）以下",
+    "リードインピーダンス": "心房・右室 200〜3,000Ω／RVコイル 20〜200Ω"
+   },
+   "verify": true
+  },
+  {
+   "id": "MDT-CRTP",
+   "maker": "Medtronic",
+   "type": "CRT-P",
+   "group": "Solara MRI Quad・Percepta MRI Quad・Percepta MRI",
+   "devices": [
+    {
+     "model": "Solara MRI Quad",
+     "name": "Solara MRI Quad"
+    },
+    {
+     "model": "Percepta MRI Quad",
+     "name": "Percepta MRI Quad"
+    },
+    {
+     "model": "Percepta MRI",
+     "name": "Percepta MRI"
+    }
+   ],
+   "ra": [
+    {
+     "model": "5076",
+     "name": "5076"
+    },
+    {
+     "model": "5086MRI",
+     "name": "5086MRI"
+    },
+    {
+     "model": "4574",
+     "name": "4574"
+    },
+    {
+     "model": "5554",
+     "name": "5554"
+    },
+    {
+     "model": "3830",
+     "name": "3830"
+    },
+    {
+     "model": "6725",
+     "name": "6725（IS-1ピンプラグ）"
+    }
+   ],
+   "rv": [
+    {
+     "model": "5076",
+     "name": "5076"
+    },
+    {
+     "model": "5086MRI",
+     "name": "5086MRI"
+    },
+    {
+     "model": "4574",
+     "name": "4574"
+    },
+    {
+     "model": "5554",
+     "name": "5554"
+    },
+    {
+     "model": "3830",
+     "name": "3830"
+    },
+    {
+     "model": "6725",
+     "name": "6725（IS-1ピンプラグ）"
+    }
+   ],
+   "lv": [
+    {
+     "model": "4298",
+     "name": "4298（IS-4）"
+    },
+    {
+     "model": "4398",
+     "name": "4398（IS-4）"
+    },
+    {
+     "model": "4598",
+     "name": "4598（IS-4）"
+    },
+    {
+     "model": "4798",
+     "name": "4798（IS-4）"
+    },
+    {
+     "model": "4196",
+     "name": "4196（IS-1）"
+    },
+    {
+     "model": "4296",
+     "name": "4296（IS-1）"
+    },
+    {
+     "model": "4396",
+     "name": "4396（IS-1）"
+    }
+   ],
+   "tesla": [
+    "1.5T",
+    "3.0T"
+   ],
+   "cond": {
+    "ガントリ": "トンネル（ボア）型",
+    "傾斜磁場スルーレート": "≤200T/m/s",
+    "SAR": "全身 ≤2.0W/kg（1.5T）／≤4.0W/kg（3.0T）、頭部 ≤3.2W/kg",
+    "B1+rms": "3.0Tでアイソセンタを第7頸椎より下に配置する場合、B1+RMSを表示できる装置で ≦2.8μT",
+    "植込み後": "リード植込み後6週間以上経過",
+    "植込み部位": "胸部",
+    "遺残リード": "不可",
+    "ペーシング閾値": "2.0V/0.4ms 以下（右室）",
+    "横隔膜刺激": "5V/1.0ms で起きないこと（SureScanモード中にペーシングを行うチャンバーにて）",
+    "MRIモード": "設定必要（SureScanモード）",
+    "検査中のモード": "患者の状態に応じてSureScan内の自己心拍固定またはペーシング固定へ切替",
+    "患者監視": "心電図・パルス酸素濃度計",
+    "体外式除細動器": "必須",
+    "最大空間勾配磁場": "20T/m（2,000ガウス/cm）以下",
+    "リードインピーダンス": "心房・右室 200〜3,000Ω（Bi/Uni）"
+   },
+   "verify": true
+  },
+  {
+   "id": "MDT-CRTD",
+   "maker": "Medtronic",
+   "type": "CRT-D",
+   "group": "Compia/Amplia/Claria MRI・Cobalt XT HF Quad・Crome HF Quad",
+   "devices": [
+    {
+     "model": "Compia MRI",
+     "name": "Compia MRI"
+    },
+    {
+     "model": "Amplia MRI",
+     "name": "Amplia MRI"
+    },
+    {
+     "model": "Claria MRI",
+     "name": "Claria MRI"
+    },
+    {
+     "model": "Cobalt XT HF Quad",
+     "name": "Cobalt XT HF Quad"
+    },
+    {
+     "model": "Crome HF Quad",
+     "name": "Crome HF Quad"
+    }
+   ],
+   "ra": [
+    {
+     "model": "5076",
+     "name": "5076"
+    },
+    {
+     "model": "5086MRI",
+     "name": "5086MRI"
+    },
+    {
+     "model": "4074",
+     "name": "4074"
+    },
+    {
+     "model": "5054",
+     "name": "5054"
+    },
+    {
+     "model": "3830",
+     "name": "3830"
+    },
+    {
+     "model": "6725",
+     "name": "6725（IS-1ピンプラグ）"
+    }
+   ],
+   "rv": [
+    {
+     "model": "3930M",
+     "name": "3930M（DF-4 74/79cm）"
+    },
+    {
+     "model": "6947M",
+     "name": "6947M（DF-4 55/62cm）"
+    },
+    {
+     "model": "6935M",
+     "name": "6935M（DF-4 55/62cm）"
+    },
+    {
+     "model": "6947",
+     "name": "6947（DF-1 58/65cm）"
+    },
+    {
+     "model": "6935",
+     "name": "6935（DF-1 58/65cm）"
+    },
+    {
+     "model": "6719",
+     "name": "6719（DF-1ピンプラグ）"
+    }
+   ],
+   "lv": [
+    {
+     "model": "4298",
+     "name": "4298（IS-4）"
+    },
+    {
+     "model": "4398",
+     "name": "4398（IS-4）"
+    },
+    {
+     "model": "4598",
+     "name": "4598（IS-4）"
+    },
+    {
+     "model": "4798",
+     "name": "4798（IS-4）"
+    },
+    {
+     "model": "4196",
+     "name": "4196（IS-1）"
+    },
+    {
+     "model": "4296",
+     "name": "4296（IS-1）"
+    },
+    {
+     "model": "4396",
+     "name": "4396（IS-1）"
+    }
+   ],
+   "tesla": [
+    "1.5T",
+    "3.0T"
+   ],
+   "cond": {
+    "ガントリ": "トンネル（ボア）型",
+    "傾斜磁場スルーレート": "≤200T/m/s",
+    "SAR": "全身 ≤2.0W/kg（1.5T）／≤4.0W/kg（3.0T）、頭部 ≤3.2W/kg",
+    "B1+rms": "3.0Tでアイソセンタを第7頸椎より下に配置する場合、B1+RMSを表示できる装置で ≦2.8μT",
+    "植込み後": "リード植込み後6週間以上経過",
+    "植込み部位": "胸部",
+    "遺残リード": "不可",
+    "ペーシング閾値": "2.0V/0.4ms 以下（右室）",
+    "横隔膜刺激": "5V/1.0ms で起きないこと（SureScanモード中にペーシングを行うチャンバーにて）",
+    "MRIモード": "設定必要（SureScanモード）",
+    "検査中のモード": "患者の状態に応じてSureScan内の自己心拍固定またはペーシング固定へ切替",
+    "患者監視": "心電図・パルス酸素濃度計",
+    "体外式除細動器": "必須",
+    "最大空間勾配磁場": "20T/m（2,000ガウス/cm）以下",
+    "リードインピーダンス": "心房・右室 200〜3,000Ω／RVコイル 20〜200Ω"
+   },
+   "verify": true
+  },
+  {
+   "id": "MDT-EVICD",
+   "maker": "Medtronic",
+   "type": "EV-ICD",
+   "group": "Aurora EV-ICD",
+   "devices": [
+    {
+     "model": "Aurora EV-ICD",
+     "name": "Aurora EV-ICD"
+    }
+   ],
+   "ra": [],
+   "rv": [
+    {
+     "model": "EV240152",
+     "name": "EV240152（EV-4）"
+    },
+    {
+     "model": "EV240163",
+     "name": "EV240163（EV-4）"
+    }
+   ],
+   "lv": [],
+   "tesla": [
+    "1.5T",
+    "3.0T"
+   ],
+   "cond": {
+    "ガントリ": "トンネル（ボア）型",
+    "傾斜磁場スルーレート": "≤200T/m/s",
+    "SAR": "全身 ≤2.0W/kg（1.5T）／≤4.0W/kg（3.0T）、頭部 ≤3.2W/kg",
+    "B1+rms": "3.0Tでアイソセンタを第7頸椎より下に配置する場合、B1+RMSを表示できる装置で ≦2.8μT",
+    "植込み後": "リード植込み後6週間以上経過",
+    "植込み部位": "胸部（皮下・胸骨下）",
+    "遺残リード": "不可",
+    "ペーシング閾値": "2.0V/0.4ms 以下（右室）",
+    "横隔膜刺激": "5V/1.0ms で起きないこと（SureScanモード中にペーシングを行うチャンバーにて）",
+    "MRIモード": "設定必要（SureScanモード）",
+    "検査中のモード": "患者の状態に応じてSureScan内の自己心拍固定またはペーシング固定へ切替",
+    "患者監視": "心電図・パルス酸素濃度計",
+    "体外式除細動器": "必須",
+    "最大空間勾配磁場": "20T/m（2,000ガウス/cm）以下",
+    "リードインピーダンス": "Ring1-Ring2 / Ring1-Coil2：100〜1,500Ω／High Voltage：30〜250Ω"
+   },
+   "verify": true
+  },
+  {
+   "id": "MDT-MICRA",
+   "maker": "Medtronic",
+   "type": "リードレスペースメーカ",
+   "group": "Micra シリーズ",
+   "devices": [
+    {
+     "model": "Micra VR2",
+     "name": "Micra VR2"
+    },
+    {
+     "model": "Micra AV2",
+     "name": "Micra AV2"
+    },
+    {
+     "model": "Micra VR",
+     "name": "Micra VR"
+    },
+    {
+     "model": "Micra AV",
+     "name": "Micra AV"
+    }
+   ],
+   "ra": [],
+   "rv": [],
+   "lv": [],
+   "leadfree": true,
+   "tesla": [
+    "1.5T",
+    "3.0T"
+   ],
+   "cond": {
+    "ガントリ": "トンネル（ボア）型",
+    "傾斜磁場スルーレート": "≤200T/m/s",
+    "SAR": "全身 ≤2.0W/kg（1.5T）／≤4.0W/kg（3.0T）、頭部 ≤3.2W/kg",
+    "B1+rms": "3.0Tでアイソセンタを第7頸椎より下に配置する場合、B1+RMS ≦2.0μT",
+    "植込み後": "制限なし",
+    "植込み部位": "右心室",
+    "遺残リード": "不可",
+    "ペーシング閾値": "設定されたパルス幅で 4.5V 以下",
+    "横隔膜刺激": "該当なし",
+    "MRIモード": "設定必要（SureScanモード）",
+    "検査中のモード": "患者の状態に応じてSureScan内の自己心拍固定またはペーシング固定へ切替",
+    "患者監視": "心電図・パルス酸素濃度計",
+    "体外式除細動器": "必須",
+    "静磁場強度": "0.2〜1.5T または 3T（患者に対して垂直なAP／LRのMRIは1.5T未満に限定）",
+    "最大空間勾配磁場": "25T/m（2,500ガウス/cm）以下",
+    "リードインピーダンス": "該当なし"
+   },
+   "verify": true
+  },
+  {
+   "id": "ABT-PM",
+   "maker": "Abbott",
+   "type": "ペースメーカ",
+   "group": "アクセント MRI / アシュリティ MRI / エンデュリティ MRI",
+   "devices": [
+    {
+     "model": "アクセント MRI",
+     "name": "アクセント MRI"
+    },
+    {
+     "model": "アシュリティ MRI",
+     "name": "アシュリティ MRI"
+    },
+    {
+     "model": "エンデュリティ MRI",
+     "name": "エンデュリティ MRI"
+    }
+   ],
+   "ra": [
+    {
+     "model": "テンドリル MRI-46cm",
+     "name": "テンドリル MRI 46cm"
+    },
+    {
+     "model": "テンドリル MRI-52cm",
+     "name": "テンドリル MRI 52cm"
+    },
+    {
+     "model": "テンドリル MRI-58cm",
+     "name": "テンドリル MRI 58cm"
+    },
+    {
+     "model": "テンドリル STS-46cm",
+     "name": "テンドリル STS 46cm"
+    },
+    {
+     "model": "テンドリル STS-52cm",
+     "name": "テンドリル STS 52cm"
+    },
+    {
+     "model": "テンドリル STS-58cm",
+     "name": "テンドリル STS 58cm"
+    },
+    {
+     "model": "アイソフレックス Optim 1944（心房用）-46cm",
+     "name": "アイソフレックス Optim 1944（心房用） 46cm"
+    },
+    {
+     "model": "アイソフレックス Optim 1944（心房用）-52cm",
+     "name": "アイソフレックス Optim 1944（心房用） 52cm"
+    },
+    {
+     "model": "ABT-PLUG",
+     "name": "Abbott社製プラグ"
+    }
+   ],
+   "rv": [
+    {
+     "model": "テンドリル MRI-46cm",
+     "name": "テンドリル MRI 46cm"
+    },
+    {
+     "model": "テンドリル MRI-52cm",
+     "name": "テンドリル MRI 52cm"
+    },
+    {
+     "model": "テンドリル MRI-58cm",
+     "name": "テンドリル MRI 58cm"
+    },
+    {
+     "model": "テンドリル STS-46cm",
+     "name": "テンドリル STS 46cm"
+    },
+    {
+     "model": "テンドリル STS-52cm",
+     "name": "テンドリル STS 52cm"
+    },
+    {
+     "model": "テンドリル STS-58cm",
+     "name": "テンドリル STS 58cm"
+    },
+    {
+     "model": "アイソフレックス Optim 1948（心室用）-52cm",
+     "name": "アイソフレックス Optim 1948（心室用） 52cm"
+    },
+    {
+     "model": "アイソフレックス Optim 1948（心室用）-58cm",
+     "name": "アイソフレックス Optim 1948（心室用） 58cm"
     }
    ],
    "lv": [],
@@ -83,483 +817,239 @@
     "1.5T"
    ],
    "cond": {
-    "植込み後": "6週間以上",
-    "植込み部位": "胸部",
-    "遺残リード": "不可",
-    "ペーシング閾値": "2.0V(0.35ms)以下（Bipolar）",
-    "リードインピーダンス": "心房・右室 200〜3,000Ω（Bipolar）",
+    "ガントリ": "水平式クローズドボア",
+    "最大空間勾配磁場": "30T/m",
     "傾斜磁場スルーレート": "≤200T/m/s",
-    "SAR": "全身 ≤2.0W/kg／頭部 ≤3.2W/kg（通常操作モード）",
-    "体位": "背臥位または腹臥位のみ（側臥位不可）",
-    "ローカル送受信コイル": "全身使用不可",
-    "MRIモード": "マニュアル設定／自動設定",
-    "患者監視": "心電図・パルスオキシメータ",
-    "体外式除細動器": "必須",
-    "最大空間勾配磁場": "制限なし",
-    "除外領域": "胸腹部領域",
-    "アイソセンタ": "眼より上・股関節より下",
-    "撮像時間": "1回40分以内／次回まで30分以上あける",
-    "電池": "電池抵抗 <5kΩ"
-   }
+    "SAR": "全身 ≦2.0W/kg／頭部 ≤3.2W/kg（通常操作モード）",
+    "植込み部位": "胸部",
+    "遺残リード": "不可（プラグは可）",
+    "リードインピーダンス": "設定した範囲内（下限100Ω・上限3,000Ω）",
+    "ペーシング閾値": "心房・心室 2.5V(0.5ms)以下（Bipolar）",
+    "横隔膜刺激": "5.0V/1.0ms または 7.5V/1.0ms で横隔膜刺激がないこと",
+    "体位": "仰臥位または伏臥位（腕は体の横）",
+    "撮像時間": "制限なし",
+    "累積撮像時間": "制限なし",
+    "MRIモード": "設定必要",
+    "検査中のモード": "ペーシングOff、AOO / VOO / DOO",
+    "ローカル送受信コイル": "円偏波（CP）でRF励起した頭部・下肢・上肢用のみ（送信専用コイルは不可）",
+    "患者監視": "心電図・パルスメータ・非侵襲的血圧測定",
+    "体外式除細動器": "パルスオキシメータまたはECGモニタ（準備は任意）",
+    "備考": "デバイスのシリアル番号による各社サイトの検索で最新の撮像条件を確認できる",
+    "植込み後": "アクセント MRI のみリード植込み後6週間を経過すること",
+    "アラート": "ペイシェントノーティファイアー機能（MR撮像後に機能がなくなる可能性あり）"
+   },
+   "verify": true
   },
   {
-   "id": "MP-KORA250",
-   "maker": "MicroPort",
-   "type": "ペースメーカ",
-   "group": "KORA 250 / KORA 250 ENO",
-   "devices": [
-    {
-     "model": "TPM010J",
-     "name": "KORA 250 DR"
-    },
-    {
-     "model": "TPM013J",
-     "name": "KORA 250 SR"
-    },
-    {
-     "model": "TPM014J",
-     "name": "KORA 250 ENO DR"
-    },
-    {
-     "model": "TPM015J",
-     "name": "KORA 250 ENO SR"
-    }
-   ],
-   "ra": [
-    {
-     "model": "RF45D",
-     "name": "BEFLEX RF45D"
-    },
-    {
-     "model": "RF46D",
-     "name": "BEFLEX RF46D"
-    },
-    {
-     "model": "TLD040C",
-     "name": "VEGA R45"
-    },
-    {
-     "model": "TLD041C",
-     "name": "VEGA R52"
-    },
-    {
-     "model": "TLD042C",
-     "name": "VEGA R58"
-    },
-    {
-     "model": "TLD056C",
-     "name": "Xfine JX24D"
-    },
-    {
-     "model": "TLD057C",
-     "name": "Xfine JX25D"
-    },
-    {
-     "model": "TLD054C",
-     "name": "Xfine TX25D"
-    },
-    {
-     "model": "TLD055C",
-     "name": "Xfine TX26D"
-    },
-    {
-     "model": "TLSCREWVINE44",
-     "name": "J-LINE SCREWVINE 44SEP"
-    },
-    {
-     "model": "TLSCREWVINE52",
-     "name": "J-LINE SCREWVINE 52SEP"
-    },
-    {
-     "model": "TLSCREWVINE58",
-     "name": "J-LINE SCREWVINE 58SEP"
-    },
-    {
-     "model": "TLJPETITE44ERJB",
-     "name": "J-LINE PETITE 44ERJB"
-    },
-    {
-     "model": "TLJPETITE52ERJB",
-     "name": "J-LINE PETITE 52ERJB"
-    },
-    {
-     "model": "TLJPETITE52ERB",
-     "name": "J-LINE PETITE 52ERB"
-    },
-    {
-     "model": "TLJPETITE58ERB",
-     "name": "J-LINE PETITE 58ERB"
-    }
-   ],
-   "rv": [
-    {
-     "model": "RF45D",
-     "name": "BEFLEX RF45D"
-    },
-    {
-     "model": "RF46D",
-     "name": "BEFLEX RF46D"
-    },
-    {
-     "model": "TLD040C",
-     "name": "VEGA R45"
-    },
-    {
-     "model": "TLD041C",
-     "name": "VEGA R52"
-    },
-    {
-     "model": "TLD042C",
-     "name": "VEGA R58"
-    },
-    {
-     "model": "TLD056C",
-     "name": "Xfine JX24D"
-    },
-    {
-     "model": "TLD057C",
-     "name": "Xfine JX25D"
-    },
-    {
-     "model": "TLD054C",
-     "name": "Xfine TX25D"
-    },
-    {
-     "model": "TLD055C",
-     "name": "Xfine TX26D"
-    },
-    {
-     "model": "TLSCREWVINE44",
-     "name": "J-LINE SCREWVINE 44SEP"
-    },
-    {
-     "model": "TLSCREWVINE52",
-     "name": "J-LINE SCREWVINE 52SEP"
-    },
-    {
-     "model": "TLSCREWVINE58",
-     "name": "J-LINE SCREWVINE 58SEP"
-    },
-    {
-     "model": "TLJPETITE44ERJB",
-     "name": "J-LINE PETITE 44ERJB"
-    },
-    {
-     "model": "TLJPETITE52ERJB",
-     "name": "J-LINE PETITE 52ERJB"
-    },
-    {
-     "model": "TLJPETITE52ERB",
-     "name": "J-LINE PETITE 52ERB"
-    },
-    {
-     "model": "TLJPETITE58ERB",
-     "name": "J-LINE PETITE 58ERB"
-    }
-   ],
-   "lv": [],
-   "tesla": [
-    "1.5T",
-    "3.0T"
-   ],
-   "cond": {
-    "植込み後": "6週間以上",
-    "植込み部位": "胸部",
-    "遺残リード": "不可",
-    "ペーシング閾値": "2.0V(0.35ms)以下（Bipolar）",
-    "リードインピーダンス": "心房・右室 200〜3,000Ω（Bipolar）",
-    "傾斜磁場スルーレート": "≤200T/m/s",
-    "SAR": "全身 ≤2.0W/kg／頭部 ≤3.2W/kg（通常操作モード）",
-    "体位": "背臥位または腹臥位のみ（側臥位不可）",
-    "ローカル送受信コイル": "全身使用不可",
-    "MRIモード": "マニュアル設定／自動設定",
-    "患者監視": "心電図・パルスオキシメータ",
-    "体外式除細動器": "必須",
-    "最大空間勾配磁場": "≤20T/m",
-    "除外領域": "制限なし",
-    "アイソセンタ": "制限なし",
-    "撮像時間": "1回40分以内／アイソセンタが眼〜股関節の場合は次回まで24時間以上",
-    "電池": "電池抵抗 <5kΩ"
-   }
-  },
-  {
-   "id": "MP-ALIZEA",
-   "maker": "MicroPort",
-   "type": "ペースメーカ",
-   "group": "ALIZEA",
-   "devices": [
-    {
-     "model": "TPM020C",
-     "name": "ALIZEA DR"
-    },
-    {
-     "model": "TPM021C",
-     "name": "ALIZEA SR"
-    }
-   ],
-   "ra": [
-    {
-     "model": "RF45D",
-     "name": "BEFLEX RF45D"
-    },
-    {
-     "model": "RF46D",
-     "name": "BEFLEX RF46D"
-    },
-    {
-     "model": "TLD040C",
-     "name": "VEGA R45"
-    },
-    {
-     "model": "TLD041C",
-     "name": "VEGA R52"
-    },
-    {
-     "model": "TLD042C",
-     "name": "VEGA R58"
-    },
-    {
-     "model": "TLD056C",
-     "name": "Xfine JX24D"
-    },
-    {
-     "model": "TLD057C",
-     "name": "Xfine JX25D"
-    },
-    {
-     "model": "TLD054C",
-     "name": "Xfine TX25D"
-    },
-    {
-     "model": "TLD055C",
-     "name": "Xfine TX26D"
-    },
-    {
-     "model": "TLSCREWVINE44",
-     "name": "J-LINE SCREWVINE 44SEP"
-    },
-    {
-     "model": "TLSCREWVINE52",
-     "name": "J-LINE SCREWVINE 52SEP"
-    },
-    {
-     "model": "TLSCREWVINE58",
-     "name": "J-LINE SCREWVINE 58SEP"
-    },
-    {
-     "model": "TLJPETITE44ERJB",
-     "name": "J-LINE PETITE 44ERJB"
-    },
-    {
-     "model": "TLJPETITE52ERJB",
-     "name": "J-LINE PETITE 52ERJB"
-    },
-    {
-     "model": "TLJPETITE52ERB",
-     "name": "J-LINE PETITE 52ERB"
-    },
-    {
-     "model": "TLJPETITE58ERB",
-     "name": "J-LINE PETITE 58ERB"
-    }
-   ],
-   "rv": [
-    {
-     "model": "RF45D",
-     "name": "BEFLEX RF45D"
-    },
-    {
-     "model": "RF46D",
-     "name": "BEFLEX RF46D"
-    },
-    {
-     "model": "TLD040C",
-     "name": "VEGA R45"
-    },
-    {
-     "model": "TLD041C",
-     "name": "VEGA R52"
-    },
-    {
-     "model": "TLD042C",
-     "name": "VEGA R58"
-    },
-    {
-     "model": "TLD056C",
-     "name": "Xfine JX24D"
-    },
-    {
-     "model": "TLD057C",
-     "name": "Xfine JX25D"
-    },
-    {
-     "model": "TLD054C",
-     "name": "Xfine TX25D"
-    },
-    {
-     "model": "TLD055C",
-     "name": "Xfine TX26D"
-    },
-    {
-     "model": "TLSCREWVINE44",
-     "name": "J-LINE SCREWVINE 44SEP"
-    },
-    {
-     "model": "TLSCREWVINE52",
-     "name": "J-LINE SCREWVINE 52SEP"
-    },
-    {
-     "model": "TLSCREWVINE58",
-     "name": "J-LINE SCREWVINE 58SEP"
-    },
-    {
-     "model": "TLJPETITE44ERJB",
-     "name": "J-LINE PETITE 44ERJB"
-    },
-    {
-     "model": "TLJPETITE52ERJB",
-     "name": "J-LINE PETITE 52ERJB"
-    },
-    {
-     "model": "TLJPETITE52ERB",
-     "name": "J-LINE PETITE 52ERB"
-    },
-    {
-     "model": "TLJPETITE58ERB",
-     "name": "J-LINE PETITE 58ERB"
-    }
-   ],
-   "lv": [],
-   "tesla": [
-    "1.5T",
-    "3.0T"
-   ],
-   "cond": {
-    "植込み後": "6週間以上",
-    "植込み部位": "胸部",
-    "遺残リード": "不可",
-    "ペーシング閾値": "2.0V(0.35ms)以下（Bipolar）",
-    "リードインピーダンス": "心房・右室 200〜3,000Ω（Bipolar）",
-    "傾斜磁場スルーレート": "≤200T/m/s",
-    "SAR": "全身 ≤2.0W/kg／頭部 ≤3.2W/kg（通常操作モード）",
-    "体位": "背臥位または腹臥位のみ（側臥位不可）",
-    "ローカル送受信コイル": "全身使用不可",
-    "MRIモード": "マニュアル設定／自動設定",
-    "患者監視": "心電図・パルスオキシメータ",
-    "体外式除細動器": "必須",
-    "最大空間勾配磁場": "≤20T/m",
-    "除外領域": "制限なし",
-    "アイソセンタ": "制限なし",
-    "撮像時間": "1回40分以内／次回まで30分以上あける",
-    "電池": "RRTに達していないこと",
-    "アラート": "あり"
-   }
-  },
-  {
-   "id": "MP-ULYS",
-   "maker": "MicroPort",
+   "id": "ABT-ELLIPSE",
+   "maker": "Abbott",
    "type": "ICD",
-   "group": "ULYS",
+   "group": "エリプス / エリプス Limited / フォーティファイ アシュラ",
    "devices": [
     {
-     "model": "TDF049J",
-     "name": "ULYS VR 2240"
+     "model": "エリプス",
+     "name": "エリプス"
     },
     {
-     "model": "TDF050J",
-     "name": "ULYS DR 2540"
+     "model": "エリプス Limited",
+     "name": "エリプス Limited"
+    },
+    {
+     "model": "フォーティファイ アシュラ",
+     "name": "フォーティファイ アシュラ"
     }
    ],
    "ra": [
     {
-     "model": "RF45D",
-     "name": "BEFLEX RF45D"
+     "model": "テンドリル STS-46cm",
+     "name": "テンドリル STS 46cm"
     },
     {
-     "model": "RF46D",
-     "name": "BEFLEX RF46D"
+     "model": "テンドリル STS-52cm",
+     "name": "テンドリル STS 52cm"
     },
     {
-     "model": "TLD040C",
-     "name": "VEGA R45"
+     "model": "テンドリル STS-58cm",
+     "name": "テンドリル STS 58cm"
     },
     {
-     "model": "TLD041C",
-     "name": "VEGA R52"
+     "model": "アイソフレックス Optim 1944（心房用）-46cm",
+     "name": "アイソフレックス Optim 1944（心房用） 46cm"
     },
     {
-     "model": "TLD042C",
-     "name": "VEGA R58"
+     "model": "アイソフレックス Optim 1944（心房用）-52cm",
+     "name": "アイソフレックス Optim 1944（心房用） 52cm"
     },
     {
-     "model": "TLD056C",
-     "name": "Xfine JX24D"
+     "model": "アルティペース LPA1231-46cm",
+     "name": "アルティペース LPA1231 46cm"
     },
     {
-     "model": "TLD057C",
-     "name": "Xfine JX25D"
+     "model": "アルティペース LPA1231-52cm",
+     "name": "アルティペース LPA1231 52cm"
     },
     {
-     "model": "TLD054C",
-     "name": "Xfine TX25D"
+     "model": "アルティペース LPA1231-58cm",
+     "name": "アルティペース LPA1231 58cm"
     },
     {
-     "model": "TLD055C",
-     "name": "Xfine TX26D"
+     "model": "アルティペース LPA1231-65cm",
+     "name": "アルティペース LPA1231 65cm"
+    },
+    {
+     "model": "ABT-PLUG",
+     "name": "Abbott社製プラグ"
     }
    ],
    "rv": [
     {
-     "model": "RF45D",
-     "name": "BEFLEX RF45D"
+     "model": "Durata（DF-4）-58cm",
+     "name": "Durata（DF-4） 58cm"
     },
     {
-     "model": "RF46D",
-     "name": "BEFLEX RF46D"
+     "model": "Durata（DF-4）-65cm",
+     "name": "Durata（DF-4） 65cm"
     },
     {
-     "model": "TLD040C",
-     "name": "VEGA R45"
+     "model": "Optisure（DF-4）-58cm",
+     "name": "Optisure（DF-4） 58cm"
     },
     {
-     "model": "TLD041C",
-     "name": "VEGA R52"
+     "model": "Optisure（DF-4）-65cm",
+     "name": "Optisure（DF-4） 65cm"
     },
     {
-     "model": "TLD042C",
-     "name": "VEGA R58"
+     "model": "Durata（DF-1）-60cm",
+     "name": "Durata（DF-1） 60cm"
     },
     {
-     "model": "TLD056C",
-     "name": "Xfine JX24D"
+     "model": "Durata（DF-1）-65cm",
+     "name": "Durata（DF-1） 65cm"
     },
     {
-     "model": "TLD057C",
-     "name": "Xfine JX25D"
+     "model": "Optisure（DF-1）-60cm",
+     "name": "Optisure（DF-1） 60cm"
     },
     {
-     "model": "TLD054C",
-     "name": "Xfine TX25D"
+     "model": "Optisure（DF-1）-65cm",
+     "name": "Optisure（DF-1） 65cm"
+    }
+   ],
+   "lv": [],
+   "tesla": [
+    "1.5T"
+   ],
+   "cond": {
+    "ガントリ": "水平式クローズドボア",
+    "最大空間勾配磁場": "30T/m",
+    "傾斜磁場スルーレート": "≤200T/m/s",
+    "SAR": "全身 ≦2.0W/kg／頭部 ≤3.2W/kg（通常操作モード）",
+    "植込み部位": "胸部",
+    "遺残リード": "不可（プラグは可）",
+    "リードインピーダンス": "心房・心室 100〜3,000Ω／ショックコイル 20〜200Ω",
+    "ペーシング閾値": "心房・心室 2.5V(0.5ms)以下（Bipolar）",
+    "横隔膜刺激": "5.0V/1.0ms または 7.5V/1.0ms で横隔膜刺激がないこと",
+    "体位": "仰臥位または伏臥位（腕は体の横）",
+    "撮像時間": "制限なし",
+    "累積撮像時間": "制限なし",
+    "MRIモード": "設定必要",
+    "検査中のモード": "ペーシングOff、AOO / VOO / DOO",
+    "ローカル送受信コイル": "円偏波（CP）でRF励起した頭部・下肢・上肢用のみ（送信専用コイルは不可）",
+    "患者監視": "心電図・パルスメータ・非侵襲的血圧測定",
+    "体外式除細動器": "パルスオキシメータまたはECGモニタ（準備は任意）",
+    "備考": "デバイスのシリアル番号による各社サイトの検索で最新の撮像条件を確認できる"
+   },
+   "verify": true
+  },
+  {
+   "id": "ABT-GALLANT-ICD",
+   "maker": "Abbott",
+   "type": "ICD",
+   "group": "ギャラン ICD（DF-4 / DF-1）",
+   "devices": [
+    {
+     "model": "ギャラン ICD DF-4",
+     "name": "ギャラン ICD（DF-4）"
     },
     {
-     "model": "TLD055C",
-     "name": "Xfine TX26D"
+     "model": "ギャラン ICD DF-1",
+     "name": "ギャラン ICD（DF-1）"
+    }
+   ],
+   "ra": [
+    {
+     "model": "テンドリル STS-46cm",
+     "name": "テンドリル STS 46cm"
     },
     {
-     "model": "TLT001C",
-     "name": "INVICTA 1CR 58"
+     "model": "テンドリル STS-52cm",
+     "name": "テンドリル STS 52cm"
     },
     {
-     "model": "TLT002C",
-     "name": "INVICTA 2CR 58"
+     "model": "テンドリル STS-58cm",
+     "name": "テンドリル STS 58cm"
     },
     {
-     "model": "TLT005C",
-     "name": "INVICTA 1CR 68"
+     "model": "アイソフレックス Optim 1944（心房用）-46cm",
+     "name": "アイソフレックス Optim 1944（心房用） 46cm"
     },
     {
-     "model": "TLT006C",
-     "name": "INVICTA 2CR 68"
+     "model": "アイソフレックス Optim 1944（心房用）-52cm",
+     "name": "アイソフレックス Optim 1944（心房用） 52cm"
+    },
+    {
+     "model": "アルティペース LPA1231-46cm",
+     "name": "アルティペース LPA1231 46cm"
+    },
+    {
+     "model": "アルティペース LPA1231-52cm",
+     "name": "アルティペース LPA1231 52cm"
+    },
+    {
+     "model": "アルティペース LPA1231-58cm",
+     "name": "アルティペース LPA1231 58cm"
+    },
+    {
+     "model": "アルティペース LPA1231-65cm",
+     "name": "アルティペース LPA1231 65cm"
+    },
+    {
+     "model": "ABT-PLUG",
+     "name": "Abbott社製プラグ"
+    }
+   ],
+   "rv": [
+    {
+     "model": "Durata（DF-4）-58cm",
+     "name": "Durata（DF-4） 58cm"
+    },
+    {
+     "model": "Durata（DF-4）-65cm",
+     "name": "Durata（DF-4） 65cm"
+    },
+    {
+     "model": "Optisure（DF-4）-58cm",
+     "name": "Optisure（DF-4） 58cm"
+    },
+    {
+     "model": "Optisure（DF-4）-65cm",
+     "name": "Optisure（DF-4） 65cm"
+    },
+    {
+     "model": "Durata（DF-1）-60cm",
+     "name": "Durata（DF-1） 60cm"
+    },
+    {
+     "model": "Durata（DF-1）-65cm",
+     "name": "Durata（DF-1） 65cm"
+    },
+    {
+     "model": "Optisure（DF-1）-60cm",
+     "name": "Optisure（DF-1） 60cm"
+    },
+    {
+     "model": "Optisure（DF-1）-65cm",
+     "name": "Optisure（DF-1） 65cm"
     }
    ],
    "lv": [],
@@ -568,149 +1058,139 @@
     "3.0T"
    ],
    "cond": {
-    "植込み後": "6週間以上",
-    "植込み部位": "胸部",
-    "遺残リード": "不可",
-    "ペーシング閾値": "2.0V(0.35ms)以下（Bipolar）",
-    "リードインピーダンス": "心房・右室 200〜3,000Ω／RV・SVCコイル 20〜200Ω",
+    "ガントリ": "水平式クローズドボア",
+    "最大空間勾配磁場": "30T/m",
     "傾斜磁場スルーレート": "≤200T/m/s",
-    "SAR": "全身 ≤2.0W/kg／頭部 ≤3.2W/kg（通常操作モード）",
-    "体位": "背臥位または腹臥位のみ（側臥位不可）",
-    "ローカル送受信コイル": "全身使用不可",
-    "MRIモード": "マニュアル設定／自動設定",
-    "患者監視": "心電図・パルスオキシメータ",
-    "体外式除細動器": "必須",
-    "最大空間勾配磁場": "≤20T/m",
-    "除外領域": "制限なし",
-    "アイソセンタ": "制限なし",
-    "撮像時間": "1回40分以内",
-    "電池": "RRTに達していないこと",
-    "アラート": "あり"
-   }
+    "SAR": "1.5T：全身 ≦2.0W/kg／3.0T：全身 ≦4.0W/kg、頭部 ≤3.2W/kg",
+    "植込み部位": "胸部",
+    "遺残リード": "不可（プラグは可）",
+    "リードインピーダンス": "心房・心室 100〜3,000Ω／ショックコイル 20〜125Ω",
+    "ペーシング閾値": "心房・心室 2.5V(0.5ms)以下（Bipolar）",
+    "横隔膜刺激": "5.0V/1.0ms または 7.5V/1.0ms で横隔膜刺激がないこと",
+    "体位": "仰臥位または伏臥位（腕は体の横）",
+    "撮像時間": "制限なし",
+    "累積撮像時間": "制限なし",
+    "MRIモード": "設定必要",
+    "検査中のモード": "ペーシングOff、AOO / VOO / DOO",
+    "ローカル送受信コイル": "円偏波（CP）でRF励起した頭部・下肢・上肢用のみ（送信専用コイルは不可）",
+    "患者監視": "心電図・パルスメータ・非侵襲的血圧測定",
+    "体外式除細動器": "パルスオキシメータまたはECGモニタ（準備は任意）",
+    "備考": "デバイスのシリアル番号による各社サイトの検索で最新の撮像条件を確認できる",
+    "ホールボディコイル": "1.5T：制限なし／3.0T：円偏波（CP）または多チャンネル-2（MC-2）でRF励起"
+   },
+   "verify": true
   },
   {
-   "id": "MP-GALI",
-   "maker": "MicroPort",
-   "type": "CRT-D",
-   "group": "GALI",
+   "id": "ABT-ALLURE",
+   "maker": "Abbott",
+   "type": "CRT-P",
+   "group": "クアドラ アルーア MRI / クアドラ アルーア MP",
    "devices": [
     {
-     "model": "TDF054J",
-     "name": "GALI 4LV SonR CRT-D 2844"
+     "model": "クアドラ アルーア MRI",
+     "name": "クアドラ アルーア MRI"
+    },
+    {
+     "model": "クアドラ アルーア MP",
+     "name": "クアドラ アルーア MP"
     }
    ],
    "ra": [
     {
-     "model": "RF45D",
-     "name": "BEFLEX RF45D"
+     "model": "テンドリル STS-46cm",
+     "name": "テンドリル STS 46cm"
     },
     {
-     "model": "RF46D",
-     "name": "BEFLEX RF46D"
+     "model": "テンドリル STS-52cm",
+     "name": "テンドリル STS 52cm"
     },
     {
-     "model": "TLD040C",
-     "name": "VEGA R45"
+     "model": "テンドリル STS-58cm",
+     "name": "テンドリル STS 58cm"
     },
     {
-     "model": "TLD041C",
-     "name": "VEGA R52"
+     "model": "アイソフレックス Optim 1944（心房用）-46cm",
+     "name": "アイソフレックス Optim 1944（心房用） 46cm"
     },
     {
-     "model": "TLD042C",
-     "name": "VEGA R58"
+     "model": "アイソフレックス Optim 1944（心房用）-52cm",
+     "name": "アイソフレックス Optim 1944（心房用） 52cm"
     },
     {
-     "model": "TLD056C",
-     "name": "Xfine JX24D"
+     "model": "アルティペース LPA1231-46cm",
+     "name": "アルティペース LPA1231 46cm"
     },
     {
-     "model": "TLD057C",
-     "name": "Xfine JX25D"
+     "model": "アルティペース LPA1231-52cm",
+     "name": "アルティペース LPA1231 52cm"
     },
     {
-     "model": "TLD054C",
-     "name": "Xfine TX25D"
+     "model": "アルティペース LPA1231-58cm",
+     "name": "アルティペース LPA1231 58cm"
     },
     {
-     "model": "TLD055C",
-     "name": "Xfine TX26D"
+     "model": "アルティペース LPA1231-65cm",
+     "name": "アルティペース LPA1231 65cm"
     },
     {
-     "model": "TLD015C",
-     "name": "SONRTIP"
+     "model": "ABT-PLUG",
+     "name": "Abbott社製プラグ"
     }
    ],
    "rv": [
     {
-     "model": "RF45D",
-     "name": "BEFLEX RF45D"
+     "model": "テンドリル STS-46cm",
+     "name": "テンドリル STS 46cm"
     },
     {
-     "model": "RF46D",
-     "name": "BEFLEX RF46D"
+     "model": "テンドリル STS-52cm",
+     "name": "テンドリル STS 52cm"
     },
     {
-     "model": "TLD040C",
-     "name": "VEGA R45"
+     "model": "テンドリル STS-58cm",
+     "name": "テンドリル STS 58cm"
     },
     {
-     "model": "TLD041C",
-     "name": "VEGA R52"
+     "model": "アイソフレックス Optim 1948（心室用）-52cm",
+     "name": "アイソフレックス Optim 1948（心室用） 52cm"
     },
     {
-     "model": "TLD042C",
-     "name": "VEGA R58"
+     "model": "アイソフレックス Optim 1948（心室用）-58cm",
+     "name": "アイソフレックス Optim 1948（心室用） 58cm"
     },
     {
-     "model": "TLD056C",
-     "name": "Xfine JX24D"
+     "model": "アルティペース LPA1231-46cm",
+     "name": "アルティペース LPA1231 46cm"
     },
     {
-     "model": "TLD057C",
-     "name": "Xfine JX25D"
+     "model": "アルティペース LPA1231-52cm",
+     "name": "アルティペース LPA1231 52cm"
     },
     {
-     "model": "TLD054C",
-     "name": "Xfine TX25D"
+     "model": "アルティペース LPA1231-58cm",
+     "name": "アルティペース LPA1231 58cm"
     },
     {
-     "model": "TLD055C",
-     "name": "Xfine TX26D"
-    },
-    {
-     "model": "TLT001C",
-     "name": "INVICTA 1CR 58"
-    },
-    {
-     "model": "TLT002C",
-     "name": "INVICTA 2CR 58"
-    },
-    {
-     "model": "TLT005C",
-     "name": "INVICTA 1CR 68"
-    },
-    {
-     "model": "TLT006C",
-     "name": "INVICTA 2CR 68"
+     "model": "アルティペース LPA1231-65cm",
+     "name": "アルティペース LPA1231 65cm"
     }
    ],
    "lv": [
     {
-     "model": "TLT019C",
-     "name": "NAVIGO 2D 78"
+     "model": "1458Q",
+     "name": "カルテット 1458Q（86cm）"
     },
     {
-     "model": "TLT020C",
-     "name": "NAVIGO 2D 88"
+     "model": "1458QL",
+     "name": "カルテット Ex ファミリー 1458QL（86cm）"
     },
     {
-     "model": "TLT021C",
-     "name": "NAVIGO ARC 78"
+     "model": "1457Q",
+     "name": "カルテット Ex ファミリー 1457Q（86cm）"
     },
     {
-     "model": "TLT022C",
-     "name": "NAVIGO ARC 88"
+     "model": "1456Q",
+     "name": "カルテット Ex ファミリー 1456Q（86cm）"
     }
    ],
    "tesla": [
@@ -718,25 +1198,405 @@
     "3.0T"
    ],
    "cond": {
-    "植込み後": "6週間以上",
-    "植込み部位": "胸部",
-    "遺残リード": "不可",
-    "ペーシング閾値": "2.0V(0.35ms)以下（Bipolar）",
-    "リードインピーダンス": "心房・右室 200〜3,000Ω／RV・SVCコイル 20〜200Ω",
+    "ガントリ": "水平式クローズドボア",
+    "最大空間勾配磁場": "30T/m",
     "傾斜磁場スルーレート": "≤200T/m/s",
-    "SAR": "全身 ≤2.0W/kg／頭部 ≤3.2W/kg（通常操作モード）",
-    "体位": "背臥位または腹臥位のみ（側臥位不可）",
-    "ローカル送受信コイル": "全身使用不可",
-    "MRIモード": "マニュアル設定／自動設定",
-    "患者監視": "心電図・パルスオキシメータ",
-    "体外式除細動器": "必須",
-    "最大空間勾配磁場": "≤20T/m",
-    "除外領域": "制限なし",
-    "アイソセンタ": "制限なし",
-    "撮像時間": "1回40分以内",
-    "電池": "RRTに達していないこと",
-    "アラート": "あり"
-   }
+    "SAR": "1.5T：全身 ≦2.0W/kg／3.0T：全身 ≦4.0W/kg（LPA1231/65 使用時は上限2.0W/kg）、頭部 ≤3.2W/kg",
+    "植込み部位": "胸部",
+    "遺残リード": "不可（プラグは可）",
+    "リードインピーダンス": "設定した範囲内（下限100Ω・上限3,000Ω）",
+    "ペーシング閾値": "心房・右室 2.5V(0.5ms)以下（Bipolar）／左室 2.0V(0.5ms)",
+    "横隔膜刺激": "5.0V/1.0ms または 7.5V/1.0ms で横隔膜刺激がないこと",
+    "体位": "仰臥位または伏臥位（腕は体の横）",
+    "撮像時間": "制限なし",
+    "累積撮像時間": "制限なし",
+    "MRIモード": "設定必要",
+    "検査中のモード": "ペーシングOff、AOO / VOO / DOO",
+    "ローカル送受信コイル": "円偏波（CP）でRF励起した頭部・下肢・上肢用のみ（送信専用コイルは不可）",
+    "患者監視": "心電図・パルスメータ・非侵襲的血圧測定",
+    "体外式除細動器": "パルスオキシメータまたはECGモニタ（準備は任意）",
+    "備考": "デバイスのシリアル番号による各社サイトの検索で最新の撮像条件を確認できる",
+    "ホールボディコイル": "1.5T：制限なし／3.0T：円偏波（CP）または多チャンネル-2（MC-2）でRF励起"
+   },
+   "verify": true
+  },
+  {
+   "id": "ABT-GALLANT-HF",
+   "maker": "Abbott",
+   "type": "CRT-D",
+   "group": "ギャラン HF（DF-4 / DF-1）",
+   "devices": [
+    {
+     "model": "ギャラン HF DF-4",
+     "name": "ギャラン HF（DF-4）"
+    },
+    {
+     "model": "ギャラン HF DF-1",
+     "name": "ギャラン HF（DF-1）"
+    }
+   ],
+   "ra": [
+    {
+     "model": "テンドリル STS-46cm",
+     "name": "テンドリル STS 46cm"
+    },
+    {
+     "model": "テンドリル STS-52cm",
+     "name": "テンドリル STS 52cm"
+    },
+    {
+     "model": "テンドリル STS-58cm",
+     "name": "テンドリル STS 58cm"
+    },
+    {
+     "model": "アイソフレックス Optim 1944（心房用）-46cm",
+     "name": "アイソフレックス Optim 1944（心房用） 46cm"
+    },
+    {
+     "model": "アイソフレックス Optim 1944（心房用）-52cm",
+     "name": "アイソフレックス Optim 1944（心房用） 52cm"
+    },
+    {
+     "model": "アルティペース LPA1231-46cm",
+     "name": "アルティペース LPA1231 46cm"
+    },
+    {
+     "model": "アルティペース LPA1231-52cm",
+     "name": "アルティペース LPA1231 52cm"
+    },
+    {
+     "model": "アルティペース LPA1231-58cm",
+     "name": "アルティペース LPA1231 58cm"
+    },
+    {
+     "model": "アルティペース LPA1231-65cm",
+     "name": "アルティペース LPA1231 65cm"
+    },
+    {
+     "model": "ABT-PLUG",
+     "name": "Abbott社製プラグ"
+    }
+   ],
+   "rv": [
+    {
+     "model": "Durata（DF-4）-58cm",
+     "name": "Durata（DF-4） 58cm"
+    },
+    {
+     "model": "Durata（DF-4）-65cm",
+     "name": "Durata（DF-4） 65cm"
+    },
+    {
+     "model": "Optisure（DF-4）-58cm",
+     "name": "Optisure（DF-4） 58cm"
+    },
+    {
+     "model": "Optisure（DF-4）-65cm",
+     "name": "Optisure（DF-4） 65cm"
+    },
+    {
+     "model": "Durata（DF-1）-60cm",
+     "name": "Durata（DF-1） 60cm"
+    },
+    {
+     "model": "Durata（DF-1）-65cm",
+     "name": "Durata（DF-1） 65cm"
+    },
+    {
+     "model": "Optisure（DF-1）-60cm",
+     "name": "Optisure（DF-1） 60cm"
+    },
+    {
+     "model": "Optisure（DF-1）-65cm",
+     "name": "Optisure（DF-1） 65cm"
+    }
+   ],
+   "lv": [
+    {
+     "model": "1458Q",
+     "name": "カルテット 1458Q（86cm）"
+    },
+    {
+     "model": "1458QL",
+     "name": "カルテット Ex ファミリー 1458QL（86cm）"
+    },
+    {
+     "model": "1457Q",
+     "name": "カルテット Ex ファミリー 1457Q（86cm）"
+    },
+    {
+     "model": "1456Q",
+     "name": "カルテット Ex ファミリー 1456Q（86cm）"
+    }
+   ],
+   "tesla": [
+    "1.5T",
+    "3.0T"
+   ],
+   "cond": {
+    "ガントリ": "水平式クローズドボア",
+    "最大空間勾配磁場": "30T/m",
+    "傾斜磁場スルーレート": "≤200T/m/s",
+    "SAR": "1.5T：全身 ≦2.0W/kg／3.0T：全身 ≦4.0W/kg、頭部 ≤3.2W/kg",
+    "植込み部位": "胸部",
+    "遺残リード": "不可（プラグは可）",
+    "リードインピーダンス": "心房・心室 100〜3,000Ω／ショックコイル 20〜125Ω",
+    "ペーシング閾値": "心房・右室 2.5V(0.5ms)以下（Bipolar）／左室 2.0V(0.5ms)",
+    "横隔膜刺激": "5.0V/1.0ms または 7.5V/1.0ms で横隔膜刺激がないこと",
+    "体位": "仰臥位または伏臥位（腕は体の横）",
+    "撮像時間": "制限なし",
+    "累積撮像時間": "制限なし",
+    "MRIモード": "設定必要",
+    "検査中のモード": "ペーシングOff、AOO / VOO / DOO",
+    "ローカル送受信コイル": "円偏波（CP）でRF励起した頭部・下肢・上肢用のみ（送信専用コイルは不可）",
+    "患者監視": "心電図・パルスメータ・非侵襲的血圧測定",
+    "体外式除細動器": "パルスオキシメータまたはECGモニタ（準備は任意）",
+    "備考": "デバイスのシリアル番号による各社サイトの検索で最新の撮像条件を確認できる",
+    "ホールボディコイル": "1.5T：制限なし／3.0T：円偏波（CP）または多チャンネル-2（MC-2）でRF励起"
+   },
+   "verify": true
+  },
+  {
+   "id": "ABT-QUADRA-ASSURA",
+   "maker": "Abbott",
+   "type": "CRT-D",
+   "group": "クアドラ アシュラ / クアドラ アシュラ MP",
+   "devices": [
+    {
+     "model": "クアドラ アシュラ",
+     "name": "クアドラ アシュラ"
+    },
+    {
+     "model": "クアドラ アシュラ MP",
+     "name": "クアドラ アシュラ MP"
+    }
+   ],
+   "ra": [
+    {
+     "model": "テンドリル STS-46cm",
+     "name": "テンドリル STS 46cm"
+    },
+    {
+     "model": "テンドリル STS-52cm",
+     "name": "テンドリル STS 52cm"
+    },
+    {
+     "model": "テンドリル STS-58cm",
+     "name": "テンドリル STS 58cm"
+    },
+    {
+     "model": "アイソフレックス Optim 1944（心房用）-46cm",
+     "name": "アイソフレックス Optim 1944（心房用） 46cm"
+    },
+    {
+     "model": "アイソフレックス Optim 1944（心房用）-52cm",
+     "name": "アイソフレックス Optim 1944（心房用） 52cm"
+    },
+    {
+     "model": "アルティペース LPA1231-46cm",
+     "name": "アルティペース LPA1231 46cm"
+    },
+    {
+     "model": "アルティペース LPA1231-52cm",
+     "name": "アルティペース LPA1231 52cm"
+    },
+    {
+     "model": "アルティペース LPA1231-58cm",
+     "name": "アルティペース LPA1231 58cm"
+    },
+    {
+     "model": "アルティペース LPA1231-65cm",
+     "name": "アルティペース LPA1231 65cm"
+    },
+    {
+     "model": "ABT-PLUG",
+     "name": "Abbott社製プラグ"
+    }
+   ],
+   "rv": [
+    {
+     "model": "Durata（DF-4）-58cm",
+     "name": "Durata（DF-4） 58cm"
+    },
+    {
+     "model": "Durata（DF-4）-65cm",
+     "name": "Durata（DF-4） 65cm"
+    },
+    {
+     "model": "Optisure（DF-4）-58cm",
+     "name": "Optisure（DF-4） 58cm"
+    },
+    {
+     "model": "Optisure（DF-4）-65cm",
+     "name": "Optisure（DF-4） 65cm"
+    },
+    {
+     "model": "Durata（DF-1）-60cm",
+     "name": "Durata（DF-1） 60cm"
+    },
+    {
+     "model": "Durata（DF-1）-65cm",
+     "name": "Durata（DF-1） 65cm"
+    },
+    {
+     "model": "Optisure（DF-1）-60cm",
+     "name": "Optisure（DF-1） 60cm"
+    },
+    {
+     "model": "Optisure（DF-1）-65cm",
+     "name": "Optisure（DF-1） 65cm"
+    }
+   ],
+   "lv": [
+    {
+     "model": "1458Q",
+     "name": "カルテット 1458Q（86cm）"
+    },
+    {
+     "model": "1458QL",
+     "name": "カルテット Ex ファミリー 1458QL（86cm）"
+    },
+    {
+     "model": "1457Q",
+     "name": "カルテット Ex ファミリー 1457Q（86cm）"
+    },
+    {
+     "model": "1456Q",
+     "name": "カルテット Ex ファミリー 1456Q（86cm）"
+    }
+   ],
+   "tesla": [
+    "1.5T"
+   ],
+   "cond": {
+    "ガントリ": "水平式クローズドボア",
+    "最大空間勾配磁場": "30T/m",
+    "傾斜磁場スルーレート": "≤200T/m/s",
+    "SAR": "全身 ≦2.0W/kg／頭部 ≤3.2W/kg（通常操作モード）",
+    "植込み部位": "胸部",
+    "遺残リード": "不可（プラグは可）",
+    "リードインピーダンス": "心房・心室 100〜3,000Ω／ショックコイル 20〜200Ω",
+    "ペーシング閾値": "心房・右室 2.5V(0.5ms)以下（Bipolar）／左室 2.0V(0.5ms)",
+    "横隔膜刺激": "5.0V/1.0ms または 7.5V/1.0ms で横隔膜刺激がないこと",
+    "体位": "仰臥位または伏臥位（腕は体の横）",
+    "撮像時間": "制限なし",
+    "累積撮像時間": "制限なし",
+    "MRIモード": "設定必要",
+    "検査中のモード": "ペーシングOff、AOO / VOO / DOO",
+    "ローカル送受信コイル": "円偏波（CP）でRF励起した頭部・下肢・上肢用のみ（送信専用コイルは不可）",
+    "患者監視": "心電図・パルスメータ・非侵襲的血圧測定",
+    "体外式除細動器": "パルスオキシメータまたはECGモニタ（準備は任意）",
+    "備考": "デバイスのシリアル番号による各社サイトの検索で最新の撮像条件を確認できる"
+   },
+   "verify": true
+  },
+  {
+   "id": "ABT-AVEIR",
+   "maker": "Abbott",
+   "type": "リードレスペースメーカ",
+   "group": "アヴェイル LP",
+   "devices": [
+    {
+     "model": "LSP112V",
+     "name": "アヴェイル VR LSP112V"
+    },
+    {
+     "model": "LSP202V",
+     "name": "アヴェイル VR LSP202V"
+    },
+    {
+     "model": "LSP201A",
+     "name": "アヴェイル AR LSP201A"
+    },
+    {
+     "model": "LSP203A",
+     "name": "アヴェイル AR LSP203A"
+    }
+   ],
+   "ra": [],
+   "rv": [],
+   "lv": [],
+   "leadfree": true,
+   "tesla": [
+    "1.5T",
+    "3.0T"
+   ],
+   "cond": {
+    "ガントリ": "水平式クローズドボア",
+    "最大空間勾配磁場": "30T/m",
+    "傾斜磁場スルーレート": "≤200T/m/s",
+    "SAR": "全身 ≦4.0W/kg／頭部 ≤3.2W/kg",
+    "植込み部位": "アヴェイル VR は右心室、アヴェイル AR は右心房",
+    "遺残リード": "不可（プラグは可）",
+    "リードインピーダンス": "該当なし",
+    "ペーシング閾値": "心室 2.5V(0.5ms)以下",
+    "横隔膜刺激": "非同期モード時、5.0V/1.0ms で横隔膜刺激がないこと",
+    "体位": "仰臥位または伏臥位（腕は体の横）",
+    "撮像時間": "制限なし",
+    "累積撮像時間": "制限なし",
+    "MRIモード": "設定必要",
+    "検査中のモード": "ペーシングOff、VOO/AOO/DOO ⇄ VOO",
+    "ローカル送受信コイル": "円偏波（CP）でRF励起した頭部・下肢・上肢用のみ（送信専用コイルは不可）",
+    "患者監視": "心電図・パルスメータ・非侵襲的血圧測定",
+    "体外式除細動器": "パルスオキシメータまたはECGモニタ（準備は任意）",
+    "備考": "デバイスのシリアル番号による各社サイトの検索で最新の撮像条件を確認できる",
+    "管理操作モード": "第一次水準管理操作モードまたは通常操作モード",
+    "植込み後": "制限なし"
+   },
+   "verify": true
+  },
+  {
+   "id": "ABT-ICM",
+   "maker": "Abbott",
+   "type": "ICM",
+   "group": "コンファーム Rx AF / ジョット Dx / アサート IQ",
+   "devices": [
+    {
+     "model": "コンファーム Rx AF",
+     "name": "コンファーム Rx AF"
+    },
+    {
+     "model": "ジョット Dx",
+     "name": "ジョット Dx"
+    },
+    {
+     "model": "アサート IQ",
+     "name": "アサート IQ"
+    }
+   ],
+   "ra": [],
+   "rv": [],
+   "lv": [],
+   "tesla": [
+    "1.5T",
+    "3.0T"
+   ],
+   "cond": {
+    "ガントリ": "水平式クローズドボア",
+    "最大空間勾配磁場": "24T/m",
+    "傾斜磁場スルーレート": "≤200T/m/s",
+    "SAR": "≤0.1W/kg",
+    "植込み部位": "胸部",
+    "遺残リード": "不可（プラグは可）",
+    "リードインピーダンス": "該当なし",
+    "ペーシング閾値": "該当なし",
+    "横隔膜刺激": "該当なし",
+    "体位": "仰臥位または伏臥位（腕は体の横）",
+    "撮像時間": "制限なし",
+    "累積撮像時間": "制限なし",
+    "MRIモード": "該当なし",
+    "検査中のモード": "該当なし",
+    "ローカル送受信コイル": "頭部用・四肢用送受信コイル（クワドラチャのみ）。上肢は手首関節のみ、下肢は股関節を除く",
+    "患者監視": "心電図・パルスメータ・非侵襲的血圧測定",
+    "体外式除細動器": "パルスオキシメータまたはECGモニタ（準備は任意）",
+    "備考": "デバイスのシリアル番号による各社サイトの検索で最新の撮像条件を確認できる",
+    "B1+rms": "≤0.8µT",
+    "除外領域": "体幹",
+    "ホールボディコイル": "使用不可",
+    "アイソセンタ": "頭部・四肢のみ",
+    "植込み後": "なし"
+   },
+   "verify": true
   },
   {
    "id": "BIO-PM1",
@@ -1119,6 +1979,140 @@
    }
   },
   {
+   "id": "BIO-CRTP1",
+   "maker": "BIOTRONIK",
+   "type": "CRT-P",
+   "group": "エヴィア HF-T Pro",
+   "devices": [
+    {
+     "model": "エヴィア HF-T Pro",
+     "name": "エヴィア HF-T Pro"
+    }
+   ],
+   "ra": [],
+   "rv": [],
+   "lv": [],
+   "leadfree": true,
+   "tesla": [
+    "1.5T"
+   ],
+   "cond": {
+    "リードの組合せ": "自社製のProMRI対応リードに限る（型番は添付文書で確認）",
+    "遺残リード・アダプタ": "MRI非対応品の体内留置は不可",
+    "植込み部位": "胸部",
+    "リード植込み後": "6週間を経過すること",
+    "ペーシング閾値": "2.0V(0.4ms)以下（Bipolar）／左室の閾値は条件なし",
+    "リードインピーダンス": "200〜1,500Ω（Bipolar）",
+    "電池状態": "ERIまたはEOSではないこと",
+    "横隔膜刺激": "条件なし",
+    "MRIモード": "MRI専用モードへの設定必須",
+    "MR装置": "トンネル型",
+    "傾斜磁場スルーレート": "200T/m/s以下",
+    "局所送受信コイル": "胸部には使用しないこと",
+    "SAR": "頭部 ≦3.2W/kg／全身 ≦2.0W/kg（通常操作モード）",
+    "db/dt": "条件なし",
+    "患者監視": "パルスオキシメータまたはECGモニタで連続監視",
+    "体外式除細動器": "隣接する部屋に準備すること",
+    "確認者": "植込み医／担当医、デバイス管理医師・プログラマ操作者、MRI検査実施者",
+    "身長": "1.4m以上",
+    "アイソセンタ": "眼より上方、恥骨結合より下方",
+    "撮像時間": "1度の検査で30分まで（次の検査まで4分間RFパルスを印加しない）",
+    "体位": "仰臥位のみ可能",
+    "患者体温": "発熱していないこと（37.8℃未満）"
+   }
+  },
+  {
+   "id": "BIO-CRTP2",
+   "maker": "BIOTRONIK",
+   "type": "CRT-P",
+   "group": "エニトラ 8 HF-T ProMRIシリーズ",
+   "devices": [
+    {
+     "model": "エニトラ 8 HF-T ProMRIシリーズ",
+     "name": "エニトラ 8 HF-T ProMRIシリーズ"
+    }
+   ],
+   "ra": [],
+   "rv": [],
+   "lv": [],
+   "leadfree": true,
+   "tesla": [
+    "1.5T"
+   ],
+   "cond": {
+    "リードの組合せ": "自社製のProMRI対応リードに限る（型番は添付文書で確認）",
+    "遺残リード・アダプタ": "MRI非対応品の体内留置は不可",
+    "植込み部位": "胸部",
+    "リード植込み後": "6週間を経過すること",
+    "ペーシング閾値": "2.0V(0.4ms)以下（Bipolar）／左室の閾値は条件なし",
+    "リードインピーダンス": "200〜1,500Ω（Bipolar）",
+    "電池状態": "ERIまたはEOSではないこと",
+    "横隔膜刺激": "条件なし",
+    "MRIモード": "MRI専用モードへの設定必須",
+    "MR装置": "トンネル型",
+    "傾斜磁場スルーレート": "200T/m/s以下",
+    "局所送受信コイル": "胸部には使用しないこと",
+    "SAR": "頭部 ≦3.2W/kg／全身 ≦2.0W/kg（通常操作モード）",
+    "db/dt": "条件なし",
+    "患者監視": "パルスオキシメータまたはECGモニタで連続監視",
+    "体外式除細動器": "隣接する部屋に準備すること",
+    "確認者": "植込み医／担当医、デバイス管理医師・プログラマ操作者、MRI検査実施者",
+    "身長": "条件なし",
+    "アイソセンタ": "条件なし",
+    "撮像時間": "条件なし",
+    "体位": "条件なし",
+    "患者体温": "条件なし"
+   }
+  },
+  {
+   "id": "BIO-CRTP3",
+   "maker": "BIOTRONIK",
+   "type": "CRT-P",
+   "group": "エヴィティ 8 HF-T／アムヴィア Sky HF-T",
+   "devices": [
+    {
+     "model": "エヴィティ 8 HF-T ProMRIシリーズ",
+     "name": "エヴィティ 8 HF-T ProMRIシリーズ"
+    },
+    {
+     "model": "アムヴィア Sky HF-Tシリーズ",
+     "name": "アムヴィア Sky HF-Tシリーズ"
+    }
+   ],
+   "ra": [],
+   "rv": [],
+   "lv": [],
+   "leadfree": true,
+   "tesla": [
+    "1.5T",
+    "3.0T"
+   ],
+   "cond": {
+    "リードの組合せ": "自社製のProMRI対応リードに限る（型番は添付文書で確認）",
+    "遺残リード・アダプタ": "MRI非対応品の体内留置は不可",
+    "植込み部位": "胸部",
+    "リード植込み後": "6週間を経過すること",
+    "ペーシング閾値": "2.0V(0.4ms)以下（Bipolar）／左室の閾値は条件なし",
+    "リードインピーダンス": "200〜1,500Ω（Bipolar）",
+    "電池状態": "ERIまたはEOSではないこと",
+    "横隔膜刺激": "条件なし",
+    "MRIモード": "MRI専用モードへの設定必須",
+    "MR装置": "トンネル型",
+    "傾斜磁場スルーレート": "200T/m/s以下",
+    "局所送受信コイル": "胸部には使用しないこと",
+    "SAR": "頭部 ≦3.2W/kg／全身 ≦2.0W/kg（通常操作モード）",
+    "db/dt": "条件なし",
+    "患者監視": "パルスオキシメータまたはECGモニタで連続監視",
+    "体外式除細動器": "隣接する部屋に準備すること",
+    "確認者": "植込み医／担当医、デバイス管理医師・プログラマ操作者、MRI検査実施者",
+    "身長": "条件なし",
+    "アイソセンタ": "条件なし",
+    "撮像時間": "条件なし",
+    "体位": "条件なし",
+    "患者体温": "条件なし"
+   }
+  },
+  {
    "id": "BIO-CRTD1",
    "maker": "BIOTRONIK",
    "type": "CRT-D",
@@ -1265,140 +2259,6 @@
     {
      "model": "アクティコア Sky CRT-Dシリーズ",
      "name": "アクティコア Sky CRT-Dシリーズ"
-    }
-   ],
-   "ra": [],
-   "rv": [],
-   "lv": [],
-   "leadfree": true,
-   "tesla": [
-    "1.5T",
-    "3.0T"
-   ],
-   "cond": {
-    "リードの組合せ": "自社製のProMRI対応リードに限る（型番は添付文書で確認）",
-    "遺残リード・アダプタ": "MRI非対応品の体内留置は不可",
-    "植込み部位": "胸部",
-    "リード植込み後": "6週間を経過すること",
-    "ペーシング閾値": "2.0V(0.4ms)以下（Bipolar）／左室の閾値は条件なし",
-    "リードインピーダンス": "200〜1,500Ω（Bipolar）",
-    "電池状態": "ERIまたはEOSではないこと",
-    "横隔膜刺激": "条件なし",
-    "MRIモード": "MRI専用モードへの設定必須",
-    "MR装置": "トンネル型",
-    "傾斜磁場スルーレート": "200T/m/s以下",
-    "局所送受信コイル": "胸部には使用しないこと",
-    "SAR": "頭部 ≦3.2W/kg／全身 ≦2.0W/kg（通常操作モード）",
-    "db/dt": "条件なし",
-    "患者監視": "パルスオキシメータまたはECGモニタで連続監視",
-    "体外式除細動器": "隣接する部屋に準備すること",
-    "確認者": "植込み医／担当医、デバイス管理医師・プログラマ操作者、MRI検査実施者",
-    "身長": "条件なし",
-    "アイソセンタ": "条件なし",
-    "撮像時間": "条件なし",
-    "体位": "条件なし",
-    "患者体温": "条件なし"
-   }
-  },
-  {
-   "id": "BIO-CRTP1",
-   "maker": "BIOTRONIK",
-   "type": "CRT-P",
-   "group": "エヴィア HF-T Pro",
-   "devices": [
-    {
-     "model": "エヴィア HF-T Pro",
-     "name": "エヴィア HF-T Pro"
-    }
-   ],
-   "ra": [],
-   "rv": [],
-   "lv": [],
-   "leadfree": true,
-   "tesla": [
-    "1.5T"
-   ],
-   "cond": {
-    "リードの組合せ": "自社製のProMRI対応リードに限る（型番は添付文書で確認）",
-    "遺残リード・アダプタ": "MRI非対応品の体内留置は不可",
-    "植込み部位": "胸部",
-    "リード植込み後": "6週間を経過すること",
-    "ペーシング閾値": "2.0V(0.4ms)以下（Bipolar）／左室の閾値は条件なし",
-    "リードインピーダンス": "200〜1,500Ω（Bipolar）",
-    "電池状態": "ERIまたはEOSではないこと",
-    "横隔膜刺激": "条件なし",
-    "MRIモード": "MRI専用モードへの設定必須",
-    "MR装置": "トンネル型",
-    "傾斜磁場スルーレート": "200T/m/s以下",
-    "局所送受信コイル": "胸部には使用しないこと",
-    "SAR": "頭部 ≦3.2W/kg／全身 ≦2.0W/kg（通常操作モード）",
-    "db/dt": "条件なし",
-    "患者監視": "パルスオキシメータまたはECGモニタで連続監視",
-    "体外式除細動器": "隣接する部屋に準備すること",
-    "確認者": "植込み医／担当医、デバイス管理医師・プログラマ操作者、MRI検査実施者",
-    "身長": "1.4m以上",
-    "アイソセンタ": "眼より上方、恥骨結合より下方",
-    "撮像時間": "1度の検査で30分まで（次の検査まで4分間RFパルスを印加しない）",
-    "体位": "仰臥位のみ可能",
-    "患者体温": "発熱していないこと（37.8℃未満）"
-   }
-  },
-  {
-   "id": "BIO-CRTP2",
-   "maker": "BIOTRONIK",
-   "type": "CRT-P",
-   "group": "エニトラ 8 HF-T ProMRIシリーズ",
-   "devices": [
-    {
-     "model": "エニトラ 8 HF-T ProMRIシリーズ",
-     "name": "エニトラ 8 HF-T ProMRIシリーズ"
-    }
-   ],
-   "ra": [],
-   "rv": [],
-   "lv": [],
-   "leadfree": true,
-   "tesla": [
-    "1.5T"
-   ],
-   "cond": {
-    "リードの組合せ": "自社製のProMRI対応リードに限る（型番は添付文書で確認）",
-    "遺残リード・アダプタ": "MRI非対応品の体内留置は不可",
-    "植込み部位": "胸部",
-    "リード植込み後": "6週間を経過すること",
-    "ペーシング閾値": "2.0V(0.4ms)以下（Bipolar）／左室の閾値は条件なし",
-    "リードインピーダンス": "200〜1,500Ω（Bipolar）",
-    "電池状態": "ERIまたはEOSではないこと",
-    "横隔膜刺激": "条件なし",
-    "MRIモード": "MRI専用モードへの設定必須",
-    "MR装置": "トンネル型",
-    "傾斜磁場スルーレート": "200T/m/s以下",
-    "局所送受信コイル": "胸部には使用しないこと",
-    "SAR": "頭部 ≦3.2W/kg／全身 ≦2.0W/kg（通常操作モード）",
-    "db/dt": "条件なし",
-    "患者監視": "パルスオキシメータまたはECGモニタで連続監視",
-    "体外式除細動器": "隣接する部屋に準備すること",
-    "確認者": "植込み医／担当医、デバイス管理医師・プログラマ操作者、MRI検査実施者",
-    "身長": "条件なし",
-    "アイソセンタ": "条件なし",
-    "撮像時間": "条件なし",
-    "体位": "条件なし",
-    "患者体温": "条件なし"
-   }
-  },
-  {
-   "id": "BIO-CRTP3",
-   "maker": "BIOTRONIK",
-   "type": "CRT-P",
-   "group": "エヴィティ 8 HF-T／アムヴィア Sky HF-T",
-   "devices": [
-    {
-     "model": "エヴィティ 8 HF-T ProMRIシリーズ",
-     "name": "エヴィティ 8 HF-T ProMRIシリーズ"
-    },
-    {
-     "model": "アムヴィア Sky HF-Tシリーズ",
-     "name": "アムヴィア Sky HF-Tシリーズ"
     }
    ],
    "ra": [],
@@ -2135,6 +2995,819 @@
    }
   },
   {
+   "id": "BSX-DYNAGEN-ICD",
+   "maker": "Boston Scientific",
+   "type": "ICD",
+   "group": "DYNAGEN ICD",
+   "devices": [
+    {
+     "model": "D020",
+     "name": "DYNAGEN ICD D020"
+    },
+    {
+     "model": "D021",
+     "name": "DYNAGEN ICD D021"
+    },
+    {
+     "model": "D022",
+     "name": "DYNAGEN ICD D022"
+    },
+    {
+     "model": "D023",
+     "name": "DYNAGEN ICD D023"
+    },
+    {
+     "model": "D150",
+     "name": "DYNAGEN ICD D150"
+    },
+    {
+     "model": "D151",
+     "name": "DYNAGEN ICD D151"
+    },
+    {
+     "model": "D152",
+     "name": "DYNAGEN ICD D152"
+    },
+    {
+     "model": "D153",
+     "name": "DYNAGEN ICD D153"
+    }
+   ],
+   "ra": [
+    {
+     "model": "7731",
+     "name": "インジェヴィティ 7731"
+    },
+    {
+     "model": "7732",
+     "name": "インジェヴィティ 7732"
+    },
+    {
+     "model": "7735",
+     "name": "インジェヴィティ 7735"
+    },
+    {
+     "model": "7736",
+     "name": "インジェヴィティ 7736"
+    },
+    {
+     "model": "7740",
+     "name": "インジェヴィティ AFx 7740"
+    },
+    {
+     "model": "7741",
+     "name": "インジェヴィティ AFx 7741"
+    },
+    {
+     "model": "7742",
+     "name": "インジェヴィティ AFx 7742"
+    },
+    {
+     "model": "7840",
+     "name": "インジェヴィティ AFx 7840"
+    },
+    {
+     "model": "7841",
+     "name": "インジェヴィティ AFx 7841"
+    },
+    {
+     "model": "7842",
+     "name": "インジェヴィティ AFx 7842"
+    },
+    {
+     "model": "4371",
+     "name": "ファインライン II PU 4371"
+    },
+    {
+     "model": "4372",
+     "name": "ファインライン II PU 4372"
+    },
+    {
+     "model": "4369",
+     "name": "ファインライン II PU 4369"
+    },
+    {
+     "model": "4370",
+     "name": "ファインライン II PU 4370"
+    },
+    {
+     "model": "4456",
+     "name": "ファインライン II PU 4456"
+    },
+    {
+     "model": "4457",
+     "name": "ファインライン II PU 4457"
+    },
+    {
+     "model": "4479",
+     "name": "ファインライン II PU 4479"
+    },
+    {
+     "model": "4480",
+     "name": "ファインライン II PU 4480"
+    },
+    {
+     "model": "4375",
+     "name": "ファインライン II EZ PU 4375"
+    },
+    {
+     "model": "4376",
+     "name": "ファインライン II EZ PU 4376"
+    },
+    {
+     "model": "4377",
+     "name": "ファインライン II EZ PU 4377"
+    },
+    {
+     "model": "4469",
+     "name": "ファインライン II EZ PU 4469"
+    },
+    {
+     "model": "4470",
+     "name": "ファインライン II EZ PU 4470"
+    },
+    {
+     "model": "4471",
+     "name": "ファインライン II EZ PU 4471"
+    },
+    {
+     "model": "4373",
+     "name": "ファインライン II ステロックス 4373"
+    },
+    {
+     "model": "4374",
+     "name": "ファインライン II ステロックス 4374"
+    },
+    {
+     "model": "4458",
+     "name": "ファインライン II ステロックス 4458"
+    },
+    {
+     "model": "4459",
+     "name": "ファインライン II ステロックス 4459"
+    },
+    {
+     "model": "4378",
+     "name": "ファインライン II ステロックス EZ 4378"
+    },
+    {
+     "model": "4379",
+     "name": "ファインライン II ステロックス EZ 4379"
+    },
+    {
+     "model": "4380",
+     "name": "ファインライン II ステロックス EZ 4380"
+    },
+    {
+     "model": "4472",
+     "name": "ファインライン II ステロックス EZ 4472"
+    },
+    {
+     "model": "4473",
+     "name": "ファインライン II ステロックス EZ 4473"
+    },
+    {
+     "model": "4474",
+     "name": "ファインライン II ステロックス EZ 4474"
+    }
+   ],
+   "rv": [
+    {
+     "model": "0675",
+     "name": "リライアンス 4-フロント G AFx 0675"
+    },
+    {
+     "model": "0676",
+     "name": "リライアンス 4-フロント G AFx 0676"
+    },
+    {
+     "model": "0695",
+     "name": "リライアンス 4-フロント G AFx 0695"
+    },
+    {
+     "model": "0696",
+     "name": "リライアンス 4-フロント G AFx 0696"
+    },
+    {
+     "model": "0672",
+     "name": "リライアンス 4-フロント SG AFx 0672"
+    },
+    {
+     "model": "0673",
+     "name": "リライアンス 4-フロント SG AFx 0673"
+    },
+    {
+     "model": "0692",
+     "name": "リライアンス 4-フロント SG AFx 0692"
+    },
+    {
+     "model": "0693",
+     "name": "リライアンス 4-フロント SG AFx 0693"
+    },
+    {
+     "model": "0662",
+     "name": "リライアンス 4-フロント SG 0662"
+    },
+    {
+     "model": "0663",
+     "name": "リライアンス 4-フロント SG 0663"
+    },
+    {
+     "model": "0682",
+     "name": "リライアンス 4-フロント SG 0682"
+    },
+    {
+     "model": "0683",
+     "name": "リライアンス 4-フロント SG 0683"
+    },
+    {
+     "model": "0295",
+     "name": "エンドタック リライアンス G AFx DF-4 0295"
+    },
+    {
+     "model": "0296",
+     "name": "エンドタック リライアンス G AFx DF-4 0296"
+    },
+    {
+     "model": "0292",
+     "name": "エンドタック リライアンス SG AFx DF-4 0292"
+    },
+    {
+     "model": "0293",
+     "name": "エンドタック リライアンス SG AFx DF-4 0293"
+    },
+    {
+     "model": "0285",
+     "name": "エンドタック リライアンス G DF-4 0285"
+    },
+    {
+     "model": "0286",
+     "name": "エンドタック リライアンス G DF-4 0286"
+    },
+    {
+     "model": "0282",
+     "name": "エンドタック リライアンス SG DF-4 0282"
+    },
+    {
+     "model": "0283",
+     "name": "エンドタック リライアンス SG DF-4 0283"
+    },
+    {
+     "model": "0170",
+     "name": "エンドタック リライアンス SG シングルコイル 0170"
+    },
+    {
+     "model": "0171",
+     "name": "エンドタック リライアンス SG シングルコイル 0171"
+    },
+    {
+     "model": "0174",
+     "name": "エンドタック リライアンス G デュアルコイル 0174"
+    },
+    {
+     "model": "0175",
+     "name": "エンドタック リライアンス G デュアルコイル 0175"
+    },
+    {
+     "model": "0176",
+     "name": "エンドタック リライアンス G デュアルコイル 0176"
+    },
+    {
+     "model": "0177",
+     "name": "エンドタック リライアンス G デュアルコイル 0177"
+    },
+    {
+     "model": "0180",
+     "name": "エンドタック リライアンス SG AFx シングルコイル 0180"
+    },
+    {
+     "model": "0181",
+     "name": "エンドタック リライアンス SG AFx シングルコイル 0181"
+    },
+    {
+     "model": "0184",
+     "name": "エンドタック リライアンス G AFx デュアルコイル 0184"
+    },
+    {
+     "model": "0185",
+     "name": "エンドタック リライアンス G AFx デュアルコイル 0185"
+    },
+    {
+     "model": "0186",
+     "name": "エンドタック リライアンス G AFx デュアルコイル 0186"
+    },
+    {
+     "model": "0187",
+     "name": "エンドタック リライアンス G AFx デュアルコイル 0187"
+    }
+   ],
+   "lv": [],
+   "tesla": [
+    "1.5T"
+   ],
+   "cond": {
+    "ガントリ": "水平磁場方式・水素原子核（プロトン）・トンネル型ガントリでのみ使用可",
+    "傾斜磁場スルーレート": "一軸あたり 200T/m/s 以下",
+    "植込み後": "6週間以上経過",
+    "植込み部位": "胸部",
+    "遺残リード": "不可",
+    "リードの状態": "リードの破損や、機器およびリードシステムに異常を示す兆候がないこと",
+    "ペーシング閾値": "≦2.0V（Bipolar）／2.0V超のペーシング依存患者は注意（右房・右室）",
+    "体位": "背臥位または腹臥位のみ（側臥位で実施しない）",
+    "ローカルコイル": "植込み部位にコイルを配置しないこと",
+    "MRIモード": "設定必要",
+    "検査中のモード": "DOO / VOO / AOO / Off",
+    "電池": "Battery Capacity Depleted（EOL）でないこと",
+    "患者監視": "パルスオキシメータ・心電計（ECG）",
+    "体外式除細動器": "必須",
+    "体温": "平常値であり、体温調節機能に問題がないこと",
+    "最大空間勾配磁場": "50T/m（5000G/cm）ICD/CRT-Dシステム植込み部位",
+    "SAR": "全身 ≦2.0W/kg／頭部 ≦3.2W/kg（通常操作モード）",
+    "ペーシング自動復帰": "タイマー（オフ, 3, 6, 9, 12時間）"
+   }
+  },
+  {
+   "id": "BSX-RESONATE-ICD",
+   "maker": "Boston Scientific",
+   "type": "ICD",
+   "group": "RESONATE ICD（D412/D413/D432/D433/D332/D333）",
+   "devices": [
+    {
+     "model": "D412",
+     "name": "RESONATE ICD D412"
+    },
+    {
+     "model": "D413",
+     "name": "RESONATE ICD D413"
+    },
+    {
+     "model": "D432",
+     "name": "RESONATE ICD D432"
+    },
+    {
+     "model": "D433",
+     "name": "RESONATE ICD D433"
+    },
+    {
+     "model": "D332",
+     "name": "RESONATE ICD D332"
+    },
+    {
+     "model": "D333",
+     "name": "RESONATE ICD D333"
+    }
+   ],
+   "ra": [
+    {
+     "model": "7731",
+     "name": "インジェヴィティ 7731"
+    },
+    {
+     "model": "7732",
+     "name": "インジェヴィティ 7732"
+    },
+    {
+     "model": "7735",
+     "name": "インジェヴィティ 7735"
+    },
+    {
+     "model": "7736",
+     "name": "インジェヴィティ 7736"
+    },
+    {
+     "model": "7740",
+     "name": "インジェヴィティ AFx 7740"
+    },
+    {
+     "model": "7741",
+     "name": "インジェヴィティ AFx 7741"
+    },
+    {
+     "model": "7742",
+     "name": "インジェヴィティ AFx 7742"
+    },
+    {
+     "model": "7840",
+     "name": "インジェヴィティ AFx 7840"
+    },
+    {
+     "model": "7841",
+     "name": "インジェヴィティ AFx 7841"
+    },
+    {
+     "model": "7842",
+     "name": "インジェヴィティ AFx 7842"
+    },
+    {
+     "model": "4371",
+     "name": "ファインライン II PU 4371"
+    },
+    {
+     "model": "4372",
+     "name": "ファインライン II PU 4372"
+    },
+    {
+     "model": "4369",
+     "name": "ファインライン II PU 4369"
+    },
+    {
+     "model": "4370",
+     "name": "ファインライン II PU 4370"
+    },
+    {
+     "model": "4456",
+     "name": "ファインライン II PU 4456"
+    },
+    {
+     "model": "4457",
+     "name": "ファインライン II PU 4457"
+    },
+    {
+     "model": "4479",
+     "name": "ファインライン II PU 4479"
+    },
+    {
+     "model": "4480",
+     "name": "ファインライン II PU 4480"
+    },
+    {
+     "model": "4375",
+     "name": "ファインライン II EZ PU 4375"
+    },
+    {
+     "model": "4376",
+     "name": "ファインライン II EZ PU 4376"
+    },
+    {
+     "model": "4377",
+     "name": "ファインライン II EZ PU 4377"
+    },
+    {
+     "model": "4469",
+     "name": "ファインライン II EZ PU 4469"
+    },
+    {
+     "model": "4470",
+     "name": "ファインライン II EZ PU 4470"
+    },
+    {
+     "model": "4471",
+     "name": "ファインライン II EZ PU 4471"
+    },
+    {
+     "model": "4373",
+     "name": "ファインライン II ステロックス 4373"
+    },
+    {
+     "model": "4374",
+     "name": "ファインライン II ステロックス 4374"
+    },
+    {
+     "model": "4458",
+     "name": "ファインライン II ステロックス 4458"
+    },
+    {
+     "model": "4459",
+     "name": "ファインライン II ステロックス 4459"
+    },
+    {
+     "model": "4378",
+     "name": "ファインライン II ステロックス EZ 4378"
+    },
+    {
+     "model": "4379",
+     "name": "ファインライン II ステロックス EZ 4379"
+    },
+    {
+     "model": "4380",
+     "name": "ファインライン II ステロックス EZ 4380"
+    },
+    {
+     "model": "4472",
+     "name": "ファインライン II ステロックス EZ 4472"
+    },
+    {
+     "model": "4473",
+     "name": "ファインライン II ステロックス EZ 4473"
+    },
+    {
+     "model": "4474",
+     "name": "ファインライン II ステロックス EZ 4474"
+    }
+   ],
+   "rv": [
+    {
+     "model": "0675",
+     "name": "リライアンス 4-フロント G AFx 0675"
+    },
+    {
+     "model": "0676",
+     "name": "リライアンス 4-フロント G AFx 0676"
+    },
+    {
+     "model": "0695",
+     "name": "リライアンス 4-フロント G AFx 0695"
+    },
+    {
+     "model": "0696",
+     "name": "リライアンス 4-フロント G AFx 0696"
+    },
+    {
+     "model": "0672",
+     "name": "リライアンス 4-フロント SG AFx 0672"
+    },
+    {
+     "model": "0673",
+     "name": "リライアンス 4-フロント SG AFx 0673"
+    },
+    {
+     "model": "0692",
+     "name": "リライアンス 4-フロント SG AFx 0692"
+    },
+    {
+     "model": "0693",
+     "name": "リライアンス 4-フロント SG AFx 0693"
+    },
+    {
+     "model": "0662",
+     "name": "リライアンス 4-フロント SG 0662"
+    },
+    {
+     "model": "0663",
+     "name": "リライアンス 4-フロント SG 0663"
+    },
+    {
+     "model": "0682",
+     "name": "リライアンス 4-フロント SG 0682"
+    },
+    {
+     "model": "0683",
+     "name": "リライアンス 4-フロント SG 0683"
+    }
+   ],
+   "lv": [],
+   "tesla": [
+    "1.5T",
+    "3.0T"
+   ],
+   "cond": {
+    "ガントリ": "水平磁場方式・水素原子核（プロトン）・トンネル型ガントリでのみ使用可",
+    "傾斜磁場スルーレート": "一軸あたり 200T/m/s 以下",
+    "植込み後": "6週間以上経過",
+    "植込み部位": "胸部",
+    "遺残リード": "不可",
+    "リードの状態": "リードの破損や、機器およびリードシステムに異常を示す兆候がないこと",
+    "ペーシング閾値": "≦2.0V（Bipolar）／2.0V超のペーシング依存患者は注意（右房・右室）",
+    "体位": "背臥位または腹臥位のみ（側臥位で実施しない）",
+    "ローカルコイル": "植込み部位にコイルを配置しないこと",
+    "MRIモード": "設定必要",
+    "検査中のモード": "DOO / VOO / AOO / Off",
+    "電池": "Battery Capacity Depleted（EOL）でないこと",
+    "患者監視": "パルスオキシメータ・心電計（ECG）",
+    "体外式除細動器": "必須",
+    "体温": "平常値であり、体温調節機能に問題がないこと",
+    "最大空間勾配磁場": "50T/m（5000G/cm）ICD/CRT-Dシステム植込み部位",
+    "SAR": "全身 ≦2.0W/kg／頭部 ≦3.2W/kg（通常操作モード）",
+    "ペーシング自動復帰": "タイマー（オフ, 3, 6, 9, 12時間）"
+   }
+  },
+  {
+   "id": "BSX-RESONATE-ICD2",
+   "maker": "Boston Scientific",
+   "type": "ICD",
+   "group": "RESONATE ICD（D120/D121/D400/D401）",
+   "devices": [
+    {
+     "model": "D120",
+     "name": "RESONATE ICD D120"
+    },
+    {
+     "model": "D121",
+     "name": "RESONATE ICD D121"
+    },
+    {
+     "model": "D400",
+     "name": "RESONATE ICD D400"
+    },
+    {
+     "model": "D401",
+     "name": "RESONATE ICD D401"
+    }
+   ],
+   "ra": [
+    {
+     "model": "7731",
+     "name": "インジェヴィティ 7731"
+    },
+    {
+     "model": "7732",
+     "name": "インジェヴィティ 7732"
+    },
+    {
+     "model": "7735",
+     "name": "インジェヴィティ 7735"
+    },
+    {
+     "model": "7736",
+     "name": "インジェヴィティ 7736"
+    },
+    {
+     "model": "7740",
+     "name": "インジェヴィティ AFx 7740"
+    },
+    {
+     "model": "7741",
+     "name": "インジェヴィティ AFx 7741"
+    },
+    {
+     "model": "7742",
+     "name": "インジェヴィティ AFx 7742"
+    },
+    {
+     "model": "7840",
+     "name": "インジェヴィティ AFx 7840"
+    },
+    {
+     "model": "7841",
+     "name": "インジェヴィティ AFx 7841"
+    },
+    {
+     "model": "7842",
+     "name": "インジェヴィティ AFx 7842"
+    },
+    {
+     "model": "4371",
+     "name": "ファインライン II PU 4371"
+    },
+    {
+     "model": "4372",
+     "name": "ファインライン II PU 4372"
+    },
+    {
+     "model": "4369",
+     "name": "ファインライン II PU 4369"
+    },
+    {
+     "model": "4370",
+     "name": "ファインライン II PU 4370"
+    },
+    {
+     "model": "4456",
+     "name": "ファインライン II PU 4456"
+    },
+    {
+     "model": "4457",
+     "name": "ファインライン II PU 4457"
+    },
+    {
+     "model": "4479",
+     "name": "ファインライン II PU 4479"
+    },
+    {
+     "model": "4480",
+     "name": "ファインライン II PU 4480"
+    },
+    {
+     "model": "4375",
+     "name": "ファインライン II EZ PU 4375"
+    },
+    {
+     "model": "4376",
+     "name": "ファインライン II EZ PU 4376"
+    },
+    {
+     "model": "4377",
+     "name": "ファインライン II EZ PU 4377"
+    },
+    {
+     "model": "4469",
+     "name": "ファインライン II EZ PU 4469"
+    },
+    {
+     "model": "4470",
+     "name": "ファインライン II EZ PU 4470"
+    },
+    {
+     "model": "4471",
+     "name": "ファインライン II EZ PU 4471"
+    },
+    {
+     "model": "4373",
+     "name": "ファインライン II ステロックス 4373"
+    },
+    {
+     "model": "4374",
+     "name": "ファインライン II ステロックス 4374"
+    },
+    {
+     "model": "4458",
+     "name": "ファインライン II ステロックス 4458"
+    },
+    {
+     "model": "4459",
+     "name": "ファインライン II ステロックス 4459"
+    },
+    {
+     "model": "4378",
+     "name": "ファインライン II ステロックス EZ 4378"
+    },
+    {
+     "model": "4379",
+     "name": "ファインライン II ステロックス EZ 4379"
+    },
+    {
+     "model": "4380",
+     "name": "ファインライン II ステロックス EZ 4380"
+    },
+    {
+     "model": "4472",
+     "name": "ファインライン II ステロックス EZ 4472"
+    },
+    {
+     "model": "4473",
+     "name": "ファインライン II ステロックス EZ 4473"
+    },
+    {
+     "model": "4474",
+     "name": "ファインライン II ステロックス EZ 4474"
+    }
+   ],
+   "rv": [
+    {
+     "model": "0675",
+     "name": "リライアンス 4-フロント G AFx 0675"
+    },
+    {
+     "model": "0676",
+     "name": "リライアンス 4-フロント G AFx 0676"
+    },
+    {
+     "model": "0695",
+     "name": "リライアンス 4-フロント G AFx 0695"
+    },
+    {
+     "model": "0696",
+     "name": "リライアンス 4-フロント G AFx 0696"
+    },
+    {
+     "model": "0672",
+     "name": "リライアンス 4-フロント SG AFx 0672"
+    },
+    {
+     "model": "0673",
+     "name": "リライアンス 4-フロント SG AFx 0673"
+    },
+    {
+     "model": "0692",
+     "name": "リライアンス 4-フロント SG AFx 0692"
+    },
+    {
+     "model": "0693",
+     "name": "リライアンス 4-フロント SG AFx 0693"
+    },
+    {
+     "model": "0662",
+     "name": "リライアンス 4-フロント SG 0662"
+    },
+    {
+     "model": "0663",
+     "name": "リライアンス 4-フロント SG 0663"
+    },
+    {
+     "model": "0682",
+     "name": "リライアンス 4-フロント SG 0682"
+    },
+    {
+     "model": "0683",
+     "name": "リライアンス 4-フロント SG 0683"
+    }
+   ],
+   "lv": [],
+   "tesla": [
+    "1.5T"
+   ],
+   "cond": {
+    "ガントリ": "水平磁場方式・水素原子核（プロトン）・トンネル型ガントリでのみ使用可",
+    "傾斜磁場スルーレート": "一軸あたり 200T/m/s 以下",
+    "植込み後": "6週間以上経過",
+    "植込み部位": "胸部",
+    "遺残リード": "不可",
+    "リードの状態": "リードの破損や、機器およびリードシステムに異常を示す兆候がないこと",
+    "ペーシング閾値": "≦2.0V（Bipolar）／2.0V超のペーシング依存患者は注意（右房・右室）",
+    "体位": "背臥位または腹臥位のみ（側臥位で実施しない）",
+    "ローカルコイル": "植込み部位にコイルを配置しないこと",
+    "MRIモード": "設定必要",
+    "検査中のモード": "DOO / VOO / AOO / Off",
+    "電池": "Battery Capacity Depleted（EOL）でないこと",
+    "患者監視": "パルスオキシメータ・心電計（ECG）",
+    "体外式除細動器": "必須",
+    "体温": "平常値であり、体温調節機能に問題がないこと",
+    "最大空間勾配磁場": "50T/m（5000G/cm）ICD/CRT-Dシステム植込み部位",
+    "SAR": "全身 ≦2.0W/kg／頭部 ≦3.2W/kg（通常操作モード）",
+    "ペーシング自動復帰": "タイマー（オフ, 3, 6, 9, 12時間）"
+   }
+  },
+  {
    "id": "BSX-VISIONIST",
    "maker": "Boston Scientific",
    "type": "CRT-P",
@@ -2474,1498 +4147,6 @@
     "SAR": "全身 ≦2.0W/kg／頭部 ≦3.2W/kg（1.5T：通常操作モード、3T：通常操作モード及び第一次水準管理操作モード）",
     "B1+rms": "3T でアイソセンタが第7頸椎より低い場合 ≦2.8μT",
     "ペーシング自動復帰": "タイマー（オフ, 3, 6, 9, 12, 24, 48時間）"
-   }
-  },
-  {
-   "id": "BSX-RESONATE-ICD",
-   "maker": "Boston Scientific",
-   "type": "ICD",
-   "group": "RESONATE ICD（D412/D413/D432/D433/D332/D333）",
-   "devices": [
-    {
-     "model": "D412",
-     "name": "RESONATE ICD D412"
-    },
-    {
-     "model": "D413",
-     "name": "RESONATE ICD D413"
-    },
-    {
-     "model": "D432",
-     "name": "RESONATE ICD D432"
-    },
-    {
-     "model": "D433",
-     "name": "RESONATE ICD D433"
-    },
-    {
-     "model": "D332",
-     "name": "RESONATE ICD D332"
-    },
-    {
-     "model": "D333",
-     "name": "RESONATE ICD D333"
-    }
-   ],
-   "ra": [
-    {
-     "model": "7731",
-     "name": "インジェヴィティ 7731"
-    },
-    {
-     "model": "7732",
-     "name": "インジェヴィティ 7732"
-    },
-    {
-     "model": "7735",
-     "name": "インジェヴィティ 7735"
-    },
-    {
-     "model": "7736",
-     "name": "インジェヴィティ 7736"
-    },
-    {
-     "model": "7740",
-     "name": "インジェヴィティ AFx 7740"
-    },
-    {
-     "model": "7741",
-     "name": "インジェヴィティ AFx 7741"
-    },
-    {
-     "model": "7742",
-     "name": "インジェヴィティ AFx 7742"
-    },
-    {
-     "model": "7840",
-     "name": "インジェヴィティ AFx 7840"
-    },
-    {
-     "model": "7841",
-     "name": "インジェヴィティ AFx 7841"
-    },
-    {
-     "model": "7842",
-     "name": "インジェヴィティ AFx 7842"
-    },
-    {
-     "model": "4371",
-     "name": "ファインライン II PU 4371"
-    },
-    {
-     "model": "4372",
-     "name": "ファインライン II PU 4372"
-    },
-    {
-     "model": "4369",
-     "name": "ファインライン II PU 4369"
-    },
-    {
-     "model": "4370",
-     "name": "ファインライン II PU 4370"
-    },
-    {
-     "model": "4456",
-     "name": "ファインライン II PU 4456"
-    },
-    {
-     "model": "4457",
-     "name": "ファインライン II PU 4457"
-    },
-    {
-     "model": "4479",
-     "name": "ファインライン II PU 4479"
-    },
-    {
-     "model": "4480",
-     "name": "ファインライン II PU 4480"
-    },
-    {
-     "model": "4375",
-     "name": "ファインライン II EZ PU 4375"
-    },
-    {
-     "model": "4376",
-     "name": "ファインライン II EZ PU 4376"
-    },
-    {
-     "model": "4377",
-     "name": "ファインライン II EZ PU 4377"
-    },
-    {
-     "model": "4469",
-     "name": "ファインライン II EZ PU 4469"
-    },
-    {
-     "model": "4470",
-     "name": "ファインライン II EZ PU 4470"
-    },
-    {
-     "model": "4471",
-     "name": "ファインライン II EZ PU 4471"
-    },
-    {
-     "model": "4373",
-     "name": "ファインライン II ステロックス 4373"
-    },
-    {
-     "model": "4374",
-     "name": "ファインライン II ステロックス 4374"
-    },
-    {
-     "model": "4458",
-     "name": "ファインライン II ステロックス 4458"
-    },
-    {
-     "model": "4459",
-     "name": "ファインライン II ステロックス 4459"
-    },
-    {
-     "model": "4378",
-     "name": "ファインライン II ステロックス EZ 4378"
-    },
-    {
-     "model": "4379",
-     "name": "ファインライン II ステロックス EZ 4379"
-    },
-    {
-     "model": "4380",
-     "name": "ファインライン II ステロックス EZ 4380"
-    },
-    {
-     "model": "4472",
-     "name": "ファインライン II ステロックス EZ 4472"
-    },
-    {
-     "model": "4473",
-     "name": "ファインライン II ステロックス EZ 4473"
-    },
-    {
-     "model": "4474",
-     "name": "ファインライン II ステロックス EZ 4474"
-    }
-   ],
-   "rv": [
-    {
-     "model": "0675",
-     "name": "リライアンス 4-フロント G AFx 0675"
-    },
-    {
-     "model": "0676",
-     "name": "リライアンス 4-フロント G AFx 0676"
-    },
-    {
-     "model": "0695",
-     "name": "リライアンス 4-フロント G AFx 0695"
-    },
-    {
-     "model": "0696",
-     "name": "リライアンス 4-フロント G AFx 0696"
-    },
-    {
-     "model": "0672",
-     "name": "リライアンス 4-フロント SG AFx 0672"
-    },
-    {
-     "model": "0673",
-     "name": "リライアンス 4-フロント SG AFx 0673"
-    },
-    {
-     "model": "0692",
-     "name": "リライアンス 4-フロント SG AFx 0692"
-    },
-    {
-     "model": "0693",
-     "name": "リライアンス 4-フロント SG AFx 0693"
-    },
-    {
-     "model": "0662",
-     "name": "リライアンス 4-フロント SG 0662"
-    },
-    {
-     "model": "0663",
-     "name": "リライアンス 4-フロント SG 0663"
-    },
-    {
-     "model": "0682",
-     "name": "リライアンス 4-フロント SG 0682"
-    },
-    {
-     "model": "0683",
-     "name": "リライアンス 4-フロント SG 0683"
-    }
-   ],
-   "lv": [],
-   "tesla": [
-    "1.5T",
-    "3.0T"
-   ],
-   "cond": {
-    "ガントリ": "水平磁場方式・水素原子核（プロトン）・トンネル型ガントリでのみ使用可",
-    "傾斜磁場スルーレート": "一軸あたり 200T/m/s 以下",
-    "植込み後": "6週間以上経過",
-    "植込み部位": "胸部",
-    "遺残リード": "不可",
-    "リードの状態": "リードの破損や、機器およびリードシステムに異常を示す兆候がないこと",
-    "ペーシング閾値": "≦2.0V（Bipolar）／2.0V超のペーシング依存患者は注意（右房・右室）",
-    "体位": "背臥位または腹臥位のみ（側臥位で実施しない）",
-    "ローカルコイル": "植込み部位にコイルを配置しないこと",
-    "MRIモード": "設定必要",
-    "検査中のモード": "DOO / VOO / AOO / Off",
-    "電池": "Battery Capacity Depleted（EOL）でないこと",
-    "患者監視": "パルスオキシメータ・心電計（ECG）",
-    "体外式除細動器": "必須",
-    "体温": "平常値であり、体温調節機能に問題がないこと",
-    "最大空間勾配磁場": "50T/m（5000G/cm）ICD/CRT-Dシステム植込み部位",
-    "SAR": "全身 ≦2.0W/kg／頭部 ≦3.2W/kg（通常操作モード）",
-    "ペーシング自動復帰": "タイマー（オフ, 3, 6, 9, 12時間）"
-   }
-  },
-  {
-   "id": "BSX-RESONATE-CRTD",
-   "maker": "Boston Scientific",
-   "type": "CRT-D",
-   "group": "RESONATE CRT-D（G437/G337/G447）",
-   "devices": [
-    {
-     "model": "G437",
-     "name": "RESONATE CRT-D G437"
-    },
-    {
-     "model": "G337",
-     "name": "RESONATE CRT-D G337"
-    },
-    {
-     "model": "G447",
-     "name": "RESONATE CRT-D G447"
-    }
-   ],
-   "ra": [
-    {
-     "model": "7731",
-     "name": "インジェヴィティ 7731"
-    },
-    {
-     "model": "7732",
-     "name": "インジェヴィティ 7732"
-    },
-    {
-     "model": "7735",
-     "name": "インジェヴィティ 7735"
-    },
-    {
-     "model": "7736",
-     "name": "インジェヴィティ 7736"
-    },
-    {
-     "model": "7740",
-     "name": "インジェヴィティ AFx 7740"
-    },
-    {
-     "model": "7741",
-     "name": "インジェヴィティ AFx 7741"
-    },
-    {
-     "model": "7742",
-     "name": "インジェヴィティ AFx 7742"
-    },
-    {
-     "model": "7840",
-     "name": "インジェヴィティ AFx 7840"
-    },
-    {
-     "model": "7841",
-     "name": "インジェヴィティ AFx 7841"
-    },
-    {
-     "model": "7842",
-     "name": "インジェヴィティ AFx 7842"
-    },
-    {
-     "model": "4371",
-     "name": "ファインライン II PU 4371"
-    },
-    {
-     "model": "4372",
-     "name": "ファインライン II PU 4372"
-    },
-    {
-     "model": "4369",
-     "name": "ファインライン II PU 4369"
-    },
-    {
-     "model": "4370",
-     "name": "ファインライン II PU 4370"
-    },
-    {
-     "model": "4456",
-     "name": "ファインライン II PU 4456"
-    },
-    {
-     "model": "4457",
-     "name": "ファインライン II PU 4457"
-    },
-    {
-     "model": "4479",
-     "name": "ファインライン II PU 4479"
-    },
-    {
-     "model": "4480",
-     "name": "ファインライン II PU 4480"
-    },
-    {
-     "model": "4375",
-     "name": "ファインライン II EZ PU 4375"
-    },
-    {
-     "model": "4376",
-     "name": "ファインライン II EZ PU 4376"
-    },
-    {
-     "model": "4377",
-     "name": "ファインライン II EZ PU 4377"
-    },
-    {
-     "model": "4469",
-     "name": "ファインライン II EZ PU 4469"
-    },
-    {
-     "model": "4470",
-     "name": "ファインライン II EZ PU 4470"
-    },
-    {
-     "model": "4471",
-     "name": "ファインライン II EZ PU 4471"
-    },
-    {
-     "model": "4373",
-     "name": "ファインライン II ステロックス 4373"
-    },
-    {
-     "model": "4374",
-     "name": "ファインライン II ステロックス 4374"
-    },
-    {
-     "model": "4458",
-     "name": "ファインライン II ステロックス 4458"
-    },
-    {
-     "model": "4459",
-     "name": "ファインライン II ステロックス 4459"
-    },
-    {
-     "model": "4378",
-     "name": "ファインライン II ステロックス EZ 4378"
-    },
-    {
-     "model": "4379",
-     "name": "ファインライン II ステロックス EZ 4379"
-    },
-    {
-     "model": "4380",
-     "name": "ファインライン II ステロックス EZ 4380"
-    },
-    {
-     "model": "4472",
-     "name": "ファインライン II ステロックス EZ 4472"
-    },
-    {
-     "model": "4473",
-     "name": "ファインライン II ステロックス EZ 4473"
-    },
-    {
-     "model": "4474",
-     "name": "ファインライン II ステロックス EZ 4474"
-    }
-   ],
-   "rv": [
-    {
-     "model": "0675",
-     "name": "リライアンス 4-フロント G AFx 0675"
-    },
-    {
-     "model": "0676",
-     "name": "リライアンス 4-フロント G AFx 0676"
-    },
-    {
-     "model": "0695",
-     "name": "リライアンス 4-フロント G AFx 0695"
-    },
-    {
-     "model": "0696",
-     "name": "リライアンス 4-フロント G AFx 0696"
-    },
-    {
-     "model": "0672",
-     "name": "リライアンス 4-フロント SG AFx 0672"
-    },
-    {
-     "model": "0673",
-     "name": "リライアンス 4-フロント SG AFx 0673"
-    },
-    {
-     "model": "0692",
-     "name": "リライアンス 4-フロント SG AFx 0692"
-    },
-    {
-     "model": "0693",
-     "name": "リライアンス 4-フロント SG AFx 0693"
-    },
-    {
-     "model": "0662",
-     "name": "リライアンス 4-フロント SG 0662"
-    },
-    {
-     "model": "0663",
-     "name": "リライアンス 4-フロント SG 0663"
-    },
-    {
-     "model": "0682",
-     "name": "リライアンス 4-フロント SG 0682"
-    },
-    {
-     "model": "0683",
-     "name": "リライアンス 4-フロント SG 0683"
-    },
-    {
-     "model": "0295",
-     "name": "エンドタック リライアンス G AFx DF-4 0295"
-    },
-    {
-     "model": "0296",
-     "name": "エンドタック リライアンス G AFx DF-4 0296"
-    },
-    {
-     "model": "0292",
-     "name": "エンドタック リライアンス SG AFx DF-4 0292"
-    },
-    {
-     "model": "0293",
-     "name": "エンドタック リライアンス SG AFx DF-4 0293"
-    },
-    {
-     "model": "0285",
-     "name": "エンドタック リライアンス G DF-4 0285"
-    },
-    {
-     "model": "0286",
-     "name": "エンドタック リライアンス G DF-4 0286"
-    },
-    {
-     "model": "0282",
-     "name": "エンドタック リライアンス SG DF-4 0282"
-    },
-    {
-     "model": "0283",
-     "name": "エンドタック リライアンス SG DF-4 0283"
-    },
-    {
-     "model": "0170",
-     "name": "エンドタック リライアンス SG シングルコイル 0170"
-    },
-    {
-     "model": "0171",
-     "name": "エンドタック リライアンス SG シングルコイル 0171"
-    },
-    {
-     "model": "0174",
-     "name": "エンドタック リライアンス G デュアルコイル 0174"
-    },
-    {
-     "model": "0175",
-     "name": "エンドタック リライアンス G デュアルコイル 0175"
-    },
-    {
-     "model": "0176",
-     "name": "エンドタック リライアンス G デュアルコイル 0176"
-    },
-    {
-     "model": "0177",
-     "name": "エンドタック リライアンス G デュアルコイル 0177"
-    },
-    {
-     "model": "0180",
-     "name": "エンドタック リライアンス SG AFx シングルコイル 0180"
-    },
-    {
-     "model": "0181",
-     "name": "エンドタック リライアンス SG AFx シングルコイル 0181"
-    },
-    {
-     "model": "0184",
-     "name": "エンドタック リライアンス G AFx デュアルコイル 0184"
-    },
-    {
-     "model": "0185",
-     "name": "エンドタック リライアンス G AFx デュアルコイル 0185"
-    },
-    {
-     "model": "0186",
-     "name": "エンドタック リライアンス G AFx デュアルコイル 0186"
-    },
-    {
-     "model": "0187",
-     "name": "エンドタック リライアンス G AFx デュアルコイル 0187"
-    }
-   ],
-   "lv": [
-    {
-     "model": "4671",
-     "name": "アキュイティ X4 4671"
-    },
-    {
-     "model": "4672",
-     "name": "アキュイティ X4 4672"
-    },
-    {
-     "model": "4674",
-     "name": "アキュイティ X4 4674"
-    },
-    {
-     "model": "4675",
-     "name": "アキュイティ X4 4675"
-    },
-    {
-     "model": "4677",
-     "name": "アキュイティ X4 4677"
-    },
-    {
-     "model": "4678",
-     "name": "アキュイティ X4 4678"
-    }
-   ],
-   "tesla": [
-    "1.5T",
-    "3.0T"
-   ],
-   "cond": {
-    "ガントリ": "水平磁場方式・水素原子核（プロトン）・トンネル型ガントリでのみ使用可",
-    "傾斜磁場スルーレート": "一軸あたり 200T/m/s 以下",
-    "植込み後": "6週間以上経過",
-    "植込み部位": "胸部",
-    "遺残リード": "不可",
-    "リードの状態": "リードの破損や、機器およびリードシステムに異常を示す兆候がないこと",
-    "ペーシング閾値": "≦2.0V（Bipolar）／2.0V超のペーシング依存患者は注意（右房・右室）",
-    "体位": "背臥位または腹臥位のみ（側臥位で実施しない）",
-    "ローカルコイル": "植込み部位にコイルを配置しないこと",
-    "MRIモード": "設定必要",
-    "検査中のモード": "DOO / VOO / AOO / Off",
-    "電池": "Battery Capacity Depleted（EOL）でないこと",
-    "患者監視": "パルスオキシメータ・心電計（ECG）",
-    "体外式除細動器": "必須",
-    "体温": "平常値であり、体温調節機能に問題がないこと",
-    "最大空間勾配磁場": "50T/m（5000G/cm）ICD/CRT-Dシステム植込み部位",
-    "SAR": "全身 ≦2.0W/kg／頭部 ≦3.2W/kg（通常操作モード）",
-    "ペーシング自動復帰": "タイマー（オフ, 3, 6, 9, 12時間）"
-   }
-  },
-  {
-   "id": "BSX-RESONATE-ICD2",
-   "maker": "Boston Scientific",
-   "type": "ICD",
-   "group": "RESONATE ICD（D120/D121/D400/D401）",
-   "devices": [
-    {
-     "model": "D120",
-     "name": "RESONATE ICD D120"
-    },
-    {
-     "model": "D121",
-     "name": "RESONATE ICD D121"
-    },
-    {
-     "model": "D400",
-     "name": "RESONATE ICD D400"
-    },
-    {
-     "model": "D401",
-     "name": "RESONATE ICD D401"
-    }
-   ],
-   "ra": [
-    {
-     "model": "7731",
-     "name": "インジェヴィティ 7731"
-    },
-    {
-     "model": "7732",
-     "name": "インジェヴィティ 7732"
-    },
-    {
-     "model": "7735",
-     "name": "インジェヴィティ 7735"
-    },
-    {
-     "model": "7736",
-     "name": "インジェヴィティ 7736"
-    },
-    {
-     "model": "7740",
-     "name": "インジェヴィティ AFx 7740"
-    },
-    {
-     "model": "7741",
-     "name": "インジェヴィティ AFx 7741"
-    },
-    {
-     "model": "7742",
-     "name": "インジェヴィティ AFx 7742"
-    },
-    {
-     "model": "7840",
-     "name": "インジェヴィティ AFx 7840"
-    },
-    {
-     "model": "7841",
-     "name": "インジェヴィティ AFx 7841"
-    },
-    {
-     "model": "7842",
-     "name": "インジェヴィティ AFx 7842"
-    },
-    {
-     "model": "4371",
-     "name": "ファインライン II PU 4371"
-    },
-    {
-     "model": "4372",
-     "name": "ファインライン II PU 4372"
-    },
-    {
-     "model": "4369",
-     "name": "ファインライン II PU 4369"
-    },
-    {
-     "model": "4370",
-     "name": "ファインライン II PU 4370"
-    },
-    {
-     "model": "4456",
-     "name": "ファインライン II PU 4456"
-    },
-    {
-     "model": "4457",
-     "name": "ファインライン II PU 4457"
-    },
-    {
-     "model": "4479",
-     "name": "ファインライン II PU 4479"
-    },
-    {
-     "model": "4480",
-     "name": "ファインライン II PU 4480"
-    },
-    {
-     "model": "4375",
-     "name": "ファインライン II EZ PU 4375"
-    },
-    {
-     "model": "4376",
-     "name": "ファインライン II EZ PU 4376"
-    },
-    {
-     "model": "4377",
-     "name": "ファインライン II EZ PU 4377"
-    },
-    {
-     "model": "4469",
-     "name": "ファインライン II EZ PU 4469"
-    },
-    {
-     "model": "4470",
-     "name": "ファインライン II EZ PU 4470"
-    },
-    {
-     "model": "4471",
-     "name": "ファインライン II EZ PU 4471"
-    },
-    {
-     "model": "4373",
-     "name": "ファインライン II ステロックス 4373"
-    },
-    {
-     "model": "4374",
-     "name": "ファインライン II ステロックス 4374"
-    },
-    {
-     "model": "4458",
-     "name": "ファインライン II ステロックス 4458"
-    },
-    {
-     "model": "4459",
-     "name": "ファインライン II ステロックス 4459"
-    },
-    {
-     "model": "4378",
-     "name": "ファインライン II ステロックス EZ 4378"
-    },
-    {
-     "model": "4379",
-     "name": "ファインライン II ステロックス EZ 4379"
-    },
-    {
-     "model": "4380",
-     "name": "ファインライン II ステロックス EZ 4380"
-    },
-    {
-     "model": "4472",
-     "name": "ファインライン II ステロックス EZ 4472"
-    },
-    {
-     "model": "4473",
-     "name": "ファインライン II ステロックス EZ 4473"
-    },
-    {
-     "model": "4474",
-     "name": "ファインライン II ステロックス EZ 4474"
-    }
-   ],
-   "rv": [
-    {
-     "model": "0675",
-     "name": "リライアンス 4-フロント G AFx 0675"
-    },
-    {
-     "model": "0676",
-     "name": "リライアンス 4-フロント G AFx 0676"
-    },
-    {
-     "model": "0695",
-     "name": "リライアンス 4-フロント G AFx 0695"
-    },
-    {
-     "model": "0696",
-     "name": "リライアンス 4-フロント G AFx 0696"
-    },
-    {
-     "model": "0672",
-     "name": "リライアンス 4-フロント SG AFx 0672"
-    },
-    {
-     "model": "0673",
-     "name": "リライアンス 4-フロント SG AFx 0673"
-    },
-    {
-     "model": "0692",
-     "name": "リライアンス 4-フロント SG AFx 0692"
-    },
-    {
-     "model": "0693",
-     "name": "リライアンス 4-フロント SG AFx 0693"
-    },
-    {
-     "model": "0662",
-     "name": "リライアンス 4-フロント SG 0662"
-    },
-    {
-     "model": "0663",
-     "name": "リライアンス 4-フロント SG 0663"
-    },
-    {
-     "model": "0682",
-     "name": "リライアンス 4-フロント SG 0682"
-    },
-    {
-     "model": "0683",
-     "name": "リライアンス 4-フロント SG 0683"
-    }
-   ],
-   "lv": [],
-   "tesla": [
-    "1.5T"
-   ],
-   "cond": {
-    "ガントリ": "水平磁場方式・水素原子核（プロトン）・トンネル型ガントリでのみ使用可",
-    "傾斜磁場スルーレート": "一軸あたり 200T/m/s 以下",
-    "植込み後": "6週間以上経過",
-    "植込み部位": "胸部",
-    "遺残リード": "不可",
-    "リードの状態": "リードの破損や、機器およびリードシステムに異常を示す兆候がないこと",
-    "ペーシング閾値": "≦2.0V（Bipolar）／2.0V超のペーシング依存患者は注意（右房・右室）",
-    "体位": "背臥位または腹臥位のみ（側臥位で実施しない）",
-    "ローカルコイル": "植込み部位にコイルを配置しないこと",
-    "MRIモード": "設定必要",
-    "検査中のモード": "DOO / VOO / AOO / Off",
-    "電池": "Battery Capacity Depleted（EOL）でないこと",
-    "患者監視": "パルスオキシメータ・心電計（ECG）",
-    "体外式除細動器": "必須",
-    "体温": "平常値であり、体温調節機能に問題がないこと",
-    "最大空間勾配磁場": "50T/m（5000G/cm）ICD/CRT-Dシステム植込み部位",
-    "SAR": "全身 ≦2.0W/kg／頭部 ≦3.2W/kg（通常操作モード）",
-    "ペーシング自動復帰": "タイマー（オフ, 3, 6, 9, 12時間）"
-   }
-  },
-  {
-   "id": "BSX-RESONATE-CRTD2",
-   "maker": "Boston Scientific",
-   "type": "CRT-D",
-   "group": "RESONATE CRT-D（G128/G138/G124/G125）",
-   "devices": [
-    {
-     "model": "G128",
-     "name": "RESONATE CRT-D G128"
-    },
-    {
-     "model": "G138",
-     "name": "RESONATE CRT-D G138"
-    },
-    {
-     "model": "G124",
-     "name": "RESONATE CRT-D G124"
-    },
-    {
-     "model": "G125",
-     "name": "RESONATE CRT-D G125"
-    }
-   ],
-   "ra": [
-    {
-     "model": "7731",
-     "name": "インジェヴィティ 7731"
-    },
-    {
-     "model": "7732",
-     "name": "インジェヴィティ 7732"
-    },
-    {
-     "model": "7735",
-     "name": "インジェヴィティ 7735"
-    },
-    {
-     "model": "7736",
-     "name": "インジェヴィティ 7736"
-    },
-    {
-     "model": "7740",
-     "name": "インジェヴィティ AFx 7740"
-    },
-    {
-     "model": "7741",
-     "name": "インジェヴィティ AFx 7741"
-    },
-    {
-     "model": "7742",
-     "name": "インジェヴィティ AFx 7742"
-    },
-    {
-     "model": "7840",
-     "name": "インジェヴィティ AFx 7840"
-    },
-    {
-     "model": "7841",
-     "name": "インジェヴィティ AFx 7841"
-    },
-    {
-     "model": "7842",
-     "name": "インジェヴィティ AFx 7842"
-    },
-    {
-     "model": "4371",
-     "name": "ファインライン II PU 4371"
-    },
-    {
-     "model": "4372",
-     "name": "ファインライン II PU 4372"
-    },
-    {
-     "model": "4369",
-     "name": "ファインライン II PU 4369"
-    },
-    {
-     "model": "4370",
-     "name": "ファインライン II PU 4370"
-    },
-    {
-     "model": "4456",
-     "name": "ファインライン II PU 4456"
-    },
-    {
-     "model": "4457",
-     "name": "ファインライン II PU 4457"
-    },
-    {
-     "model": "4479",
-     "name": "ファインライン II PU 4479"
-    },
-    {
-     "model": "4480",
-     "name": "ファインライン II PU 4480"
-    },
-    {
-     "model": "4375",
-     "name": "ファインライン II EZ PU 4375"
-    },
-    {
-     "model": "4376",
-     "name": "ファインライン II EZ PU 4376"
-    },
-    {
-     "model": "4377",
-     "name": "ファインライン II EZ PU 4377"
-    },
-    {
-     "model": "4469",
-     "name": "ファインライン II EZ PU 4469"
-    },
-    {
-     "model": "4470",
-     "name": "ファインライン II EZ PU 4470"
-    },
-    {
-     "model": "4471",
-     "name": "ファインライン II EZ PU 4471"
-    },
-    {
-     "model": "4373",
-     "name": "ファインライン II ステロックス 4373"
-    },
-    {
-     "model": "4374",
-     "name": "ファインライン II ステロックス 4374"
-    },
-    {
-     "model": "4458",
-     "name": "ファインライン II ステロックス 4458"
-    },
-    {
-     "model": "4459",
-     "name": "ファインライン II ステロックス 4459"
-    },
-    {
-     "model": "4378",
-     "name": "ファインライン II ステロックス EZ 4378"
-    },
-    {
-     "model": "4379",
-     "name": "ファインライン II ステロックス EZ 4379"
-    },
-    {
-     "model": "4380",
-     "name": "ファインライン II ステロックス EZ 4380"
-    },
-    {
-     "model": "4472",
-     "name": "ファインライン II ステロックス EZ 4472"
-    },
-    {
-     "model": "4473",
-     "name": "ファインライン II ステロックス EZ 4473"
-    },
-    {
-     "model": "4474",
-     "name": "ファインライン II ステロックス EZ 4474"
-    }
-   ],
-   "rv": [
-    {
-     "model": "0675",
-     "name": "リライアンス 4-フロント G AFx 0675"
-    },
-    {
-     "model": "0676",
-     "name": "リライアンス 4-フロント G AFx 0676"
-    },
-    {
-     "model": "0695",
-     "name": "リライアンス 4-フロント G AFx 0695"
-    },
-    {
-     "model": "0696",
-     "name": "リライアンス 4-フロント G AFx 0696"
-    },
-    {
-     "model": "0672",
-     "name": "リライアンス 4-フロント SG AFx 0672"
-    },
-    {
-     "model": "0673",
-     "name": "リライアンス 4-フロント SG AFx 0673"
-    },
-    {
-     "model": "0692",
-     "name": "リライアンス 4-フロント SG AFx 0692"
-    },
-    {
-     "model": "0693",
-     "name": "リライアンス 4-フロント SG AFx 0693"
-    },
-    {
-     "model": "0662",
-     "name": "リライアンス 4-フロント SG 0662"
-    },
-    {
-     "model": "0663",
-     "name": "リライアンス 4-フロント SG 0663"
-    },
-    {
-     "model": "0682",
-     "name": "リライアンス 4-フロント SG 0682"
-    },
-    {
-     "model": "0683",
-     "name": "リライアンス 4-フロント SG 0683"
-    },
-    {
-     "model": "0295",
-     "name": "エンドタック リライアンス G AFx DF-4 0295"
-    },
-    {
-     "model": "0296",
-     "name": "エンドタック リライアンス G AFx DF-4 0296"
-    },
-    {
-     "model": "0292",
-     "name": "エンドタック リライアンス SG AFx DF-4 0292"
-    },
-    {
-     "model": "0293",
-     "name": "エンドタック リライアンス SG AFx DF-4 0293"
-    },
-    {
-     "model": "0285",
-     "name": "エンドタック リライアンス G DF-4 0285"
-    },
-    {
-     "model": "0286",
-     "name": "エンドタック リライアンス G DF-4 0286"
-    },
-    {
-     "model": "0282",
-     "name": "エンドタック リライアンス SG DF-4 0282"
-    },
-    {
-     "model": "0283",
-     "name": "エンドタック リライアンス SG DF-4 0283"
-    },
-    {
-     "model": "0170",
-     "name": "エンドタック リライアンス SG シングルコイル 0170"
-    },
-    {
-     "model": "0171",
-     "name": "エンドタック リライアンス SG シングルコイル 0171"
-    },
-    {
-     "model": "0174",
-     "name": "エンドタック リライアンス G デュアルコイル 0174"
-    },
-    {
-     "model": "0175",
-     "name": "エンドタック リライアンス G デュアルコイル 0175"
-    },
-    {
-     "model": "0176",
-     "name": "エンドタック リライアンス G デュアルコイル 0176"
-    },
-    {
-     "model": "0177",
-     "name": "エンドタック リライアンス G デュアルコイル 0177"
-    },
-    {
-     "model": "0180",
-     "name": "エンドタック リライアンス SG AFx シングルコイル 0180"
-    },
-    {
-     "model": "0181",
-     "name": "エンドタック リライアンス SG AFx シングルコイル 0181"
-    },
-    {
-     "model": "0184",
-     "name": "エンドタック リライアンス G AFx デュアルコイル 0184"
-    },
-    {
-     "model": "0185",
-     "name": "エンドタック リライアンス G AFx デュアルコイル 0185"
-    },
-    {
-     "model": "0186",
-     "name": "エンドタック リライアンス G AFx デュアルコイル 0186"
-    },
-    {
-     "model": "0187",
-     "name": "エンドタック リライアンス G AFx デュアルコイル 0187"
-    }
-   ],
-   "lv": [
-    {
-     "model": "4671",
-     "name": "アキュイティ X4 4671"
-    },
-    {
-     "model": "4672",
-     "name": "アキュイティ X4 4672"
-    },
-    {
-     "model": "4674",
-     "name": "アキュイティ X4 4674"
-    },
-    {
-     "model": "4675",
-     "name": "アキュイティ X4 4675"
-    },
-    {
-     "model": "4677",
-     "name": "アキュイティ X4 4677"
-    },
-    {
-     "model": "4678",
-     "name": "アキュイティ X4 4678"
-    }
-   ],
-   "tesla": [
-    "1.5T"
-   ],
-   "cond": {
-    "ガントリ": "水平磁場方式・水素原子核（プロトン）・トンネル型ガントリでのみ使用可",
-    "傾斜磁場スルーレート": "一軸あたり 200T/m/s 以下",
-    "植込み後": "6週間以上経過",
-    "植込み部位": "胸部",
-    "遺残リード": "不可",
-    "リードの状態": "リードの破損や、機器およびリードシステムに異常を示す兆候がないこと",
-    "ペーシング閾値": "≦2.0V（Bipolar）／2.0V超のペーシング依存患者は注意（右房・右室）",
-    "体位": "背臥位または腹臥位のみ（側臥位で実施しない）",
-    "ローカルコイル": "植込み部位にコイルを配置しないこと",
-    "MRIモード": "設定必要",
-    "検査中のモード": "DOO / VOO / AOO / Off",
-    "電池": "Battery Capacity Depleted（EOL）でないこと",
-    "患者監視": "パルスオキシメータ・心電計（ECG）",
-    "体外式除細動器": "必須",
-    "体温": "平常値であり、体温調節機能に問題がないこと",
-    "最大空間勾配磁場": "50T/m（5000G/cm）ICD/CRT-Dシステム植込み部位",
-    "SAR": "全身 ≦2.0W/kg／頭部 ≦3.2W/kg（通常操作モード）",
-    "ペーシング自動復帰": "タイマー（オフ, 3, 6, 9, 12時間）"
-   }
-  },
-  {
-   "id": "BSX-DYNAGEN-ICD",
-   "maker": "Boston Scientific",
-   "type": "ICD",
-   "group": "DYNAGEN ICD",
-   "devices": [
-    {
-     "model": "D020",
-     "name": "DYNAGEN ICD D020"
-    },
-    {
-     "model": "D021",
-     "name": "DYNAGEN ICD D021"
-    },
-    {
-     "model": "D022",
-     "name": "DYNAGEN ICD D022"
-    },
-    {
-     "model": "D023",
-     "name": "DYNAGEN ICD D023"
-    },
-    {
-     "model": "D150",
-     "name": "DYNAGEN ICD D150"
-    },
-    {
-     "model": "D151",
-     "name": "DYNAGEN ICD D151"
-    },
-    {
-     "model": "D152",
-     "name": "DYNAGEN ICD D152"
-    },
-    {
-     "model": "D153",
-     "name": "DYNAGEN ICD D153"
-    }
-   ],
-   "ra": [
-    {
-     "model": "7731",
-     "name": "インジェヴィティ 7731"
-    },
-    {
-     "model": "7732",
-     "name": "インジェヴィティ 7732"
-    },
-    {
-     "model": "7735",
-     "name": "インジェヴィティ 7735"
-    },
-    {
-     "model": "7736",
-     "name": "インジェヴィティ 7736"
-    },
-    {
-     "model": "7740",
-     "name": "インジェヴィティ AFx 7740"
-    },
-    {
-     "model": "7741",
-     "name": "インジェヴィティ AFx 7741"
-    },
-    {
-     "model": "7742",
-     "name": "インジェヴィティ AFx 7742"
-    },
-    {
-     "model": "7840",
-     "name": "インジェヴィティ AFx 7840"
-    },
-    {
-     "model": "7841",
-     "name": "インジェヴィティ AFx 7841"
-    },
-    {
-     "model": "7842",
-     "name": "インジェヴィティ AFx 7842"
-    },
-    {
-     "model": "4371",
-     "name": "ファインライン II PU 4371"
-    },
-    {
-     "model": "4372",
-     "name": "ファインライン II PU 4372"
-    },
-    {
-     "model": "4369",
-     "name": "ファインライン II PU 4369"
-    },
-    {
-     "model": "4370",
-     "name": "ファインライン II PU 4370"
-    },
-    {
-     "model": "4456",
-     "name": "ファインライン II PU 4456"
-    },
-    {
-     "model": "4457",
-     "name": "ファインライン II PU 4457"
-    },
-    {
-     "model": "4479",
-     "name": "ファインライン II PU 4479"
-    },
-    {
-     "model": "4480",
-     "name": "ファインライン II PU 4480"
-    },
-    {
-     "model": "4375",
-     "name": "ファインライン II EZ PU 4375"
-    },
-    {
-     "model": "4376",
-     "name": "ファインライン II EZ PU 4376"
-    },
-    {
-     "model": "4377",
-     "name": "ファインライン II EZ PU 4377"
-    },
-    {
-     "model": "4469",
-     "name": "ファインライン II EZ PU 4469"
-    },
-    {
-     "model": "4470",
-     "name": "ファインライン II EZ PU 4470"
-    },
-    {
-     "model": "4471",
-     "name": "ファインライン II EZ PU 4471"
-    },
-    {
-     "model": "4373",
-     "name": "ファインライン II ステロックス 4373"
-    },
-    {
-     "model": "4374",
-     "name": "ファインライン II ステロックス 4374"
-    },
-    {
-     "model": "4458",
-     "name": "ファインライン II ステロックス 4458"
-    },
-    {
-     "model": "4459",
-     "name": "ファインライン II ステロックス 4459"
-    },
-    {
-     "model": "4378",
-     "name": "ファインライン II ステロックス EZ 4378"
-    },
-    {
-     "model": "4379",
-     "name": "ファインライン II ステロックス EZ 4379"
-    },
-    {
-     "model": "4380",
-     "name": "ファインライン II ステロックス EZ 4380"
-    },
-    {
-     "model": "4472",
-     "name": "ファインライン II ステロックス EZ 4472"
-    },
-    {
-     "model": "4473",
-     "name": "ファインライン II ステロックス EZ 4473"
-    },
-    {
-     "model": "4474",
-     "name": "ファインライン II ステロックス EZ 4474"
-    }
-   ],
-   "rv": [
-    {
-     "model": "0675",
-     "name": "リライアンス 4-フロント G AFx 0675"
-    },
-    {
-     "model": "0676",
-     "name": "リライアンス 4-フロント G AFx 0676"
-    },
-    {
-     "model": "0695",
-     "name": "リライアンス 4-フロント G AFx 0695"
-    },
-    {
-     "model": "0696",
-     "name": "リライアンス 4-フロント G AFx 0696"
-    },
-    {
-     "model": "0672",
-     "name": "リライアンス 4-フロント SG AFx 0672"
-    },
-    {
-     "model": "0673",
-     "name": "リライアンス 4-フロント SG AFx 0673"
-    },
-    {
-     "model": "0692",
-     "name": "リライアンス 4-フロント SG AFx 0692"
-    },
-    {
-     "model": "0693",
-     "name": "リライアンス 4-フロント SG AFx 0693"
-    },
-    {
-     "model": "0662",
-     "name": "リライアンス 4-フロント SG 0662"
-    },
-    {
-     "model": "0663",
-     "name": "リライアンス 4-フロント SG 0663"
-    },
-    {
-     "model": "0682",
-     "name": "リライアンス 4-フロント SG 0682"
-    },
-    {
-     "model": "0683",
-     "name": "リライアンス 4-フロント SG 0683"
-    },
-    {
-     "model": "0295",
-     "name": "エンドタック リライアンス G AFx DF-4 0295"
-    },
-    {
-     "model": "0296",
-     "name": "エンドタック リライアンス G AFx DF-4 0296"
-    },
-    {
-     "model": "0292",
-     "name": "エンドタック リライアンス SG AFx DF-4 0292"
-    },
-    {
-     "model": "0293",
-     "name": "エンドタック リライアンス SG AFx DF-4 0293"
-    },
-    {
-     "model": "0285",
-     "name": "エンドタック リライアンス G DF-4 0285"
-    },
-    {
-     "model": "0286",
-     "name": "エンドタック リライアンス G DF-4 0286"
-    },
-    {
-     "model": "0282",
-     "name": "エンドタック リライアンス SG DF-4 0282"
-    },
-    {
-     "model": "0283",
-     "name": "エンドタック リライアンス SG DF-4 0283"
-    },
-    {
-     "model": "0170",
-     "name": "エンドタック リライアンス SG シングルコイル 0170"
-    },
-    {
-     "model": "0171",
-     "name": "エンドタック リライアンス SG シングルコイル 0171"
-    },
-    {
-     "model": "0174",
-     "name": "エンドタック リライアンス G デュアルコイル 0174"
-    },
-    {
-     "model": "0175",
-     "name": "エンドタック リライアンス G デュアルコイル 0175"
-    },
-    {
-     "model": "0176",
-     "name": "エンドタック リライアンス G デュアルコイル 0176"
-    },
-    {
-     "model": "0177",
-     "name": "エンドタック リライアンス G デュアルコイル 0177"
-    },
-    {
-     "model": "0180",
-     "name": "エンドタック リライアンス SG AFx シングルコイル 0180"
-    },
-    {
-     "model": "0181",
-     "name": "エンドタック リライアンス SG AFx シングルコイル 0181"
-    },
-    {
-     "model": "0184",
-     "name": "エンドタック リライアンス G AFx デュアルコイル 0184"
-    },
-    {
-     "model": "0185",
-     "name": "エンドタック リライアンス G AFx デュアルコイル 0185"
-    },
-    {
-     "model": "0186",
-     "name": "エンドタック リライアンス G AFx デュアルコイル 0186"
-    },
-    {
-     "model": "0187",
-     "name": "エンドタック リライアンス G AFx デュアルコイル 0187"
-    }
-   ],
-   "lv": [],
-   "tesla": [
-    "1.5T"
-   ],
-   "cond": {
-    "ガントリ": "水平磁場方式・水素原子核（プロトン）・トンネル型ガントリでのみ使用可",
-    "傾斜磁場スルーレート": "一軸あたり 200T/m/s 以下",
-    "植込み後": "6週間以上経過",
-    "植込み部位": "胸部",
-    "遺残リード": "不可",
-    "リードの状態": "リードの破損や、機器およびリードシステムに異常を示す兆候がないこと",
-    "ペーシング閾値": "≦2.0V（Bipolar）／2.0V超のペーシング依存患者は注意（右房・右室）",
-    "体位": "背臥位または腹臥位のみ（側臥位で実施しない）",
-    "ローカルコイル": "植込み部位にコイルを配置しないこと",
-    "MRIモード": "設定必要",
-    "検査中のモード": "DOO / VOO / AOO / Off",
-    "電池": "Battery Capacity Depleted（EOL）でないこと",
-    "患者監視": "パルスオキシメータ・心電計（ECG）",
-    "体外式除細動器": "必須",
-    "体温": "平常値であり、体温調節機能に問題がないこと",
-    "最大空間勾配磁場": "50T/m（5000G/cm）ICD/CRT-Dシステム植込み部位",
-    "SAR": "全身 ≦2.0W/kg／頭部 ≦3.2W/kg（通常操作モード）",
-    "ペーシング自動復帰": "タイマー（オフ, 3, 6, 9, 12時間）"
    }
   },
   {
@@ -4330,6 +4511,685 @@
    }
   },
   {
+   "id": "BSX-RESONATE-CRTD",
+   "maker": "Boston Scientific",
+   "type": "CRT-D",
+   "group": "RESONATE CRT-D（G437/G337/G447）",
+   "devices": [
+    {
+     "model": "G437",
+     "name": "RESONATE CRT-D G437"
+    },
+    {
+     "model": "G337",
+     "name": "RESONATE CRT-D G337"
+    },
+    {
+     "model": "G447",
+     "name": "RESONATE CRT-D G447"
+    }
+   ],
+   "ra": [
+    {
+     "model": "7731",
+     "name": "インジェヴィティ 7731"
+    },
+    {
+     "model": "7732",
+     "name": "インジェヴィティ 7732"
+    },
+    {
+     "model": "7735",
+     "name": "インジェヴィティ 7735"
+    },
+    {
+     "model": "7736",
+     "name": "インジェヴィティ 7736"
+    },
+    {
+     "model": "7740",
+     "name": "インジェヴィティ AFx 7740"
+    },
+    {
+     "model": "7741",
+     "name": "インジェヴィティ AFx 7741"
+    },
+    {
+     "model": "7742",
+     "name": "インジェヴィティ AFx 7742"
+    },
+    {
+     "model": "7840",
+     "name": "インジェヴィティ AFx 7840"
+    },
+    {
+     "model": "7841",
+     "name": "インジェヴィティ AFx 7841"
+    },
+    {
+     "model": "7842",
+     "name": "インジェヴィティ AFx 7842"
+    },
+    {
+     "model": "4371",
+     "name": "ファインライン II PU 4371"
+    },
+    {
+     "model": "4372",
+     "name": "ファインライン II PU 4372"
+    },
+    {
+     "model": "4369",
+     "name": "ファインライン II PU 4369"
+    },
+    {
+     "model": "4370",
+     "name": "ファインライン II PU 4370"
+    },
+    {
+     "model": "4456",
+     "name": "ファインライン II PU 4456"
+    },
+    {
+     "model": "4457",
+     "name": "ファインライン II PU 4457"
+    },
+    {
+     "model": "4479",
+     "name": "ファインライン II PU 4479"
+    },
+    {
+     "model": "4480",
+     "name": "ファインライン II PU 4480"
+    },
+    {
+     "model": "4375",
+     "name": "ファインライン II EZ PU 4375"
+    },
+    {
+     "model": "4376",
+     "name": "ファインライン II EZ PU 4376"
+    },
+    {
+     "model": "4377",
+     "name": "ファインライン II EZ PU 4377"
+    },
+    {
+     "model": "4469",
+     "name": "ファインライン II EZ PU 4469"
+    },
+    {
+     "model": "4470",
+     "name": "ファインライン II EZ PU 4470"
+    },
+    {
+     "model": "4471",
+     "name": "ファインライン II EZ PU 4471"
+    },
+    {
+     "model": "4373",
+     "name": "ファインライン II ステロックス 4373"
+    },
+    {
+     "model": "4374",
+     "name": "ファインライン II ステロックス 4374"
+    },
+    {
+     "model": "4458",
+     "name": "ファインライン II ステロックス 4458"
+    },
+    {
+     "model": "4459",
+     "name": "ファインライン II ステロックス 4459"
+    },
+    {
+     "model": "4378",
+     "name": "ファインライン II ステロックス EZ 4378"
+    },
+    {
+     "model": "4379",
+     "name": "ファインライン II ステロックス EZ 4379"
+    },
+    {
+     "model": "4380",
+     "name": "ファインライン II ステロックス EZ 4380"
+    },
+    {
+     "model": "4472",
+     "name": "ファインライン II ステロックス EZ 4472"
+    },
+    {
+     "model": "4473",
+     "name": "ファインライン II ステロックス EZ 4473"
+    },
+    {
+     "model": "4474",
+     "name": "ファインライン II ステロックス EZ 4474"
+    }
+   ],
+   "rv": [
+    {
+     "model": "0675",
+     "name": "リライアンス 4-フロント G AFx 0675"
+    },
+    {
+     "model": "0676",
+     "name": "リライアンス 4-フロント G AFx 0676"
+    },
+    {
+     "model": "0695",
+     "name": "リライアンス 4-フロント G AFx 0695"
+    },
+    {
+     "model": "0696",
+     "name": "リライアンス 4-フロント G AFx 0696"
+    },
+    {
+     "model": "0672",
+     "name": "リライアンス 4-フロント SG AFx 0672"
+    },
+    {
+     "model": "0673",
+     "name": "リライアンス 4-フロント SG AFx 0673"
+    },
+    {
+     "model": "0692",
+     "name": "リライアンス 4-フロント SG AFx 0692"
+    },
+    {
+     "model": "0693",
+     "name": "リライアンス 4-フロント SG AFx 0693"
+    },
+    {
+     "model": "0662",
+     "name": "リライアンス 4-フロント SG 0662"
+    },
+    {
+     "model": "0663",
+     "name": "リライアンス 4-フロント SG 0663"
+    },
+    {
+     "model": "0682",
+     "name": "リライアンス 4-フロント SG 0682"
+    },
+    {
+     "model": "0683",
+     "name": "リライアンス 4-フロント SG 0683"
+    },
+    {
+     "model": "0295",
+     "name": "エンドタック リライアンス G AFx DF-4 0295"
+    },
+    {
+     "model": "0296",
+     "name": "エンドタック リライアンス G AFx DF-4 0296"
+    },
+    {
+     "model": "0292",
+     "name": "エンドタック リライアンス SG AFx DF-4 0292"
+    },
+    {
+     "model": "0293",
+     "name": "エンドタック リライアンス SG AFx DF-4 0293"
+    },
+    {
+     "model": "0285",
+     "name": "エンドタック リライアンス G DF-4 0285"
+    },
+    {
+     "model": "0286",
+     "name": "エンドタック リライアンス G DF-4 0286"
+    },
+    {
+     "model": "0282",
+     "name": "エンドタック リライアンス SG DF-4 0282"
+    },
+    {
+     "model": "0283",
+     "name": "エンドタック リライアンス SG DF-4 0283"
+    },
+    {
+     "model": "0170",
+     "name": "エンドタック リライアンス SG シングルコイル 0170"
+    },
+    {
+     "model": "0171",
+     "name": "エンドタック リライアンス SG シングルコイル 0171"
+    },
+    {
+     "model": "0174",
+     "name": "エンドタック リライアンス G デュアルコイル 0174"
+    },
+    {
+     "model": "0175",
+     "name": "エンドタック リライアンス G デュアルコイル 0175"
+    },
+    {
+     "model": "0176",
+     "name": "エンドタック リライアンス G デュアルコイル 0176"
+    },
+    {
+     "model": "0177",
+     "name": "エンドタック リライアンス G デュアルコイル 0177"
+    },
+    {
+     "model": "0180",
+     "name": "エンドタック リライアンス SG AFx シングルコイル 0180"
+    },
+    {
+     "model": "0181",
+     "name": "エンドタック リライアンス SG AFx シングルコイル 0181"
+    },
+    {
+     "model": "0184",
+     "name": "エンドタック リライアンス G AFx デュアルコイル 0184"
+    },
+    {
+     "model": "0185",
+     "name": "エンドタック リライアンス G AFx デュアルコイル 0185"
+    },
+    {
+     "model": "0186",
+     "name": "エンドタック リライアンス G AFx デュアルコイル 0186"
+    },
+    {
+     "model": "0187",
+     "name": "エンドタック リライアンス G AFx デュアルコイル 0187"
+    }
+   ],
+   "lv": [
+    {
+     "model": "4671",
+     "name": "アキュイティ X4 4671"
+    },
+    {
+     "model": "4672",
+     "name": "アキュイティ X4 4672"
+    },
+    {
+     "model": "4674",
+     "name": "アキュイティ X4 4674"
+    },
+    {
+     "model": "4675",
+     "name": "アキュイティ X4 4675"
+    },
+    {
+     "model": "4677",
+     "name": "アキュイティ X4 4677"
+    },
+    {
+     "model": "4678",
+     "name": "アキュイティ X4 4678"
+    }
+   ],
+   "tesla": [
+    "1.5T",
+    "3.0T"
+   ],
+   "cond": {
+    "ガントリ": "水平磁場方式・水素原子核（プロトン）・トンネル型ガントリでのみ使用可",
+    "傾斜磁場スルーレート": "一軸あたり 200T/m/s 以下",
+    "植込み後": "6週間以上経過",
+    "植込み部位": "胸部",
+    "遺残リード": "不可",
+    "リードの状態": "リードの破損や、機器およびリードシステムに異常を示す兆候がないこと",
+    "ペーシング閾値": "≦2.0V（Bipolar）／2.0V超のペーシング依存患者は注意（右房・右室）",
+    "体位": "背臥位または腹臥位のみ（側臥位で実施しない）",
+    "ローカルコイル": "植込み部位にコイルを配置しないこと",
+    "MRIモード": "設定必要",
+    "検査中のモード": "DOO / VOO / AOO / Off",
+    "電池": "Battery Capacity Depleted（EOL）でないこと",
+    "患者監視": "パルスオキシメータ・心電計（ECG）",
+    "体外式除細動器": "必須",
+    "体温": "平常値であり、体温調節機能に問題がないこと",
+    "最大空間勾配磁場": "50T/m（5000G/cm）ICD/CRT-Dシステム植込み部位",
+    "SAR": "全身 ≦2.0W/kg／頭部 ≦3.2W/kg（通常操作モード）",
+    "ペーシング自動復帰": "タイマー（オフ, 3, 6, 9, 12時間）"
+   }
+  },
+  {
+   "id": "BSX-RESONATE-CRTD2",
+   "maker": "Boston Scientific",
+   "type": "CRT-D",
+   "group": "RESONATE CRT-D（G128/G138/G124/G125）",
+   "devices": [
+    {
+     "model": "G128",
+     "name": "RESONATE CRT-D G128"
+    },
+    {
+     "model": "G138",
+     "name": "RESONATE CRT-D G138"
+    },
+    {
+     "model": "G124",
+     "name": "RESONATE CRT-D G124"
+    },
+    {
+     "model": "G125",
+     "name": "RESONATE CRT-D G125"
+    }
+   ],
+   "ra": [
+    {
+     "model": "7731",
+     "name": "インジェヴィティ 7731"
+    },
+    {
+     "model": "7732",
+     "name": "インジェヴィティ 7732"
+    },
+    {
+     "model": "7735",
+     "name": "インジェヴィティ 7735"
+    },
+    {
+     "model": "7736",
+     "name": "インジェヴィティ 7736"
+    },
+    {
+     "model": "7740",
+     "name": "インジェヴィティ AFx 7740"
+    },
+    {
+     "model": "7741",
+     "name": "インジェヴィティ AFx 7741"
+    },
+    {
+     "model": "7742",
+     "name": "インジェヴィティ AFx 7742"
+    },
+    {
+     "model": "7840",
+     "name": "インジェヴィティ AFx 7840"
+    },
+    {
+     "model": "7841",
+     "name": "インジェヴィティ AFx 7841"
+    },
+    {
+     "model": "7842",
+     "name": "インジェヴィティ AFx 7842"
+    },
+    {
+     "model": "4371",
+     "name": "ファインライン II PU 4371"
+    },
+    {
+     "model": "4372",
+     "name": "ファインライン II PU 4372"
+    },
+    {
+     "model": "4369",
+     "name": "ファインライン II PU 4369"
+    },
+    {
+     "model": "4370",
+     "name": "ファインライン II PU 4370"
+    },
+    {
+     "model": "4456",
+     "name": "ファインライン II PU 4456"
+    },
+    {
+     "model": "4457",
+     "name": "ファインライン II PU 4457"
+    },
+    {
+     "model": "4479",
+     "name": "ファインライン II PU 4479"
+    },
+    {
+     "model": "4480",
+     "name": "ファインライン II PU 4480"
+    },
+    {
+     "model": "4375",
+     "name": "ファインライン II EZ PU 4375"
+    },
+    {
+     "model": "4376",
+     "name": "ファインライン II EZ PU 4376"
+    },
+    {
+     "model": "4377",
+     "name": "ファインライン II EZ PU 4377"
+    },
+    {
+     "model": "4469",
+     "name": "ファインライン II EZ PU 4469"
+    },
+    {
+     "model": "4470",
+     "name": "ファインライン II EZ PU 4470"
+    },
+    {
+     "model": "4471",
+     "name": "ファインライン II EZ PU 4471"
+    },
+    {
+     "model": "4373",
+     "name": "ファインライン II ステロックス 4373"
+    },
+    {
+     "model": "4374",
+     "name": "ファインライン II ステロックス 4374"
+    },
+    {
+     "model": "4458",
+     "name": "ファインライン II ステロックス 4458"
+    },
+    {
+     "model": "4459",
+     "name": "ファインライン II ステロックス 4459"
+    },
+    {
+     "model": "4378",
+     "name": "ファインライン II ステロックス EZ 4378"
+    },
+    {
+     "model": "4379",
+     "name": "ファインライン II ステロックス EZ 4379"
+    },
+    {
+     "model": "4380",
+     "name": "ファインライン II ステロックス EZ 4380"
+    },
+    {
+     "model": "4472",
+     "name": "ファインライン II ステロックス EZ 4472"
+    },
+    {
+     "model": "4473",
+     "name": "ファインライン II ステロックス EZ 4473"
+    },
+    {
+     "model": "4474",
+     "name": "ファインライン II ステロックス EZ 4474"
+    }
+   ],
+   "rv": [
+    {
+     "model": "0675",
+     "name": "リライアンス 4-フロント G AFx 0675"
+    },
+    {
+     "model": "0676",
+     "name": "リライアンス 4-フロント G AFx 0676"
+    },
+    {
+     "model": "0695",
+     "name": "リライアンス 4-フロント G AFx 0695"
+    },
+    {
+     "model": "0696",
+     "name": "リライアンス 4-フロント G AFx 0696"
+    },
+    {
+     "model": "0672",
+     "name": "リライアンス 4-フロント SG AFx 0672"
+    },
+    {
+     "model": "0673",
+     "name": "リライアンス 4-フロント SG AFx 0673"
+    },
+    {
+     "model": "0692",
+     "name": "リライアンス 4-フロント SG AFx 0692"
+    },
+    {
+     "model": "0693",
+     "name": "リライアンス 4-フロント SG AFx 0693"
+    },
+    {
+     "model": "0662",
+     "name": "リライアンス 4-フロント SG 0662"
+    },
+    {
+     "model": "0663",
+     "name": "リライアンス 4-フロント SG 0663"
+    },
+    {
+     "model": "0682",
+     "name": "リライアンス 4-フロント SG 0682"
+    },
+    {
+     "model": "0683",
+     "name": "リライアンス 4-フロント SG 0683"
+    },
+    {
+     "model": "0295",
+     "name": "エンドタック リライアンス G AFx DF-4 0295"
+    },
+    {
+     "model": "0296",
+     "name": "エンドタック リライアンス G AFx DF-4 0296"
+    },
+    {
+     "model": "0292",
+     "name": "エンドタック リライアンス SG AFx DF-4 0292"
+    },
+    {
+     "model": "0293",
+     "name": "エンドタック リライアンス SG AFx DF-4 0293"
+    },
+    {
+     "model": "0285",
+     "name": "エンドタック リライアンス G DF-4 0285"
+    },
+    {
+     "model": "0286",
+     "name": "エンドタック リライアンス G DF-4 0286"
+    },
+    {
+     "model": "0282",
+     "name": "エンドタック リライアンス SG DF-4 0282"
+    },
+    {
+     "model": "0283",
+     "name": "エンドタック リライアンス SG DF-4 0283"
+    },
+    {
+     "model": "0170",
+     "name": "エンドタック リライアンス SG シングルコイル 0170"
+    },
+    {
+     "model": "0171",
+     "name": "エンドタック リライアンス SG シングルコイル 0171"
+    },
+    {
+     "model": "0174",
+     "name": "エンドタック リライアンス G デュアルコイル 0174"
+    },
+    {
+     "model": "0175",
+     "name": "エンドタック リライアンス G デュアルコイル 0175"
+    },
+    {
+     "model": "0176",
+     "name": "エンドタック リライアンス G デュアルコイル 0176"
+    },
+    {
+     "model": "0177",
+     "name": "エンドタック リライアンス G デュアルコイル 0177"
+    },
+    {
+     "model": "0180",
+     "name": "エンドタック リライアンス SG AFx シングルコイル 0180"
+    },
+    {
+     "model": "0181",
+     "name": "エンドタック リライアンス SG AFx シングルコイル 0181"
+    },
+    {
+     "model": "0184",
+     "name": "エンドタック リライアンス G AFx デュアルコイル 0184"
+    },
+    {
+     "model": "0185",
+     "name": "エンドタック リライアンス G AFx デュアルコイル 0185"
+    },
+    {
+     "model": "0186",
+     "name": "エンドタック リライアンス G AFx デュアルコイル 0186"
+    },
+    {
+     "model": "0187",
+     "name": "エンドタック リライアンス G AFx デュアルコイル 0187"
+    }
+   ],
+   "lv": [
+    {
+     "model": "4671",
+     "name": "アキュイティ X4 4671"
+    },
+    {
+     "model": "4672",
+     "name": "アキュイティ X4 4672"
+    },
+    {
+     "model": "4674",
+     "name": "アキュイティ X4 4674"
+    },
+    {
+     "model": "4675",
+     "name": "アキュイティ X4 4675"
+    },
+    {
+     "model": "4677",
+     "name": "アキュイティ X4 4677"
+    },
+    {
+     "model": "4678",
+     "name": "アキュイティ X4 4678"
+    }
+   ],
+   "tesla": [
+    "1.5T"
+   ],
+   "cond": {
+    "ガントリ": "水平磁場方式・水素原子核（プロトン）・トンネル型ガントリでのみ使用可",
+    "傾斜磁場スルーレート": "一軸あたり 200T/m/s 以下",
+    "植込み後": "6週間以上経過",
+    "植込み部位": "胸部",
+    "遺残リード": "不可",
+    "リードの状態": "リードの破損や、機器およびリードシステムに異常を示す兆候がないこと",
+    "ペーシング閾値": "≦2.0V（Bipolar）／2.0V超のペーシング依存患者は注意（右房・右室）",
+    "体位": "背臥位または腹臥位のみ（側臥位で実施しない）",
+    "ローカルコイル": "植込み部位にコイルを配置しないこと",
+    "MRIモード": "設定必要",
+    "検査中のモード": "DOO / VOO / AOO / Off",
+    "電池": "Battery Capacity Depleted（EOL）でないこと",
+    "患者監視": "パルスオキシメータ・心電計（ECG）",
+    "体外式除細動器": "必須",
+    "体温": "平常値であり、体温調節機能に問題がないこと",
+    "最大空間勾配磁場": "50T/m（5000G/cm）ICD/CRT-Dシステム植込み部位",
+    "SAR": "全身 ≦2.0W/kg／頭部 ≦3.2W/kg（通常操作モード）",
+    "ペーシング自動復帰": "タイマー（オフ, 3, 6, 9, 12時間）"
+   }
+  },
+  {
    "id": "BSX-EMBLEM",
    "maker": "Boston Scientific",
    "type": "S-ICD",
@@ -4381,121 +5241,150 @@
    }
   },
   {
-   "id": "MDT-MICRA",
-   "maker": "Medtronic",
-   "type": "リードレスペースメーカ",
-   "group": "Micra シリーズ",
-   "devices": [
-    {
-     "model": "Micra VR2",
-     "name": "Micra VR2"
-    },
-    {
-     "model": "Micra AV2",
-     "name": "Micra AV2"
-    },
-    {
-     "model": "Micra VR",
-     "name": "Micra VR"
-    },
-    {
-     "model": "Micra AV",
-     "name": "Micra AV"
-    }
-   ],
-   "ra": [],
-   "rv": [],
-   "lv": [],
-   "leadfree": true,
-   "tesla": [
-    "1.5T",
-    "3.0T"
-   ],
-   "cond": {
-    "ガントリ": "トンネル（ボア）型",
-    "傾斜磁場スルーレート": "≤200T/m/s",
-    "SAR": "全身 ≤2.0W/kg（1.5T）／≤4.0W/kg（3.0T）、頭部 ≤3.2W/kg",
-    "B1+rms": "3.0Tでアイソセンタを第7頸椎より下に配置する場合、B1+RMS ≦2.0μT",
-    "植込み後": "制限なし",
-    "植込み部位": "右心室",
-    "遺残リード": "不可",
-    "ペーシング閾値": "設定されたパルス幅で 4.5V 以下",
-    "横隔膜刺激": "該当なし",
-    "MRIモード": "設定必要（SureScanモード）",
-    "検査中のモード": "患者の状態に応じてSureScan内の自己心拍固定またはペーシング固定へ切替",
-    "患者監視": "心電図・パルス酸素濃度計",
-    "体外式除細動器": "必須",
-    "静磁場強度": "0.2〜1.5T または 3T（患者に対して垂直なAP／LRのMRIは1.5T未満に限定）",
-    "最大空間勾配磁場": "25T/m（2,500ガウス/cm）以下",
-    "リードインピーダンス": "該当なし"
-   },
-   "verify": true
-  },
-  {
-   "id": "MDT-PM-DR",
-   "maker": "Medtronic",
+   "id": "MP-ALIZEA",
+   "maker": "MicroPort CRM",
    "type": "ペースメーカ",
-   "group": "Azure XT/S DR・Attesta DR MRI・Sphera DR MRI",
+   "group": "ALIZEA",
    "devices": [
     {
-     "model": "Azure XT DR",
-     "name": "Azure XT DR"
+     "model": "TPM020C",
+     "name": "ALIZEA DR"
     },
     {
-     "model": "Azure S DR",
-     "name": "Azure S DR"
-    },
-    {
-     "model": "Attesta DR MRI",
-     "name": "Attesta DR MRI"
-    },
-    {
-     "model": "Sphera DR MRI",
-     "name": "Sphera DR MRI"
+     "model": "TPM021C",
+     "name": "ALIZEA SR"
     }
    ],
    "ra": [
     {
-     "model": "5076",
-     "name": "5076"
+     "model": "RF45D",
+     "name": "BEFLEX RF45D"
     },
     {
-     "model": "5086MRI",
-     "name": "5086MRI"
+     "model": "RF46D",
+     "name": "BEFLEX RF46D"
     },
     {
-     "model": "4574",
-     "name": "4574"
+     "model": "TLD040C",
+     "name": "VEGA R45"
     },
     {
-     "model": "5554",
-     "name": "5554"
+     "model": "TLD041C",
+     "name": "VEGA R52"
     },
     {
-     "model": "3830",
-     "name": "3830"
+     "model": "TLD042C",
+     "name": "VEGA R58"
+    },
+    {
+     "model": "TLD056C",
+     "name": "Xfine JX24D"
+    },
+    {
+     "model": "TLD057C",
+     "name": "Xfine JX25D"
+    },
+    {
+     "model": "TLD054C",
+     "name": "Xfine TX25D"
+    },
+    {
+     "model": "TLD055C",
+     "name": "Xfine TX26D"
+    },
+    {
+     "model": "TLSCREWVINE44",
+     "name": "J-LINE SCREWVINE 44SEP"
+    },
+    {
+     "model": "TLSCREWVINE52",
+     "name": "J-LINE SCREWVINE 52SEP"
+    },
+    {
+     "model": "TLSCREWVINE58",
+     "name": "J-LINE SCREWVINE 58SEP"
+    },
+    {
+     "model": "TLJPETITE44ERJB",
+     "name": "J-LINE PETITE 44ERJB"
+    },
+    {
+     "model": "TLJPETITE52ERJB",
+     "name": "J-LINE PETITE 52ERJB"
+    },
+    {
+     "model": "TLJPETITE52ERB",
+     "name": "J-LINE PETITE 52ERB"
+    },
+    {
+     "model": "TLJPETITE58ERB",
+     "name": "J-LINE PETITE 58ERB"
     }
    ],
    "rv": [
     {
-     "model": "5076",
-     "name": "5076"
+     "model": "RF45D",
+     "name": "BEFLEX RF45D"
     },
     {
-     "model": "5086MRI",
-     "name": "5086MRI"
+     "model": "RF46D",
+     "name": "BEFLEX RF46D"
     },
     {
-     "model": "4574",
-     "name": "4574"
+     "model": "TLD040C",
+     "name": "VEGA R45"
     },
     {
-     "model": "5554",
-     "name": "5554"
+     "model": "TLD041C",
+     "name": "VEGA R52"
     },
     {
-     "model": "3830",
-     "name": "3830"
+     "model": "TLD042C",
+     "name": "VEGA R58"
+    },
+    {
+     "model": "TLD056C",
+     "name": "Xfine JX24D"
+    },
+    {
+     "model": "TLD057C",
+     "name": "Xfine JX25D"
+    },
+    {
+     "model": "TLD054C",
+     "name": "Xfine TX25D"
+    },
+    {
+     "model": "TLD055C",
+     "name": "Xfine TX26D"
+    },
+    {
+     "model": "TLSCREWVINE44",
+     "name": "J-LINE SCREWVINE 44SEP"
+    },
+    {
+     "model": "TLSCREWVINE52",
+     "name": "J-LINE SCREWVINE 52SEP"
+    },
+    {
+     "model": "TLSCREWVINE58",
+     "name": "J-LINE SCREWVINE 58SEP"
+    },
+    {
+     "model": "TLJPETITE44ERJB",
+     "name": "J-LINE PETITE 44ERJB"
+    },
+    {
+     "model": "TLJPETITE52ERJB",
+     "name": "J-LINE PETITE 52ERJB"
+    },
+    {
+     "model": "TLJPETITE52ERB",
+     "name": "J-LINE PETITE 52ERB"
+    },
+    {
+     "model": "TLJPETITE58ERB",
+     "name": "J-LINE PETITE 58ERB"
     }
    ],
    "lv": [],
@@ -4504,744 +5393,99 @@
     "3.0T"
    ],
    "cond": {
-    "ガントリ": "トンネル（ボア）型",
-    "傾斜磁場スルーレート": "≤200T/m/s",
-    "SAR": "全身 ≤2.0W/kg（1.5T）／≤4.0W/kg（3.0T）、頭部 ≤3.2W/kg",
-    "B1+rms": "3.0Tでアイソセンタを第7頸椎より下に配置する場合、B1+RMSを表示できる装置で ≦2.8μT",
-    "植込み後": "リード植込み後6週間以上経過",
+    "植込み後": "6週間以上",
     "植込み部位": "胸部",
     "遺残リード": "不可",
-    "ペーシング閾値": "2.0V/0.4ms 以下（右室）",
-    "横隔膜刺激": "5V/1.0ms で起きないこと（SureScanモード中にペーシングを行うチャンバーにて）",
-    "MRIモード": "設定必要（SureScanモード）",
-    "検査中のモード": "患者の状態に応じてSureScan内の自己心拍固定またはペーシング固定へ切替",
-    "患者監視": "心電図・パルス酸素濃度計",
+    "ペーシング閾値": "2.0V(0.35ms)以下（Bipolar）",
+    "リードインピーダンス": "心房・右室 200〜3,000Ω（Bipolar）",
+    "傾斜磁場スルーレート": "≤200T/m/s",
+    "SAR": "全身 ≤2.0W/kg／頭部 ≤3.2W/kg（通常操作モード）",
+    "体位": "背臥位または腹臥位のみ（側臥位不可）",
+    "ローカル送受信コイル": "全身使用不可",
+    "MRIモード": "マニュアル設定／自動設定",
+    "患者監視": "心電図・パルスオキシメータ",
     "体外式除細動器": "必須",
-    "最大空間勾配磁場": "20T/m（2,000ガウス/cm）以下",
-    "リードインピーダンス": "心房・右室 200〜3,000Ω（Bi/Uni）"
-   },
-   "verify": true
+    "最大空間勾配磁場": "≤20T/m",
+    "除外領域": "制限なし",
+    "アイソセンタ": "制限なし",
+    "撮像時間": "1回40分以内／次回まで30分以上あける",
+    "電池": "RRTに達していないこと",
+    "アラート": "あり"
+   }
   },
   {
-   "id": "MDT-PM-SR",
-   "maker": "Medtronic",
+   "id": "MP-KORA100",
+   "maker": "MicroPort CRM",
    "type": "ペースメーカ",
-   "group": "Azure XT/S SR・Attesta SR MRI・Sphera SR MRI",
+   "group": "KORA 100",
    "devices": [
     {
-     "model": "Azure XT SR",
-     "name": "Azure XT SR"
+     "model": "TPM006J",
+     "name": "KORA 100 DR"
     },
     {
-     "model": "Azure S SR",
-     "name": "Azure S SR"
-    },
-    {
-     "model": "Attesta SR MRI",
-     "name": "Attesta SR MRI"
-    },
-    {
-     "model": "Sphera SR MRI",
-     "name": "Sphera SR MRI"
+     "model": "TPM007J",
+     "name": "KORA 100 SR"
     }
    ],
    "ra": [
     {
-     "model": "5076",
-     "name": "5076"
+     "model": "RF45D",
+     "name": "BEFLEX RF45D"
     },
     {
-     "model": "5086MRI",
-     "name": "5086MRI"
+     "model": "RF46D",
+     "name": "BEFLEX RF46D"
     },
     {
-     "model": "4574",
-     "name": "4574"
+     "model": "TLD041C",
+     "name": "VEGA R52"
     },
     {
-     "model": "5554",
-     "name": "5554"
+     "model": "TLD042C",
+     "name": "VEGA R58"
     },
     {
-     "model": "3830",
-     "name": "3830"
+     "model": "TLSCREWVINE44",
+     "name": "J-LINE SCREWVINE 44SEP"
+    },
+    {
+     "model": "TLSCREWVINE52",
+     "name": "J-LINE SCREWVINE 52SEP"
+    },
+    {
+     "model": "TLSCREWVINE58",
+     "name": "J-LINE SCREWVINE 58SEP"
     }
    ],
    "rv": [
     {
-     "model": "5076",
-     "name": "5076"
+     "model": "RF45D",
+     "name": "BEFLEX RF45D"
     },
     {
-     "model": "5086MRI",
-     "name": "5086MRI"
+     "model": "RF46D",
+     "name": "BEFLEX RF46D"
     },
     {
-     "model": "4574",
-     "name": "4574"
+     "model": "TLD041C",
+     "name": "VEGA R52"
     },
     {
-     "model": "5554",
-     "name": "5554"
+     "model": "TLD042C",
+     "name": "VEGA R58"
     },
     {
-     "model": "3830",
-     "name": "3830"
-    }
-   ],
-   "lv": [],
-   "tesla": [
-    "1.5T",
-    "3.0T"
-   ],
-   "cond": {
-    "ガントリ": "トンネル（ボア）型",
-    "傾斜磁場スルーレート": "≤200T/m/s",
-    "SAR": "全身 ≤2.0W/kg（1.5T）／≤4.0W/kg（3.0T）、頭部 ≤3.2W/kg",
-    "B1+rms": "3.0Tでアイソセンタを第7頸椎より下に配置する場合、B1+RMSを表示できる装置で ≦2.8μT",
-    "植込み後": "リード植込み後6週間以上経過",
-    "植込み部位": "胸部",
-    "遺残リード": "不可",
-    "ペーシング閾値": "2.0V/0.4ms 以下（右室）",
-    "横隔膜刺激": "5V/1.0ms で起きないこと（SureScanモード中にペーシングを行うチャンバーにて）",
-    "MRIモード": "設定必要（SureScanモード）",
-    "検査中のモード": "患者の状態に応じてSureScan内の自己心拍固定またはペーシング固定へ切替",
-    "患者監視": "心電図・パルス酸素濃度計",
-    "体外式除細動器": "必須",
-    "最大空間勾配磁場": "20T/m（2,000ガウス/cm）以下",
-    "リードインピーダンス": "心房・右室 200〜3,000Ω（Bi/Uni）",
-    "心房リード": "Attesta / Sphera のみ心房リードの組合せが記載されている"
-   },
-   "verify": true
-  },
-  {
-   "id": "MDT-PM-ADVISA",
-   "maker": "Medtronic",
-   "type": "ペースメーカ",
-   "group": "Advisa MRI DR / SR",
-   "devices": [
-    {
-     "model": "Advisa MRI DR",
-     "name": "Advisa MRI DR"
-    },
-    {
-     "model": "Advisa MRI SR",
-     "name": "Advisa MRI SR"
-    }
-   ],
-   "ra": [
-    {
-     "model": "5076",
-     "name": "5076"
-    },
-    {
-     "model": "5086MRI",
-     "name": "5086MRI"
-    },
-    {
-     "model": "4574",
-     "name": "4574"
-    },
-    {
-     "model": "5554",
-     "name": "5554"
-    },
-    {
-     "model": "3830",
-     "name": "3830"
-    }
-   ],
-   "rv": [
-    {
-     "model": "5076",
-     "name": "5076"
-    },
-    {
-     "model": "5086MRI",
-     "name": "5086MRI"
-    },
-    {
-     "model": "4574",
-     "name": "4574"
-    },
-    {
-     "model": "5554",
-     "name": "5554"
-    },
-    {
-     "model": "3830",
-     "name": "3830"
-    }
-   ],
-   "lv": [],
-   "tesla": [
-    "1.5T",
-    "3.0T"
-   ],
-   "cond": {
-    "ガントリ": "トンネル（ボア）型",
-    "傾斜磁場スルーレート": "≤200T/m/s",
-    "SAR": "全身 ≤2.0W/kg（1.5T）／≤4.0W/kg（3.0T）、頭部 ≤3.2W/kg",
-    "B1+rms": "3.0Tでアイソセンタを第7頸椎より下に配置する場合、B1+RMSを表示できる装置で ≦2.8μT",
-    "植込み後": "リード植込み後6週間以上経過",
-    "植込み部位": "胸部",
-    "遺残リード": "不可",
-    "ペーシング閾値": "2.0V/0.4ms 以下（右室）",
-    "横隔膜刺激": "5V/1.0ms で起きないこと（SureScanモード中にペーシングを行うチャンバーにて）",
-    "MRIモード": "設定必要（SureScanモード）",
-    "検査中のモード": "患者の状態に応じてSureScan内の自己心拍固定またはペーシング固定へ切替",
-    "患者監視": "心電図・パルス酸素濃度計",
-    "体外式除細動器": "必須",
-    "最大空間勾配磁場": "20T/m（2,000ガウス/cm）以下",
-    "リードインピーダンス": "心房・右室 200〜3,000Ω（Bi/Uni）"
-   },
-   "verify": true
-  },
-  {
-   "id": "MDT-ICD",
-   "maker": "Medtronic",
-   "type": "ICD",
-   "group": "Evera MRI・Visia AF MRI・Cobalt XT",
-   "devices": [
-    {
-     "model": "Evera MRI DR",
-     "name": "Evera MRI DR"
-    },
-    {
-     "model": "Evera MRI VR",
-     "name": "Evera MRI VR"
-    },
-    {
-     "model": "Visia AF MRI",
-     "name": "Visia AF MRI"
-    },
-    {
-     "model": "Cobalt XT DR",
-     "name": "Cobalt XT DR"
-    },
-    {
-     "model": "Cobalt XT VR",
-     "name": "Cobalt XT VR"
-    }
-   ],
-   "ra": [
-    {
-     "model": "5076",
-     "name": "5076"
-    },
-    {
-     "model": "5086MRI",
-     "name": "5086MRI"
-    },
-    {
-     "model": "4074",
-     "name": "4074"
-    },
-    {
-     "model": "5054",
-     "name": "5054"
-    },
-    {
-     "model": "3830",
-     "name": "3830"
-    }
-   ],
-   "rv": [
-    {
-     "model": "3930M",
-     "name": "3930M（DF-4 74/79cm）"
-    },
-    {
-     "model": "6947M",
-     "name": "6947M（DF-4 55/62cm）"
-    },
-    {
-     "model": "6935M",
-     "name": "6935M（DF-4 55/62cm）"
-    },
-    {
-     "model": "6947",
-     "name": "6947（DF-1 58/65cm）"
-    },
-    {
-     "model": "6935",
-     "name": "6935（DF-1 58/65cm）"
-    },
-    {
-     "model": "6719",
-     "name": "6719（DF-1ピンプラグ）"
-    }
-   ],
-   "lv": [],
-   "tesla": [
-    "1.5T",
-    "3.0T"
-   ],
-   "cond": {
-    "ガントリ": "トンネル（ボア）型",
-    "傾斜磁場スルーレート": "≤200T/m/s",
-    "SAR": "全身 ≤2.0W/kg（1.5T）／≤4.0W/kg（3.0T）、頭部 ≤3.2W/kg",
-    "B1+rms": "3.0Tでアイソセンタを第7頸椎より下に配置する場合、B1+RMSを表示できる装置で ≦2.8μT",
-    "植込み後": "リード植込み後6週間以上経過",
-    "植込み部位": "胸部",
-    "遺残リード": "不可",
-    "ペーシング閾値": "2.0V/0.4ms 以下（右室）",
-    "横隔膜刺激": "5V/1.0ms で起きないこと（SureScanモード中にペーシングを行うチャンバーにて）",
-    "MRIモード": "設定必要（SureScanモード）",
-    "検査中のモード": "患者の状態に応じてSureScan内の自己心拍固定またはペーシング固定へ切替",
-    "患者監視": "心電図・パルス酸素濃度計",
-    "体外式除細動器": "必須",
-    "最大空間勾配磁場": "20T/m（2,000ガウス/cm）以下",
-    "リードインピーダンス": "心房・右室 200〜3,000Ω／RVコイル 20〜200Ω"
-   },
-   "verify": true
-  },
-  {
-   "id": "MDT-EVICD",
-   "maker": "Medtronic",
-   "type": "EV-ICD",
-   "group": "Aurora EV-ICD",
-   "devices": [
-    {
-     "model": "Aurora EV-ICD",
-     "name": "Aurora EV-ICD"
-    }
-   ],
-   "ra": [],
-   "rv": [
-    {
-     "model": "EV240152",
-     "name": "EV240152（EV-4）"
-    },
-    {
-     "model": "EV240163",
-     "name": "EV240163（EV-4）"
-    }
-   ],
-   "lv": [],
-   "tesla": [
-    "1.5T",
-    "3.0T"
-   ],
-   "cond": {
-    "ガントリ": "トンネル（ボア）型",
-    "傾斜磁場スルーレート": "≤200T/m/s",
-    "SAR": "全身 ≤2.0W/kg（1.5T）／≤4.0W/kg（3.0T）、頭部 ≤3.2W/kg",
-    "B1+rms": "3.0Tでアイソセンタを第7頸椎より下に配置する場合、B1+RMSを表示できる装置で ≦2.8μT",
-    "植込み後": "リード植込み後6週間以上経過",
-    "植込み部位": "胸部（皮下・胸骨下）",
-    "遺残リード": "不可",
-    "ペーシング閾値": "2.0V/0.4ms 以下（右室）",
-    "横隔膜刺激": "5V/1.0ms で起きないこと（SureScanモード中にペーシングを行うチャンバーにて）",
-    "MRIモード": "設定必要（SureScanモード）",
-    "検査中のモード": "患者の状態に応じてSureScan内の自己心拍固定またはペーシング固定へ切替",
-    "患者監視": "心電図・パルス酸素濃度計",
-    "体外式除細動器": "必須",
-    "最大空間勾配磁場": "20T/m（2,000ガウス/cm）以下",
-    "リードインピーダンス": "Ring1-Ring2 / Ring1-Coil2：100〜1,500Ω／High Voltage：30〜250Ω"
-   },
-   "verify": true
-  },
-  {
-   "id": "MDT-CRTP",
-   "maker": "Medtronic",
-   "type": "CRT-P",
-   "group": "Solara MRI Quad・Percepta MRI Quad・Percepta MRI",
-   "devices": [
-    {
-     "model": "Solara MRI Quad",
-     "name": "Solara MRI Quad"
-    },
-    {
-     "model": "Percepta MRI Quad",
-     "name": "Percepta MRI Quad"
-    },
-    {
-     "model": "Percepta MRI",
-     "name": "Percepta MRI"
-    }
-   ],
-   "ra": [
-    {
-     "model": "5076",
-     "name": "5076"
-    },
-    {
-     "model": "5086MRI",
-     "name": "5086MRI"
-    },
-    {
-     "model": "4574",
-     "name": "4574"
-    },
-    {
-     "model": "5554",
-     "name": "5554"
-    },
-    {
-     "model": "3830",
-     "name": "3830"
-    },
-    {
-     "model": "6725",
-     "name": "6725（IS-1ピンプラグ）"
-    }
-   ],
-   "rv": [
-    {
-     "model": "5076",
-     "name": "5076"
-    },
-    {
-     "model": "5086MRI",
-     "name": "5086MRI"
-    },
-    {
-     "model": "4574",
-     "name": "4574"
-    },
-    {
-     "model": "5554",
-     "name": "5554"
-    },
-    {
-     "model": "3830",
-     "name": "3830"
-    },
-    {
-     "model": "6725",
-     "name": "6725（IS-1ピンプラグ）"
-    }
-   ],
-   "lv": [
-    {
-     "model": "4298",
-     "name": "4298（IS-4）"
-    },
-    {
-     "model": "4398",
-     "name": "4398（IS-4）"
-    },
-    {
-     "model": "4598",
-     "name": "4598（IS-4）"
-    },
-    {
-     "model": "4798",
-     "name": "4798（IS-4）"
-    },
-    {
-     "model": "4196",
-     "name": "4196（IS-1）"
-    },
-    {
-     "model": "4296",
-     "name": "4296（IS-1）"
-    },
-    {
-     "model": "4396",
-     "name": "4396（IS-1）"
-    }
-   ],
-   "tesla": [
-    "1.5T",
-    "3.0T"
-   ],
-   "cond": {
-    "ガントリ": "トンネル（ボア）型",
-    "傾斜磁場スルーレート": "≤200T/m/s",
-    "SAR": "全身 ≤2.0W/kg（1.5T）／≤4.0W/kg（3.0T）、頭部 ≤3.2W/kg",
-    "B1+rms": "3.0Tでアイソセンタを第7頸椎より下に配置する場合、B1+RMSを表示できる装置で ≦2.8μT",
-    "植込み後": "リード植込み後6週間以上経過",
-    "植込み部位": "胸部",
-    "遺残リード": "不可",
-    "ペーシング閾値": "2.0V/0.4ms 以下（右室）",
-    "横隔膜刺激": "5V/1.0ms で起きないこと（SureScanモード中にペーシングを行うチャンバーにて）",
-    "MRIモード": "設定必要（SureScanモード）",
-    "検査中のモード": "患者の状態に応じてSureScan内の自己心拍固定またはペーシング固定へ切替",
-    "患者監視": "心電図・パルス酸素濃度計",
-    "体外式除細動器": "必須",
-    "最大空間勾配磁場": "20T/m（2,000ガウス/cm）以下",
-    "リードインピーダンス": "心房・右室 200〜3,000Ω（Bi/Uni）"
-   },
-   "verify": true
-  },
-  {
-   "id": "MDT-CRTD",
-   "maker": "Medtronic",
-   "type": "CRT-D",
-   "group": "Compia/Amplia/Claria MRI・Cobalt XT HF Quad・Crome HF Quad",
-   "devices": [
-    {
-     "model": "Compia MRI",
-     "name": "Compia MRI"
-    },
-    {
-     "model": "Amplia MRI",
-     "name": "Amplia MRI"
-    },
-    {
-     "model": "Claria MRI",
-     "name": "Claria MRI"
-    },
-    {
-     "model": "Cobalt XT HF Quad",
-     "name": "Cobalt XT HF Quad"
-    },
-    {
-     "model": "Crome HF Quad",
-     "name": "Crome HF Quad"
-    }
-   ],
-   "ra": [
-    {
-     "model": "5076",
-     "name": "5076"
-    },
-    {
-     "model": "5086MRI",
-     "name": "5086MRI"
-    },
-    {
-     "model": "4074",
-     "name": "4074"
-    },
-    {
-     "model": "5054",
-     "name": "5054"
-    },
-    {
-     "model": "3830",
-     "name": "3830"
-    },
-    {
-     "model": "6725",
-     "name": "6725（IS-1ピンプラグ）"
-    }
-   ],
-   "rv": [
-    {
-     "model": "3930M",
-     "name": "3930M（DF-4 74/79cm）"
-    },
-    {
-     "model": "6947M",
-     "name": "6947M（DF-4 55/62cm）"
-    },
-    {
-     "model": "6935M",
-     "name": "6935M（DF-4 55/62cm）"
-    },
-    {
-     "model": "6947",
-     "name": "6947（DF-1 58/65cm）"
-    },
-    {
-     "model": "6935",
-     "name": "6935（DF-1 58/65cm）"
-    },
-    {
-     "model": "6719",
-     "name": "6719（DF-1ピンプラグ）"
-    }
-   ],
-   "lv": [
-    {
-     "model": "4298",
-     "name": "4298（IS-4）"
-    },
-    {
-     "model": "4398",
-     "name": "4398（IS-4）"
-    },
-    {
-     "model": "4598",
-     "name": "4598（IS-4）"
-    },
-    {
-     "model": "4798",
-     "name": "4798（IS-4）"
-    },
-    {
-     "model": "4196",
-     "name": "4196（IS-1）"
-    },
-    {
-     "model": "4296",
-     "name": "4296（IS-1）"
-    },
-    {
-     "model": "4396",
-     "name": "4396（IS-1）"
-    }
-   ],
-   "tesla": [
-    "1.5T",
-    "3.0T"
-   ],
-   "cond": {
-    "ガントリ": "トンネル（ボア）型",
-    "傾斜磁場スルーレート": "≤200T/m/s",
-    "SAR": "全身 ≤2.0W/kg（1.5T）／≤4.0W/kg（3.0T）、頭部 ≤3.2W/kg",
-    "B1+rms": "3.0Tでアイソセンタを第7頸椎より下に配置する場合、B1+RMSを表示できる装置で ≦2.8μT",
-    "植込み後": "リード植込み後6週間以上経過",
-    "植込み部位": "胸部",
-    "遺残リード": "不可",
-    "ペーシング閾値": "2.0V/0.4ms 以下（右室）",
-    "横隔膜刺激": "5V/1.0ms で起きないこと（SureScanモード中にペーシングを行うチャンバーにて）",
-    "MRIモード": "設定必要（SureScanモード）",
-    "検査中のモード": "患者の状態に応じてSureScan内の自己心拍固定またはペーシング固定へ切替",
-    "患者監視": "心電図・パルス酸素濃度計",
-    "体外式除細動器": "必須",
-    "最大空間勾配磁場": "20T/m（2,000ガウス/cm）以下",
-    "リードインピーダンス": "心房・右室 200〜3,000Ω／RVコイル 20〜200Ω"
-   },
-   "verify": true
-  },
-  {
-   "id": "ABT-AVEIR",
-   "maker": "Abbott",
-   "type": "リードレスペースメーカ",
-   "group": "アヴェイル LP",
-   "devices": [
-    {
-     "model": "LSP112V",
-     "name": "アヴェイル VR LSP112V"
-    },
-    {
-     "model": "LSP202V",
-     "name": "アヴェイル VR LSP202V"
-    },
-    {
-     "model": "LSP201A",
-     "name": "アヴェイル AR LSP201A"
-    },
-    {
-     "model": "LSP203A",
-     "name": "アヴェイル AR LSP203A"
-    }
-   ],
-   "ra": [],
-   "rv": [],
-   "lv": [],
-   "leadfree": true,
-   "tesla": [
-    "1.5T",
-    "3.0T"
-   ],
-   "cond": {
-    "ガントリ": "水平式クローズドボア",
-    "最大空間勾配磁場": "30T/m",
-    "傾斜磁場スルーレート": "≤200T/m/s",
-    "SAR": "全身 ≦4.0W/kg／頭部 ≤3.2W/kg",
-    "植込み部位": "アヴェイル VR は右心室、アヴェイル AR は右心房",
-    "遺残リード": "不可（プラグは可）",
-    "リードインピーダンス": "該当なし",
-    "ペーシング閾値": "心室 2.5V(0.5ms)以下",
-    "横隔膜刺激": "非同期モード時、5.0V/1.0ms で横隔膜刺激がないこと",
-    "体位": "仰臥位または伏臥位（腕は体の横）",
-    "撮像時間": "制限なし",
-    "累積撮像時間": "制限なし",
-    "MRIモード": "設定必要",
-    "検査中のモード": "ペーシングOff、VOO/AOO/DOO ⇄ VOO",
-    "ローカル送受信コイル": "円偏波（CP）でRF励起した頭部・下肢・上肢用のみ（送信専用コイルは不可）",
-    "患者監視": "心電図・パルスメータ・非侵襲的血圧測定",
-    "体外式除細動器": "パルスオキシメータまたはECGモニタ（準備は任意）",
-    "備考": "デバイスのシリアル番号による各社サイトの検索で最新の撮像条件を確認できる",
-    "管理操作モード": "第一次水準管理操作モードまたは通常操作モード",
-    "植込み後": "制限なし"
-   },
-   "verify": true
-  },
-  {
-   "id": "ABT-PM",
-   "maker": "Abbott",
-   "type": "ペースメーカ",
-   "group": "アクセント MRI / アシュリティ MRI / エンデュリティ MRI",
-   "devices": [
-    {
-     "model": "アクセント MRI",
-     "name": "アクセント MRI"
-    },
-    {
-     "model": "アシュリティ MRI",
-     "name": "アシュリティ MRI"
-    },
-    {
-     "model": "エンデュリティ MRI",
-     "name": "エンデュリティ MRI"
-    }
-   ],
-   "ra": [
-    {
-     "model": "テンドリル MRI-46cm",
-     "name": "テンドリル MRI 46cm"
-    },
-    {
-     "model": "テンドリル MRI-52cm",
-     "name": "テンドリル MRI 52cm"
-    },
-    {
-     "model": "テンドリル MRI-58cm",
-     "name": "テンドリル MRI 58cm"
-    },
-    {
-     "model": "テンドリル STS-46cm",
-     "name": "テンドリル STS 46cm"
-    },
-    {
-     "model": "テンドリル STS-52cm",
-     "name": "テンドリル STS 52cm"
-    },
-    {
-     "model": "テンドリル STS-58cm",
-     "name": "テンドリル STS 58cm"
-    },
-    {
-     "model": "アイソフレックス Optim 1944（心房用）-46cm",
-     "name": "アイソフレックス Optim 1944（心房用） 46cm"
-    },
-    {
-     "model": "アイソフレックス Optim 1944（心房用）-52cm",
-     "name": "アイソフレックス Optim 1944（心房用） 52cm"
-    },
-    {
-     "model": "ABT-PLUG",
-     "name": "Abbott社製プラグ"
-    }
-   ],
-   "rv": [
-    {
-     "model": "テンドリル MRI-46cm",
-     "name": "テンドリル MRI 46cm"
-    },
-    {
-     "model": "テンドリル MRI-52cm",
-     "name": "テンドリル MRI 52cm"
-    },
-    {
-     "model": "テンドリル MRI-58cm",
-     "name": "テンドリル MRI 58cm"
-    },
-    {
-     "model": "テンドリル STS-46cm",
-     "name": "テンドリル STS 46cm"
-    },
-    {
-     "model": "テンドリル STS-52cm",
-     "name": "テンドリル STS 52cm"
-    },
-    {
-     "model": "テンドリル STS-58cm",
-     "name": "テンドリル STS 58cm"
+     "model": "TLSCREWVINE44",
+     "name": "J-LINE SCREWVINE 44SEP"
     },
     {
-     "model": "アイソフレックス Optim 1948（心室用）-52cm",
-     "name": "アイソフレックス Optim 1948（心室用） 52cm"
+     "model": "TLSCREWVINE52",
+     "name": "J-LINE SCREWVINE 52SEP"
     },
     {
-     "model": "アイソフレックス Optim 1948（心室用）-58cm",
-     "name": "アイソフレックス Optim 1948（心室用） 58cm"
+     "model": "TLSCREWVINE58",
+     "name": "J-LINE SCREWVINE 58SEP"
     }
    ],
    "lv": [],
@@ -5249,510 +5493,461 @@
     "1.5T"
    ],
    "cond": {
-    "ガントリ": "水平式クローズドボア",
-    "最大空間勾配磁場": "30T/m",
-    "傾斜磁場スルーレート": "≤200T/m/s",
-    "SAR": "全身 ≦2.0W/kg／頭部 ≤3.2W/kg（通常操作モード）",
+    "植込み後": "6週間以上",
     "植込み部位": "胸部",
-    "遺残リード": "不可（プラグは可）",
-    "リードインピーダンス": "設定した範囲内（下限100Ω・上限3,000Ω）",
-    "ペーシング閾値": "心房・心室 2.5V(0.5ms)以下（Bipolar）",
-    "横隔膜刺激": "5.0V/1.0ms または 7.5V/1.0ms で横隔膜刺激がないこと",
-    "体位": "仰臥位または伏臥位（腕は体の横）",
-    "撮像時間": "制限なし",
-    "累積撮像時間": "制限なし",
-    "MRIモード": "設定必要",
-    "検査中のモード": "ペーシングOff、AOO / VOO / DOO",
-    "ローカル送受信コイル": "円偏波（CP）でRF励起した頭部・下肢・上肢用のみ（送信専用コイルは不可）",
-    "患者監視": "心電図・パルスメータ・非侵襲的血圧測定",
-    "体外式除細動器": "パルスオキシメータまたはECGモニタ（準備は任意）",
-    "備考": "デバイスのシリアル番号による各社サイトの検索で最新の撮像条件を確認できる",
-    "植込み後": "アクセント MRI のみリード植込み後6週間を経過すること",
-    "アラート": "ペイシェントノーティファイアー機能（MR撮像後に機能がなくなる可能性あり）"
-   },
-   "verify": true
+    "遺残リード": "不可",
+    "ペーシング閾値": "2.0V(0.35ms)以下（Bipolar）",
+    "リードインピーダンス": "心房・右室 200〜3,000Ω（Bipolar）",
+    "傾斜磁場スルーレート": "≤200T/m/s",
+    "SAR": "全身 ≤2.0W/kg／頭部 ≤3.2W/kg（通常操作モード）",
+    "体位": "背臥位または腹臥位のみ（側臥位不可）",
+    "ローカル送受信コイル": "全身使用不可",
+    "MRIモード": "マニュアル設定／自動設定",
+    "患者監視": "心電図・パルスオキシメータ",
+    "体外式除細動器": "必須",
+    "最大空間勾配磁場": "制限なし",
+    "除外領域": "胸腹部領域",
+    "アイソセンタ": "眼より上・股関節より下",
+    "撮像時間": "1回40分以内／次回まで30分以上あける",
+    "電池": "電池抵抗 <5kΩ"
+   }
   },
   {
-   "id": "ABT-ELLIPSE",
-   "maker": "Abbott",
+   "id": "MP-KORA250",
+   "maker": "MicroPort CRM",
+   "type": "ペースメーカ",
+   "group": "KORA 250 / KORA 250 ENO",
+   "devices": [
+    {
+     "model": "TPM010J",
+     "name": "KORA 250 DR"
+    },
+    {
+     "model": "TPM013J",
+     "name": "KORA 250 SR"
+    },
+    {
+     "model": "TPM014J",
+     "name": "KORA 250 ENO DR"
+    },
+    {
+     "model": "TPM015J",
+     "name": "KORA 250 ENO SR"
+    }
+   ],
+   "ra": [
+    {
+     "model": "RF45D",
+     "name": "BEFLEX RF45D"
+    },
+    {
+     "model": "RF46D",
+     "name": "BEFLEX RF46D"
+    },
+    {
+     "model": "TLD040C",
+     "name": "VEGA R45"
+    },
+    {
+     "model": "TLD041C",
+     "name": "VEGA R52"
+    },
+    {
+     "model": "TLD042C",
+     "name": "VEGA R58"
+    },
+    {
+     "model": "TLD056C",
+     "name": "Xfine JX24D"
+    },
+    {
+     "model": "TLD057C",
+     "name": "Xfine JX25D"
+    },
+    {
+     "model": "TLD054C",
+     "name": "Xfine TX25D"
+    },
+    {
+     "model": "TLD055C",
+     "name": "Xfine TX26D"
+    },
+    {
+     "model": "TLSCREWVINE44",
+     "name": "J-LINE SCREWVINE 44SEP"
+    },
+    {
+     "model": "TLSCREWVINE52",
+     "name": "J-LINE SCREWVINE 52SEP"
+    },
+    {
+     "model": "TLSCREWVINE58",
+     "name": "J-LINE SCREWVINE 58SEP"
+    },
+    {
+     "model": "TLJPETITE44ERJB",
+     "name": "J-LINE PETITE 44ERJB"
+    },
+    {
+     "model": "TLJPETITE52ERJB",
+     "name": "J-LINE PETITE 52ERJB"
+    },
+    {
+     "model": "TLJPETITE52ERB",
+     "name": "J-LINE PETITE 52ERB"
+    },
+    {
+     "model": "TLJPETITE58ERB",
+     "name": "J-LINE PETITE 58ERB"
+    }
+   ],
+   "rv": [
+    {
+     "model": "RF45D",
+     "name": "BEFLEX RF45D"
+    },
+    {
+     "model": "RF46D",
+     "name": "BEFLEX RF46D"
+    },
+    {
+     "model": "TLD040C",
+     "name": "VEGA R45"
+    },
+    {
+     "model": "TLD041C",
+     "name": "VEGA R52"
+    },
+    {
+     "model": "TLD042C",
+     "name": "VEGA R58"
+    },
+    {
+     "model": "TLD056C",
+     "name": "Xfine JX24D"
+    },
+    {
+     "model": "TLD057C",
+     "name": "Xfine JX25D"
+    },
+    {
+     "model": "TLD054C",
+     "name": "Xfine TX25D"
+    },
+    {
+     "model": "TLD055C",
+     "name": "Xfine TX26D"
+    },
+    {
+     "model": "TLSCREWVINE44",
+     "name": "J-LINE SCREWVINE 44SEP"
+    },
+    {
+     "model": "TLSCREWVINE52",
+     "name": "J-LINE SCREWVINE 52SEP"
+    },
+    {
+     "model": "TLSCREWVINE58",
+     "name": "J-LINE SCREWVINE 58SEP"
+    },
+    {
+     "model": "TLJPETITE44ERJB",
+     "name": "J-LINE PETITE 44ERJB"
+    },
+    {
+     "model": "TLJPETITE52ERJB",
+     "name": "J-LINE PETITE 52ERJB"
+    },
+    {
+     "model": "TLJPETITE52ERB",
+     "name": "J-LINE PETITE 52ERB"
+    },
+    {
+     "model": "TLJPETITE58ERB",
+     "name": "J-LINE PETITE 58ERB"
+    }
+   ],
+   "lv": [],
+   "tesla": [
+    "1.5T",
+    "3.0T"
+   ],
+   "cond": {
+    "植込み後": "6週間以上",
+    "植込み部位": "胸部",
+    "遺残リード": "不可",
+    "ペーシング閾値": "2.0V(0.35ms)以下（Bipolar）",
+    "リードインピーダンス": "心房・右室 200〜3,000Ω（Bipolar）",
+    "傾斜磁場スルーレート": "≤200T/m/s",
+    "SAR": "全身 ≤2.0W/kg／頭部 ≤3.2W/kg（通常操作モード）",
+    "体位": "背臥位または腹臥位のみ（側臥位不可）",
+    "ローカル送受信コイル": "全身使用不可",
+    "MRIモード": "マニュアル設定／自動設定",
+    "患者監視": "心電図・パルスオキシメータ",
+    "体外式除細動器": "必須",
+    "最大空間勾配磁場": "≤20T/m",
+    "除外領域": "制限なし",
+    "アイソセンタ": "制限なし",
+    "撮像時間": "1回40分以内／アイソセンタが眼〜股関節の場合は次回まで24時間以上",
+    "電池": "電池抵抗 <5kΩ"
+   }
+  },
+  {
+   "id": "MP-ULYS",
+   "maker": "MicroPort CRM",
    "type": "ICD",
-   "group": "エリプス / エリプス Limited / フォーティファイ アシュラ",
+   "group": "ULYS",
    "devices": [
     {
-     "model": "エリプス",
-     "name": "エリプス"
+     "model": "TDF049J",
+     "name": "ULYS VR 2240"
     },
     {
-     "model": "エリプス Limited",
-     "name": "エリプス Limited"
-    },
-    {
-     "model": "フォーティファイ アシュラ",
-     "name": "フォーティファイ アシュラ"
+     "model": "TDF050J",
+     "name": "ULYS DR 2540"
     }
    ],
    "ra": [
     {
-     "model": "テンドリル STS-46cm",
-     "name": "テンドリル STS 46cm"
+     "model": "RF45D",
+     "name": "BEFLEX RF45D"
     },
     {
-     "model": "テンドリル STS-52cm",
-     "name": "テンドリル STS 52cm"
+     "model": "RF46D",
+     "name": "BEFLEX RF46D"
     },
     {
-     "model": "テンドリル STS-58cm",
-     "name": "テンドリル STS 58cm"
+     "model": "TLD040C",
+     "name": "VEGA R45"
     },
     {
-     "model": "アイソフレックス Optim 1944（心房用）-46cm",
-     "name": "アイソフレックス Optim 1944（心房用） 46cm"
+     "model": "TLD041C",
+     "name": "VEGA R52"
     },
     {
-     "model": "アイソフレックス Optim 1944（心房用）-52cm",
-     "name": "アイソフレックス Optim 1944（心房用） 52cm"
+     "model": "TLD042C",
+     "name": "VEGA R58"
     },
     {
-     "model": "アルティペース LPA1231-46cm",
-     "name": "アルティペース LPA1231 46cm"
+     "model": "TLD056C",
+     "name": "Xfine JX24D"
     },
     {
-     "model": "アルティペース LPA1231-52cm",
-     "name": "アルティペース LPA1231 52cm"
+     "model": "TLD057C",
+     "name": "Xfine JX25D"
     },
     {
-     "model": "アルティペース LPA1231-58cm",
-     "name": "アルティペース LPA1231 58cm"
+     "model": "TLD054C",
+     "name": "Xfine TX25D"
     },
     {
-     "model": "アルティペース LPA1231-65cm",
-     "name": "アルティペース LPA1231 65cm"
-    },
-    {
-     "model": "ABT-PLUG",
-     "name": "Abbott社製プラグ"
+     "model": "TLD055C",
+     "name": "Xfine TX26D"
     }
    ],
    "rv": [
     {
-     "model": "Durata（DF-4）-58cm",
-     "name": "Durata（DF-4） 58cm"
+     "model": "RF45D",
+     "name": "BEFLEX RF45D"
     },
     {
-     "model": "Durata（DF-4）-65cm",
-     "name": "Durata（DF-4） 65cm"
+     "model": "RF46D",
+     "name": "BEFLEX RF46D"
     },
     {
-     "model": "Optisure（DF-4）-58cm",
-     "name": "Optisure（DF-4） 58cm"
+     "model": "TLD040C",
+     "name": "VEGA R45"
     },
     {
-     "model": "Optisure（DF-4）-65cm",
-     "name": "Optisure（DF-4） 65cm"
+     "model": "TLD041C",
+     "name": "VEGA R52"
     },
     {
-     "model": "Durata（DF-1）-60cm",
-     "name": "Durata（DF-1） 60cm"
+     "model": "TLD042C",
+     "name": "VEGA R58"
     },
     {
-     "model": "Durata（DF-1）-65cm",
-     "name": "Durata（DF-1） 65cm"
+     "model": "TLD056C",
+     "name": "Xfine JX24D"
     },
     {
-     "model": "Optisure（DF-1）-60cm",
-     "name": "Optisure（DF-1） 60cm"
+     "model": "TLD057C",
+     "name": "Xfine JX25D"
     },
     {
-     "model": "Optisure（DF-1）-65cm",
-     "name": "Optisure（DF-1） 65cm"
+     "model": "TLD054C",
+     "name": "Xfine TX25D"
+    },
+    {
+     "model": "TLD055C",
+     "name": "Xfine TX26D"
+    },
+    {
+     "model": "TLT001C",
+     "name": "INVICTA 1CR 58"
+    },
+    {
+     "model": "TLT002C",
+     "name": "INVICTA 2CR 58"
+    },
+    {
+     "model": "TLT005C",
+     "name": "INVICTA 1CR 68"
+    },
+    {
+     "model": "TLT006C",
+     "name": "INVICTA 2CR 68"
     }
    ],
    "lv": [],
    "tesla": [
-    "1.5T"
+    "1.5T",
+    "3.0T"
    ],
    "cond": {
-    "ガントリ": "水平式クローズドボア",
-    "最大空間勾配磁場": "30T/m",
-    "傾斜磁場スルーレート": "≤200T/m/s",
-    "SAR": "全身 ≦2.0W/kg／頭部 ≤3.2W/kg（通常操作モード）",
+    "植込み後": "6週間以上",
     "植込み部位": "胸部",
-    "遺残リード": "不可（プラグは可）",
-    "リードインピーダンス": "心房・心室 100〜3,000Ω／ショックコイル 20〜200Ω",
-    "ペーシング閾値": "心房・心室 2.5V(0.5ms)以下（Bipolar）",
-    "横隔膜刺激": "5.0V/1.0ms または 7.5V/1.0ms で横隔膜刺激がないこと",
-    "体位": "仰臥位または伏臥位（腕は体の横）",
-    "撮像時間": "制限なし",
-    "累積撮像時間": "制限なし",
-    "MRIモード": "設定必要",
-    "検査中のモード": "ペーシングOff、AOO / VOO / DOO",
-    "ローカル送受信コイル": "円偏波（CP）でRF励起した頭部・下肢・上肢用のみ（送信専用コイルは不可）",
-    "患者監視": "心電図・パルスメータ・非侵襲的血圧測定",
-    "体外式除細動器": "パルスオキシメータまたはECGモニタ（準備は任意）",
-    "備考": "デバイスのシリアル番号による各社サイトの検索で最新の撮像条件を確認できる"
-   },
-   "verify": true
+    "遺残リード": "不可",
+    "ペーシング閾値": "2.0V(0.35ms)以下（Bipolar）",
+    "リードインピーダンス": "心房・右室 200〜3,000Ω／RV・SVCコイル 20〜200Ω",
+    "傾斜磁場スルーレート": "≤200T/m/s",
+    "SAR": "全身 ≤2.0W/kg／頭部 ≤3.2W/kg（通常操作モード）",
+    "体位": "背臥位または腹臥位のみ（側臥位不可）",
+    "ローカル送受信コイル": "全身使用不可",
+    "MRIモード": "マニュアル設定／自動設定",
+    "患者監視": "心電図・パルスオキシメータ",
+    "体外式除細動器": "必須",
+    "最大空間勾配磁場": "≤20T/m",
+    "除外領域": "制限なし",
+    "アイソセンタ": "制限なし",
+    "撮像時間": "1回40分以内",
+    "電池": "RRTに達していないこと",
+    "アラート": "あり"
+   }
   },
   {
-   "id": "ABT-QUADRA-ASSURA",
-   "maker": "Abbott",
+   "id": "MP-GALI",
+   "maker": "MicroPort CRM",
    "type": "CRT-D",
-   "group": "クアドラ アシュラ / クアドラ アシュラ MP",
+   "group": "GALI",
    "devices": [
     {
-     "model": "クアドラ アシュラ",
-     "name": "クアドラ アシュラ"
-    },
-    {
-     "model": "クアドラ アシュラ MP",
-     "name": "クアドラ アシュラ MP"
+     "model": "TDF054J",
+     "name": "GALI 4LV SonR CRT-D 2844"
     }
    ],
    "ra": [
     {
-     "model": "テンドリル STS-46cm",
-     "name": "テンドリル STS 46cm"
+     "model": "RF45D",
+     "name": "BEFLEX RF45D"
     },
     {
-     "model": "テンドリル STS-52cm",
-     "name": "テンドリル STS 52cm"
+     "model": "RF46D",
+     "name": "BEFLEX RF46D"
     },
     {
-     "model": "テンドリル STS-58cm",
-     "name": "テンドリル STS 58cm"
+     "model": "TLD040C",
+     "name": "VEGA R45"
     },
     {
-     "model": "アイソフレックス Optim 1944（心房用）-46cm",
-     "name": "アイソフレックス Optim 1944（心房用） 46cm"
+     "model": "TLD041C",
+     "name": "VEGA R52"
     },
     {
-     "model": "アイソフレックス Optim 1944（心房用）-52cm",
-     "name": "アイソフレックス Optim 1944（心房用） 52cm"
+     "model": "TLD042C",
+     "name": "VEGA R58"
     },
     {
-     "model": "アルティペース LPA1231-46cm",
-     "name": "アルティペース LPA1231 46cm"
+     "model": "TLD056C",
+     "name": "Xfine JX24D"
     },
     {
-     "model": "アルティペース LPA1231-52cm",
-     "name": "アルティペース LPA1231 52cm"
+     "model": "TLD057C",
+     "name": "Xfine JX25D"
     },
     {
-     "model": "アルティペース LPA1231-58cm",
-     "name": "アルティペース LPA1231 58cm"
+     "model": "TLD054C",
+     "name": "Xfine TX25D"
     },
     {
-     "model": "アルティペース LPA1231-65cm",
-     "name": "アルティペース LPA1231 65cm"
+     "model": "TLD055C",
+     "name": "Xfine TX26D"
     },
     {
-     "model": "ABT-PLUG",
-     "name": "Abbott社製プラグ"
+     "model": "TLD015C",
+     "name": "SONRTIP"
     }
    ],
    "rv": [
     {
-     "model": "Durata（DF-4）-58cm",
-     "name": "Durata（DF-4） 58cm"
+     "model": "RF45D",
+     "name": "BEFLEX RF45D"
     },
     {
-     "model": "Durata（DF-4）-65cm",
-     "name": "Durata（DF-4） 65cm"
+     "model": "RF46D",
+     "name": "BEFLEX RF46D"
     },
     {
-     "model": "Optisure（DF-4）-58cm",
-     "name": "Optisure（DF-4） 58cm"
+     "model": "TLD040C",
+     "name": "VEGA R45"
     },
     {
-     "model": "Optisure（DF-4）-65cm",
-     "name": "Optisure（DF-4） 65cm"
+     "model": "TLD041C",
+     "name": "VEGA R52"
     },
     {
-     "model": "Durata（DF-1）-60cm",
-     "name": "Durata（DF-1） 60cm"
+     "model": "TLD042C",
+     "name": "VEGA R58"
     },
     {
-     "model": "Durata（DF-1）-65cm",
-     "name": "Durata（DF-1） 65cm"
+     "model": "TLD056C",
+     "name": "Xfine JX24D"
     },
     {
-     "model": "Optisure（DF-1）-60cm",
-     "name": "Optisure（DF-1） 60cm"
+     "model": "TLD057C",
+     "name": "Xfine JX25D"
     },
     {
-     "model": "Optisure（DF-1）-65cm",
-     "name": "Optisure（DF-1） 65cm"
+     "model": "TLD054C",
+     "name": "Xfine TX25D"
+    },
+    {
+     "model": "TLD055C",
+     "name": "Xfine TX26D"
+    },
+    {
+     "model": "TLT001C",
+     "name": "INVICTA 1CR 58"
+    },
+    {
+     "model": "TLT002C",
+     "name": "INVICTA 2CR 58"
+    },
+    {
+     "model": "TLT005C",
+     "name": "INVICTA 1CR 68"
+    },
+    {
+     "model": "TLT006C",
+     "name": "INVICTA 2CR 68"
     }
    ],
    "lv": [
     {
-     "model": "1458Q",
-     "name": "カルテット 1458Q（86cm）"
+     "model": "TLT019C",
+     "name": "NAVIGO 2D 78"
     },
     {
-     "model": "1458QL",
-     "name": "カルテット Ex ファミリー 1458QL（86cm）"
+     "model": "TLT020C",
+     "name": "NAVIGO 2D 88"
     },
     {
-     "model": "1457Q",
-     "name": "カルテット Ex ファミリー 1457Q（86cm）"
+     "model": "TLT021C",
+     "name": "NAVIGO ARC 78"
     },
     {
-     "model": "1456Q",
-     "name": "カルテット Ex ファミリー 1456Q（86cm）"
-    }
-   ],
-   "tesla": [
-    "1.5T"
-   ],
-   "cond": {
-    "ガントリ": "水平式クローズドボア",
-    "最大空間勾配磁場": "30T/m",
-    "傾斜磁場スルーレート": "≤200T/m/s",
-    "SAR": "全身 ≦2.0W/kg／頭部 ≤3.2W/kg（通常操作モード）",
-    "植込み部位": "胸部",
-    "遺残リード": "不可（プラグは可）",
-    "リードインピーダンス": "心房・心室 100〜3,000Ω／ショックコイル 20〜200Ω",
-    "ペーシング閾値": "心房・右室 2.5V(0.5ms)以下（Bipolar）／左室 2.0V(0.5ms)",
-    "横隔膜刺激": "5.0V/1.0ms または 7.5V/1.0ms で横隔膜刺激がないこと",
-    "体位": "仰臥位または伏臥位（腕は体の横）",
-    "撮像時間": "制限なし",
-    "累積撮像時間": "制限なし",
-    "MRIモード": "設定必要",
-    "検査中のモード": "ペーシングOff、AOO / VOO / DOO",
-    "ローカル送受信コイル": "円偏波（CP）でRF励起した頭部・下肢・上肢用のみ（送信専用コイルは不可）",
-    "患者監視": "心電図・パルスメータ・非侵襲的血圧測定",
-    "体外式除細動器": "パルスオキシメータまたはECGモニタ（準備は任意）",
-    "備考": "デバイスのシリアル番号による各社サイトの検索で最新の撮像条件を確認できる"
-   },
-   "verify": true
-  },
-  {
-   "id": "ABT-GALLANT-ICD",
-   "maker": "Abbott",
-   "type": "ICD",
-   "group": "ギャラン ICD（DF-4 / DF-1）",
-   "devices": [
-    {
-     "model": "ギャラン ICD DF-4",
-     "name": "ギャラン ICD（DF-4）"
-    },
-    {
-     "model": "ギャラン ICD DF-1",
-     "name": "ギャラン ICD（DF-1）"
-    }
-   ],
-   "ra": [
-    {
-     "model": "テンドリル STS-46cm",
-     "name": "テンドリル STS 46cm"
-    },
-    {
-     "model": "テンドリル STS-52cm",
-     "name": "テンドリル STS 52cm"
-    },
-    {
-     "model": "テンドリル STS-58cm",
-     "name": "テンドリル STS 58cm"
-    },
-    {
-     "model": "アイソフレックス Optim 1944（心房用）-46cm",
-     "name": "アイソフレックス Optim 1944（心房用） 46cm"
-    },
-    {
-     "model": "アイソフレックス Optim 1944（心房用）-52cm",
-     "name": "アイソフレックス Optim 1944（心房用） 52cm"
-    },
-    {
-     "model": "アルティペース LPA1231-46cm",
-     "name": "アルティペース LPA1231 46cm"
-    },
-    {
-     "model": "アルティペース LPA1231-52cm",
-     "name": "アルティペース LPA1231 52cm"
-    },
-    {
-     "model": "アルティペース LPA1231-58cm",
-     "name": "アルティペース LPA1231 58cm"
-    },
-    {
-     "model": "アルティペース LPA1231-65cm",
-     "name": "アルティペース LPA1231 65cm"
-    },
-    {
-     "model": "ABT-PLUG",
-     "name": "Abbott社製プラグ"
-    }
-   ],
-   "rv": [
-    {
-     "model": "Durata（DF-4）-58cm",
-     "name": "Durata（DF-4） 58cm"
-    },
-    {
-     "model": "Durata（DF-4）-65cm",
-     "name": "Durata（DF-4） 65cm"
-    },
-    {
-     "model": "Optisure（DF-4）-58cm",
-     "name": "Optisure（DF-4） 58cm"
-    },
-    {
-     "model": "Optisure（DF-4）-65cm",
-     "name": "Optisure（DF-4） 65cm"
-    },
-    {
-     "model": "Durata（DF-1）-60cm",
-     "name": "Durata（DF-1） 60cm"
-    },
-    {
-     "model": "Durata（DF-1）-65cm",
-     "name": "Durata（DF-1） 65cm"
-    },
-    {
-     "model": "Optisure（DF-1）-60cm",
-     "name": "Optisure（DF-1） 60cm"
-    },
-    {
-     "model": "Optisure（DF-1）-65cm",
-     "name": "Optisure（DF-1） 65cm"
-    }
-   ],
-   "lv": [],
-   "tesla": [
-    "1.5T",
-    "3.0T"
-   ],
-   "cond": {
-    "ガントリ": "水平式クローズドボア",
-    "最大空間勾配磁場": "30T/m",
-    "傾斜磁場スルーレート": "≤200T/m/s",
-    "SAR": "1.5T：全身 ≦2.0W/kg／3.0T：全身 ≦4.0W/kg、頭部 ≤3.2W/kg",
-    "植込み部位": "胸部",
-    "遺残リード": "不可（プラグは可）",
-    "リードインピーダンス": "心房・心室 100〜3,000Ω／ショックコイル 20〜125Ω",
-    "ペーシング閾値": "心房・心室 2.5V(0.5ms)以下（Bipolar）",
-    "横隔膜刺激": "5.0V/1.0ms または 7.5V/1.0ms で横隔膜刺激がないこと",
-    "体位": "仰臥位または伏臥位（腕は体の横）",
-    "撮像時間": "制限なし",
-    "累積撮像時間": "制限なし",
-    "MRIモード": "設定必要",
-    "検査中のモード": "ペーシングOff、AOO / VOO / DOO",
-    "ローカル送受信コイル": "円偏波（CP）でRF励起した頭部・下肢・上肢用のみ（送信専用コイルは不可）",
-    "患者監視": "心電図・パルスメータ・非侵襲的血圧測定",
-    "体外式除細動器": "パルスオキシメータまたはECGモニタ（準備は任意）",
-    "備考": "デバイスのシリアル番号による各社サイトの検索で最新の撮像条件を確認できる",
-    "ホールボディコイル": "1.5T：制限なし／3.0T：円偏波（CP）または多チャンネル-2（MC-2）でRF励起"
-   },
-   "verify": true
-  },
-  {
-   "id": "ABT-GALLANT-HF",
-   "maker": "Abbott",
-   "type": "CRT-D",
-   "group": "ギャラン HF（DF-4 / DF-1）",
-   "devices": [
-    {
-     "model": "ギャラン HF DF-4",
-     "name": "ギャラン HF（DF-4）"
-    },
-    {
-     "model": "ギャラン HF DF-1",
-     "name": "ギャラン HF（DF-1）"
-    }
-   ],
-   "ra": [
-    {
-     "model": "テンドリル STS-46cm",
-     "name": "テンドリル STS 46cm"
-    },
-    {
-     "model": "テンドリル STS-52cm",
-     "name": "テンドリル STS 52cm"
-    },
-    {
-     "model": "テンドリル STS-58cm",
-     "name": "テンドリル STS 58cm"
-    },
-    {
-     "model": "アイソフレックス Optim 1944（心房用）-46cm",
-     "name": "アイソフレックス Optim 1944（心房用） 46cm"
-    },
-    {
-     "model": "アイソフレックス Optim 1944（心房用）-52cm",
-     "name": "アイソフレックス Optim 1944（心房用） 52cm"
-    },
-    {
-     "model": "アルティペース LPA1231-46cm",
-     "name": "アルティペース LPA1231 46cm"
-    },
-    {
-     "model": "アルティペース LPA1231-52cm",
-     "name": "アルティペース LPA1231 52cm"
-    },
-    {
-     "model": "アルティペース LPA1231-58cm",
-     "name": "アルティペース LPA1231 58cm"
-    },
-    {
-     "model": "アルティペース LPA1231-65cm",
-     "name": "アルティペース LPA1231 65cm"
-    },
-    {
-     "model": "ABT-PLUG",
-     "name": "Abbott社製プラグ"
-    }
-   ],
-   "rv": [
-    {
-     "model": "Durata（DF-4）-58cm",
-     "name": "Durata（DF-4） 58cm"
-    },
-    {
-     "model": "Durata（DF-4）-65cm",
-     "name": "Durata（DF-4） 65cm"
-    },
-    {
-     "model": "Optisure（DF-4）-58cm",
-     "name": "Optisure（DF-4） 58cm"
-    },
-    {
-     "model": "Optisure（DF-4）-65cm",
-     "name": "Optisure（DF-4） 65cm"
-    },
-    {
-     "model": "Durata（DF-1）-60cm",
-     "name": "Durata（DF-1） 60cm"
-    },
-    {
-     "model": "Durata（DF-1）-65cm",
-     "name": "Durata（DF-1） 65cm"
-    },
-    {
-     "model": "Optisure（DF-1）-60cm",
-     "name": "Optisure（DF-1） 60cm"
-    },
-    {
-     "model": "Optisure（DF-1）-65cm",
-     "name": "Optisure（DF-1） 65cm"
-    }
-   ],
-   "lv": [
-    {
-     "model": "1458Q",
-     "name": "カルテット 1458Q（86cm）"
-    },
-    {
-     "model": "1458QL",
-     "name": "カルテット Ex ファミリー 1458QL（86cm）"
-    },
-    {
-     "model": "1457Q",
-     "name": "カルテット Ex ファミリー 1457Q（86cm）"
-    },
-    {
-     "model": "1456Q",
-     "name": "カルテット Ex ファミリー 1456Q（86cm）"
+     "model": "TLT022C",
+     "name": "NAVIGO ARC 88"
     }
    ],
    "tesla": [
@@ -5760,220 +5955,25 @@
     "3.0T"
    ],
    "cond": {
-    "ガントリ": "水平式クローズドボア",
-    "最大空間勾配磁場": "30T/m",
-    "傾斜磁場スルーレート": "≤200T/m/s",
-    "SAR": "1.5T：全身 ≦2.0W/kg／3.0T：全身 ≦4.0W/kg、頭部 ≤3.2W/kg",
+    "植込み後": "6週間以上",
     "植込み部位": "胸部",
-    "遺残リード": "不可（プラグは可）",
-    "リードインピーダンス": "心房・心室 100〜3,000Ω／ショックコイル 20〜125Ω",
-    "ペーシング閾値": "心房・右室 2.5V(0.5ms)以下（Bipolar）／左室 2.0V(0.5ms)",
-    "横隔膜刺激": "5.0V/1.0ms または 7.5V/1.0ms で横隔膜刺激がないこと",
-    "体位": "仰臥位または伏臥位（腕は体の横）",
-    "撮像時間": "制限なし",
-    "累積撮像時間": "制限なし",
-    "MRIモード": "設定必要",
-    "検査中のモード": "ペーシングOff、AOO / VOO / DOO",
-    "ローカル送受信コイル": "円偏波（CP）でRF励起した頭部・下肢・上肢用のみ（送信専用コイルは不可）",
-    "患者監視": "心電図・パルスメータ・非侵襲的血圧測定",
-    "体外式除細動器": "パルスオキシメータまたはECGモニタ（準備は任意）",
-    "備考": "デバイスのシリアル番号による各社サイトの検索で最新の撮像条件を確認できる",
-    "ホールボディコイル": "1.5T：制限なし／3.0T：円偏波（CP）または多チャンネル-2（MC-2）でRF励起"
-   },
-   "verify": true
-  },
-  {
-   "id": "ABT-ALLURE",
-   "maker": "Abbott",
-   "type": "CRT-P",
-   "group": "クアドラ アルーア MRI / クアドラ アルーア MP",
-   "devices": [
-    {
-     "model": "クアドラ アルーア MRI",
-     "name": "クアドラ アルーア MRI"
-    },
-    {
-     "model": "クアドラ アルーア MP",
-     "name": "クアドラ アルーア MP"
-    }
-   ],
-   "ra": [
-    {
-     "model": "テンドリル STS-46cm",
-     "name": "テンドリル STS 46cm"
-    },
-    {
-     "model": "テンドリル STS-52cm",
-     "name": "テンドリル STS 52cm"
-    },
-    {
-     "model": "テンドリル STS-58cm",
-     "name": "テンドリル STS 58cm"
-    },
-    {
-     "model": "アイソフレックス Optim 1944（心房用）-46cm",
-     "name": "アイソフレックス Optim 1944（心房用） 46cm"
-    },
-    {
-     "model": "アイソフレックス Optim 1944（心房用）-52cm",
-     "name": "アイソフレックス Optim 1944（心房用） 52cm"
-    },
-    {
-     "model": "アルティペース LPA1231-46cm",
-     "name": "アルティペース LPA1231 46cm"
-    },
-    {
-     "model": "アルティペース LPA1231-52cm",
-     "name": "アルティペース LPA1231 52cm"
-    },
-    {
-     "model": "アルティペース LPA1231-58cm",
-     "name": "アルティペース LPA1231 58cm"
-    },
-    {
-     "model": "アルティペース LPA1231-65cm",
-     "name": "アルティペース LPA1231 65cm"
-    },
-    {
-     "model": "ABT-PLUG",
-     "name": "Abbott社製プラグ"
-    }
-   ],
-   "rv": [
-    {
-     "model": "テンドリル STS-46cm",
-     "name": "テンドリル STS 46cm"
-    },
-    {
-     "model": "テンドリル STS-52cm",
-     "name": "テンドリル STS 52cm"
-    },
-    {
-     "model": "テンドリル STS-58cm",
-     "name": "テンドリル STS 58cm"
-    },
-    {
-     "model": "アイソフレックス Optim 1948（心室用）-52cm",
-     "name": "アイソフレックス Optim 1948（心室用） 52cm"
-    },
-    {
-     "model": "アイソフレックス Optim 1948（心室用）-58cm",
-     "name": "アイソフレックス Optim 1948（心室用） 58cm"
-    },
-    {
-     "model": "アルティペース LPA1231-46cm",
-     "name": "アルティペース LPA1231 46cm"
-    },
-    {
-     "model": "アルティペース LPA1231-52cm",
-     "name": "アルティペース LPA1231 52cm"
-    },
-    {
-     "model": "アルティペース LPA1231-58cm",
-     "name": "アルティペース LPA1231 58cm"
-    },
-    {
-     "model": "アルティペース LPA1231-65cm",
-     "name": "アルティペース LPA1231 65cm"
-    }
-   ],
-   "lv": [
-    {
-     "model": "1458Q",
-     "name": "カルテット 1458Q（86cm）"
-    },
-    {
-     "model": "1458QL",
-     "name": "カルテット Ex ファミリー 1458QL（86cm）"
-    },
-    {
-     "model": "1457Q",
-     "name": "カルテット Ex ファミリー 1457Q（86cm）"
-    },
-    {
-     "model": "1456Q",
-     "name": "カルテット Ex ファミリー 1456Q（86cm）"
-    }
-   ],
-   "tesla": [
-    "1.5T",
-    "3.0T"
-   ],
-   "cond": {
-    "ガントリ": "水平式クローズドボア",
-    "最大空間勾配磁場": "30T/m",
+    "遺残リード": "不可",
+    "ペーシング閾値": "2.0V(0.35ms)以下（Bipolar）",
+    "リードインピーダンス": "心房・右室 200〜3,000Ω／RV・SVCコイル 20〜200Ω",
     "傾斜磁場スルーレート": "≤200T/m/s",
-    "SAR": "1.5T：全身 ≦2.0W/kg／3.0T：全身 ≦4.0W/kg（LPA1231/65 使用時は上限2.0W/kg）、頭部 ≤3.2W/kg",
-    "植込み部位": "胸部",
-    "遺残リード": "不可（プラグは可）",
-    "リードインピーダンス": "設定した範囲内（下限100Ω・上限3,000Ω）",
-    "ペーシング閾値": "心房・右室 2.5V(0.5ms)以下（Bipolar）／左室 2.0V(0.5ms)",
-    "横隔膜刺激": "5.0V/1.0ms または 7.5V/1.0ms で横隔膜刺激がないこと",
-    "体位": "仰臥位または伏臥位（腕は体の横）",
-    "撮像時間": "制限なし",
-    "累積撮像時間": "制限なし",
-    "MRIモード": "設定必要",
-    "検査中のモード": "ペーシングOff、AOO / VOO / DOO",
-    "ローカル送受信コイル": "円偏波（CP）でRF励起した頭部・下肢・上肢用のみ（送信専用コイルは不可）",
-    "患者監視": "心電図・パルスメータ・非侵襲的血圧測定",
-    "体外式除細動器": "パルスオキシメータまたはECGモニタ（準備は任意）",
-    "備考": "デバイスのシリアル番号による各社サイトの検索で最新の撮像条件を確認できる",
-    "ホールボディコイル": "1.5T：制限なし／3.0T：円偏波（CP）または多チャンネル-2（MC-2）でRF励起"
-   },
-   "verify": true
-  },
-  {
-   "id": "ABT-ICM",
-   "maker": "Abbott",
-   "type": "ICM",
-   "group": "コンファーム Rx AF / ジョット Dx / アサート IQ",
-   "devices": [
-    {
-     "model": "コンファーム Rx AF",
-     "name": "コンファーム Rx AF"
-    },
-    {
-     "model": "ジョット Dx",
-     "name": "ジョット Dx"
-    },
-    {
-     "model": "アサート IQ",
-     "name": "アサート IQ"
-    }
-   ],
-   "ra": [],
-   "rv": [],
-   "lv": [],
-   "tesla": [
-    "1.5T",
-    "3.0T"
-   ],
-   "cond": {
-    "ガントリ": "水平式クローズドボア",
-    "最大空間勾配磁場": "24T/m",
-    "傾斜磁場スルーレート": "≤200T/m/s",
-    "SAR": "≤0.1W/kg",
-    "植込み部位": "胸部",
-    "遺残リード": "不可（プラグは可）",
-    "リードインピーダンス": "該当なし",
-    "ペーシング閾値": "該当なし",
-    "横隔膜刺激": "該当なし",
-    "体位": "仰臥位または伏臥位（腕は体の横）",
-    "撮像時間": "制限なし",
-    "累積撮像時間": "制限なし",
-    "MRIモード": "該当なし",
-    "検査中のモード": "該当なし",
-    "ローカル送受信コイル": "頭部用・四肢用送受信コイル（クワドラチャのみ）。上肢は手首関節のみ、下肢は股関節を除く",
-    "患者監視": "心電図・パルスメータ・非侵襲的血圧測定",
-    "体外式除細動器": "パルスオキシメータまたはECGモニタ（準備は任意）",
-    "備考": "デバイスのシリアル番号による各社サイトの検索で最新の撮像条件を確認できる",
-    "B1+rms": "≤0.8µT",
-    "除外領域": "体幹",
-    "ホールボディコイル": "使用不可",
-    "アイソセンタ": "頭部・四肢のみ",
-    "植込み後": "なし"
-   },
-   "verify": true
+    "SAR": "全身 ≤2.0W/kg／頭部 ≤3.2W/kg（通常操作モード）",
+    "体位": "背臥位または腹臥位のみ（側臥位不可）",
+    "ローカル送受信コイル": "全身使用不可",
+    "MRIモード": "マニュアル設定／自動設定",
+    "患者監視": "心電図・パルスオキシメータ",
+    "体外式除細動器": "必須",
+    "最大空間勾配磁場": "≤20T/m",
+    "除外領域": "制限なし",
+    "アイソセンタ": "制限なし",
+    "撮像時間": "1回40分以内",
+    "電池": "RRTに達していないこと",
+    "アラート": "あり"
+   }
   }
  ]
 }
