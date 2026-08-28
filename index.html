@@ -162,6 +162,13 @@ body{padding-bottom:calc(58px + env(safe-area-inset-bottom))}
 .pcard dd{margin:0;color:var(--ink)}
 .pcard .src{margin:9px 0 0;font-size:11px;color:var(--muted)}
 .pcard .src a{color:var(--teal-d)}
+/* ===== 製品：一覧行 ===== */
+.psearch{flex:1 1 100%;border:1px solid var(--border);background:#fff;border-radius:10px;
+ padding:9px 12px;color:var(--ink);-webkit-appearance:none;appearance:none}
+.prow .ico{flex:0 0 26px;height:26px;color:var(--muted)}
+.prow b .mdl{color:var(--teal-d)}
+.prow em{color:var(--muted);font-size:12px}
+.pdet .kv dd{text-align:right}
 /* ===== 空状態 ===== */
 .blank{border:1px dashed #cbd5e1;border-radius:14px;padding:22px 18px;text-align:center;
  background:#fff;color:var(--sub)}
@@ -363,14 +370,20 @@ button,.chip,.arow,.cardrow,.tabbar button{touch-action:manipulation}
 <input id="fileInput" type="file" accept="application/json,.json" style="display:none"/>
 
 <main class="wrap" id="secProducts" hidden>
- <div class="pagehead"><h2>製品</h2><p>本体とリードを型番・カテゴリから探す</p></div>
- <div class="fbar">
-  <select id="pKind" class="fsel"></select>
-  <select id="pMaker" class="fsel"></select>
+ <div id="pBrowse">
+  <div class="pagehead"><h2>製品</h2><p>本体とリードを型番・カテゴリから探す</p></div>
+  <div class="fbar">
+   <input id="pQ" class="fsel psearch" type="search" placeholder="製品名・型番で検索" autocomplete="off"/>
+  </div>
+  <div class="fbar">
+   <select id="pMaker" class="fsel"></select>
+   <select id="pKind" class="fsel"></select>
+  </div>
+  <div class="chipline" id="pCats"></div>
+  <p class="count" id="pCount"></p>
+  <div id="pList"></div>
  </div>
- <div class="chipline" id="pCats"></div>
- <p class="count" id="pCount"></p>
- <div id="pList"></div>
+ <div id="pDetail" class="adet" hidden></div>
 </main>
 
 <main class="wrap" id="secAlgos" hidden>
@@ -900,33 +913,112 @@ loadMaster(false);
  }
 
  /* ================= 製品（デバイス＋リード） ================= */
- var pK="",pM="",pC="";
- function renderP(){
+ var pK="",pM="",pC="",pQ="",pOpen=null;
+ var LEADICO='<svg class="ico" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round"><path d="M3 6h3v4H3z"/><path d="M6 8c4 0 4 8 8 8s4-4 7-4"/><circle cx="21" cy="12" r="1.2"/></svg>';
+ var DEVICO='<svg class="ico" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="5" width="14" height="14" rx="4"/><path d="M17 9h2M17 13h2"/></svg>';
+
+ function pLabel(x){return x.name?esc(x.name):'<i>（製品名未登録）</i>'}
+ function pSub(x){
+  return [x.cat,x.polarity,x.site].filter(Boolean).join(" ・ ");
+ }
+ function pMeta(x){
+  var a=[];
+  if(x.connector)a.push(x.connector);
+  if(x.odfr)a.push(x.odfr+"Fr");
+  if(x.fixation)a.push(x.fixation);
+  if(x.coil)a.push(x.coil);
+  return a.join(" ・ ");
+ }
+ function renderPList(){
   var all=items("products");
-  var cats=uniq(all.filter(function(x){return !pK||x.kind===pK}),"cat");
-  fillSel($("#pKind"),"本体・リード",["device","lead"],pK);
-  $("#pKind").querySelectorAll("option").forEach(function(o){
+  var kinds=uniq(all,"kind");
+  fillSel($("#pKind"),"本体・リード",kinds,pK);
+  Array.prototype.forEach.call($("#pKind").querySelectorAll("option"),function(o){
    if(o.value==="device")o.textContent="本体のみ"; if(o.value==="lead")o.textContent="リードのみ"});
   fillSel($("#pMaker"),"すべてのメーカー",sortMakers(uniq(all,"maker")),pM);
-  chips($("#pCats"),cats,pC,function(v){pC=v;renderP()});
+  chips($("#pCats"),uniq(all.filter(function(x){return !pK||x.kind===pK}),"cat"),pC,
+        function(v){pC=v;renderP()});
+  var q=pQ.trim().toLowerCase();
   var rows=all.filter(function(x){
-   return (!pK||x.kind===pK)&&(!pM||x.maker===pM)&&(!pC||x.cat===pC)});
+   if(pK&&x.kind!==pK)return false;
+   if(pM&&x.maker!==pM)return false;
+   if(pC&&x.cat!==pC)return false;
+   if(q){var t=[x.name,x.model,x.maker,x.cat].join(" ").toLowerCase();
+         if(t.indexOf(q)<0)return false}
+   return true});
   $("#pCount").textContent=all.length?rows.length+" 件":"";
-  $("#pList").innerHTML=all.length?(rows.map(function(x){
-   return '<div class="pcard"><h3>'+esc(x.name)+'</h3>'+
-    '<div class="pmeta"><span class="mk">'+esc(x.maker)+'</span>'+
-    '<span>'+esc(x.cat)+'</span>'+(x.model?'<span>'+esc(x.model)+'</span>':'')+
-    (x.mri?'<span>'+esc(x.mri)+'</span>':'')+
-    (x.status&&x.status!=="販売中"?'<span class="warn">'+esc(x.status)+'</span>':'')+'</div>'+
-    dl(x.kind==="lead"
-      ?[["固定",x.fixation],["極性",x.polarity],["有効長",x.length&&x.length+" cm"],
-        ["外径",x.diameter&&x.diameter+" Fr"],["コイル",x.coil],["コネクタ",x.connector],["備考",x.note]]
-      :[["シリーズ",x.series],["コネクタ",x.connector],["寿命",x.longevity&&x.longevity+" 年"],
-        ["容積",x.volume&&x.volume+" cc"],["質量",x.weight&&x.weight+" g"],
-        ["最大出力",x.energy&&x.energy+" J"],["備考",x.note]])+
-    srcLine(x)+'</div>'}).join("")||'<p class="count">該当なし</p>')
-   :blank("products","template_products.csv");
+  if(!all.length){$("#pList").innerHTML=blank("products","template_products.csv");return}
+  if(!rows.length){$("#pList").innerHTML='<p class="count">該当なし</p>';return}
+  rows.sort(function(a,b){
+   return (makerRank(a.maker)-makerRank(b.maker))
+     ||String(a.maker).localeCompare(String(b.maker),"ja")
+     ||String(a.cat||"").localeCompare(String(b.cat||""),"ja")
+     ||String(a.name||"\uFFFF").localeCompare(String(b.name||"\uFFFF"),"ja")
+     ||String(a.model||"").localeCompare(String(b.model||""),"ja",{numeric:true})});
+  var out="",cur=null;
+  rows.forEach(function(x){
+   if(x.maker!==cur){cur=x.maker;out+='<p class="mkhead">'+esc(cur)+'</p>'}
+   var m=pMeta(x);
+   out+='<button class="arow prow" data-id="'+esc(x.id)+'">'+
+    (x.kind==="device"?DEVICO:LEADICO)+
+    '<span class="atxt"><b>'+pLabel(x)+
+     (x.model?' <span class="mdl">'+esc(x.model)+'</span>':'')+'</b>'+
+     '<small>'+esc(pSub(x))+'</small>'+
+     (m?'<em>'+esc(m)+'</em>':'')+'</span>'+CHEV+'</button>';
+  });
+  $("#pList").innerHTML=out;
  }
+
+ function openProd(id){
+  var x=items("products").filter(function(a){return a.id===id})[0]; if(!x)return;
+  pOpen=id;
+  function sec(title,pairs){
+   var r=pairs.filter(function(p){return p[1]}).map(function(p){
+    return '<div><dt>'+esc(p[0])+'</dt><dd>'+esc(p[1])+'</dd></div>'}).join("");
+   return r?'<section><h4>'+esc(title)+'</h4><dl class="kv">'+r+'</dl></section>':'';
+  }
+  var head=[["メーカー",x.maker],["取扱会社",x.dealer],["分類",x.cat],
+            ["型番",x.model],["販売期間",x.period],["状態",x.status]];
+  var body=x.kind==="lead"
+   ?[sec("基本",[["極性",x.polarity],["適応部位",x.site],["固定形式",x.fixation],
+                 ["ステロイド",x.steroid],["コネクタ",x.connector],
+                 ["イントロデューサ",x.intro]]),
+     sec("電極",[["電極の材質",x.emat],["電極表面",x.esurf],
+                 ["表面積 distal",x.sad&&x.sad+" mm²"],["表面積 prox",x.sap&&x.sap+" mm²"],
+                 ["Tip電極径",x.tip&&x.tip+" mm"],["Ring電極径",x.ring&&x.ring+" mm"],
+                 ["コイル",x.coil]]),
+     sec("リード構造",[["リード径",x.dia&&x.dia+" mm"],["導線形状",x.cond],
+                 ["皮膜材質（外部/内部）",x.insul],["リード長",x.length&&x.length+" cm"],
+                 ["OD",x.odmm&&(x.odmm+" mm")],["OD",x.odfr&&(x.odfr+" Fr")]])]
+   :[sec("本体",[["シリーズ",x.series],["コネクタ",x.connector],
+                 ["寿命",x.longevity&&x.longevity+" 年"],["容積",x.volume&&x.volume+" cc"],
+                 ["質量",x.weight&&x.weight+" g"],["最大出力",x.energy&&x.energy+" J"],
+                 ["MRI",x.mri]])];
+  $("#pDetail").innerHTML=
+   '<button class="back" id="pBack">‹ 製品一覧</button>'+
+   '<h2>'+(x.name?esc(x.name):esc(x.model||""))+'</h2>'+
+   (x.name&&x.model?'<p class="count" style="margin:4px 0 0">'+esc(x.model)+'</p>':'')+
+   sec("",head).replace("<h4></h4>","")+
+   body.join("")+
+   (x.note?'<section><h4>備考</h4><p class="body">'+esc(x.note)+'</p></section>':'')+
+   (x.unverified?'<section><h4>注意</h4><p class="body">検証未了。一次資料で確認してください。</p></section>':'');
+  $("#pBrowse").hidden=true; $("#pDetail").hidden=false; window.scrollTo(0,0);
+ }
+ function closeProd(){pOpen=null;$("#pDetail").hidden=true;$("#pBrowse").hidden=false}
+
+ function renderP(){
+  if(pOpen){openProd(pOpen);return}
+  $("#pBrowse").hidden=false; $("#pDetail").hidden=true;
+  renderPList();
+ }
+ document.addEventListener("click",function(e){
+  if(e.target.closest("#pBack")){closeProd();return}
+  var r=e.target.closest(".prow"); if(r){openProd(r.dataset.id);return}
+ });
+ document.addEventListener("input",function(e){
+  if(e.target&&e.target.id==="pQ"){pQ=e.target.value;renderPList()}
+ });
+
 
  /* ================= アルゴリズム ================= */
  /* メーカー別（algos.json）とメーカー対比表（22機能）を1タブで扱う */
@@ -1029,10 +1121,16 @@ loadMaster(false);
  /* 詳細を右スワイプで閉じる */
  (function(){
   var x0=0,y0=0,t0=0,track=false;
-  function detailOpen(){
-   var el=document.getElementById("aDetail");
-   return el && !el.hidden;
+  /* 開いている詳細画面（アルゴ／製品）を返す */
+  function openPane(){
+   var ids=[["aDetail",function(){closeAlgo()}],["pDetail",function(){closeProd()}]];
+   for(var i=0;i<ids.length;i++){
+    var el=document.getElementById(ids[i][0]);
+    if(el&&!el.hidden)return {el:el,close:ids[i][1]};
+   }
+   return null;
   }
+  function detailOpen(){return !!openPane()}
   function start(x,y){x0=x;y0=y;t0=Date.now();track=true}
   function move(x,y){
    if(!track)return;
@@ -1041,15 +1139,15 @@ loadMaster(false);
    setX(dx>0?dx*0.3:0);
   }
   function end(x,y){
-   var el=document.getElementById("aDetail");
+   var p=openPane();
    setX(0);
    if(!track)return; track=false;
    var dx=x-x0, dy=y-y0, dt=Date.now()-t0;
-   if(dx>55 && Math.abs(dx)>Math.abs(dy)*1.2 && dt<1200 && typeof closeAlgo==="function")closeAlgo();
+   if(dx>55 && Math.abs(dx)>Math.abs(dy)*1.2 && dt<1200 && p)p.close();
   }
   function setX(px){
-   var el=document.getElementById("aDetail"); if(!el)return;
-   el.style.transform = px ? "translateX("+px+"px)" : "";
+   var p=openPane(); if(!p)return;
+   p.el.style.transform = px ? "translateX("+px+"px)" : "";
   }
   document.addEventListener("touchstart",function(e){
    if(!detailOpen()||e.touches.length!==1){track=false;return}
