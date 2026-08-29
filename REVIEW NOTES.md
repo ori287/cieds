@@ -859,6 +859,240 @@ Medtronic の勾配磁場と同じ理由で、**列と機種の対応が判別�
 学会一覧表の記載に基づく暫定データのままなので `verify` を立てた。
 INGENIO MRI は学会表で「1.5Tのみ」と読める列があり、現行データの 1.5T/3.0T と食い違う可能性がある。
 
+## JADIA組合せ検索との差分（2026-08-29）
+
+JADIA `cieds-mri.com` の組合せ検索は **JavaScript駆動＋医療従事者確認のゲート**があり、
+外部から内容を取得できない。またデータをそのまま取り込むことは著作権上できない。
+**一次資料（添付文書・メーカー公式）から作り、JADIAは答え合わせに使う**方針とする。
+
+検索の操作手順自体は既にJADIAと同等：
+メーカー → 種類 → 本体 → 心房リード → 心室リード →（左室）→ 判定。
+JADIAは「モデル名」「モデル番号」を別欄にしているが、本アプリは
+選択肢を `製品名（型番）` の形にして1欄で両方引けるようにしている。
+
+### 現在の充足状況
+
+| メーカー | 群数 | リード登録 | 検証未了 | 状態 |
+|---|---|---|---|---|
+| Abbott | 13 | 12 | 2 | 公式サイト4ページから作成済み |
+| Boston Scientific | 11 | 11 | 3 | 添付文書5点から作成済み |
+| MicroPort CRM | 5 | 5 | 0 | 出典未確認（引き継ぎ前のデータ） |
+| Medtronic | 10 | 10 | 10 | 勾配磁場・IS-1ピンプラグが未確定 |
+| **BIOTRONIK** | **15** | **0** | 0 | **リードが1件も未登録＝組合せ検索が成立しない** |
+
+### 必要な資料
+
+`添付文書_取得リスト.md` に優先度A〜Fで整理した。
+**本体の添付文書だけでよい**（本体側のMRI欄に適合リード一覧が載るため）。
+
+最短ルートは次の7点:
+1. BIOTRONIK Sky世代4点（Amvia Sky / Acticor Sky ICD / Amvia Sky HF-T / Acticor Sky CRT-D）
+2. Medtronic IS-1ピンプラグ（22800BZX00288000）＋ Azure MRIシリーズ（23000BZX00027000）
+3. Boston INGENIO MRI（J175/J176/J177）
+
+### 未登録のまま残っている領域
+
+- **日本光電扱いのAbbott OEM機種8種**（ニュアンス／ゼネックス／ゼナス／ニュートリノ／
+  ニュートリノNxT／ハートマインダー＋／クアドラ＋エクセリス／クアドラ リリーブ）。
+  中身はAbbott製だが販売名が違うため、現場で機種名から引けない。
+  **対照表が1枚あれば既存のAbbott群に販売名を追加するだけで済む。**
+
+## MRI検索：JADIAの公開PDFを発見（2026-08-29）
+
+組合せ検索そのものは医療従事者確認のゲート内だが、**撮像条件表のPDFはゲート外で公開**されている。
+
+- BIOTRONIK `https://cieds-mri.com/jadia/public/related_file/MRI_Search_List_BIO.pdf`（2026-02-01現在）
+
+各社に同じファイルが存在する可能性が高い（`MRI_Search_List_〇〇.pdf`）。ただし直接URLを組み立てても
+web_fetch が受け付けないため、検索で拾えたものしか取得できない。**BIO以外はまだ見つかっていない。**
+
+### BIOTRONIK 15グループを全面更新
+
+この表には**リードの型番は載っておらず、「特定の自社製品のみ」とだけ記載**されている。
+そのためリード未登録の状態は解消していない。一方、**撮像条件は全項目が確定した。**
+
+条件は世代で3段階に分かれる。
+
+| 区分 | 対象 | 磁場 | 身長 / 体温 / アイソセンタ / 撮像時間 / 体位 |
+|---|---|---|---|
+| 旧世代（厳） | Evia-T Pro、Ilesto 7 ICD Pro、Evia HF-T Pro、Ilesto 7 HF-T Pro | 1.5T | 1.4m以上／37.8℃未満／眼より上方・恥骨結合より下方／30分まで／仰臥位のみ |
+| 中間世代 | Estella Pro、Etrinsa、Enitra 6、Iforia 7 ICD、Itrevia 7、Intica 7、Enitra 8 HF-T | 1.5T | **すべて条件なし** |
+| 3T対応（3T時のみ厳） | Eluna 8-T、Iperia 7 / Ilivia 7 / Ilivia Neo 7 ICD、Ilivia Neo 7 CRT-D | 1.5T/3.0T | 3.0T時のみ上記の制限。1.5T時は条件なし |
+| 最新世代 | Edora 8-T、Evity 8-T、Amvia Sky、Acticor 7 / Acticor Sky ICD、Acticor 7 / Rivacor 7 / Acticor Sky CRT-D、Evity 8 HF-T、Amvia Sky HF-T | 1.5T/3.0T | **すべて条件なし** |
+
+**実務上の要点**：同じBIOTRONIKでも、Evia世代は「仰臥位のみ・30分まで・眼より上方」という
+強い制限があるのに対し、**Amvia Sky / Acticor Sky 世代は3.0Tでも体位・撮像時間・アイソセンタとも制限なし**。
+機種が分かれば撮像計画が大きく変わる。
+
+### 新規に追加した機種
+
+**Intica 7 CRT-D ProMRIシリーズ**（`BIO-CRTD2`）。現行データに存在しなかった。
+
+### 全グループ共通で確定した項目
+
+最大空間勾配磁場 制限なし／傾斜磁場スルーレート 200T/m/s以下（1軸）／
+局所送受信コイル 胸部には使用しないこと／MRI専用モードへの設定必須／リード植込み後6週間／
+閾値 2.0V(0.4ms)以下 Bipolar（CRTは左室の閾値条件なし）／インピーダンス 200〜1,500Ω／
+電池 ERIまたはEOSでないこと／横隔膜刺激・db/dt 条件なし／
+SAR 頭部≦3.2W/kg・全身≦2.0W/kg（通常操作モード）／
+体外式除細動器は隣接する部屋に準備／
+ICD・CRTの患者監視は「BLS以上の修了者の同席が望ましい」
+
+### 参考：Boston Scientific の公開テクニカルガイド
+
+`https://www.bostonscientific.com/content/dam/elabeling/crm/csl/jp/92618933-01A_Brady_MRI_Technical_Guide_eifu_jp_s.pdf`
+（ImageReady MR Conditional Pacing System）。**リードの適合一覧が載っている可能性が高い**ため、
+BSXの残り3機種（INGENIO MRI・DYNAGEN ICD・DYNAGEN CRT-D）の確定に使える見込み。
+
+## MRI検索：Boston Scientific ペースメーカ／CRT-P を全面修正（2026-08-29）
+
+出典：Boston Scientific 公開テクニカルガイド
+`IMAGEREADY MR Conditional Pacing System` 92618933-01A
+https://www.bostonscientific.com/content/dam/elabeling/crm/csl/jp/92618933-01A_Brady_MRI_Technical_Guide_eifu_jp_s.pdf
+
+添付文書より詳しく、**本体とリードの組合せごとの可否・磁場強度・SAR上限が表で明示**されている。
+学会一覧表で読めなかった部分がすべて確定した。
+
+### 発見した誤り（3件・いずれも修正済み）
+
+| # | 内容 | 影響 |
+|---|---|---|
+| 1 | **INGENIO MRI を 1.5T/3.0T としていた** | **誤り。INGENIO MRI は 3.0T装置では使用不可**。学会表で疑っていたとおりだった。**過大な許容＝臨床リスクのある誤り**だったため最優先で修正 |
+| 2 | **VALITUDE X4 と VISIONIST X4 のモデル番号が逆** | 正しくは **VALITUDE X4 = U128、VISIONIST X4 = U228** |
+| 3 | ACCOLADE MRI の SAR 4.0W/kg を「FINELINE II／INGEVITY との組合せ」に適用していた | **誤り。SAR 4.0 が許容されるのは心房・心室とも INGEVITY の場合のみ**。FINELINE II が1本でも入ると 2.0W/kg・通常操作モードのみ |
+
+### 組合せ規則（テクニカルガイドの表を整理）
+
+| 本体 | リードの組合せ | 磁場 | 全身SAR | 操作モード |
+|---|---|---|---|---|
+| INGENIO MRI | INGEVITY のみ | 1.5T | 4.0 | 通常／第1次水準管理 |
+| INGENIO MRI | FINELINE II を含む | 1.5T | 2.0 | 通常のみ |
+| INGENIO MRI | Screwvine／Petite | **使用不可** | － | － |
+| ACCOLADE MRI | INGEVITY のみ | 1.5T/3.0T | 4.0 | 通常／第1次水準管理 |
+| ACCOLADE MRI | FINELINE II を含む | 1.5T/3.0T | 2.0 | 通常のみ |
+| ACCOLADE MRI | Screwvine／Petite | **1.5T のみ** | 2.0 | 通常のみ |
+| VALITUDE X4 / VISIONIST X4 | ACUITY X4 ＋ INGEVITY／FINELINE II | 1.5T/3.0T | 2.0 | 通常のみ |
+
+4グループ → 6グループに再構成。**Abbott と同じく「リードで条件が決まる」構造**が Boston でも確認できた。
+
+### 確定したリードの型番
+
+FINELINE II Sterox 4456/4457/4458/4459/4479/4480／FINELINE II Sterox EZ 4469〜4474／
+INGEVITY MRI タインド 7731/7732/7735/7736／INGEVITY MRI スクリュー 7740/7741/7742／
+INGEVITY+ スクリュー 7840/7841/7842／ACUITY X4 4671/4672/4674/4675/4677/4678／
+IS-1リード接続口プラグ 7145／IS4リード接続口プラグ 7148／
+Screwvine 44SEP/52SEP/58SEP／Petite 44ERJB/52ERJB/52ERB/58ERB
+
+### 副産物：製品タブの疑問が1つ解けた
+
+テクニカルガイドは **Screwvine と Petite を「ボストン・サイエンティフィック社製品以外のリード」と明記**している。
+これは `products.json` の Sorin Group 製 Petite（44ERJB/52ERJB/52ERB/58ERB）と
+Screwvine（44SEP/52SEP/58SEP）に一致する。
+リードデータ一覧表16ページで「同じ型番が Petite と Physique の2製品に使われている」問題については、
+**Petite 側の型番が正しい**ことがこれで裏付けられた。Physique 側の型番が誤記の可能性が高い。
+
+## MRI検索：BIOTRONIK にリードを登録（2026-08-29）
+
+出典：BIOTRONIK ProMRI MR conditional device systems Technical Manual 371712 Rev.CM（2022-08-17）
+https://manuals.biotronik.com/emanuals-professionals-rest/manual/ProMri/ProMRI/ProMRI/GB/en/CM
+
+**15グループすべてリード0件だった状態を解消。** これでBIOTRONIKも組合せ検索が成立する。
+
+### 登録したリード
+
+| 区分 | 製品 |
+|---|---|
+| ペースメーカ（心房） | Safio S / Setrox S（45・53・60）、Solia S / Siello S（45・53・60）、Solia JT / Siello JT（45・53）、Blind plug BS IS-1 |
+| ペースメーカ（心室） | Safio S / Setrox S、Solia S / Siello S、Solia T / Siello T（53・60） |
+| ICD（DF-1） | Linox smart ProMRI S / SD / S DX、Protego DF-1 ProMRI S / SD / S DX、Plexa ProMRI DF-1 S / SD / S DX |
+| ICD（DF4） | Linox smart ProMRI DF4 SD、Protego ProMRI S / SD、Plexa ProMRI S / SD / S DX、Pamira S / SD / S DX |
+| 左室 | Corox ProMRI OTW BP / OTW-S BP / OTW-L BP（75・85）、Sentus ProMRI OTW BP L / S（75・85・95）、Sentus ProMRI OTW QP L / S および QP -XX/49、Blind plug BS IS4 |
+
+### FBS / EXZ という概念が判明した
+
+マニュアルは組合せごとに **FBS（Full-Body Scan＝除外領域なし）** と **EXZ（Exclusion Zone＝除外領域あり）**
+を区別している。EXZ の条件は次のとおりで、**JADIA日本語版の「条件あり」の中身と完全に一致した。**
+
+- 身長 1.40m 以上／発熱していないこと／仰臥位のみ／撮像30分まで（以降はRF停止4分）／
+  アイソセンタは眼（眼窩下縁）から大転子の間
+
+つまり日本語版の「条件なし」＝FBS、「条件あり」＝EXZ。**2つの資料が独立に一致したので、条件側の信頼度は高い。**
+
+### 注意（未解決）
+
+| 項目 | 内容 |
+|---|---|
+| **CE版マニュアルであること** | 国内承認の範囲と一致するかは未確認。`cond` の「リード適合の注意」に明記した |
+| **Amvia Sky / Acticor Sky 世代が未収載** | Rev.CM（2022年）には Amvia Sky・Acticor Sky・Rivacor の一部しか載っていない。これらのリード適合は暫定として同世代のものを適用した |
+| **組合せ単位の細かい差を反映していない** | 実際には「Safio/Setrox 45 は 1.5T EXZ だが 53・60 は 1.5T FBS」のように**同じ製品でも長さで条件が変わる**。現在はグループ単位の条件のみ登録しており、長さ別の差は未反映 |
+| **CRT-Pの重要な制限** | マニュアルに「Entovis / Evia / Eluna 8 / Epyra 8 / Etrinsa 8 の三腔ペースメーカでは、**Safio/Setrox と Solia/Siello を組み合わせた構成はMRI非対応**」と明記。現在のデータはこの制限を反映していない |
+| **Corox OTW 75 の特殊性** | Edora 8 / Evity 8 / Enitra 8 の HF-T では **Corox OTW BP 75 は 3.0T のみ可**（1.5T不可）という逆転がある。未反映 |
+
+これらは「長さ・組合せ単位で条件が変わる」ため、現在のグループ構造（本体×リード集合）では表現しきれない。
+必要なら、Abbott や Boston と同じく**条件ごとにグループを分割**して対応する。
+
+## MRI検索：Medtronic は未解決のまま（2026-08-29）
+
+Abbott・Boston・BIOTRONIK と同じ手法を試したが、**Medtronic だけは決着しなかった。**
+
+### 試したことと結果
+
+| 試行 | 結果 |
+|---|---|
+| メーカー公式の撮像条件一覧ページ | **存在しない**。`mri-surescan.com` はシリアル番号照会と神経刺激系が中心 |
+| JADIA の公開撮像条件表 | BIO版（`MRI_Search_List_BIO.pdf`）は見つかったが、**Medtronic版は検索で拾えず** |
+| 学会一覧表（JSMRM） | 取得済みだが**PDFの表組みが崩れており列と機種の対応が特定できない** |
+| Medtronic SureScan チェックリスト（欧州版） | URLは特定できたが **robots で自動取得を拒否**。検索結果のスニペットのみ入手 |
+| PMDA 添付文書 | `info.pmda.go.jp` が自動アクセス拒否。`www.pmda.go.jp` は検索で拾えたURLしか開けない |
+
+### 未解決の2点（引き継ぎメモ #3・#4）
+
+**#4 最大空間勾配磁場**
+学会表のスニペットからは次のように読める（列の対応は未確定）:
+- Micra 系 … 20T/m、全身SAR ≦4.0W/kg
+- Azure / Attesta / Sphera 系 … 3.0T時 20T/m以下、1.5T時 19T/m以下
+- Advisa 系 … 19T/m以下
+
+**現行データは「一律20T/m、Micraのみ25T/m」**。これが正しければ **Micra は25→20T/m、
+ペースメーカ系は1.5T時19T/m** に修正が要る。ただし列対応が確定できないため**適用は見送った**。
+全10グループの `cond` に「（要再確認）」を付けたままにしてある。
+
+**#3 IS-1ピンプラグ 6725 の適用範囲**
+学会表で 6725 は2列にのみ現れるが、その2列がCRT-Pの2列なのかCRT-P＋CRT-Dなのか判別できない。
+現行データ（CRT-P・CRT-Dの両方に登録）は変更していない。
+
+### 副産物：SureScan MRIリードの型番と長さ（欧州版チェックリスト）
+
+国内承認の範囲とは一致しない可能性があるため**データには反映していない**が、
+日本語版マニュアルを入手した際の照合材料として記録する。
+
+| リード | 型番-長さ |
+|---|---|
+| Sprint Quattro MRI | 6947M-55/62、6935M-55/62、6935-58/65、6947-58/65、6946M-55/62 |
+| CapSure Sense MRI | 4574-45/53、4074-52/58 |
+| CapSureFix MRI | 5086MRI-45/52/58 |
+| CapSureFix Novus MRI | 4076-35/45/52/58/65/85、5076-35/45/52/58/65/85 |
+| CapSure Z Novus MRI | 5054-52/58、5554-45/53 |
+| SelectSecure MRI | 3830-59/69/74 |
+| Attain Ability MRI | 4196-78/88、4296-78/88、4396-78/88 |
+| Attain Performa MRI | 4298-78/88、4398-78/88、4598-78/88 |
+| Attain Stability MRI | 20066 または 4796-88 |
+| Attain Stability Quad MRI | 4798-78/88 |
+| Crystalline ActFix MRI | （スニペットで途切れ） |
+
+**現行データに無いリードが3つある**：CapSureFix Novus の **4076**、**Attain Stability / Stability Quad**、
+**Crystalline ActFix MRI**。国内での取扱いを確認のうえ追加を検討する。
+
+### 必要な資料（これがあれば決着する）
+
+**Medtronic MRI技術マニュアル（日本語版）**。本体マニュアルとは別冊で、
+「MRI technical manual – This manual provides MRI-specific procedures and warnings and precautions」
+と各機種マニュアルに明記されている。Azure MRI SureScan 用が1冊あれば
+勾配磁場・SAR・適合リードがすべて確定する。日本メドトロニックの担当者に依頼するのが最短。
+
+IS-1ピンプラグの件だけなら **メドトロニック IS-1 ピンプラグ 添付文書（22800BZX00288000）** の
+「組み合わせて使用する医療機器」欄で決着する。
+
 ---
 
 ## 全体に関わる論点
