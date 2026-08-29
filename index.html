@@ -162,9 +162,10 @@ body{padding-bottom:calc(58px + env(safe-area-inset-bottom))}
 .pcard dd{margin:0;color:var(--ink)}
 .pcard .src{margin:9px 0 0;font-size:11px;color:var(--muted)}
 .pcard .src a{color:var(--teal-d)}
+/* ===== タブ内の検索欄（製品・アルゴリズム） ===== */
+.tabsearch{flex:1 1 100%;margin-top:0}
+.tabsearch input{font-size:14px}
 /* ===== 製品：一覧行 ===== */
-.psearch{flex:1 1 100%;border:1px solid var(--border);background:#fff;border-radius:10px;
- padding:9px 12px;color:var(--ink);-webkit-appearance:none;appearance:none}
 .prow .ico{flex:0 0 26px;height:26px;color:var(--muted)}
 .prow b .mdl{color:var(--teal-d)}
 .prow em{color:var(--muted);font-size:12px}
@@ -373,7 +374,11 @@ button,.chip,.arow,.cardrow,.tabbar button{touch-action:manipulation}
  <div id="pBrowse">
   <div class="pagehead"><h2>製品</h2><p>本体とリードを型番・カテゴリから探す</p></div>
   <div class="fbar">
-   <input id="pQ" class="fsel psearch" type="search" placeholder="製品名・型番で検索" autocomplete="off"/>
+   <div class="searchbox tabsearch">
+    <svg class="icon" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><circle cx="11" cy="11" r="7"/><path d="m21 21-4.3-4.3"/></svg>
+    <input id="pQ" type="text" placeholder="製品名・型番で検索" aria-label="製品を検索" autocomplete="off"/>
+    <button class="clearbtn" id="pQClear" aria-label="クリア"><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><path d="M18 6 6 18M6 6l12 12"/></svg></button>
+   </div>
   </div>
   <div class="fbar">
    <select id="pMaker" class="fsel"></select>
@@ -392,6 +397,13 @@ button,.chip,.arow,.cardrow,.tabbar button{touch-action:manipulation}
   <div class="amode">
    <button id="aModeM" class="on">メーカー別</button>
    <button id="aModeC">対比表</button>
+  </div>
+  <div class="fbar">
+   <div class="searchbox tabsearch">
+    <svg class="icon" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><circle cx="11" cy="11" r="7"/><path d="m21 21-4.3-4.3"/></svg>
+    <input id="aQ" type="text" placeholder="機能名・一般名称で検索" aria-label="アルゴリズムを検索" autocomplete="off"/>
+    <button class="clearbtn" id="aQClear" aria-label="クリア"><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><path d="M18 6 6 18M6 6l12 12"/></svg></button>
+   </div>
   </div>
   <div class="fbar" id="aFilters">
    <select id="aMaker" class="fsel"></select>
@@ -563,6 +575,32 @@ function toggleFav(key){if(fav.has(key))fav.delete(key);else fav.add(key);saveFa
 function recordRecent(key){if(!key)return;recent=recent.filter(k=>k!==key);recent.unshift(key);recent=recent.slice(0,80);store.set(RECENT,recent);if((view==="g"?gMode:fMode)==="recent")renderList()}
 function keyOf(v,t){return v==="g"?("g|"+t.term):("f|"+t.fn)}
 function applyMode(v,rows){const mode=v==="g"?gMode:fMode;if(mode==="fav")return rows.filter(t=>fav.has(keyOf(v,t)));if(mode==="recent"){const idx=new Map(recent.map((k,i)=>[k,i]));return rows.filter(t=>idx.has(keyOf(v,t))).sort((a,b)=>idx.get(keyOf(v,a))-idx.get(keyOf(v,b)))}return rows}
+
+/* 検索の関連度ランク。数値が小さいほど上位。
+   0=見出し語が完全一致 / 1=別名（英名・略語・型番など）が完全一致
+   2=見出し語が前方一致 / 3=別名が前方一致
+   4=見出し語に含む   / 5=別名に含む / 6=それ以外（概念マップ・本文一致など） */
+function relRank(primary,aliases,q){
+ if(!q)return 9;
+ var nq=String(q).trim().toLowerCase();
+ if(!nq)return 9;
+ var n=function(v){return String(v==null?"":v).trim().toLowerCase()};
+ var p=n(primary), al=(aliases||[]).map(n).filter(Boolean);
+ if(p===nq)return 0;
+ if(al.indexOf(nq)>=0)return 1;
+ if(p.indexOf(nq)===0)return 2;
+ if(al.some(function(a){return a.indexOf(nq)===0}))return 3;
+ if(p.indexOf(nq)>=0)return 4;
+ if(al.some(function(a){return a.indexOf(nq)>=0}))return 5;
+ return 6;
+}
+/* 既存の並び順を保ったまま、関連度だけを優先キーにする（安定ソート） */
+function byRelevance(rows,q,keyfn){
+ if(!q||!String(q).trim())return rows;
+ return rows.map(function(r,i){return {r:r,i:i,k:keyfn(r)}})
+   .sort(function(a,b){return (a.k-b.k)||(a.i-b.i)})
+   .map(function(o){return o.r});
+}
 function sortRows(v,rows){const s=v==="g"?gSort:fSort;if((v==="g"?gMode:fMode)==="recent")return rows;const nm=t=>v==="g"?t.term:t.fn;if(s==="term")return rows.slice().sort((a,b)=>nm(a).localeCompare(nm(b),"ja"));if(s==="cat")return rows.slice().sort((a,b)=>{const ia=G_CAT_ORDER.indexOf(a.cat),ib=G_CAT_ORDER.indexOf(b.cat);return (ia<0?99:ia)-(ib<0?99:ib)||nm(a).localeCompare(nm(b),"ja")});if(s==="maker")return rows.slice().sort((a,b)=>((a.maker||"~~").localeCompare(b.maker||"~~","ja"))||nm(a).localeCompare(nm(b),"ja"));return rows}
 function renderModeChips(){const mode=view==="g"?gMode:fMode;const defs=[["all","すべて"],["fav","★お気に入り"],["recent","最近見た"]];$("#modechips").innerHTML=defs.map(([k,lab])=>`<button class="chip${mode===k?" active":""}" data-m="${k}">${lab}</button>`).join("");[...$("#modechips").querySelectorAll(".chip")].forEach(b=>b.onclick=()=>{if(view==="g")gMode=b.dataset.m;else fMode=b.dataset.m;renderModeChips();renderList()})}
 function renderSort(){const cur=view==="g"?gSort:fSort;const opts=view==="g"?[["reco","おすすめ順"],["term","用語名順"],["cat","カテゴリ順"],["maker","メーカー順"]]:[["reco","おすすめ順"],["term","機能名順"],["cat","カテゴリ順"]];$("#sortSel").innerHTML=opts.map(([v,l])=>`<option value="${v}"${v===cur?" selected":""}>${l}</option>`).join("")}
@@ -665,12 +703,14 @@ function renderList(){
   let rows=applyMode("g",gList());
   rows=rows.filter(t=>{if(gCat!=="すべて"&&t.cat!==gCat)return false;if(gDev!=="すべて"&&!(t.device||"").split(/[\/,]/).map(x=>x.trim()).includes(gDev))return false;return matches([t.term,t.en,t.abbr,t.short,t.tags],t.term)});
   rows=sortRows("g",rows);
+  rows=byRelevance(rows,qraw,function(t){return relRank(t.term,[t.en,t.abbr],qraw)});
   totalsEl.textContent=gList().length+" terms";countEl.textContent=rows.length+" results";
   listEl.innerHTML=rows.length?rows.map(gcard).join(""):emptyHTML();
  }else{
   let rows=applyMode("f",fList());
   rows=rows.filter(t=>{if(fCat!=="すべて"&&t.cat!==fCat)return false;if(fMk!=="すべて"){const kv=VENDORS.find(v=>v[1]===fMk);if(kv&&!(t[kv[0]]&&t[kv[0]]!=="—"))return false;}return matches([t.fn,t.en,t.note,t.mdt,t.abt,t.bsx,t.bio,t.mcp],t.fn)});
   rows=sortRows("f",rows);
+  rows=byRelevance(rows,qraw,function(t){return relRank(t.fn,[t.en],qraw)});
   totalsEl.textContent=fList().length+" functions";countEl.textContent=rows.length+" results";
   listEl.innerHTML=rows.length?rows.map(fcard).join(""):emptyHTML();
  }
@@ -914,7 +954,7 @@ loadMaster(false);
 
  /* ================= 製品（デバイス＋リード） ================= */
  /* 資料は当時の社名で並ぶため、現行5社のあとに旧社を並べる */
- var LEGACY_MAKERS=["St.Jude Medical","Pacesetter AB (Siemens)","Cardiac Pacemakers (CPI), Guidant",
+ var LEGACY_MAKERS=["Pacesetter AB (Siemens)","Cardiac Pacemakers (CPI), Guidant",
    "Vitatron","Sorin Group","ela medical","Intermedics","Medico","Societe Somedics",
    "Cardiac Control Systems","Cordis","Telectronics"];
  function pMakerRank(m){
@@ -968,15 +1008,19 @@ loadMaster(false);
      ||String(a.cat||"").localeCompare(String(b.cat||""),"ja")
      ||String(a.name||"\uFFFF").localeCompare(String(b.name||"\uFFFF"),"ja")
      ||String(a.model||"").localeCompare(String(b.model||""),"ja",{numeric:true})});
+  /* 検索中は完全一致を最上位に。メーカー見出しは出さずフラットに並べる */
+  var flat=!!q;
+  if(flat)rows=byRelevance(rows,pQ,function(x){
+    return relRank(x.name||x.model,[x.model,x.maker,x.mfr,x.cat],pQ)});
   var out="",cur=null;
   rows.forEach(function(x){
-   if(x.maker!==cur){cur=x.maker;out+='<p class="mkhead">'+esc(cur)+'</p>'}
+   if(!flat&&x.maker!==cur){cur=x.maker;out+='<p class="mkhead">'+esc(cur)+'</p>'}
    var m=pMeta(x);
    out+='<button class="arow prow" data-id="'+esc(x.id)+'">'+
     (x.kind==="device"?DEVICO:LEADICO)+
     '<span class="atxt"><b>'+pLabel(x)+
      (x.model?' <span class="mdl">'+esc(x.model)+'</span>':'')+'</b>'+
-     '<small>'+esc(pSub(x))+'</small>'+
+     '<small>'+esc((flat?x.maker+" ・ ":"")+pSub(x))+'</small>'+
      (m?'<em>'+esc(m)+'</em>':'')+'</span>'+CHEV+'</button>';
   });
   $("#pList").innerHTML=out;
@@ -995,7 +1039,7 @@ loadMaster(false);
    if(!v)return "";
    return /^[0-9.\/×\s]+$/.test(String(v)) ? v+" "+unit : String(v);
   }
-  var head=[["メーカー",x.maker],["取扱会社",x.dealer],["分類",x.cat],
+  var head=[["メーカー",x.maker],["資料上の表記",x.mfr],["取扱会社",x.dealer],["分類",x.cat],
             ["型番",x.model],["販売期間",x.period],["状態",x.status]];
   var body=x.kind==="lead"
    ?[sec("基本",[["極性",x.polarity],["適応部位",x.site],["固定形式",x.fixation],
@@ -1045,13 +1089,19 @@ loadMaster(false);
   var r=e.target.closest(".prow"); if(r){openProd(r.dataset.id);return}
  });
  document.addEventListener("input",function(e){
-  if(e.target&&e.target.id==="pQ"){pQ=e.target.value;renderPList()}
+  if(!e.target)return;
+  if(e.target.id==="pQ"){pQ=e.target.value;$("#pQClear").style.display=pQ?"block":"none";renderPList()}
+  if(e.target.id==="aQ"){aQ=e.target.value;$("#aQClear").style.display=aQ?"block":"none";renderA()}
+ });
+ document.addEventListener("click",function(e){
+  if(e.target.closest("#pQClear")){pQ="";var i=$("#pQ");i.value="";$("#pQClear").style.display="none";i.focus();renderPList();return}
+  if(e.target.closest("#aQClear")){aQ="";var j=$("#aQ");j.value="";$("#aQClear").style.display="none";j.focus();renderA();return}
  });
 
 
  /* ================= アルゴリズム ================= */
  /* メーカー別（algos.json）とメーカー対比表（22機能）を1タブで扱う */
- var aM="",aC="",aMode="m",aOpen=null,aScroll=0,cmpOpen={};
+ var aM="",aC="",aQ="",aMode="m",aOpen=null,aScroll=0,cmpOpen={};
  var VEND=[["mdt","Medtronic"],["abt","Abbott"],["bio","BIOTRONIK"],
            ["bsx","Boston Scientific"],["mcp","MicroPort CRM"]];
  var GEAR='<svg class="ico" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="3"/><path d="M12 4v2M12 18v2M4 12h2M18 12h2M6.3 6.3l1.4 1.4M16.3 16.3l1.4 1.4M17.7 6.3l-1.4 1.4M7.7 16.3l-1.4 1.4"/></svg>';
@@ -1070,7 +1120,13 @@ loadMaster(false);
   var all=items("algos");
   fillSel($("#aMaker"),"すべてのメーカー",uniq(all,"maker"),aM);
   fillSel($("#aCat"),"すべての分類",uniq(all,"cat"),aC);
-  var rows=all.filter(function(x){return (!aM||x.maker===aM)&&(!aC||x.cat===aC)});
+  var q=aQ.trim().toLowerCase();
+  var rows=all.filter(function(x){
+   if(aM&&x.maker!==aM)return false;
+   if(aC&&x.cat!==aC)return false;
+   if(q){var t=[x.name,x.generic,x.maker,x.cat,x.scope,x.glossary].join(" ").toLowerCase();
+         if(t.indexOf(q)<0)return false}
+   return true});
   $("#aCount").textContent=all.length?rows.length+" 件":"";
   if(!all.length){$("#aList").innerHTML=blank("algos","template_algos.csv");return}
   if(!rows.length){$("#aList").innerHTML='<p class="count">該当なし</p>';return}
@@ -1078,9 +1134,12 @@ loadMaster(false);
   rows.sort(function(a,b){
    var d=order.indexOf(a.maker)-order.indexOf(b.maker);
    return d||String(a.name).localeCompare(String(b.name),"ja")});
+  var flat=!!q;
+  if(flat)rows=byRelevance(rows,aQ,function(x){
+    return relRank(x.name,[x.generic,x.maker,x.cat],aQ)});
   var out="",cur=null;
   rows.forEach(function(x){
-   if(x.maker!==cur){cur=x.maker;out+='<p class="mkhead">'+esc(cur)+'</p>'}
+   if(!flat&&x.maker!==cur){cur=x.maker;out+='<p class="mkhead">'+esc(cur)+'</p>'}
    var sum=x.scope||x.purpose||"";
    out+='<button class="arow" data-id="'+esc(x.id)+'">'+GEAR+
     '<span class="atxt"><b>'+esc(x.name)+'</b><small>'+esc(x.maker)+
