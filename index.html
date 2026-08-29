@@ -1352,7 +1352,8 @@ loadMaster(false);
   var byType=byMaker.filter(function(g){return !sel.type||g.type===sel.type});
   var devs=[];
   byType.forEach(function(g){g.devices.forEach(function(d){
-   devs.push({v:d.model,t:d.name+"（"+d.model+"）"})})});
+   /* 型番が別に登録されているときだけ（型番）を後ろに付ける */
+   devs.push({v:d.model,t:d.name+(d.model&&d.model!==d.name?"（"+d.model+"）":"")})})});
   opts($("#mDev"),"選択してください",uniqBy(devs,"v"),sel.dev,!sel.type);
   /* リード（本体が決まってから） */
   var cs=candidates();
