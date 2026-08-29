@@ -285,7 +285,7 @@ button,.chip,.arow,.cardrow,.tabbar button{touch-action:manipulation}
 .pagehead p{margin:4px 0 12px;font-size:12.5px;line-height:1.6;color:var(--muted)}
 #secProducts,#secAlgos,#secMri{padding-top:2px}
 
-/* ===== 対比表：タップで開閉 ===== */
+/* ===== 一覧表：タップで開閉 ===== */
 .cmp{background:var(--card);border:1px solid var(--border);border-radius:13px;
  margin-bottom:8px;overflow:hidden}
 .cmp>button{display:flex;align-items:center;gap:11px;width:100%;text-align:left;
@@ -403,11 +403,11 @@ header .wrap{position:relative}
 </main>
 
 <main class="wrap" id="secAlgos" hidden>
- <div class="pagehead"><h2>アルゴリズム</h2><p>メーカー別の機能と、他社との対比</p></div>
+ <div class="pagehead"><h2>アルゴリズム</h2><p>メーカー別の機能と、他社の同等機能を調べる</p></div>
  <div id="aBrowse">
   <div class="amode">
    <button id="aModeM" class="on">メーカー別</button>
-   <button id="aModeC">対比表</button>
+   <button id="aModeC">一覧表</button>
   </div>
   <div class="fbar">
    <div class="searchbox tabsearch">
@@ -427,7 +427,7 @@ header .wrap{position:relative}
 </main>
 
 <main class="wrap" id="secMri" hidden>
- <div class="pagehead"><h2>MRI検索</h2><p>本体とリードの組合せから撮像可能な磁場強度を調べる</p></div>
+ <div class="pagehead"><h2>MRI検索</h2><p>本体とリードの組合せから撮像可能な条件を調べる</p></div>
  <div class="mriform">
   <div class="row"><label>メーカー</label><select id="mMaker"></select></div>
   <div class="row"><label>種別</label><select id="mType" disabled></select></div>
@@ -982,6 +982,14 @@ loadMaster(false);
    return (pMakerRank(a)-pMakerRank(b))||String(a).localeCompare(String(b),"ja")});
  }
  var pK="",pM="",pC="",pQ="",pOpen=null,pScroll=0;
+ /* 製品の小区分はこの順で並べる（未定義のものは後ろに五十音順） */
+ var CAT_ORDER=["IPG SR","IPG DR","CRT-P","ICD VR","ICD DR","CRT-D","S-ICD","EV-ICD",
+   "Leadless","ICM","PMリード","ICDリード","LVリード"];
+ function sortCats(list){
+  return list.slice().sort(function(a,b){
+   var ia=CAT_ORDER.indexOf(a),ib=CAT_ORDER.indexOf(b);
+   return (ia<0?99:ia)-(ib<0?99:ib)||String(a).localeCompare(String(b),"ja")});
+ }
  var LEADICO='<svg class="ico" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round"><path d="M3 6h3v4H3z"/><path d="M6 8c4 0 4 8 8 8s4-4 7-4"/><circle cx="21" cy="12" r="1.2"/></svg>';
  var DEVICO='<svg class="ico" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="5" width="14" height="14" rx="4"/><path d="M17 9h2M17 13h2"/></svg>';
 
@@ -1004,7 +1012,7 @@ loadMaster(false);
   Array.prototype.forEach.call($("#pKind").querySelectorAll("option"),function(o){
    if(o.value==="device")o.textContent="本体のみ"; if(o.value==="lead")o.textContent="リードのみ"});
   fillSel($("#pMaker"),"すべてのメーカー",sortPMakers(uniq(all,"maker")),pM);
-  chips($("#pCats"),uniq(all.filter(function(x){return !pK||x.kind===pK}),"cat"),pC,
+  chips($("#pCats"),sortCats(uniq(all.filter(function(x){return !pK||x.kind===pK}),"cat")),pC,
         function(v){pC=v;renderP()});
   var q=pQ.trim().toLowerCase();
   var rows=all.filter(function(x){
@@ -1020,6 +1028,8 @@ loadMaster(false);
   rows.sort(function(a,b){
    return (pMakerRank(a.maker)-pMakerRank(b.maker))
      ||String(a.maker).localeCompare(String(b.maker),"ja")
+     ||(CAT_ORDER.indexOf(a.cat)<0?99:CAT_ORDER.indexOf(a.cat))
+       -(CAT_ORDER.indexOf(b.cat)<0?99:CAT_ORDER.indexOf(b.cat))
      ||String(a.cat||"").localeCompare(String(b.cat||""),"ja")
      ||String(a.name||"\uFFFF").localeCompare(String(b.name||"\uFFFF"),"ja")
      ||String(a.model||"").localeCompare(String(b.model||""),"ja",{numeric:true})});
@@ -1115,7 +1125,7 @@ loadMaster(false);
 
 
  /* ================= アルゴリズム ================= */
- /* メーカー別（algos.json）とメーカー対比表（22機能）を1タブで扱う */
+ /* メーカー別（algos.json）とメーカー一覧表（22機能）を1タブで扱う */
  var aM="",aC="",aQ="",aMode="m",aOpen=null,aScroll=0,cmpOpen={};
  var VEND=[["mdt","Medtronic"],["abt","Abbott"],["bio","BIOTRONIK"],
            ["bsx","Boston Scientific"],["mcp","MicroPort CRM"]];
@@ -1164,7 +1174,7 @@ loadMaster(false);
   $("#aList").innerHTML=out;
  }
 
- /* --- 対比表 --- */
+ /* --- 一覧表 --- */
  function renderACompare(){
   var all=featRows();
   fillSel($("#aMaker"),"すべてのメーカー",
