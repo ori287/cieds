@@ -285,6 +285,8 @@ button,.chip,.arow,.cardrow,.tabbar button{touch-action:manipulation}
 .pagehead p{margin:4px 0 12px;font-size:12.5px;line-height:1.6;color:var(--muted)}
 #secProducts,#secAlgos,#secMri{padding-top:2px}
 
+.cmp .mk.none dd{color:var(--muted)}
+.cmp .mk.none .dash{opacity:.55}
 /* ===== 一覧表：タップで開閉 ===== */
 .cmp{background:var(--card);border:1px solid var(--border);border-radius:13px;
  margin-bottom:8px;overflow:hidden}
@@ -1135,8 +1137,14 @@ loadMaster(false);
  function featRows(){
   var src=(typeof fList==="function")?fList():[];
   return src.map(function(m){
-   var mk={}; VEND.forEach(function(v){var val=m[v[0]];if(val&&val!=="—")mk[v[1]]=val});
-   return {name:m.fn,en:m.en,cat:m.cat,note:m.note,makers:mk};
+   /* 5社すべてのキーを持たせ、未搭載は空文字にする（一覧表でブランク表示するため） */
+   var mk={},n=0;
+   VEND.forEach(function(v){
+    var val=m[v[0]];
+    if(val&&val!=="—"&&String(val).trim()){mk[v[1]]=String(val).trim();n++}
+    else mk[v[1]]="";
+   });
+   return {name:m.fn,en:m.en,cat:m.cat,note:m.note,makers:mk,nmk:n};
   });
  }
 
@@ -1177,23 +1185,37 @@ loadMaster(false);
  /* --- 一覧表 --- */
  function renderACompare(){
   var all=featRows();
-  fillSel($("#aMaker"),"すべてのメーカー",
-   VEND.map(function(v){return v[1]}).filter(function(n){
-    return all.some(function(x){return x.makers[n]})}),aM);
+  fillSel($("#aMaker"),"すべてのメーカー",MAKER_ORDER.slice(),aM);
   fillSel($("#aCat"),"すべての分類",uniq(all,"cat"),aC);
+  var q=aQ.trim().toLowerCase();
   var rows=all.filter(function(x){
-   return (!aC||x.cat===aC)&&(!aM||!!x.makers[aM])});
+   if(aC&&x.cat!==aC)return false;
+   if(aM&&!x.makers[aM])return false;
+   if(q){
+    var t=[x.name,x.en,x.cat,x.note].concat(
+      MAKER_ORDER.map(function(k){return x.makers[k]})).join(" ").toLowerCase();
+    if(t.indexOf(q)<0)return false;
+   }
+   return true});
+  /* 完全一致・前方一致を上位に（用語集と同じ関連度ルール） */
+  rows=byRelevance(rows,aQ,function(x){
+   return relRank(x.name,[x.en,x.cat].concat(
+    MAKER_ORDER.map(function(k){return x.makers[k]}).filter(Boolean)),aQ)});
   $("#aCount").textContent=rows.length+" 件";
   var ARW='<svg class="arw" width="8" height="13" viewBox="0 0 8 14" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><path d="m1 1 5.5 6L1 13"/></svg>';
   $("#aList").innerHTML=rows.length?rows.map(function(x,i){
-   var ks=MAKER_ORDER.filter(function(k){return x.makers[k]&&(!aM||k===aM)});
+   /* メーカー選択時はその1社、未選択なら5社すべてを並べる */
+   var ks=aM?[aM]:MAKER_ORDER.slice();
    var open=cmpOpen[x.name];
    return '<div class="cmp'+(open?" open":"")+'" data-fn="'+esc(x.name)+'">'+
     '<button type="button"><span class="ctxt"><b>'+esc(x.name)+'</b>'+
      '<small>'+esc(x.cat)+(x.en?' ・ '+esc(x.en):'')+'</small></span>'+
-     '<span class="cnt">'+ks.length+'社</span>'+ARW+'</button>'+
+     '<span class="cnt">'+x.nmk+'社</span>'+ARW+'</button>'+
     '<div class="cbody">'+
-     ks.map(function(k){return '<dl class="mk"><dt>'+esc(k)+'</dt><dd>'+esc(x.makers[k])+'</dd></dl>'}).join("")+
+     ks.map(function(k){
+      var v=x.makers[k];
+      return '<dl class="mk'+(v?"":" none")+'"><dt>'+esc(k)+'</dt><dd>'+
+             (v?esc(v):'<span class="dash">—</span>')+'</dd></dl>'}).join("")+
      (x.note?'<p class="cnote">'+esc(x.note)+'</p>':'')+
     '</div></div>';
   }).join(""):'<p class="count">該当なし</p>';

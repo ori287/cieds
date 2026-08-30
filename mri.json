@@ -81,7 +81,8 @@
     "リードインピーダンス": "心房・右室 200〜3,000Ω（Bi/Uni）",
     "出典": "日本磁気共鳴医学会「能動型の条件付MRI対応植込み型医療デバイス一覧表」（2024-12-17更新）",
     "確認日": "2026-08-29",
-    "適用条件": "心房リードの適合あり"
+    "適用条件": "心房リードの適合あり",
+    "資料の格付け": "学会一覧表（国内二次資料）"
    },
    "verify": true
   },
@@ -142,7 +143,8 @@
     "リードインピーダンス": "心室のみ（心房リードの適合なし）",
     "出典": "日本磁気共鳴医学会「能動型の条件付MRI対応植込み型医療デバイス一覧表」（2024-12-17更新）",
     "確認日": "2026-08-29",
-    "適用条件": "心房リードの適合なし。心室リードのみの構成が対象"
+    "適用条件": "心房リードの適合なし。心室リードのみの構成が対象",
+    "資料の格付け": "学会一覧表（国内二次資料）"
    },
    "verify": true
   },
@@ -235,7 +237,8 @@
     "最大空間勾配磁場": "20T/m（2,000ガウス/cm）以下（要再確認）",
     "リードインピーダンス": "心房・右室 200〜3,000Ω（Bi/Uni）",
     "出典": "日本磁気共鳴医学会「能動型の条件付MRI対応植込み型医療デバイス一覧表」（2024-12-17更新）",
-    "確認日": "2026-08-29"
+    "確認日": "2026-08-29",
+    "資料の格付け": "学会一覧表（国内二次資料）"
    },
    "verify": true
   },
@@ -322,7 +325,8 @@
     "心房リード": "Attesta / Sphera のみ心房リードの組合せが記載されている",
     "出典": "日本磁気共鳴医学会「能動型の条件付MRI対応植込み型医療デバイス一覧表」（2024-12-17更新）",
     "確認日": "2026-08-29",
-    "適用条件": "心房リードの適合あり"
+    "適用条件": "心房リードの適合あり",
+    "資料の格付け": "学会一覧表（国内二次資料）"
    },
    "verify": true
   },
@@ -388,7 +392,8 @@
     "心房リード": "Attesta / Sphera のみ心房リードの組合せが記載されている",
     "出典": "日本磁気共鳴医学会「能動型の条件付MRI対応植込み型医療デバイス一覧表」（2024-12-17更新）",
     "確認日": "2026-08-29",
-    "適用条件": "心房リードの適合なし。心室リードのみの構成が対象"
+    "適用条件": "心房リードの適合なし。心室リードのみの構成が対象",
+    "資料の格付け": "学会一覧表（国内二次資料）"
    },
    "verify": true
   },
@@ -489,7 +494,8 @@
     "最大空間勾配磁場": "20T/m（2,000ガウス/cm）以下（要再確認）",
     "リードインピーダンス": "心房・右室 200〜3,000Ω／RVコイル 20〜200Ω",
     "出典": "日本磁気共鳴医学会「能動型の条件付MRI対応植込み型医療デバイス一覧表」（2024-12-17更新）",
-    "確認日": "2026-08-29"
+    "確認日": "2026-08-29",
+    "資料の格付け": "学会一覧表（国内二次資料）"
    },
    "verify": true
   },
@@ -615,7 +621,8 @@
     "最大空間勾配磁場": "20T/m（2,000ガウス/cm）以下（要再確認）",
     "リードインピーダンス": "心房・右室 200〜3,000Ω（Bi/Uni）",
     "出典": "日本磁気共鳴医学会「能動型の条件付MRI対応植込み型医療デバイス一覧表」（2024-12-17更新）",
-    "確認日": "2026-08-29"
+    "確認日": "2026-08-29",
+    "資料の格付け": "学会一覧表（国内二次資料）"
    },
    "verify": true
   },
@@ -749,7 +756,8 @@
     "最大空間勾配磁場": "20T/m（2,000ガウス/cm）以下（要再確認）",
     "リードインピーダンス": "心房・右室 200〜3,000Ω／RVコイル 20〜200Ω",
     "出典": "日本磁気共鳴医学会「能動型の条件付MRI対応植込み型医療デバイス一覧表」（2024-12-17更新）",
-    "確認日": "2026-08-29"
+    "確認日": "2026-08-29",
+    "資料の格付け": "学会一覧表（国内二次資料）"
    },
    "verify": true
   },
@@ -797,7 +805,8 @@
     "最大空間勾配磁場": "20T/m（2,000ガウス/cm）以下（要再確認）",
     "リードインピーダンス": "Ring1-Ring2 / Ring1-Coil2：100〜1,500Ω／High Voltage：30〜250Ω",
     "出典": "日本磁気共鳴医学会「能動型の条件付MRI対応植込み型医療デバイス一覧表」（2024-12-17更新）",
-    "確認日": "2026-08-29"
+    "確認日": "2026-08-29",
+    "資料の格付け": "学会一覧表（国内二次資料）"
    },
    "verify": true
   },
@@ -850,7 +859,8 @@
     "最大空間勾配磁場": "25T/m（2,500ガウス/cm）以下（要再確認）",
     "リードインピーダンス": "該当なし",
     "出典": "日本磁気共鳴医学会「能動型の条件付MRI対応植込み型医療デバイス一覧表」（2024-12-17更新）",
-    "確認日": "2026-08-29"
+    "確認日": "2026-08-29",
+    "資料の格付け": "学会一覧表（国内二次資料）"
    },
    "verify": true
   },
@@ -931,7 +941,8 @@
     "適用条件": "条件1。心房・心室ともテンドリル MRI（LPA1200M/46・/52・/58）の組合せ",
     "注意": "テンドリル MRI を他のMRI対応リードと組み合わせた場合は条件2が適用される",
     "出典": "Abbott ペースメーカ撮像条件一覧 https://www.cardiovascular.abbott/jp/ja/hcp/mri-medical/mri_chart/pacemaker.html",
-    "確認日": "2026-08-29"
+    "確認日": "2026-08-29",
+    "資料の格付け": "国内一次資料"
    }
   },
   {
@@ -1046,7 +1057,8 @@
     "対象モデル番号": "PM1124 / PM1224 / PM2224",
     "適用条件": "条件2。テンドリル STS（2088TC）またはアイソフレックス Optim（心房1944／心室1948）との組合せ",
     "出典": "Abbott ペースメーカ撮像条件一覧 https://www.cardiovascular.abbott/jp/ja/hcp/mri-medical/mri_chart/pacemaker.html",
-    "確認日": "2026-08-29"
+    "確認日": "2026-08-29",
+    "資料の格付け": "国内一次資料"
    }
   },
   {
@@ -1139,7 +1151,8 @@
     "対象モデル番号": "PM1272 / PM2272 / PM1172",
     "適用条件": "条件3。テンドリル STS（2088TC）またはアイソフレックス Optim（心房1944／心室1948）との組合せ",
     "出典": "Abbott ペースメーカ撮像条件一覧 https://www.cardiovascular.abbott/jp/ja/hcp/mri-medical/mri_chart/pacemaker.html",
-    "確認日": "2026-08-29"
+    "確認日": "2026-08-29",
+    "資料の格付け": "国内一次資料"
    }
   },
   {
@@ -1254,7 +1267,8 @@
     "対象モデル番号": "PM1272 / PM2272 / PM1172",
     "適用条件": "テンドリル MRI と他のMRI対応リードを併用する組合せ。注釈5により条件2が適用され1.5Tのみとなる（心房・心室ともテンドリル MRI の場合は条件1）",
     "出典": "Abbott ペースメーカ撮像条件一覧 https://www.cardiovascular.abbott/jp/ja/hcp/mri-medical/mri_chart/pacemaker.html",
-    "確認日": "2026-08-29"
+    "確認日": "2026-08-29",
+    "資料の格付け": "国内一次資料"
    }
   },
   {
@@ -1363,7 +1377,8 @@
     "対象モデル番号": "PM3542 / PM3562",
     "適用条件": "心房 アイソフレックス Optim 1944 またはテンドリル STS 2088TC／心室 アイソフレックス Optim 1948 またはテンドリル STS 2088TC／左室 カルテット 1458Q・1458QL・1457Q・1456Q（86cm）またはプラグ",
     "出典": "Abbott 撮像条件一覧 https://www.cardiovascular.abbott/jp/ja/hcp/mri-medical/mri_chart/crt-p.html",
-    "確認日": "2026-08-29"
+    "確認日": "2026-08-29",
+    "資料の格付け": "国内一次資料"
    }
   },
   {
@@ -1478,7 +1493,8 @@
     "ペーシング閾値": "非同期モード設定時、パルス幅0.5msで 右心房・右心室 2.5V 以下（左室は 2.0V 以下）",
     "適用条件": "心房 テンドリル MRI LPA1200M（46/52/58cm）・テンドリル STS 2088TC（46/52cm）・アイソフレックス Optim 1944（46/52cm）／なし またはプラグ可。心室 デュラータ 7120Q・7122Q／オプティシュア LDA220Q・LDA210Q（58/65cm）",
     "出典": "Abbott 撮像条件一覧 https://www.cardiovascular.abbott/jp/ja/hcp/mri-medical/mri_chart/icd.html",
-    "確認日": "2026-08-29"
+    "確認日": "2026-08-29",
+    "資料の格付け": "国内一次資料"
    }
   },
   {
@@ -1565,7 +1581,8 @@
     "ペーシング閾値": "非同期モード設定時、パルス幅0.5msで 右心房・右心室 2.5V 以下（左室は 2.0V 以下）",
     "適用条件": "心房 テンドリル MRI LPA1200M（46/52cm）／なし またはプラグ可",
     "出典": "Abbott 撮像条件一覧 https://www.cardiovascular.abbott/jp/ja/hcp/mri-medical/mri_chart/icd.html",
-    "確認日": "2026-08-29"
+    "確認日": "2026-08-29",
+    "資料の格付け": "国内一次資料"
    }
   },
   {
@@ -1653,7 +1670,8 @@
     "ペーシング閾値": "非同期モード設定時、パルス幅0.5msで 右心房・右心室 2.5V 以下（左室は 2.0V 以下）",
     "適用条件": "心房 テンドリル STS 2088TC（46/52cm）／なし またはプラグ可。3.0T撮像はこの組合せのみ",
     "出典": "Abbott 撮像条件一覧 https://www.cardiovascular.abbott/jp/ja/hcp/mri-medical/mri_chart/icd.html",
-    "確認日": "2026-08-29"
+    "確認日": "2026-08-29",
+    "資料の格付け": "国内一次資料"
    }
   },
   {
@@ -1781,7 +1799,8 @@
     "ペーシング閾値": "非同期モード設定時、パルス幅0.5msで 右心房・右心室 2.5V 以下（左室は 2.0V 以下）",
     "適用条件": "心房 テンドリル MRI LPA1200M（46/52/58cm）・テンドリル STS 2088TC（46/52cm）・アイソフレックス Optim 1944（46/52cm）／左室 カルテット 1458Q・1458QL・1457Q・1456Q（86cm）またはプラグ",
     "出典": "Abbott 撮像条件一覧 https://www.cardiovascular.abbott/jp/ja/hcp/mri-medical/mri_chart/crt-d.html",
-    "確認日": "2026-08-29"
+    "確認日": "2026-08-29",
+    "資料の格付け": "国内一次資料"
    }
   },
   {
@@ -1889,7 +1908,8 @@
     "ペーシング閾値": "非同期モード設定時、パルス幅0.5msで 右心房・右心室 2.5V 以下（左室は 2.0V 以下）",
     "適用条件": "心房 テンドリル MRI LPA1200M（46/52cm）またはプラグ",
     "出典": "Abbott 撮像条件一覧 https://www.cardiovascular.abbott/jp/ja/hcp/mri-medical/mri_chart/crt-d.html",
-    "確認日": "2026-08-29"
+    "確認日": "2026-08-29",
+    "資料の格付け": "国内一次資料"
    }
   },
   {
@@ -1998,7 +2018,8 @@
     "ペーシング閾値": "非同期モード設定時、パルス幅0.5msで 右心房・右心室 2.5V 以下（左室は 2.0V 以下）",
     "適用条件": "心房 テンドリル STS 2088TC（46/52cm）またはプラグ。3.0T撮像はこの組合せのみ",
     "出典": "Abbott 撮像条件一覧 https://www.cardiovascular.abbott/jp/ja/hcp/mri-medical/mri_chart/crt-d.html",
-    "確認日": "2026-08-29"
+    "確認日": "2026-08-29",
+    "資料の格付け": "国内一次資料"
    }
   },
   {
@@ -2033,28 +2054,16 @@
     "3.0T"
    ],
    "cond": {
-    "ガントリ": "水平式クローズドボア",
-    "最大空間勾配磁場": "30T/m",
-    "傾斜磁場スルーレート": "≤200T/m/s",
-    "SAR": "全身 ≦4.0W/kg／頭部 ≤3.2W/kg",
-    "植込み部位": "アヴェイル VR は右心室、アヴェイル AR は右心房",
-    "遺残リード": "不可（プラグは可）",
-    "リードインピーダンス": "該当なし",
-    "ペーシング閾値": "心室 2.5V(0.5ms)以下",
-    "横隔膜刺激": "非同期モード時、5.0V/1.0ms で横隔膜刺激がないこと",
-    "体位": "仰臥位または伏臥位（腕は体の横）",
-    "撮像時間": "制限なし",
-    "累積撮像時間": "制限なし",
-    "MRIモード": "設定必要",
-    "検査中のモード": "ペーシングOff、VOO/AOO/DOO ⇄ VOO",
-    "ローカル送受信コイル": "円偏波（CP）でRF励起した頭部・下肢・上肢用のみ（送信専用コイルは不可）",
-    "患者監視": "心電図・パルスメータ・非侵襲的血圧測定",
-    "体外式除細動器": "パルスオキシメータまたはECGモニタ（準備は任意）",
-    "備考": "デバイスのシリアル番号による各社サイトの検索で最新の撮像条件を確認できる",
-    "管理操作モード": "第一次水準管理操作モードまたは通常操作モード",
-    "植込み後": "制限なし"
-   },
-   "verify": true
+    "MR装置": "1.5T または 3.0T",
+    "SAR": "全身・頭部とも 通常操作モード もしくは 第一次水準管理操作モード（IEC60601-2-33 / JIS Z 4951:2017）",
+    "傾斜磁場スルーレート": "≦200T/m/s",
+    "ローカル送受信コイル": "1.5T：ローカル送受信コイルの使用に条件あり／3.0T：ローカルコイルの使用は制限される",
+    "RF励起": "3.0T では円偏波（CP）方式のみ",
+    "リード": "リードレス（経カテーテルペーシングシステムのためリードなし）",
+    "出典": "アヴェイル LP 添付文書（承認番号 30400BZX00287000）",
+    "資料の格付け": "国内一次資料",
+    "確認日": "2026-08-29"
+   }
   },
   {
    "id": "ABT-ICM",
@@ -2083,31 +2092,16 @@
     "3.0T"
    ],
    "cond": {
-    "ガントリ": "水平式クローズドボア",
-    "最大空間勾配磁場": "24T/m",
-    "傾斜磁場スルーレート": "≤200T/m/s",
-    "SAR": "≤0.1W/kg",
-    "植込み部位": "胸部",
-    "遺残リード": "不可（プラグは可）",
-    "リードインピーダンス": "該当なし",
-    "ペーシング閾値": "該当なし",
-    "横隔膜刺激": "該当なし",
-    "体位": "仰臥位または伏臥位（腕は体の横）",
-    "撮像時間": "制限なし",
-    "累積撮像時間": "制限なし",
-    "MRIモード": "該当なし",
-    "検査中のモード": "該当なし",
-    "ローカル送受信コイル": "頭部用・四肢用送受信コイル（クワドラチャのみ）。上肢は手首関節のみ、下肢は股関節を除く",
-    "患者監視": "心電図・パルスメータ・非侵襲的血圧測定",
-    "体外式除細動器": "パルスオキシメータまたはECGモニタ（準備は任意）",
-    "備考": "デバイスのシリアル番号による各社サイトの検索で最新の撮像条件を確認できる",
-    "B1+rms": "≤0.8µT",
-    "除外領域": "体幹",
-    "ホールボディコイル": "使用不可",
-    "アイソセンタ": "頭部・四肢のみ",
-    "植込み後": "なし"
-   },
-   "verify": true
+    "MR装置": "1.5T または 3.0T",
+    "SAR": "全身・頭部とも 通常操作モード または 第一次水準管理操作モード（IEC60601-2-33 / JIS Z 4951:2017）",
+    "傾斜磁場スルーレート": "≦200T/m/s",
+    "ローカル送受信コイル": "1.5T：使用に制限あり（添付文書の記載に従う）／3.0T：ローカルコイルの使用は制限される",
+    "RF励起": "3.0T では円偏波（CP）方式のみ",
+    "リード": "リードレス（皮下植込み型心電用データレコーダのためリードなし）",
+    "出典": "コンファーム Rx AF 添付文書 23000BZX00050000／ジョット Dx 23000BZX00050A01／アサート IQ 添付文書 30500BZX00241000",
+    "資料の格付け": "国内一次資料",
+    "確認日": "2026-08-29"
+   }
   },
   {
    "id": "BIO-PM1",
@@ -2296,8 +2290,10 @@
     "遺残リード": "不可（アダプタ等のMRI非対応品も体内留置不可）",
     "出典": "JADIA 撮像条件表 MRI_Search_List_BIO.pdf（2026-02-01現在）",
     "適合リード出典": "BIOTRONIK ProMRI MR conditional device systems Technical Manual 371712 Rev.CM",
-    "リード適合の注意": "リードの組合せは BIOTRONIK ProMRI テクニカルマニュアル（CE版）の適合表に基づく。国内承認の範囲と一致するかは要確認。Amvia Sky / Acticor Sky 世代は同マニュアルの改訂に未収載"
-   }
+    "リード適合の注意": "リードの組合せは BIOTRONIK ProMRI テクニカルマニュアル（CE版）に基づく暫定値。国内添付文書がPMDAで公開されていない世代のため未確認。同社の国内添付文書では長さが53/60cm中心に限定される傾向があり、実際の適合範囲はより狭い可能性がある",
+    "資料の格付け": "海外資料に基づく（国内承認範囲は要確認）"
+   },
+   "verify": true
   },
   {
    "id": "BIO-PM2",
@@ -2498,8 +2494,10 @@
     "遺残リード": "不可（アダプタ等のMRI非対応品も体内留置不可）",
     "出典": "JADIA 撮像条件表 MRI_Search_List_BIO.pdf（2026-02-01現在）",
     "適合リード出典": "BIOTRONIK ProMRI MR conditional device systems Technical Manual 371712 Rev.CM",
-    "リード適合の注意": "リードの組合せは BIOTRONIK ProMRI テクニカルマニュアル（CE版）の適合表に基づく。国内承認の範囲と一致するかは要確認。Amvia Sky / Acticor Sky 世代は同マニュアルの改訂に未収載"
-   }
+    "リード適合の注意": "リードの組合せは BIOTRONIK ProMRI テクニカルマニュアル（CE版）に基づく暫定値。国内添付文書がPMDAで公開されていない世代のため未確認。同社の国内添付文書では長さが53/60cm中心に限定される傾向があり、実際の適合範囲はより狭い可能性がある",
+    "資料の格付け": "海外資料に基づく（国内承認範囲は要確認）"
+   },
+   "verify": true
   },
   {
    "id": "BIO-PM3",
@@ -2690,8 +2688,10 @@
     "適用条件": "上記の身長・体温・アイソセンタ・撮像時間・体位の制限は3.0T撮像時のみ。1.5T撮像時はいずれも条件なし",
     "出典": "JADIA 撮像条件表 MRI_Search_List_BIO.pdf（2026-02-01現在）",
     "適合リード出典": "BIOTRONIK ProMRI MR conditional device systems Technical Manual 371712 Rev.CM",
-    "リード適合の注意": "リードの組合せは BIOTRONIK ProMRI テクニカルマニュアル（CE版）の適合表に基づく。国内承認の範囲と一致するかは要確認。Amvia Sky / Acticor Sky 世代は同マニュアルの改訂に未収載"
-   }
+    "リード適合の注意": "リードの組合せは BIOTRONIK ProMRI テクニカルマニュアル（CE版）に基づく暫定値。国内添付文書がPMDAで公開されていない世代のため未確認。同社の国内添付文書では長さが53/60cm中心に限定される傾向があり、実際の適合範囲はより狭い可能性がある",
+    "資料の格付け": "海外資料に基づく（国内承認範囲は要確認）"
+   },
+   "verify": true
   },
   {
    "id": "BIO-PM4",
@@ -2714,98 +2714,12 @@
    ],
    "ra": [
     {
-     "model": "Safio S 45",
-     "name": "Safio S 45"
-    },
-    {
-     "model": "Safio S 53",
-     "name": "Safio S 53"
-    },
-    {
-     "model": "Safio S 60",
-     "name": "Safio S 60"
-    },
-    {
-     "model": "Setrox S 45",
-     "name": "Setrox S 45"
-    },
-    {
-     "model": "Setrox S 53",
-     "name": "Setrox S 53"
-    },
-    {
-     "model": "Setrox S 60",
-     "name": "Setrox S 60"
-    },
-    {
-     "model": "Solia S 45",
-     "name": "Solia S 45"
-    },
-    {
-     "model": "Solia S 53",
-     "name": "Solia S 53"
-    },
-    {
-     "model": "Solia S 60",
-     "name": "Solia S 60"
-    },
-    {
-     "model": "Siello S 45",
-     "name": "Siello S 45"
-    },
-    {
-     "model": "Siello S 53",
-     "name": "Siello S 53"
-    },
-    {
-     "model": "Siello S 60",
-     "name": "Siello S 60"
-    },
-    {
-     "model": "Solia JT 45",
-     "name": "Solia JT 45"
-    },
-    {
      "model": "Solia JT 53",
      "name": "Solia JT 53"
     },
     {
-     "model": "Siello JT 45",
-     "name": "Siello JT 45"
-    },
-    {
      "model": "Siello JT 53",
      "name": "Siello JT 53"
-    },
-    {
-     "model": "Blind plug BS IS-1",
-     "name": "Blind plug BS IS-1"
-    }
-   ],
-   "rv": [
-    {
-     "model": "Safio S 45",
-     "name": "Safio S 45"
-    },
-    {
-     "model": "Safio S 53",
-     "name": "Safio S 53"
-    },
-    {
-     "model": "Safio S 60",
-     "name": "Safio S 60"
-    },
-    {
-     "model": "Setrox S 45",
-     "name": "Setrox S 45"
-    },
-    {
-     "model": "Setrox S 53",
-     "name": "Setrox S 53"
-    },
-    {
-     "model": "Setrox S 60",
-     "name": "Setrox S 60"
     },
     {
      "model": "Solia S 45",
@@ -2846,6 +2760,100 @@
     {
      "model": "Siello T 60",
      "name": "Siello T 60"
+    },
+    {
+     "model": "Safio S 53",
+     "name": "Safio S 53"
+    },
+    {
+     "model": "Safio S 60",
+     "name": "Safio S 60"
+    },
+    {
+     "model": "Setrox S 53",
+     "name": "Setrox S 53"
+    },
+    {
+     "model": "Setrox S 60",
+     "name": "Setrox S 60"
+    },
+    {
+     "model": "Dextrus Model 4136",
+     "name": "Dextrus Model 4136"
+    },
+    {
+     "model": "Dextrus Model 4137",
+     "name": "Dextrus Model 4137"
+    },
+    {
+     "model": "BS IS-1 ブラインドプラグ",
+     "name": "BS IS-1 ブラインドプラグ"
+    }
+   ],
+   "rv": [
+    {
+     "model": "Solia S 45",
+     "name": "Solia S 45"
+    },
+    {
+     "model": "Solia S 53",
+     "name": "Solia S 53"
+    },
+    {
+     "model": "Solia S 60",
+     "name": "Solia S 60"
+    },
+    {
+     "model": "Siello S 45",
+     "name": "Siello S 45"
+    },
+    {
+     "model": "Siello S 53",
+     "name": "Siello S 53"
+    },
+    {
+     "model": "Siello S 60",
+     "name": "Siello S 60"
+    },
+    {
+     "model": "Solia T 53",
+     "name": "Solia T 53"
+    },
+    {
+     "model": "Solia T 60",
+     "name": "Solia T 60"
+    },
+    {
+     "model": "Siello T 53",
+     "name": "Siello T 53"
+    },
+    {
+     "model": "Siello T 60",
+     "name": "Siello T 60"
+    },
+    {
+     "model": "Safio S 53",
+     "name": "Safio S 53"
+    },
+    {
+     "model": "Safio S 60",
+     "name": "Safio S 60"
+    },
+    {
+     "model": "Setrox S 53",
+     "name": "Setrox S 53"
+    },
+    {
+     "model": "Setrox S 60",
+     "name": "Setrox S 60"
+    },
+    {
+     "model": "Dextrus Model 4136",
+     "name": "Dextrus Model 4136"
+    },
+    {
+     "model": "Dextrus Model 4137",
+     "name": "Dextrus Model 4137"
     }
    ],
    "lv": [],
@@ -2858,13 +2866,13 @@
     "リードの組合せ": "自社製のProMRI対応リードに限る（型番は添付文書で確認）",
     "遺残リード・アダプタ": "MRI非対応品の体内留置は不可",
     "植込み部位": "胸部",
-    "リード植込み後": "6週間を経過すること",
+    "リード植込み後": "6週間を経過していること（42日目は撮像不可）",
     "ペーシング閾値": "2.0V(0.4ms)以下（Bipolar）",
     "リードインピーダンス": "200〜1,500Ω（Bipolar）",
     "電池状態": "ERIまたはEOSではないこと",
     "横隔膜刺激": "条件なし",
     "MRIモード": "MRI専用モードへの設定必須",
-    "MR装置": "トンネル型",
+    "MR装置": "1.5T または 3.0T の円筒型ボア装置",
     "傾斜磁場スルーレート": "200T/m/s以下（1軸）",
     "局所送受信コイル": "胸部には使用しないこと",
     "SAR": "頭部 ≦3.2W/kg、全身 ≦2.0W/kg（通常操作モード）",
@@ -2888,8 +2896,9 @@
     "ペーシングリードの組合せ": "下記の適合リードから選択（本表に無い組合せはMRI非対応として扱うこと）",
     "遺残リード": "不可（アダプタ等のMRI非対応品も体内留置不可）",
     "出典": "JADIA 撮像条件表 MRI_Search_List_BIO.pdf（2026-02-01現在）",
-    "適合リード出典": "BIOTRONIK ProMRI MR conditional device systems Technical Manual 371712 Rev.CM",
-    "リード適合の注意": "リードの組合せは BIOTRONIK ProMRI テクニカルマニュアル（CE版）の適合表に基づく。国内承認の範囲と一致するかは要確認。Amvia Sky / Acticor Sky 世代は同マニュアルの改訂に未収載"
+    "適合リード出典": "国内添付文書（バイオトロニックジャパン）の「本品と組み合わせてMRI対応が確認されているリード」（アムヴィア Sky 30500BZX00070000／エドラ 8-T ProMRI 22800BZX00330000／エヴィティ 8-T ProMRI 22900BZX00307000）",
+    "資料の格付け": "国内一次資料",
+    "心房リードなしの扱い": "RAポートに心房リードを接続せず BS IS-1 ブラインドプラグを使用した場合もMRI対応"
    }
   },
   {
@@ -3215,8 +3224,10 @@
     "遺残リード": "不可（アダプタ等のMRI非対応品も体内留置不可）",
     "出典": "JADIA 撮像条件表 MRI_Search_List_BIO.pdf（2026-02-01現在）",
     "適合リード出典": "BIOTRONIK ProMRI MR conditional device systems Technical Manual 371712 Rev.CM",
-    "リード適合の注意": "リードの組合せは BIOTRONIK ProMRI テクニカルマニュアル（CE版）の適合表に基づく。国内承認の範囲と一致するかは要確認。Amvia Sky / Acticor Sky 世代は同マニュアルの改訂に未収載"
-   }
+    "リード適合の注意": "リードの組合せは BIOTRONIK ProMRI テクニカルマニュアル（CE版）に基づく暫定値。国内添付文書がPMDAで公開されていない世代のため未確認。同社の国内添付文書では長さが53/60cm中心に限定される傾向があり、実際の適合範囲はより狭い可能性がある",
+    "資料の格付け": "海外資料に基づく（国内承認範囲は要確認）"
+   },
+   "verify": true
   },
   {
    "id": "BIO-ICD2",
@@ -3541,8 +3552,10 @@
     "遺残リード": "不可（アダプタ等のMRI非対応品も体内留置不可）",
     "出典": "JADIA 撮像条件表 MRI_Search_List_BIO.pdf（2026-02-01現在）",
     "適合リード出典": "BIOTRONIK ProMRI MR conditional device systems Technical Manual 371712 Rev.CM",
-    "リード適合の注意": "リードの組合せは BIOTRONIK ProMRI テクニカルマニュアル（CE版）の適合表に基づく。国内承認の範囲と一致するかは要確認。Amvia Sky / Acticor Sky 世代は同マニュアルの改訂に未収載"
-   }
+    "リード適合の注意": "リードの組合せは BIOTRONIK ProMRI テクニカルマニュアル（CE版）に基づく暫定値。国内添付文書がPMDAで公開されていない世代のため未確認。同社の国内添付文書では長さが53/60cm中心に限定される傾向があり、実際の適合範囲はより狭い可能性がある",
+    "資料の格付け": "海外資料に基づく（国内承認範囲は要確認）"
+   },
+   "verify": true
   },
   {
    "id": "BIO-ICD3",
@@ -3565,28 +3578,12 @@
    ],
    "ra": [
     {
-     "model": "Safio S 45",
-     "name": "Safio S 45"
+     "model": "Solia JT 53",
+     "name": "Solia JT 53"
     },
     {
-     "model": "Safio S 53",
-     "name": "Safio S 53"
-    },
-    {
-     "model": "Safio S 60",
-     "name": "Safio S 60"
-    },
-    {
-     "model": "Setrox S 45",
-     "name": "Setrox S 45"
-    },
-    {
-     "model": "Setrox S 53",
-     "name": "Setrox S 53"
-    },
-    {
-     "model": "Setrox S 60",
-     "name": "Setrox S 60"
+     "model": "Siello JT 53",
+     "name": "Siello JT 53"
     },
     {
      "model": "Solia S 45",
@@ -3613,226 +3610,70 @@
      "name": "Siello S 60"
     },
     {
-     "model": "Solia JT 45",
-     "name": "Solia JT 45"
+     "model": "Safio S 53",
+     "name": "Safio S 53"
     },
     {
-     "model": "Solia JT 53",
-     "name": "Solia JT 53"
+     "model": "Setrox S 53",
+     "name": "Setrox S 53"
     },
     {
-     "model": "Siello JT 45",
-     "name": "Siello JT 45"
+     "model": "Dextrus Model 4136",
+     "name": "Dextrus Model 4136"
     },
     {
-     "model": "Siello JT 53",
-     "name": "Siello JT 53"
-    },
-    {
-     "model": "Blind plug BS IS-1",
-     "name": "Blind plug BS IS-1"
+     "model": "BS IS-1 ブラインドプラグ",
+     "name": "BS IS-1 ブラインドプラグ"
     }
    ],
    "rv": [
     {
-     "model": "Linox smart ProMRI S 65",
-     "name": "Linox smart ProMRI S 65"
-    },
-    {
-     "model": "Linox smart ProMRI S 75",
-     "name": "Linox smart ProMRI S 75"
-    },
-    {
-     "model": "Linox smart ProMRI SD 65/16",
-     "name": "Linox smart ProMRI SD 65/16"
-    },
-    {
-     "model": "Linox smart ProMRI SD 65/18",
-     "name": "Linox smart ProMRI SD 65/18"
-    },
-    {
-     "model": "Linox smart ProMRI SD 75/18",
-     "name": "Linox smart ProMRI SD 75/18"
-    },
-    {
-     "model": "Linox smart ProMRI S DX 65/15",
-     "name": "Linox smart ProMRI S DX 65/15"
-    },
-    {
-     "model": "Linox smart ProMRI S DX 65/17",
-     "name": "Linox smart ProMRI S DX 65/17"
-    },
-    {
-     "model": "Protego DF-1 ProMRI S 65",
-     "name": "Protego DF-1 ProMRI S 65"
-    },
-    {
-     "model": "Protego DF-1 ProMRI S 75",
-     "name": "Protego DF-1 ProMRI S 75"
-    },
-    {
-     "model": "Protego DF-1 ProMRI SD 65/16",
-     "name": "Protego DF-1 ProMRI SD 65/16"
-    },
-    {
-     "model": "Protego DF-1 ProMRI SD 65/18",
-     "name": "Protego DF-1 ProMRI SD 65/18"
-    },
-    {
-     "model": "Protego DF-1 ProMRI SD 75/18",
-     "name": "Protego DF-1 ProMRI SD 75/18"
-    },
-    {
-     "model": "Protego DF-1 ProMRI S DX 65/15",
-     "name": "Protego DF-1 ProMRI S DX 65/15"
-    },
-    {
-     "model": "Protego DF-1 ProMRI S DX 65/17",
-     "name": "Protego DF-1 ProMRI S DX 65/17"
-    },
-    {
-     "model": "Plexa ProMRI DF-1 S 60",
-     "name": "Plexa ProMRI DF-1 S 60"
-    },
-    {
      "model": "Plexa ProMRI DF-1 S 65",
      "name": "Plexa ProMRI DF-1 S 65"
-    },
-    {
-     "model": "Plexa ProMRI DF-1 S 75",
-     "name": "Plexa ProMRI DF-1 S 75"
-    },
-    {
-     "model": "Plexa ProMRI DF-1 SD 60/16",
-     "name": "Plexa ProMRI DF-1 SD 60/16"
-    },
-    {
-     "model": "Plexa ProMRI DF-1 SD 65/16",
-     "name": "Plexa ProMRI DF-1 SD 65/16"
     },
     {
      "model": "Plexa ProMRI DF-1 SD 65/18",
      "name": "Plexa ProMRI DF-1 SD 65/18"
     },
     {
-     "model": "Plexa ProMRI DF-1 SD 75/18",
-     "name": "Plexa ProMRI DF-1 SD 75/18"
-    },
-    {
      "model": "Plexa ProMRI DF-1 S DX 65/15",
      "name": "Plexa ProMRI DF-1 S DX 65/15"
     },
     {
-     "model": "Plexa ProMRI DF-1 S DX 65/17",
-     "name": "Plexa ProMRI DF-1 S DX 65/17"
+     "model": "Linox Smart ProMRI S 65",
+     "name": "Linox Smart ProMRI S 65"
     },
     {
-     "model": "Linox smart ProMRI DF4 SD 65/16",
-     "name": "Linox smart ProMRI DF4 SD 65/16"
+     "model": "Linox Smart ProMRI SD 65/18",
+     "name": "Linox Smart ProMRI SD 65/18"
     },
     {
-     "model": "Linox smart ProMRI DF4 SD 65/18",
-     "name": "Linox smart ProMRI DF4 SD 65/18"
+     "model": "Linox Smart ProMRI S DX 65/15",
+     "name": "Linox Smart ProMRI S DX 65/15"
     },
     {
-     "model": "Linox smart ProMRI DF4 SD 75/18",
-     "name": "Linox smart ProMRI DF4 SD 75/18"
+     "model": "Linox Smart S 65",
+     "name": "Linox Smart S 65"
     },
     {
-     "model": "Protego ProMRI S 65",
-     "name": "Protego ProMRI S 65"
+     "model": "Linox Smart S 75",
+     "name": "Linox Smart S 75"
     },
     {
-     "model": "Protego ProMRI S 75",
-     "name": "Protego ProMRI S 75"
+     "model": "Linox Smart SD 65/18",
+     "name": "Linox Smart SD 65/18"
     },
     {
-     "model": "Protego ProMRI SD 65/16",
-     "name": "Protego ProMRI SD 65/16"
+     "model": "Linox Smart SD 75/18",
+     "name": "Linox Smart SD 75/18"
     },
     {
-     "model": "Protego ProMRI SD 65/18",
-     "name": "Protego ProMRI SD 65/18"
+     "model": "Linox Smart S DX 65/15",
+     "name": "Linox Smart S DX 65/15"
     },
     {
-     "model": "Protego ProMRI SD 75/18",
-     "name": "Protego ProMRI SD 75/18"
-    },
-    {
-     "model": "Plexa ProMRI S 60",
-     "name": "Plexa ProMRI S 60"
-    },
-    {
-     "model": "Plexa ProMRI S 65",
-     "name": "Plexa ProMRI S 65"
-    },
-    {
-     "model": "Plexa ProMRI S 75",
-     "name": "Plexa ProMRI S 75"
-    },
-    {
-     "model": "Plexa ProMRI SD 60/16",
-     "name": "Plexa ProMRI SD 60/16"
-    },
-    {
-     "model": "Plexa ProMRI SD 65/16",
-     "name": "Plexa ProMRI SD 65/16"
-    },
-    {
-     "model": "Plexa ProMRI SD 65/18",
-     "name": "Plexa ProMRI SD 65/18"
-    },
-    {
-     "model": "Plexa ProMRI SD 75/18",
-     "name": "Plexa ProMRI SD 75/18"
-    },
-    {
-     "model": "Plexa ProMRI S DX 65/15",
-     "name": "Plexa ProMRI S DX 65/15"
-    },
-    {
-     "model": "Plexa ProMRI S DX 65/17",
-     "name": "Plexa ProMRI S DX 65/17"
-    },
-    {
-     "model": "Pamira S 60",
-     "name": "Pamira S 60"
-    },
-    {
-     "model": "Pamira S 65",
-     "name": "Pamira S 65"
-    },
-    {
-     "model": "Pamira S 75",
-     "name": "Pamira S 75"
-    },
-    {
-     "model": "Pamira SD 60/16",
-     "name": "Pamira SD 60/16"
-    },
-    {
-     "model": "Pamira SD 65/16",
-     "name": "Pamira SD 65/16"
-    },
-    {
-     "model": "Pamira SD 65/18",
-     "name": "Pamira SD 65/18"
-    },
-    {
-     "model": "Pamira SD 75/18",
-     "name": "Pamira SD 75/18"
-    },
-    {
-     "model": "Pamira S DX 65/15",
-     "name": "Pamira S DX 65/15"
-    },
-    {
-     "model": "Pamira S DX 65/17",
-     "name": "Pamira S DX 65/17"
-    },
-    {
-     "model": "Blind plug BS DF-1",
-     "name": "Blind plug BS DF-1"
+     "model": "DF-1 ブラインドプラグ",
+     "name": "DF-1 ブラインドプラグ"
     }
    ],
    "lv": [],
@@ -3845,13 +3686,13 @@
     "リードの組合せ": "自社製のProMRI対応リードに限る（型番は添付文書で確認）",
     "遺残リード・アダプタ": "MRI非対応品の体内留置は不可",
     "植込み部位": "胸部",
-    "リード植込み後": "6週間を経過すること",
+    "リード植込み後": "6週間を経過していること（42日目は撮像不可）",
     "ペーシング閾値": "2.0V(0.4ms)以下（Bipolar）",
     "リードインピーダンス": "200〜1,500Ω（Bipolar）",
     "電池状態": "ERIまたはEOSではないこと",
     "横隔膜刺激": "条件なし",
     "MRIモード": "MRI専用モードへの設定必須",
-    "MR装置": "トンネル型",
+    "MR装置": "1.5T または 3.0T の円筒型ボア装置",
     "傾斜磁場スルーレート": "200T/m/s以下（1軸）",
     "局所送受信コイル": "胸部には使用しないこと",
     "SAR": "頭部 ≦3.2W/kg、全身 ≦2.0W/kg（通常操作モード）",
@@ -3876,8 +3717,11 @@
     "遺残リード": "不可（アダプタ等のMRI非対応品も体内留置不可）",
     "適用条件": "上記の身長・体温・アイソセンタ・撮像時間・体位の制限は3.0T撮像時のみ。1.5T撮像時はいずれも条件なし",
     "出典": "JADIA 撮像条件表 MRI_Search_List_BIO.pdf（2026-02-01現在）",
-    "適合リード出典": "BIOTRONIK ProMRI MR conditional device systems Technical Manual 371712 Rev.CM",
-    "リード適合の注意": "リードの組合せは BIOTRONIK ProMRI テクニカルマニュアル（CE版）の適合表に基づく。国内承認の範囲と一致するかは要確認。Amvia Sky / Acticor Sky 世代は同マニュアルの改訂に未収載"
+    "適合リード出典": "国内添付文書 イリヴィア Neo 7 ICD ProMRI 30100BZX00067000／イリヴィア Neo 7 CRT-D ProMRI 30100BZX00066000",
+    "資料の格付け": "国内一次資料",
+    "心房リードなしの扱い": "RAポートに心房リードを接続せず BS IS-1 ブラインドプラグを使用した場合もMRI対応",
+    "シングルコイル選択時": "シングルコイルのリードを選択した場合、DF-1 SVCポートにDF-1ブラインドプラグを使用することになるが、この場合もMRI対応となる",
+    "注意": "この群には Iperia 7 / Ilivia 7 も含めているが、国内添付文書を確認できたのは Ilivia Neo 7 のみ。Iperia 7・Ilivia 7 のリード適合は未確認"
    }
   },
   {
@@ -3897,28 +3741,12 @@
    ],
    "ra": [
     {
-     "model": "Safio S 45",
-     "name": "Safio S 45"
+     "model": "Solia JT 53",
+     "name": "Solia JT 53"
     },
     {
-     "model": "Safio S 53",
-     "name": "Safio S 53"
-    },
-    {
-     "model": "Safio S 60",
-     "name": "Safio S 60"
-    },
-    {
-     "model": "Setrox S 45",
-     "name": "Setrox S 45"
-    },
-    {
-     "model": "Setrox S 53",
-     "name": "Setrox S 53"
-    },
-    {
-     "model": "Setrox S 60",
-     "name": "Setrox S 60"
+     "model": "Siello JT 53",
+     "name": "Siello JT 53"
     },
     {
      "model": "Solia S 45",
@@ -3945,226 +3773,58 @@
      "name": "Siello S 60"
     },
     {
-     "model": "Solia JT 45",
-     "name": "Solia JT 45"
+     "model": "Safio S 53",
+     "name": "Safio S 53"
     },
     {
-     "model": "Solia JT 53",
-     "name": "Solia JT 53"
+     "model": "Setrox S 53",
+     "name": "Setrox S 53"
     },
     {
-     "model": "Siello JT 45",
-     "name": "Siello JT 45"
+     "model": "Dextrus Model 4136",
+     "name": "Dextrus Model 4136"
     },
     {
-     "model": "Siello JT 53",
-     "name": "Siello JT 53"
-    },
-    {
-     "model": "Blind plug BS IS-1",
-     "name": "Blind plug BS IS-1"
+     "model": "BS IS-1 ブラインドプラグ",
+     "name": "BS IS-1 ブラインドプラグ"
     }
    ],
    "rv": [
     {
-     "model": "Linox smart ProMRI S 65",
-     "name": "Linox smart ProMRI S 65"
-    },
-    {
-     "model": "Linox smart ProMRI S 75",
-     "name": "Linox smart ProMRI S 75"
-    },
-    {
-     "model": "Linox smart ProMRI SD 65/16",
-     "name": "Linox smart ProMRI SD 65/16"
-    },
-    {
-     "model": "Linox smart ProMRI SD 65/18",
-     "name": "Linox smart ProMRI SD 65/18"
-    },
-    {
-     "model": "Linox smart ProMRI SD 75/18",
-     "name": "Linox smart ProMRI SD 75/18"
-    },
-    {
-     "model": "Linox smart ProMRI S DX 65/15",
-     "name": "Linox smart ProMRI S DX 65/15"
-    },
-    {
-     "model": "Linox smart ProMRI S DX 65/17",
-     "name": "Linox smart ProMRI S DX 65/17"
-    },
-    {
-     "model": "Protego DF-1 ProMRI S 65",
-     "name": "Protego DF-1 ProMRI S 65"
-    },
-    {
-     "model": "Protego DF-1 ProMRI S 75",
-     "name": "Protego DF-1 ProMRI S 75"
-    },
-    {
-     "model": "Protego DF-1 ProMRI SD 65/16",
-     "name": "Protego DF-1 ProMRI SD 65/16"
-    },
-    {
-     "model": "Protego DF-1 ProMRI SD 65/18",
-     "name": "Protego DF-1 ProMRI SD 65/18"
-    },
-    {
-     "model": "Protego DF-1 ProMRI SD 75/18",
-     "name": "Protego DF-1 ProMRI SD 75/18"
-    },
-    {
-     "model": "Protego DF-1 ProMRI S DX 65/15",
-     "name": "Protego DF-1 ProMRI S DX 65/15"
-    },
-    {
-     "model": "Protego DF-1 ProMRI S DX 65/17",
-     "name": "Protego DF-1 ProMRI S DX 65/17"
-    },
-    {
-     "model": "Plexa ProMRI DF-1 S 60",
-     "name": "Plexa ProMRI DF-1 S 60"
-    },
-    {
-     "model": "Plexa ProMRI DF-1 S 65",
-     "name": "Plexa ProMRI DF-1 S 65"
-    },
-    {
-     "model": "Plexa ProMRI DF-1 S 75",
-     "name": "Plexa ProMRI DF-1 S 75"
-    },
-    {
-     "model": "Plexa ProMRI DF-1 SD 60/16",
-     "name": "Plexa ProMRI DF-1 SD 60/16"
-    },
-    {
-     "model": "Plexa ProMRI DF-1 SD 65/16",
-     "name": "Plexa ProMRI DF-1 SD 65/16"
-    },
-    {
-     "model": "Plexa ProMRI DF-1 SD 65/18",
-     "name": "Plexa ProMRI DF-1 SD 65/18"
-    },
-    {
-     "model": "Plexa ProMRI DF-1 SD 75/18",
-     "name": "Plexa ProMRI DF-1 SD 75/18"
-    },
-    {
-     "model": "Plexa ProMRI DF-1 S DX 65/15",
-     "name": "Plexa ProMRI DF-1 S DX 65/15"
-    },
-    {
-     "model": "Plexa ProMRI DF-1 S DX 65/17",
-     "name": "Plexa ProMRI DF-1 S DX 65/17"
-    },
-    {
-     "model": "Linox smart ProMRI DF4 SD 65/16",
-     "name": "Linox smart ProMRI DF4 SD 65/16"
-    },
-    {
-     "model": "Linox smart ProMRI DF4 SD 65/18",
-     "name": "Linox smart ProMRI DF4 SD 65/18"
-    },
-    {
-     "model": "Linox smart ProMRI DF4 SD 75/18",
-     "name": "Linox smart ProMRI DF4 SD 75/18"
-    },
-    {
-     "model": "Protego ProMRI S 65",
-     "name": "Protego ProMRI S 65"
-    },
-    {
-     "model": "Protego ProMRI S 75",
-     "name": "Protego ProMRI S 75"
-    },
-    {
-     "model": "Protego ProMRI SD 65/16",
-     "name": "Protego ProMRI SD 65/16"
-    },
-    {
-     "model": "Protego ProMRI SD 65/18",
-     "name": "Protego ProMRI SD 65/18"
-    },
-    {
-     "model": "Protego ProMRI SD 75/18",
-     "name": "Protego ProMRI SD 75/18"
-    },
-    {
-     "model": "Plexa ProMRI S 60",
-     "name": "Plexa ProMRI S 60"
-    },
-    {
-     "model": "Plexa ProMRI S 65",
-     "name": "Plexa ProMRI S 65"
-    },
-    {
-     "model": "Plexa ProMRI S 75",
-     "name": "Plexa ProMRI S 75"
-    },
-    {
-     "model": "Plexa ProMRI SD 60/16",
-     "name": "Plexa ProMRI SD 60/16"
-    },
-    {
-     "model": "Plexa ProMRI SD 65/16",
-     "name": "Plexa ProMRI SD 65/16"
-    },
-    {
-     "model": "Plexa ProMRI SD 65/18",
-     "name": "Plexa ProMRI SD 65/18"
-    },
-    {
-     "model": "Plexa ProMRI SD 75/18",
-     "name": "Plexa ProMRI SD 75/18"
-    },
-    {
-     "model": "Plexa ProMRI S DX 65/15",
-     "name": "Plexa ProMRI S DX 65/15"
-    },
-    {
-     "model": "Plexa ProMRI S DX 65/17",
-     "name": "Plexa ProMRI S DX 65/17"
-    },
-    {
-     "model": "Pamira S 60",
-     "name": "Pamira S 60"
-    },
-    {
      "model": "Pamira S 65",
      "name": "Pamira S 65"
-    },
-    {
-     "model": "Pamira S 75",
-     "name": "Pamira S 75"
-    },
-    {
-     "model": "Pamira SD 60/16",
-     "name": "Pamira SD 60/16"
-    },
-    {
-     "model": "Pamira SD 65/16",
-     "name": "Pamira SD 65/16"
     },
     {
      "model": "Pamira SD 65/18",
      "name": "Pamira SD 65/18"
     },
     {
-     "model": "Pamira SD 75/18",
-     "name": "Pamira SD 75/18"
+     "model": "Plexa ProMRI S 65",
+     "name": "Plexa ProMRI S 65"
+    },
+    {
+     "model": "Plexa ProMRI SD 65/18",
+     "name": "Plexa ProMRI SD 65/18"
+    },
+    {
+     "model": "Protego ProMRI S 65",
+     "name": "Protego ProMRI S 65"
+    },
+    {
+     "model": "Protego ProMRI SD 65/18",
+     "name": "Protego ProMRI SD 65/18"
+    },
+    {
+     "model": "Protego SD 65/18",
+     "name": "Protego SD 65/18"
     },
     {
      "model": "Pamira S DX 65/15",
      "name": "Pamira S DX 65/15"
     },
     {
-     "model": "Pamira S DX 65/17",
-     "name": "Pamira S DX 65/17"
-    },
-    {
-     "model": "Blind plug BS DF-1",
-     "name": "Blind plug BS DF-1"
+     "model": "Plexa ProMRI S DX 65/15",
+     "name": "Plexa ProMRI S DX 65/15"
     }
    ],
    "lv": [],
@@ -4177,13 +3837,13 @@
     "リードの組合せ": "自社製のProMRI対応リードに限る（型番は添付文書で確認）",
     "遺残リード・アダプタ": "MRI非対応品の体内留置は不可",
     "植込み部位": "胸部",
-    "リード植込み後": "6週間を経過すること",
+    "リード植込み後": "6週間を経過していること（42日目は撮像不可）",
     "ペーシング閾値": "2.0V(0.4ms)以下（Bipolar）",
     "リードインピーダンス": "200〜1,500Ω（Bipolar）",
     "電池状態": "ERIまたはEOSではないこと",
     "横隔膜刺激": "条件なし",
     "MRIモード": "MRI専用モードへの設定必須",
-    "MR装置": "トンネル型",
+    "MR装置": "1.5T または 3.0T の円筒型ボア装置",
     "傾斜磁場スルーレート": "200T/m/s以下（1軸）",
     "局所送受信コイル": "胸部には使用しないこと",
     "SAR": "頭部 ≦3.2W/kg、全身 ≦2.0W/kg（通常操作モード）",
@@ -4207,8 +3867,9 @@
     "ペーシングリードの組合せ": "下記の適合リードから選択（本表に無い組合せはMRI非対応として扱うこと）",
     "遺残リード": "不可（アダプタ等のMRI非対応品も体内留置不可）",
     "出典": "JADIA 撮像条件表 MRI_Search_List_BIO.pdf（2026-02-01現在）",
-    "適合リード出典": "BIOTRONIK ProMRI MR conditional device systems Technical Manual 371712 Rev.CM",
-    "リード適合の注意": "リードの組合せは BIOTRONIK ProMRI テクニカルマニュアル（CE版）の適合表に基づく。国内承認の範囲と一致するかは要確認。Amvia Sky / Acticor Sky 世代は同マニュアルの改訂に未収載"
+    "適合リード出典": "国内添付文書（バイオトロニックジャパン）の「本品と組み合わせてMRI対応が確認されているリード」（アクティコア 7 ICD ProMRI 23100BZX00029000／アクティコア 7 ICD VR-T DX ProMRI 23100BZX00030000／アクティコア Sky ICD 30700BZX00307000）",
+    "資料の格付け": "国内一次資料",
+    "心房リードなしの扱い": "RAポートに心房リードを接続せず BS IS-1 ブラインドプラグを使用した場合もMRI対応"
    }
   },
   {
@@ -4500,8 +4161,10 @@
     "遺残リード": "不可（アダプタ等のMRI非対応品も体内留置不可）",
     "出典": "JADIA 撮像条件表 MRI_Search_List_BIO.pdf（2026-02-01現在）",
     "適合リード出典": "BIOTRONIK ProMRI MR conditional device systems Technical Manual 371712 Rev.CM",
-    "リード適合の注意": "リードの組合せは BIOTRONIK ProMRI テクニカルマニュアル（CE版）の適合表に基づく。国内承認の範囲と一致するかは要確認。Amvia Sky / Acticor Sky 世代は同マニュアルの改訂に未収載"
-   }
+    "リード適合の注意": "リードの組合せは BIOTRONIK ProMRI テクニカルマニュアル（CE版）に基づく暫定値。国内添付文書がPMDAで公開されていない世代のため未確認。同社の国内添付文書では長さが53/60cm中心に限定される傾向があり、実際の適合範囲はより狭い可能性がある",
+    "資料の格付け": "海外資料に基づく（国内承認範囲は要確認）"
+   },
+   "verify": true
   },
   {
    "id": "BIO-CRTP2",
@@ -4792,8 +4455,10 @@
     "遺残リード": "不可（アダプタ等のMRI非対応品も体内留置不可）",
     "出典": "JADIA 撮像条件表 MRI_Search_List_BIO.pdf（2026-02-01現在）",
     "適合リード出典": "BIOTRONIK ProMRI MR conditional device systems Technical Manual 371712 Rev.CM",
-    "リード適合の注意": "リードの組合せは BIOTRONIK ProMRI テクニカルマニュアル（CE版）の適合表に基づく。国内承認の範囲と一致するかは要確認。Amvia Sky / Acticor Sky 世代は同マニュアルの改訂に未収載"
-   }
+    "リード適合の注意": "リードの組合せは BIOTRONIK ProMRI テクニカルマニュアル（CE版）に基づく暫定値。国内添付文書がPMDAで公開されていない世代のため未確認。同社の国内添付文書では長さが53/60cm中心に限定される傾向があり、実際の適合範囲はより狭い可能性がある",
+    "資料の格付け": "海外資料に基づく（国内承認範囲は要確認）"
+   },
+   "verify": true
   },
   {
    "id": "BIO-CRTP3",
@@ -4812,98 +4477,12 @@
    ],
    "ra": [
     {
-     "model": "Safio S 45",
-     "name": "Safio S 45"
-    },
-    {
-     "model": "Safio S 53",
-     "name": "Safio S 53"
-    },
-    {
-     "model": "Safio S 60",
-     "name": "Safio S 60"
-    },
-    {
-     "model": "Setrox S 45",
-     "name": "Setrox S 45"
-    },
-    {
-     "model": "Setrox S 53",
-     "name": "Setrox S 53"
-    },
-    {
-     "model": "Setrox S 60",
-     "name": "Setrox S 60"
-    },
-    {
-     "model": "Solia S 45",
-     "name": "Solia S 45"
-    },
-    {
-     "model": "Solia S 53",
-     "name": "Solia S 53"
-    },
-    {
-     "model": "Solia S 60",
-     "name": "Solia S 60"
-    },
-    {
-     "model": "Siello S 45",
-     "name": "Siello S 45"
-    },
-    {
-     "model": "Siello S 53",
-     "name": "Siello S 53"
-    },
-    {
-     "model": "Siello S 60",
-     "name": "Siello S 60"
-    },
-    {
-     "model": "Solia JT 45",
-     "name": "Solia JT 45"
-    },
-    {
      "model": "Solia JT 53",
      "name": "Solia JT 53"
     },
     {
-     "model": "Siello JT 45",
-     "name": "Siello JT 45"
-    },
-    {
      "model": "Siello JT 53",
      "name": "Siello JT 53"
-    },
-    {
-     "model": "Blind plug BS IS-1",
-     "name": "Blind plug BS IS-1"
-    }
-   ],
-   "rv": [
-    {
-     "model": "Safio S 45",
-     "name": "Safio S 45"
-    },
-    {
-     "model": "Safio S 53",
-     "name": "Safio S 53"
-    },
-    {
-     "model": "Safio S 60",
-     "name": "Safio S 60"
-    },
-    {
-     "model": "Setrox S 45",
-     "name": "Setrox S 45"
-    },
-    {
-     "model": "Setrox S 53",
-     "name": "Setrox S 53"
-    },
-    {
-     "model": "Setrox S 60",
-     "name": "Setrox S 60"
     },
     {
      "model": "Solia S 45",
@@ -4944,108 +4523,146 @@
     {
      "model": "Siello T 60",
      "name": "Siello T 60"
+    },
+    {
+     "model": "Safio S 53",
+     "name": "Safio S 53"
+    },
+    {
+     "model": "Safio S 60",
+     "name": "Safio S 60"
+    },
+    {
+     "model": "Setrox S 53",
+     "name": "Setrox S 53"
+    },
+    {
+     "model": "Setrox S 60",
+     "name": "Setrox S 60"
+    },
+    {
+     "model": "Dextrus Model 4136",
+     "name": "Dextrus Model 4136"
+    },
+    {
+     "model": "Dextrus Model 4137",
+     "name": "Dextrus Model 4137"
+    },
+    {
+     "model": "BS IS-1 ブラインドプラグ",
+     "name": "BS IS-1 ブラインドプラグ"
+    }
+   ],
+   "rv": [
+    {
+     "model": "Solia S 45",
+     "name": "Solia S 45"
+    },
+    {
+     "model": "Solia S 53",
+     "name": "Solia S 53"
+    },
+    {
+     "model": "Solia S 60",
+     "name": "Solia S 60"
+    },
+    {
+     "model": "Siello S 45",
+     "name": "Siello S 45"
+    },
+    {
+     "model": "Siello S 53",
+     "name": "Siello S 53"
+    },
+    {
+     "model": "Siello S 60",
+     "name": "Siello S 60"
+    },
+    {
+     "model": "Solia T 53",
+     "name": "Solia T 53"
+    },
+    {
+     "model": "Solia T 60",
+     "name": "Solia T 60"
+    },
+    {
+     "model": "Siello T 53",
+     "name": "Siello T 53"
+    },
+    {
+     "model": "Siello T 60",
+     "name": "Siello T 60"
+    },
+    {
+     "model": "Safio S 53",
+     "name": "Safio S 53"
+    },
+    {
+     "model": "Safio S 60",
+     "name": "Safio S 60"
+    },
+    {
+     "model": "Setrox S 53",
+     "name": "Setrox S 53"
+    },
+    {
+     "model": "Setrox S 60",
+     "name": "Setrox S 60"
+    },
+    {
+     "model": "Dextrus Model 4136",
+     "name": "Dextrus Model 4136"
+    },
+    {
+     "model": "Dextrus Model 4137",
+     "name": "Dextrus Model 4137"
     }
    ],
    "lv": [
     {
-     "model": "Corox ProMRI OTW BP 75",
-     "name": "Corox ProMRI OTW BP 75"
+     "model": "Sentus ProMRI OTW QP L-85",
+     "name": "Sentus ProMRI OTW QP L-85"
     },
     {
-     "model": "Corox ProMRI OTW BP 85",
-     "name": "Corox ProMRI OTW BP 85"
+     "model": "Sentus ProMRI OTW QP L-85/49",
+     "name": "Sentus ProMRI OTW QP L-85/49"
     },
     {
-     "model": "Corox ProMRI OTW-S BP 75",
-     "name": "Corox ProMRI OTW-S BP 75"
+     "model": "Sentus ProMRI OTW QP S-85/49",
+     "name": "Sentus ProMRI OTW QP S-85/49"
     },
     {
-     "model": "Corox ProMRI OTW-S BP 85",
-     "name": "Corox ProMRI OTW-S BP 85"
+     "model": "Sentus OTW QP L-85",
+     "name": "Sentus OTW QP L-85"
     },
     {
-     "model": "Corox ProMRI OTW-L BP 75",
-     "name": "Corox ProMRI OTW-L BP 75"
+     "model": "Corox ProMRI OTW 85-BP",
+     "name": "Corox ProMRI OTW 85-BP"
     },
     {
-     "model": "Corox ProMRI OTW-L BP 85",
-     "name": "Corox ProMRI OTW-L BP 85"
+     "model": "Corox ProMRI OTW-S 85-BP",
+     "name": "Corox ProMRI OTW-S 85-BP"
     },
     {
-     "model": "Sentus ProMRI OTW BP L 75",
-     "name": "Sentus ProMRI OTW BP L 75"
+     "model": "Corox ProMRI OTW-L 85-BP",
+     "name": "Corox ProMRI OTW-L 85-BP"
     },
     {
-     "model": "Sentus ProMRI OTW BP L 85",
-     "name": "Sentus ProMRI OTW BP L 85"
+     "model": "Sentus ProMRI OTW BP L-85",
+     "name": "Sentus ProMRI OTW BP L-85"
     },
     {
-     "model": "Sentus ProMRI OTW BP L 95",
-     "name": "Sentus ProMRI OTW BP L 95"
+     "model": "Corox OTW 85-BP",
+     "name": "Corox OTW 85-BP"
     },
     {
-     "model": "Sentus ProMRI OTW BP S 75",
-     "name": "Sentus ProMRI OTW BP S 75"
+     "model": "Corox OTW-S 85-BP",
+     "name": "Corox OTW-S 85-BP"
     },
     {
-     "model": "Sentus ProMRI OTW BP S 85",
-     "name": "Sentus ProMRI OTW BP S 85"
-    },
-    {
-     "model": "Sentus ProMRI OTW BP S 95",
-     "name": "Sentus ProMRI OTW BP S 95"
-    },
-    {
-     "model": "Sentus ProMRI OTW QP L 75",
-     "name": "Sentus ProMRI OTW QP L 75"
-    },
-    {
-     "model": "Sentus ProMRI OTW QP L 85",
-     "name": "Sentus ProMRI OTW QP L 85"
-    },
-    {
-     "model": "Sentus ProMRI OTW QP L 95",
-     "name": "Sentus ProMRI OTW QP L 95"
-    },
-    {
-     "model": "Sentus ProMRI OTW QP S 75",
-     "name": "Sentus ProMRI OTW QP S 75"
-    },
-    {
-     "model": "Sentus ProMRI OTW QP S 85",
-     "name": "Sentus ProMRI OTW QP S 85"
-    },
-    {
-     "model": "Sentus ProMRI OTW QP S 95",
-     "name": "Sentus ProMRI OTW QP S 95"
-    },
-    {
-     "model": "Sentus ProMRI OTW QP L-XX/49 75",
-     "name": "Sentus ProMRI OTW QP L-XX/49 75"
-    },
-    {
-     "model": "Sentus ProMRI OTW QP L-XX/49 85",
-     "name": "Sentus ProMRI OTW QP L-XX/49 85"
-    },
-    {
-     "model": "Sentus ProMRI OTW QP L-XX/49 95",
-     "name": "Sentus ProMRI OTW QP L-XX/49 95"
-    },
-    {
-     "model": "Sentus ProMRI OTW QP S-XX/49 75",
-     "name": "Sentus ProMRI OTW QP S-XX/49 75"
-    },
-    {
-     "model": "Sentus ProMRI OTW QP S-XX/49 85",
-     "name": "Sentus ProMRI OTW QP S-XX/49 85"
-    },
-    {
-     "model": "Sentus ProMRI OTW QP S-XX/49 95",
-     "name": "Sentus ProMRI OTW QP S-XX/49 95"
-    },
-    {
-     "model": "Blind plug BS IS4",
-     "name": "Blind plug BS IS4"
+     "model": "Corox OTW-L 85-BP",
+     "name": "Corox OTW-L 85-BP"
     }
    ],
    "leadfree": true,
@@ -5057,13 +4674,13 @@
     "リードの組合せ": "自社製のProMRI対応リードに限る（型番は添付文書で確認）",
     "遺残リード・アダプタ": "MRI非対応品の体内留置は不可",
     "植込み部位": "胸部",
-    "リード植込み後": "6週間を経過すること",
+    "リード植込み後": "6週間を経過していること（42日目は撮像不可）",
     "ペーシング閾値": "2.0V(0.4ms)以下（Bipolar）　※左室の閾値条件なし",
     "リードインピーダンス": "200〜1,500Ω（Bipolar）",
     "電池状態": "ERIまたはEOSではないこと",
     "横隔膜刺激": "条件なし",
     "MRIモード": "MRI専用モードへの設定必須",
-    "MR装置": "トンネル型",
+    "MR装置": "1.5T または 3.0T の円筒型ボア装置",
     "傾斜磁場スルーレート": "200T/m/s以下（1軸）",
     "局所送受信コイル": "胸部には使用しないこと",
     "SAR": "頭部 ≦3.2W/kg、全身 ≦2.0W/kg（通常操作モード）",
@@ -5088,8 +4705,9 @@
     "ペーシングリードの組合せ": "下記の適合リードから選択（本表に無い組合せはMRI非対応として扱うこと）",
     "遺残リード": "不可（アダプタ等のMRI非対応品も体内留置不可）",
     "出典": "JADIA 撮像条件表 MRI_Search_List_BIO.pdf（2026-02-01現在）",
-    "適合リード出典": "BIOTRONIK ProMRI MR conditional device systems Technical Manual 371712 Rev.CM",
-    "リード適合の注意": "リードの組合せは BIOTRONIK ProMRI テクニカルマニュアル（CE版）の適合表に基づく。国内承認の範囲と一致するかは要確認。Amvia Sky / Acticor Sky 世代は同マニュアルの改訂に未収載"
+    "適合リード出典": "国内添付文書（バイオトロニックジャパン）の「本品と組み合わせてMRI対応が確認されているリード」（アムヴィア Sky HF-T 30500BZX00069000／エヴィティ 8 HF-T ProMRI 22900BZX00079000／エヴィティ 8 HF-T QP ProMRI 22900BZX00078000）",
+    "資料の格付け": "国内一次資料",
+    "心房リードなしの扱い": "RAポートに心房リードを接続せず BS IS-1 ブラインドプラグを使用した場合もMRI対応"
    }
   },
   {
@@ -5517,8 +5135,10 @@
     "遺残リード": "不可（アダプタ等のMRI非対応品も体内留置不可）",
     "出典": "JADIA 撮像条件表 MRI_Search_List_BIO.pdf（2026-02-01現在）",
     "適合リード出典": "BIOTRONIK ProMRI MR conditional device systems Technical Manual 371712 Rev.CM",
-    "リード適合の注意": "リードの組合せは BIOTRONIK ProMRI テクニカルマニュアル（CE版）の適合表に基づく。国内承認の範囲と一致するかは要確認。Amvia Sky / Acticor Sky 世代は同マニュアルの改訂に未収載"
-   }
+    "リード適合の注意": "リードの組合せは BIOTRONIK ProMRI テクニカルマニュアル（CE版）に基づく暫定値。国内添付文書がPMDAで公開されていない世代のため未確認。同社の国内添付文書では長さが53/60cm中心に限定される傾向があり、実際の適合範囲はより狭い可能性がある",
+    "資料の格付け": "海外資料に基づく（国内承認範囲は要確認）"
+   },
+   "verify": true
   },
   {
    "id": "BIO-CRTD2",
@@ -5949,8 +5569,10 @@
     "遺残リード": "不可（アダプタ等のMRI非対応品も体内留置不可）",
     "出典": "JADIA 撮像条件表 MRI_Search_List_BIO.pdf（2026-02-01現在）",
     "適合リード出典": "BIOTRONIK ProMRI MR conditional device systems Technical Manual 371712 Rev.CM",
-    "リード適合の注意": "リードの組合せは BIOTRONIK ProMRI テクニカルマニュアル（CE版）の適合表に基づく。国内承認の範囲と一致するかは要確認。Amvia Sky / Acticor Sky 世代は同マニュアルの改訂に未収載"
-   }
+    "リード適合の注意": "リードの組合せは BIOTRONIK ProMRI テクニカルマニュアル（CE版）に基づく暫定値。国内添付文書がPMDAで公開されていない世代のため未確認。同社の国内添付文書では長さが53/60cm中心に限定される傾向があり、実際の適合範囲はより狭い可能性がある",
+    "資料の格付け": "海外資料に基づく（国内承認範囲は要確認）"
+   },
+   "verify": true
   },
   {
    "id": "BIO-CRTD3",
@@ -5965,28 +5587,12 @@
    ],
    "ra": [
     {
-     "model": "Safio S 45",
-     "name": "Safio S 45"
+     "model": "Solia JT 53",
+     "name": "Solia JT 53"
     },
     {
-     "model": "Safio S 53",
-     "name": "Safio S 53"
-    },
-    {
-     "model": "Safio S 60",
-     "name": "Safio S 60"
-    },
-    {
-     "model": "Setrox S 45",
-     "name": "Setrox S 45"
-    },
-    {
-     "model": "Setrox S 53",
-     "name": "Setrox S 53"
-    },
-    {
-     "model": "Setrox S 60",
-     "name": "Setrox S 60"
+     "model": "Siello JT 53",
+     "name": "Siello JT 53"
     },
     {
      "model": "Solia S 45",
@@ -6013,328 +5619,116 @@
      "name": "Siello S 60"
     },
     {
-     "model": "Solia JT 45",
-     "name": "Solia JT 45"
+     "model": "Safio S 53",
+     "name": "Safio S 53"
     },
     {
-     "model": "Solia JT 53",
-     "name": "Solia JT 53"
+     "model": "Setrox S 53",
+     "name": "Setrox S 53"
     },
     {
-     "model": "Siello JT 45",
-     "name": "Siello JT 45"
+     "model": "Dextrus Model 4136",
+     "name": "Dextrus Model 4136"
     },
     {
-     "model": "Siello JT 53",
-     "name": "Siello JT 53"
-    },
-    {
-     "model": "Blind plug BS IS-1",
-     "name": "Blind plug BS IS-1"
+     "model": "BS IS-1 ブラインドプラグ",
+     "name": "BS IS-1 ブラインドプラグ"
     }
    ],
    "rv": [
     {
-     "model": "Linox smart ProMRI S 65",
-     "name": "Linox smart ProMRI S 65"
-    },
-    {
-     "model": "Linox smart ProMRI S 75",
-     "name": "Linox smart ProMRI S 75"
-    },
-    {
-     "model": "Linox smart ProMRI SD 65/16",
-     "name": "Linox smart ProMRI SD 65/16"
-    },
-    {
-     "model": "Linox smart ProMRI SD 65/18",
-     "name": "Linox smart ProMRI SD 65/18"
-    },
-    {
-     "model": "Linox smart ProMRI SD 75/18",
-     "name": "Linox smart ProMRI SD 75/18"
-    },
-    {
-     "model": "Linox smart ProMRI S DX 65/15",
-     "name": "Linox smart ProMRI S DX 65/15"
-    },
-    {
-     "model": "Linox smart ProMRI S DX 65/17",
-     "name": "Linox smart ProMRI S DX 65/17"
-    },
-    {
-     "model": "Protego DF-1 ProMRI S 65",
-     "name": "Protego DF-1 ProMRI S 65"
-    },
-    {
-     "model": "Protego DF-1 ProMRI S 75",
-     "name": "Protego DF-1 ProMRI S 75"
-    },
-    {
-     "model": "Protego DF-1 ProMRI SD 65/16",
-     "name": "Protego DF-1 ProMRI SD 65/16"
-    },
-    {
-     "model": "Protego DF-1 ProMRI SD 65/18",
-     "name": "Protego DF-1 ProMRI SD 65/18"
-    },
-    {
-     "model": "Protego DF-1 ProMRI SD 75/18",
-     "name": "Protego DF-1 ProMRI SD 75/18"
-    },
-    {
-     "model": "Protego DF-1 ProMRI S DX 65/15",
-     "name": "Protego DF-1 ProMRI S DX 65/15"
-    },
-    {
-     "model": "Protego DF-1 ProMRI S DX 65/17",
-     "name": "Protego DF-1 ProMRI S DX 65/17"
-    },
-    {
-     "model": "Plexa ProMRI DF-1 S 60",
-     "name": "Plexa ProMRI DF-1 S 60"
-    },
-    {
      "model": "Plexa ProMRI DF-1 S 65",
      "name": "Plexa ProMRI DF-1 S 65"
-    },
-    {
-     "model": "Plexa ProMRI DF-1 S 75",
-     "name": "Plexa ProMRI DF-1 S 75"
-    },
-    {
-     "model": "Plexa ProMRI DF-1 SD 60/16",
-     "name": "Plexa ProMRI DF-1 SD 60/16"
-    },
-    {
-     "model": "Plexa ProMRI DF-1 SD 65/16",
-     "name": "Plexa ProMRI DF-1 SD 65/16"
     },
     {
      "model": "Plexa ProMRI DF-1 SD 65/18",
      "name": "Plexa ProMRI DF-1 SD 65/18"
     },
     {
-     "model": "Plexa ProMRI DF-1 SD 75/18",
-     "name": "Plexa ProMRI DF-1 SD 75/18"
-    },
-    {
      "model": "Plexa ProMRI DF-1 S DX 65/15",
      "name": "Plexa ProMRI DF-1 S DX 65/15"
     },
     {
-     "model": "Plexa ProMRI DF-1 S DX 65/17",
-     "name": "Plexa ProMRI DF-1 S DX 65/17"
+     "model": "Linox Smart ProMRI S 65",
+     "name": "Linox Smart ProMRI S 65"
     },
     {
-     "model": "Linox smart ProMRI DF4 SD 65/16",
-     "name": "Linox smart ProMRI DF4 SD 65/16"
+     "model": "Linox Smart ProMRI SD 65/18",
+     "name": "Linox Smart ProMRI SD 65/18"
     },
     {
-     "model": "Linox smart ProMRI DF4 SD 65/18",
-     "name": "Linox smart ProMRI DF4 SD 65/18"
+     "model": "Linox Smart ProMRI S DX 65/15",
+     "name": "Linox Smart ProMRI S DX 65/15"
     },
     {
-     "model": "Linox smart ProMRI DF4 SD 75/18",
-     "name": "Linox smart ProMRI DF4 SD 75/18"
+     "model": "Linox Smart S 65",
+     "name": "Linox Smart S 65"
     },
     {
-     "model": "Protego ProMRI S 65",
-     "name": "Protego ProMRI S 65"
+     "model": "Linox Smart S 75",
+     "name": "Linox Smart S 75"
     },
     {
-     "model": "Protego ProMRI S 75",
-     "name": "Protego ProMRI S 75"
+     "model": "Linox Smart SD 65/18",
+     "name": "Linox Smart SD 65/18"
     },
     {
-     "model": "Protego ProMRI SD 65/16",
-     "name": "Protego ProMRI SD 65/16"
+     "model": "Linox Smart SD 75/18",
+     "name": "Linox Smart SD 75/18"
     },
     {
-     "model": "Protego ProMRI SD 65/18",
-     "name": "Protego ProMRI SD 65/18"
+     "model": "Linox Smart S DX 65/15",
+     "name": "Linox Smart S DX 65/15"
     },
     {
-     "model": "Protego ProMRI SD 75/18",
-     "name": "Protego ProMRI SD 75/18"
-    },
-    {
-     "model": "Plexa ProMRI S 60",
-     "name": "Plexa ProMRI S 60"
-    },
-    {
-     "model": "Plexa ProMRI S 65",
-     "name": "Plexa ProMRI S 65"
-    },
-    {
-     "model": "Plexa ProMRI S 75",
-     "name": "Plexa ProMRI S 75"
-    },
-    {
-     "model": "Plexa ProMRI SD 60/16",
-     "name": "Plexa ProMRI SD 60/16"
-    },
-    {
-     "model": "Plexa ProMRI SD 65/16",
-     "name": "Plexa ProMRI SD 65/16"
-    },
-    {
-     "model": "Plexa ProMRI SD 65/18",
-     "name": "Plexa ProMRI SD 65/18"
-    },
-    {
-     "model": "Plexa ProMRI SD 75/18",
-     "name": "Plexa ProMRI SD 75/18"
-    },
-    {
-     "model": "Plexa ProMRI S DX 65/15",
-     "name": "Plexa ProMRI S DX 65/15"
-    },
-    {
-     "model": "Plexa ProMRI S DX 65/17",
-     "name": "Plexa ProMRI S DX 65/17"
-    },
-    {
-     "model": "Pamira S 60",
-     "name": "Pamira S 60"
-    },
-    {
-     "model": "Pamira S 65",
-     "name": "Pamira S 65"
-    },
-    {
-     "model": "Pamira S 75",
-     "name": "Pamira S 75"
-    },
-    {
-     "model": "Pamira SD 60/16",
-     "name": "Pamira SD 60/16"
-    },
-    {
-     "model": "Pamira SD 65/16",
-     "name": "Pamira SD 65/16"
-    },
-    {
-     "model": "Pamira SD 65/18",
-     "name": "Pamira SD 65/18"
-    },
-    {
-     "model": "Pamira SD 75/18",
-     "name": "Pamira SD 75/18"
-    },
-    {
-     "model": "Pamira S DX 65/15",
-     "name": "Pamira S DX 65/15"
-    },
-    {
-     "model": "Pamira S DX 65/17",
-     "name": "Pamira S DX 65/17"
-    },
-    {
-     "model": "Blind plug BS DF-1",
-     "name": "Blind plug BS DF-1"
+     "model": "DF-1 ブラインドプラグ",
+     "name": "DF-1 ブラインドプラグ"
     }
    ],
    "lv": [
     {
-     "model": "Corox ProMRI OTW BP 75",
-     "name": "Corox ProMRI OTW BP 75"
+     "model": "Sentus ProMRI OTW QP L-85",
+     "name": "Sentus ProMRI OTW QP L-85"
     },
     {
-     "model": "Corox ProMRI OTW BP 85",
-     "name": "Corox ProMRI OTW BP 85"
+     "model": "Sentus ProMRI OTW QP L-85/49",
+     "name": "Sentus ProMRI OTW QP L-85/49"
     },
     {
-     "model": "Corox ProMRI OTW-S BP 75",
-     "name": "Corox ProMRI OTW-S BP 75"
+     "model": "Sentus ProMRI OTW QP S-85/49",
+     "name": "Sentus ProMRI OTW QP S-85/49"
     },
     {
-     "model": "Corox ProMRI OTW-S BP 85",
-     "name": "Corox ProMRI OTW-S BP 85"
+     "model": "Sentus OTW QP L-85",
+     "name": "Sentus OTW QP L-85"
     },
     {
-     "model": "Corox ProMRI OTW-L BP 75",
-     "name": "Corox ProMRI OTW-L BP 75"
+     "model": "Corox ProMRI OTW 85-BP",
+     "name": "Corox ProMRI OTW 85-BP"
     },
     {
-     "model": "Corox ProMRI OTW-L BP 85",
-     "name": "Corox ProMRI OTW-L BP 85"
+     "model": "Corox ProMRI OTW-S 85-BP",
+     "name": "Corox ProMRI OTW-S 85-BP"
     },
     {
-     "model": "Sentus ProMRI OTW BP L 75",
-     "name": "Sentus ProMRI OTW BP L 75"
+     "model": "Corox ProMRI OTW-L 85-BP",
+     "name": "Corox ProMRI OTW-L 85-BP"
     },
     {
-     "model": "Sentus ProMRI OTW BP L 85",
-     "name": "Sentus ProMRI OTW BP L 85"
+     "model": "Sentus ProMRI OTW BP L-85",
+     "name": "Sentus ProMRI OTW BP L-85"
     },
     {
-     "model": "Sentus ProMRI OTW BP L 95",
-     "name": "Sentus ProMRI OTW BP L 95"
+     "model": "Corox OTW 85-BP",
+     "name": "Corox OTW 85-BP"
     },
     {
-     "model": "Sentus ProMRI OTW BP S 75",
-     "name": "Sentus ProMRI OTW BP S 75"
+     "model": "Corox OTW-S 85-BP",
+     "name": "Corox OTW-S 85-BP"
     },
     {
-     "model": "Sentus ProMRI OTW BP S 85",
-     "name": "Sentus ProMRI OTW BP S 85"
-    },
-    {
-     "model": "Sentus ProMRI OTW BP S 95",
-     "name": "Sentus ProMRI OTW BP S 95"
-    },
-    {
-     "model": "Sentus ProMRI OTW QP L 75",
-     "name": "Sentus ProMRI OTW QP L 75"
-    },
-    {
-     "model": "Sentus ProMRI OTW QP L 85",
-     "name": "Sentus ProMRI OTW QP L 85"
-    },
-    {
-     "model": "Sentus ProMRI OTW QP L 95",
-     "name": "Sentus ProMRI OTW QP L 95"
-    },
-    {
-     "model": "Sentus ProMRI OTW QP S 75",
-     "name": "Sentus ProMRI OTW QP S 75"
-    },
-    {
-     "model": "Sentus ProMRI OTW QP S 85",
-     "name": "Sentus ProMRI OTW QP S 85"
-    },
-    {
-     "model": "Sentus ProMRI OTW QP S 95",
-     "name": "Sentus ProMRI OTW QP S 95"
-    },
-    {
-     "model": "Sentus ProMRI OTW QP L-XX/49 75",
-     "name": "Sentus ProMRI OTW QP L-XX/49 75"
-    },
-    {
-     "model": "Sentus ProMRI OTW QP L-XX/49 85",
-     "name": "Sentus ProMRI OTW QP L-XX/49 85"
-    },
-    {
-     "model": "Sentus ProMRI OTW QP L-XX/49 95",
-     "name": "Sentus ProMRI OTW QP L-XX/49 95"
-    },
-    {
-     "model": "Sentus ProMRI OTW QP S-XX/49 75",
-     "name": "Sentus ProMRI OTW QP S-XX/49 75"
-    },
-    {
-     "model": "Sentus ProMRI OTW QP S-XX/49 85",
-     "name": "Sentus ProMRI OTW QP S-XX/49 85"
-    },
-    {
-     "model": "Sentus ProMRI OTW QP S-XX/49 95",
-     "name": "Sentus ProMRI OTW QP S-XX/49 95"
-    },
-    {
-     "model": "Blind plug BS IS4",
-     "name": "Blind plug BS IS4"
+     "model": "Corox OTW-L 85-BP",
+     "name": "Corox OTW-L 85-BP"
     }
    ],
    "leadfree": true,
@@ -6346,13 +5740,13 @@
     "リードの組合せ": "自社製のProMRI対応リードに限る（型番は添付文書で確認）",
     "遺残リード・アダプタ": "MRI非対応品の体内留置は不可",
     "植込み部位": "胸部",
-    "リード植込み後": "6週間を経過すること",
+    "リード植込み後": "6週間を経過していること（42日目は撮像不可）",
     "ペーシング閾値": "2.0V(0.4ms)以下（Bipolar）　※左室の閾値条件なし",
     "リードインピーダンス": "200〜1,500Ω（Bipolar）",
     "電池状態": "ERIまたはEOSではないこと",
     "横隔膜刺激": "条件なし",
     "MRIモード": "MRI専用モードへの設定必須",
-    "MR装置": "トンネル型",
+    "MR装置": "1.5T または 3.0T の円筒型ボア装置",
     "傾斜磁場スルーレート": "200T/m/s以下（1軸）",
     "局所送受信コイル": "胸部には使用しないこと",
     "SAR": "頭部 ≦3.2W/kg、全身 ≦2.0W/kg（通常操作モード）",
@@ -6378,8 +5772,10 @@
     "遺残リード": "不可（アダプタ等のMRI非対応品も体内留置不可）",
     "適用条件": "上記の身長・体温・アイソセンタ・撮像時間・体位の制限は3.0T撮像時のみ。1.5T撮像時はいずれも条件なし",
     "出典": "JADIA 撮像条件表 MRI_Search_List_BIO.pdf（2026-02-01現在）",
-    "適合リード出典": "BIOTRONIK ProMRI MR conditional device systems Technical Manual 371712 Rev.CM",
-    "リード適合の注意": "リードの組合せは BIOTRONIK ProMRI テクニカルマニュアル（CE版）の適合表に基づく。国内承認の範囲と一致するかは要確認。Amvia Sky / Acticor Sky 世代は同マニュアルの改訂に未収載"
+    "適合リード出典": "国内添付文書 イリヴィア Neo 7 ICD ProMRI 30100BZX00067000／イリヴィア Neo 7 CRT-D ProMRI 30100BZX00066000",
+    "資料の格付け": "国内一次資料",
+    "心房リードなしの扱い": "RAポートに心房リードを接続せず BS IS-1 ブラインドプラグを使用した場合もMRI対応",
+    "シングルコイル選択時": "シングルコイルのリードを選択した場合、DF-1 SVCポートにDF-1ブラインドプラグを使用することになるが、この場合もMRI対応となる"
    }
   },
   {
@@ -6403,28 +5799,12 @@
    ],
    "ra": [
     {
-     "model": "Safio S 45",
-     "name": "Safio S 45"
+     "model": "Solia JT 53",
+     "name": "Solia JT 53"
     },
     {
-     "model": "Safio S 53",
-     "name": "Safio S 53"
-    },
-    {
-     "model": "Safio S 60",
-     "name": "Safio S 60"
-    },
-    {
-     "model": "Setrox S 45",
-     "name": "Setrox S 45"
-    },
-    {
-     "model": "Setrox S 53",
-     "name": "Setrox S 53"
-    },
-    {
-     "model": "Setrox S 60",
-     "name": "Setrox S 60"
+     "model": "Siello JT 53",
+     "name": "Siello JT 53"
     },
     {
      "model": "Solia S 45",
@@ -6451,328 +5831,96 @@
      "name": "Siello S 60"
     },
     {
-     "model": "Solia JT 45",
-     "name": "Solia JT 45"
+     "model": "Safio S 53",
+     "name": "Safio S 53"
     },
     {
-     "model": "Solia JT 53",
-     "name": "Solia JT 53"
+     "model": "Setrox S 53",
+     "name": "Setrox S 53"
     },
     {
-     "model": "Siello JT 45",
-     "name": "Siello JT 45"
+     "model": "Dextrus Model 4136",
+     "name": "Dextrus Model 4136"
     },
     {
-     "model": "Siello JT 53",
-     "name": "Siello JT 53"
-    },
-    {
-     "model": "Blind plug BS IS-1",
-     "name": "Blind plug BS IS-1"
+     "model": "BS IS-1 ブラインドプラグ",
+     "name": "BS IS-1 ブラインドプラグ"
     }
    ],
    "rv": [
     {
-     "model": "Linox smart ProMRI S 65",
-     "name": "Linox smart ProMRI S 65"
-    },
-    {
-     "model": "Linox smart ProMRI S 75",
-     "name": "Linox smart ProMRI S 75"
-    },
-    {
-     "model": "Linox smart ProMRI SD 65/16",
-     "name": "Linox smart ProMRI SD 65/16"
-    },
-    {
-     "model": "Linox smart ProMRI SD 65/18",
-     "name": "Linox smart ProMRI SD 65/18"
-    },
-    {
-     "model": "Linox smart ProMRI SD 75/18",
-     "name": "Linox smart ProMRI SD 75/18"
-    },
-    {
-     "model": "Linox smart ProMRI S DX 65/15",
-     "name": "Linox smart ProMRI S DX 65/15"
-    },
-    {
-     "model": "Linox smart ProMRI S DX 65/17",
-     "name": "Linox smart ProMRI S DX 65/17"
-    },
-    {
-     "model": "Protego DF-1 ProMRI S 65",
-     "name": "Protego DF-1 ProMRI S 65"
-    },
-    {
-     "model": "Protego DF-1 ProMRI S 75",
-     "name": "Protego DF-1 ProMRI S 75"
-    },
-    {
-     "model": "Protego DF-1 ProMRI SD 65/16",
-     "name": "Protego DF-1 ProMRI SD 65/16"
-    },
-    {
-     "model": "Protego DF-1 ProMRI SD 65/18",
-     "name": "Protego DF-1 ProMRI SD 65/18"
-    },
-    {
-     "model": "Protego DF-1 ProMRI SD 75/18",
-     "name": "Protego DF-1 ProMRI SD 75/18"
-    },
-    {
-     "model": "Protego DF-1 ProMRI S DX 65/15",
-     "name": "Protego DF-1 ProMRI S DX 65/15"
-    },
-    {
-     "model": "Protego DF-1 ProMRI S DX 65/17",
-     "name": "Protego DF-1 ProMRI S DX 65/17"
-    },
-    {
-     "model": "Plexa ProMRI DF-1 S 60",
-     "name": "Plexa ProMRI DF-1 S 60"
-    },
-    {
-     "model": "Plexa ProMRI DF-1 S 65",
-     "name": "Plexa ProMRI DF-1 S 65"
-    },
-    {
-     "model": "Plexa ProMRI DF-1 S 75",
-     "name": "Plexa ProMRI DF-1 S 75"
-    },
-    {
-     "model": "Plexa ProMRI DF-1 SD 60/16",
-     "name": "Plexa ProMRI DF-1 SD 60/16"
-    },
-    {
-     "model": "Plexa ProMRI DF-1 SD 65/16",
-     "name": "Plexa ProMRI DF-1 SD 65/16"
-    },
-    {
-     "model": "Plexa ProMRI DF-1 SD 65/18",
-     "name": "Plexa ProMRI DF-1 SD 65/18"
-    },
-    {
-     "model": "Plexa ProMRI DF-1 SD 75/18",
-     "name": "Plexa ProMRI DF-1 SD 75/18"
-    },
-    {
-     "model": "Plexa ProMRI DF-1 S DX 65/15",
-     "name": "Plexa ProMRI DF-1 S DX 65/15"
-    },
-    {
-     "model": "Plexa ProMRI DF-1 S DX 65/17",
-     "name": "Plexa ProMRI DF-1 S DX 65/17"
-    },
-    {
-     "model": "Linox smart ProMRI DF4 SD 65/16",
-     "name": "Linox smart ProMRI DF4 SD 65/16"
-    },
-    {
-     "model": "Linox smart ProMRI DF4 SD 65/18",
-     "name": "Linox smart ProMRI DF4 SD 65/18"
-    },
-    {
-     "model": "Linox smart ProMRI DF4 SD 75/18",
-     "name": "Linox smart ProMRI DF4 SD 75/18"
-    },
-    {
-     "model": "Protego ProMRI S 65",
-     "name": "Protego ProMRI S 65"
-    },
-    {
-     "model": "Protego ProMRI S 75",
-     "name": "Protego ProMRI S 75"
-    },
-    {
-     "model": "Protego ProMRI SD 65/16",
-     "name": "Protego ProMRI SD 65/16"
-    },
-    {
-     "model": "Protego ProMRI SD 65/18",
-     "name": "Protego ProMRI SD 65/18"
-    },
-    {
-     "model": "Protego ProMRI SD 75/18",
-     "name": "Protego ProMRI SD 75/18"
-    },
-    {
-     "model": "Plexa ProMRI S 60",
-     "name": "Plexa ProMRI S 60"
-    },
-    {
-     "model": "Plexa ProMRI S 65",
-     "name": "Plexa ProMRI S 65"
-    },
-    {
-     "model": "Plexa ProMRI S 75",
-     "name": "Plexa ProMRI S 75"
-    },
-    {
-     "model": "Plexa ProMRI SD 60/16",
-     "name": "Plexa ProMRI SD 60/16"
-    },
-    {
-     "model": "Plexa ProMRI SD 65/16",
-     "name": "Plexa ProMRI SD 65/16"
-    },
-    {
-     "model": "Plexa ProMRI SD 65/18",
-     "name": "Plexa ProMRI SD 65/18"
-    },
-    {
-     "model": "Plexa ProMRI SD 75/18",
-     "name": "Plexa ProMRI SD 75/18"
-    },
-    {
-     "model": "Plexa ProMRI S DX 65/15",
-     "name": "Plexa ProMRI S DX 65/15"
-    },
-    {
-     "model": "Plexa ProMRI S DX 65/17",
-     "name": "Plexa ProMRI S DX 65/17"
-    },
-    {
-     "model": "Pamira S 60",
-     "name": "Pamira S 60"
-    },
-    {
      "model": "Pamira S 65",
      "name": "Pamira S 65"
-    },
-    {
-     "model": "Pamira S 75",
-     "name": "Pamira S 75"
-    },
-    {
-     "model": "Pamira SD 60/16",
-     "name": "Pamira SD 60/16"
-    },
-    {
-     "model": "Pamira SD 65/16",
-     "name": "Pamira SD 65/16"
     },
     {
      "model": "Pamira SD 65/18",
      "name": "Pamira SD 65/18"
     },
     {
-     "model": "Pamira SD 75/18",
-     "name": "Pamira SD 75/18"
+     "model": "Plexa ProMRI S 65",
+     "name": "Plexa ProMRI S 65"
     },
     {
-     "model": "Pamira S DX 65/15",
-     "name": "Pamira S DX 65/15"
+     "model": "Plexa ProMRI SD 65/18",
+     "name": "Plexa ProMRI SD 65/18"
     },
     {
-     "model": "Pamira S DX 65/17",
-     "name": "Pamira S DX 65/17"
+     "model": "Protego ProMRI S 65",
+     "name": "Protego ProMRI S 65"
     },
     {
-     "model": "Blind plug BS DF-1",
-     "name": "Blind plug BS DF-1"
+     "model": "Protego ProMRI SD 65/18",
+     "name": "Protego ProMRI SD 65/18"
+    },
+    {
+     "model": "Protego SD 65/18",
+     "name": "Protego SD 65/18"
     }
    ],
    "lv": [
     {
-     "model": "Corox ProMRI OTW BP 75",
-     "name": "Corox ProMRI OTW BP 75"
+     "model": "Sentus ProMRI OTW QP L-85",
+     "name": "Sentus ProMRI OTW QP L-85"
     },
     {
-     "model": "Corox ProMRI OTW BP 85",
-     "name": "Corox ProMRI OTW BP 85"
+     "model": "Sentus ProMRI OTW QP L-85/49",
+     "name": "Sentus ProMRI OTW QP L-85/49"
     },
     {
-     "model": "Corox ProMRI OTW-S BP 75",
-     "name": "Corox ProMRI OTW-S BP 75"
+     "model": "Sentus ProMRI OTW QP S-85/49",
+     "name": "Sentus ProMRI OTW QP S-85/49"
     },
     {
-     "model": "Corox ProMRI OTW-S BP 85",
-     "name": "Corox ProMRI OTW-S BP 85"
+     "model": "Sentus OTW QP L-85",
+     "name": "Sentus OTW QP L-85"
     },
     {
-     "model": "Corox ProMRI OTW-L BP 75",
-     "name": "Corox ProMRI OTW-L BP 75"
+     "model": "Corox ProMRI OTW 85-BP",
+     "name": "Corox ProMRI OTW 85-BP"
     },
     {
-     "model": "Corox ProMRI OTW-L BP 85",
-     "name": "Corox ProMRI OTW-L BP 85"
+     "model": "Corox ProMRI OTW-S 85-BP",
+     "name": "Corox ProMRI OTW-S 85-BP"
     },
     {
-     "model": "Sentus ProMRI OTW BP L 75",
-     "name": "Sentus ProMRI OTW BP L 75"
+     "model": "Corox ProMRI OTW-L 85-BP",
+     "name": "Corox ProMRI OTW-L 85-BP"
     },
     {
-     "model": "Sentus ProMRI OTW BP L 85",
-     "name": "Sentus ProMRI OTW BP L 85"
+     "model": "Sentus ProMRI OTW BP L-85",
+     "name": "Sentus ProMRI OTW BP L-85"
     },
     {
-     "model": "Sentus ProMRI OTW BP L 95",
-     "name": "Sentus ProMRI OTW BP L 95"
+     "model": "Corox OTW 85-BP",
+     "name": "Corox OTW 85-BP"
     },
     {
-     "model": "Sentus ProMRI OTW BP S 75",
-     "name": "Sentus ProMRI OTW BP S 75"
+     "model": "Corox OTW-S 85-BP",
+     "name": "Corox OTW-S 85-BP"
     },
     {
-     "model": "Sentus ProMRI OTW BP S 85",
-     "name": "Sentus ProMRI OTW BP S 85"
-    },
-    {
-     "model": "Sentus ProMRI OTW BP S 95",
-     "name": "Sentus ProMRI OTW BP S 95"
-    },
-    {
-     "model": "Sentus ProMRI OTW QP L 75",
-     "name": "Sentus ProMRI OTW QP L 75"
-    },
-    {
-     "model": "Sentus ProMRI OTW QP L 85",
-     "name": "Sentus ProMRI OTW QP L 85"
-    },
-    {
-     "model": "Sentus ProMRI OTW QP L 95",
-     "name": "Sentus ProMRI OTW QP L 95"
-    },
-    {
-     "model": "Sentus ProMRI OTW QP S 75",
-     "name": "Sentus ProMRI OTW QP S 75"
-    },
-    {
-     "model": "Sentus ProMRI OTW QP S 85",
-     "name": "Sentus ProMRI OTW QP S 85"
-    },
-    {
-     "model": "Sentus ProMRI OTW QP S 95",
-     "name": "Sentus ProMRI OTW QP S 95"
-    },
-    {
-     "model": "Sentus ProMRI OTW QP L-XX/49 75",
-     "name": "Sentus ProMRI OTW QP L-XX/49 75"
-    },
-    {
-     "model": "Sentus ProMRI OTW QP L-XX/49 85",
-     "name": "Sentus ProMRI OTW QP L-XX/49 85"
-    },
-    {
-     "model": "Sentus ProMRI OTW QP L-XX/49 95",
-     "name": "Sentus ProMRI OTW QP L-XX/49 95"
-    },
-    {
-     "model": "Sentus ProMRI OTW QP S-XX/49 75",
-     "name": "Sentus ProMRI OTW QP S-XX/49 75"
-    },
-    {
-     "model": "Sentus ProMRI OTW QP S-XX/49 85",
-     "name": "Sentus ProMRI OTW QP S-XX/49 85"
-    },
-    {
-     "model": "Sentus ProMRI OTW QP S-XX/49 95",
-     "name": "Sentus ProMRI OTW QP S-XX/49 95"
-    },
-    {
-     "model": "Blind plug BS IS4",
-     "name": "Blind plug BS IS4"
+     "model": "Corox OTW-L 85-BP",
+     "name": "Corox OTW-L 85-BP"
     }
    ],
    "leadfree": true,
@@ -6784,13 +5932,13 @@
     "リードの組合せ": "自社製のProMRI対応リードに限る（型番は添付文書で確認）",
     "遺残リード・アダプタ": "MRI非対応品の体内留置は不可",
     "植込み部位": "胸部",
-    "リード植込み後": "6週間を経過すること",
+    "リード植込み後": "6週間を経過していること（42日目は撮像不可）",
     "ペーシング閾値": "2.0V(0.4ms)以下（Bipolar）　※左室の閾値条件なし",
     "リードインピーダンス": "200〜1,500Ω（Bipolar）",
     "電池状態": "ERIまたはEOSではないこと",
     "横隔膜刺激": "条件なし",
     "MRIモード": "MRI専用モードへの設定必須",
-    "MR装置": "トンネル型",
+    "MR装置": "1.5T または 3.0T の円筒型ボア装置",
     "傾斜磁場スルーレート": "200T/m/s以下（1軸）",
     "局所送受信コイル": "胸部には使用しないこと",
     "SAR": "頭部 ≦3.2W/kg、全身 ≦2.0W/kg（通常操作モード）",
@@ -6815,8 +5963,9 @@
     "ペーシングリードの組合せ": "下記の適合リードから選択（本表に無い組合せはMRI非対応として扱うこと）",
     "遺残リード": "不可（アダプタ等のMRI非対応品も体内留置不可）",
     "出典": "JADIA 撮像条件表 MRI_Search_List_BIO.pdf（2026-02-01現在）",
-    "適合リード出典": "BIOTRONIK ProMRI MR conditional device systems Technical Manual 371712 Rev.CM",
-    "リード適合の注意": "リードの組合せは BIOTRONIK ProMRI テクニカルマニュアル（CE版）の適合表に基づく。国内承認の範囲と一致するかは要確認。Amvia Sky / Acticor Sky 世代は同マニュアルの改訂に未収載"
+    "適合リード出典": "国内添付文書（バイオトロニックジャパン）の「本品と組み合わせてMRI対応が確認されているリード」（アクティコア Sky CRT-D 30700BZX00306000／リヴァコア 7 CRT-D ProMRI 30500BZX00218000）",
+    "資料の格付け": "国内一次資料",
+    "心房リードなしの扱い": "RAポートに心房リードを接続せず BS IS-1 ブラインドプラグを使用した場合もMRI対応"
    }
   },
   {
@@ -6832,34 +5981,26 @@
    ],
    "ra": [
     {
-     "model": "7731 / 7732 / 7735 / 7736",
-     "name": "INGEVITY MRI（タインド固定）"
+     "model": "INGEVITY（7731 / 7732 / 7735 / 7736 / 7740 / 7741 / 7742）",
+     "name": "INGEVITY（7731 / 7732 / 7735 / 7736 / 7740 / 7741 / 7742）"
     },
     {
-     "model": "7740 / 7741 / 7742",
-     "name": "INGEVITY MRI（スクリュー固定）"
+     "model": "INGEVITY AFx（7840 / 7841 / 7842）",
+     "name": "INGEVITY AFx（7840 / 7841 / 7842）"
     },
     {
-     "model": "7840 / 7841 / 7842",
-     "name": "INGEVITY+（スクリュー固定）"
-    },
-    {
-     "model": "7145",
+     "model": "IS-1 リード接続口プラグ",
      "name": "IS-1 リード接続口プラグ"
     }
    ],
    "rv": [
     {
-     "model": "7731 / 7732 / 7735 / 7736",
-     "name": "INGEVITY MRI（タインド固定）"
+     "model": "INGEVITY（7731 / 7732 / 7735 / 7736 / 7740 / 7741 / 7742）",
+     "name": "INGEVITY（7731 / 7732 / 7735 / 7736 / 7740 / 7741 / 7742）"
     },
     {
-     "model": "7740 / 7741 / 7742",
-     "name": "INGEVITY MRI（スクリュー固定）"
-    },
-    {
-     "model": "7840 / 7841 / 7842",
-     "name": "INGEVITY+（スクリュー固定）"
+     "model": "INGEVITY AFx（7840 / 7841 / 7842）",
+     "name": "INGEVITY AFx（7840 / 7841 / 7842）"
     }
    ],
    "lv": [],
@@ -6868,32 +6009,23 @@
    ],
    "cond": {
     "ガントリ": "水平磁場方式・水素原子核（プロトン）・トンネル型ガントリ",
-    "最大空間勾配磁場": "50T/m（5,000G/cm）を超えないこと",
+    "最大空間勾配磁場": "50T/m（500G/cm）ペースメーカシステム植込み部位",
     "傾斜磁場スルーレート": "一軸あたり 200T/m/s 以下",
-    "植込み後": "植込み・リード再建・外科的変更後、少なくとも6週間経過",
-    "植込み部位": "左または右胸部に限る",
-    "遺残リード": "不可（併用していないリードや植込み機器が体内に残っていないこと）",
-    "リードの状態": "リードの破損やペースメーカ・リードシステムに異常を示す兆候がないこと",
-    "ペーシング閾値": "右心房・右心室とも ≦2.0V",
-    "検査中のモード": "右心房・右心室リードは双極ペーシングにする、またはペーシングをオフ",
-    "MRIモード": "MRI保護モードに設定（できるだけ検査直前に変更）",
-    "体位": "背臥位または腹臥位のみ（側臥位で実施しない）",
-    "ローカルコイル": "集積ボディコイル内の配置に制限なし。受信専用コイルは使用可。局所送信／受信コイルおよび局所送信コイルと植込み機器が重なるように配置しないこと",
-    "体温": "平常値であり、体温調節機能に異常がないこと",
-    "患者監視": "パルスオキシメータまたは心電計（ECG）でモニタリング",
-    "電池": "交換指標（EXPLANT）に達していないこと",
-    "ペーシング自動復帰": "MRI保護タイムアウト（Off / 3 / 6 / 9 / 12 / 24 / 48時間）",
-    "アイソセンタ": "制限なし",
-    "撮像時間": "制限なし（MRI保護タイムアウトの時間内に終えること）",
-    "累積撮像時間": "制限なし",
-    "ホールボディコイル": "制限なし",
-    "ローカル受信コイル": "制限なし",
-    "SAR": "全身 ≦4.0W/kg／頭部 ≦3.2W/kg",
-    "管理操作モード": "通常操作モード または 第1次水準管理操作モード",
     "RF磁場": "64MHz",
-    "適用条件": "心房・心室とも INGEVITY MRI／INGEVITY+ の組合せ。**3.0T装置では使用不可**",
-    "出典": "Boston Scientific IMAGEREADY MR Conditional Pacing System テクニカルガイド 92618933-01A",
-    "確認日": "2026-08-29"
+    "植込み後": "植込み・リード再建・外科的変更後、少なくとも6週間経過",
+    "植込み部位": "左または右胸部",
+    "体位": "背臥位または腹臥位のみ（側臥位で実施しない）",
+    "患者監視": "パルスオキシメータまたは心電計（ECG）でモニタリング",
+    "MRIモード": "MRI保護モードに設定",
+    "遺残リード": "不可",
+    "アイソセンタ": "制限なし",
+    "撮像時間": "制限なし（MRI保護モードのタイムアウト時間内）",
+    "資料の格付け": "国内一次資料",
+    "出典": "インジェニオ MRI 添付文書（承認番号 22500BZX00515000）",
+    "確認日": "2026-08-29",
+    "SAR": "全身 ≦4.0W/kg／頭部 ≦3.2W/kg",
+    "管理操作モード": "通常操作モード および 第一次水準管理操作モード",
+    "適用条件": "心房・心室とも INGEVITY／INGEVITY AFx の組合せ。**1.5T のみ。3.0T装置では使用不可**"
    }
   },
   {
@@ -6909,50 +6041,58 @@
    ],
    "ra": [
     {
-     "model": "4456 / 4457 / 4458 / 4459 / 4479 / 4480",
-     "name": "FINELINE II Sterox"
+     "model": "FINELINE II Sterox（4456 / 4457 / 4458 / 4459 / 4479 / 4480）",
+     "name": "FINELINE II Sterox（4456 / 4457 / 4458 / 4459 / 4479 / 4480）"
     },
     {
-     "model": "4469 / 4470 / 4471 / 4472 / 4473 / 4474",
-     "name": "FINELINE II Sterox EZ"
+     "model": "FINELINE II Sterox EZ（4469 / 4470 / 4471 / 4472 / 4473 / 4474）",
+     "name": "FINELINE II Sterox EZ（4469 / 4470 / 4471 / 4472 / 4473 / 4474）"
     },
     {
-     "model": "7731 / 7732 / 7735 / 7736",
-     "name": "INGEVITY MRI（タインド固定）"
+     "model": "FINELINE II EZ PU",
+     "name": "FINELINE II EZ PU"
     },
     {
-     "model": "7740 / 7741 / 7742",
-     "name": "INGEVITY MRI（スクリュー固定）"
+     "model": "FINELINE II PU",
+     "name": "FINELINE II PU"
     },
     {
-     "model": "7840 / 7841 / 7842",
-     "name": "INGEVITY+（スクリュー固定）"
+     "model": "INGEVITY（7731 / 7732 / 7735 / 7736 / 7740 / 7741 / 7742）",
+     "name": "INGEVITY（7731 / 7732 / 7735 / 7736 / 7740 / 7741 / 7742）"
     },
     {
-     "model": "7145",
+     "model": "INGEVITY AFx（7840 / 7841 / 7842）",
+     "name": "INGEVITY AFx（7840 / 7841 / 7842）"
+    },
+    {
+     "model": "IS-1 リード接続口プラグ",
      "name": "IS-1 リード接続口プラグ"
     }
    ],
    "rv": [
     {
-     "model": "4456 / 4457 / 4458 / 4459 / 4479 / 4480",
-     "name": "FINELINE II Sterox"
+     "model": "FINELINE II Sterox（4456 / 4457 / 4458 / 4459 / 4479 / 4480）",
+     "name": "FINELINE II Sterox（4456 / 4457 / 4458 / 4459 / 4479 / 4480）"
     },
     {
-     "model": "4469 / 4470 / 4471 / 4472 / 4473 / 4474",
-     "name": "FINELINE II Sterox EZ"
+     "model": "FINELINE II Sterox EZ（4469 / 4470 / 4471 / 4472 / 4473 / 4474）",
+     "name": "FINELINE II Sterox EZ（4469 / 4470 / 4471 / 4472 / 4473 / 4474）"
     },
     {
-     "model": "7731 / 7732 / 7735 / 7736",
-     "name": "INGEVITY MRI（タインド固定）"
+     "model": "FINELINE II EZ PU",
+     "name": "FINELINE II EZ PU"
     },
     {
-     "model": "7740 / 7741 / 7742",
-     "name": "INGEVITY MRI（スクリュー固定）"
+     "model": "FINELINE II PU",
+     "name": "FINELINE II PU"
     },
     {
-     "model": "7840 / 7841 / 7842",
-     "name": "INGEVITY+（スクリュー固定）"
+     "model": "INGEVITY（7731 / 7732 / 7735 / 7736 / 7740 / 7741 / 7742）",
+     "name": "INGEVITY（7731 / 7732 / 7735 / 7736 / 7740 / 7741 / 7742）"
+    },
+    {
+     "model": "INGEVITY AFx（7840 / 7841 / 7842）",
+     "name": "INGEVITY AFx（7840 / 7841 / 7842）"
     }
    ],
    "lv": [],
@@ -6961,32 +6101,23 @@
    ],
    "cond": {
     "ガントリ": "水平磁場方式・水素原子核（プロトン）・トンネル型ガントリ",
-    "最大空間勾配磁場": "50T/m（5,000G/cm）を超えないこと",
+    "最大空間勾配磁場": "50T/m（500G/cm）ペースメーカシステム植込み部位",
     "傾斜磁場スルーレート": "一軸あたり 200T/m/s 以下",
-    "植込み後": "植込み・リード再建・外科的変更後、少なくとも6週間経過",
-    "植込み部位": "左または右胸部に限る",
-    "遺残リード": "不可（併用していないリードや植込み機器が体内に残っていないこと）",
-    "リードの状態": "リードの破損やペースメーカ・リードシステムに異常を示す兆候がないこと",
-    "ペーシング閾値": "右心房・右心室とも ≦2.0V",
-    "検査中のモード": "右心房・右心室リードは双極ペーシングにする、またはペーシングをオフ",
-    "MRIモード": "MRI保護モードに設定（できるだけ検査直前に変更）",
-    "体位": "背臥位または腹臥位のみ（側臥位で実施しない）",
-    "ローカルコイル": "集積ボディコイル内の配置に制限なし。受信専用コイルは使用可。局所送信／受信コイルおよび局所送信コイルと植込み機器が重なるように配置しないこと",
-    "体温": "平常値であり、体温調節機能に異常がないこと",
-    "患者監視": "パルスオキシメータまたは心電計（ECG）でモニタリング",
-    "電池": "交換指標（EXPLANT）に達していないこと",
-    "ペーシング自動復帰": "MRI保護タイムアウト（Off / 3 / 6 / 9 / 12 / 24 / 48時間）",
-    "アイソセンタ": "制限なし",
-    "撮像時間": "制限なし（MRI保護タイムアウトの時間内に終えること）",
-    "累積撮像時間": "制限なし",
-    "ホールボディコイル": "制限なし",
-    "ローカル受信コイル": "制限なし",
-    "SAR": "全身 ≦2.0W/kg／頭部 ≦3.2W/kg",
-    "管理操作モード": "通常操作モードのみ",
     "RF磁場": "64MHz",
-    "適用条件": "FINELINE II のみ、または FINELINE II と INGEVITY の併用。**3.0T装置では使用不可**。Screwvine／Petite との組合せは使用不可",
-    "出典": "Boston Scientific IMAGEREADY MR Conditional Pacing System テクニカルガイド 92618933-01A",
-    "確認日": "2026-08-29"
+    "植込み後": "植込み・リード再建・外科的変更後、少なくとも6週間経過",
+    "植込み部位": "左または右胸部",
+    "体位": "背臥位または腹臥位のみ（側臥位で実施しない）",
+    "患者監視": "パルスオキシメータまたは心電計（ECG）でモニタリング",
+    "MRIモード": "MRI保護モードに設定",
+    "遺残リード": "不可",
+    "アイソセンタ": "制限なし",
+    "撮像時間": "制限なし（MRI保護モードのタイムアウト時間内）",
+    "資料の格付け": "国内一次資料",
+    "出典": "インジェニオ MRI 添付文書（承認番号 22500BZX00515000）",
+    "確認日": "2026-08-29",
+    "SAR": "全身 ≦2.0W/kg／頭部 ≦3.2W/kg",
+    "管理操作モード": "通常操作モード",
+    "適用条件": "FINELINE II を含む組合せ。**1.5T のみ。3.0T装置では使用不可**"
    }
   },
   {
@@ -7064,7 +6195,8 @@
     "RF磁場": "1.5T: 64MHz／3.0T: 128MHz",
     "適用条件": "心房・心室とも INGEVITY MRI／INGEVITY+ の組合せ。この組合せのみ全身SAR 4.0W/kg が許容される",
     "出典": "Boston Scientific IMAGEREADY MR Conditional Pacing System テクニカルガイド 92618933-01A",
-    "確認日": "2026-08-29"
+    "確認日": "2026-08-29",
+    "資料の格付け": "海外資料に基づく（国内承認範囲は要確認）"
    }
   },
   {
@@ -7158,7 +6290,8 @@
     "RF磁場": "1.5T: 64MHz／3.0T: 128MHz",
     "適用条件": "FINELINE II のみ、または FINELINE II と INGEVITY の併用。SAR上限は 2.0W/kg",
     "出典": "Boston Scientific IMAGEREADY MR Conditional Pacing System テクニカルガイド 92618933-01A",
-    "確認日": "2026-08-29"
+    "確認日": "2026-08-29",
+    "資料の格付け": "海外資料に基づく（国内承認範囲は要確認）"
    }
   },
   {
@@ -7267,7 +6400,8 @@
     "RF磁場": "64MHz",
     "適用条件": "Screwvine／Petite 単独、またはこれらと FINELINE II／INGEVITY を1本ずつ併用する組合せ。**3.0T装置では使用不可**。Screwvine・Petite はボストン・サイエンティフィック社製品以外のリード",
     "出典": "Boston Scientific IMAGEREADY MR Conditional Pacing System テクニカルガイド 92618933-01A",
-    "確認日": "2026-08-29"
+    "確認日": "2026-08-29",
+    "資料の格付け": "海外資料に基づく（国内承認範囲は要確認）"
    }
   },
   {
@@ -7374,7 +6508,8 @@
     "RF磁場": "1.5T: 64MHz／3.0T: 128MHz",
     "適用条件": "左室は ACUITY X4。右房・右室は INGEVITY／FINELINE II のいずれか。全組合せで通常操作モードのみ",
     "出典": "Boston Scientific IMAGEREADY MR Conditional Pacing System テクニカルガイド 92618933-01A",
-    "確認日": "2026-08-29"
+    "確認日": "2026-08-29",
+    "資料の格付け": "海外資料に基づく（国内承認範囲は要確認）"
    }
   },
   {
@@ -7476,7 +6611,8 @@
     "RF磁場": "1.5T: 64MHz／3.0T: 128MHz",
     "適用条件": "ペースメーカ用リードはJ型モデルのみMRI対応（ファインラインⅡ PU・インジェヴィティ）",
     "出典": "RESONATE ICDシリーズ 添付文書（承認番号 22900BZX00086000）",
-    "確認日": "2026-08-29"
+    "確認日": "2026-08-29",
+    "資料の格付け": "国内一次資料"
    }
   },
   {
@@ -7568,7 +6704,8 @@
     "RF磁場": "64MHz",
     "適用条件": "エンドタック リライアンス系（デュアルコイル／シングルコイル）は1.5Tのみ",
     "出典": "RESONATE ICDシリーズ 添付文書（承認番号 22900BZX00086000）",
-    "確認日": "2026-08-29"
+    "確認日": "2026-08-29",
+    "資料の格付け": "国内一次資料"
    }
   },
   {
@@ -7679,7 +6816,8 @@
     "RF磁場": "1.5T: 64MHz／3.0T: 128MHz",
     "適用条件": "左室はアキュイティ X4。ペースメーカ用リードはJ型モデルのみMRI対応",
     "出典": "RESONATE CRT-Dシリーズ 添付文書（承認番号 22900BZX00087000）",
-    "確認日": "2026-08-29"
+    "確認日": "2026-08-29",
+    "資料の格付け": "国内一次資料"
    }
   },
   {
@@ -7784,7 +6922,8 @@
     "RF磁場": "64MHz",
     "適用条件": "エンドタック リライアンス系、またはアキュイティ スパイラル／イージートラック 2 を用いる場合は1.5Tのみ",
     "出典": "RESONATE CRT-Dシリーズ 添付文書（承認番号 22900BZX00087000）",
-    "確認日": "2026-08-29"
+    "確認日": "2026-08-29",
+    "資料の格付け": "国内一次資料"
    }
   },
   {
@@ -7842,7 +6981,8 @@
     "適用条件": "S-ICDリード（モデル3501）との組合せに限る",
     "注意": "MRI検査後はスピーカーの音圧が永久的に低下する。ビープ音はMRI保護モード解除後も自動でオンに戻らない",
     "出典": "S-ICD パルスジェネレータ 添付文書（承認番号 22700BZX00132000）",
-    "確認日": "2026-08-29"
+    "確認日": "2026-08-29",
+    "資料の格付け": "国内一次資料"
    }
   },
   {
@@ -7886,270 +7026,82 @@
    ],
    "ra": [
     {
-     "model": "7731",
-     "name": "INGEVITY（7731）"
+     "model": "FINELINE II Sterox",
+     "name": "FINELINE II Sterox"
     },
     {
-     "model": "7732",
-     "name": "INGEVITY（7732）"
+     "model": "FINELINE II Sterox EZ",
+     "name": "FINELINE II Sterox EZ"
     },
     {
-     "model": "7735",
-     "name": "INGEVITY（7735）"
+     "model": "FINELINE II EZ PU",
+     "name": "FINELINE II EZ PU"
     },
     {
-     "model": "7736",
-     "name": "INGEVITY（7736）"
+     "model": "FINELINE II PU",
+     "name": "FINELINE II PU"
     },
     {
-     "model": "7740",
-     "name": "INGEVITY AFx（7740）"
+     "model": "INGEVITY",
+     "name": "INGEVITY"
     },
     {
-     "model": "7741",
-     "name": "INGEVITY AFx（7741）"
+     "model": "INGEVITY AFx",
+     "name": "INGEVITY AFx"
     },
     {
-     "model": "7742",
-     "name": "INGEVITY AFx（7742）"
-    },
-    {
-     "model": "7840",
-     "name": "INGEVITY AFx（7840）"
-    },
-    {
-     "model": "7841",
-     "name": "INGEVITY AFx（7841）"
-    },
-    {
-     "model": "7842",
-     "name": "INGEVITY AFx（7842）"
-    },
-    {
-     "model": "4371",
-     "name": "FINELINE II PU（4371）"
-    },
-    {
-     "model": "4372",
-     "name": "FINELINE II PU（4372）"
-    },
-    {
-     "model": "4369",
-     "name": "FINELINE II PU（4369）"
-    },
-    {
-     "model": "4370",
-     "name": "FINELINE II PU（4370）"
-    },
-    {
-     "model": "4456",
-     "name": "FINELINE II PU（4456）"
-    },
-    {
-     "model": "4457",
-     "name": "FINELINE II PU（4457）"
-    },
-    {
-     "model": "4479",
-     "name": "FINELINE II PU（4479）"
-    },
-    {
-     "model": "4480",
-     "name": "FINELINE II PU（4480）"
-    },
-    {
-     "model": "4375",
-     "name": "FINELINE II EZ PU（4375）"
-    },
-    {
-     "model": "4376",
-     "name": "FINELINE II EZ PU（4376）"
-    },
-    {
-     "model": "4377",
-     "name": "FINELINE II EZ PU（4377）"
-    },
-    {
-     "model": "4469",
-     "name": "FINELINE II EZ PU（4469）"
-    },
-    {
-     "model": "4470",
-     "name": "FINELINE II EZ PU（4470）"
-    },
-    {
-     "model": "4471",
-     "name": "FINELINE II EZ PU（4471）"
-    },
-    {
-     "model": "4373",
-     "name": "FINELINE II Sterox（4373）"
-    },
-    {
-     "model": "4374",
-     "name": "FINELINE II Sterox（4374）"
-    },
-    {
-     "model": "4458",
-     "name": "FINELINE II Sterox（4458）"
-    },
-    {
-     "model": "4459",
-     "name": "FINELINE II Sterox（4459）"
-    },
-    {
-     "model": "4378",
-     "name": "FINELINE II Sterox EZ（4378）"
-    },
-    {
-     "model": "4379",
-     "name": "FINELINE II Sterox EZ（4379）"
-    },
-    {
-     "model": "4380",
-     "name": "FINELINE II Sterox EZ（4380）"
-    },
-    {
-     "model": "4472",
-     "name": "FINELINE II Sterox EZ（4472）"
-    },
-    {
-     "model": "4473",
-     "name": "FINELINE II Sterox EZ（4473）"
-    },
-    {
-     "model": "4474",
-     "name": "FINELINE II Sterox EZ（4474）"
+     "model": "IS-1 ポートプラグ",
+     "name": "IS-1 ポートプラグ"
     }
    ],
    "rv": [
     {
-     "model": "0675",
-     "name": "RELIANCE 4-FRONT G AFx（0675）"
+     "model": "RELIANCE 4-FRONT G AFx",
+     "name": "RELIANCE 4-FRONT G AFx"
     },
     {
-     "model": "0676",
-     "name": "RELIANCE 4-FRONT G AFx（0676）"
+     "model": "RELIANCE 4-FRONT SG AFx",
+     "name": "RELIANCE 4-FRONT SG AFx"
     },
     {
-     "model": "0695",
-     "name": "RELIANCE 4-FRONT G AFx（0695）"
+     "model": "RELIANCE 4-FRONT G",
+     "name": "RELIANCE 4-FRONT G"
     },
     {
-     "model": "0696",
-     "name": "RELIANCE 4-FRONT G AFx（0696）"
+     "model": "RELIANCE 4-FRONT SG",
+     "name": "RELIANCE 4-FRONT SG"
     },
     {
-     "model": "0672",
-     "name": "RELIANCE 4-FRONT SG AFx（0672）"
+     "model": "ENDOTAK RELIANCE G AFx DF-4",
+     "name": "ENDOTAK RELIANCE G AFx DF-4"
     },
     {
-     "model": "0673",
-     "name": "RELIANCE 4-FRONT SG AFx（0673）"
+     "model": "ENDOTAK RELIANCE SG AFx DF-4",
+     "name": "ENDOTAK RELIANCE SG AFx DF-4"
     },
     {
-     "model": "0692",
-     "name": "RELIANCE 4-FRONT SG AFx（0692）"
+     "model": "ENDOTAK RELIANCE G DF-4",
+     "name": "ENDOTAK RELIANCE G DF-4"
     },
     {
-     "model": "0693",
-     "name": "RELIANCE 4-FRONT SG AFx（0693）"
+     "model": "ENDOTAK RELIANCE SG DF-4",
+     "name": "ENDOTAK RELIANCE SG DF-4"
     },
     {
-     "model": "0662",
-     "name": "RELIANCE 4-FRONT SG（0662）"
+     "model": "ENDOTAK RELIANCE G Dual Coil",
+     "name": "ENDOTAK RELIANCE G Dual Coil"
     },
     {
-     "model": "0663",
-     "name": "RELIANCE 4-FRONT SG（0663）"
+     "model": "ENDOTAK RELIANCE SG Single Coil",
+     "name": "ENDOTAK RELIANCE SG Single Coil"
     },
     {
-     "model": "0682",
-     "name": "RELIANCE 4-FRONT SG（0682）"
+     "model": "ENDOTAK RELIANCE G AFx Dual Coil",
+     "name": "ENDOTAK RELIANCE G AFx Dual Coil"
     },
     {
-     "model": "0683",
-     "name": "RELIANCE 4-FRONT SG（0683）"
-    },
-    {
-     "model": "0295",
-     "name": "ENDOTAK RELIANCE G AFx DF-4（0295）"
-    },
-    {
-     "model": "0296",
-     "name": "ENDOTAK RELIANCE G AFx DF-4（0296）"
-    },
-    {
-     "model": "0292",
-     "name": "ENDOTAK RELIANCE SG AFx DF-4（0292）"
-    },
-    {
-     "model": "0293",
-     "name": "ENDOTAK RELIANCE SG AFx DF-4（0293）"
-    },
-    {
-     "model": "0285",
-     "name": "ENDOTAK RELIANCE G DF-4（0285）"
-    },
-    {
-     "model": "0286",
-     "name": "ENDOTAK RELIANCE G DF-4（0286）"
-    },
-    {
-     "model": "0282",
-     "name": "ENDOTAK RELIANCE SG DF-4（0282）"
-    },
-    {
-     "model": "0283",
-     "name": "ENDOTAK RELIANCE SG DF-4（0283）"
-    },
-    {
-     "model": "0170",
-     "name": "ENDOTAK RELIANCE SG Single Coil（0170）"
-    },
-    {
-     "model": "0171",
-     "name": "ENDOTAK RELIANCE SG Single Coil（0171）"
-    },
-    {
-     "model": "0174",
-     "name": "ENDOTAK RELIANCE G Dual Coil（0174）"
-    },
-    {
-     "model": "0175",
-     "name": "ENDOTAK RELIANCE G Dual Coil（0175）"
-    },
-    {
-     "model": "0176",
-     "name": "ENDOTAK RELIANCE G Dual Coil（0176）"
-    },
-    {
-     "model": "0177",
-     "name": "ENDOTAK RELIANCE G Dual Coil（0177）"
-    },
-    {
-     "model": "0180",
-     "name": "ENDOTAK RELIANCE SG AFx Single Coil（0180）"
-    },
-    {
-     "model": "0181",
-     "name": "ENDOTAK RELIANCE SG AFx Single Coil（0181）"
-    },
-    {
-     "model": "0184",
-     "name": "ENDOTAK RELIANCE G AFx Dual Coil（0184）"
-    },
-    {
-     "model": "0185",
-     "name": "ENDOTAK RELIANCE G AFx Dual Coil（0185）"
-    },
-    {
-     "model": "0186",
-     "name": "ENDOTAK RELIANCE G AFx Dual Coil（0186）"
-    },
-    {
-     "model": "0187",
-     "name": "ENDOTAK RELIANCE G AFx Dual Coil（0187）"
+     "model": "ENDOTAK RELIANCE SG AFx Single Coil",
+     "name": "ENDOTAK RELIANCE SG AFx Single Coil"
     }
    ],
    "lv": [],
@@ -8157,34 +7109,27 @@
     "1.5T"
    ],
    "cond": {
-    "ガントリ": "水平磁場方式・水素原子核（プロトン）・トンネル型ガントリでのみ使用可",
+    "ガントリ": "水平磁場方式・水素原子核（プロトン）・トンネル型ガントリ",
+    "最大空間勾配磁場": "50T/m",
     "傾斜磁場スルーレート": "一軸あたり 200T/m/s 以下",
-    "植込み後": "6週間以上経過",
-    "植込み部位": "胸部",
-    "遺残リード": "不可",
-    "リードの状態": "リードの破損や、機器およびリードシステムに異常を示す兆候がないこと",
-    "ペーシング閾値": "≦2.0V（Bipolar）／2.0V超のペーシング依存患者は注意（右房・右室）",
-    "体位": "背臥位または腹臥位のみ（側臥位で実施しない）",
-    "ローカルコイル": "植込み部位にコイルを配置しないこと",
-    "MRIモード": "設定必要",
-    "検査中のモード": "DOO / VOO / AOO / Off",
-    "電池": "Battery Capacity Depleted（EOL）でないこと",
-    "患者監視": "パルスオキシメータ・心電計（ECG）",
-    "体外式除細動器": "必須",
-    "体温": "平常値であり、体温調節機能に問題がないこと",
-    "最大空間勾配磁場": "50T/m（5000G/cm）ICD/CRT-Dシステム植込み部位",
     "SAR": "全身 ≦2.0W/kg／頭部 ≦3.2W/kg（通常操作モード）",
-    "ペーシング自動復帰": "タイマー（オフ, 3, 6, 9, 12時間）",
+    "管理操作モード": "通常操作モード",
+    "RF磁場": "64MHz",
+    "植込み後": "植込み・リード再建・外科的変更後、少なくとも6週間経過",
+    "植込み部位": "左または右胸部",
+    "体位": "背臥位または腹臥位のみ（側臥位で実施しない）",
+    "患者監視": "パルスオキシメータまたは心電計（ECG）でモニタリング",
+    "MRIモード": "MRI保護モードに設定",
+    "遺残リード": "不可",
+    "検査中のモード": "MRI保護モード（頻拍検出／治療機能は停止）",
     "アイソセンタ": "制限なし",
-    "撮像時間": "制限なし（MRI保護モードタイマーの設定時間内に撮像を終えること）",
-    "累積撮像時間": "制限なし",
-    "ホールボディコイル": "制限なし",
-    "ローカル受信コイル": "制限なし",
-    "出典（追記分）": "日本磁気共鳴医学会「能動型の条件付MRI対応植込み型医療デバイス一覧表」（2023-12-21更新）",
+    "撮像時間": "制限なし（MRI保護モードのタイムアウト時間内）",
+    "資料の格付け": "国内一次資料",
     "確認日": "2026-08-29",
-    "備考": "添付文書未取得。学会一覧表の記載に基づく暫定データ"
-   },
-   "verify": true
+    "出典": "ダイナジェン ICD 添付文書（承認番号 22700BZX00021000）",
+    "適用条件": "1.5T のみ。3.0T装置では使用不可",
+    "ポートプラグ": "使用しないリード接続口には IS-1／DF-1 ポートプラグを挿入する。IS-1ポートプラグはMRI対応"
+   }
   },
   {
    "id": "BSX-DYNAGEN-CRTD",
@@ -8211,350 +7156,127 @@
    ],
    "ra": [
     {
-     "model": "7731",
-     "name": "INGEVITY（7731）"
+     "model": "FINELINE II Sterox",
+     "name": "FINELINE II Sterox"
     },
     {
-     "model": "7732",
-     "name": "INGEVITY（7732）"
+     "model": "FINELINE II Sterox EZ",
+     "name": "FINELINE II Sterox EZ"
     },
     {
-     "model": "7735",
-     "name": "INGEVITY（7735）"
+     "model": "FINELINE II EZ PU",
+     "name": "FINELINE II EZ PU"
     },
     {
-     "model": "7736",
-     "name": "INGEVITY（7736）"
+     "model": "FINELINE II PU",
+     "name": "FINELINE II PU"
     },
     {
-     "model": "7740",
-     "name": "INGEVITY AFx（7740）"
+     "model": "INGEVITY",
+     "name": "INGEVITY"
     },
     {
-     "model": "7741",
-     "name": "INGEVITY AFx（7741）"
+     "model": "INGEVITY AFx",
+     "name": "INGEVITY AFx"
     },
     {
-     "model": "7742",
-     "name": "INGEVITY AFx（7742）"
-    },
-    {
-     "model": "7840",
-     "name": "INGEVITY AFx（7840）"
-    },
-    {
-     "model": "7841",
-     "name": "INGEVITY AFx（7841）"
-    },
-    {
-     "model": "7842",
-     "name": "INGEVITY AFx（7842）"
-    },
-    {
-     "model": "4371",
-     "name": "FINELINE II PU（4371）"
-    },
-    {
-     "model": "4372",
-     "name": "FINELINE II PU（4372）"
-    },
-    {
-     "model": "4369",
-     "name": "FINELINE II PU（4369）"
-    },
-    {
-     "model": "4370",
-     "name": "FINELINE II PU（4370）"
-    },
-    {
-     "model": "4456",
-     "name": "FINELINE II PU（4456）"
-    },
-    {
-     "model": "4457",
-     "name": "FINELINE II PU（4457）"
-    },
-    {
-     "model": "4479",
-     "name": "FINELINE II PU（4479）"
-    },
-    {
-     "model": "4480",
-     "name": "FINELINE II PU（4480）"
-    },
-    {
-     "model": "4375",
-     "name": "FINELINE II EZ PU（4375）"
-    },
-    {
-     "model": "4376",
-     "name": "FINELINE II EZ PU（4376）"
-    },
-    {
-     "model": "4377",
-     "name": "FINELINE II EZ PU（4377）"
-    },
-    {
-     "model": "4469",
-     "name": "FINELINE II EZ PU（4469）"
-    },
-    {
-     "model": "4470",
-     "name": "FINELINE II EZ PU（4470）"
-    },
-    {
-     "model": "4471",
-     "name": "FINELINE II EZ PU（4471）"
-    },
-    {
-     "model": "4373",
-     "name": "FINELINE II Sterox（4373）"
-    },
-    {
-     "model": "4374",
-     "name": "FINELINE II Sterox（4374）"
-    },
-    {
-     "model": "4458",
-     "name": "FINELINE II Sterox（4458）"
-    },
-    {
-     "model": "4459",
-     "name": "FINELINE II Sterox（4459）"
-    },
-    {
-     "model": "4378",
-     "name": "FINELINE II Sterox EZ（4378）"
-    },
-    {
-     "model": "4379",
-     "name": "FINELINE II Sterox EZ（4379）"
-    },
-    {
-     "model": "4380",
-     "name": "FINELINE II Sterox EZ（4380）"
-    },
-    {
-     "model": "4472",
-     "name": "FINELINE II Sterox EZ（4472）"
-    },
-    {
-     "model": "4473",
-     "name": "FINELINE II Sterox EZ（4473）"
-    },
-    {
-     "model": "4474",
-     "name": "FINELINE II Sterox EZ（4474）"
+     "model": "IS-1 ポートプラグ",
+     "name": "IS-1 ポートプラグ"
     }
    ],
    "rv": [
     {
-     "model": "0675",
-     "name": "RELIANCE 4-FRONT G AFx（0675）"
+     "model": "RELIANCE 4-FRONT G AFx",
+     "name": "RELIANCE 4-FRONT G AFx"
     },
     {
-     "model": "0676",
-     "name": "RELIANCE 4-FRONT G AFx（0676）"
+     "model": "RELIANCE 4-FRONT SG AFx",
+     "name": "RELIANCE 4-FRONT SG AFx"
     },
     {
-     "model": "0695",
-     "name": "RELIANCE 4-FRONT G AFx（0695）"
+     "model": "RELIANCE 4-FRONT G",
+     "name": "RELIANCE 4-FRONT G"
     },
     {
-     "model": "0696",
-     "name": "RELIANCE 4-FRONT G AFx（0696）"
+     "model": "RELIANCE 4-FRONT SG",
+     "name": "RELIANCE 4-FRONT SG"
     },
     {
-     "model": "0672",
-     "name": "RELIANCE 4-FRONT SG AFx（0672）"
+     "model": "ENDOTAK RELIANCE G AFx DF-4",
+     "name": "ENDOTAK RELIANCE G AFx DF-4"
     },
     {
-     "model": "0673",
-     "name": "RELIANCE 4-FRONT SG AFx（0673）"
+     "model": "ENDOTAK RELIANCE SG AFx DF-4",
+     "name": "ENDOTAK RELIANCE SG AFx DF-4"
     },
     {
-     "model": "0692",
-     "name": "RELIANCE 4-FRONT SG AFx（0692）"
+     "model": "ENDOTAK RELIANCE G DF-4",
+     "name": "ENDOTAK RELIANCE G DF-4"
     },
     {
-     "model": "0693",
-     "name": "RELIANCE 4-FRONT SG AFx（0693）"
+     "model": "ENDOTAK RELIANCE SG DF-4",
+     "name": "ENDOTAK RELIANCE SG DF-4"
     },
     {
-     "model": "0662",
-     "name": "RELIANCE 4-FRONT SG（0662）"
+     "model": "ENDOTAK RELIANCE G Dual Coil",
+     "name": "ENDOTAK RELIANCE G Dual Coil"
     },
     {
-     "model": "0663",
-     "name": "RELIANCE 4-FRONT SG（0663）"
+     "model": "ENDOTAK RELIANCE SG Single Coil",
+     "name": "ENDOTAK RELIANCE SG Single Coil"
     },
     {
-     "model": "0682",
-     "name": "RELIANCE 4-FRONT SG（0682）"
+     "model": "ENDOTAK RELIANCE G AFx Dual Coil",
+     "name": "ENDOTAK RELIANCE G AFx Dual Coil"
     },
     {
-     "model": "0683",
-     "name": "RELIANCE 4-FRONT SG（0683）"
-    },
-    {
-     "model": "0295",
-     "name": "ENDOTAK RELIANCE G AFx DF-4（0295）"
-    },
-    {
-     "model": "0296",
-     "name": "ENDOTAK RELIANCE G AFx DF-4（0296）"
-    },
-    {
-     "model": "0292",
-     "name": "ENDOTAK RELIANCE SG AFx DF-4（0292）"
-    },
-    {
-     "model": "0293",
-     "name": "ENDOTAK RELIANCE SG AFx DF-4（0293）"
-    },
-    {
-     "model": "0285",
-     "name": "ENDOTAK RELIANCE G DF-4（0285）"
-    },
-    {
-     "model": "0286",
-     "name": "ENDOTAK RELIANCE G DF-4（0286）"
-    },
-    {
-     "model": "0282",
-     "name": "ENDOTAK RELIANCE SG DF-4（0282）"
-    },
-    {
-     "model": "0283",
-     "name": "ENDOTAK RELIANCE SG DF-4（0283）"
-    },
-    {
-     "model": "0170",
-     "name": "ENDOTAK RELIANCE SG Single Coil（0170）"
-    },
-    {
-     "model": "0171",
-     "name": "ENDOTAK RELIANCE SG Single Coil（0171）"
-    },
-    {
-     "model": "0174",
-     "name": "ENDOTAK RELIANCE G Dual Coil（0174）"
-    },
-    {
-     "model": "0175",
-     "name": "ENDOTAK RELIANCE G Dual Coil（0175）"
-    },
-    {
-     "model": "0176",
-     "name": "ENDOTAK RELIANCE G Dual Coil（0176）"
-    },
-    {
-     "model": "0177",
-     "name": "ENDOTAK RELIANCE G Dual Coil（0177）"
-    },
-    {
-     "model": "0180",
-     "name": "ENDOTAK RELIANCE SG AFx Single Coil（0180）"
-    },
-    {
-     "model": "0181",
-     "name": "ENDOTAK RELIANCE SG AFx Single Coil（0181）"
-    },
-    {
-     "model": "0184",
-     "name": "ENDOTAK RELIANCE G AFx Dual Coil（0184）"
-    },
-    {
-     "model": "0185",
-     "name": "ENDOTAK RELIANCE G AFx Dual Coil（0185）"
-    },
-    {
-     "model": "0186",
-     "name": "ENDOTAK RELIANCE G AFx Dual Coil（0186）"
-    },
-    {
-     "model": "0187",
-     "name": "ENDOTAK RELIANCE G AFx Dual Coil（0187）"
+     "model": "ENDOTAK RELIANCE SG AFx Single Coil",
+     "name": "ENDOTAK RELIANCE SG AFx Single Coil"
     }
    ],
    "lv": [
     {
-     "model": "4671",
-     "name": "ACUITY X4（4671）"
+     "model": "ACUITY X4",
+     "name": "ACUITY X4"
     },
     {
-     "model": "4672",
-     "name": "ACUITY X4（4672）"
+     "model": "ACUITY Spiral",
+     "name": "ACUITY Spiral"
     },
     {
-     "model": "4674",
-     "name": "ACUITY X4（4674）"
+     "model": "EASYTRAK 2",
+     "name": "EASYTRAK 2"
     },
     {
-     "model": "4675",
-     "name": "ACUITY X4（4675）"
-    },
-    {
-     "model": "4677",
-     "name": "ACUITY X4（4677）"
-    },
-    {
-     "model": "4678",
-     "name": "ACUITY X4（4678）"
-    },
-    {
-     "model": "4542",
-     "name": "EASYTRAK 2（4542）"
-    },
-    {
-     "model": "4543",
-     "name": "EASYTRAK 2（4543）"
-    },
-    {
-     "model": "4544",
-     "name": "EASYTRAK 2（4544）"
-    },
-    {
-     "model": "4591",
-     "name": "ACUITY Spiral（4591）"
-    },
-    {
-     "model": "4592",
-     "name": "ACUITY Spiral（4592）"
+     "model": "IS4／DF4 ポートプラグ",
+     "name": "IS4／DF4 ポートプラグ"
     }
    ],
    "tesla": [
     "1.5T"
    ],
    "cond": {
-    "ガントリ": "水平磁場方式・水素原子核（プロトン）・トンネル型ガントリでのみ使用可",
+    "ガントリ": "水平磁場方式・水素原子核（プロトン）・トンネル型ガントリ",
+    "最大空間勾配磁場": "50T/m",
     "傾斜磁場スルーレート": "一軸あたり 200T/m/s 以下",
-    "植込み後": "6週間以上経過",
-    "植込み部位": "胸部",
-    "遺残リード": "不可",
-    "リードの状態": "リードの破損や、機器およびリードシステムに異常を示す兆候がないこと",
-    "ペーシング閾値": "≦2.0V（Bipolar）／2.0V超のペーシング依存患者は注意（右房・右室）",
-    "体位": "背臥位または腹臥位のみ（側臥位で実施しない）",
-    "ローカルコイル": "植込み部位にコイルを配置しないこと",
-    "MRIモード": "設定必要",
-    "検査中のモード": "DOO / VOO / AOO / Off",
-    "電池": "Battery Capacity Depleted（EOL）でないこと",
-    "患者監視": "パルスオキシメータ・心電計（ECG）",
-    "体外式除細動器": "必須",
-    "体温": "平常値であり、体温調節機能に問題がないこと",
-    "最大空間勾配磁場": "50T/m（5000G/cm）ICD/CRT-Dシステム植込み部位",
     "SAR": "全身 ≦2.0W/kg／頭部 ≦3.2W/kg（通常操作モード）",
-    "ペーシング自動復帰": "タイマー（オフ, 3, 6, 9, 12時間）",
+    "管理操作モード": "通常操作モード",
+    "RF磁場": "64MHz",
+    "植込み後": "植込み・リード再建・外科的変更後、少なくとも6週間経過",
+    "植込み部位": "左または右胸部",
+    "体位": "背臥位または腹臥位のみ（側臥位で実施しない）",
+    "患者監視": "パルスオキシメータまたは心電計（ECG）でモニタリング",
+    "MRIモード": "MRI保護モードに設定",
+    "遺残リード": "不可",
+    "検査中のモード": "MRI保護モード（頻拍検出／治療機能は停止）",
     "アイソセンタ": "制限なし",
-    "撮像時間": "制限なし（MRI保護モードタイマーの設定時間内に撮像を終えること）",
-    "累積撮像時間": "制限なし",
-    "ホールボディコイル": "制限なし",
-    "ローカル受信コイル": "制限なし",
-    "出典（追記分）": "日本磁気共鳴医学会「能動型の条件付MRI対応植込み型医療デバイス一覧表」（2023-12-21更新）",
+    "撮像時間": "制限なし（MRI保護モードのタイムアウト時間内）",
+    "資料の格付け": "国内一次資料",
     "確認日": "2026-08-29",
-    "備考": "添付文書未取得。学会一覧表の記載に基づく暫定データ"
-   },
-   "verify": true
+    "出典": "ダイナジェン CRT-D 添付文書（承認番号 22700BZX00020000）",
+    "適用条件": "1.5T のみ。3.0T装置では使用不可",
+    "ポートプラグ": "使用しないリード接続口には IS-1／DF-1 ポートプラグを挿入する。IS-1ポートプラグはMRI対応"
+   }
   },
   {
    "id": "MP-ALIZEA",
@@ -8573,134 +7295,38 @@
    ],
    "ra": [
     {
-     "model": "RF45D",
-     "name": "BEFLEX RF45D"
+     "model": "Beflex リード",
+     "name": "Beflex リード"
     },
     {
-     "model": "RF46D",
-     "name": "BEFLEX RF46D"
+     "model": "スクリューバイン",
+     "name": "スクリューバイン"
     },
     {
-     "model": "TLD040C",
-     "name": "VEGA R45"
+     "model": "ペティート",
+     "name": "ペティート"
     },
     {
-     "model": "TLD041C",
-     "name": "VEGA R52"
-    },
-    {
-     "model": "TLD042C",
-     "name": "VEGA R58"
-    },
-    {
-     "model": "TLD056C",
-     "name": "Xfine JX24D"
-    },
-    {
-     "model": "TLD057C",
-     "name": "Xfine JX25D"
-    },
-    {
-     "model": "TLD054C",
-     "name": "Xfine TX25D"
-    },
-    {
-     "model": "TLD055C",
-     "name": "Xfine TX26D"
-    },
-    {
-     "model": "TLSCREWVINE44",
-     "name": "J-LINE SCREWVINE 44SEP"
-    },
-    {
-     "model": "TLSCREWVINE52",
-     "name": "J-LINE SCREWVINE 52SEP"
-    },
-    {
-     "model": "TLSCREWVINE58",
-     "name": "J-LINE SCREWVINE 58SEP"
-    },
-    {
-     "model": "TLJPETITE44ERJB",
-     "name": "J-LINE PETITE 44ERJB"
-    },
-    {
-     "model": "TLJPETITE52ERJB",
-     "name": "J-LINE PETITE 52ERJB"
-    },
-    {
-     "model": "TLJPETITE52ERB",
-     "name": "J-LINE PETITE 52ERB"
-    },
-    {
-     "model": "TLJPETITE58ERB",
-     "name": "J-LINE PETITE 58ERB"
+     "model": "XFine リード",
+     "name": "XFine リード"
     }
    ],
    "rv": [
     {
-     "model": "RF45D",
-     "name": "BEFLEX RF45D"
+     "model": "Beflex リード",
+     "name": "Beflex リード"
     },
     {
-     "model": "RF46D",
-     "name": "BEFLEX RF46D"
+     "model": "スクリューバイン",
+     "name": "スクリューバイン"
     },
     {
-     "model": "TLD040C",
-     "name": "VEGA R45"
+     "model": "ペティート",
+     "name": "ペティート"
     },
     {
-     "model": "TLD041C",
-     "name": "VEGA R52"
-    },
-    {
-     "model": "TLD042C",
-     "name": "VEGA R58"
-    },
-    {
-     "model": "TLD056C",
-     "name": "Xfine JX24D"
-    },
-    {
-     "model": "TLD057C",
-     "name": "Xfine JX25D"
-    },
-    {
-     "model": "TLD054C",
-     "name": "Xfine TX25D"
-    },
-    {
-     "model": "TLD055C",
-     "name": "Xfine TX26D"
-    },
-    {
-     "model": "TLSCREWVINE44",
-     "name": "J-LINE SCREWVINE 44SEP"
-    },
-    {
-     "model": "TLSCREWVINE52",
-     "name": "J-LINE SCREWVINE 52SEP"
-    },
-    {
-     "model": "TLSCREWVINE58",
-     "name": "J-LINE SCREWVINE 58SEP"
-    },
-    {
-     "model": "TLJPETITE44ERJB",
-     "name": "J-LINE PETITE 44ERJB"
-    },
-    {
-     "model": "TLJPETITE52ERJB",
-     "name": "J-LINE PETITE 52ERJB"
-    },
-    {
-     "model": "TLJPETITE52ERB",
-     "name": "J-LINE PETITE 52ERB"
-    },
-    {
-     "model": "TLJPETITE58ERB",
-     "name": "J-LINE PETITE 58ERB"
+     "model": "XFine リード",
+     "name": "XFine リード"
     }
    ],
    "lv": [],
@@ -8709,24 +7335,29 @@
     "3.0T"
    ],
    "cond": {
-    "植込み後": "6週間以上",
-    "植込み部位": "胸部",
-    "遺残リード": "不可",
-    "ペーシング閾値": "2.0V(0.35ms)以下（Bipolar）",
-    "リードインピーダンス": "心房・右室 200〜3,000Ω（Bipolar）",
-    "傾斜磁場スルーレート": "≤200T/m/s",
-    "SAR": "全身 ≤2.0W/kg／頭部 ≤3.2W/kg（通常操作モード）",
-    "体位": "背臥位または腹臥位のみ（側臥位不可）",
-    "ローカル送受信コイル": "全身使用不可",
-    "MRIモード": "マニュアル設定／自動設定",
-    "患者監視": "心電図・パルスオキシメータ",
-    "体外式除細動器": "必須",
-    "最大空間勾配磁場": "≤20T/m",
-    "除外領域": "制限なし",
-    "アイソセンタ": "制限なし",
-    "撮像時間": "1回40分以内／次回まで30分以上あける",
-    "電池": "RRTに達していないこと",
-    "アラート": "あり"
+    "ガントリ": "水平円筒ボア型磁石・臨床用MRIシステム",
+    "最大空間勾配磁場": "20T/m",
+    "傾斜磁場スルーレート": "一軸あたり 200T/m/s 以下",
+    "SAR": "全身 ≦2.0W/kg／頭部 ≦3.2W/kg",
+    "RF磁場": "1.5T: 64MHz付近／3.0T: 128MHz付近",
+    "ホールボディコイル": "3.0T ではクワドラチャ（QD）または円偏波（CP）RF励起で動作する全身送信コイル",
+    "ローカルコイル": "MRI対応植込み機器が植込まれた部位に局所送信コイル及び局所送信／受信コイルを配置しないこと。受信専用コイルの使用は制限されない",
+    "植込み後": "6週間以上経過",
+    "植込み部位": "左または右胸部（腹部植込みは未評価）",
+    "体温": "発熱していないこと",
+    "体位": "背臥位または腹臥位（側臥位での撮像は禁止）",
+    "遺残リード": "使用していないペースメーカやリードが体内に残っていないこと",
+    "MRIモード": "MRIモードに設定",
+    "患者監視": "心活動状態を継続的にモニターし、患者状態の視覚的観察と口頭での意思疎通を継続的に確認する",
+    "横隔膜刺激": "MRIモード設定（1.0msパルス幅・5.0V双極ペーシング）で横隔膜刺激または胸筋刺激がないこと",
+    "資料の格付け": "国内一次資料",
+    "確認日": "2026-08-29",
+    "出典": "アリゼア 添付文書（承認番号 30400BZX00001000）",
+    "ペーシング閾値": "2.0V 以下（パルス幅 0.35ms 以下）",
+    "リードインピーダンス": "200〜3,000Ω",
+    "電池": "RRT に達していないこと",
+    "撮像時間": "MRI曝露時間の合計が 40分以内",
+    "適用条件": "下記以外のリードが接続されている場合はMRI検査不可"
    }
   },
   {
@@ -8833,7 +7464,8 @@
     "検査中のモード": "DRモデル: DOO / VOO / OOO　SRモデル: AOO / VOO / OOO",
     "適合リード": "BEFLEX／VEGA／X Fine／Screwvine／Petite の各シリーズ（KORA 100 は VEGA R45 を除く）",
     "出典（追記分）": "日本磁気共鳴医学会「能動型の条件付MRI対応植込み型医療デバイス一覧表」（2020-09-01更新）",
-    "確認日": "2026-08-29"
+    "確認日": "2026-08-29",
+    "資料の格付け": "学会一覧表（国内二次資料）"
    }
   },
   {
@@ -9021,7 +7653,8 @@
     "検査中のモード": "DRモデル: DOO / VOO / OOO　SRモデル: AOO / VOO / OOO",
     "適合リード": "BEFLEX／VEGA／X Fine／Screwvine／Petite の各シリーズ（KORA 100 は VEGA R45 を除く）",
     "出典（追記分）": "日本磁気共鳴医学会「能動型の条件付MRI対応植込み型医療デバイス一覧表」（2020-09-01更新）",
-    "確認日": "2026-08-29"
+    "確認日": "2026-08-29",
+    "資料の格付け": "学会一覧表（国内二次資料）"
    }
   },
   {
@@ -9031,104 +7664,40 @@
    "group": "ULYS",
    "devices": [
     {
-     "model": "TDF049J",
-     "name": "ULYS VR 2240"
+     "model": "2240",
+     "name": "ULYS VR（条件付MRI対応モデル）"
     },
     {
-     "model": "TDF050J",
-     "name": "ULYS DR 2540"
+     "model": "2540",
+     "name": "ULYS DR（条件付MRI対応モデル）"
     }
    ],
    "ra": [
     {
-     "model": "RF45D",
-     "name": "BEFLEX RF45D"
+     "model": "XFine リード",
+     "name": "XFine リード"
     },
     {
-     "model": "RF46D",
-     "name": "BEFLEX RF46D"
+     "model": "Beflex リード",
+     "name": "Beflex リード"
     },
     {
-     "model": "TLD040C",
-     "name": "VEGA R45"
-    },
-    {
-     "model": "TLD041C",
-     "name": "VEGA R52"
-    },
-    {
-     "model": "TLD042C",
-     "name": "VEGA R58"
-    },
-    {
-     "model": "TLD056C",
-     "name": "Xfine JX24D"
-    },
-    {
-     "model": "TLD057C",
-     "name": "Xfine JX25D"
-    },
-    {
-     "model": "TLD054C",
-     "name": "Xfine TX25D"
-    },
-    {
-     "model": "TLD055C",
-     "name": "Xfine TX26D"
+     "model": "Invicta リード",
+     "name": "Invicta リード"
     }
    ],
    "rv": [
     {
-     "model": "RF45D",
-     "name": "BEFLEX RF45D"
+     "model": "XFine リード",
+     "name": "XFine リード"
     },
     {
-     "model": "RF46D",
-     "name": "BEFLEX RF46D"
+     "model": "Beflex リード",
+     "name": "Beflex リード"
     },
     {
-     "model": "TLD040C",
-     "name": "VEGA R45"
-    },
-    {
-     "model": "TLD041C",
-     "name": "VEGA R52"
-    },
-    {
-     "model": "TLD042C",
-     "name": "VEGA R58"
-    },
-    {
-     "model": "TLD056C",
-     "name": "Xfine JX24D"
-    },
-    {
-     "model": "TLD057C",
-     "name": "Xfine JX25D"
-    },
-    {
-     "model": "TLD054C",
-     "name": "Xfine TX25D"
-    },
-    {
-     "model": "TLD055C",
-     "name": "Xfine TX26D"
-    },
-    {
-     "model": "TLT001C",
-     "name": "INVICTA 1CR 58"
-    },
-    {
-     "model": "TLT002C",
-     "name": "INVICTA 2CR 58"
-    },
-    {
-     "model": "TLT005C",
-     "name": "INVICTA 1CR 68"
-    },
-    {
-     "model": "TLT006C",
-     "name": "INVICTA 2CR 68"
+     "model": "Invicta リード",
+     "name": "Invicta リード"
     }
    ],
    "lv": [],
@@ -9137,149 +7706,109 @@
     "3.0T"
    ],
    "cond": {
-    "植込み後": "6週間以上",
-    "植込み部位": "胸部",
-    "遺残リード": "不可",
-    "ペーシング閾値": "2.0V(0.35ms)以下（Bipolar）",
-    "リードインピーダンス": "心房・右室 200〜3,000Ω／RV・SVCコイル 20〜200Ω",
-    "傾斜磁場スルーレート": "≤200T/m/s",
-    "SAR": "全身 ≤2.0W/kg／頭部 ≤3.2W/kg（通常操作モード）",
-    "体位": "背臥位または腹臥位のみ（側臥位不可）",
-    "ローカル送受信コイル": "全身使用不可",
-    "MRIモード": "マニュアル設定／自動設定",
-    "患者監視": "心電図・パルスオキシメータ",
-    "体外式除細動器": "必須",
-    "最大空間勾配磁場": "≤20T/m",
-    "除外領域": "制限なし",
-    "アイソセンタ": "制限なし",
-    "撮像時間": "1回40分以内",
-    "電池": "RRTに達していないこと",
-    "アラート": "あり"
+    "ガントリ": "水平円筒ボア型磁石・臨床用MRIシステム",
+    "最大空間勾配磁場": "20T/m",
+    "傾斜磁場スルーレート": "一軸あたり 200T/m/s 以下",
+    "SAR": "全身 ≦2.0W/kg／頭部 ≦3.2W/kg",
+    "RF磁場": "1.5T: 64MHz付近／3.0T: 128MHz付近",
+    "ホールボディコイル": "3.0T ではクワドラチャ（QD）または円偏波（CP）RF励起で動作する全身送信コイル",
+    "ローカルコイル": "MRI対応植込み機器が植込まれた部位に局所送信コイル及び局所送信／受信コイルを配置しないこと。受信専用コイルの使用は制限されない",
+    "植込み後": "6週間以上経過",
+    "植込み部位": "左または右胸部（腹部植込みは未評価）",
+    "体温": "発熱していないこと",
+    "体位": "背臥位または腹臥位（側臥位での撮像は禁止）",
+    "遺残リード": "使用していないペースメーカやリードが体内に残っていないこと",
+    "MRIモード": "MRIモードに設定",
+    "患者監視": "心活動状態を継続的にモニターし、患者状態の視覚的観察と口頭での意思疎通を継続的に確認する",
+    "横隔膜刺激": "MRIモード設定（1.0msパルス幅・5.0V双極ペーシング）で横隔膜刺激または胸筋刺激がないこと",
+    "資料の格付け": "国内一次資料",
+    "確認日": "2026-08-29",
+    "出典": "ユリス 添付文書（承認番号 30400BZX00267000）",
+    "ペーシング閾値": "RA・RV とも 2.0V 以下",
+    "リードインピーダンス": "RA・RV とも 200〜3,000Ω",
+    "撮像時間": "40分未満",
+    "適用条件": "**モデル 2240 / 2540 のみが条件付MRI対応。モデル 2210 / 2510 はMRI非対応（併用禁忌）**"
    }
   },
   {
    "id": "MP-GALI",
    "maker": "MicroPort CRM",
    "type": "CRT-D",
-   "group": "GALI",
+   "group": "GALI（条件付MRI対応モデル：2744 / 2844）",
    "devices": [
     {
-     "model": "TDF054J",
-     "name": "GALI 4LV SonR CRT-D 2844"
+     "model": "2744",
+     "name": "GALI CRT-D（条件付MRI対応モデル）"
+    },
+    {
+     "model": "2844",
+     "name": "GALI SonR CRT-D（条件付MRI対応モデル）"
     }
    ],
    "ra": [
     {
-     "model": "RF45D",
-     "name": "BEFLEX RF45D"
+     "model": "XFine リード",
+     "name": "XFine リード"
     },
     {
-     "model": "RF46D",
-     "name": "BEFLEX RF46D"
+     "model": "Beflex リード",
+     "name": "Beflex リード"
     },
     {
-     "model": "TLD040C",
-     "name": "VEGA R45"
+     "model": "SonRtip リード",
+     "name": "SonRtip リード"
     },
     {
-     "model": "TLD041C",
-     "name": "VEGA R52"
+     "model": "Invicta リード",
+     "name": "Invicta リード"
     },
     {
-     "model": "TLD042C",
-     "name": "VEGA R58"
-    },
-    {
-     "model": "TLD056C",
-     "name": "Xfine JX24D"
-    },
-    {
-     "model": "TLD057C",
-     "name": "Xfine JX25D"
-    },
-    {
-     "model": "TLD054C",
-     "name": "Xfine TX25D"
-    },
-    {
-     "model": "TLD055C",
-     "name": "Xfine TX26D"
-    },
-    {
-     "model": "TLD015C",
-     "name": "SONRTIP"
+     "model": "Navigo リード",
+     "name": "Navigo リード"
     }
    ],
    "rv": [
     {
-     "model": "RF45D",
-     "name": "BEFLEX RF45D"
+     "model": "XFine リード",
+     "name": "XFine リード"
     },
     {
-     "model": "RF46D",
-     "name": "BEFLEX RF46D"
+     "model": "Beflex リード",
+     "name": "Beflex リード"
     },
     {
-     "model": "TLD040C",
-     "name": "VEGA R45"
+     "model": "SonRtip リード",
+     "name": "SonRtip リード"
     },
     {
-     "model": "TLD041C",
-     "name": "VEGA R52"
+     "model": "Invicta リード",
+     "name": "Invicta リード"
     },
     {
-     "model": "TLD042C",
-     "name": "VEGA R58"
-    },
-    {
-     "model": "TLD056C",
-     "name": "Xfine JX24D"
-    },
-    {
-     "model": "TLD057C",
-     "name": "Xfine JX25D"
-    },
-    {
-     "model": "TLD054C",
-     "name": "Xfine TX25D"
-    },
-    {
-     "model": "TLD055C",
-     "name": "Xfine TX26D"
-    },
-    {
-     "model": "TLT001C",
-     "name": "INVICTA 1CR 58"
-    },
-    {
-     "model": "TLT002C",
-     "name": "INVICTA 2CR 58"
-    },
-    {
-     "model": "TLT005C",
-     "name": "INVICTA 1CR 68"
-    },
-    {
-     "model": "TLT006C",
-     "name": "INVICTA 2CR 68"
+     "model": "Navigo リード",
+     "name": "Navigo リード"
     }
    ],
    "lv": [
     {
-     "model": "TLT019C",
-     "name": "NAVIGO 2D 78"
+     "model": "XFine リード",
+     "name": "XFine リード"
     },
     {
-     "model": "TLT020C",
-     "name": "NAVIGO 2D 88"
+     "model": "Beflex リード",
+     "name": "Beflex リード"
     },
     {
-     "model": "TLT021C",
-     "name": "NAVIGO ARC 78"
+     "model": "SonRtip リード",
+     "name": "SonRtip リード"
     },
     {
-     "model": "TLT022C",
-     "name": "NAVIGO ARC 88"
+     "model": "Invicta リード",
+     "name": "Invicta リード"
+    },
+    {
+     "model": "Navigo リード",
+     "name": "Navigo リード"
     }
    ],
    "tesla": [
@@ -9287,24 +7816,32 @@
     "3.0T"
    ],
    "cond": {
-    "植込み後": "6週間以上",
-    "植込み部位": "胸部",
-    "遺残リード": "不可",
-    "ペーシング閾値": "2.0V(0.35ms)以下（Bipolar）",
-    "リードインピーダンス": "心房・右室 200〜3,000Ω／RV・SVCコイル 20〜200Ω",
-    "傾斜磁場スルーレート": "≤200T/m/s",
-    "SAR": "全身 ≤2.0W/kg／頭部 ≤3.2W/kg（通常操作モード）",
-    "体位": "背臥位または腹臥位のみ（側臥位不可）",
-    "ローカル送受信コイル": "全身使用不可",
-    "MRIモード": "マニュアル設定／自動設定",
-    "患者監視": "心電図・パルスオキシメータ",
-    "体外式除細動器": "必須",
-    "最大空間勾配磁場": "≤20T/m",
-    "除外領域": "制限なし",
-    "アイソセンタ": "制限なし",
-    "撮像時間": "1回40分以内",
-    "電池": "RRTに達していないこと",
-    "アラート": "あり"
+    "ガントリ": "水平円筒形ボア磁石・臨床用MRI装置",
+    "RF磁場": "1.5T: 64MHz付近／3.0T: 128MHz付近（水素原子核のプロトンを画像化）",
+    "最大空間勾配磁場": "最大静的B0空間勾配 20T/m",
+    "傾斜磁場スルーレート": "一軸あたり 200T/m/s",
+    "ホールボディコイル": "3.0T では円偏波（CP）RF励起で動作する送信ホールボディコイル",
+    "ローカルコイル": "局所受信専用コイルには制限がない。局所送信専用および局所送受信コイルは使用しないこと",
+    "SAR": "全身 ≦2.0W/kg／頭部撮像は ≦3.2W/kg",
+    "撮像時間": "高周波照射時間（シーケンス間の休止時間を除いたMRI総撮像時間）が 40分未満",
+    "植込み後": "本体およびリードの植込みから6週間が経過していること（6週間未満は評価されていない）",
+    "植込み部位": "左胸部または右胸部",
+    "遺残リード": "使用していないペースメーカやリードが体内に残っていないこと",
+    "ペーシング閾値": "ペーシング依存の患者において、RA・RV とも 2.0V 以下（パルス幅 0.35ms 以下）",
+    "リードインピーダンス": "RA・RV とも 200〜3,000Ω",
+    "電池": "推奨交換時期（RRT）に達していないこと",
+    "横隔膜刺激": "VOO または DOO モードでペーシング出力 5.0V・パルス幅 1ms の結果、横隔膜または胸筋の刺激がないこと",
+    "MRIモード": "MRIモードを有効にするようプログラム（Auto または Manual）。プログラマ画面でチェックリスト項目の承認が必要",
+    "MRIモードモニタリング期間": "定義された時間枠でMRIスキャンが実行されるのに十分な長さであること",
+    "体位": "背臥位または腹臥位",
+    "体温": "撮像時に発熱や体温調節の異常がないこと",
+    "患者監視": "心電図・パルス酸素濃度計・非侵襲的な血圧測定を使用した適切な患者モニタリング",
+    "MRI検査後": "プログラマで適切に作動していることを確認。MRIモードをAutoに設定した場合はオフになっていることを確認",
+    "適用条件": "**モデル 2744 / 2844 のみが条件付MRI対応。モデル 2711 / 2811 / 2741 / 2841 はMRI非対応（併用禁忌）**",
+    "確認カード": "「MRI対応植込み型デバイス」が明示されたカードおよびCRT-D手帳の所持を確認する",
+    "出典": "ガリ 添付文書（承認番号 30400BZX00268000）",
+    "資料の格付け": "国内一次資料",
+    "確認日": "2026-08-29"
    }
   }
  ]
