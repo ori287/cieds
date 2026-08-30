@@ -1,23 +1,1926 @@
 {
- "v": 1,
- "updated": "2026-08-27",
+ "v": 2,
+ "updated": "2026-08-29",
  "items": [
   {
-   "id": "ABT-ACAP-CONFIRM",
-   "name": "ACap Confirm",
+   "id": "Med-MVP-Managed-Ventricular-Pacing",
+   "maker": "Medtronic",
+   "cat": "ペーシング管理",
+   "name": "MVP（Managed Ventricular Pacing）",
+   "generic": "心室ペーシング抑制（自己房室伝導優先）",
+   "device": "",
+   "scope": "",
+   "note": "名称のみ登録。動作・設定の詳細は後日追記予定。"
+  },
+  {
+   "id": "Med-Search-AV+",
+   "maker": "Medtronic",
+   "cat": "ペーシング管理",
+   "name": "Search AV+",
+   "generic": "心室ペーシング抑制（自己房室伝導優先）",
+   "device": "",
+   "scope": "",
+   "note": "名称のみ登録。動作・設定の詳細は後日追記予定。"
+  },
+  {
+   "id": "Abb-VIP-Ventricular-Intrinsic-Preference",
    "maker": "Abbott",
-   "cat": "自動閾値管理",
-   "generic": "自動閾値管理",
-   "device": "PM / ICD / CRT",
-   "scope": "心房ペーシング出力に適切な安全域を保つ",
-   "how": "心房の捕捉を定期的に自動判定し、閾値に安全域を上乗せした出力へ調整する。捕捉できなかった拍にはバックアップ刺激を出す。",
-   "params": "ACap Confirm: On / Monitor / Off；バックアップパルス極性: 双極；探索間隔: 8時間 / 24時間",
-   "pathway": "Parameters > Brady > Capture & Sense > Cap Confirm Settings",
-   "caution": "心房波高が小さい症例では判定が不安定になることがある。Monitorは測定のみで出力調整は行わない。",
-   "glossary": "Capture management,誘発反応,刺激閾値",
-   "source": "（出典URLを記入）",
-   "checked": "2026-08-27",
-   "unverified": true
+   "cat": "ペーシング管理",
+   "name": "VIP（Ventricular Intrinsic Preference）",
+   "generic": "心室ペーシング抑制（自己房室伝導優先）",
+   "device": "",
+   "scope": "",
+   "note": "名称のみ登録。動作・設定の詳細は後日追記予定。"
+  },
+  {
+   "id": "BIO-Vp-Suppression-AVSH",
+   "maker": "BIOTRONIK",
+   "cat": "ペーシング管理",
+   "name": "Vp Suppression（AVSH）",
+   "generic": "心室ペーシング抑制（自己房室伝導優先）",
+   "device": "",
+   "scope": "",
+   "note": "名称のみ登録。動作・設定の詳細は後日追記予定。"
+  },
+  {
+   "id": "Bos-RYTHMIQ",
+   "maker": "Boston Scientific",
+   "cat": "ペーシング管理",
+   "name": "RYTHMIQ",
+   "generic": "心室ペーシング抑制（自己房室伝導優先）",
+   "device": "",
+   "scope": "",
+   "note": "名称のみ登録。動作・設定の詳細は後日追記予定。"
+  },
+  {
+   "id": "Bos-AV-Search+",
+   "maker": "Boston Scientific",
+   "cat": "ペーシング管理",
+   "name": "AV Search+",
+   "generic": "心室ペーシング抑制（自己房室伝導優先）",
+   "device": "",
+   "scope": "",
+   "note": "名称のみ登録。動作・設定の詳細は後日追記予定。"
+  },
+  {
+   "id": "Mic-SafeR-AAIsafeR",
+   "maker": "MicroPort CRM",
+   "cat": "ペーシング管理",
+   "name": "SafeR（AAIsafeR）",
+   "generic": "心室ペーシング抑制（自己房室伝導優先）",
+   "device": "",
+   "scope": "",
+   "note": "名称のみ登録。動作・設定の詳細は後日追記予定。"
+  },
+  {
+   "id": "Med-加速度センサ-ADL-運動の2ゾ-ン",
+   "maker": "Medtronic",
+   "cat": "レート応答",
+   "name": "加速度センサ（ADL／運動の2ゾーン）",
+   "generic": "レートレスポンス（生理的センサ）",
+   "device": "",
+   "scope": "",
+   "note": "名称のみ登録。動作・設定の詳細は後日追記予定。"
+  },
+  {
+   "id": "Abb-加速度センサ",
+   "maker": "Abbott",
+   "cat": "レート応答",
+   "name": "加速度センサ",
+   "generic": "レートレスポンス（生理的センサ）",
+   "device": "",
+   "scope": "",
+   "note": "名称のみ登録。動作・設定の詳細は後日追記予定。"
+  },
+  {
+   "id": "BIO-CLS-Closed-Loop-Stimulation",
+   "maker": "BIOTRONIK",
+   "cat": "レート応答",
+   "name": "CLS（Closed Loop Stimulation）",
+   "generic": "レートレスポンス（生理的センサ）",
+   "device": "",
+   "scope": "",
+   "note": "名称のみ登録。動作・設定の詳細は後日追記予定。"
+  },
+  {
+   "id": "Bos-Blended-Sensor-加速度-分時換気量",
+   "maker": "Boston Scientific",
+   "cat": "レート応答",
+   "name": "Blended Sensor（加速度＋分時換気量）",
+   "generic": "レートレスポンス（生理的センサ）",
+   "device": "",
+   "scope": "",
+   "note": "名称のみ登録。動作・設定の詳細は後日追記予定。"
+  },
+  {
+   "id": "Mic-Dual-Sensor-加速度-分時換気量",
+   "maker": "MicroPort CRM",
+   "cat": "レート応答",
+   "name": "Dual Sensor（加速度＋分時換気量）",
+   "generic": "レートレスポンス（生理的センサ）",
+   "device": "",
+   "scope": "",
+   "note": "名称のみ登録。動作・設定の詳細は後日追記予定。"
+  },
+  {
+   "id": "Mic-SonR",
+   "maker": "MicroPort CRM",
+   "cat": "レート応答",
+   "name": "SonR",
+   "generic": "レートレスポンス（生理的センサ）",
+   "device": "",
+   "scope": "",
+   "note": "名称のみ登録。動作・設定の詳細は後日追記予定。"
+  },
+  {
+   "id": "Med-Capture-Management-ACM-RVCM-LVCM",
+   "maker": "Medtronic",
+   "cat": "ペーシング管理",
+   "name": "Capture Management（ACM／RVCM／LVCM）",
+   "generic": "自動閾値管理（オートキャプチャ）",
+   "device": "",
+   "scope": "",
+   "note": "名称のみ登録。動作・設定の詳細は後日追記予定。"
+  },
+  {
+   "id": "Abb-AutoCapture",
+   "maker": "Abbott",
+   "cat": "ペーシング管理",
+   "name": "AutoCapture",
+   "generic": "自動閾値管理（オートキャプチャ）",
+   "device": "",
+   "scope": "",
+   "note": "名称のみ登録。動作・設定の詳細は後日追記予定。"
+  },
+  {
+   "id": "Abb-ACap-RVCap-Confirm",
+   "maker": "Abbott",
+   "cat": "ペーシング管理",
+   "name": "ACap・RVCap Confirm",
+   "generic": "自動閾値管理（オートキャプチャ）",
+   "device": "",
+   "scope": "",
+   "note": "名称のみ登録。動作・設定の詳細は後日追記予定。"
+  },
+  {
+   "id": "BIO-Capture-Control-VCC-ACC-ATM",
+   "maker": "BIOTRONIK",
+   "cat": "ペーシング管理",
+   "name": "Capture Control（VCC／ACC）＋ATM",
+   "generic": "自動閾値管理（オートキャプチャ）",
+   "device": "",
+   "scope": "",
+   "note": "名称のみ登録。動作・設定の詳細は後日追記予定。"
+  },
+  {
+   "id": "Bos-Automatic-Capture",
+   "maker": "Boston Scientific",
+   "cat": "ペーシング管理",
+   "name": "Automatic Capture",
+   "generic": "自動閾値管理（オートキャプチャ）",
+   "device": "",
+   "scope": "",
+   "note": "名称のみ登録。動作・設定の詳細は後日追記予定。"
+  },
+  {
+   "id": "Mic-Auto-Threshold-RAAT-RVAT",
+   "maker": "MicroPort CRM",
+   "cat": "ペーシング管理",
+   "name": "Auto-Threshold（RAAT／RVAT）",
+   "generic": "自動閾値管理（オートキャプチャ）",
+   "device": "",
+   "scope": "",
+   "note": "名称のみ登録。動作・設定の詳細は後日追記予定。"
+  },
+  {
+   "id": "Med-AdaptivCRT-EffectivCRT",
+   "maker": "Medtronic",
+   "cat": "CRT",
+   "name": "AdaptivCRT（EffectivCRT）",
+   "generic": "CRT自動最適化（AV/VV）",
+   "device": "",
+   "scope": "",
+   "note": "名称のみ登録。動作・設定の詳細は後日追記予定。"
+  },
+  {
+   "id": "Abb-SyncAV",
+   "maker": "Abbott",
+   "cat": "CRT",
+   "name": "SyncAV",
+   "generic": "CRT自動最適化（AV/VV）",
+   "device": "",
+   "scope": "",
+   "note": "名称のみ登録。動作・設定の詳細は後日追記予定。"
+  },
+  {
+   "id": "Abb-QuickOpt",
+   "maker": "Abbott",
+   "cat": "CRT",
+   "name": "QuickOpt",
+   "generic": "CRT自動最適化（AV/VV）",
+   "device": "",
+   "scope": "",
+   "note": "名称のみ登録。動作・設定の詳細は後日追記予定。"
+  },
+  {
+   "id": "BIO-CRT-AutoAdapt",
+   "maker": "BIOTRONIK",
+   "cat": "CRT",
+   "name": "CRT AutoAdapt",
+   "generic": "CRT自動最適化（AV/VV）",
+   "device": "",
+   "scope": "",
+   "note": "名称のみ登録。動作・設定の詳細は後日追記予定。"
+  },
+  {
+   "id": "Bos-SmartDelay-SmartCRT",
+   "maker": "Boston Scientific",
+   "cat": "CRT",
+   "name": "SmartDelay（SmartCRT）",
+   "generic": "CRT自動最適化（AV/VV）",
+   "device": "",
+   "scope": "",
+   "note": "名称のみ登録。動作・設定の詳細は後日追記予定。"
+  },
+  {
+   "id": "Mic-SonR-SonRtipリ-ド",
+   "maker": "MicroPort CRM",
+   "cat": "CRT",
+   "name": "SonR（SonRtipリード）",
+   "generic": "CRT自動最適化（AV/VV）",
+   "device": "",
+   "scope": "",
+   "note": "名称のみ登録。動作・設定の詳細は後日追記予定。"
+  },
+  {
+   "id": "Med-PR-Logic-Wavelet-SmartShock",
+   "maker": "Medtronic",
+   "cat": "ICD",
+   "name": "PR Logic＋Wavelet（SmartShock）",
+   "generic": "ICD 頻拍鑑別（SVT鑑別）",
+   "device": "",
+   "scope": "",
+   "note": "名称のみ登録。動作・設定の詳細は後日追記予定。"
+  },
+  {
+   "id": "Abb-Morphology-MD-Rate-Branch",
+   "maker": "Abbott",
+   "cat": "ICD",
+   "name": "Morphology（MD）＋Rate Branch",
+   "generic": "ICD 頻拍鑑別（SVT鑑別）",
+   "device": "",
+   "scope": "",
+   "note": "名称のみ登録。動作・設定の詳細は後日追記予定。"
+  },
+  {
+   "id": "BIO-SMART-SMART-Detection",
+   "maker": "BIOTRONIK",
+   "cat": "ICD",
+   "name": "SMART（SMART Detection）",
+   "generic": "ICD 頻拍鑑別（SVT鑑別）",
+   "device": "",
+   "scope": "",
+   "note": "名称のみ登録。動作・設定の詳細は後日追記予定。"
+  },
+  {
+   "id": "Bos-Rhythm-ID-Onset-Stability",
+   "maker": "Boston Scientific",
+   "cat": "ICD",
+   "name": "Rhythm ID（Onset／Stability）",
+   "generic": "ICD 頻拍鑑別（SVT鑑別）",
+   "device": "",
+   "scope": "",
+   "note": "名称のみ登録。動作・設定の詳細は後日追記予定。"
+  },
+  {
+   "id": "Mic-PARAD",
+   "maker": "MicroPort CRM",
+   "cat": "ICD",
+   "name": "PARAD",
+   "generic": "ICD 頻拍鑑別（SVT鑑別）",
+   "device": "",
+   "scope": "",
+   "note": "名称のみ登録。動作・設定の詳細は後日追記予定。"
+  },
+  {
+   "id": "Mic-PARAD+",
+   "maker": "MicroPort CRM",
+   "cat": "ICD",
+   "name": "PARAD+",
+   "generic": "ICD 頻拍鑑別（SVT鑑別）",
+   "device": "",
+   "scope": "",
+   "note": "名称のみ登録。動作・設定の詳細は後日追記予定。"
+  },
+  {
+   "id": "Med-CareLink",
+   "maker": "Medtronic",
+   "cat": "リモート",
+   "name": "CareLink",
+   "generic": "リモートモニタリング",
+   "device": "",
+   "scope": "",
+   "note": "名称のみ登録。動作・設定の詳細は後日追記予定。"
+  },
+  {
+   "id": "Abb-Merlin-net-Merlin-home-myMerlin",
+   "maker": "Abbott",
+   "cat": "リモート",
+   "name": "Merlin.net（Merlin@home／myMerlin）",
+   "generic": "リモートモニタリング",
+   "device": "",
+   "scope": "",
+   "note": "名称のみ登録。動作・設定の詳細は後日追記予定。"
+  },
+  {
+   "id": "BIO-Home-Monitoring",
+   "maker": "BIOTRONIK",
+   "cat": "リモート",
+   "name": "Home Monitoring",
+   "generic": "リモートモニタリング",
+   "device": "",
+   "scope": "",
+   "note": "名称のみ登録。動作・設定の詳細は後日追記予定。"
+  },
+  {
+   "id": "Bos-LATITUDE",
+   "maker": "Boston Scientific",
+   "cat": "リモート",
+   "name": "LATITUDE",
+   "generic": "リモートモニタリング",
+   "device": "",
+   "scope": "",
+   "note": "名称のみ登録。動作・設定の詳細は後日追記予定。"
+  },
+  {
+   "id": "Mic-SmartView-SmartView-Connect",
+   "maker": "MicroPort CRM",
+   "cat": "リモート",
+   "name": "SmartView（SmartView Connect）",
+   "generic": "リモートモニタリング",
+   "device": "",
+   "scope": "",
+   "note": "名称のみ登録。動作・設定の詳細は後日追記予定。"
+  },
+  {
+   "id": "Med-SureScan",
+   "maker": "Medtronic",
+   "cat": "MRI",
+   "name": "SureScan",
+   "generic": "条件付きMRI対応",
+   "device": "",
+   "scope": "",
+   "note": "名称のみ登録。動作・設定の詳細は後日追記予定。"
+  },
+  {
+   "id": "Abb-MRI-Ready-MRI-Activator併用",
+   "maker": "Abbott",
+   "cat": "MRI",
+   "name": "MRI Ready（MRI Activator併用）",
+   "generic": "条件付きMRI対応",
+   "device": "",
+   "scope": "",
+   "note": "名称のみ登録。動作・設定の詳細は後日追記予定。"
+  },
+  {
+   "id": "BIO-ProMRI",
+   "maker": "BIOTRONIK",
+   "cat": "MRI",
+   "name": "ProMRI",
+   "generic": "条件付きMRI対応",
+   "device": "",
+   "scope": "",
+   "note": "名称のみ登録。動作・設定の詳細は後日追記予定。"
+  },
+  {
+   "id": "Bos-ImageReady",
+   "maker": "Boston Scientific",
+   "cat": "MRI",
+   "name": "ImageReady",
+   "generic": "条件付きMRI対応",
+   "device": "",
+   "scope": "",
+   "note": "名称のみ登録。動作・設定の詳細は後日追記予定。"
+  },
+  {
+   "id": "Mic-機種名にMRI表記-専用ブランド名なし",
+   "maker": "MicroPort CRM",
+   "cat": "MRI",
+   "name": "機種名にMRI表記（専用ブランド名なし）",
+   "generic": "条件付きMRI対応",
+   "device": "",
+   "scope": "",
+   "note": "名称のみ登録。動作・設定の詳細は後日追記予定。"
+  },
+  {
+   "id": "Med-CareLink-Encore-2090-SmartSync",
+   "maker": "Medtronic",
+   "cat": "機器",
+   "name": "CareLink（Encore 2090／SmartSync）",
+   "generic": "プログラマ",
+   "device": "",
+   "scope": "",
+   "note": "名称のみ登録。動作・設定の詳細は後日追記予定。"
+  },
+  {
+   "id": "Abb-Merlin-PCS",
+   "maker": "Abbott",
+   "cat": "機器",
+   "name": "Merlin PCS",
+   "generic": "プログラマ",
+   "device": "",
+   "scope": "",
+   "note": "名称のみ登録。動作・設定の詳細は後日追記予定。"
+  },
+  {
+   "id": "BIO-Renamic-ICS-3000",
+   "maker": "BIOTRONIK",
+   "cat": "機器",
+   "name": "Renamic（ICS 3000）",
+   "generic": "プログラマ",
+   "device": "",
+   "scope": "",
+   "note": "名称のみ登録。動作・設定の詳細は後日追記予定。"
+  },
+  {
+   "id": "Bos-ZOOM",
+   "maker": "Boston Scientific",
+   "cat": "機器",
+   "name": "ZOOM",
+   "generic": "プログラマ",
+   "device": "",
+   "scope": "",
+   "note": "名称のみ登録。動作・設定の詳細は後日追記予定。"
+  },
+  {
+   "id": "Bos-LATITUDE-Programming-System",
+   "maker": "Boston Scientific",
+   "cat": "機器",
+   "name": "LATITUDE Programming System",
+   "generic": "プログラマ",
+   "device": "",
+   "scope": "",
+   "note": "名称のみ登録。動作・設定の詳細は後日追記予定。"
+  },
+  {
+   "id": "Mic-Orchestra-Plus",
+   "maker": "MicroPort CRM",
+   "cat": "機器",
+   "name": "Orchestra Plus",
+   "generic": "プログラマ",
+   "device": "",
+   "scope": "",
+   "note": "名称のみ登録。動作・設定の詳細は後日追記予定。"
+  },
+  {
+   "id": "Mic-SmartView",
+   "maker": "MicroPort CRM",
+   "cat": "機器",
+   "name": "SmartView",
+   "generic": "プログラマ",
+   "device": "",
+   "scope": "",
+   "note": "名称のみ登録。動作・設定の詳細は後日追記予定。"
+  },
+  {
+   "id": "Med-Mode-Switch",
+   "maker": "Medtronic",
+   "cat": "ペーシング管理",
+   "name": "Mode Switch",
+   "generic": "モードスイッチ（心房頻拍時の追従回避）",
+   "device": "",
+   "scope": "",
+   "note": "名称のみ登録。動作・設定の詳細は後日追記予定。"
+  },
+  {
+   "id": "Abb-Auto-Mode-Switch-AMS",
+   "maker": "Abbott",
+   "cat": "ペーシング管理",
+   "name": "Auto Mode Switch（AMS）",
+   "generic": "モードスイッチ（心房頻拍時の追従回避）",
+   "device": "",
+   "scope": "",
+   "note": "名称のみ登録。動作・設定の詳細は後日追記予定。"
+  },
+  {
+   "id": "BIO-Mode-Switching-旧-Automatic-Mode-Conversion",
+   "maker": "BIOTRONIK",
+   "cat": "ペーシング管理",
+   "name": "Mode Switching（旧: Automatic Mode Conversion）",
+   "generic": "モードスイッチ（心房頻拍時の追従回避）",
+   "device": "",
+   "scope": "",
+   "note": "名称のみ登録。動作・設定の詳細は後日追記予定。"
+  },
+  {
+   "id": "Bos-Atrial-Tachy-Response-ATR",
+   "maker": "Boston Scientific",
+   "cat": "ペーシング管理",
+   "name": "Atrial Tachy Response（ATR）",
+   "generic": "モードスイッチ（心房頻拍時の追従回避）",
+   "device": "",
+   "scope": "",
+   "note": "名称のみ登録。動作・設定の詳細は後日追記予定。"
+  },
+  {
+   "id": "Mic-Fallback",
+   "maker": "MicroPort CRM",
+   "cat": "ペーシング管理",
+   "name": "Fallback",
+   "generic": "モードスイッチ（心房頻拍時の追従回避）",
+   "device": "",
+   "scope": "",
+   "note": "名称のみ登録。動作・設定の詳細は後日追記予定。"
+  },
+  {
+   "id": "Mic-Mode-Switch",
+   "maker": "MicroPort CRM",
+   "cat": "ペーシング管理",
+   "name": "Mode Switch",
+   "generic": "モードスイッチ（心房頻拍時の追従回避）",
+   "device": "",
+   "scope": "",
+   "note": "名称のみ登録。動作・設定の詳細は後日追記予定。"
+  },
+  {
+   "id": "Med-Reactive-ATP-rATP",
+   "maker": "Medtronic",
+   "cat": "心房治療",
+   "name": "Reactive ATP（rATP）",
+   "generic": "心房ATP（Reactive ATP）",
+   "device": "",
+   "scope": "",
+   "note": "名称のみ登録。動作・設定の詳細は後日追記予定。"
+  },
+  {
+   "id": "Abb-心房ATP-一部ICD-機種依存",
+   "maker": "Abbott",
+   "cat": "心房治療",
+   "name": "心房ATP（一部ICD／機種依存）",
+   "generic": "心房ATP（Reactive ATP）",
+   "device": "",
+   "scope": "",
+   "note": "名称のみ登録。動作・設定の詳細は後日追記予定。"
+  },
+  {
+   "id": "BIO-aATP-Amvia-Solvia世代",
+   "maker": "BIOTRONIK",
+   "cat": "心房治療",
+   "name": "aATP（Amvia／Solvia世代）",
+   "generic": "心房ATP（Reactive ATP）",
+   "device": "",
+   "scope": "",
+   "note": "名称のみ登録。動作・設定の詳細は後日追記予定。"
+  },
+  {
+   "id": "Bos-心房ATP-一部ICD-機種依存",
+   "maker": "Boston Scientific",
+   "cat": "心房治療",
+   "name": "心房ATP（一部ICD／機種依存）",
+   "generic": "心房ATP（Reactive ATP）",
+   "device": "",
+   "scope": "",
+   "note": "名称のみ登録。動作・設定の詳細は後日追記予定。"
+  },
+  {
+   "id": "Med-SelectSecure-3830-ル-メンレス-C315",
+   "maker": "Medtronic",
+   "cat": "CSP",
+   "name": "SelectSecure 3830（ルーメンレス）＋C315",
+   "generic": "His/左脚領域ペーシング（CSP）ツール",
+   "device": "",
+   "scope": "",
+   "note": "名称のみ登録。動作・設定の詳細は後日追記予定。"
+  },
+  {
+   "id": "Med-C304シ-ス",
+   "maker": "Medtronic",
+   "cat": "CSP",
+   "name": "C304シース",
+   "generic": "His/左脚領域ペーシング（CSP）ツール",
+   "device": "",
+   "scope": "",
+   "note": "名称のみ登録。動作・設定の詳細は後日追記予定。"
+  },
+  {
+   "id": "Med-OmniaSecure",
+   "maker": "Medtronic",
+   "cat": "CSP",
+   "name": "OmniaSecure",
+   "generic": "His/左脚領域ペーシング（CSP）ツール",
+   "device": "",
+   "scope": "",
+   "note": "名称のみ登録。動作・設定の詳細は後日追記予定。"
+  },
+  {
+   "id": "Abb-UltiPace-スタイレット式",
+   "maker": "Abbott",
+   "cat": "CSP",
+   "name": "UltiPace（スタイレット式）",
+   "generic": "His/左脚領域ペーシング（CSP）ツール",
+   "device": "",
+   "scope": "",
+   "note": "名称のみ登録。動作・設定の詳細は後日追記予定。"
+  },
+  {
+   "id": "Abb-AVEIR-CSP-開発中",
+   "maker": "Abbott",
+   "cat": "CSP",
+   "name": "AVEIR CSP（開発中）",
+   "generic": "His/左脚領域ペーシング（CSP）ツール",
+   "device": "",
+   "scope": "",
+   "note": "名称のみ登録。動作・設定の詳細は後日追記予定。"
+  },
+  {
+   "id": "BIO-Solia-S-Selectra-3D",
+   "maker": "BIOTRONIK",
+   "cat": "CSP",
+   "name": "Solia S＋Selectra 3D",
+   "generic": "His/左脚領域ペーシング（CSP）ツール",
+   "device": "",
+   "scope": "",
+   "note": "名称のみ登録。動作・設定の詳細は後日追記予定。"
+  },
+  {
+   "id": "Bos-Ingevity+-LBBAP適応",
+   "maker": "Boston Scientific",
+   "cat": "CSP",
+   "name": "Ingevity+（LBBAP適応）",
+   "generic": "His/左脚領域ペーシング（CSP）ツール",
+   "device": "",
+   "scope": "",
+   "note": "名称のみ登録。動作・設定の詳細は後日追記予定。"
+  },
+  {
+   "id": "Med-Micra-VR",
+   "maker": "Medtronic",
+   "cat": "Leadless",
+   "name": "Micra VR",
+   "generic": "リードレスペースメーカ（i2i）",
+   "device": "",
+   "scope": "",
+   "note": "名称のみ登録。動作・設定の詳細は後日追記予定。"
+  },
+  {
+   "id": "Med-AV",
+   "maker": "Medtronic",
+   "cat": "Leadless",
+   "name": "AV",
+   "generic": "リードレスペースメーカ（i2i）",
+   "device": "",
+   "scope": "",
+   "note": "名称のみ登録。動作・設定の詳細は後日追記予定。"
+  },
+  {
+   "id": "Med-AV2-AVは心房の機械的収縮を感知しVDD",
+   "maker": "Medtronic",
+   "cat": "Leadless",
+   "name": "AV2（AVは心房の機械的収縮を感知しVDD）",
+   "generic": "リードレスペースメーカ（i2i）",
+   "device": "",
+   "scope": "",
+   "note": "名称のみ登録。動作・設定の詳細は後日追記予定。"
+  },
+  {
+   "id": "Abb-AVEIR-VR",
+   "maker": "Abbott",
+   "cat": "Leadless",
+   "name": "AVEIR VR",
+   "generic": "リードレスペースメーカ（i2i）",
+   "device": "",
+   "scope": "",
+   "note": "名称のみ登録。動作・設定の詳細は後日追記予定。"
+  },
+  {
+   "id": "Abb-AR",
+   "maker": "Abbott",
+   "cat": "Leadless",
+   "name": "AR",
+   "generic": "リードレスペースメーカ（i2i）",
+   "device": "",
+   "scope": "",
+   "note": "名称のみ登録。動作・設定の詳細は後日追記予定。"
+  },
+  {
+   "id": "Abb-DR-i2i-拍動ごとの機体間通信で房室同期",
+   "maker": "Abbott",
+   "cat": "Leadless",
+   "name": "DR（i2i＝拍動ごとの機体間通信で房室同期）",
+   "generic": "リードレスペースメーカ（i2i）",
+   "device": "",
+   "scope": "",
+   "note": "名称のみ登録。動作・設定の詳細は後日追記予定。"
+  },
+  {
+   "id": "Med-APP-Atrial-Preference-Pacing",
+   "maker": "Medtronic",
+   "cat": "心房治療",
+   "name": "APP（Atrial Preference Pacing）",
+   "generic": "心房オーバードライブ（AF抑制）",
+   "device": "",
+   "scope": "",
+   "note": "名称のみ登録。動作・設定の詳細は後日追記予定。"
+  },
+  {
+   "id": "Abb-AF-Suppression",
+   "maker": "Abbott",
+   "cat": "心房治療",
+   "name": "AF Suppression",
+   "generic": "心房オーバードライブ（AF抑制）",
+   "device": "",
+   "scope": "",
+   "note": "名称のみ登録。動作・設定の詳細は後日追記予定。"
+  },
+  {
+   "id": "Med-T-Wave-Discrimination",
+   "maker": "Medtronic",
+   "cat": "ICD",
+   "name": "T Wave Discrimination",
+   "generic": "T波オーバーセンシング対策",
+   "device": "",
+   "scope": "",
+   "note": "名称のみ登録。動作・設定の詳細は後日追記予定。"
+  },
+  {
+   "id": "Abb-SenseAbility-Shock-Guard",
+   "maker": "Abbott",
+   "cat": "ICD",
+   "name": "SenseAbility（Shock Guard）",
+   "generic": "T波オーバーセンシング対策",
+   "device": "",
+   "scope": "",
+   "note": "名称のみ登録。動作・設定の詳細は後日追記予定。"
+  },
+  {
+   "id": "BIO-High-Pass-Filter",
+   "maker": "BIOTRONIK",
+   "cat": "ICD",
+   "name": "High Pass Filter",
+   "generic": "T波オーバーセンシング対策",
+   "device": "",
+   "scope": "",
+   "note": "名称のみ登録。動作・設定の詳細は後日追記予定。"
+  },
+  {
+   "id": "Bos-Bandpass-Filter",
+   "maker": "Boston Scientific",
+   "cat": "ICD",
+   "name": "Bandpass Filter",
+   "generic": "T波オーバーセンシング対策",
+   "device": "",
+   "scope": "",
+   "note": "名称のみ登録。動作・設定の詳細は後日追記予定。"
+  },
+  {
+   "id": "Mic-Bandpass-Filter",
+   "maker": "MicroPort CRM",
+   "cat": "ICD",
+   "name": "Bandpass Filter",
+   "generic": "T波オーバーセンシング対策",
+   "device": "",
+   "scope": "",
+   "note": "名称のみ登録。動作・設定の詳細は後日追記予定。"
+  },
+  {
+   "id": "Med-Lead-Integrity-Alert-LIA",
+   "maker": "Medtronic",
+   "cat": "ICD",
+   "name": "Lead Integrity Alert（LIA）",
+   "generic": "リードノイズ管理",
+   "device": "",
+   "scope": "",
+   "note": "名称のみ登録。動作・設定の詳細は後日追記予定。"
+  },
+  {
+   "id": "Abb-Secure-Sense",
+   "maker": "Abbott",
+   "cat": "ICD",
+   "name": "Secure Sense",
+   "generic": "リードノイズ管理",
+   "device": "",
+   "scope": "",
+   "note": "名称のみ登録。動作・設定の詳細は後日追記予定。"
+  },
+  {
+   "id": "BIO-RV-lead-monitoring",
+   "maker": "BIOTRONIK",
+   "cat": "ICD",
+   "name": "RV lead monitoring",
+   "generic": "リードノイズ管理",
+   "device": "",
+   "scope": "",
+   "note": "名称のみ登録。動作・設定の詳細は後日追記予定。"
+  },
+  {
+   "id": "Bos-Dynamic-Noise-Algorithm",
+   "maker": "Boston Scientific",
+   "cat": "ICD",
+   "name": "Dynamic Noise Algorithm",
+   "generic": "リードノイズ管理",
+   "device": "",
+   "scope": "",
+   "note": "名称のみ登録。動作・設定の詳細は後日追記予定。"
+  },
+  {
+   "id": "Mic-Stability+",
+   "maker": "MicroPort CRM",
+   "cat": "ICD",
+   "name": "Stability+",
+   "generic": "リードノイズ管理",
+   "device": "",
+   "scope": "",
+   "note": "名称のみ登録。動作・設定の詳細は後日追記予定。"
+  },
+  {
+   "id": "Mic-Acc",
+   "maker": "MicroPort CRM",
+   "cat": "ICD",
+   "name": "Acc",
+   "generic": "リードノイズ管理",
+   "device": "",
+   "scope": "",
+   "note": "名称のみ登録。動作・設定の詳細は後日追記予定。"
+  },
+  {
+   "id": "Med-AdaptivCRT",
+   "maker": "Medtronic",
+   "cat": "CRT",
+   "name": "AdaptivCRT",
+   "generic": "自動AV/VV至適化",
+   "device": "",
+   "scope": "",
+   "note": "名称のみ登録。動作・設定の詳細は後日追記予定。"
+  },
+  {
+   "id": "BIO-Auto-LV-VectorOpt",
+   "maker": "BIOTRONIK",
+   "cat": "CRT",
+   "name": "Auto LV VectorOpt",
+   "generic": "自動AV/VV至適化",
+   "device": "",
+   "scope": "",
+   "note": "名称のみ登録。動作・設定の詳細は後日追記予定。"
+  },
+  {
+   "id": "Bos-SmartDelay",
+   "maker": "Boston Scientific",
+   "cat": "CRT",
+   "name": "SmartDelay",
+   "generic": "自動AV/VV至適化",
+   "device": "",
+   "scope": "",
+   "note": "名称のみ登録。動作・設定の詳細は後日追記予定。"
+  },
+  {
+   "id": "Med-OptiVol",
+   "maker": "Medtronic",
+   "cat": "ICD",
+   "name": "OptiVol",
+   "generic": "胸郭インピーダンス（心不全モニタ）",
+   "device": "",
+   "scope": "",
+   "note": "名称のみ登録。動作・設定の詳細は後日追記予定。"
+  },
+  {
+   "id": "Abb-CorVue",
+   "maker": "Abbott",
+   "cat": "ICD",
+   "name": "CorVue",
+   "generic": "胸郭インピーダンス（心不全モニタ）",
+   "device": "",
+   "scope": "",
+   "note": "名称のみ登録。動作・設定の詳細は後日追記予定。"
+  },
+  {
+   "id": "Bos-Thoracic-impedance",
+   "maker": "Boston Scientific",
+   "cat": "ICD",
+   "name": "Thoracic impedance",
+   "generic": "胸郭インピーダンス（心不全モニタ）",
+   "device": "",
+   "scope": "",
+   "note": "名称のみ登録。動作・設定の詳細は後日追記予定。"
+  },
+  {
+   "id": "Med-Multiple-Point-Pacing",
+   "maker": "Medtronic",
+   "cat": "CRT",
+   "name": "Multiple Point Pacing",
+   "generic": "マルチポイントペーシング（名称）",
+   "device": "",
+   "scope": "",
+   "note": "名称のみ登録。動作・設定の詳細は後日追記予定。"
+  },
+  {
+   "id": "Abb-MultiPoint-Pacing-MPP",
+   "maker": "Abbott",
+   "cat": "CRT",
+   "name": "MultiPoint Pacing（MPP）",
+   "generic": "マルチポイントペーシング（名称）",
+   "device": "",
+   "scope": "",
+   "note": "名称のみ登録。動作・設定の詳細は後日追記予定。"
+  },
+  {
+   "id": "BIO-MultiPole-Pacing",
+   "maker": "BIOTRONIK",
+   "cat": "CRT",
+   "name": "MultiPole Pacing",
+   "generic": "マルチポイントペーシング（名称）",
+   "device": "",
+   "scope": "",
+   "note": "名称のみ登録。動作・設定の詳細は後日追記予定。"
+  },
+  {
+   "id": "Bos-MultiSite-Pacing-MSP",
+   "maker": "Boston Scientific",
+   "cat": "CRT",
+   "name": "MultiSite Pacing（MSP）",
+   "generic": "マルチポイントペーシング（名称）",
+   "device": "",
+   "scope": "",
+   "note": "名称のみ登録。動作・設定の詳細は後日追記予定。"
+  },
+  {
+   "id": "Abb-VIP",
+   "maker": "Abbott",
+   "cat": "ペーシング管理",
+   "name": "VIP",
+   "generic": "心室ペーシング抑制（AVD延長タイプ）",
+   "device": "",
+   "scope": "",
+   "note": "名称のみ登録。動作・設定の詳細は後日追記予定。"
+  },
+  {
+   "id": "BIO-IRSPlus-Positive",
+   "maker": "BIOTRONIK",
+   "cat": "ペーシング管理",
+   "name": "IRSPlus Positive",
+   "generic": "心室ペーシング抑制（AVD延長タイプ）",
+   "device": "",
+   "scope": "",
+   "note": "名称のみ登録。動作・設定の詳細は後日追記予定。"
+  },
+  {
+   "id": "Mic-D-Plus",
+   "maker": "MicroPort CRM",
+   "cat": "ペーシング管理",
+   "name": "D Plus",
+   "generic": "心室ペーシング抑制（AVD延長タイプ）",
+   "device": "",
+   "scope": "",
+   "note": "名称のみ登録。動作・設定の詳細は後日追記予定。"
+  },
+  {
+   "id": "Med-MVP",
+   "maker": "Medtronic",
+   "cat": "ペーシング管理",
+   "name": "MVP",
+   "generic": "心室ペーシング抑制（モード変換タイプ）",
+   "device": "",
+   "scope": "",
+   "note": "名称のみ登録。動作・設定の詳細は後日追記予定。"
+  },
+  {
+   "id": "BIO-VP-Suppression",
+   "maker": "BIOTRONIK",
+   "cat": "ペーシング管理",
+   "name": "VP Suppression",
+   "generic": "心室ペーシング抑制（モード変換タイプ）",
+   "device": "",
+   "scope": "",
+   "note": "名称のみ登録。動作・設定の詳細は後日追記予定。"
+  },
+  {
+   "id": "Mic-Safe-R",
+   "maker": "MicroPort CRM",
+   "cat": "ペーシング管理",
+   "name": "Safe R",
+   "generic": "心室ペーシング抑制（モード変換タイプ）",
+   "device": "",
+   "scope": "",
+   "note": "名称のみ登録。動作・設定の詳細は後日追記予定。"
+  },
+  {
+   "id": "Med-ACM",
+   "maker": "Medtronic",
+   "cat": "ペーシング管理",
+   "name": "ACM",
+   "generic": "心房自動閾値測定",
+   "device": "",
+   "scope": "",
+   "note": "名称のみ登録。動作・設定の詳細は後日追記予定。"
+  },
+  {
+   "id": "Abb-A-CAP-Confirm",
+   "maker": "Abbott",
+   "cat": "ペーシング管理",
+   "name": "A CAP Confirm",
+   "generic": "心房自動閾値測定",
+   "device": "",
+   "scope": "",
+   "note": "名称のみ登録。動作・設定の詳細は後日追記予定。"
+  },
+  {
+   "id": "BIO-ACC",
+   "maker": "BIOTRONIK",
+   "cat": "ペーシング管理",
+   "name": "ACC",
+   "generic": "心房自動閾値測定",
+   "device": "",
+   "scope": "",
+   "note": "名称のみ登録。動作・設定の詳細は後日追記予定。"
+  },
+  {
+   "id": "Bos-Pace-Safe-RAAT",
+   "maker": "Boston Scientific",
+   "cat": "ペーシング管理",
+   "name": "Pace Safe RAAT",
+   "generic": "心房自動閾値測定",
+   "device": "",
+   "scope": "",
+   "note": "名称のみ登録。動作・設定の詳細は後日追記予定。"
+  },
+  {
+   "id": "Mic-RAAT",
+   "maker": "MicroPort CRM",
+   "cat": "ペーシング管理",
+   "name": "RAAT",
+   "generic": "心房自動閾値測定",
+   "device": "",
+   "scope": "",
+   "note": "名称のみ登録。動作・設定の詳細は後日追記予定。"
+  },
+  {
+   "id": "Med-VCM",
+   "maker": "Medtronic",
+   "cat": "ペーシング管理",
+   "name": "VCM",
+   "generic": "心室自動閾値測定",
+   "device": "",
+   "scope": "",
+   "note": "名称のみ登録。動作・設定の詳細は後日追記予定。"
+  },
+  {
+   "id": "Abb-Auto-Capture",
+   "maker": "Abbott",
+   "cat": "ペーシング管理",
+   "name": "Auto Capture",
+   "generic": "心室自動閾値測定",
+   "device": "",
+   "scope": "",
+   "note": "名称のみ登録。動作・設定の詳細は後日追記予定。"
+  },
+  {
+   "id": "BIO-VCC",
+   "maker": "BIOTRONIK",
+   "cat": "ペーシング管理",
+   "name": "VCC",
+   "generic": "心室自動閾値測定",
+   "device": "",
+   "scope": "",
+   "note": "名称のみ登録。動作・設定の詳細は後日追記予定。"
+  },
+  {
+   "id": "Bos-Pace-Safe-RVAC",
+   "maker": "Boston Scientific",
+   "cat": "ペーシング管理",
+   "name": "Pace Safe RVAC",
+   "generic": "心室自動閾値測定",
+   "device": "",
+   "scope": "",
+   "note": "名称のみ登録。動作・設定の詳細は後日追記予定。"
+  },
+  {
+   "id": "Mic-V-Auto-Threshold",
+   "maker": "MicroPort CRM",
+   "cat": "ペーシング管理",
+   "name": "V Auto Threshold",
+   "generic": "心室自動閾値測定",
+   "device": "",
+   "scope": "",
+   "note": "名称のみ登録。動作・設定の詳細は後日追記予定。"
+  },
+  {
+   "id": "Med-Rate-Drop-Response",
+   "maker": "Medtronic",
+   "cat": "レート応答",
+   "name": "Rate Drop Response",
+   "generic": "レートドロップ応答機能",
+   "device": "",
+   "scope": "",
+   "note": "名称のみ登録。動作・設定の詳細は後日追記予定。"
+  },
+  {
+   "id": "Abb-Advanced-Hysteresis",
+   "maker": "Abbott",
+   "cat": "レート応答",
+   "name": "Advanced Hysteresis",
+   "generic": "レートドロップ応答機能",
+   "device": "",
+   "scope": "",
+   "note": "名称のみ登録。動作・設定の詳細は後日追記予定。"
+  },
+  {
+   "id": "BIO-Rate-Fading",
+   "maker": "BIOTRONIK",
+   "cat": "レート応答",
+   "name": "Rate Fading",
+   "generic": "レートドロップ応答機能",
+   "device": "",
+   "scope": "",
+   "note": "名称のみ登録。動作・設定の詳細は後日追記予定。"
+  },
+  {
+   "id": "Bos-Sudden-Brady-Response",
+   "maker": "Boston Scientific",
+   "cat": "レート応答",
+   "name": "Sudden Brady Response",
+   "generic": "レートドロップ応答機能",
+   "device": "",
+   "scope": "",
+   "note": "名称のみ登録。動作・設定の詳細は後日追記予定。"
+  },
+  {
+   "id": "Mic-Acceleration",
+   "maker": "MicroPort CRM",
+   "cat": "レート応答",
+   "name": "Acceleration",
+   "generic": "レートドロップ応答機能",
+   "device": "",
+   "scope": "",
+   "note": "名称のみ登録。動作・設定の詳細は後日追記予定。"
+  },
+  {
+   "id": "Med-MyCareLink-Relay",
+   "maker": "Medtronic",
+   "cat": "リモート",
+   "name": "MyCareLink Relay",
+   "generic": "遠隔モニタリング送信機",
+   "device": "",
+   "scope": "",
+   "note": "名称のみ登録。動作・設定の詳細は後日追記予定。"
+  },
+  {
+   "id": "Abb-Merlin-home",
+   "maker": "Abbott",
+   "cat": "リモート",
+   "name": "Merlin@home",
+   "generic": "遠隔モニタリング送信機",
+   "device": "",
+   "scope": "",
+   "note": "名称のみ登録。動作・設定の詳細は後日追記予定。"
+  },
+  {
+   "id": "BIO-Cardio-Messenger",
+   "maker": "BIOTRONIK",
+   "cat": "リモート",
+   "name": "Cardio Messenger",
+   "generic": "遠隔モニタリング送信機",
+   "device": "",
+   "scope": "",
+   "note": "名称のみ登録。動作・設定の詳細は後日追記予定。"
+  },
+  {
+   "id": "Bos-LATITUDE-Wave-コミュニケ-タ",
+   "maker": "Boston Scientific",
+   "cat": "リモート",
+   "name": "LATITUDE Wave コミュニケータ",
+   "generic": "遠隔モニタリング送信機",
+   "device": "",
+   "scope": "",
+   "note": "名称のみ登録。動作・設定の詳細は後日追記予定。"
+  },
+  {
+   "id": "Mic-スマ-トビュ-コネクト",
+   "maker": "MicroPort CRM",
+   "cat": "リモート",
+   "name": "スマートビューコネクト",
+   "generic": "遠隔モニタリング送信機",
+   "device": "",
+   "scope": "",
+   "note": "名称のみ登録。動作・設定の詳細は後日追記予定。"
+  },
+  {
+   "id": "Med-40J-初回から",
+   "maker": "Medtronic",
+   "cat": "ICD",
+   "name": "40J（初回から）",
+   "generic": "ショック出力（Delivered J）",
+   "device": "",
+   "scope": "",
+   "note": "名称のみ登録。動作・設定の詳細は後日追記予定。"
+  },
+  {
+   "id": "Abb-40J",
+   "maker": "Abbott",
+   "cat": "ICD",
+   "name": "40J",
+   "generic": "ショック出力（Delivered J）",
+   "device": "",
+   "scope": "",
+   "note": "名称のみ登録。動作・設定の詳細は後日追記予定。"
+  },
+  {
+   "id": "BIO-36J",
+   "maker": "BIOTRONIK",
+   "cat": "ICD",
+   "name": "36J",
+   "generic": "ショック出力（Delivered J）",
+   "device": "",
+   "scope": "",
+   "note": "名称のみ登録。動作・設定の詳細は後日追記予定。"
+  },
+  {
+   "id": "Bos-35J-初回から",
+   "maker": "Boston Scientific",
+   "cat": "ICD",
+   "name": "35J（初回から）",
+   "generic": "ショック出力（Delivered J）",
+   "device": "",
+   "scope": "",
+   "note": "名称のみ登録。動作・設定の詳細は後日追記予定。"
+  },
+  {
+   "id": "Mic-約37-38J",
+   "maker": "MicroPort CRM",
+   "cat": "ICD",
+   "name": "約37〜38J",
+   "generic": "ショック出力（Delivered J）",
+   "device": "",
+   "scope": "",
+   "note": "名称のみ登録。動作・設定の詳細は後日追記予定。"
+  },
+  {
+   "id": "Med-10-5秒",
+   "maker": "Medtronic",
+   "cat": "ICD",
+   "name": "10.5秒",
+   "generic": "ICD 充電時間（RRT時）",
+   "device": "",
+   "scope": "",
+   "note": "名称のみ登録。動作・設定の詳細は後日追記予定。"
+  },
+  {
+   "id": "Abb-無し",
+   "maker": "Abbott",
+   "cat": "ICD",
+   "name": "無し",
+   "generic": "ICD 充電時間（RRT時）",
+   "device": "",
+   "scope": "",
+   "note": "名称のみ登録。動作・設定の詳細は後日追記予定。"
+  },
+  {
+   "id": "BIO-12秒",
+   "maker": "BIOTRONIK",
+   "cat": "ICD",
+   "name": "12秒",
+   "generic": "ICD 充電時間（RRT時）",
+   "device": "",
+   "scope": "",
+   "note": "名称のみ登録。動作・設定の詳細は後日追記予定。"
+  },
+  {
+   "id": "Bos-15秒",
+   "maker": "Boston Scientific",
+   "cat": "ICD",
+   "name": "15秒",
+   "generic": "ICD 充電時間（RRT時）",
+   "device": "",
+   "scope": "",
+   "note": "名称のみ登録。動作・設定の詳細は後日追記予定。"
+  },
+  {
+   "id": "Mic-10-13秒",
+   "maker": "MicroPort CRM",
+   "cat": "ICD",
+   "name": "10〜13秒",
+   "generic": "ICD 充電時間（RRT時）",
+   "device": "",
+   "scope": "",
+   "note": "名称のみ登録。動作・設定の詳細は後日追記予定。"
+  },
+  {
+   "id": "Med-TRUE",
+   "maker": "Medtronic",
+   "cat": "ICD",
+   "name": "TRUE",
+   "generic": "ICD Sensing Option",
+   "device": "",
+   "scope": "",
+   "note": "名称のみ登録。動作・設定の詳細は後日追記予定。"
+  },
+  {
+   "id": "Med-INTEGRATED-EV-ICDは3-vectors",
+   "maker": "Medtronic",
+   "cat": "ICD",
+   "name": "INTEGRATED（EV ICDは3 vectors）",
+   "generic": "ICD Sensing Option",
+   "device": "",
+   "scope": "",
+   "note": "名称のみ登録。動作・設定の詳細は後日追記予定。"
+  },
+  {
+   "id": "Abb-TRUE",
+   "maker": "Abbott",
+   "cat": "ICD",
+   "name": "TRUE",
+   "generic": "ICD Sensing Option",
+   "device": "",
+   "scope": "",
+   "note": "名称のみ登録。動作・設定の詳細は後日追記予定。"
+  },
+  {
+   "id": "BIO-TRUE",
+   "maker": "BIOTRONIK",
+   "cat": "ICD",
+   "name": "TRUE",
+   "generic": "ICD Sensing Option",
+   "device": "",
+   "scope": "",
+   "note": "名称のみ登録。動作・設定の詳細は後日追記予定。"
+  },
+  {
+   "id": "Bos-INTEGRATED-S-ICDは-Primary-Secondary-Alternate",
+   "maker": "Boston Scientific",
+   "cat": "ICD",
+   "name": "INTEGRATED（S-ICDは Primary／Secondary／Alternate）",
+   "generic": "ICD Sensing Option",
+   "device": "",
+   "scope": "",
+   "note": "名称のみ登録。動作・設定の詳細は後日追記予定。"
+  },
+  {
+   "id": "Mic-AutoSensitivityControl",
+   "maker": "MicroPort CRM",
+   "cat": "ICD",
+   "name": "AutoSensitivityControl",
+   "generic": "ICD Sensing Option",
+   "device": "",
+   "scope": "",
+   "note": "名称のみ登録。動作・設定の詳細は後日追記予定。"
+  },
+  {
+   "id": "Med-Wavelet-EV-ICDは-Wavelet-Feature-Match",
+   "maker": "Medtronic",
+   "cat": "ICD",
+   "name": "Wavelet（EV ICDは Wavelet・Feature Match）",
+   "generic": "波形識別機能（モルフォロジー）",
+   "device": "",
+   "scope": "",
+   "note": "名称のみ登録。動作・設定の詳細は後日追記予定。"
+  },
+  {
+   "id": "Abb-モ-フォロジ",
+   "maker": "Abbott",
+   "cat": "ICD",
+   "name": "モーフォロジー",
+   "generic": "波形識別機能（モルフォロジー）",
+   "device": "",
+   "scope": "",
+   "note": "名称のみ登録。動作・設定の詳細は後日追記予定。"
+  },
+  {
+   "id": "BIO-MorphMatch",
+   "maker": "BIOTRONIK",
+   "cat": "ICD",
+   "name": "MorphMatch",
+   "generic": "波形識別機能（モルフォロジー）",
+   "device": "",
+   "scope": "",
+   "note": "名称のみ登録。動作・設定の詳細は後日追記予定。"
+  },
+  {
+   "id": "Bos-RhythmID-S-ICDは-INSIGHT",
+   "maker": "Boston Scientific",
+   "cat": "ICD",
+   "name": "RhythmID（S-ICDは INSIGHT）",
+   "generic": "波形識別機能（モルフォロジー）",
+   "device": "",
+   "scope": "",
+   "note": "名称のみ登録。動作・設定の詳細は後日追記予定。"
+  },
+  {
+   "id": "Med-TWOS",
+   "maker": "Medtronic",
+   "cat": "ICD",
+   "name": "TWOS",
+   "generic": "T波識別機能",
+   "device": "",
+   "scope": "",
+   "note": "名称のみ登録。動作・設定の詳細は後日追記予定。"
+  },
+  {
+   "id": "Abb-低周波減衰フィルタ",
+   "maker": "Abbott",
+   "cat": "ICD",
+   "name": "低周波減衰フィルター",
+   "generic": "T波識別機能",
+   "device": "",
+   "scope": "",
+   "note": "名称のみ登録。動作・設定の詳細は後日追記予定。"
+  },
+  {
+   "id": "Bos-S-ICDは-INSIGHT-経静脈ICDは",
+   "maker": "Boston Scientific",
+   "cat": "ICD",
+   "name": "S-ICDは INSIGHT（経静脈ICDは —）",
+   "generic": "T波識別機能",
+   "device": "",
+   "scope": "",
+   "note": "名称のみ登録。動作・設定の詳細は後日追記予定。"
+  },
+  {
+   "id": "Abb-VFTA",
+   "maker": "Abbott",
+   "cat": "ICD",
+   "name": "○（VFTA）",
+   "generic": "Fine VF detection",
+   "device": "",
+   "scope": "",
+   "note": "名称のみ登録。動作・設定の詳細は後日追記予定。"
+  },
+  {
+   "id": "Med-非公開",
+   "maker": "Medtronic",
+   "cat": "ICD",
+   "name": "非公開",
+   "generic": "センシングフィルタ帯域",
+   "device": "",
+   "scope": "",
+   "note": "名称のみ登録。動作・設定の詳細は後日追記予定。"
+  },
+  {
+   "id": "Abb-未公開",
+   "maker": "Abbott",
+   "cat": "ICD",
+   "name": "未公開",
+   "generic": "センシングフィルタ帯域",
+   "device": "",
+   "scope": "",
+   "note": "名称のみ登録。動作・設定の詳細は後日追記予定。"
+  },
+  {
+   "id": "BIO-心房-18Hz",
+   "maker": "BIOTRONIK",
+   "cat": "ICD",
+   "name": "心房 18Hz",
+   "generic": "センシングフィルタ帯域",
+   "device": "",
+   "scope": "",
+   "note": "名称のみ登録。動作・設定の詳細は後日追記予定。"
+  },
+  {
+   "id": "BIO-心室-24-32Hz",
+   "maker": "BIOTRONIK",
+   "cat": "ICD",
+   "name": "心室 24・32Hz",
+   "generic": "センシングフィルタ帯域",
+   "device": "",
+   "scope": "",
+   "note": "名称のみ登録。動作・設定の詳細は後日追記予定。"
+  },
+  {
+   "id": "Bos-20Hz-S-ICDは-3Hz-9Hz-SMART-Pass",
+   "maker": "Boston Scientific",
+   "cat": "ICD",
+   "name": "20Hz（S-ICDは 3Hz・9Hz SMART Pass）",
+   "generic": "センシングフィルタ帯域",
+   "device": "",
+   "scope": "",
+   "note": "名称のみ登録。動作・設定の詳細は後日追記予定。"
+  },
+  {
+   "id": "Mic-20-80Hz",
+   "maker": "MicroPort CRM",
+   "cat": "ICD",
+   "name": "20〜80Hz",
+   "generic": "センシングフィルタ帯域",
+   "device": "",
+   "scope": "",
+   "note": "名称のみ登録。動作・設定の詳細は後日追記予定。"
+  },
+  {
+   "id": "Med",
+   "maker": "Medtronic",
+   "cat": "ICD",
+   "name": "○",
+   "generic": "ATP During Charging",
+   "device": "",
+   "scope": "",
+   "note": "名称のみ登録。動作・設定の詳細は後日追記予定。"
+  },
+  {
+   "id": "Abb",
+   "maker": "Abbott",
+   "cat": "ICD",
+   "name": "○",
+   "generic": "ATP During Charging",
+   "device": "",
+   "scope": "",
+   "note": "名称のみ登録。動作・設定の詳細は後日追記予定。"
+  },
+  {
+   "id": "Med-EV-ICDは-FVT設定で可",
+   "maker": "Medtronic",
+   "cat": "ICD",
+   "name": "○（EV ICDは FVT設定で可）",
+   "generic": "ATP Before Charging",
+   "device": "",
+   "scope": "",
+   "note": "名称のみ登録。動作・設定の詳細は後日追記予定。"
+  },
+  {
+   "id": "BIO-Stableの場合はATP後にcharge",
+   "maker": "BIOTRONIK",
+   "cat": "ICD",
+   "name": "Stableの場合はATP後にcharge",
+   "generic": "ATP Before Charging",
+   "device": "",
+   "scope": "",
+   "note": "名称のみ登録。動作・設定の詳細は後日追記予定。"
+  },
+  {
+   "id": "Bos",
+   "maker": "Boston Scientific",
+   "cat": "ICD",
+   "name": "○",
+   "generic": "ATP Before Charging",
+   "device": "",
+   "scope": "",
+   "note": "名称のみ登録。動作・設定の詳細は後日追記予定。"
+  },
+  {
+   "id": "Mic",
+   "maker": "MicroPort CRM",
+   "cat": "ICD",
+   "name": "○",
+   "generic": "ATP Before Charging",
+   "device": "",
+   "scope": "",
+   "note": "名称のみ登録。動作・設定の詳細は後日追記予定。"
+  },
+  {
+   "id": "Med-50-固定",
+   "maker": "Medtronic",
+   "cat": "ICD",
+   "name": "×（50%固定）",
+   "generic": "チルト変更",
+   "device": "",
+   "scope": "",
+   "note": "名称のみ登録。動作・設定の詳細は後日追記予定。"
+  },
+  {
+   "id": "Abb-DeFT-Response",
+   "maker": "Abbott",
+   "cat": "ICD",
+   "name": "○（DeFT Response）",
+   "generic": "チルト変更",
+   "device": "",
+   "scope": "",
+   "note": "名称のみ登録。動作・設定の詳細は後日追記予定。"
+  },
+  {
+   "id": "BIO-Phase2のみ50-または1-2msのいずれか選択",
+   "maker": "BIOTRONIK",
+   "cat": "ICD",
+   "name": "○（Phase2のみ50%または1/2msのいずれか選択）",
+   "generic": "チルト変更",
+   "device": "",
+   "scope": "",
+   "note": "名称のみ登録。動作・設定の詳細は後日追記予定。"
+  },
+  {
+   "id": "Bos-60-50-固定-S-ICDは50-固定",
+   "maker": "Boston Scientific",
+   "cat": "ICD",
+   "name": "×（60/50%固定。S-ICDは50%固定）",
+   "generic": "チルト変更",
+   "device": "",
+   "scope": "",
+   "note": "名称のみ登録。動作・設定の詳細は後日追記予定。"
+  },
+  {
+   "id": "Med-6回",
+   "maker": "Medtronic",
+   "cat": "ICD",
+   "name": "6回",
+   "generic": "ショック回数",
+   "device": "",
+   "scope": "",
+   "note": "名称のみ登録。動作・設定の詳細は後日追記予定。"
+  },
+  {
+   "id": "Abb-6回",
+   "maker": "Abbott",
+   "cat": "ICD",
+   "name": "6回",
+   "generic": "ショック回数",
+   "device": "",
+   "scope": "",
+   "note": "名称のみ登録。動作・設定の詳細は後日追記予定。"
+  },
+  {
+   "id": "BIO-8回",
+   "maker": "BIOTRONIK",
+   "cat": "ICD",
+   "name": "8回",
+   "generic": "ショック回数",
+   "device": "",
+   "scope": "",
+   "note": "名称のみ登録。動作・設定の詳細は後日追記予定。"
+  },
+  {
+   "id": "Bos-8回-S-ICDは5回",
+   "maker": "Boston Scientific",
+   "cat": "ICD",
+   "name": "8回（S-ICDは5回）",
+   "generic": "ショック回数",
+   "device": "",
+   "scope": "",
+   "note": "名称のみ登録。動作・設定の詳細は後日追記予定。"
+  },
+  {
+   "id": "Mic-6回",
+   "maker": "MicroPort CRM",
+   "cat": "ICD",
+   "name": "6回",
+   "generic": "ショック回数",
+   "device": "",
+   "scope": "",
+   "note": "名称のみ登録。動作・設定の詳細は後日追記予定。"
+  },
+  {
+   "id": "Med-8V-EV-ICDは30V",
+   "maker": "Medtronic",
+   "cat": "ICD",
+   "name": "8V（EV ICDは30V）",
+   "generic": "ATP最大出力",
+   "device": "",
+   "scope": "",
+   "note": "名称のみ登録。動作・設定の詳細は後日追記予定。"
+  },
+  {
+   "id": "Abb-7-5V",
+   "maker": "Abbott",
+   "cat": "ICD",
+   "name": "7.5V",
+   "generic": "ATP最大出力",
+   "device": "",
+   "scope": "",
+   "note": "名称のみ登録。動作・設定の詳細は後日追記予定。"
+  },
+  {
+   "id": "BIO-7-5V-1-5ms固定",
+   "maker": "BIOTRONIK",
+   "cat": "ICD",
+   "name": "7.5V（1.5ms固定）",
+   "generic": "ATP最大出力",
+   "device": "",
+   "scope": "",
+   "note": "名称のみ登録。動作・設定の詳細は後日追記予定。"
+  },
+  {
+   "id": "Bos-7-5V",
+   "maker": "Boston Scientific",
+   "cat": "ICD",
+   "name": "7.5V",
+   "generic": "ATP最大出力",
+   "device": "",
+   "scope": "",
+   "note": "名称のみ登録。動作・設定の詳細は後日追記予定。"
+  },
+  {
+   "id": "Mic-7V固定",
+   "maker": "MicroPort CRM",
+   "cat": "ICD",
+   "name": "7V固定",
+   "generic": "ATP最大出力",
+   "device": "",
+   "scope": "",
+   "note": "名称のみ登録。動作・設定の詳細は後日追記予定。"
+  },
+  {
+   "id": "Med-Smart-mode",
+   "maker": "Medtronic",
+   "cat": "ICD",
+   "name": "Smart mode",
+   "generic": "ATP最適化",
+   "device": "",
+   "scope": "",
+   "note": "名称のみ登録。動作・設定の詳細は後日追記予定。"
+  },
+  {
+   "id": "Med-Switch-back",
+   "maker": "Medtronic",
+   "cat": "ICD",
+   "name": "Switch back",
+   "generic": "ATP最適化",
+   "device": "",
+   "scope": "",
+   "note": "名称のみ登録。動作・設定の詳細は後日追記予定。"
+  },
+  {
+   "id": "Med-iATP-EV-ICDは-Smart-mode",
+   "maker": "Medtronic",
+   "cat": "ICD",
+   "name": "iATP（EV ICDは Smart mode）",
+   "generic": "ATP最適化",
+   "device": "",
+   "scope": "",
+   "note": "名称のみ登録。動作・設定の詳細は後日追記予定。"
+  },
+  {
+   "id": "BIO-ATP-optimization",
+   "maker": "BIOTRONIK",
+   "cat": "ICD",
+   "name": "ATP optimization",
+   "generic": "ATP最適化",
+   "device": "",
+   "scope": "",
+   "note": "名称のみ登録。動作・設定の詳細は後日追記予定。"
+  },
+  {
+   "id": "BIO-Early-ATP-one-shot",
+   "maker": "BIOTRONIK",
+   "cat": "ICD",
+   "name": "Early ATP one shot",
+   "generic": "ATP最適化",
+   "device": "",
+   "scope": "",
+   "note": "名称のみ登録。動作・設定の詳細は後日追記予定。"
+  },
+  {
+   "id": "Mic-AutoSwitch",
+   "maker": "MicroPort CRM",
+   "cat": "ICD",
+   "name": "AutoSwitch",
+   "generic": "ATP最適化",
+   "device": "",
+   "scope": "",
+   "note": "名称のみ登録。動作・設定の詳細は後日追記予定。"
+  },
+  {
+   "id": "BIO",
+   "maker": "BIOTRONIK",
+   "cat": "リモート",
+   "name": "○",
+   "generic": "モバイル遠隔モニタリング",
+   "device": "",
+   "scope": "",
+   "note": "名称のみ登録。動作・設定の詳細は後日追記予定。"
+  },
+  {
+   "id": "Bos-S-ICDは",
+   "maker": "Boston Scientific",
+   "cat": "リモート",
+   "name": "×（S-ICDは○）",
+   "generic": "モバイル遠隔モニタリング",
+   "device": "",
+   "scope": "",
+   "note": "名称のみ登録。動作・設定の詳細は後日追記予定。"
+  },
+  {
+   "id": "Bos-S-ICDは-2",
+   "maker": "Boston Scientific",
+   "cat": "ICD",
+   "name": "○（S-ICDは○）",
+   "generic": "NSVTアラート",
+   "device": "",
+   "scope": "",
+   "note": "名称のみ登録。動作・設定の詳細は後日追記予定。"
+  },
+  {
+   "id": "Med-EV-ICD-Aurora-EV4",
+   "maker": "Medtronic",
+   "cat": "ICD",
+   "name": "EV ICD（Aurora）：EV4",
+   "generic": "EV-ICD と S-ICD の比較",
+   "device": "",
+   "scope": "",
+   "note": "名称のみ登録。動作・設定の詳細は後日追記予定。"
+  },
+  {
+   "id": "Med-64-50-5-13-4mm",
+   "maker": "Medtronic",
+   "cat": "ICD",
+   "name": "64×50.5×13.4mm",
+   "generic": "EV-ICD と S-ICD の比較",
+   "device": "",
+   "scope": "",
+   "note": "名称のみ登録。動作・設定の詳細は後日追記予定。"
+  },
+  {
+   "id": "Med-77g",
+   "maker": "Medtronic",
+   "cat": "ICD",
+   "name": "77g",
+   "generic": "EV-ICD と S-ICD の比較",
+   "device": "",
+   "scope": "",
+   "note": "名称のみ登録。動作・設定の詳細は後日追記予定。"
+  },
+  {
+   "id": "Med-11-7年",
+   "maker": "Medtronic",
+   "cat": "ICD",
+   "name": "11.7年",
+   "generic": "EV-ICD と S-ICD の比較",
+   "device": "",
+   "scope": "",
+   "note": "名称のみ登録。動作・設定の詳細は後日追記予定。"
+  },
+  {
+   "id": "Med-40J",
+   "maker": "Medtronic",
+   "cat": "ICD",
+   "name": "40J",
+   "generic": "EV-ICD と S-ICD の比較",
+   "device": "",
+   "scope": "",
+   "note": "名称のみ登録。動作・設定の詳細は後日追記予定。"
+  },
+  {
+   "id": "Med-1-5T-3-0T",
+   "maker": "Medtronic",
+   "cat": "ICD",
+   "name": "1.5T・3.0T",
+   "generic": "EV-ICD と S-ICD の比較",
+   "device": "",
+   "scope": "",
+   "note": "名称のみ登録。動作・設定の詳細は後日追記予定。"
+  },
+  {
+   "id": "Med-3-vectors",
+   "maker": "Medtronic",
+   "cat": "ICD",
+   "name": "3 vectors",
+   "generic": "EV-ICD と S-ICD の比較",
+   "device": "",
+   "scope": "",
+   "note": "名称のみ登録。動作・設定の詳細は後日追記予定。"
+  },
+  {
+   "id": "Bos-S-ICD-EMBLEM-SQ-1-非標準型",
+   "maker": "Boston Scientific",
+   "cat": "ICD",
+   "name": "S-ICD（EMBLEM）：SQ-1（非標準型）",
+   "generic": "EV-ICD と S-ICD の比較",
+   "device": "",
+   "scope": "",
+   "note": "名称のみ登録。動作・設定の詳細は後日追記予定。"
+  },
+  {
+   "id": "Bos-83-1-69-1-12-7mm",
+   "maker": "Boston Scientific",
+   "cat": "ICD",
+   "name": "83.1×69.1×12.7mm",
+   "generic": "EV-ICD と S-ICD の比較",
+   "device": "",
+   "scope": "",
+   "note": "名称のみ登録。動作・設定の詳細は後日追記予定。"
+  },
+  {
+   "id": "Bos-130g",
+   "maker": "Boston Scientific",
+   "cat": "ICD",
+   "name": "130g",
+   "generic": "EV-ICD と S-ICD の比較",
+   "device": "",
+   "scope": "",
+   "note": "名称のみ登録。動作・設定の詳細は後日追記予定。"
+  },
+  {
+   "id": "Bos-8-7年",
+   "maker": "Boston Scientific",
+   "cat": "ICD",
+   "name": "8.7年",
+   "generic": "EV-ICD と S-ICD の比較",
+   "device": "",
+   "scope": "",
+   "note": "名称のみ登録。動作・設定の詳細は後日追記予定。"
+  },
+  {
+   "id": "Bos-80J",
+   "maker": "Boston Scientific",
+   "cat": "ICD",
+   "name": "80J",
+   "generic": "EV-ICD と S-ICD の比較",
+   "device": "",
+   "scope": "",
+   "note": "名称のみ登録。動作・設定の詳細は後日追記予定。"
+  },
+  {
+   "id": "Bos-1-5T",
+   "maker": "Boston Scientific",
+   "cat": "ICD",
+   "name": "1.5T",
+   "generic": "EV-ICD と S-ICD の比較",
+   "device": "",
+   "scope": "",
+   "note": "名称のみ登録。動作・設定の詳細は後日追記予定。"
   }
  ]
 }

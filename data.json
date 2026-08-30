@@ -6981,6 +6981,266 @@
    "maker": "General",
    "short": "刺激を出してから心筋の興奮が始まるまでの遅れ。電極が梗塞部位や線維化した部位にあると長くなる。CRTでは左室を先行させてVVディレイを補正する。",
    "tags": "Latency Latency latency 伝導遅延 梗塞部位 線維化 VVディレイ"
+  },
+  {
+   "term": "チルト変更",
+   "en": "Tilt programmability",
+   "abbr": "",
+   "cat": "ICD",
+   "device": "ICD",
+   "maker": "General",
+   "short": "除細動波形の傾斜率（チルト）を変更できるかどうか。多くの機種は50%固定だが、AbbottはDeFT Responseでリードインピーダンスに応じてPhase1・2の持続を適正化し、BIOTRONIKはPhase2のみ50%または1/2msを選べる。高除細動閾値の症例で選択肢になる。",
+   "tags": "ICD / General / tilt / DeFT Response / 傾斜率 固定tilt 可変tilt 高DFT"
+  },
+  {
+   "term": "DeFT Response",
+   "en": "DeFT Response",
+   "abbr": "",
+   "cat": "ICD",
+   "device": "ICD",
+   "maker": "Abbott",
+   "short": "Abbottのショック波形調整機能。ショックリードのインピーダンスに応じてPhase 1と Phase 2の持続時間が適正化される。チルトを変更できる数少ない機能で、高除細動閾値の症例に用いる。",
+   "tags": "Manufacturer / ICD / Abbott / DeFT Response tilt チルト Phase1 Phase2 高DFT"
+  },
+  {
+   "term": "Fine VF detection",
+   "en": "Fine VF detection",
+   "abbr": "",
+   "cat": "ICD",
+   "device": "ICD",
+   "maker": "Abbott",
+   "short": "振幅の小さい心室細動波を検出する機能。AbbottがVFTAとして搭載する。細動波が微小になるとアンダーセンシングで検出が遅れるため、これを補う。",
+   "tags": "Manufacturer / ICD / Abbott / VFTA fine VF detection 微小細動波 アンダーセンシング"
+  },
+  {
+   "term": "ATP Before Charging",
+   "en": "ATP before charging",
+   "abbr": "",
+   "cat": "ICD",
+   "device": "ICD",
+   "maker": "General",
+   "short": "充電を始める前にATPを行い、停止すれば充電自体を回避する方式。充電中に行うATP During Chargingと区別する。電池消耗を抑えられる利点がある。",
+   "tags": "ICD / General / ATP before charging 充電前 無痛停止 電池消耗"
+  },
+  {
+   "term": "Switch back",
+   "en": "Switch back",
+   "abbr": "",
+   "cat": "ICD",
+   "device": "ICD",
+   "maker": "Medtronic",
+   "short": "MedtronicのATP最適化機能。設定したATPで停止しなかった場合に、以前有効だった刺激方法へ戻す。iATPやSmart modeと組み合わせて用いる。",
+   "tags": "Manufacturer / ICD / Medtronic / switch back ATP最適化 Smart mode iATP"
+  },
+  {
+   "term": "Early ATP one shot",
+   "en": "Early ATP one shot",
+   "abbr": "",
+   "cat": "ICD",
+   "device": "ICD",
+   "maker": "BIOTRONIK",
+   "short": "BIOTRONIKのATP機能。検出の早い段階で1回だけATPを行い、無痛での停止を狙う。ATP optimizationと併せて搭載される。",
+   "tags": "Manufacturer / ICD / BIOTRONIK / early ATP one shot ATP optimization"
+  },
+  {
+   "term": "MorphMatch",
+   "en": "MorphMatch",
+   "abbr": "",
+   "cat": "ICD",
+   "device": "ICD",
+   "maker": "BIOTRONIK",
+   "short": "BIOTRONIKの波形識別機能。洞調律時のテンプレートと頻拍時のQRS波形の一致度を比較し、SVTとVTを鑑別する。SMARTと組み合わせて判定する。",
+   "tags": "Manufacturer / ICD / BIOTRONIK / MorphMatch モルフォロジー 波形識別 SMART"
+  },
+  {
+   "term": "SVC Discrimination",
+   "en": "SVC Discrimination",
+   "abbr": "",
+   "cat": "ICD",
+   "device": "ICD",
+   "maker": "Abbott",
+   "short": "AbbottのSVT鑑別アルゴリズムの名称。心房と心室の関係やモルフォロジーを組み合わせて上室頻拍を除外する。",
+   "tags": "Manufacturer / ICD / Abbott / SVC Discrimination SVT鑑別 モーフォロジー"
+  },
+  {
+   "term": "AutoSensitivityControl",
+   "en": "Auto Sensitivity Control",
+   "abbr": "",
+   "cat": "センシング",
+   "device": "ICD",
+   "maker": "MicroPort CRM",
+   "short": "MicroPort CRMのセンシング方式。感度を自動で調整し、心室細動の微小な波も捉えつつT波の誤検出を抑える。他社のTRUE／INTEGRATEDという構成の選択とは考え方が異なる。",
+   "tags": "Manufacturer / ICD / MicroPort CRM / auto sensitivity control 自動感度 センシングオプション"
+  },
+  {
+   "term": "VFTA",
+   "en": "Ventricular Fibrillation Therapy Adjustment",
+   "abbr": "VFTA",
+   "cat": "ICD",
+   "device": "ICD",
+   "maker": "Abbott",
+   "short": "AbbottのFine VF detectionに関する機能名。微小な心室細動波の検出を補助する。",
+   "tags": "Manufacturer / ICD / Abbott / VFTA fine VF detection"
+  },
+  {
+   "term": "Sudden Brady Response",
+   "en": "Sudden Brady Response",
+   "abbr": "",
+   "cat": "レート応答",
+   "device": "PM",
+   "maker": "Boston Scientific",
+   "short": "Boston Scientificのレートドロップ応答機能。急激な心拍低下を検出すると一定時間高めのレートでペーシングし、血管迷走神経性失神の心抑制型に備える。",
+   "tags": "Manufacturer / PM / Boston Scientific / sudden brady response レートドロップ 失神"
+  },
+  {
+   "term": "Rate Fading",
+   "en": "Rate Fading",
+   "abbr": "",
+   "cat": "レート応答",
+   "device": "PM",
+   "maker": "BIOTRONIK",
+   "short": "BIOTRONIKのレートドロップ応答機能。急な徐脈を検出して一時的にレートを引き上げる。",
+   "tags": "Manufacturer / PM / BIOTRONIK / rate fading レートドロップ 徐脈"
+  },
+  {
+   "term": "Advanced Hysteresis",
+   "en": "Advanced Hysteresis",
+   "abbr": "",
+   "cat": "レート応答",
+   "device": "PM",
+   "maker": "Abbott",
+   "short": "Abbottのレートドロップ応答／ヒステリシス機能。自己脈を優先しつつ、急な徐脈時にはレートを引き上げる。",
+   "tags": "Manufacturer / PM / Abbott / advanced hysteresis ヒステリシス レートドロップ"
+  },
+  {
+   "term": "Pace Safe",
+   "en": "PaceSafe (RAAT / RVAC)",
+   "abbr": "",
+   "cat": "ペーシング",
+   "device": "PM / ICD / CRT",
+   "maker": "Boston Scientific",
+   "short": "Boston Scientificの自動閾値管理機能。心房はRAAT、右室はRVACとして独立に閾値を測定し出力を調整する。",
+   "tags": "Manufacturer / PM / ICD / CRT / Boston Scientific / PaceSafe RAAT RVAC 自動閾値"
+  },
+  {
+   "term": "D Plus",
+   "en": "D Plus",
+   "abbr": "",
+   "cat": "ペーシング管理",
+   "device": "PM",
+   "maker": "MicroPort CRM",
+   "short": "MicroPort CRMのAVディレイ延長型の心室ペーシング抑制機能。自己房室伝導を探して不要な右室ペーシングを避ける。モード変換型のSafeRとは方式が異なる。",
+   "tags": "Manufacturer / PM / MicroPort CRM / D Plus AVD延長 心室ペーシング抑制 SafeR"
+  },
+  {
+   "term": "IRSPlus",
+   "en": "Intrinsic Rhythm Support plus (Positive)",
+   "abbr": "",
+   "cat": "ペーシング管理",
+   "device": "PM",
+   "maker": "BIOTRONIK",
+   "short": "BIOTRONIKのAVディレイ延長型の心室ペーシング抑制機能。IRSplus Positiveとして搭載される。モード変換型のVp Suppressionとは別方式。",
+   "tags": "Manufacturer / PM / BIOTRONIK / IRSplus Positive AVD延長 Vp Suppression"
+  },
+  {
+   "term": "Explant表示",
+   "en": "Explant indicator",
+   "abbr": "",
+   "cat": "電池",
+   "device": "PM / ICD / CRT",
+   "maker": "Boston Scientific",
+   "short": "Boston Scientificの電池表示のひとつ。この表示から3カ月以内の交換が求められる。他社のERIからEOSまでの期間に相当する。",
+   "tags": "Battery / Boston Scientific / explant ERI EOS 交換時期"
+  },
+  {
+   "term": "EV4コネクタ",
+   "en": "EV4 connector",
+   "abbr": "EV4",
+   "cat": "リード",
+   "device": "ICD",
+   "maker": "Medtronic",
+   "short": "EV-ICD（Aurora）専用のリードコネクタ規格。胸骨下に留置する血管外リードに用いる。DF-4やDF-1とは互換性がない。",
+   "tags": "Lead / ICD / Medtronic / EV4 EV-ICD Aurora 胸骨下 血管外"
+  },
+  {
+   "term": "SQ-1コネクタ",
+   "en": "SQ-1 connector",
+   "abbr": "SQ-1",
+   "cat": "リード",
+   "device": "ICD",
+   "maker": "Boston Scientific",
+   "short": "S-ICD（EMBLEM）に用いる非標準型のリードコネクタ。皮下植込み型電極（3501）を接続する。",
+   "tags": "Lead / ICD / Boston Scientific / SQ-1 S-ICD EMBLEM 皮下 非標準"
+  },
+  {
+   "term": "Feature Match",
+   "en": "Feature Match",
+   "abbr": "",
+   "cat": "ICD",
+   "device": "ICD",
+   "maker": "Medtronic",
+   "short": "MedtronicのEV-ICDで用いる波形識別機能。Waveletと併せてSVT鑑別に使う。",
+   "tags": "Manufacturer / ICD / Medtronic / Feature Match Wavelet EV-ICD 波形識別"
+  },
+  {
+   "term": "低周波減衰フィルター",
+   "en": "Low-frequency attenuation filter",
+   "abbr": "",
+   "cat": "センシング",
+   "device": "ICD",
+   "maker": "Abbott",
+   "short": "AbbottのT波識別に用いるフィルタ。低周波成分を減衰させてT波オーバーセンシングを抑える。",
+   "tags": "Manufacturer / ICD / Abbott / 低周波減衰 フィルタ TWOS T波"
+  },
+  {
+   "term": "Thoracic Impedance（BIOTRONIK）",
+   "en": "Thoracic Impedance",
+   "abbr": "",
+   "cat": "フォロー",
+   "device": "PM / CRT",
+   "maker": "BIOTRONIK",
+   "short": "BIOTRONIKの心不全マネジメント機能。胸郭インピーダンスの変化から体液貯留を推定する。MedtronicのOptiVolに相当する。",
+   "tags": "Manufacturer / BIOTRONIK / thoracic impedance 胸郭インピーダンス 心不全 OptiVol"
+  },
+  {
+   "term": "Cardio Messenger",
+   "en": "CardioMessenger",
+   "abbr": "",
+   "cat": "リモート",
+   "device": "PM / ICD / CRT",
+   "maker": "BIOTRONIK",
+   "short": "BIOTRONIKのリモートモニタリング送信機。Home Monitoringのデータを毎日自動送信する。",
+   "tags": "Manufacturer / BIOTRONIK / CardioMessenger Home Monitoring 送信機 遠隔"
+  },
+  {
+   "term": "MyCareLink Relay",
+   "en": "MyCareLink Relay",
+   "abbr": "",
+   "cat": "リモート",
+   "device": "PM / ICD / CRT",
+   "maker": "Medtronic",
+   "short": "Medtronicのリモートモニタリング送信機。CareLinkへデータを中継する設置型の機器。",
+   "tags": "Manufacturer / Medtronic / MyCareLink Relay CareLink 送信機 遠隔"
+  },
+  {
+   "term": "LATITUDE コミュニケータ",
+   "en": "LATITUDE Communicator",
+   "abbr": "",
+   "cat": "リモート",
+   "device": "PM / ICD / CRT",
+   "maker": "Boston Scientific",
+   "short": "Boston ScientificのLATITUDE用送信機。LATITUDE Waveコミュニケータとして提供される。",
+   "tags": "Manufacturer / Boston Scientific / LATITUDE communicator 送信機 遠隔"
+  },
+  {
+   "term": "スマートビューコネクト",
+   "en": "SmartView Connect",
+   "abbr": "",
+   "cat": "リモート",
+   "device": "PM / ICD / CRT",
+   "maker": "MicroPort CRM",
+   "short": "MicroPort CRMのリモートモニタリング送信機。SmartViewプラットフォームへデータを送る。",
+   "tags": "Manufacturer / MicroPort CRM / SmartView Connect 送信機 遠隔"
   }
  ],
  "feats": [
@@ -7203,6 +7463,358 @@
    "bsx": "MultiSite Pacing（MSP）",
    "mcp": "—",
    "note": "1本の四極LVリードの2点から刺激する各社機能。選択できる極性数はメーカーで異なる。"
+  },
+  {
+   "fn": "代表機種（ペースメーカ DR）",
+   "en": "Representative DR pacemaker",
+   "cat": "製品",
+   "mdt": "Azure XT（W2DR01）",
+   "abt": "Assurity MRI（PM2272）",
+   "bio": "Amvia Sky（Amvia Sky DR-T）",
+   "bsx": "ACCOLADE MRI（L311 / L331）",
+   "mcp": "ALIZEA（TPM020C）",
+   "note": "デバイス比較表（提供資料）より。デュアルチャンバの代表機種。"
+  },
+  {
+   "fn": "本体サイズ・質量・容積（PM DR）",
+   "en": "Device size / weight / volume",
+   "cat": "製品",
+   "mdt": "50.8×46.6×7.4mm／22.5g／12.75cm³",
+   "abt": "51×47×6.7mm／19.6g／10.7cm³",
+   "bio": "48×44×6.5mm／23.2g／11cm³",
+   "bsx": "44.5×50.2×7.5mm／24.8g／12.2cm³",
+   "mcp": "54.3×45.5×6.1mm／24.2g／10.95cm³",
+   "note": "デバイス比較表（提供資料）より。ACCOLADEはL311/L331で寸法が異なる（44.5×58.8×7.5mm／29.1g／14.2cm³）。"
+  },
+  {
+   "fn": "電池寿命（PM DR）",
+   "en": "Projected longevity",
+   "cat": "電池",
+   "mdt": "10.1年",
+   "abt": "9.4年",
+   "bio": "10.5年",
+   "bsx": "7.6／12.1年",
+   "mcp": "9.3年",
+   "note": "デバイス比較表（提供資料）より。条件はメーカーごとに異なるため単純比較はできない。"
+  },
+  {
+   "fn": "償還価格・保険区分（PM DR）",
+   "en": "Reimbursement price / category",
+   "cat": "製品",
+   "mdt": "730,000円／デュアルチャンバⅤ型",
+   "abt": "516,000円／デュアルチャンバⅣ型",
+   "bio": "730,000円／デュアルチャンバⅤ型",
+   "bsx": "516,000円／デュアルチャンバⅣ型",
+   "mcp": "516,000円／デュアルチャンバⅣ型",
+   "note": "デバイス比較表（提供資料）より"
+  },
+  {
+   "fn": "心室ペーシング抑制（AVD延長タイプ）",
+   "en": "AV delay extension type",
+   "cat": "ペーシング管理",
+   "mdt": "Search AV+",
+   "abt": "VIP",
+   "bio": "IRSPlus Positive",
+   "bsx": "AV Search+",
+   "mcp": "D Plus",
+   "note": "デバイス比較表（提供資料）より。AVディレイを一時的に延長して自己房室伝導を探す方式。"
+  },
+  {
+   "fn": "心室ペーシング抑制（モード変換タイプ）",
+   "en": "Mode conversion type",
+   "cat": "ペーシング管理",
+   "mdt": "MVP",
+   "abt": "—",
+   "bio": "VP Suppression",
+   "bsx": "RYTHMIQ",
+   "mcp": "Safe R",
+   "note": "デバイス比較表（提供資料）より。AAI(R)＋心室バックアップで動作し、必要時にDDD(R)へ切り替える方式。Abbottは搭載なし。"
+  },
+  {
+   "fn": "心房自動閾値測定",
+   "en": "Atrial automatic threshold",
+   "cat": "ペーシング管理",
+   "mdt": "ACM",
+   "abt": "A CAP Confirm",
+   "bio": "ACC",
+   "bsx": "Pace Safe RAAT",
+   "mcp": "RAAT",
+   "note": "デバイス比較表（提供資料）より"
+  },
+  {
+   "fn": "心室自動閾値測定",
+   "en": "Ventricular automatic threshold",
+   "cat": "ペーシング管理",
+   "mdt": "VCM",
+   "abt": "Auto Capture",
+   "bio": "VCC",
+   "bsx": "Pace Safe RVAC",
+   "mcp": "V Auto Threshold",
+   "note": "デバイス比較表（提供資料）より"
+  },
+  {
+   "fn": "レートドロップ応答機能",
+   "en": "Rate drop response",
+   "cat": "レート応答",
+   "mdt": "Rate Drop Response",
+   "abt": "Advanced Hysteresis",
+   "bio": "Rate Fading",
+   "bsx": "Sudden Brady Response",
+   "mcp": "Acceleration",
+   "note": "デバイス比較表（提供資料）より。急な徐脈を検出して一定時間高めのレートで刺激する。血管迷走神経性失神の心抑制型で用いる。"
+  },
+  {
+   "fn": "心不全マネジメント（HFモニタ）",
+   "en": "Heart failure management",
+   "cat": "フォロー",
+   "mdt": "OptiVol 2.0",
+   "abt": "—",
+   "bio": "Thoracic Impedance",
+   "bsx": "Heart Rate Variability",
+   "mcp": "—",
+   "note": "デバイス比較表（提供資料）より。ペースメーカ世代での搭載状況。ICD世代では別の指標を搭載する機種がある。"
+  },
+  {
+   "fn": "遠隔モニタリング送信機",
+   "en": "Remote monitoring transmitter",
+   "cat": "リモート",
+   "mdt": "MyCareLink Relay",
+   "abt": "Merlin@home",
+   "bio": "Cardio Messenger",
+   "bsx": "LATITUDE Wave コミュニケータ",
+   "mcp": "スマートビューコネクト",
+   "note": "デバイス比較表（提供資料）より。5社ともアンテナ無線に対応。プラットフォーム名とは別に送信機の製品名がある。"
+  },
+  {
+   "fn": "ERIからEOSまでの期間",
+   "en": "ERI to EOS interval",
+   "cat": "電池",
+   "mdt": "3カ月",
+   "abt": "6カ月",
+   "bio": "6カ月",
+   "bsx": "3カ月",
+   "mcp": "3カ月",
+   "note": "デバイス比較表（提供資料）より。Bostonは Explant 表示から3カ月以内の交換。この期間内に計画的な交換を行う。"
+  },
+  {
+   "fn": "バックアップ作動（リセット時）",
+   "en": "Backup / reset mode",
+   "cat": "トラブル",
+   "mdt": "VVI／65ppm／6.0V・1.5ms",
+   "abt": "VVI／67.5ppm／5.0V・0.6ms／感度2.0mV／Uni",
+   "bio": "DDI・VVI／70ppm／4.8V・1.0ms／AVD 160ms／Uni",
+   "bsx": "VVI／72.5ppm／5.0V・1.0ms／RV感度0.25mV／Uni",
+   "mcp": "VVI／70ppm／5.0V・0.5ms／RV感度2.2mV／Uni",
+   "note": "デバイス比較表（提供資料）より。強い電磁干渉などでリセットされた際の動作。検脈値が発見の手がかりになる。"
+  },
+  {
+   "fn": "代表機種（ICD DR）",
+   "en": "Representative DR ICD",
+   "cat": "製品",
+   "mdt": "Cobalt XT DR／EV ICD（Aurora）",
+   "abt": "Gallant DR",
+   "bio": "Acticor Sky DR-T",
+   "bsx": "RESONATE DR／S-ICD（EMBLEM）",
+   "mcp": "ULYS DR・VR",
+   "note": "2026年2月現在 販売中ICDの比較表（提供資料）より"
+  },
+  {
+   "fn": "ICDラインナップ（コネクタ）",
+   "en": "ICD connector lineup",
+   "cat": "製品",
+   "mdt": "DF-4／DF-1（EV ICDはEV4）",
+   "abt": "DF-4／DF-1",
+   "bio": "DF-4",
+   "bsx": "DF-4／DF-1（S-ICDはSQ-1）",
+   "mcp": "DR SR DF-4／IS-1、DR SR DF-1／IS-1",
+   "note": "2026年2月現在 販売中ICDの比較表（提供資料）より"
+  },
+  {
+   "fn": "ICD電池寿命（2.0V 500Ω）",
+   "en": "ICD longevity",
+   "cat": "電池",
+   "mdt": "0%ペーシング 12.3年／100%ペーシング 9.8年",
+   "abt": "10.4年／8.3年",
+   "bio": "14.25年／11.57年",
+   "bsx": "15.2年／13.1年",
+   "mcp": "17.5年／14.7年",
+   "note": "2026年2月現在 販売中ICDの比較表（提供資料）より。電池寿命の条件は各社で多少異なる。"
+  },
+  {
+   "fn": "ショック出力（Delivered J）",
+   "en": "Delivered shock energy",
+   "cat": "ICD",
+   "mdt": "40J（初回から）",
+   "abt": "40J",
+   "bio": "36J",
+   "bsx": "35J（初回から）",
+   "mcp": "約37〜38J",
+   "note": "2026年2月現在 販売中ICDの比較表（提供資料）より。Stored J は Medtronic 47J／Boston 41J／BIOTRONIK 45J／MicroPort 42J。S-ICDは80J。"
+  },
+  {
+   "fn": "ICD 充電時間（RRT時）",
+   "en": "Charge time at RRT",
+   "cat": "ICD",
+   "mdt": "10.5秒",
+   "abt": "無し",
+   "bio": "12秒",
+   "bsx": "15秒",
+   "mcp": "10〜13秒",
+   "note": "2026年2月現在 販売中ICDの比較表（提供資料）より"
+  },
+  {
+   "fn": "ICD Sensing Option",
+   "en": "Sensing option",
+   "cat": "ICD",
+   "mdt": "TRUE／INTEGRATED（EV ICDは3 vectors）",
+   "abt": "TRUE",
+   "bio": "TRUE",
+   "bsx": "INTEGRATED（S-ICDは Primary／Secondary／Alternate）",
+   "mcp": "AutoSensitivityControl",
+   "note": "2026年2月現在 販売中ICDの比較表（提供資料）より"
+  },
+  {
+   "fn": "波形識別機能（モルフォロジー）",
+   "en": "Morphology discrimination",
+   "cat": "ICD",
+   "mdt": "Wavelet（EV ICDは Wavelet・Feature Match）",
+   "abt": "モーフォロジー",
+   "bio": "MorphMatch",
+   "bsx": "RhythmID（S-ICDは INSIGHT）",
+   "mcp": "×",
+   "note": "2026年2月現在 販売中ICDの比較表（提供資料）より。MicroPortは非搭載。"
+  },
+  {
+   "fn": "T波識別機能",
+   "en": "T-wave discrimination",
+   "cat": "ICD",
+   "mdt": "TWOS",
+   "abt": "低周波減衰フィルター",
+   "bio": "×",
+   "bsx": "S-ICDは INSIGHT（経静脈ICDは —）",
+   "mcp": "×",
+   "note": "2026年2月現在 販売中ICDの比較表（提供資料）より。T波オーバーセンシングを識別する機能の搭載状況。"
+  },
+  {
+   "fn": "Fine VF detection",
+   "en": "Fine VF detection",
+   "cat": "ICD",
+   "mdt": "×",
+   "abt": "○（VFTA）",
+   "bio": "×",
+   "bsx": "×",
+   "mcp": "×",
+   "note": "2026年2月現在 販売中ICDの比較表（提供資料）より。細かい心室細動波を検出する機能。Abbottのみ搭載。"
+  },
+  {
+   "fn": "センシングフィルタ帯域",
+   "en": "Sensing filter bandwidth",
+   "cat": "ICD",
+   "mdt": "非公開",
+   "abt": "未公開",
+   "bio": "心房 18Hz／心室 24・32Hz",
+   "bsx": "20Hz（S-ICDは 3Hz・9Hz SMART Pass）",
+   "mcp": "20〜80Hz",
+   "note": "2026年2月現在 販売中ICDの比較表（提供資料）より"
+  },
+  {
+   "fn": "ATP During Charging",
+   "en": "ATP during charging",
+   "cat": "ICD",
+   "mdt": "○",
+   "abt": "○",
+   "bio": "×",
+   "bsx": "×",
+   "mcp": "×",
+   "note": "2026年2月現在 販売中ICDの比較表（提供資料）より。充電中にATPを行い、停止すればショックを回避する。"
+  },
+  {
+   "fn": "ATP Before Charging",
+   "en": "ATP before charging",
+   "cat": "ICD",
+   "mdt": "○（EV ICDは FVT設定で可）",
+   "abt": "○",
+   "bio": "Stableの場合はATP後にcharge",
+   "bsx": "○",
+   "mcp": "○",
+   "note": "2026年2月現在 販売中ICDの比較表（提供資料）より"
+  },
+  {
+   "fn": "チルト変更",
+   "en": "Tilt adjustment",
+   "cat": "ICD",
+   "mdt": "×（50%固定）",
+   "abt": "○（DeFT Response）",
+   "bio": "○（Phase2のみ50%または1/2msのいずれか選択）",
+   "bsx": "×（60/50%固定。S-ICDは50%固定）",
+   "mcp": "×",
+   "note": "2026年2月現在 販売中ICDの比較表（提供資料）より。Abbottはショックリードのインピーダンスに応じてPhase 1と2の持続が適正化される。"
+  },
+  {
+   "fn": "ショック回数",
+   "en": "Number of shocks",
+   "cat": "ICD",
+   "mdt": "6回",
+   "abt": "6回",
+   "bio": "8回",
+   "bsx": "8回（S-ICDは5回）",
+   "mcp": "6回",
+   "note": "2026年2月現在 販売中ICDの比較表（提供資料）より"
+  },
+  {
+   "fn": "ATP最大出力",
+   "en": "Maximum ATP output",
+   "cat": "ICD",
+   "mdt": "8V（EV ICDは30V）",
+   "abt": "7.5V",
+   "bio": "7.5V（1.5ms固定）",
+   "bsx": "7.5V",
+   "mcp": "7V固定",
+   "note": "2026年2月現在 販売中ICDの比較表（提供資料）より"
+  },
+  {
+   "fn": "ATP最適化",
+   "en": "ATP optimization",
+   "cat": "ICD",
+   "mdt": "Smart mode／Switch back／iATP（EV ICDは Smart mode）",
+   "abt": "×",
+   "bio": "ATP optimization／Early ATP one shot",
+   "bsx": "×",
+   "mcp": "AutoSwitch",
+   "note": "2026年2月現在 販売中ICDの比較表（提供資料）より"
+  },
+  {
+   "fn": "モバイル遠隔モニタリング",
+   "en": "Mobile remote monitoring",
+   "cat": "リモート",
+   "mdt": "○",
+   "abt": "○",
+   "bio": "○",
+   "bsx": "×（S-ICDは○）",
+   "mcp": "○",
+   "note": "2026年2月現在 販売中ICDの比較表（提供資料）より。スマートフォンアプリによる送信への対応状況。"
+  },
+  {
+   "fn": "NSVTアラート",
+   "en": "NSVT alert",
+   "cat": "ICD",
+   "mdt": "○",
+   "abt": "○",
+   "bio": "○",
+   "bsx": "○（S-ICDは○）",
+   "mcp": "○",
+   "note": "2026年2月現在 販売中ICDの比較表（提供資料）より。非持続性心室頻拍を検出して通知する機能。リードノイズアラート・ATPアラートも各社搭載。"
+  },
+  {
+   "fn": "EV-ICD と S-ICD の比較",
+   "en": "EV-ICD vs S-ICD",
+   "cat": "ICD",
+   "mdt": "EV ICD（Aurora）：EV4／64×50.5×13.4mm／77g／11.7年／40J／1.5T・3.0T／3 vectors",
+   "abt": "—",
+   "bio": "—",
+   "bsx": "S-ICD（EMBLEM）：SQ-1（非標準型）／83.1×69.1×12.7mm／130g／8.7年／80J／1.5T",
+   "mcp": "—",
+   "note": "血管外ICDの2機種。EV-ICDはリードを胸骨下に留置しATP・除細動後ペーシング・ポーズ予防が可能。S-ICDは皮下留置で徐脈ペーシングやATPは不可だが、抜去が容易。S-ICDは開胸手術後の患者には禁忌。"
   }
  ]
 }
