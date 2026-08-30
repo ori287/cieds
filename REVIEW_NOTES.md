@@ -1447,3 +1447,152 @@ LATITUDE コミュニケータ／スマートビューコネクト
   アプリ側は単位付きの値に mm を足さないよう処理済み。データは原表記のまま。
 - **取扱会社**：同一メーカーでも扱いが分かれる（BIOTRONIK＝日本光電工業／バイオトロニックジャパン／
   ボストン・サイエンティフィックジャパン）。`dealer` フィールドに保持している。
+
+---
+
+## アルゴリズム・用語集・製品を「デバイス比較表（2020年）」で拡充（2026-08-31）
+
+提供資料は写真4枚。i pacemaker のアルゴリズム一覧（Abbott）と ACap Confirm 詳細画面が2枚、
+**ICD DR比較表**（BIOTRONIK Acticor 7 DR-T／Ilivia Neo 7 DR-T／Medtronic COBALT XT DR／
+Boston RESONATE EL／Abbott Gallant／Sorin Platinum）と
+**CRT-D比較表**（Rivacor 7 HF-T／Ilivia Neo 7 HF-T／COBALT XT HF／RESONATE X4／Gallant HF／
+Platinum Sonr-R）が各1枚。**資料は2020年時点**とユーザーから提示された。
+
+### 1. `algos.json`：192件 → **171件**（全件に説明を追加）
+
+**旧192件のうち約60件は機能名ではなく数値・記号だった**（「40J」「10.5秒」「○」「×（50%固定）」
+「77g」「64×50.5×13.4mm」など）。ICD比較表の各セルを機械的に取り出したためで、
+アルゴリズムタブの一覧に並べる意味がないため**削除し、該当する内容は `data.json` の一覧表側に集約**した。
+そのうえで2020年資料から機能名を追加し、**全171件に `scope`（目的）と `how`（動作）を記入**した。
+`params`（設定項目）は選択肢が一般に公表されているものだけに限って記入した。
+
+| メーカー | 件数 |
+|---|---|
+| Medtronic | 42 |
+| BIOTRONIK | 36 |
+| Abbott | 36 |
+| Boston Scientific | 35 |
+| MicroPort CRM | 22 |
+
+**分割・統合した主なもの**
+- 「PR Logic＋Wavelet（SmartShock）」→ PR Logic／Wavelet／SmartShock の3件に分割（別機能のため）
+- 「Micra VR／AV／AV2」の断片（`AV` `AV2` が単独項目になっていた）→ Micra VR と Micra AV／AV2 に整理
+- 「AVEIR VR／AR／DR」の断片（`AR` `DR` が単独項目）→ 3件の正式名称に整理
+- 「SelectSecure 3830」と「C304シース」→ デリバリーシースは1件にまとめた
+
+**`pathway`（プログラマ操作経路）は全件で未記入とした。** 経路は機種・プログラマの世代で変わり、
+医師用マニュアルなしに書くと誤りが臨床に直結する。i pacemaker の ACap Confirm 画面のように
+`Parameters > Brady > Capture & Sense > ...` の形で埋めるには各社マニュアルが要る。**次の宿題**。
+
+**削除した記述（裏付けが取れなかったもの）**
+- リードノイズ管理の MicroPort 欄にあった **`Stability+` / `Acc`**。Stability は頻拍鑑別（R-R安定性）の
+用語であり、リード異常監視機能としての裏付けが取れない。2020年資料でも Sorin のリード異常監視は「No」。
+**原表記を残さず削除した**ことを記録しておく。
+
+### 2. `data.json` の一覧表（feats）：52件 → **81件**
+
+**統合した重複（4組）**
+| 統合前 | 統合後 |
+|---|---|
+| 「CRT自動最適化（AV/VV）」＋「自動AV/VV至適化」 | 「CRT自動最適化（AV/VVディレイ）」 |
+| 「心室ペーシング抑制（自己房室伝導優先）」（総論行） | AVD延長タイプ／モード変換タイプの2行に吸収 |
+| 「胸郭インピーダンス（心不全モニタ）」＋「心不全マネジメント（HFモニタ）」 | 「心不全モニタ（胸郭インピーダンス等）」 |
+| 「リードノイズ管理」＋（新）リード異常監視 | 「リード異常監視（リードノイズ管理）」 |
+
+「日本で発売中のICD（主な機種）」は値が2020年前後のものだったため、
+**「代表機種（ICD DR・2020年資料）」に改称**し、写真の6機種で埋め直した。
+
+**新規に追加した行（29件）**：センシング極性／センシング調整パラメータ／センシングフィルタ／
+検出ゾーン数／ショック経路／ショック極性／ショック波形の調整／VFゾーン充電中ATP／
+VFゾーン充電前ATP／ATP治療の種類／心房抗頻拍ペーシング／心房ショック治療／
+SASモニタリング／STモニタリング／通信方式／患者通知機能／LVペーシング極性数／
+LV自動閾値測定／LVセンシング極性数／CRT確保（PQ短縮・UTR・PVC後）／心房細動時の心室レート制御／
+RVセンシング時の左室トリガ／LVセンシング／左室保護期間／左室多点ペーシングの推奨設定／
+CRT AV自動調整／AV調整量／VV自動調整／BiV⇔LV only自動切換え／代表機種（CRT-D・2020年資料）。
+
+`index.html` の `F_FALLBACK` も同じ81件に同期した。
+アルゴリズムタブ（メーカー別）の検索対象に `how` と `params` を追加した。
+
+### 3. 判断が要った箇所
+
+#### ① SmartCRT の列位置（**資料と異なる位置に登録した**）
+CRT-D比較表の「左室多点ペーシング推奨設定」の行で、**`SmartcRT` が Abbott の列に置かれている**。
+しかし SmartCRT は Boston Scientific の CRT個別化（SmartDelay／LV VectorGuide／MultiSite Pacing）の
+総称であることを Boston Scientific の製品資料で確認したため、**Boston 側に登録した**。
+同じ行の直上「左室多点ペーシング」は MultiSite=Boston／MultiPoint=Abbott と正しく並んでおり、
+この行だけ列がずれている可能性が高い。**feats の note に列対応が要確認である旨を明記した。**
+引き継ぎメモ8の「学会一覧表は表組みが崩れて列の対応が読めない」と同種の問題。
+
+#### ② 原表記のまま残したもの
+- **`Trrigering`**：BIOTRONIK と Abbott の「RV sensing対応」欄。`Triggering` の誤記と思われるが、
+  併記の形（`Trrigering（資料の表記どおり／Triggering）`）で残した。
+- **`?`**：Sorin（MicroPort）の「RV sensing対応」欄。資料に「?」とだけある。空欄と区別するため残した。
+- **`Sensitivity levels`**：Sorin の「PQ間隔短縮に対応」欄。この行に感度の用語が入るのは不自然で、
+  列ずれの可能性がある。**要確認**として原表記のまま。
+- **`Platinum` / `PLATINIUM`**：資料の表記は `Platinum`。製品名は `PLATINIUM`（既存の feats 表記に合わせた）。
+
+#### ③ 2020年資料と2026年資料で値が食い違う（**上書きしていない**）
+| 機種 | 2020年資料 | 既存（2026年2月の比較表） |
+|---|---|---|
+| Cobalt XT DR | 77／78g・L51×H66〜68×W13mm・寿命11.9年 | 80g・67.5×50.5×13.4mm・0%ペーシング12.3年 |
+| Gallant（DR） | 71g・L51×H69〜70×W12mm・寿命10.4年 | 71g・69×51×12mm・10.4年 |
+
+Cobalt XT DR は寸法・質量・寿命がいずれも異なる。**新しい2026年資料を残し、2020年の値は採用しなかった。**
+DF-1版とDF4版で寸法が違う点も影響していると思われるが、資料だけでは決められない。
+Gallant は実質一致するため既存を維持した。**どちらも既存エントリを上書きしていない。**
+
+### 4. `data.json` の用語集：724語 → **775語**（51語追加）
+
+2020年資料に出てくる機能名で用語集に無かったものを追加。
+WKB Behaviour／Negative AV Hysteresis／Atrial Tracking Recovery／Tracking Preference／
+Conducted AF Response／Rate Stabilization／Bi-V Trigger／V Sense Response／LVPP／
+LV T-wave Protection／SmartCRT／LV VectorGuide／Auto Adapt／SyncAV CRT Pulse／
+Multipoint LV Pacing／EffectivCRT／SmartShock／SVT Discriminator／
+Morphology Discrimination plus／Secure Sense／SenseAbility／Dynamic TX／
+Dynamic Noise Algorithm／Programmable sensing floor／Lowest sensitivity threshold／
+RV Lead Noise Discrimination／Threshold start／Decay delay／Initial Noise Interval／
+Minimum threshold／Hold off period／Post pace T-wave suppression／
+Enhanced T-wave suppression／Enhanced VF sensitivity／Sensitivity levels／INSIGHT／
+Feature Match／Reactive ATP／HF Burst／Ramp+／Smart mode／AutoSwitch／ATP one shot／
+ATP optimization／Biphasic 2／Alternating polarity／Blended Sensor／Dual Sensor／SonR／
+MICS／BLE／睡眠時無呼吸モニタリング／部分ボディスキャン（PBS）
+
+機種名（Acticor／Rivacor／Ilivia Neo／PLATINIUM／RESONATE／Gallant／Cobalt）は
+**製品タブに入れたため用語集には追加していない**。
+
+### 5. `products.json`：878件 → **888件**（本体13件 → 23件）
+
+**CRT-Dの本体データが初めて入った**（6件）。
+
+| 分類 | 追加 |
+|---|---|
+| ICD DR | Acticor 7 DR-T／Ilivia Neo 7 DR-T／RESONATE EL／PLATINIUM |
+| CRT-D | Rivacor 7 HF-T／Ilivia Neo 7 HF-T／Cobalt XT HF／RESONATE X4／Gallant HF／PLATINIUM SonR-R |
+
+**重複させなかったもの**：COBALT XT DR と Gallant は既存エントリがあるため追加していない（上記③）。
+
+**Sorin の扱い**：ユーザーより「Sorin は現在の MicroPort」と提示された。
+引き継ぎメモ3の方針（メーカー名はA案＝当時の社名のまま。ただし St.Jude Medical のみ Abbott に統合し
+原表記は `mfr` に保持）に**同じ形をあてはめ**、`maker` を `MicroPort CRM`、
+`mfr` を `Sorin（資料表記）` とした。これで既存の MicroPort 製品と同じ絞り込みに乗る。
+**リードデータ側の `Sorin Group` 表記は今回変更していない**（一覧表2018年版の原表記のため）。
+本体とリードでメーカー表記が分かれる状態になっている点は要検討。
+
+**現行機種でないものに `status` を付与**（`index.html` は既に `status` を表示する作り）。
+- 「現行機種ではない（販売終了世代）」：Acticor 7 DR-T／Rivacor 7 HF-T／PLATINIUM／PLATINIUM SonR-R
+  （ユーザーより明示された3系統）
+- 「2020年資料時点の機種。現行ラインナップでの取扱いは要確認」：Ilivia Neo 7 DR-T／HF-T／
+  RESONATE EL／RESONATE X4／Cobalt XT HF／Gallant HF
+  （**ユーザーからの明示がないため断定を避けた。要確認**）
+
+**PLATINIUM（ICD DR）の MRI は資料で「No」**。同じ世代の PLATINIUM SonR-R（CRT-D）は
+「Yes 1.5T & 3.0T」となっており、**同一シリーズ内で対応が分かれている**。
+引き継ぎメモ8の「磁場強度とSARは本体ではなくリードとの組合せで決まる」に照らしても、
+この2件は `mri.json` には反映していない。**MRI検索タブへの登録は国内添付文書を確認してから行う。**
+
+### 6. 次にやると効果が大きいこと（この作業から）
+
+1. **各社の医師用マニュアル**があれば `pathway`（プログラマ操作経路）を171件に埋められる。
+   i pacemaker と同じ水準になるのはこの1点。
+2. SmartCRT の列ずれと `Sensitivity levels` の位置を、**元の比較表の原本（表全体が写った画像）**で確認したい。
+3. Cobalt XT DR の寸法・質量・寿命の食い違いは**添付文書で決着させる**（DF-1版／DF4版の別も含めて）。

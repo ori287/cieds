@@ -1,6 +1,6 @@
 {
  "v": 20,
- "updated": "2026-08-29",
+ "updated": "2026-08-31",
  "gloss": [
   {
    "term": "VVT",
@@ -7241,20 +7241,519 @@
    "maker": "MicroPort CRM",
    "short": "MicroPort CRMのリモートモニタリング送信機。SmartViewプラットフォームへデータを送る。",
    "tags": "Manufacturer / MicroPort CRM / SmartView Connect 送信機 遠隔"
+  },
+  {
+   "term": "WKB Behaviour",
+   "en": "Wenckebach behaviour at upper tracking rate",
+   "abbr": "",
+   "cat": "CRT・CSP",
+   "device": "CRT",
+   "maker": "BIOTRONIK",
+   "short": "上限追従レートを超えたときに2:1ブロックへ移行せず、AVディレイを段階的に延ばして追従を続ける動作。心拍数の急な半減を避け、両室ペーシングの脱落を減らす。",
+   "tags": "WKB Behaviour Wenckebach behaviour at upper tracking rate"
+  },
+  {
+   "term": "Negative AV Hysteresis",
+   "en": "Negative AV hysteresis",
+   "abbr": "",
+   "cat": "CRT・CSP",
+   "device": "CRT",
+   "maker": "BIOTRONIK",
+   "short": "自己房室伝導が現れた次の拍からAVディレイを設定量だけ短縮し、心室刺激を自己伝導より先行させる機能。自己PQ間隔が短い症例で両室ペーシング率を保つ。",
+   "tags": "Negative AV Hysteresis Negative AV hysteresis"
+  },
+  {
+   "term": "Atrial Tracking Recovery",
+   "en": "Atrial Tracking Recovery",
+   "abbr": "",
+   "cat": "CRT・CSP",
+   "device": "CRT",
+   "maker": "Medtronic",
+   "short": "上限追従レート付近やブロックされた心房期外収縮の後で心房追従が失われたとき、AVディレイを調整して追従を回復させ、両室ペーシングの脱落を防ぐ機能。",
+   "tags": "Atrial Tracking Recovery Atrial Tracking Recovery"
+  },
+  {
+   "term": "Tracking Preference",
+   "en": "Tracking Preference",
+   "abbr": "",
+   "cat": "CRT・CSP",
+   "device": "CRT",
+   "maker": "Boston Scientific",
+   "short": "心房レートが上限追従レートに近づいた際に心房不応期の扱いを調整し、1:1追従を維持して両室ペーシングの欠落を減らす機能。",
+   "tags": "Tracking Preference Tracking Preference"
+  },
+  {
+   "term": "Conducted AF Response",
+   "en": "Conducted AF Response",
+   "abbr": "",
+   "cat": "CRT・CSP",
+   "device": "PM / ICD / CRT",
+   "maker": "Medtronic",
+   "short": "心房細動で不規則になった心室レートに追随してペーシングレートを調整し、極端に短い／長いR-R間隔を減らす機能。両室ペーシング率の維持にも寄与する。",
+   "tags": "Conducted AF Response Conducted AF Response  VRR 心室レート調整"
+  },
+  {
+   "term": "Rate Stabilization",
+   "en": "Rate Stabilization",
+   "abbr": "",
+   "cat": "CRT・CSP",
+   "device": "PM / ICD / CRT",
+   "maker": "BIOTRONIK",
+   "short": "先行するR-R間隔をもとに次のペーシング間隔を決め、期外収縮や心房細動による急激なレート変動をならす機能。",
+   "tags": "Rate Stabilization Rate Stabilization"
+  },
+  {
+   "term": "Bi-V Trigger",
+   "en": "Biventricular trigger",
+   "abbr": "",
+   "cat": "CRT・CSP",
+   "device": "CRT",
+   "maker": "Boston Scientific",
+   "short": "右室で自己心室興奮を感知した時点で両室刺激をトリガーし、その拍でも再同期を得ようとする機能。両室ペーシングの脱落を補う。",
+   "tags": "Bi-V Trigger Biventricular trigger"
+  },
+  {
+   "term": "V Sense Response",
+   "en": "Ventricular Sense Response",
+   "abbr": "",
+   "cat": "CRT・CSP",
+   "device": "CRT",
+   "maker": "Medtronic",
+   "short": "心室センシングを引き金に両室刺激を出す機能。期外収縮や自己伝導の拍でも再同期を試みる。",
+   "tags": "V Sense Response Ventricular Sense Response"
+  },
+  {
+   "term": "Left ventricular protection period",
+   "en": "Left ventricular protection period",
+   "abbr": "LVPP",
+   "cat": "CRT・CSP",
+   "device": "CRT",
+   "maker": "Boston Scientific",
+   "short": "左室イベントの後に設ける保護期間。この間は左室刺激を出さず、左室の受攻期への刺激を避ける。",
+   "tags": "Left ventricular protection period Left ventricular protection period LVPP"
+  },
+  {
+   "term": "LV T-wave Protection",
+   "en": "LV T-wave protection",
+   "abbr": "",
+   "cat": "CRT・CSP",
+   "device": "CRT",
+   "maker": "BIOTRONIK",
+   "short": "左室のT波にあたる時期に刺激が落ちないよう保護し、心室性不整脈の誘発を防ぐ機能。",
+   "tags": "LV T-wave Protection LV T-wave protection"
+  },
+  {
+   "term": "SmartCRT",
+   "en": "SmartCRT",
+   "abbr": "",
+   "cat": "CRT・CSP",
+   "device": "CRT",
+   "maker": "Boston Scientific",
+   "short": "SmartDelay（いつ刺激するか）、LV VectorGuide（どこから刺激するか）、MultiSite Pacing（どう刺激するか）を組み合わせたCRT個別化の総称。",
+   "tags": "SmartCRT SmartCRT"
+  },
+  {
+   "term": "LV VectorGuide",
+   "en": "LV VectorGuide",
+   "abbr": "",
+   "cat": "CRT・CSP",
+   "device": "CRT",
+   "maker": "Boston Scientific",
+   "short": "四極LVリードの各ベクトルについて、閾値・インピーダンス・横隔神経刺激の有無・RV-LV遅延をまとめて測定し、ベクトル選択を支援する機能。",
+   "tags": "LV VectorGuide LV VectorGuide"
+  },
+  {
+   "term": "Auto Adapt（CRT AutoAdapt）",
+   "en": "CRT AutoAdapt",
+   "abbr": "",
+   "cat": "CRT・CSP",
+   "device": "CRT",
+   "maker": "BIOTRONIK",
+   "short": "自己房室伝導を定期的に測定し、AVディレイを自動で追随させるCRTの自動調整機能。",
+   "tags": "Auto Adapt（CRT AutoAdapt） CRT AutoAdapt"
+  },
+  {
+   "term": "SyncAV CRT Pulse",
+   "en": "SyncAV CRT Pulse",
+   "abbr": "",
+   "cat": "CRT・CSP",
+   "device": "CRT",
+   "maker": "Abbott",
+   "short": "測定した自己PR間隔に対して、％またはmsで指定した分だけ短いAVディレイを自動で用いるCRTのAV自動調整。",
+   "tags": "SyncAV CRT Pulse SyncAV CRT Pulse"
+  },
+  {
+   "term": "Multipoint LV Pacing",
+   "en": "Multipoint LV pacing",
+   "abbr": "",
+   "cat": "CRT・CSP",
+   "device": "CRT",
+   "maker": "MicroPort CRM",
+   "short": "四極LVリードの2点から時間差をつけて刺激し、左室の興奮範囲を広げる方式のMicroPortでの名称。",
+   "tags": "Multipoint LV Pacing Multipoint LV pacing"
+  },
+  {
+   "term": "SmartShock",
+   "en": "SmartShock",
+   "abbr": "",
+   "cat": "ICD",
+   "device": "ICD / CRT-D",
+   "maker": "Medtronic",
+   "short": "PR Logic、Wavelet、T波識別、リード完全性アラート、RVリードノイズ識別などを組み合わせた不適切作動対策の総称。",
+   "tags": "SmartShock SmartShock"
+  },
+  {
+   "term": "SVT Discriminator",
+   "en": "SVT Discriminator",
+   "abbr": "",
+   "cat": "ICD",
+   "device": "ICD / CRT-D",
+   "maker": "Abbott",
+   "short": "心房レートと心室レートの大小関係でまず分岐し、モルフォロジー・インターバル安定性・AV associationを組み合わせて上室頻拍を鑑別するAbbottのロジック。",
+   "tags": "SVT Discriminator SVT Discriminator"
+  },
+  {
+   "term": "Morphology Discrimination plus",
+   "en": "Morphology Discrimination plus",
+   "abbr": "",
+   "cat": "ICD",
+   "device": "ICD / CRT-D",
+   "maker": "Abbott",
+   "short": "洞調律のテンプレートと頻拍時のQRS波形の一致率を評価して上室頻拍を鑑別するAbbottの波形識別。",
+   "tags": "Morphology Discrimination plus Morphology Discrimination plus"
+  },
+  {
+   "term": "Secure Sense",
+   "en": "Secure Sense",
+   "abbr": "",
+   "cat": "ICD",
+   "device": "ICD / CRT-D",
+   "maker": "Abbott",
+   "short": "近接電極と遠隔電極の信号を比較し、片方にしか現れない信号をリード由来の雑音と判定して治療を保留する機能。",
+   "tags": "Secure Sense Secure Sense"
+  },
+  {
+   "term": "SenseAbility",
+   "en": "SenseAbility",
+   "abbr": "",
+   "cat": "ICD",
+   "device": "ICD / CRT-D",
+   "maker": "Abbott",
+   "short": "センス後の感度を段階的に回復させる可変センシング。開始感度・減衰の遅れ・ノイズ区間などを細かく設定できる。",
+   "tags": "SenseAbility SenseAbility"
+  },
+  {
+   "term": "Dynamic TX",
+   "en": "Dynamic TX",
+   "abbr": "",
+   "cat": "ICD",
+   "device": "ICD / CRT-D",
+   "maker": "Abbott",
+   "short": "リード由来の異常を監視するAbbottのリード異常監視機能。2020年の比較表でリード異常監視の欄に記載されている。",
+   "tags": "Dynamic TX Dynamic TX"
+  },
+  {
+   "term": "Dynamic Noise Algorithm",
+   "en": "Dynamic Noise Algorithm",
+   "abbr": "",
+   "cat": "ICD",
+   "device": "ICD / CRT-D",
+   "maker": "Boston Scientific",
+   "short": "背景の雑音レベルを継続的に評価し、それに応じて感知の基準を動かすことで雑音の誤感知を減らす機能。",
+   "tags": "Dynamic Noise Algorithm Dynamic Noise Algorithm"
+  },
+  {
+   "term": "Programmable sensing floor",
+   "en": "Programmable sensing floor",
+   "abbr": "",
+   "cat": "センシング",
+   "device": "ICD / CRT-D",
+   "maker": "Boston Scientific",
+   "short": "自動感度調整で到達しうる最も鋭い感度（下限）をプログラムできる設定。雑音レベルに応じて調整する。",
+   "tags": "Programmable sensing floor Programmable sensing floor"
+  },
+  {
+   "term": "Lowest sensitivity threshold",
+   "en": "Lowest sensitivity threshold",
+   "abbr": "",
+   "cat": "センシング",
+   "device": "ICD / CRT-D",
+   "maker": "Medtronic",
+   "short": "可変センシングで到達しうる最も鋭い感度を制限する設定。雑音やT波の誤感知を抑える。",
+   "tags": "Lowest sensitivity threshold Lowest sensitivity threshold"
+  },
+  {
+   "term": "RV Lead Noise Discrimination",
+   "en": "RV Lead Noise Discrimination",
+   "abbr": "",
+   "cat": "ICD",
+   "device": "ICD / CRT-D",
+   "maker": "Medtronic",
+   "short": "右室リード由来の雑音を識別し、雑音と判定した信号での不適切な治療を保留する機能。",
+   "tags": "RV Lead Noise Discrimination RV Lead Noise Discrimination"
+  },
+  {
+   "term": "Threshold start",
+   "en": "Threshold start",
+   "abbr": "",
+   "cat": "センシング",
+   "device": "ICD / CRT-D",
+   "maker": "Abbott",
+   "short": "可変センシングで、感知直後に設定される感度の開始値。R波振幅に対する割合で指定する。",
+   "tags": "Threshold start Threshold start"
+  },
+  {
+   "term": "Decay delay",
+   "en": "Decay delay",
+   "abbr": "",
+   "cat": "センシング",
+   "device": "ICD / CRT-D",
+   "maker": "Abbott",
+   "short": "可変センシングで、感度が下がり始めるまでの待ち時間。長くするとT波の誤感知を抑えられる。",
+   "tags": "Decay delay Decay delay"
+  },
+  {
+   "term": "Initial Noise Interval",
+   "en": "Initial Noise Interval",
+   "abbr": "",
+   "cat": "センシング",
+   "device": "ICD / CRT-D",
+   "maker": "Abbott",
+   "short": "感知直後に設ける雑音判定用の区間。この間の信号は雑音として扱われる。",
+   "tags": "Initial Noise Interval Initial Noise Interval"
+  },
+  {
+   "term": "Minimum threshold（最小感度）",
+   "en": "Minimum sensitivity threshold",
+   "abbr": "",
+   "cat": "センシング",
+   "device": "ICD / CRT-D",
+   "maker": "Abbott",
+   "short": "可変センシングで感度が下がりきったときの最も鋭い値。細動波の検出と雑音耐性のバランスで決める。",
+   "tags": "Minimum threshold（最小感度） Minimum sensitivity threshold"
+  },
+  {
+   "term": "Hold off period",
+   "en": "Hold off period",
+   "abbr": "",
+   "cat": "センシング",
+   "device": "ICD / CRT-D",
+   "maker": "BIOTRONIK",
+   "short": "感知後に一定時間、感度の変化や再感知を保留する区間。二重計数を防ぐ。",
+   "tags": "Hold off period Hold off period"
+  },
+  {
+   "term": "Post pace T-wave suppression",
+   "en": "Post pace T-wave suppression",
+   "abbr": "",
+   "cat": "センシング",
+   "device": "ICD / CRT-D",
+   "maker": "BIOTRONIK",
+   "short": "ペーシング後のT波を誤感知しないよう、感度やブランキングを調整する設定。",
+   "tags": "Post pace T-wave suppression Post pace T-wave suppression"
+  },
+  {
+   "term": "Enhanced T-wave suppression",
+   "en": "Enhanced T-wave suppression",
+   "abbr": "",
+   "cat": "センシング",
+   "device": "ICD / CRT-D",
+   "maker": "BIOTRONIK",
+   "short": "センシングフィルタをT波抑制寄りに切り替える設定。T波オーバーセンシングを減らせるが、細動波の感知はやや不利になる。",
+   "tags": "Enhanced T-wave suppression Enhanced T-wave suppression"
+  },
+  {
+   "term": "Enhanced VF sensitivity",
+   "en": "Enhanced VF sensitivity",
+   "abbr": "",
+   "cat": "センシング",
+   "device": "ICD / CRT-D",
+   "maker": "BIOTRONIK",
+   "short": "センシングフィルタを細動波の検出寄りに切り替える設定。微小な細動波のアンダーセンシングを防ぐが、T波の誤感知は起こりやすくなる。",
+   "tags": "Enhanced VF sensitivity Enhanced VF sensitivity"
+  },
+  {
+   "term": "Sensitivity levels",
+   "en": "Sensitivity levels",
+   "abbr": "",
+   "cat": "センシング",
+   "device": "ICD / CRT-D",
+   "maker": "MicroPort CRM",
+   "short": "感度を段階で指定する方式。2020年の比較表でMicroPort（資料表記はSorin）の欄に記載されている。",
+   "tags": "Sensitivity levels Sensitivity levels"
+  },
+  {
+   "term": "INSIGHT",
+   "en": "INSIGHT algorithm",
+   "abbr": "",
+   "cat": "ICD",
+   "device": "ICD",
+   "maker": "Boston Scientific",
+   "short": "S-ICDで皮下心電図の波形を解析し、Conditionalゾーンでの上室頻拍やT波誤感知による不適切作動を抑えるアルゴリズム。",
+   "tags": "INSIGHT INSIGHT algorithm"
+  },
+  {
+   "term": "Reactive ATP",
+   "en": "Reactive ATP",
+   "abbr": "rATP",
+   "cat": "ICD",
+   "device": "PM / ICD / CRT",
+   "maker": "Medtronic",
+   "short": "心房頻拍が整順化・徐拍化して停止しやすくなった機を捉えて心房ATPを行う機能。モードスイッチ中も繰り返し試行できる。",
+   "tags": "Reactive ATP Reactive ATP rATP"
+  },
+  {
+   "term": "HF Burst（高頻度バースト）",
+   "en": "High frequency burst",
+   "abbr": "",
+   "cat": "ICD",
+   "device": "ICD / CRT-D",
+   "maker": "General",
+   "short": "心房抗頻拍ペーシングで用いる高頻度の連続刺激。心房粗動などの停止を狙う。",
+   "tags": "HF Burst（高頻度バースト） High frequency burst"
+  },
+  {
+   "term": "Ramp+",
+   "en": "Ramp plus ATP",
+   "abbr": "",
+   "cat": "ICD",
+   "device": "ICD / CRT-D",
+   "maker": "Medtronic",
+   "short": "バーストとランプを組み合わせた抗頻拍ペーシングの方式。最初の数拍を一定間隔とし、その後間隔を短縮していく。",
+   "tags": "Ramp+ Ramp plus ATP"
+  },
+  {
+   "term": "Smart mode（ATP）",
+   "en": "Smart mode",
+   "abbr": "",
+   "cat": "ICD",
+   "device": "ICD / CRT-D",
+   "maker": "Medtronic",
+   "short": "同じ頻拍に対して無効だったATPの段階を記録し、以後のエピソードではその段階を飛ばして次の治療へ進む機能。",
+   "tags": "Smart mode（ATP） Smart mode"
+  },
+  {
+   "term": "AutoSwitch",
+   "en": "AutoSwitch",
+   "abbr": "",
+   "cat": "ICD",
+   "device": "ICD / CRT-D",
+   "maker": "MicroPort CRM",
+   "short": "過去の治療成績に応じて、実施するATPの種類や順序を自動的に切り替える機能。",
+   "tags": "AutoSwitch AutoSwitch"
+  },
+  {
+   "term": "ATP one shot",
+   "en": "ATP one shot",
+   "abbr": "",
+   "cat": "ICD",
+   "device": "ICD / CRT-D",
+   "maker": "BIOTRONIK",
+   "short": "VFゾーンでもR-R間隔が安定していると判定された場合に限り、充電前にATPを1シーケンスだけ行う機能。",
+   "tags": "ATP one shot ATP one shot"
+  },
+  {
+   "term": "ATP optimization",
+   "en": "ATP optimization",
+   "abbr": "",
+   "cat": "ICD",
+   "device": "ICD / CRT-D",
+   "maker": "BIOTRONIK",
+   "short": "過去のエピソードでの停止成否をもとに、次回のATPの刺激数や間隔を自動調整する機能。",
+   "tags": "ATP optimization ATP optimization"
+  },
+  {
+   "term": "Biphasic 2",
+   "en": "Biphasic 2 waveform",
+   "abbr": "",
+   "cat": "ICD",
+   "device": "ICD / CRT-D",
+   "maker": "BIOTRONIK",
+   "short": "二相性ショック波形の第2相について、チルト50％または1/2msのいずれかを選択できる設定。",
+   "tags": "Biphasic 2 Biphasic 2 waveform"
+  },
+  {
+   "term": "Alternating polarity",
+   "en": "Alternating shock polarity",
+   "abbr": "",
+   "cat": "ICD",
+   "device": "ICD / CRT-D",
+   "maker": "General",
+   "short": "ショックごとに極性を入れ替える設定。除細動が得られなかった場合に極性を変えて再試行する。BIOTRONIKは自動、Medtronicは手動設定。",
+   "tags": "Alternating polarity Alternating shock polarity"
+  },
+  {
+   "term": "Blended Sensor",
+   "en": "Blended Sensor",
+   "abbr": "",
+   "cat": "レート応答",
+   "device": "PM / ICD / CRT",
+   "maker": "Boston Scientific",
+   "short": "加速度センサの速い立ち上がりと分時換気量センサの生理的な正確さを組み合わせ、比率を設定してレートを決める方式。",
+   "tags": "Blended Sensor Blended Sensor"
+  },
+  {
+   "term": "Dual Sensor",
+   "en": "Dual Sensor",
+   "abbr": "",
+   "cat": "レート応答",
+   "device": "PM / ICD / CRT",
+   "maker": "MicroPort CRM",
+   "short": "加速度センサと分時換気量センサを併用し、活動開始時は加速度、持続する負荷では換気量を重視してレートを決める方式。",
+   "tags": "Dual Sensor Dual Sensor"
+  },
+  {
+   "term": "SonR",
+   "en": "SonR sensor",
+   "abbr": "",
+   "cat": "レート応答",
+   "device": "PM / CRT",
+   "maker": "MicroPort CRM",
+   "short": "心房リード先端のマイクロ加速度センサが第1心音に相当する振動を捉え、心収縮力の指標としてレート応答とAV/VV最適化に用いる技術。専用のSonRtipリードが必要。",
+   "tags": "SonR SonR sensor"
+  },
+  {
+   "term": "MICS",
+   "en": "Medical Implant Communication Service",
+   "abbr": "MICS",
+   "cat": "デバイス構造",
+   "device": "PM / ICD / CRT",
+   "maker": "General",
+   "short": "植込み型医療機器の無線通信に割り当てられた周波数帯（402〜405MHz）。プログラマや送信機との通信に用いる。",
+   "tags": "MICS Medical Implant Communication Service MICS"
+  },
+  {
+   "term": "BLE",
+   "en": "Bluetooth Low Energy",
+   "abbr": "BLE",
+   "cat": "デバイス構造",
+   "device": "PM / ICD / CRT",
+   "maker": "General",
+   "short": "低消費電力の近距離無線規格。対応機種ではスマートフォンアプリを遠隔モニタリングの送信機として使える。",
+   "tags": "BLE Bluetooth Low Energy BLE"
+  },
+  {
+   "term": "睡眠時無呼吸モニタリング",
+   "en": "Sleep apnea monitoring",
+   "abbr": "SAS",
+   "cat": "フォロー",
+   "device": "ICD / CRT",
+   "maker": "Boston Scientific",
+   "short": "呼吸センサで睡眠時の呼吸パターンを解析し、無呼吸・低呼吸の指標を記録する機能。心不全との関連の評価に用いる。",
+   "tags": "睡眠時無呼吸モニタリング Sleep apnea monitoring SAS"
+  },
+  {
+   "term": "部分ボディスキャン",
+   "en": "Partial body scan",
+   "abbr": "PBS",
+   "cat": "MRI・EMI",
+   "device": "PM / ICD / CRT",
+   "maker": "General",
+   "short": "MRI検査で撮像できる範囲を身体の一部に限定する条件。機種によっては3.0Tでの撮像がこの条件に限られる。",
+   "tags": "部分ボディスキャン Partial body scan PBS"
   }
  ],
  "feats": [
-  {
-   "fn": "心室ペーシング抑制（自己房室伝導優先）",
-   "en": "RV pacing minimization / AV hysteresis",
-   "cat": "ペーシング管理",
-   "mdt": "MVP（Managed Ventricular Pacing）／Search AV+",
-   "abt": "VIP（Ventricular Intrinsic Preference）",
-   "bio": "Vp Suppression（AVSH）",
-   "bsx": "RYTHMIQ／AV Search+",
-   "mcp": "SafeR（AAIsafeR）",
-   "note": "不要な右室ペーシングを避け自己房室伝導を優先。MVP/SafeRはAAI(R)＋バックアップ、VIP/Vp Suppression/RYTHMIQはAV延長型。"
-  },
   {
    "fn": "レートレスポンス（生理的センサ）",
    "en": "Rate response sensor",
@@ -7278,26 +7777,26 @@
    "note": "閾値を自動測定し出力を最適化。拍動ごとに誘発反応で確認する方式と、定期測定する方式がある。"
   },
   {
-   "fn": "CRT自動最適化（AV/VV）",
+   "fn": "CRT自動最適化（AV/VVディレイ）",
    "en": "CRT AV/VV optimization",
    "cat": "CRT",
-   "mdt": "AdaptivCRT（EffectivCRT）",
-   "abt": "SyncAV／QuickOpt",
-   "bio": "CRT AutoAdapt",
-   "bsx": "SmartDelay（SmartCRT）",
+   "mdt": "AdaptivCRT（Adaptiv CRT）／EffectivCRT",
+   "abt": "SyncAV／SyncAV CRT Pulse／QuickOpt",
+   "bio": "CRT AutoAdapt（Auto Adapt）／Auto LV VectorOpt",
+   "bsx": "SmartDelay（SmartCRT）／LV VectorGuide",
    "mcp": "SonR（SonRtipリード）",
-   "note": "AV／VVディレイやLV-only↔BiVを自動調整し融合ペーシングを狙う。SonRは血行動態センサで最適化。"
+   "note": "AV／VVディレイやLV-only↔BiVを自動調整し、融合ペーシングによる再同期を狙う。旧「自動AV/VV至適化」の行を統合した。"
   },
   {
    "fn": "ICD 頻拍鑑別（SVT鑑別）",
    "en": "SVT–VT discrimination",
    "cat": "ICD",
-   "mdt": "PR Logic＋Wavelet（SmartShock）",
-   "abt": "Morphology（MD）＋Rate Branch",
+   "mdt": "PR Logic（＋Wavelet／SmartShock）",
+   "abt": "SVT Discriminator",
    "bio": "SMART（SMART Detection）",
-   "bsx": "Rhythm ID（Onset／Stability）",
+   "bsx": "Onset, Stability（OBDE）／RHYTHM ID",
    "mcp": "PARAD／PARAD+",
-   "note": "上室頻拍を心室頻拍と区別して不適切作動を防ぐロジック。QRS波形の一致度（モルフォロジー）、心房と心室の関係、発症の急峻さ、R-R間隔の安定性などを組み合わせて判定し、各社が独自のアルゴリズム名を持つ。"
+   "note": "上室頻拍を心室頻拍と区別して不適切作動を防ぐロジック。QRS波形の一致度、心房と心室の関係、発症の急峻さ、R-R間隔の安定性などを組み合わせて判定する。デバイス比較表（提供資料・2020年／ICD DR・CRT-D）より。"
   },
   {
    "fn": "リモートモニタリング",
@@ -7399,26 +7898,26 @@
    "note": "T波を心室興奮と二重に数えてしまい、不適切作動を招くのを防ぐ機能やフィルタ。フィルタ特性の変更、センシング開始感度や減衰時間のプログラミング、微分処理による識別など、方式は各社で大きく異なる。"
   },
   {
-   "fn": "リードノイズ管理",
+   "fn": "リード異常監視（リードノイズ管理）",
    "en": "Lead noise discrimination",
    "cat": "ICD",
-   "mdt": "Lead Integrity Alert（LIA）",
-   "abt": "Secure Sense",
-   "bio": "RV lead monitoring",
+   "mdt": "Lead Integrity Alert（LIA）／RV Lead Noise Discrimination",
+   "abt": "Secure Sense／Dynamic TX",
+   "bio": "RV lead monitor",
    "bsx": "Dynamic Noise Algorithm",
-   "mcp": "Stability+/Acc",
-   "note": "断線などによる非生理的な雑音を検出し、不適切作動を未然に防ぐ機能。短周期のセンシングが多発した場合にアラートを出したり、治療を保留したりする。ショックリードの断線兆候を早期に捉える目的で各社が搭載している。"
+   "mcp": "—",
+   "note": "断線などによる非生理的な雑音を検出し、不適切作動を未然に防ぐ。旧データのMicroPort欄にあった Stability+／Acc は頻拍鑑別側の用語で、リード監視機能としての裏付けが取れないため削除した。デバイス比較表（提供資料・2020年／ICD DR・CRT-D）より。"
   },
   {
-   "fn": "日本で発売中のICD（主な機種）",
-   "en": "Marketed ICD models (JP)",
+   "fn": "代表機種（ICD DR・2020年資料）",
+   "en": "Representative DR ICD (2020 source)",
    "cat": "製品",
-   "mdt": "Cobalt XT",
+   "mdt": "COBALT XT DR",
    "abt": "Gallant",
-   "bio": "Acticor 7",
-   "bsx": "RESONATE",
-   "mcp": "PLATINIUM",
-   "note": "各社の代表的なICD本体（2021年前後、DR/VR）。実際の採用機種は世代・在庫により異なる。"
+   "bio": "Acticor 7 DR-T／Ilivia Neo 7 DR-T",
+   "bsx": "RESONATE EL",
+   "mcp": "PLATINIUM（資料表記は Sorin）",
+   "note": "提供資料（2020年）の比較表より。Acticor 7・Ilivia Neo 7・PLATINIUM は現行機種ではない。デバイス比較表（提供資料・2020年／ICD DR・CRT-D）より。"
   },
   {
    "fn": "LVリード IS-4",
@@ -7432,37 +7931,26 @@
    "note": "CRTで用いる代表的な四極左室リード。電極の組合せから10通り前後のペーシングベクトルを選べるため、横隔神経刺激の回避、閾値の低い部位の選択、電気的遅延部位の活用がしやすい。"
   },
   {
-   "fn": "自動AV/VV至適化",
-   "en": "Automatic AV/VV optimization",
-   "cat": "CRT",
-   "mdt": "AdaptivCRT",
-   "abt": "SyncAV / QuickOpt",
-   "bio": "Auto LV VectorOpt / CRT AutoAdapt",
-   "bsx": "SmartDelay",
-   "mcp": "SonR",
-   "note": "AV・VVディレイを自動で最適化する各社のプログラム。心エコー至適化と同等の効果が報告されている。"
-  },
-  {
-   "fn": "胸郭インピーダンス（心不全モニタ）",
+   "fn": "心不全モニタ（胸郭インピーダンス等）",
    "en": "Intrathoracic impedance monitor",
    "cat": "ICD",
-   "mdt": "OptiVol",
+   "mdt": "OptiVol 2.0",
    "abt": "CorVue",
-   "bio": "—",
-   "bsx": "Thoracic impedance",
+   "bio": "Thoracic Impedance（TI）",
+   "bsx": "Thoracic impedance（TI）／Heart Rate Variability",
    "mcp": "—",
-   "note": "肺水腫による胸郭インピーダンス低下を捉え、心不全増悪を早期に知らせる機能。"
+   "note": "肺うっ血による胸郭インピーダンス低下などから心不全増悪を早期に知らせる。旧「心不全マネジメント（HFモニタ）」の行を統合した。"
   },
   {
-   "fn": "マルチポイントペーシング（名称）",
+   "fn": "左室多点ペーシング（マルチポイント）",
    "en": "Multipoint pacing (names)",
    "cat": "CRT",
    "mdt": "Multiple Point Pacing",
    "abt": "MultiPoint Pacing（MPP）",
    "bio": "MultiPole Pacing",
    "bsx": "MultiSite Pacing（MSP）",
-   "mcp": "—",
-   "note": "1本の四極LVリードの2点から刺激する各社機能。選択できる極性数はメーカーで異なる。"
+   "mcp": "Multipoint LV Pacing",
+   "note": "1本の四極LVリードの2点から刺激する各社機能。選択できるベクトル数はメーカーで異なる。デバイス比較表（提供資料・2020年／ICD DR・CRT-D）より。"
   },
   {
    "fn": "代表機種（ペースメーカ DR）",
@@ -7513,22 +8001,22 @@
    "en": "AV delay extension type",
    "cat": "ペーシング管理",
    "mdt": "Search AV+",
-   "abt": "VIP",
-   "bio": "IRSPlus Positive",
+   "abt": "VIP（Ventricular Intrinsic Preference）",
+   "bio": "IRSplus Positive",
    "bsx": "AV Search+",
    "mcp": "D Plus",
-   "note": "デバイス比較表（提供資料）より。AVディレイを一時的に延長して自己房室伝導を探す方式。"
+   "note": "AVディレイを一時的に延長して自己房室伝導を探す方式。旧「心室ペーシング抑制（自己房室伝導優先）」の総論行を本行とモード変換タイプの行に統合した。"
   },
   {
    "fn": "心室ペーシング抑制（モード変換タイプ）",
    "en": "Mode conversion type",
    "cat": "ペーシング管理",
-   "mdt": "MVP",
+   "mdt": "MVP（Managed Ventricular Pacing）",
    "abt": "—",
-   "bio": "VP Suppression",
+   "bio": "Vp Suppression",
    "bsx": "RYTHMIQ",
-   "mcp": "Safe R",
-   "note": "デバイス比較表（提供資料）より。AAI(R)＋心室バックアップで動作し、必要時にDDD(R)へ切り替える方式。Abbottは搭載なし。"
+   "mcp": "SafeR（AAIsafeR）",
+   "note": "AAI(R)＋心室バックアップで動作し、必要時にDDD(R)へ切り替える方式。Abbottは搭載なし。"
   },
   {
    "fn": "心房自動閾値測定",
@@ -7562,17 +8050,6 @@
    "bsx": "Sudden Brady Response",
    "mcp": "Acceleration",
    "note": "デバイス比較表（提供資料）より。急な徐脈を検出して一定時間高めのレートで刺激する。血管迷走神経性失神の心抑制型で用いる。"
-  },
-  {
-   "fn": "心不全マネジメント（HFモニタ）",
-   "en": "Heart failure management",
-   "cat": "フォロー",
-   "mdt": "OptiVol 2.0",
-   "abt": "—",
-   "bio": "Thoracic Impedance",
-   "bsx": "Heart Rate Variability",
-   "mcp": "—",
-   "note": "デバイス比較表（提供資料）より。ペースメーカ世代での搭載状況。ICD世代では別の指標を搭載する機種がある。"
   },
   {
    "fn": "遠隔モニタリング送信機",
@@ -7688,11 +8165,11 @@
    "fn": "T波識別機能",
    "en": "T-wave discrimination",
    "cat": "ICD",
-   "mdt": "TWOS",
-   "abt": "低周波減衰フィルター",
-   "bio": "×",
+   "mdt": "T Wave Discrimination（TWOS対策）",
+   "abt": "低周波減衰フィルター（Low Frequency Attenuation）",
+   "bio": "High Pass Filter",
    "bsx": "S-ICDは INSIGHT（経静脈ICDは —）",
-   "mcp": "×",
+   "mcp": "—",
    "note": "2026年2月現在 販売中ICDの比較表（提供資料）より。T波オーバーセンシングを識別する機能の搭載状況。"
   },
   {
@@ -7815,6 +8292,358 @@
    "bsx": "S-ICD（EMBLEM）：SQ-1（非標準型）／83.1×69.1×12.7mm／130g／8.7年／80J／1.5T",
    "mcp": "—",
    "note": "血管外ICDの2機種。EV-ICDはリードを胸骨下に留置しATP・除細動後ペーシング・ポーズ予防が可能。S-ICDは皮下留置で徐脈ペーシングやATPは不可だが、抜去が容易。S-ICDは開胸手術後の患者には禁忌。"
+  },
+  {
+   "fn": "代表機種（CRT-D・2020年資料）",
+   "en": "Representative CRT-D (2020 source)",
+   "cat": "製品",
+   "mdt": "COBALT XT HF",
+   "abt": "Gallant HF",
+   "bio": "Rivacor 7 HF-T／Ilivia Neo 7 HF-T",
+   "bsx": "RESONATE X4",
+   "mcp": "PLATINIUM SonR-R（資料表記は Sorin）",
+   "note": "提供資料（2020年）の比較表より。Rivacor 7・Ilivia Neo 7・PLATINIUM は現行機種ではない。デバイス比較表（提供資料・2020年／ICD DR・CRT-D）より。"
+  },
+  {
+   "fn": "センシング極性（ICD）",
+   "en": "Sensing polarity",
+   "cat": "ICD",
+   "mdt": "Tip-ring／Tip-coil",
+   "abt": "Tip-ring",
+   "bio": "Tip-ring",
+   "bsx": "Tip-coil",
+   "mcp": "—",
+   "note": "右室リードで感知に用いる電極の組合せ。Tip-ringはトゥルーバイポーラ、Tip-coilはインテグレーテッドバイポーラにあたる。デバイス比較表（提供資料・2020年／ICD DR・CRT-D）より。"
+  },
+  {
+   "fn": "センシング調整パラメータ（ICD）",
+   "en": "Sensing adjustment parameters",
+   "cat": "ICD",
+   "mdt": "Lowest sensitivity threshold／RV Lead Noise Discrimination",
+   "abt": "Minimum threshold／Threshold start／Initial Noise Interval／Decay delay",
+   "bio": "Sensitivity threshold／Upper & Lower threshold／Hold off periods／Blanking periods after pacing／PVC discrimination after As／Post pace T-wave suppression",
+   "bsx": "Sensitivity adjustment／Programmable sensing floor／Dynamic Noise Algorithm",
+   "mcp": "Sensitivity levels",
+   "note": "可変センシングで調整できる項目。名称と調整できる範囲がメーカーで大きく異なる。デバイス比較表（提供資料・2020年／ICD DR・CRT-D）より。"
+  },
+  {
+   "fn": "センシングフィルタ（T波・VF感度）",
+   "en": "Sensing filter options",
+   "cat": "ICD",
+   "mdt": "No（T Wave Discriminationで対応）",
+   "abt": "Low Frequency Attenuation",
+   "bio": "Standard／Enhanced T-wave suppression／Enhanced VF sensitivity／Manual setting",
+   "bsx": "No",
+   "mcp": "No",
+   "note": "T波オーバーセンシング対策と細動波の検出はトレードオフの関係にある。BIOTRONIKは用途別にフィルタを切り替えられる。デバイス比較表（提供資料・2020年／ICD DR・CRT-D）より。"
+  },
+  {
+   "fn": "検出ゾーン数",
+   "en": "Number of detection zones",
+   "cat": "ICD",
+   "mdt": "4 zone",
+   "abt": "3 zone",
+   "bio": "3 zone",
+   "bsx": "3 zone",
+   "mcp": "4 zone",
+   "note": "設定できる頻拍検出帯の数。デバイス比較表（提供資料・2020年／ICD DR・CRT-D）より。"
+  },
+  {
+   "fn": "ショック経路",
+   "en": "Shock pathway",
+   "cat": "ICD",
+   "mdt": "RV to Can & SVC／RV to Can／RV to SVC",
+   "abt": "RV to Can & SVC／RV to Can",
+   "bio": "RV to Can & SVC／RV to Can／RV to SVC",
+   "bsx": "RV to Can & SVC／RV to Can／RV to SVC",
+   "mcp": "RV to Can & SVC／RV to Can／RV to SVC",
+   "note": "除細動電流を流す電極の組合せ。SVCコイルのON/OFFは除細動閾値が高い症例での対応手段になる。デバイス比較表（提供資料・2020年／ICD DR・CRT-D）より。"
+  },
+  {
+   "fn": "ショック極性",
+   "en": "Shock polarity",
+   "cat": "ICD",
+   "mdt": "Normal／Reverse／Alternating（manual）",
+   "abt": "Normal／Reverse",
+   "bio": "Normal／Reverse／Alternating（auto）",
+   "bsx": "Normal／Reverse",
+   "mcp": "Normal／Reverse",
+   "note": "極性の変更は除細動閾値が高い症例での対応手段の一つ。デバイス比較表（提供資料・2020年／ICD DR・CRT-D）より。"
+  },
+  {
+   "fn": "ショック波形の調整",
+   "en": "Shock waveform adjustment",
+   "cat": "ICD",
+   "mdt": "No",
+   "abt": "DeFT Response（手動設定）",
+   "bio": "Biphasic 2（Phase 2のみ 50% または 1/2ms を選択）",
+   "bsx": "No",
+   "mcp": "No",
+   "note": "二相性波形のチルトやフェーズ持続を調整できるかどうか。デバイス比較表（提供資料・2020年／ICD DR・CRT-D）より。"
+  },
+  {
+   "fn": "VFゾーン 充電中ATP",
+   "en": "ATP during charging (VF zone)",
+   "cat": "ICD",
+   "mdt": "ATP during charging",
+   "abt": "ATP while charging",
+   "bio": "—",
+   "bsx": "—",
+   "mcp": "—",
+   "note": "充電と並行してATPを行い、停止すればショックを回避する。デバイス比較表（提供資料・2020年／ICD DR・CRT-D）より。"
+  },
+  {
+   "fn": "VFゾーン 充電前ATP",
+   "en": "ATP before charging (VF zone)",
+   "cat": "ICD",
+   "mdt": "ATP before charging",
+   "abt": "ATP prior to charging",
+   "bio": "ATP one shot／Early ATP one shot",
+   "bsx": "Quick Convert ATP",
+   "mcp": "ATP in fast VT/VF zone",
+   "note": "充電を始める前にATPを試み、無痛停止を狙う。デバイス比較表（提供資料・2020年／ICD DR・CRT-D）より。"
+  },
+  {
+   "fn": "ATP治療の種類",
+   "en": "ATP therapy types",
+   "cat": "ICD",
+   "mdt": "Burst／Ramp／Ramp+／iATP",
+   "abt": "Burst／Ramp／Scan",
+   "bio": "Burst／Ramp／Scan",
+   "bsx": "Burst／Ramp／Scan",
+   "mcp": "—",
+   "note": "選択できる抗頻拍ペーシングの方式。デバイス比較表（提供資料・2020年／ICD DR・CRT-D）より。"
+  },
+  {
+   "fn": "心房抗頻拍ペーシング（種類）",
+   "en": "Atrial ATP types",
+   "cat": "心房治療",
+   "mdt": "Burst／Ramp／HF Burst",
+   "abt": "—",
+   "bio": "Burst／Ramp／HF Burst",
+   "bsx": "—",
+   "mcp": "—",
+   "note": "心房頻拍・心房粗動に対する抗頻拍ペーシングの方式。デバイス比較表（提供資料・2020年／ICD DR・CRT-D）より。"
+  },
+  {
+   "fn": "心房ショック治療",
+   "en": "Atrial cardioversion",
+   "cat": "心房治療",
+   "mdt": "Cardio version",
+   "abt": "—",
+   "bio": "—",
+   "bsx": "—",
+   "mcp": "—",
+   "note": "心房性頻拍性不整脈に対する同期ショック。覚醒下では苦痛を伴う。デバイス比較表（提供資料・2020年／ICD DR・CRT-D）より。"
+  },
+  {
+   "fn": "睡眠時無呼吸モニタリング（SAS）",
+   "en": "Sleep apnea monitoring",
+   "cat": "フォロー",
+   "mdt": "—",
+   "abt": "—",
+   "bio": "—",
+   "bsx": "Yes",
+   "mcp": "—",
+   "note": "睡眠時の呼吸パターンから無呼吸・低呼吸を評価する。デバイス比較表（提供資料・2020年／ICD DR・CRT-D）より。"
+  },
+  {
+   "fn": "STモニタリング",
+   "en": "ST monitoring",
+   "cat": "フォロー",
+   "mdt": "—",
+   "abt": "Yes",
+   "bio": "—",
+   "bsx": "—",
+   "mcp": "—",
+   "note": "心内電位のST偏位を継続的に監視する。デバイス比較表（提供資料・2020年／ICD DR・CRT-D）より。"
+  },
+  {
+   "fn": "通信方式",
+   "en": "Telemetry band",
+   "cat": "リモート",
+   "mdt": "BLE",
+   "abt": "BLE",
+   "bio": "MICS",
+   "bsx": "MICS",
+   "mcp": "MICS",
+   "note": "本体と送信機・プログラマの無線通信方式。BLE対応機種はスマートフォンアプリを送信機として使える。デバイス比較表（提供資料・2020年／ICD DR・CRT-D）より。"
+  },
+  {
+   "fn": "患者通知機能（本体の音）",
+   "en": "Patient alert tone",
+   "cat": "リモート",
+   "mdt": "Yes（Tone）",
+   "abt": "Yes（Tone）",
+   "bio": "No",
+   "bsx": "Yes（Tone）",
+   "mcp": "No",
+   "note": "異常を検出したとき本体が可聴音で患者に知らせる機能。デバイス比較表（提供資料・2020年／ICD DR・CRT-D）より。"
+  },
+  {
+   "fn": "LVペーシング極性数",
+   "en": "Number of LV pacing vectors",
+   "cat": "CRT",
+   "mdt": "16",
+   "abt": "13",
+   "bio": "20",
+   "bsx": "17",
+   "mcp": "14",
+   "note": "四極LVリードで選択できるペーシングベクトルの数。多いほど横隔神経刺激の回避と閾値の低い部位の選択がしやすい。デバイス比較表（提供資料・2020年／ICD DR・CRT-D）より。"
+  },
+  {
+   "fn": "LV自動閾値測定",
+   "en": "LV automatic threshold",
+   "cat": "CRT",
+   "mdt": "LV1／LV2",
+   "abt": "LV1／LV2",
+   "bio": "LV1／LV2",
+   "bsx": "LV1",
+   "mcp": "—",
+   "note": "左室の刺激閾値を自動測定できるベクトルの範囲。デバイス比較表（提供資料・2020年／ICD DR・CRT-D）より。"
+  },
+  {
+   "fn": "LVセンシング極性数",
+   "en": "Number of LV sensing vectors",
+   "cat": "CRT",
+   "mdt": "—",
+   "abt": "—",
+   "bio": "7",
+   "bsx": "8",
+   "mcp": "—",
+   "note": "左室のセンシングに使えるベクトルの数。デバイス比較表（提供資料・2020年／ICD DR・CRT-D）より。"
+  },
+  {
+   "fn": "CRT確保：PQ間隔短縮への対応",
+   "en": "CRT delivery: short intrinsic PQ",
+   "cat": "CRT",
+   "mdt": "AdaptivCRTで対応",
+   "abt": "SyncAV",
+   "bio": "Negative AV Hysteresis",
+   "bsx": "—",
+   "mcp": "Sensitivity levels（資料の表記どおり・要確認）",
+   "note": "自己房室伝導が速い症例で両室ペーシングが脱落しないようAVディレイを調整する。デバイス比較表（提供資料・2020年／ICD DR・CRT-D）より。"
+  },
+  {
+   "fn": "CRT確保：心房レート上昇時（UTR）",
+   "en": "CRT delivery at upper tracking rate",
+   "cat": "CRT",
+   "mdt": "Atrial Tracking Recovery",
+   "abt": "×",
+   "bio": "WKB Behaviour",
+   "bsx": "Tracking Preference",
+   "mcp": "×",
+   "note": "上限追従レート付近で心房追従が失われ、両室ペーシングが脱落するのを防ぐ。デバイス比較表（提供資料・2020年／ICD DR・CRT-D）より。"
+  },
+  {
+   "fn": "CRT確保：PVC後",
+   "en": "CRT delivery after PVC",
+   "cat": "CRT",
+   "mdt": "Atrial Tracking Recoveryで対応",
+   "abt": "×",
+   "bio": "PVC discrimination After As",
+   "bsx": "—",
+   "mcp": "×",
+   "note": "心室期外収縮の後に不応期内センシングで両室ペーシングが脱落するのを防ぐ。デバイス比較表（提供資料・2020年／ICD DR・CRT-D）より。"
+  },
+  {
+   "fn": "心房細動時の心室レート制御",
+   "en": "Ventricular rate control during AF",
+   "cat": "CRT",
+   "mdt": "Conducted AF Response",
+   "abt": "—",
+   "bio": "Rate Stabilization",
+   "bsx": "Ventricular Rate Regulation",
+   "mcp": "—",
+   "note": "心房細動で不規則になった心室レートをならし、両室ペーシング率の維持にも寄与する。デバイス比較表（提供資料・2020年／ICD DR・CRT-D）より。"
+  },
+  {
+   "fn": "RVセンシング時の左室トリガ",
+   "en": "Ventricular sense response / trigger",
+   "cat": "CRT",
+   "mdt": "V Sens Response",
+   "abt": "Trrigering（資料の表記どおり／Triggering）",
+   "bio": "Trrigering（資料の表記どおり／Triggering）",
+   "bsx": "Bi-V Trigger",
+   "mcp": "?（資料の表記どおり）",
+   "note": "自己心室興奮を感知した拍でも左室（または両室）を刺激して再同期を試みる。デバイス比較表（提供資料・2020年／ICD DR・CRT-D）より。"
+  },
+  {
+   "fn": "LVセンシング",
+   "en": "LV sensing",
+   "cat": "CRT",
+   "mdt": "×",
+   "abt": "×",
+   "bio": "Yes",
+   "bsx": "Yes",
+   "mcp": "×",
+   "note": "左室リードでのセンシングの可否。デバイス比較表（提供資料・2020年／ICD DR・CRT-D）より。"
+  },
+  {
+   "fn": "左室保護期間",
+   "en": "LV protection period",
+   "cat": "CRT",
+   "mdt": "×",
+   "abt": "×",
+   "bio": "LV T-wave Protection",
+   "bsx": "Left ventricular protection period（LVPP）",
+   "mcp": "No",
+   "note": "左室の受攻期に刺激が落ちないよう保護する。デバイス比較表（提供資料・2020年／ICD DR・CRT-D）より。"
+  },
+  {
+   "fn": "左室多点ペーシングの推奨設定",
+   "en": "Multipoint pacing guidance",
+   "cat": "CRT",
+   "mdt": "No",
+   "abt": "No",
+   "bio": "No",
+   "bsx": "SmartCRT",
+   "mcp": "No",
+   "note": "多点ペーシングの設定を支援する機能。提供資料（2020年）ではこのセルがAbbottの列に置かれていたが、SmartCRT は Boston Scientific の CRT個別化の総称であることを確認したため Boston 側に記載した。列の対応は要確認。デバイス比較表（提供資料・2020年／ICD DR・CRT-D）より。"
+  },
+  {
+   "fn": "CRT AV自動調整",
+   "en": "Automatic AV adjustment (CRT)",
+   "cat": "CRT",
+   "mdt": "Adaptiv CRT",
+   "abt": "SyncAV CRT Pulse",
+   "bio": "Auto Adapt",
+   "bsx": "No",
+   "mcp": "SonR",
+   "note": "AVディレイを自己伝導に追随させて自動調整する。デバイス比較表（提供資料・2020年／ICD DR・CRT-D）より。"
+  },
+  {
+   "fn": "CRT AV調整量の設定",
+   "en": "AV adjustment amount",
+   "cat": "CRT",
+   "mdt": "No",
+   "abt": "Δ%／Δms",
+   "bio": "No",
+   "bsx": "No",
+   "mcp": "No",
+   "note": "自動調整するAVディレイの量を指定できるかどうか。デバイス比較表（提供資料・2020年／ICD DR・CRT-D）より。"
+  },
+  {
+   "fn": "CRT VV自動調整",
+   "en": "Automatic VV adjustment",
+   "cat": "CRT",
+   "mdt": "Yes",
+   "abt": "No",
+   "bio": "No",
+   "bsx": "No",
+   "mcp": "Yes",
+   "note": "右室・左室の刺激間隔を自動で調整する。デバイス比較表（提供資料・2020年／ICD DR・CRT-D）より。"
+  },
+  {
+   "fn": "BiV⇔LV only 自動切換え",
+   "en": "Automatic BiV / LV-only switching",
+   "cat": "CRT",
+   "mdt": "Yes",
+   "abt": "No",
+   "bio": "Yes",
+   "bsx": "No",
+   "mcp": "Yes",
+   "note": "自己房室伝導の状態に応じて両室ペーシングと左室単独ペーシングを自動で切り替える。デバイス比較表（提供資料・2020年／ICD DR・CRT-D）より。"
   }
  ]
 }
