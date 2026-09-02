@@ -23102,6 +23102,35 @@
    "kind": "device",
    "dealer": "アボットメディカルジャパン(同)",
    "cat": "Leadless PM"
+  },
+  {
+   "id": "GEAR-SH-3",
+   "kind": "gear",
+   "maker": "Abbott",
+   "dealer": "アボットメディカルジャパン(同)",
+   "cat": "デリバリーシース",
+   "name": "CPS ロケーター 3D",
+   "en": "CPS Locator™ 3D Delivery Catheter",
+   "family": "CPS（Cardiac Positioning System）",
+   "role": "ペーシングリードや除細動リードを目標部位へ導く単回使用のデリバリーカテーテル。遠位のカーブ形状が異なる複数のサイズがあり、解剖に合わせて選ぶ。左脚領域ペーシング（LBBAP）での使用実績があり、冠静脈洞からの左室リード留置にも用いる。止血弁を備え、遠位端はX線不透過。抜去時は専用スリッターでシースを切開する。",
+   "idfr": "7F",
+   "odfr": "9F",
+   "leadfit": "6Fリードに適合（42cmカテーテルは58cm以上、45cmカテーテルは65cm以上のリード長を推奨）",
+   "length": "42cm／45cm",
+   "gw": "0.035インチガイドワイヤ対応（ダイレータ）"
+  },
+  {
+   "id": "GEAR-SH-4",
+   "kind": "gear",
+   "maker": "Boston Scientific",
+   "dealer": "ボストン・サイエンティフィックジャパン(株)",
+   "cat": "デリバリーシース",
+   "name": "SSPC",
+   "en": "Site Selective Pacing Catheter",
+   "family": "SSPC",
+   "role": "各種リードや経静脈カテーテル（検査用を含む）を挿入するために設計されたデリバリーカテーテル。解剖学的な個人差とリード留置部位の多様性に対応できるよう複数の形状が用意されている。中隔・刺激伝導系ペーシングでのリード留置に用いる。",
+   "leadfit": "外径6.5F未満のリード・カテーテル（挿入前に外径がSSPCの内径より小さいことを確認する）",
+   "approval": "販売名：Site Selective Pacingデリバリーカテーテル／医療機器承認番号 30300BZX00131000"
   }
  ]
 }

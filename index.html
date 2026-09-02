@@ -1009,7 +1009,10 @@ loadMaster(false);
    if(x.longevity)a.push(x.longevity);
    if(x.mri)a.push(x.mri.split("（")[0]);
   }
-  if(x.kind==="gear"&&x.en)a.push(x.en);
+  if(x.kind==="gear"){
+   if(x.en)a.push(x.en);
+   if(x.idfr&&x.odfr)a.push("内径 "+x.idfr+"／外径 "+x.odfr);
+  }
   if(x.fixation)a.push(x.fixation);
   if(x.coil)a.push(x.coil);
   return a.join(" ・ ");
@@ -1083,7 +1086,10 @@ loadMaster(false);
             ["一般名称",x.family],["正式英語名",x.en],
             ["型番",x.model],["販売期間",x.period]];
   var body=x.kind==="gear"
-   ?[sec("概要",[["役割",x.role]])]
+   ?[sec("概要",[["役割",x.role]]),
+     sec("仕様",[["内径",x.idfr],["外径",x.odfr],["有効長",x.length],
+                 ["適合リード",x.leadfit],["ガイドワイヤ",x.gw],
+                 ["販売名・承認番号",x.approval]])]
    :x.kind==="lead"
    ?[sec("基本",[["極性",x.polarity],["適応部位",x.site],["固定形式",x.fixation],
                  ["ステロイド",x.steroid],["コネクタ",x.connector],
