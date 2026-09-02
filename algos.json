@@ -7,26 +7,26 @@
    "maker": "Medtronic",
    "cat": "ICD",
    "name": "ATP Before Charging",
-   "generic": "VFゾーンのATP（充電前・充電中）",
+   "generic": "VFゾーン 充電前のATP",
    "device": "ICD / CRT-D",
    "scope": "充電を始める前にATPを試みる",
    "how": "高レートの頻拍でも、まずATPを行ってから充電に入る設定。無痛で停止できればショックを完全に回避できる。",
    "params": "ATP Before Charging: On／Off",
    "models": "Cobalt XT・Evera 世代（EV-ICDはFVT設定で可）",
-   "equiv": "Abbott: ATP prior/during charging\nBIOTRONIK: ATP one shot／Early ATP one shot\nBoston Scientific: Quick Convert ATP™\nMicroPort CRM: ATP in fast VT/VF zone"
+   "equiv": "Abbott: ATP prior to charging（ATP prior/during charging）\nBIOTRONIK: ATP one shot／Early ATP one shot（Stableと判定された場合にATP後に充電）\nBoston Scientific: Quick Convert ATP™\nMicroPort CRM: ATP in fast VT/VF zone"
   },
   {
    "id": "MDT-ATP-DURING-CHARGING",
    "maker": "Medtronic",
    "cat": "ICD",
    "name": "ATP During Charging",
-   "generic": "VFゾーンのATP（充電前・充電中）",
+   "generic": "VFゾーン 充電中のATP",
    "device": "ICD / CRT-D",
    "scope": "充電中にATPを行いショックを回避する",
    "how": "VFゾーンで充電を始めると同時にATPを1シーケンス行い、頻拍が停止すれば充電を中止してショックを出さない。",
    "params": "ATP During Charging: On／Off",
    "models": "Cobalt XT・Evera 世代",
-   "equiv": "Abbott: ATP prior/during charging\nBIOTRONIK: ATP one shot／Early ATP one shot\nBoston Scientific: Quick Convert ATP™\nMicroPort CRM: ATP in fast VT/VF zone"
+   "equiv": "Abbott: ATP while charging（ATP prior/during charging）\nBIOTRONIK: —\nBoston Scientific: —\nMicroPort CRM: —"
   },
   {
    "id": "MDT-ADAPTIVCRTTM",
@@ -39,7 +39,7 @@
    "how": "自己房室伝導と自己QRS幅を定期的に評価し、伝導が保たれていれば左室単独ペーシングで自己興奮と融合させ、房室伝導が障害されていれば両室ペーシングに切り替える。AV・VVディレイも自動調整する。",
    "params": "AdaptivCRT: Adaptive BiV and LV／Adaptive BiV／Non-adaptive CRT",
    "models": "Cobalt XT HF／Claria／Percepta 世代のCRT",
-   "equiv": "Abbott: QuickOpt™ Optimization／SyncAV™ CRT／SyncAV™ Plus CRT\nBIOTRONIK: —\nBoston Scientific: SmartCRT™／SmartDelay™ Optimization\nMicroPort CRM: SonR™ CRT Optimization"
+   "equiv": "Abbott: QuickOpt™ Optimization／SyncAV™ CRT／SyncAV™ Plus CRT\nBIOTRONIK: —\nBoston Scientific: SmartDelay™ Optimization／SmartCRT™\nMicroPort CRM: SonR™ CRT Optimization"
   },
   {
    "id": "MDT-ATRIAL-CAPTURE-MANAGEMENTTM",
@@ -53,19 +53,6 @@
    "params": "ACM: Adaptive／Monitor／Off；最小補正出力；安全域倍率；測定頻度",
    "models": "Azure XT・Cobalt XT 世代",
    "equiv": "Abbott: ACap™ Confirm\nBIOTRONIK: Atrial Capture Control（ACC）\nBoston Scientific: PaceSafe™ RA Automatic Threshold\nMicroPort CRM: Atrial Auto-threshold"
-  },
-  {
-   "id": "MDT-ATRIAL-CARDIOVERSION",
-   "maker": "Medtronic",
-   "cat": "心房治療",
-   "name": "Atrial Cardioversion",
-   "generic": "心房ショック治療",
-   "device": "ICD / CRT-D",
-   "scope": "心房細動・心房粗動を同期ショックで停止させる",
-   "how": "R波に同期させたショックを心房に対して行い、心房性頻拍性不整脈の停止を図る。",
-   "models": "Cobalt XT 世代",
-   "equiv": "Abbott: —\nBIOTRONIK: —\nBoston Scientific: —\nMicroPort CRM: —",
-   "caution": "覚醒下では強い苦痛を伴うため、適応と鎮静の可否を慎重に判断する。"
   },
   {
    "id": "MDT-ATRIAL-PREFERENCE-PACING",
@@ -104,20 +91,7 @@
    "how": "上限追従レート付近やブロックされた心房期外収縮の後で心房追従が失われたとき、AVディレイと不応期の扱いを調整して追従を回復させ、両室ペーシングの脱落を防ぐ。",
    "params": "Atrial Tracking Recovery: On／Off",
    "models": "Cobalt XT HF・Percepta 世代",
-   "equiv": "Abbott: —\nBIOTRONIK: PVC discrimination after As／WKB Behaviour\nBoston Scientific: Tracking Preference\nMicroPort CRM: —"
-  },
-  {
-   "id": "MDT-BURST-RAMP-RAMP",
-   "maker": "Medtronic",
-   "cat": "ICD",
-   "name": "Burst／Ramp／Ramp+",
-   "generic": "ATP治療の種類",
-   "device": "ICD / CRT-D",
-   "scope": "リエントリー性心室頻拍を無痛で停止させる",
-   "how": "Burstは一定間隔、Rampは1拍ごとに間隔を短縮、Ramp+は両者を組み合わせた方式。頻拍周期に対する割合で連結期を設定する。",
-   "params": "刺激数；連結期（頻拍周期の％）；シーケンス数；出力（最大8V）",
-   "models": "Cobalt XT・Evera 世代",
-   "equiv": "Abbott: Burst／Ramp／Scan\nBIOTRONIK: Burst／Ramp／Scan\nBoston Scientific: Burst／Ramp／Scan\nMicroPort CRM: —"
+   "equiv": "Abbott: —\nBIOTRONIK: WKB Behaviour／PVC discrimination after As\nBoston Scientific: Tracking Preference\nMicroPort CRM: —"
   },
   {
    "id": "MDT-CARDIOSYNCTM-OPTIMIZATION",
@@ -130,7 +104,7 @@
    "how": "心内電位の時間関係を測定し、AVディレイとVVディレイの推奨値を算出して提示する。デバイス上で完結する至適化手段。",
    "params": "測定の実行；推奨値の適用",
    "models": "Cobalt XT HF／Claria／Percepta 世代のCRT",
-   "equiv": "Abbott: QuickOpt™ Optimization／SyncAV™ CRT／SyncAV™ Plus CRT\nBIOTRONIK: —\nBoston Scientific: SmartCRT™／SmartDelay™ Optimization\nMicroPort CRM: SonR™ CRT Optimization"
+   "equiv": "Abbott: QuickOpt™ Optimization／SyncAV™ CRT／SyncAV™ Plus CRT\nBIOTRONIK: —\nBoston Scientific: SmartDelay™ Optimization／SmartCRT™\nMicroPort CRM: SonR™ CRT Optimization"
   },
   {
    "id": "MDT-CHARGESAVERTM-SWITCHBACKTM-SMART-MODE",
@@ -249,7 +223,7 @@
    "how": "左室の閾値を定期的に測定し、安全域を加えた出力へ自動調整する。左室閾値の上昇による両室ペーシング欠落の早期発見にも役立つ。",
    "params": "LVCM: Adaptive／Monitor／Off；最小補正出力；安全域倍率",
    "models": "Cobalt XT HF／Claria／Percepta 世代のCRT",
-   "equiv": "Abbott: BiVCap™ Confirm／LVCap™ Confirm\nBIOTRONIK: —\nBoston Scientific: PaceSafe™ LV Automatic Threshold\nMicroPort CRM: LV Auto-threshold"
+   "equiv": "Abbott: BiVCap™ Confirm／LVCap™ Confirm\nBIOTRONIK: LV Capture Control（LVCC）\nBoston Scientific: PaceSafe™ LV Automatic Threshold\nMicroPort CRM: LV Auto-threshold"
   },
   {
    "id": "MDT-LEAD-MONITOR",
@@ -418,13 +392,13 @@
    "maker": "Medtronic",
    "cat": "心房治療",
    "name": "Reactive ATP™",
-   "generic": "心房ATP",
+   "generic": "心房ATP（心房抗頻拍ペーシング）",
    "device": "PM / ICD / CRT",
    "scope": "心房頻拍を無痛で停止させる",
    "how": "心房頻拍が整順化・徐拍化して停止しやすくなった機を捉えて心房ATPを行う。モードスイッチ中も繰り返し試行できる。",
    "params": "Reactive ATP: On／Off；シーケンス数",
    "models": "Azure XT・Cobalt XT 世代",
-   "equiv": "Abbott: 心房ATP（機種依存）\nBIOTRONIK: Atrial ATP（aATP）\nBoston Scientific: 心房ATP（機種依存）\nMicroPort CRM: —"
+   "equiv": "Abbott: —（非搭載）\nBIOTRONIK: Atrial ATP（aATP）\nBoston Scientific: —（非搭載）\nMicroPort CRM: —"
   },
   {
    "id": "MDT-SEARCH-AV",
@@ -464,18 +438,6 @@
    "params": "Sinus Preference: On／Off；検索間隔；探索幅",
    "models": "Azure XT・Cobalt XT 世代",
    "equiv": "Abbott: AF Suppression™\nBIOTRONIK: Overdrive Prevention Pacing\nBoston Scientific: AP Scan™／Atrial Preference Pacing（APP）／ProACt\nMicroPort CRM: Atrial Overdrive"
-  },
-  {
-   "id": "MDT-SMARTSHOCK",
-   "maker": "Medtronic",
-   "cat": "ICD",
-   "name": "SmartShock",
-   "generic": "不適切作動対策（総称）",
-   "device": "ICD / CRT-D",
-   "scope": "複数の識別機能をまとめた不適切作動対策",
-   "how": "PR Logic、Wavelet、T波識別、リード完全性アラート、RVリードノイズ識別、確認拍などを組み合わせ、不要なショックを減らすための機能群の総称。",
-   "models": "Cobalt XT・Evera 世代",
-   "equiv": "Abbott: —\nBIOTRONIK: —\nBoston Scientific: —\nMicroPort CRM: —"
   },
   {
    "id": "MDT-STABILITY",
@@ -597,45 +559,6 @@
    "caution": "感度設定が不適切だと波形がクリップされ、マッチ率が下がって不適切作動につながる。"
   },
   {
-   "id": "MDT-X",
-   "maker": "Medtronic",
-   "cat": "ICD",
-   "name": "ショック極性（Normal／Reverse／Alternating）",
-   "generic": "ショック波形・極性の調整",
-   "device": "ICD / CRT-D",
-   "scope": "ショックの極性を切り替える",
-   "how": "ショック極性をNormal／Reverseから選択し、交替を手動で設定する。チルトは50％固定。",
-   "params": "ショック極性: Normal／Reverse／Alternating（manual）",
-   "models": "Cobalt XT 世代",
-   "equiv": "Abbott: DeFT Response™\nBIOTRONIK: Biphasic 2（Phase 2の調整）\nBoston Scientific: —\nMicroPort CRM: Polarity alternation on Max shock"
-  },
-  {
-   "id": "MDT-X-2",
-   "maker": "Medtronic",
-   "cat": "レート応答",
-   "name": "加速度センサ（ADLレート／運動レートの2ゾーン）",
-   "generic": "レートレスポンス（生理的センサ）",
-   "device": "PM / ICD / CRT",
-   "scope": "活動量に応じてペーシングレートを上げる",
-   "how": "本体内の加速度センサが体動を検出し、活動量からセンサ指示レートを算出する。日常生活動作に対応するADLレートと、より高い運動時レートの2段階を持つ。",
-   "params": "レートレスポンス: On／Off／ODO；ADLレート；上限センサレート；活動閾値；応答性",
-   "models": "Azure XT・Cobalt XT 世代",
-   "equiv": "Abbott: 加速度センサ（Accelerometer）\nBIOTRONIK: Closed Loop Stimulation（CLS）\nBoston Scientific: Blended Sensor（加速度＋分時換気量）\nMicroPort CRM: Dual Sensor（加速度＋分時換気量）／SonR™ センサ（レート応答）"
-  },
-  {
-   "id": "MDT-X-3",
-   "maker": "Medtronic",
-   "cat": "リモート",
-   "name": "患者通知（Tone）",
-   "generic": "患者通知機能（本体の音）",
-   "device": "ICD / CRT-D",
-   "scope": "異常を本体の音で患者に知らせる",
-   "how": "リードインピーダンスの異常や電池消耗など、設定した事象を検出すると本体が可聴音を出して受診を促す。",
-   "params": "患者通知: On／Off；通知対象の選択",
-   "models": "Cobalt XT 世代",
-   "equiv": "Abbott: 患者通知（Tone）\nBIOTRONIK: —\nBoston Scientific: 患者通知（Tone）\nMicroPort CRM: —"
-  },
-  {
    "id": "ABT-ACAPTM-CONFIRM",
    "maker": "Abbott",
    "cat": "ペーシング管理",
@@ -666,13 +589,13 @@
    "maker": "Abbott",
    "cat": "ICD",
    "name": "ATP prior/during charging",
-   "generic": "VFゾーンのATP（充電前・充電中）",
+   "generic": "VFゾーン 充電前のATP",
    "device": "ICD / CRT-D",
    "scope": "高レートの頻拍でもATPで無痛停止を試みる",
    "how": "VFゾーンで検出した頻拍に対し、充電を始める前（prior）または充電と並行して（during）ATPを1シーケンス行う。停止すれば充電を中止しショックを出さない。",
    "params": "ATP prior to charging: On／Off；ATP while charging: On／Off",
    "models": "Gallant／Entrant 世代のICD／Gallant HF／Quadra Assura MP 世代のCRT-D",
-   "equiv": "Medtronic: ATP Before Charging／ATP During Charging\nBIOTRONIK: ATP one shot／Early ATP one shot\nBoston Scientific: Quick Convert ATP™\nMicroPort CRM: ATP in fast VT/VF zone"
+   "equiv": "Medtronic: ATP Before Charging（EV-ICDはFVT設定で可）\nBIOTRONIK: ATP one shot／Early ATP one shot（Stableと判定された場合にATP後に充電）\nBoston Scientific: Quick Convert ATP™\nMicroPort CRM: ATP in fast VT/VF zone"
   },
   {
    "id": "ABT-ADVANCED-HYSTERESIS",
@@ -738,20 +661,7 @@
    "how": "両室ペーシング時の捕捉を誘発反応で確認し、右室・左室それぞれの出力に安全域を確保する。",
    "params": "BiVCap Confirm: On／Monitor／Off",
    "models": "Gallant HF／Quadra Assura MP 世代のCRT-D",
-   "equiv": "Medtronic: LV Capture Management™（LVCM）\nBIOTRONIK: —\nBoston Scientific: PaceSafe™ LV Automatic Threshold\nMicroPort CRM: LV Auto-threshold"
-  },
-  {
-   "id": "ABT-BURST-RAMP-SCAN",
-   "maker": "Abbott",
-   "cat": "ICD",
-   "name": "Burst／Ramp／Scan",
-   "generic": "ATP治療の種類",
-   "device": "ICD / CRT-D",
-   "scope": "リエントリー性心室頻拍を無痛で停止させる",
-   "how": "一定間隔のBurst、漸減するRamp、シーケンスごとに周期を短縮するScanを選べる。",
-   "params": "刺激数；連結期（％）；シーケンス数；出力（最大7.5V）",
-   "models": "Gallant 世代",
-   "equiv": "Medtronic: Burst／Ramp／Ramp+\nBIOTRONIK: Burst／Ramp／Scan\nBoston Scientific: Burst／Ramp／Scan\nMicroPort CRM: —"
+   "equiv": "Medtronic: LV Capture Management™（LVCM）\nBIOTRONIK: LV Capture Control（LVCC）\nBoston Scientific: PaceSafe™ LV Automatic Threshold\nMicroPort CRM: LV Auto-threshold"
   },
   {
    "id": "ABT-CHAMBER-ONSET",
@@ -819,7 +729,7 @@
    "how": "本体（缶）とコイルの間で得られる遠隔電位（far-field）の波形を洞調律テンプレートと比較する。近接電極の波形より体表面心電図に近い形が得られる。",
    "params": "Far Field MD: On／Off；マッチ率閾値",
    "models": "Gallant／Entrant 世代のICD／Gallant HF／Quadra Assura MP 世代のCRT-D",
-   "equiv": "Medtronic: Feature Match／Wavelet\nBIOTRONIK: MorphMatch\nBoston Scientific: INSIGHT\nMicroPort CRM: —"
+   "equiv": "Medtronic: Wavelet／Feature Match\nBIOTRONIK: MorphMatch\nBoston Scientific: INSIGHT\nMicroPort CRM: —"
   },
   {
    "id": "ABT-INTERVAL-STABILITY",
@@ -846,7 +756,7 @@
    "how": "左室の刺激閾値を定期的に測定し、安全域を加えた出力へ自動調整する。左室閾値の上昇による両室ペーシング欠落の早期発見にも役立つ。",
    "params": "LVCap Confirm: On／Monitor／Off",
    "models": "Gallant HF／Quadra Assura MP 世代のCRT-D",
-   "equiv": "Medtronic: LV Capture Management™（LVCM）\nBIOTRONIK: —\nBoston Scientific: PaceSafe™ LV Automatic Threshold\nMicroPort CRM: LV Auto-threshold"
+   "equiv": "Medtronic: LV Capture Management™（LVCM）\nBIOTRONIK: LV Capture Control（LVCC）\nBoston Scientific: PaceSafe™ LV Automatic Threshold\nMicroPort CRM: LV Auto-threshold"
   },
   {
    "id": "ABT-LEAD-MONITORING",
@@ -872,7 +782,7 @@
    "how": "洞調律時に取得したテンプレートと頻拍時の波形の一致率を評価し、一致率が閾値以上の拍が一定数あれば上室性と判定して治療を保留する。",
    "params": "Morphology: On／Off；マッチ率閾値（％）；必要拍数；テンプレート取得",
    "models": "Gallant／Entrant 世代のICD／Gallant HF／Quadra Assura MP 世代のCRT-D",
-   "equiv": "Medtronic: Feature Match／Wavelet\nBIOTRONIK: MorphMatch\nBoston Scientific: INSIGHT\nMicroPort CRM: —",
+   "equiv": "Medtronic: Wavelet／Feature Match\nBIOTRONIK: MorphMatch\nBoston Scientific: INSIGHT\nMicroPort CRM: —",
    "caution": "感度設定が不適切だと波形がクリップされ、マッチ率が下がって不適切作動につながる。"
   },
   {
@@ -900,7 +810,7 @@
    "how": "心内電位の幅や心房・心室の伝導時間を測定し、AVディレイとVVディレイの推奨値を短時間で算出する。心エコーによる至適化の代替として用いる。",
    "params": "測定の実行；推奨値の適用",
    "models": "Gallant HF／Quadra Assura MP 世代のCRT-D",
-   "equiv": "Medtronic: AdaptivCRT™／CardioSync™ Optimization\nBIOTRONIK: —\nBoston Scientific: SmartCRT™／SmartDelay™ Optimization\nMicroPort CRM: SonR™ CRT Optimization"
+   "equiv": "Medtronic: AdaptivCRT™／CardioSync™ Optimization\nBIOTRONIK: —\nBoston Scientific: SmartDelay™ Optimization／SmartCRT™\nMicroPort CRM: SonR™ CRT Optimization"
   },
   {
    "id": "ABT-RVCAPTM-CONFIRM",
@@ -927,19 +837,6 @@
    "params": "Rate Branch: On／Off",
    "models": "Gallant／Entrant 世代のICD／Gallant HF／Quadra Assura MP 世代のCRT-D",
    "equiv": "Medtronic: PR Logic™\nBIOTRONIK: SMART® Detection\nBoston Scientific: Rhythm ID™\nMicroPort CRM: PARAD™+"
-  },
-  {
-   "id": "ABT-ST",
-   "maker": "Abbott",
-   "cat": "心不全",
-   "name": "STモニタリング",
-   "generic": "STモニタリング",
-   "device": "ICD / CRT",
-   "scope": "心内電位のST偏位を監視する",
-   "how": "心内電位のST部分の変化を継続的に監視し、虚血の可能性を示す変化を記録する。",
-   "params": "STモニタ: On／Off",
-   "models": "Gallant 世代",
-   "equiv": "Medtronic: —\nBIOTRONIK: —\nBoston Scientific: —\nMicroPort CRM: —"
   },
   {
    "id": "ABT-SECURESENSETM-RV-LEAD-NOISE",
@@ -993,7 +890,7 @@
    "how": "設定周期ごとに自己PR間隔を測定し、そこから設定したオフセット（デルタ）分だけ短いAVディレイを自動的に用いる。自己の右室興奮と左室刺激を融合させて再同期を得る。",
    "params": "SyncAV: On／Off；SyncAVデルタ（ms）；測定間隔",
    "models": "Gallant HF／Quadra Assura MP 世代のCRT-D",
-   "equiv": "Medtronic: AdaptivCRT™／CardioSync™ Optimization\nBIOTRONIK: —\nBoston Scientific: SmartCRT™／SmartDelay™ Optimization\nMicroPort CRM: SonR™ CRT Optimization"
+   "equiv": "Medtronic: AdaptivCRT™／CardioSync™ Optimization\nBIOTRONIK: —\nBoston Scientific: SmartDelay™ Optimization／SmartCRT™\nMicroPort CRM: SonR™ CRT Optimization"
   },
   {
    "id": "ABT-SYNCAVTM-PLUS-CRT",
@@ -1006,7 +903,7 @@
    "how": "SyncAVの動作に加え、自己PR間隔に対する調整量を％またはmsで指定できる。個々の伝導時間に合わせた融合ペーシングを狙う。",
    "params": "調整量: Δ%／Δms；測定間隔",
    "models": "Gallant HF／Quadra Assura MP 世代のCRT-D",
-   "equiv": "Medtronic: AdaptivCRT™／CardioSync™ Optimization\nBIOTRONIK: —\nBoston Scientific: SmartCRT™／SmartDelay™ Optimization\nMicroPort CRM: SonR™ CRT Optimization"
+   "equiv": "Medtronic: AdaptivCRT™／CardioSync™ Optimization\nBIOTRONIK: —\nBoston Scientific: SmartDelay™ Optimization／SmartCRT™\nMicroPort CRM: SonR™ CRT Optimization"
   },
   {
    "id": "ABT-TRIGGERING",
@@ -1033,19 +930,6 @@
    "params": "VF Therapy Assurance: On／Off；作動までの時間",
    "models": "Gallant／Entrant 世代のICD／Gallant HF／Quadra Assura MP 世代のCRT-D",
    "equiv": "Medtronic: Confirmation+\nBIOTRONIK: —\nBoston Scientific: —\nMicroPort CRM: —"
-  },
-  {
-   "id": "ABT-VFTA",
-   "maker": "Abbott",
-   "cat": "ICD",
-   "name": "VFTA（Fine VF detection）",
-   "generic": "微小細動波の検出",
-   "device": "ICD / CRT-D",
-   "scope": "振幅の小さい心室細動を確実に検出する",
-   "how": "通常の感知では拾いにくい微小な細動波を検出するための機能。5社の比較表ではAbbottのみ搭載とされている。",
-   "params": "VFTA: On／Off",
-   "models": "Gallant 世代",
-   "equiv": "Medtronic: —\nBIOTRONIK: —\nBoston Scientific: —\nMicroPort CRM: —"
   },
   {
    "id": "ABT-VENTRICULAR-AUTOCAPTURETM",
@@ -1076,57 +960,6 @@
    "caution": "探索中はAV間隔が長くなり、房室同期が一時的に崩れる。"
   },
   {
-   "id": "ABT-X",
-   "maker": "Abbott",
-   "cat": "ICD",
-   "name": "低周波減衰フィルター（Low Frequency Attenuation）",
-   "generic": "T波識別機能",
-   "device": "ICD / CRT-D",
-   "scope": "T波などの低周波成分を減衰させて誤感知を防ぐ",
-   "how": "センシング回路の低周波成分を減衰させ、T波オーバーセンシングによる不適切作動を減らす。",
-   "params": "Low Frequency Attenuation: On／Off",
-   "models": "Gallant 世代",
-   "equiv": "Medtronic: T-wave Discrimination\nBIOTRONIK: High Pass Filter\nBoston Scientific: SMART Pass\nMicroPort CRM: —"
-  },
-  {
-   "id": "ABT-X-2",
-   "maker": "Abbott",
-   "cat": "レート応答",
-   "name": "加速度センサ（Accelerometer）",
-   "generic": "レートレスポンス（生理的センサ）",
-   "device": "PM / ICD / CRT",
-   "scope": "活動量に応じてペーシングレートを上げる",
-   "how": "加速度センサで体動を検出し、レスポンスファクター（傾き）に従ってレートを上げる。立ち上がりと回復の速さを別々に設定できる。",
-   "params": "レスポンスファクター；リアクションタイム；リカバリータイム；最大センサレート",
-   "models": "Assurity MRI・Gallant 世代",
-   "equiv": "Medtronic: 加速度センサ（ADLレート／運動レートの2ゾーン）\nBIOTRONIK: Closed Loop Stimulation（CLS）\nBoston Scientific: Blended Sensor（加速度＋分時換気量）\nMicroPort CRM: Dual Sensor（加速度＋分時換気量）／SonR™ センサ（レート応答）"
-  },
-  {
-   "id": "ABT-ATP",
-   "maker": "Abbott",
-   "cat": "心房治療",
-   "name": "心房ATP（機種依存）",
-   "generic": "心房ATP",
-   "device": "ICD / CRT-D",
-   "scope": "心房頻拍を無痛で停止させる",
-   "how": "一部のICDで心房に対する抗頻拍ペーシングを行える。搭載の有無は機種によって異なる。",
-   "models": "Gallant 世代の一部",
-   "equiv": "Medtronic: Reactive ATP™\nBIOTRONIK: Atrial ATP（aATP）\nBoston Scientific: 心房ATP（機種依存）\nMicroPort CRM: —"
-  },
-  {
-   "id": "ABT-X-3",
-   "maker": "Abbott",
-   "cat": "リモート",
-   "name": "患者通知（Tone）",
-   "generic": "患者通知機能（本体の音）",
-   "device": "ICD / CRT-D",
-   "scope": "異常を本体の音で患者に知らせる",
-   "how": "設定した事象を検出すると本体が音を出し、患者に受診を促す。",
-   "params": "患者通知: On／Off",
-   "models": "Gallant 世代",
-   "equiv": "Medtronic: 患者通知（Tone）\nBIOTRONIK: —\nBoston Scientific: 患者通知（Tone）\nMicroPort CRM: —"
-  },
-  {
    "id": "BIO-ATP-OPTIMIZATION",
    "maker": "BIOTRONIK",
    "cat": "ICD",
@@ -1144,13 +977,13 @@
    "maker": "BIOTRONIK",
    "cat": "ICD",
    "name": "ATP one shot",
-   "generic": "VFゾーンのATP（充電前・充電中）",
+   "generic": "VFゾーン 充電前のATP",
    "device": "ICD / CRT-D",
    "scope": "充電前にATPを1回だけ行う",
    "how": "VFゾーンでも、R-R間隔が安定していると判定された場合に限りATPを1シーケンス行ってから充電に入る。",
    "params": "ATP one shot: On／Off",
    "models": "Acticor 7・Rivacor 7 世代",
-   "equiv": "Medtronic: ATP Before Charging／ATP During Charging\nAbbott: ATP prior/during charging\nBoston Scientific: Quick Convert ATP™\nMicroPort CRM: ATP in fast VT/VF zone"
+   "equiv": "Medtronic: ATP Before Charging（EV-ICDはFVT設定で可）\nAbbott: ATP prior to charging（ATP prior/during charging）\nBoston Scientific: Quick Convert ATP™\nMicroPort CRM: ATP in fast VT/VF zone"
   },
   {
    "id": "BIO-ACTIVE-THRESHOLD-MONITORING",
@@ -1170,13 +1003,13 @@
    "maker": "BIOTRONIK",
    "cat": "心房治療",
    "name": "Atrial ATP（aATP）",
-   "generic": "心房ATP",
+   "generic": "心房ATP（心房抗頻拍ペーシング）",
    "device": "ICD / CRT-D",
    "scope": "心房頻拍を無痛で停止させる",
    "how": "心房頻拍・心房粗動を検出すると、心房に対しBurst・Ramp・高頻度バーストを行って停止を図る。",
    "params": "刺激数；連結期（％）；シーケンス数",
    "models": "Acticor 7／Ilivia Neo 7 世代のICD／Rivacor 7 HF-T／Ilivia Neo 7 HF-T 世代のCRT-D",
-   "equiv": "Medtronic: Reactive ATP™\nAbbott: 心房ATP（機種依存）\nBoston Scientific: 心房ATP（機種依存）\nMicroPort CRM: —"
+   "equiv": "Medtronic: Reactive ATP™（rATP）\nAbbott: —（非搭載）\nBoston Scientific: —（非搭載）\nMicroPort CRM: —"
   },
   {
    "id": "BIO-ATRIAL-CAPTURE-CONTROL",
@@ -1218,32 +1051,6 @@
    "equiv": "Medtronic: Sensing Assurance\nAbbott: SenseAbility™\nBoston Scientific: Automatic Gain Control（AGC）\nMicroPort CRM: AutoSensitivityControl"
   },
   {
-   "id": "BIO-BIPHASIC-2",
-   "maker": "BIOTRONIK",
-   "cat": "ICD",
-   "name": "Biphasic 2（Phase 2の調整）",
-   "generic": "ショック波形・極性の調整",
-   "device": "ICD / CRT-D",
-   "scope": "二相性ショック波形の第2相を調整する",
-   "how": "第2相のみ、チルト50％または1/2msのいずれかを選択できる。ショック極性はNormal／Reverse／Alternating（auto）から選ぶ。",
-   "params": "Phase 2: 50%／1/2ms；ショック極性: Normal／Reverse／Alternating",
-   "models": "Acticor 7・Rivacor 7 世代",
-   "equiv": "Medtronic: ショック極性（Normal／Reverse／Alternating）\nAbbott: DeFT Response™\nBoston Scientific: —\nMicroPort CRM: Polarity alternation on Max shock"
-  },
-  {
-   "id": "BIO-BURST-RAMP-SCAN",
-   "maker": "BIOTRONIK",
-   "cat": "ICD",
-   "name": "Burst／Ramp／Scan",
-   "generic": "ATP治療の種類",
-   "device": "ICD / CRT-D",
-   "scope": "リエントリー性心室頻拍を無痛で停止させる",
-   "how": "Burst・Ramp・Scanの3方式を選択できる。出力は7.5V・パルス幅1.5ms固定。",
-   "params": "刺激数；連結期（％）；シーケンス数",
-   "models": "Acticor 7・Rivacor 7 世代",
-   "equiv": "Medtronic: Burst／Ramp／Ramp+\nAbbott: Burst／Ramp／Scan\nBoston Scientific: Burst／Ramp／Scan\nMicroPort CRM: —"
-  },
-  {
    "id": "BIO-CLOSED-LOOP-STIMULATION",
    "maker": "BIOTRONIK",
    "cat": "レート応答",
@@ -1262,26 +1069,13 @@
    "maker": "BIOTRONIK",
    "cat": "ICD",
    "name": "Early ATP one shot",
-   "generic": "VFゾーンのATP（充電前・充電中）",
+   "generic": "VFゾーン 充電前のATP",
    "device": "ICD / CRT-D",
    "scope": "検出の早い段階でATPを1回行う",
    "how": "頻拍検出の早期にATPを1シーケンス実施し、早い段階での無痛停止を狙う。",
    "params": "Early ATP one shot: On／Off",
    "models": "Acticor 7・Rivacor 7 世代",
-   "equiv": "Medtronic: ATP Before Charging／ATP During Charging\nAbbott: ATP prior/during charging\nBoston Scientific: Quick Convert ATP™\nMicroPort CRM: ATP in fast VT/VF zone"
-  },
-  {
-   "id": "BIO-HIGH-PASS-FILTER",
-   "maker": "BIOTRONIK",
-   "cat": "ICD",
-   "name": "High Pass Filter",
-   "generic": "T波識別機能",
-   "device": "ICD / CRT-D",
-   "scope": "低周波成分を除いてT波の誤感知を防ぐ",
-   "how": "高域通過フィルタでT波などの低周波成分を減衰させ、二重計数を防ぐ。心房18Hz、心室24／32Hzが公表されている。",
-   "params": "フィルタ: Standard／Enhanced T-wave suppression／Enhanced VF sensitivity／Manual",
-   "models": "Acticor 7・Rivacor 7 世代",
-   "equiv": "Medtronic: T-wave Discrimination\nAbbott: 低周波減衰フィルター（Low Frequency Attenuation）\nBoston Scientific: SMART Pass\nMicroPort CRM: —"
+   "equiv": "Medtronic: ATP Before Charging（EV-ICDはFVT設定で可）\nAbbott: ATP prior to charging（ATP prior/during charging）\nBoston Scientific: Quick Convert ATP™\nMicroPort CRM: ATP in fast VT/VF zone"
   },
   {
    "id": "BIO-INTRINSIC-RHYTHM-SUPPORT",
@@ -1346,7 +1140,7 @@
    "how": "洞調律時に取得したテンプレートと頻拍時の波形を比較し、一致率が閾値以上なら上室性と判定して治療を保留する。",
    "params": "MorphMatch: On／Off；マッチ率閾値（％）；テンプレート取得",
    "models": "Acticor 7／Ilivia Neo 7 世代のICD／Rivacor 7 HF-T／Ilivia Neo 7 HF-T 世代のCRT-D",
-   "equiv": "Medtronic: Feature Match／Wavelet\nAbbott: Far Field MD™ Morphology／Morphology\nBoston Scientific: INSIGHT\nMicroPort CRM: —"
+   "equiv": "Medtronic: Wavelet／Feature Match\nAbbott: Far Field MD™ Morphology／Morphology\nBoston Scientific: INSIGHT\nMicroPort CRM: —"
   },
   {
    "id": "BIO-MULTIPOLE-PACING",
@@ -1507,19 +1301,6 @@
    "equiv": "Medtronic: —\nAbbott: —\nBoston Scientific: SRD（Sustained Rate Duration）\nMicroPort CRM: Brady-Tachy Overlap（BTO™）"
   },
   {
-   "id": "BIO-THORACIC-IMPEDANCE",
-   "maker": "BIOTRONIK",
-   "cat": "心不全",
-   "name": "Thoracic Impedance（TI）",
-   "generic": "心不全モニタ（胸郭インピーダンス等）",
-   "device": "ICD / CRT",
-   "scope": "肺うっ血の進行を胸郭インピーダンスで捉える",
-   "how": "胸郭インピーダンスの推移を記録し、Home Monitoringのトレンドとして提示する。",
-   "params": "TI: On／Off",
-   "models": "Acticor 7・Rivacor 7 世代",
-   "equiv": "Medtronic: OptiVol™ 2.0 Fluid Status Monitoring\nAbbott: CorVue™\nBoston Scientific: Thoracic impedance（TI）／Heart Rate Variability\nMicroPort CRM: —"
-  },
-  {
    "id": "BIO-VENTRICULAR-CAPTURE-CONTROL",
    "maker": "BIOTRONIK",
    "cat": "ペーシング管理",
@@ -1545,19 +1326,6 @@
    "models": "Amvia Sky・Acticor 7・Rivacor 7 世代",
    "equiv": "Medtronic: Managed Ventricular Pacing（MVP™）\nAbbott: —\nBoston Scientific: RYTHMIQ™\nMicroPort CRM: SafeR™",
    "caution": "AAI(R)動作中はAV間隔が長くなるため、逆行性室房伝導があるとRNRVASを誘発することがある。"
-  },
-  {
-   "id": "BIO-WKB-BEHAVIOUR",
-   "maker": "BIOTRONIK",
-   "cat": "CRT",
-   "name": "WKB Behaviour",
-   "generic": "CRT確保：心房追従の回復（UTR・PVC後）",
-   "device": "CRT",
-   "scope": "上限追従レートを超えたときの追従動作を選ぶ",
-   "how": "心房レートが上限追従レートを超えた際に、2:1ブロックへ移行せずウェンケバッハ様に段階的にAVディレイを延ばして追従する。心拍数の急な半減を避ける。",
-   "params": "上限レート動作: WKB／2:1",
-   "models": "Rivacor 7・Ilivia Neo 7 世代",
-   "equiv": "Medtronic: Atrial Tracking Recovery\nAbbott: —\nBoston Scientific: Tracking Preference\nMicroPort CRM: —"
   },
   {
    "id": "BSX-AP-SCANTM",
@@ -1664,32 +1432,6 @@
    "equiv": "Medtronic: Ventricular Sense Response\nAbbott: Triggering（Ventricular Sense Response）\nBIOTRONIK: LV Triggering\nMicroPort CRM: —"
   },
   {
-   "id": "BSX-BLENDED-SENSOR",
-   "maker": "Boston Scientific",
-   "cat": "レート応答",
-   "name": "Blended Sensor（加速度＋分時換気量）",
-   "generic": "レートレスポンス（生理的センサ）",
-   "device": "PM / ICD / CRT",
-   "scope": "体動と換気量の両方からレートを決める",
-   "how": "加速度センサの速い立ち上がりと、分時換気量センサ（RightRate）の生理的な正確さを組み合わせてセンサ指示レートを算出する。比率を設定できる。",
-   "params": "レートレスポンス: Off／加速度／MV／Blended；ブレンド比；最大センサレート",
-   "models": "ACCOLADE MRI・RESONATE 世代",
-   "equiv": "Medtronic: 加速度センサ（ADLレート／運動レートの2ゾーン）\nAbbott: 加速度センサ（Accelerometer）\nBIOTRONIK: Closed Loop Stimulation（CLS）\nMicroPort CRM: Dual Sensor（加速度＋分時換気量）／SonR™ センサ（レート応答）"
-  },
-  {
-   "id": "BSX-BURST-RAMP-SCAN",
-   "maker": "Boston Scientific",
-   "cat": "ICD",
-   "name": "Burst／Ramp／Scan",
-   "generic": "ATP治療の種類",
-   "device": "ICD / CRT-D",
-   "scope": "リエントリー性心室頻拍を無痛で停止させる",
-   "how": "Burst・Ramp・Scanの3方式を選択できる。",
-   "params": "刺激数；連結期（％）；シーケンス数；出力（最大7.5V）",
-   "models": "RESONATE 世代",
-   "equiv": "Medtronic: Burst／Ramp／Ramp+\nAbbott: Burst／Ramp／Scan\nBIOTRONIK: Burst／Ramp／Scan\nMicroPort CRM: —"
-  },
-  {
    "id": "BSX-INSIGHT",
    "maker": "Boston Scientific",
    "cat": "ICD",
@@ -1700,7 +1442,7 @@
    "how": "皮下で記録した心電図の波形を解析し、Conditionalゾーンで上室頻拍やT波の誤感知による不適切作動を抑える。",
    "params": "Conditionalゾーン: On／Off",
    "models": "EMBLEM S-ICD",
-   "equiv": "Medtronic: Feature Match／Wavelet\nAbbott: Far Field MD™ Morphology／Morphology\nBIOTRONIK: MorphMatch\nMicroPort CRM: —"
+   "equiv": "Medtronic: Wavelet／Feature Match\nAbbott: Far Field MD™ Morphology／Morphology\nBIOTRONIK: MorphMatch\nMicroPort CRM: —"
   },
   {
    "id": "BSX-LV-MULTISITE-PACING",
@@ -1781,7 +1523,7 @@
    "how": "左室の閾値を定期的に測定し、安全域を加えた出力へ自動調整する。左室閾値の上昇による両室ペーシング欠落の早期発見にも役立つ。",
    "params": "LVAT: On／Off；最小出力",
    "models": "RESONATE X4 世代のCRT-D",
-   "equiv": "Medtronic: LV Capture Management™（LVCM）\nAbbott: BiVCap™ Confirm／LVCap™ Confirm\nBIOTRONIK: —\nMicroPort CRM: LV Auto-threshold"
+   "equiv": "Medtronic: LV Capture Management™（LVCM）\nAbbott: BiVCap™ Confirm／LVCap™ Confirm\nBIOTRONIK: LV Capture Control（LVCC）\nMicroPort CRM: LV Auto-threshold"
   },
   {
    "id": "BSX-PACESAFETM-RA-AUTOMATIC-THRESHOLD",
@@ -1853,13 +1595,13 @@
    "maker": "Boston Scientific",
    "cat": "ICD",
    "name": "Quick Convert ATP™",
-   "generic": "VFゾーンのATP（充電前・充電中）",
+   "generic": "VFゾーン 充電前のATP",
    "device": "ICD / CRT-D",
    "scope": "VFゾーンで充電前にATPを1回行う",
    "how": "VFゾーンで検出した頻拍に対し、充電に入る前にワンショットのATPを行う。停止すればショックは出ない。",
    "params": "Quick Convert ATP: On／Off",
    "models": "RESONATE／RESONATE EL 世代のICD／RESONATE X4 世代のCRT-D",
-   "equiv": "Medtronic: ATP Before Charging／ATP During Charging\nAbbott: ATP prior/during charging\nBIOTRONIK: ATP one shot／Early ATP one shot\nMicroPort CRM: ATP in fast VT/VF zone"
+   "equiv": "Medtronic: ATP Before Charging（EV-ICDはFVT設定で可）\nAbbott: ATP prior to charging（ATP prior/during charging）\nBIOTRONIK: ATP one shot／Early ATP one shot（Stableと判定された場合にATP後に充電）\nMicroPort CRM: ATP in fast VT/VF zone"
   },
   {
    "id": "BSX-RYTHMIQTM",
@@ -1955,19 +1697,6 @@
    "caution": "心抑制型の血管迷走神経性失神が対象で、血管抑制型には効果が乏しい。"
   },
   {
-   "id": "BSX-THORACIC-IMPEDANCE-HEART-RATE-VARIABILIT",
-   "maker": "Boston Scientific",
-   "cat": "心不全",
-   "name": "Thoracic impedance（TI）／Heart Rate Variability",
-   "generic": "心不全モニタ（胸郭インピーダンス等）",
-   "device": "ICD / CRT",
-   "scope": "胸郭インピーダンスと心拍変動から心不全の状態を評価する",
-   "how": "胸郭インピーダンスと心拍間隔のゆらぎ（HRV）、呼吸数、活動量を組み合わせて心不全増悪の兆候を捉える。",
-   "params": "Heart Failure Sensor Suite: On／Off",
-   "models": "RESONATE 世代",
-   "equiv": "Medtronic: OptiVol™ 2.0 Fluid Status Monitoring\nAbbott: CorVue™\nBIOTRONIK: Thoracic Impedance（TI）\nMicroPort CRM: —"
-  },
-  {
    "id": "BSX-TRACKING-PREFERENCE",
    "maker": "Boston Scientific",
    "cat": "CRT",
@@ -1978,7 +1707,7 @@
    "how": "心房レートが上限追従レートに近づいた際に心房不応期の扱いを調整して1:1追従を維持し、両室ペーシングの欠落を減らす。",
    "params": "Tracking Preference: On／Off",
    "models": "RESONATE X4 世代",
-   "equiv": "Medtronic: Atrial Tracking Recovery\nAbbott: —\nBIOTRONIK: PVC discrimination after As／WKB Behaviour\nMicroPort CRM: —"
+   "equiv": "Medtronic: Atrial Tracking Recovery\nAbbott: —\nBIOTRONIK: WKB Behaviour／PVC discrimination after As\nMicroPort CRM: —"
   },
   {
    "id": "BSX-VENTRICULAR-AUTOMATIC-CAPTURE",
@@ -2020,55 +1749,17 @@
    "equiv": "Medtronic: Conducted AF Response（CAFR）\nAbbott: —\nBIOTRONIK: Rate Stabilization\nMicroPort CRM: —"
   },
   {
-   "id": "BSX-ATP",
-   "maker": "Boston Scientific",
-   "cat": "心房治療",
-   "name": "心房ATP（機種依存）",
-   "generic": "心房ATP",
-   "device": "ICD / CRT-D",
-   "scope": "心房頻拍を無痛で停止させる",
-   "how": "一部のICDで心房に対する抗頻拍ペーシングを行える。搭載の有無は機種によって異なる。",
-   "models": "RESONATE 世代の一部",
-   "equiv": "Medtronic: Reactive ATP™\nAbbott: 心房ATP（機種依存）\nBIOTRONIK: Atrial ATP（aATP）\nMicroPort CRM: —"
-  },
-  {
-   "id": "BSX-X",
-   "maker": "Boston Scientific",
-   "cat": "リモート",
-   "name": "患者通知（Tone）",
-   "generic": "患者通知機能（本体の音）",
-   "device": "ICD / CRT-D",
-   "scope": "異常を本体の音で患者に知らせる",
-   "how": "設定した事象を検出すると本体が音を出し、患者に受診を促す。",
-   "params": "患者通知: On／Off",
-   "models": "RESONATE・EMBLEM 世代",
-   "equiv": "Medtronic: 患者通知（Tone）\nAbbott: 患者通知（Tone）\nBIOTRONIK: —\nMicroPort CRM: —",
-   "caution": "S-ICDではMRI検査後にスピーカーの音圧が永久的に低下する。"
-  },
-  {
-   "id": "BSX-X-2",
-   "maker": "Boston Scientific",
-   "cat": "心不全",
-   "name": "睡眠時無呼吸モニタリング（Respiratory Rate Sensor）",
-   "generic": "睡眠時無呼吸モニタリング",
-   "device": "ICD / CRT",
-   "scope": "睡眠時の呼吸の乱れを検出する",
-   "how": "呼吸センサで睡眠時の呼吸パターンを解析し、無呼吸・低呼吸の指標を記録する。",
-   "models": "RESONATE 世代",
-   "equiv": "Medtronic: —\nAbbott: —\nBIOTRONIK: —\nMicroPort CRM: Sleep Apnea Monitoring（SAM）"
-  },
-  {
    "id": "MCP-ATP-IN-FAST-VT-VF-ZONE",
    "maker": "MicroPort CRM",
    "cat": "ICD",
    "name": "ATP in fast VT/VF zone",
-   "generic": "VFゾーンのATP（充電前・充電中）",
+   "generic": "VFゾーン 充電前のATP",
    "device": "ICD / CRT-D",
    "scope": "高レートのゾーンでもATPを試みる",
    "how": "Fast VT／VFゾーンでもATPを行える設定。無痛停止の機会を広げる。",
    "params": "ATP in fast VT/VF zone: On／Off",
    "models": "ULYS・PLATINIUM 世代",
-   "equiv": "Medtronic: ATP Before Charging／ATP During Charging\nAbbott: ATP prior/during charging\nBIOTRONIK: ATP one shot／Early ATP one shot\nBoston Scientific: Quick Convert ATP™"
+   "equiv": "Medtronic: ATP Before Charging（EV-ICDはFVT設定で可）\nAbbott: ATP prior to charging（ATP prior/during charging）\nBIOTRONIK: ATP one shot／Early ATP one shot（Stableと判定された場合にATP後に充電）\nBoston Scientific: Quick Convert ATP™"
   },
   {
    "id": "MCP-ACCELERATION-ON-PAC",
@@ -2214,19 +1905,6 @@
    "equiv": "Medtronic: Search AV+（SAV+）\nAbbott: Ventricular Intrinsic Preference（VIP™）\nBIOTRONIK: Intrinsic Rhythm Support（IRSplus）／Positive AV Hysteresis with Scan/Repetitive\nBoston Scientific: AV Search +"
   },
   {
-   "id": "MCP-DUAL-SENSOR",
-   "maker": "MicroPort CRM",
-   "cat": "レート応答",
-   "name": "Dual Sensor（加速度＋分時換気量）",
-   "generic": "レートレスポンス（生理的センサ）",
-   "device": "PM / ICD / CRT",
-   "scope": "体動と換気量の両方からレートを決める",
-   "how": "加速度センサと分時換気量センサを併用し、活動開始時は加速度、持続する負荷では換気量を重視してレートを決める。",
-   "params": "レートレスポンス: Off／加速度／MV／Dual",
-   "models": "ALIZEA・ULYS 世代",
-   "equiv": "Medtronic: 加速度センサ（ADLレート／運動レートの2ゾーン）\nAbbott: 加速度センサ（Accelerometer）\nBIOTRONIK: Closed Loop Stimulation（CLS）\nBoston Scientific: Blended Sensor（加速度＋分時換気量）"
-  },
-  {
    "id": "MCP-LV-AUTO-THRESHOLD",
    "maker": "MicroPort CRM",
    "cat": "ペーシング管理",
@@ -2237,7 +1915,7 @@
    "how": "左室の閾値を定期的に測定し、安全域を加えた出力へ自動調整する。",
    "params": "LV Auto-threshold: On／Off；安全域",
    "models": "PLATINIUM SonR-R 世代のCRT-D",
-   "equiv": "Medtronic: LV Capture Management™（LVCM）\nAbbott: BiVCap™ Confirm／LVCap™ Confirm\nBIOTRONIK: —\nBoston Scientific: PaceSafe™ LV Automatic Threshold"
+   "equiv": "Medtronic: LV Capture Management™（LVCM）\nAbbott: BiVCap™ Confirm／LVCap™ Confirm\nBIOTRONIK: LV Capture Control（LVCC）\nBoston Scientific: PaceSafe™ LV Automatic Threshold"
   },
   {
    "id": "MCP-LV-MULTIPOINT-PACING",
@@ -2396,7 +2074,7 @@
    "how": "分時換気量センサで得られる呼吸波形を解析し、無呼吸・低呼吸の回数を1時間あたりの指標として記録する。",
    "params": "SAM: On／Off；解析時間帯",
    "models": "ALIZEA・ULYS・PLATINIUM 世代",
-   "equiv": "Medtronic: —\nAbbott: —\nBIOTRONIK: —\nBoston Scientific: 睡眠時無呼吸モニタリング（Respiratory Rate Sensor）",
+   "equiv": "Medtronic: —\nAbbott: —\nBIOTRONIK: —\nBoston Scientific: —",
    "caution": "スクリーニングの補助であり、睡眠ポリグラフの代替にはならない。"
   },
   {
@@ -2410,22 +2088,8 @@
    "how": "心房リード先端のマイクロ加速度センサが第1心音に相当する振動を捉え、心収縮力の指標としてAV・VVディレイを定期的に自動で再調整する。安静時と運動時の両方で最適化を行う。",
    "params": "SonR最適化: On／Off；最適化の頻度",
    "models": "PLATINIUM SonR-R 世代のCRT-D",
-   "equiv": "Medtronic: AdaptivCRT™／CardioSync™ Optimization\nAbbott: QuickOpt™ Optimization／SyncAV™ CRT／SyncAV™ Plus CRT\nBIOTRONIK: —\nBoston Scientific: SmartCRT™／SmartDelay™ Optimization",
+   "equiv": "Medtronic: AdaptivCRT™／CardioSync™ Optimization\nAbbott: QuickOpt™ Optimization／SyncAV™ CRT／SyncAV™ Plus CRT\nBIOTRONIK: —\nBoston Scientific: SmartDelay™ Optimization／SmartCRT™",
    "caution": "専用のSonRtipリードが必要で、通常の心房リードでは使用できない。"
-  },
-  {
-   "id": "MCP-SONRTM",
-   "maker": "MicroPort CRM",
-   "cat": "レート応答",
-   "name": "SonR™ センサ（レート応答）",
-   "generic": "レートレスポンス（生理的センサ）",
-   "device": "PM / CRT",
-   "scope": "心音（心筋収縮力）を利用してレートを調整する",
-   "how": "心房リード先端のマイクロ加速度センサが第1心音に相当する振動を捉え、心収縮力の指標としてレート応答に用いる。",
-   "params": "SonRセンサ: On／Off",
-   "models": "PLATINIUM SonR-R 世代",
-   "equiv": "Medtronic: 加速度センサ（ADLレート／運動レートの2ゾーン）\nAbbott: 加速度センサ（Accelerometer）\nBIOTRONIK: Closed Loop Stimulation（CLS）\nBoston Scientific: Blended Sensor（加速度＋分時換気量）",
-   "caution": "専用のSonRtipリードが必要。"
   },
   {
    "id": "MCP-VENTRICULAR-AUTO-THRESHOLD",
@@ -2439,6 +2103,19 @@
    "params": "Ventricular Auto-threshold: On／Off；安全域",
    "models": "ALIZEA・ULYS・PLATINIUM 世代",
    "equiv": "Medtronic: RV Capture Management™（RVCM）／Ventricular Capture Management™（VCM）\nAbbott: RVCap™ Confirm／Ventricular AutoCapture™\nBIOTRONIK: Ventricular Capture Control（VCC）\nBoston Scientific: PaceSafe™ RV Automatic Capture／PaceSafe™ RV Automatic Threshold／Ventricular Automatic Capture"
+  },
+  {
+   "id": "BIO-LV-CAPTURE-CONTROL",
+   "maker": "BIOTRONIK",
+   "cat": "ペーシング管理",
+   "name": "LV Capture Control（LVCC）",
+   "generic": "左室自動閾値測定",
+   "device": "CRT",
+   "scope": "左室の刺激閾値を自動測定し出力を調整する",
+   "how": "左室の閾値を定期的に測定し、安全域を加えた出力へ自動設定する。左室閾値の上昇による両室ペーシングの脱落を早期に見つけられる。",
+   "params": "LVCC: Auto／ATM（Monitor）／Off；安全域",
+   "models": "Rivacor 7 HF-T／Ilivia Neo 7 HF-T 世代のCRT-D",
+   "equiv": "Medtronic: LV Capture Management™（LVCM）\nAbbott: BiVCap™ Confirm／LVCap™ Confirm\nBoston Scientific: PaceSafe™ LV Automatic Threshold\nMicroPort CRM: LV Auto-threshold"
   }
  ]
 }

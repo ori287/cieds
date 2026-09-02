@@ -7763,7 +7763,7 @@
    "bio": "Closed Loop Stimulation（CLS）",
    "bsx": "Blended Sensor（加速度＋分時換気量）",
    "mcp": "Dual Sensor（加速度＋分時換気量）／SonR™ センサ（レート応答）",
-   "note": "BiotronikのCLSは心筋収縮に伴う心内インピーダンス変化を利用する点が特徴。SonRは血行動態センサ。　アルゴリズムタブ（メーカー別）の登録内容から自動生成。"
+   "note": "BiotronikのCLSは心筋収縮に伴う心内インピーダンス変化を利用する点が特徴。SonRは血行動態センサ。　この行はメーカー別の一覧に該当項目がないメーカーを含む。一覧表として保持している比較行。"
   },
   {
    "fn": "自動閾値管理（オートキャプチャ）",
@@ -7810,28 +7810,6 @@
    "note": "製品タブ（本体・リード・関連機器）へ移設したため、この行は一覧表の静的な比較行として保持している。"
   },
   {
-   "fn": "条件付きMRI対応",
-   "en": "MRI conditional system",
-   "cat": "MRI",
-   "mdt": "SureScan",
-   "abt": "MRI Ready（MRI Activator併用）",
-   "bio": "ProMRI（MRI AutoDetect）",
-   "bsx": "ImageReady",
-   "mcp": "条件付きMRI対応（専用ブランド名なし）",
-   "note": "製品タブ（本体・リード・関連機器）へ移設したため、この行は一覧表の静的な比較行として保持している。"
-  },
-  {
-   "fn": "プログラマ",
-   "en": "Programmer",
-   "cat": "機器",
-   "mdt": "CareLink プログラマ（Encore 2090／SmartSync）",
-   "abt": "Merlin PCS",
-   "bio": "Renamic（ICS 3000）",
-   "bsx": "ZOOM／LATITUDE Programming System",
-   "mcp": "Orchestra Plus",
-   "note": "製品タブ（本体・リード・関連機器）へ移設したため、この行は一覧表の静的な比較行として保持している。"
-  },
-  {
    "fn": "モードスイッチ（心房頻拍時の追従回避）",
    "en": "Automatic mode switch",
    "cat": "ペーシング管理",
@@ -7841,39 +7819,6 @@
    "bsx": "ATR Mode Switch",
    "mcp": "Mode Switching",
    "note": "心房頻拍を検出するとDDD(R)→DDI/VDI等の非追従モードへ自動切替し、速い心室追従を防ぐ。　アルゴリズムタブ（メーカー別）の登録内容から自動生成。"
-  },
-  {
-   "fn": "心房ATP（Reactive ATP）",
-   "en": "Atrial antitachycardia pacing (aATP)",
-   "cat": "心房治療",
-   "mdt": "Reactive ATP（rATP）",
-   "abt": "心房ATP（一部ICD／機種依存）",
-   "bio": "aATP（Amvia／Solvia世代）",
-   "bsx": "心房ATP（一部ICD／機種依存）",
-   "mcp": "—",
-   "note": "心房頻拍が整順化・徐拍化する機を捉えて心房ATPを行う。Reactive ATPはMedtronicの名称。iATPは同社の心室ATP。"
-  },
-  {
-   "fn": "His/左脚領域ペーシング（CSP）ツール",
-   "en": "Conduction system pacing leads / delivery",
-   "cat": "CSP",
-   "mdt": "SelectSecure 3830＋C315／C304シース／OmniaSecure",
-   "abt": "UltiPace／AVEIR CSP（開発中）",
-   "bio": "Solia S＋Selectra 3D",
-   "bsx": "INGEVITY+",
-   "mcp": "—",
-   "note": "製品タブ（本体・リード・関連機器）へ移設したため、この行は一覧表の静的な比較行として保持している。"
-  },
-  {
-   "fn": "リードレスペースメーカ（i2i）",
-   "en": "Leadless pacemaker",
-   "cat": "Leadless",
-   "mdt": "Micra VR／AV／AV2（AVは心房の機械的収縮を感知しVDD）",
-   "abt": "AVEIR VR／AR／DR（i2i＝拍動ごとの機体間通信で房室同期）",
-   "bio": "—",
-   "bsx": "—",
-   "mcp": "—",
-   "note": "i2iはAbbott AVEIR DRの2機体間通信の名称。国内はMicra（2017〜、AV/AV2含む）とAVEIR（VR 2022〜、AR/DR）が使用可能。"
   },
   {
    "fn": "心房オーバードライブ（AF抑制）",
@@ -7928,7 +7873,7 @@
    "bio": "Thoracic Impedance（TI）",
    "bsx": "Thoracic impedance（TI）／Heart Rate Variability",
    "mcp": "—",
-   "note": "肺うっ血による胸郭インピーダンス低下などから心不全増悪を早期に知らせる。旧「心不全マネジメント（HFモニタ）」の行を統合した。　アルゴリズムタブ（メーカー別）の登録内容から自動生成。"
+   "note": "肺うっ血による胸郭インピーダンス低下などから心不全増悪を早期に知らせる。旧「心不全マネジメント（HFモニタ）」の行を統合した。　この行はメーカー別の一覧に該当項目がないメーカーを含む。一覧表として保持している比較行。"
   },
   {
    "fn": "左室多点ペーシング（マルチポイント）",
@@ -7962,17 +7907,6 @@
    "bsx": "44.5×50.2×7.5mm／24.8g／12.2cm³",
    "mcp": "54.3×45.5×6.1mm／24.2g／10.95cm³",
    "note": "デバイス比較表（提供資料）より。ACCOLADEはL311/L331で寸法が異なる（44.5×58.8×7.5mm／29.1g／14.2cm³）。"
-  },
-  {
-   "fn": "電池寿命（PM DR）",
-   "en": "Projected longevity",
-   "cat": "電池",
-   "mdt": "10.1年",
-   "abt": "9.4年",
-   "bio": "10.5年",
-   "bsx": "7.6／12.1年",
-   "mcp": "9.3年",
-   "note": "デバイス比較表（提供資料）より。条件はメーカーごとに異なるため単純比較はできない。"
   },
   {
    "fn": "償還価格・保険区分（PM DR）",
@@ -8085,28 +8019,6 @@
    "note": "2026年2月現在 販売中ICDの比較表（提供資料）より"
   },
   {
-   "fn": "ICDラインナップ（コネクタ）",
-   "en": "ICD connector lineup",
-   "cat": "製品",
-   "mdt": "DF-4／DF-1（EV ICDはEV4）",
-   "abt": "DF-4／DF-1",
-   "bio": "DF-4",
-   "bsx": "DF-4／DF-1（S-ICDはSQ-1）",
-   "mcp": "DR SR DF-4／IS-1、DR SR DF-1／IS-1",
-   "note": "2026年2月現在 販売中ICDの比較表（提供資料）より"
-  },
-  {
-   "fn": "ICD電池寿命（2.0V 500Ω）",
-   "en": "ICD longevity",
-   "cat": "電池",
-   "mdt": "0%ペーシング 12.3年／100%ペーシング 9.8年",
-   "abt": "10.4年／8.3年",
-   "bio": "14.25年／11.57年",
-   "bsx": "15.2年／13.1年",
-   "mcp": "17.5年／14.7年",
-   "note": "2026年2月現在 販売中ICDの比較表（提供資料）より。電池寿命の条件は各社で多少異なる。"
-  },
-  {
    "fn": "ショック出力（Delivered J）",
    "en": "Delivered shock energy",
    "cat": "ICD",
@@ -8129,17 +8041,6 @@
    "note": "2026年2月現在 販売中ICDの比較表（提供資料）より"
   },
   {
-   "fn": "ICD Sensing Option",
-   "en": "Sensing option",
-   "cat": "ICD",
-   "mdt": "TRUE／INTEGRATED（EV ICDは3 vectors）",
-   "abt": "TRUE",
-   "bio": "TRUE",
-   "bsx": "INTEGRATED（S-ICDは Primary／Secondary／Alternate）",
-   "mcp": "AutoSensitivityControl",
-   "note": "2026年2月現在 販売中ICDの比較表（提供資料）より"
-  },
-  {
    "fn": "波形識別機能（モルフォロジー）",
    "en": "Morphology discrimination",
    "cat": "ICD",
@@ -8159,7 +8060,7 @@
    "bio": "High Pass Filter",
    "bsx": "SMART Pass",
    "mcp": "—",
-   "note": "2026年2月現在 販売中ICDの比較表（提供資料）より。T波オーバーセンシングを識別する機能の搭載状況。　アルゴリズムタブ（メーカー別）の登録内容から自動生成。"
+   "note": "2026年2月現在 販売中ICDの比較表（提供資料）より。T波オーバーセンシングを識別する機能の搭載状況。　この行はメーカー別の一覧に該当項目がないメーカーを含む。一覧表として保持している比較行。"
   },
   {
    "fn": "センシングフィルタ帯域",
@@ -8170,28 +8071,6 @@
    "bio": "心房 18Hz／心室 24・32Hz",
    "bsx": "20Hz（S-ICDは 3Hz・9Hz SMART Pass）",
    "mcp": "20〜80Hz",
-   "note": "2026年2月現在 販売中ICDの比較表（提供資料）より"
-  },
-  {
-   "fn": "ATP During Charging",
-   "en": "ATP during charging",
-   "cat": "ICD",
-   "mdt": "○",
-   "abt": "○",
-   "bio": "×",
-   "bsx": "×",
-   "mcp": "×",
-   "note": "2026年2月現在 販売中ICDの比較表（提供資料）より。充電中にATPを行い、停止すればショックを回避する。"
-  },
-  {
-   "fn": "ATP Before Charging",
-   "en": "ATP before charging",
-   "cat": "ICD",
-   "mdt": "○（EV ICDは FVT設定で可）",
-   "abt": "○",
-   "bio": "Stableの場合はATP後にcharge",
-   "bsx": "○",
-   "mcp": "○",
    "note": "2026年2月現在 販売中ICDの比較表（提供資料）より"
   },
   {
@@ -8237,39 +8116,6 @@
    "bsx": "—",
    "mcp": "Autoswitch ATP",
    "note": "2026年2月現在 販売中ICDの比較表（提供資料）より　アルゴリズムタブ（メーカー別）の登録内容から自動生成。"
-  },
-  {
-   "fn": "モバイル遠隔モニタリング",
-   "en": "Mobile remote monitoring",
-   "cat": "リモート",
-   "mdt": "○",
-   "abt": "○",
-   "bio": "○",
-   "bsx": "×（S-ICDは○）",
-   "mcp": "○",
-   "note": "2026年2月現在 販売中ICDの比較表（提供資料）より。スマートフォンアプリによる送信への対応状況。"
-  },
-  {
-   "fn": "NSVTアラート",
-   "en": "NSVT alert",
-   "cat": "ICD",
-   "mdt": "○",
-   "abt": "○",
-   "bio": "○",
-   "bsx": "○（S-ICDは○）",
-   "mcp": "○",
-   "note": "2026年2月現在 販売中ICDの比較表（提供資料）より。非持続性心室頻拍を検出して通知する機能。リードノイズアラート・ATPアラートも各社搭載。"
-  },
-  {
-   "fn": "EV-ICD と S-ICD の比較",
-   "en": "EV-ICD vs S-ICD",
-   "cat": "ICD",
-   "mdt": "EV ICD（Aurora）：EV4／64×50.5×13.4mm／77g／11.7年／40J／1.5T・3.0T／3 vectors",
-   "abt": "—",
-   "bio": "—",
-   "bsx": "S-ICD（EMBLEM）：SQ-1（非標準型）／83.1×69.1×12.7mm／130g／8.7年／80J／1.5T",
-   "mcp": "—",
-   "note": "血管外ICDの2機種。EV-ICDはリードを胸骨下に留置しATP・除細動後ペーシング・ポーズ予防が可能。S-ICDは皮下留置で徐脈ペーシングやATPは不可だが、抜去が容易。S-ICDは開胸手術後の患者には禁忌。"
   },
   {
    "fn": "代表機種（CRT-D・2020年資料）",
@@ -8349,50 +8195,6 @@
    "note": "極性の変更は除細動閾値が高い症例での対応手段の一つ。デバイス比較表（提供資料・2020年／ICD DR・CRT-D）より。"
   },
   {
-   "fn": "ATP治療の種類",
-   "en": "ATP therapy types",
-   "cat": "ICD",
-   "mdt": "Burst／Ramp／Ramp+",
-   "abt": "Burst／Ramp／Scan",
-   "bio": "Burst／Ramp／Scan",
-   "bsx": "Burst／Ramp／Scan",
-   "mcp": "—",
-   "note": "選択できる抗頻拍ペーシングの方式。デバイス比較表（提供資料・2020年／ICD DR・CRT-D）より。　アルゴリズムタブ（メーカー別）の登録内容から自動生成。"
-  },
-  {
-   "fn": "心房ショック治療",
-   "en": "Atrial cardioversion",
-   "cat": "心房治療",
-   "mdt": "Atrial Cardioversion",
-   "abt": "—",
-   "bio": "—",
-   "bsx": "—",
-   "mcp": "—",
-   "note": "心房性頻拍性不整脈に対する同期ショック。覚醒下では苦痛を伴う。デバイス比較表（提供資料・2020年／ICD DR・CRT-D）より。　アルゴリズムタブ（メーカー別）の登録内容から自動生成。"
-  },
-  {
-   "fn": "睡眠時無呼吸モニタリング（SAS）",
-   "en": "Sleep apnea monitoring",
-   "cat": "フォロー",
-   "mdt": "—",
-   "abt": "—",
-   "bio": "—",
-   "bsx": "Yes",
-   "mcp": "—",
-   "note": "睡眠時の呼吸パターンから無呼吸・低呼吸を評価する。デバイス比較表（提供資料・2020年／ICD DR・CRT-D）より。"
-  },
-  {
-   "fn": "STモニタリング",
-   "en": "ST monitoring",
-   "cat": "フォロー",
-   "mdt": "—",
-   "abt": "STモニタリング",
-   "bio": "—",
-   "bsx": "—",
-   "mcp": "—",
-   "note": "心内電位のST偏位を継続的に監視する。デバイス比較表（提供資料・2020年／ICD DR・CRT-D）より。　アルゴリズムタブ（メーカー別）の登録内容から自動生成。"
-  },
-  {
    "fn": "通信方式",
    "en": "Telemetry band",
    "cat": "リモート",
@@ -8412,7 +8214,7 @@
    "bio": "—",
    "bsx": "患者通知（Tone）",
    "mcp": "—",
-   "note": "異常を検出したとき本体が可聴音で患者に知らせる機能。デバイス比較表（提供資料・2020年／ICD DR・CRT-D）より。　アルゴリズムタブ（メーカー別）の登録内容から自動生成。"
+   "note": "異常を検出したとき本体が可聴音で患者に知らせる機能。デバイス比較表（提供資料・2020年／ICD DR・CRT-D）より。　この行はメーカー別の一覧に該当項目がないメーカーを含む。一覧表として保持している比較行。"
   },
   {
    "fn": "LVペーシング極性数",
@@ -8424,39 +8226,6 @@
    "bsx": "17",
    "mcp": "14",
    "note": "四極LVリードで選択できるペーシングベクトルの数。多いほど横隔神経刺激の回避と閾値の低い部位の選択がしやすい。デバイス比較表（提供資料・2020年／ICD DR・CRT-D）より。"
-  },
-  {
-   "fn": "LV自動閾値測定",
-   "en": "LV automatic threshold",
-   "cat": "CRT",
-   "mdt": "LV1／LV2",
-   "abt": "LV1／LV2",
-   "bio": "LV1／LV2",
-   "bsx": "LV1",
-   "mcp": "—",
-   "note": "左室の刺激閾値を自動測定できるベクトルの範囲。デバイス比較表（提供資料・2020年／ICD DR・CRT-D）より。"
-  },
-  {
-   "fn": "LVセンシング極性数",
-   "en": "Number of LV sensing vectors",
-   "cat": "CRT",
-   "mdt": "—",
-   "abt": "—",
-   "bio": "7",
-   "bsx": "8",
-   "mcp": "—",
-   "note": "左室のセンシングに使えるベクトルの数。デバイス比較表（提供資料・2020年／ICD DR・CRT-D）より。"
-  },
-  {
-   "fn": "CRT確保：PQ間隔短縮への対応",
-   "en": "CRT delivery: short intrinsic PQ",
-   "cat": "CRT",
-   "mdt": "—",
-   "abt": "—",
-   "bio": "Negative AV Hysteresis",
-   "bsx": "—",
-   "mcp": "—",
-   "note": "自己房室伝導が速い症例で両室ペーシングが脱落しないようAVディレイを調整する。デバイス比較表（提供資料・2020年／ICD DR・CRT-D）より。　アルゴリズムタブ（メーカー別）の登録内容から自動生成。"
   },
   {
    "fn": "心房細動時の心室レート制御",
@@ -8481,15 +8250,15 @@
    "note": "自己心室興奮を感知した拍でも左室（または両室）を刺激して再同期を試みる。デバイス比較表（提供資料・2020年／ICD DR・CRT-D）より。　アルゴリズムタブ（メーカー別）の登録内容から自動生成。"
   },
   {
-   "fn": "LVセンシング",
-   "en": "LV sensing",
+   "fn": "LVセンシング（可否・極性数）",
+   "en": "LV sensing (availability / number of vectors)",
    "cat": "CRT",
    "mdt": "×",
-   "abt": "×",
-   "bio": "Yes",
-   "bsx": "Yes",
+   "abt": "CRT-Pは○（CRT-Dは×）",
+   "bio": "○（7極）",
+   "bsx": "○（8極）",
    "mcp": "×",
-   "note": "左室リードでのセンシングの可否。デバイス比較表（提供資料・2020年／ICD DR・CRT-D）より。"
+   "note": "左室リードでのセンシングの可否と、センシングに使えるベクトル数。旧「LVセンシング極性数」の行を統合した。Abbott は CRT-P で左室センシングが可能だが、CRT-D では不可。デバイス比較表（提供資料・2020年／ICD DR・CRT-D）より。"
   },
   {
    "fn": "左室保護期間",
@@ -8503,17 +8272,6 @@
    "note": "左室の受攻期に刺激が落ちないよう保護する。デバイス比較表（提供資料・2020年／ICD DR・CRT-D）より。　アルゴリズムタブ（メーカー別）の登録内容から自動生成。"
   },
   {
-   "fn": "左室多点ペーシングの推奨設定",
-   "en": "Multipoint pacing guidance",
-   "cat": "CRT",
-   "mdt": "No",
-   "abt": "No",
-   "bio": "No",
-   "bsx": "SmartCRT",
-   "mcp": "No",
-   "note": "多点ペーシングの設定を支援する機能。提供資料（2020年）ではこのセルがAbbottの列に置かれていたが、SmartCRT は Boston Scientific の CRT個別化の総称であることを確認したため Boston 側に記載した。列の対応は要確認。デバイス比較表（提供資料・2020年／ICD DR・CRT-D）より。"
-  },
-  {
    "fn": "CRT AV自動調整",
    "en": "Automatic AV adjustment (CRT)",
    "cat": "CRT",
@@ -8523,17 +8281,6 @@
    "bsx": "No",
    "mcp": "SonR",
    "note": "AVディレイを自己伝導に追随させて自動調整する。デバイス比較表（提供資料・2020年／ICD DR・CRT-D）より。"
-  },
-  {
-   "fn": "CRT AV調整量の設定",
-   "en": "AV adjustment amount",
-   "cat": "CRT",
-   "mdt": "No",
-   "abt": "Δ%／Δms",
-   "bio": "No",
-   "bsx": "No",
-   "mcp": "No",
-   "note": "自動調整するAVディレイの量を指定できるかどうか。デバイス比較表（提供資料・2020年／ICD DR・CRT-D）より。"
   },
   {
    "fn": "CRT VV自動調整",
@@ -8558,15 +8305,26 @@
    "note": "自己房室伝導の状態に応じて両室ペーシングと左室単独ペーシングを自動で切り替える。デバイス比較表（提供資料・2020年／ICD DR・CRT-D）より。　アルゴリズムタブ（メーカー別）の登録内容から自動生成。"
   },
   {
-   "fn": "VFゾーンのATP（充電前・充電中）",
-   "en": "ATP before / during charging",
+   "fn": "VFゾーン 充電中のATP",
+   "en": "ATP during charging",
    "cat": "ICD",
-   "note": "アルゴリズムタブ（メーカー別）の登録内容から自動生成。",
-   "mdt": "ATP During Charging／ATP Before Charging",
-   "abt": "ATP prior/during charging",
-   "bio": "ATP one shot／Early ATP one shot",
+   "note": "充電と並行してATPを行い、停止すれば充電を中止してショックを回避する。旧「ATP During Charging」の行を統合した。",
+   "mdt": "ATP During Charging",
+   "abt": "ATP while charging（ATP prior/during charging）",
+   "bio": "—",
+   "bsx": "—",
+   "mcp": "—"
+  },
+  {
+   "fn": "VFゾーン 充電前のATP",
+   "en": "ATP before charging",
+   "cat": "ICD",
+   "mdt": "ATP Before Charging（EV-ICDはFVT設定で可）",
+   "abt": "ATP prior to charging（ATP prior/during charging）",
+   "bio": "ATP one shot／Early ATP one shot（Stableと判定された場合にATP後に充電）",
    "bsx": "Quick Convert ATP™",
-   "mcp": "ATP in fast VT/VF zone"
+   "mcp": "ATP in fast VT/VF zone",
+   "note": "充電を始める前にATPを試み、無痛停止が得られればショックを出さない。旧「ATP Before Charging」の行を統合した。"
   },
   {
    "fn": "リード極性の自動判別・切替",
@@ -8594,29 +8352,18 @@
    "fn": "左室自動閾値測定",
    "en": "LV automatic threshold",
    "cat": "ペーシング管理",
-   "note": "アルゴリズムタブ（メーカー別）の登録内容から自動生成。",
+   "note": "左室の刺激閾値を自動測定し、安全域を加えた出力へ調整する。",
    "mdt": "LV Capture Management™（LVCM）",
    "abt": "BiVCap™ Confirm／LVCap™ Confirm",
-   "bio": "—",
+   "bio": "LV Capture Control（LVCC）",
    "bsx": "PaceSafe™ LV Automatic Threshold",
    "mcp": "LV Auto-threshold"
-  },
-  {
-   "fn": "頻拍の起源判定（発症腔）",
-   "en": "Chamber of onset",
-   "cat": "ICD",
-   "note": "アルゴリズムタブ（メーカー別）の登録内容から自動生成。",
-   "mdt": "—",
-   "abt": "Chamber Onset",
-   "bio": "—",
-   "bsx": "—",
-   "mcp": "—"
   },
   {
    "fn": "ショック波形・極性の調整",
    "en": "Shock waveform / polarity adjustment",
    "cat": "ICD",
-   "note": "アルゴリズムタブ（メーカー別）の登録内容から自動生成。",
+   "note": "この行はメーカー別の一覧に該当項目がないメーカーを含む。一覧表として保持している比較行。",
    "mdt": "ショック極性（Normal／Reverse／Alternating）",
    "abt": "DeFT Response™",
    "bio": "Biphasic 2（Phase 2の調整）",
@@ -8631,17 +8378,6 @@
    "mdt": "RV Lead Noise Discrimination",
    "abt": "DynamicTx™ Over-Current Detection／SecureSense™ RV Lead Noise",
    "bio": "—",
-   "bsx": "—",
-   "mcp": "—"
-  },
-  {
-   "fn": "R-R間隔の安定性（Stability）",
-   "en": "Stability criterion",
-   "cat": "ICD",
-   "note": "アルゴリズムタブ（メーカー別）の登録内容から自動生成。",
-   "mdt": "Stability",
-   "abt": "Interval Stability",
-   "bio": "Stability",
    "bsx": "—",
    "mcp": "—"
   },
@@ -8668,17 +8404,6 @@
    "mcp": "AutoSensitivityControl"
   },
   {
-   "fn": "発症の急峻さ（Onset）",
-   "en": "Onset criterion",
-   "cat": "ICD",
-   "note": "アルゴリズムタブ（メーカー別）の登録内容から自動生成。",
-   "mdt": "Onset",
-   "abt": "Sudden Onset",
-   "bio": "Onset",
-   "bsx": "Onset/Stability",
-   "mcp": "—"
-  },
-  {
    "fn": "放電前の再確認（治療の確実性）",
    "en": "Shock confirmation",
    "cat": "ICD",
@@ -8690,36 +8415,14 @@
    "mcp": "—"
   },
   {
-   "fn": "閾値トレンドの監視",
-   "en": "Threshold trend monitoring",
-   "cat": "ペーシング管理",
-   "note": "アルゴリズムタブ（メーカー別）の登録内容から自動生成。",
-   "mdt": "—",
-   "abt": "—",
-   "bio": "Active Threshold Monitoring（ATM）",
-   "bsx": "—",
-   "mcp": "—"
-  },
-  {
-   "fn": "心房ATP",
-   "en": "Atrial antitachycardia pacing",
+   "fn": "心房ATP（心房抗頻拍ペーシング）",
+   "en": "Atrial antitachycardia pacing (aATP)",
    "cat": "心房治療",
-   "note": "アルゴリズムタブ（メーカー別）の登録内容から自動生成。",
-   "mdt": "Reactive ATP™",
-   "abt": "心房ATP（機種依存）",
+   "note": "心房頻拍が整順化・徐拍化して停止しやすくなった機を捉えて心房へATPを行う。旧「心房ATP（Reactive ATP）」の行と統合した。Abbott と Boston Scientific は心房ATPを搭載していないため「—（非搭載）」に訂正した。",
+   "mdt": "Reactive ATP™（rATP）",
+   "abt": "—（非搭載）",
    "bio": "Atrial ATP（aATP）",
-   "bsx": "心房ATP（機種依存）",
-   "mcp": "—"
-  },
-  {
-   "fn": "レートヒステリシス（自己脈の探索）",
-   "en": "Rate hysteresis with search",
-   "cat": "レート応答",
-   "note": "アルゴリズムタブ（メーカー別）の登録内容から自動生成。",
-   "mdt": "—",
-   "abt": "—",
-   "bio": "Rate Hysteresis Scan/Repetitive",
-   "bsx": "—",
+   "bsx": "—（非搭載）",
    "mcp": "—"
   },
   {
@@ -8732,17 +8435,6 @@
    "bio": "Sustained VT",
    "bsx": "SRD（Sustained Rate Duration）",
    "mcp": "Brady-Tachy Overlap（BTO™）"
-  },
-  {
-   "fn": "心房粗動への応答",
-   "en": "Atrial flutter response",
-   "cat": "心房治療",
-   "note": "アルゴリズムタブ（メーカー別）の登録内容から自動生成。",
-   "mdt": "—",
-   "abt": "—",
-   "bio": "—",
-   "bsx": "Atrial Flutter Response（AFR）",
-   "mcp": "—"
   },
   {
    "fn": "ショック後・治療後のペーシング",
@@ -8767,83 +8459,6 @@
    "mcp": "Acceleration on PAC／Acceleration on PVC／Atrial Pacing on PVC／PAC Pause Suppression／PVC Pause Suppression／Post Extrasystolic Pause Suppression"
   },
   {
-   "fn": "実効CRTの評価",
-   "en": "Effective CRT assessment",
-   "cat": "CRT",
-   "note": "アルゴリズムタブ（メーカー別）の登録内容から自動生成。",
-   "mdt": "EffectivCRT™ Diagnostic／EffectivCRT™ During AF",
-   "abt": "—",
-   "bio": "—",
-   "bsx": "—",
-   "mcp": "—"
-  },
-  {
-   "fn": "植込みの自動検出",
-   "en": "Implant detection",
-   "cat": "ペーシング管理",
-   "note": "アルゴリズムタブ（メーカー別）の登録内容から自動生成。",
-   "mdt": "Implant Detection",
-   "abt": "—",
-   "bio": "—",
-   "bsx": "—",
-   "mcp": "Automatic Implant Detection"
-  },
-  {
-   "fn": "設定の推奨（プログラミング支援）",
-   "en": "Programming guidance",
-   "cat": "機器",
-   "note": "アルゴリズムタブ（メーカー別）の登録内容から自動生成。",
-   "mdt": "TherapyGuide",
-   "abt": "—",
-   "bio": "—",
-   "bsx": "—",
-   "mcp": "—"
-  },
-  {
-   "fn": "心房細動の検出精度",
-   "en": "AF detection accuracy",
-   "cat": "心房治療",
-   "note": "アルゴリズムタブ（メーカー別）の登録内容から自動生成。",
-   "mdt": "TruAF™",
-   "abt": "—",
-   "bio": "—",
-   "bsx": "—",
-   "mcp": "—"
-  },
-  {
-   "fn": "睡眠時無呼吸モニタリング",
-   "en": "Sleep apnea monitoring",
-   "cat": "心不全",
-   "note": "アルゴリズムタブ（メーカー別）の登録内容から自動生成。",
-   "mdt": "—",
-   "abt": "—",
-   "bio": "—",
-   "bsx": "睡眠時無呼吸モニタリング（Respiratory Rate Sensor）",
-   "mcp": "Sleep Apnea Monitoring（SAM）"
-  },
-  {
-   "fn": "微小細動波の検出",
-   "en": "Fine VF detection",
-   "cat": "ICD",
-   "note": "アルゴリズムタブ（メーカー別）の登録内容から自動生成。",
-   "mdt": "—",
-   "abt": "VFTA（Fine VF detection）",
-   "bio": "—",
-   "bsx": "—",
-   "mcp": "—"
-  },
-  {
-   "fn": "リードレスペースメーカ",
-   "en": "Leadless pacemaker",
-   "cat": "Leadless",
-   "note": "製品タブ（本体・リード・関連機器）へ移設したため、この行は一覧表の静的な比較行として保持している。",
-   "mdt": "Micra VR／Micra AV／AV2",
-   "abt": "AVEIR VR／AVEIR AR／AVEIR DR（i2i通信）",
-   "bio": "—",
-   "bsx": "—",
-   "mcp": "—"
-  },
-  {
    "fn": "CRT確保：心房追従の回復（UTR・PVC後）",
    "en": "CRT delivery: atrial tracking recovery",
    "cat": "CRT",
@@ -8852,17 +8467,6 @@
    "abt": "—",
    "bio": "WKB Behaviour／PVC discrimination after As",
    "bsx": "Tracking Preference",
-   "mcp": "—"
-  },
-  {
-   "fn": "不適切作動対策（総称）",
-   "en": "Inappropriate therapy reduction suite",
-   "cat": "ICD",
-   "note": "アルゴリズムタブ（メーカー別）の登録内容から自動生成。",
-   "mdt": "SmartShock",
-   "abt": "—",
-   "bio": "—",
-   "bsx": "—",
    "mcp": "—"
   }
  ]
