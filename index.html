@@ -1344,6 +1344,39 @@ loadMaster(false);
    end(e.clientX,e.clientY);
   });
  })();
+ /* メーカー別 ⇔ 一覧表 を左右スワイプで切り替える（詳細を開いていないときだけ） */
+ (function(){
+  var x0=0,y0=0,t0=0,tr=false;
+  function ready(){
+   return curTab==="a" && $("#aBrowse") && !$("#aBrowse").hidden
+          && $("#aDetail") && $("#aDetail").hidden;
+  }
+  function s(el,x,y){
+   if(!ready()||(el&&el.closest("select,input,textarea"))){tr=false;return}
+   x0=x;y0=y;t0=Date.now();tr=true;
+  }
+  function fin(x,y){
+   if(!tr)return; tr=false;
+   if(!ready())return;
+   var dx=x-x0, dy=y-y0, dt=Date.now()-t0;
+   if(Math.abs(dx)<60||Math.abs(dx)<Math.abs(dy)*1.5||dt>900)return;
+   var next=dx<0?"c":"m";            /* 左へ払うと一覧表、右へ払うとメーカー別 */
+   if(next===aMode)return;
+   aMode=next;aM="";aC="";renderA();window.scrollTo(0,0);
+  }
+  document.addEventListener("touchstart",function(e){
+   if(e.touches.length!==1){tr=false;return}
+   s(e.target,e.touches[0].clientX,e.touches[0].clientY)},{passive:true});
+  document.addEventListener("touchmove",function(e){
+   if(e.touches.length!==1)tr=false},{passive:true});
+  document.addEventListener("touchend",function(e){
+   var c=e.changedTouches[0];fin(c.clientX,c.clientY)},{passive:true});
+  document.addEventListener("touchcancel",function(){tr=false},{passive:true});
+  document.addEventListener("pointerdown",function(e){
+   if(e.pointerType!=="mouse")return; s(e.target,e.clientX,e.clientY)});
+  document.addEventListener("pointerup",function(e){
+   if(e.pointerType!=="mouse")return; fin(e.clientX,e.clientY)});
+ })();
  document.addEventListener("click",function(e){
   if(e.target.closest("#aModeM")){aMode="m";aM="";aC="";renderA();return}
   if(e.target.closest("#aModeC")){aMode="c";aM="";aC="";renderA();return}
@@ -1501,6 +1534,7 @@ loadMaster(false);
 
  /* ================= タブ切替 ================= */
  var SEC={g:null,p:"#secProducts",a:"#secAlgos",m:"#secMri"};
+ var curTab="g";
  var GLOSS=["header","main.wrap:not([id])",".overlay"];
  async function go(tab){
   /* 用語集の既存UI（ヘッダー内の検索・並べ替え等）は用語集タブのみ表示 */
@@ -1509,6 +1543,7 @@ loadMaster(false);
   if(head)head.style.display=(tab==="g")?"":"none";
   if(tab==="g"&&typeof setView==="function"&&view!=="g")setView("g");
   if(gmain)gmain.hidden=(tab!=="g");
+  curTab=tab;
   ["p","a","m"].forEach(function(k){var el=$(SEC[k]);if(el)el.hidden=(tab!==k)});
   Array.prototype.forEach.call(document.querySelectorAll("#tabbar button"),function(b){
    var on=b.dataset.tab===tab; b.classList.toggle("on",on); b.setAttribute("aria-selected",on)});
@@ -1518,7 +1553,14 @@ loadMaster(false);
   if(tab==="m"){await load("mri");renderM()}
  }
  document.addEventListener("click",function(e){
-  var b=e.target.closest("#tabbar button"); if(b)go(b.dataset.tab)});
+  var b=e.target.closest("#tabbar button"); if(!b)return;
+  var tab=b.dataset.tab;
+  /* 表示中のタブをもう一度タップしたら、開いている詳細を閉じて一覧へ戻る */
+  if(tab===curTab){
+   if(tab==="p"&&$("#pDetail")&&!$("#pDetail").hidden){closeProd();return}
+   if(tab==="a"&&$("#aDetail")&&!$("#aDetail").hidden){closeAlgo();return}
+  }
+  go(tab)});
  (function(){
   document.addEventListener("change",function(e){
    if(e.target.matches("#pKind")){pK=e.target.value;pC="";renderP()}
