@@ -1596,3 +1596,113 @@ MICS／BLE／睡眠時無呼吸モニタリング／部分ボディスキャン�
    i pacemaker と同じ水準になるのはこの1点。
 2. SmartCRT の列ずれと `Sensitivity levels` の位置を、**元の比較表の原本（表全体が写った画像）**で確認したい。
 3. Cobalt XT DR の寸法・質量・寿命の食い違いは**添付文書で決着させる**（DF-1版／DF4版の別も含めて）。
+
+---
+
+## アルゴリズム138機能を収載し、一覧表を自動生成に切り替え（2026-09-02）
+
+ユーザーから5社138機能の指定リストを受領。**171件 → 216件**に拡充し、詳細画面の項目を
+i pacemaker 相当（機能名／メーカー／分類／対象／一般名称／目的／動作／設定項目／代表搭載機種／
+他社類似機能）に揃えた。
+
+| メーカー | 指定 | 収載後の総数 |
+|---|---|---|
+| Medtronic | 37 | 56 |
+| Abbott | 28 | 46 |
+| Boston Scientific | 26 | 43 |
+| BIOTRONIK | 23 | 38 |
+| MicroPort CRM | 24 | 33 |
+| 計 | **138** | **216** |
+
+指定138機能はスクリプトで全件の収載を確認済み（欠落0）。差分の78件は、MRI・プログラマ・
+リモートモニタリング・送信機・患者通知・CSPツール・リードレス・ATP治療の種類・
+ショック波形/極性など、**指定リストに含まれないが既存データにあった横断項目**を残したもの。
+
+### 1. 一覧表（feats）を「アルゴリズムの登録内容から自動生成」に変更した
+
+**これが今回いちばん大きな設計変更。** 従来は一覧表とメーカー別を別々に手で書いていたため、
+片方を直すともう片方とずれた（前回のリードノイズ管理の Stability+ 問題がその例）。
+
+今回から、各アルゴリズムに付けた `generic`（一般名称）をキーにして、
+**5社の欄を機械的に組み立てる**方式にした。同じ `generic` を持つ機能が自動的に同じ行に並ぶ。
+詳細画面の「他社類似機能」も同じ辞書から生成しているので、**一覧表と詳細が構造的にずれない。**
+
+- 機能グループ（`generic`）：**57種**
+- feats：81行 → **101行**（更新29／新規28／削除8）
+
+`note` には「アルゴリズムタブ（メーカー別）の登録内容から自動生成。」を付記した。
+**今後は `algos.json` 側だけを直せば一覧表も自動で追随する。** 手で feats を編集しないこと。
+
+### 2. 統合した重複（8行を削除）
+
+| 削除した行 | 統合先 |
+|---|---|
+| リード異常監視（リードノイズ管理） | 「リードノイズ識別（治療の保留）」と「リード監視・アラート」の2グループに分離・整理 |
+| 心房抗頻拍ペーシング（種類） | 「心房ATP」 |
+| VFゾーン 充電中ATP／VFゾーン 充電前ATP | 「VFゾーンのATP（充電前・充電中）」に一本化 |
+| ショック波形の調整 | 「ショック波形・極性の調整」 |
+| Fine VF detection | 「微小細動波の検出」 |
+| CRT確保：心房レート上昇時（UTR）／CRT確保：PVC後 | 「CRT確保：心房追従の回復（UTR・PVC後）」に一本化 |
+
+**リードノイズ関連を2つに分けたのは意図的**。「治療を保留するかどうかの判定」（SecureSense、
+RV Lead Noise Discrimination、DynamicTx）と「異常を監視して知らせる」（Lead Monitoring、
+Lead Monitor）は目的が違い、同じ行に並べると比較を誤る。
+
+**自動閾値測定は心房・心室・左室の3グループに分けた**。従来は心房／心室の2行だったが、
+Abbott の ACap／RVCap／LVCap／BiVCap、Boston の PaceSafe RA/RV/LV、
+MicroPort の Atrial／RV／LV／Ventricular Auto-threshold が正しく並ばなかったため。
+
+### 3. 訂正した箇所
+
+- **Boston Scientific「Ventricular Automatic Capture」と「PaceSafe RV Automatic Threshold」を別項目として登録した。**
+  前者は拍ごとの捕捉確認、後者は定期測定で動作が異なる。旧データは「Pace Safe RVAC」の1件だけで、
+  **`RVAC` は `RVAT` の誤記の可能性が高い**と判断していたが、今回のリストで両方が実在することが分かった。
+- **BIOTRONIK「IRSplus」と「Positive AV Hysteresis with Scan/Repetitive」を分けた。**
+  旧データは `IRSPlus Positive` の1件にまとめており、Scan／Repetitive の区別が落ちていた。
+- **Medtronic「Ventricular Capture Management（VCM）」を RVCM／LVCM の上位概念として整理**し、
+  旧データの「VCM」「Capture Management（ACM／RVCM／LVCM）」という重複を解消した。
+- **SmartCRT を Boston Scientific に登録し直した**（前回の判断を維持）。
+  今回のBoston指定リストにSmartCRTは含まれていないが、SmartDelay／LV VectorGuide／
+  MultiSite Pacing の総称として実在するため残した。2020年比較表でAbbott列に置かれていた件は
+  前回の記録のとおり。
+- **Boston「ProACt」を心房オーバードライブ群に追加**。APPと似た仕組みだが、
+  **ProACtは心房期外収縮（PAC）に反応し、APPはPAC以外の心房センシングに反応する**点が違う
+  （Boston Scientificの公開資料で確認）。この違いを `how` に明記した。
+
+### 4. 新設した機能グループ（従来の一覧表になかった観点）
+
+リード極性の自動判別・切替／植込みの自動検出／感知の自動調整（可変センシング）／
+レートヒステリシス（自己脈の探索）／期外収縮後のポーズ抑制（レート安定化）／
+心房粗動への応答／心房細動の検出精度／左室ペーシングベクトルの自動評価／実効CRTの評価／
+発症の急峻さ（Onset）／R-R間隔の安定性（Stability）／頻拍の起源判定（発症腔）／
+鑑別による治療保留の上限（安全機構）／放電前の再確認（治療の確実性）／
+リード監視・アラート／ATP最適化／ショック後・治療後のペーシング／設定の推奨／
+不適切作動対策（総称）
+
+**Onset と Stability を独立した行にしたのは意味がある。** 従来は「SVT鑑別」に一括りだったが、
+Abbott は Sudden Onset と Interval Stability、Medtronic と BIOTRONIK は Onset と Stability、
+Boston は Onset/Stability という1つの設定と、**呼称と設定単位が各社で違う**。分けたことで
+「同じことを指しているのに名前が違う」ことが一覧で分かるようになった。
+
+### 5. `index.html` の変更
+
+- `openAlgo` の項目に **「代表搭載機種」（`models`）と「他社類似機能」（`equiv`）** を追加。
+  `equiv` は他4社の該当機能を改行区切りで持ち、リスト表示する。
+- メーカー別の検索対象に `models` と `equiv` を追加（「Cobalt XT」や「MorphMatch」で
+  他社の類似機能からも引ける）。
+- `F_FALLBACK` を101行に同期。
+
+### 6. 残した課題
+
+1. **`pathway`（プログラマ操作経路）は今回も全件で未記入。** 各社の医師用マニュアルが要る。
+   i pacemaker の ACap Confirm 画面にある `Parameters > Brady > Capture & Sense > Cap Confirm Settings`
+   のような記載は、機種・プログラマ世代で変わるため推測で書かない方針を維持した。
+2. **`models`（代表搭載機種）は世代レベルの記載にとどめた。**
+   「Gallant／Entrant 世代のICD」のような書き方で、**型番単位の搭載可否は未確認**。
+   同じ世代でもモデルによって非搭載のものがあるため、現場で断定に使わないこと。
+   各社カタログか添付文書で型番レベルまで詰めるのが次の宿題。
+3. `params`（設定項目）は選択肢が一般に公表されているものに限った。
+   数値範囲は機種依存が大きく、**具体的な設定値は書いていない**。
+4. Medtronic の `TruAF`・`ChargeSaver`・`CardioSync Optimization`、Abbott の `VF Therapy Assurance`、
+   MicroPort の `Brady-Tachy Overlap` は、**動作の説明を一般的な原理から起こした。**
+   一次資料（各社マニュアル）での裏取りは未了。ここは特に確認してほしい箇所。
