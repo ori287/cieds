@@ -1076,12 +1076,9 @@ loadMaster(false);
    if(!v)return "";
    return /^[0-9.\/×\s]+$/.test(String(v)) ? v+" "+unit : String(v);
   }
-  var CONF={A:"A：一次資料で確認",B:"B：歴史資料・国内資料で裏付け",
-            C:"C：型番のみ確実（固有商品名は未確認）",D:"D：確定できていない"};
   var head=[["メーカー",x.maker],["資料上の表記",x.mfr],["取扱会社",x.dealer],["分類",x.cat],
-            ["製品ファミリ",x.family],["正式英語名",x.en],
-            ["型番",x.model],["販売期間",x.period],["状態",x.status],
-            ["名称の確度",x.name_conf?(CONF[x.name_conf]||x.name_conf):""]];
+            ["一般名称",x.family],["正式英語名",x.en],
+            ["型番",x.model],["販売期間",x.period]];
   var body=x.kind==="lead"
    ?[sec("基本",[["極性",x.polarity],["適応部位",x.site],["固定形式",x.fixation],
                  ["ステロイド",x.steroid],["コネクタ",x.connector],
@@ -1105,8 +1102,8 @@ loadMaster(false);
      sec("治療・センシング",[["ショック出力",x.shock],["充電時間",x.charge],
                  ["センシングオプション",x.sensing],["最大出力",x.energy&&x.energy+" J"]]),
      sec("電池・寿命",[["電池寿命",x.longevity],["算出条件",x.longevity_cond],
-                 ["寿命の出典",x.longevity_src],["電池",x.battery],
-                 ["電池表示",x.eri_eos],["バックアップ作動",x.backup]]),
+                 ["電池",x.battery],["電池表示",x.eri_eos],
+                 ["バックアップ作動",x.backup]]),
      sec("MRI",[["MRI対応",x.mri]])];
   $("#pDetail").innerHTML=
    '<button class="back" id="pBack">‹ 製品一覧</button>'+
@@ -1114,11 +1111,7 @@ loadMaster(false);
    (x.name&&x.model?'<p class="count" style="margin:4px 0 0">'+esc(x.model)+'</p>':'')+
    sec("",head).replace("<h4></h4>","")+
    body.join("")+
-   (x.note?'<section><h4>備考</h4><p class="body">'+esc(x.note)+'</p></section>':'')+
-   (x.model_note?'<section><h4>型番について</h4><p class="body">'+esc(x.model_note)+'</p></section>':'')+
-   (x.src||x.name_src?'<section><h4>出典</h4><p class="body">'+
-     esc([x.src,x.name_src].filter(Boolean).join(" ／ "))+'</p></section>':'')+
-   (x.unverified?'<section><h4>注意</h4><p class="body">検証未了。一次資料で確認してください。</p></section>':'');
+   "";
   if(!$("#pBrowse").hidden)pScroll=window.scrollY||document.documentElement.scrollTop||0;
   $("#pBrowse").hidden=true; $("#pDetail").hidden=false; window.scrollTo(0,0);
  }
