@@ -1706,3 +1706,128 @@ Boston は Onset/Stability という1つの設定と、**呼称と設定単位�
 4. Medtronic の `TruAF`・`ChargeSaver`・`CardioSync Optimization`、Abbott の `VF Therapy Assurance`、
    MicroPort の `Brady-Tachy Overlap` は、**動作の説明を一般的な原理から起こした。**
    一次資料（各社マニュアル）での裏取りは未了。ここは特に確認してほしい箇所。
+
+---
+
+## リード名称の全件整備と本体のSKU分割（2026-09-02）
+
+提供された2本のレポート（全件検証レポート 2026-09-01／旧型リード正式名称調査）を突き合わせ、
+`products.json` を全面的に見直した。**888件 → 892件**（リード865件は据え置き、本体23件 → 27件）。
+
+### 1. リードの製品名：空欄253件をゼロにした
+
+| 名称の確度 | 件数 | 意味 |
+|---|---|---|
+| **A** | 13 | FDA 510(k)・メーカー歴史的リファレンスで型番と名称の対応を直接確認 |
+| **B** | 625 | 歴史資料・国内2018年一覧表で裏付けあり |
+| **C** | 226 | 型番のみ確実（固有商品名は確認できず、型番を製品名として表示） |
+| **D** | 1 | 型番も製品名も資料になし（`PSA-L-NOMODEL-01`） |
+
+`name_conf` と `name_src` を全リードに付与し、詳細画面に「名称の確度」と「出典」を表示するようにした。
+**「固有名称なし」といった断り書きは画面に出していない。** 名前が確認できないものは型番がそのまま
+製品名として並ぶだけで、確度Cという形で区別できる。
+
+#### 確度Aで復元できた13件
+
+| メーカー | 型番 | 名称 | 根拠 |
+|---|---|---|---|
+| Intermedics | 467-01 | **LIFELINE** | FDA 510(k) K781499（Device Name が LIFELINE PACING LEAD MODEL 467-01、1979-02-01承認） |
+| Intermedics | 486-01 | **Model 486-01 Pacemaker Lead** | FDA 510(k)。ブランド名は登録されていない一般名称 |
+| CPI/Guidant | 4012・4165・4169・4269 | **SWEET TIP** | Boston Scientific 歴史的リファレンスの Lead Name 欄 |
+| CPI/Guidant | 4166・4170・4266・4270 | **SENTRA** | 同上 |
+| Vitatron | ITP13 | **Slimtine** | 同リファレンス＋臨床文献 |
+| Abbott（旧Pacesetter） | 1216T・1222T | **Fast-Pass ACE** | FDA 510(k)（FAST-PASS ACE MODELS 1212T/1222T/1216T/1226T） |
+
+#### 確度Bで復元した13件
+Vitatron ITP53／ITP53B／TP13／TP53＝**Facet**、T51＝**LOE**、U71＝**Helifix**、
+Intermedics 476-01／476-04＝**Lifeline**、476-03／480-01／495-01＝**PolyFlex**、
+484-02＝**Lifeline TLE**、493-05＝**Biopore**。
+
+#### 埋めなかったもの（意図的）
+BIOTRONIK／日本光電の PX・SD・SJ・SL・TIJ・DFH・DJP・DNP・FH・IRT・JP・K10・N・NP・NPT・NT・
+PE・PEB・YR・YT 系（63件）、CPI/Guidant の4000〜4260系（46件）、Pacesetter の800〜1400番台、
+Telectronics 033系、Cordis 330系、Somedics 3000系、ela medical の PBCF/PICF/PMA/PMC/PMCF 0860。
+**これらは調査不足ではなく、そもそも当時ブランド名を設定していなかった世代**というのが両レポートの
+結論で、Boston Scientific の歴史的リファレンス自体が Lead Name 欄を空欄にしている。
+**推測でブランド名を作らず、型番をそのまま製品名にした。**
+
+### 2. 型番の誤記を2件訂正した
+
+| 訂正前 | 訂正後 | 根拠 |
+|---|---|---|
+| `PE60/3-DPJ` | **`PE60/3-DJP`** | 歴史的BIOTRONIK資料の表記。同時代の DJP45／DJP53／DJP60 シリーズとも整合する |
+| `PE60/4DNP` | **`PE60/4-DNP`** | 同シリーズ（DNP53／DNP60系）の表記に合わせてハイフンを補った |
+
+IDも `BIO-L-PE60_3-DJP` / `BIO-L-PE60_4-DNP` に合わせた。
+
+**`PE60/4-D2J` は変更していない。** 歴史資料には類似の `PE60/4-D2-K` があるが、日本市場独自型番の
+可能性を排除できない。日本光電の当時の国内カタログが取れるまで原表記のままにする。
+
+### 3. 英語の正式表記（`en`）を310件に付与した
+
+日本語の販売名を英訳するのではなく、**メーカーの公式綴りを正とした**。
+「テンドリル → Tendlil」のような誤った英訳を防ぐため、対応表を作って一括で当てている。
+
+CapSure®／CapSureFix®／CapSure SP／CapSure SP Novus／CapSure Z Novus／CapSure VDD-2／
+SelectSecure™ MRI SureScan™ Pacing Lead／Transvene™ SVC／Crystalline™／Sprint Quattro™／
+Sprint Fidelis™／Attain™／Attain StarFix™／Attain Ability™／Tendril™（STS・SDX・DX・Optim・
+ST Optim・MRI）／Isoflex™／OptiSense™ Optim／Passive Plus® DX／Quartet™／QuickSite™／
+QuickFlex™／Selox／Setrox S／Siello／Corox OTW BP／Synox／Polyrox／Elox／Retrox／IROX／
+ThinLine／UniPass／Biopore／Cardiofix／FINELINE™ II Sterox／SWEET TIP® Rx／SELUTE™／
+SELUTE PICO TIP™／ENDOTAK™（ENDURANCE・RELIANCE・DSP・SQ ARRAY）／ACUITY™／INGEVITY™／
+EASYTRAK™ 2／Slimtine S／Pirouette／Brilliant／Excellence Plus／Impulse／Stela／Stelid／Focus。
+
+製品検索は `en` と `family` も対象にしたので、**「Tendril」でも「テンドリル」でも引ける。**
+
+「カテーテルリード」「タインド・カテーテルJリード」「ロープロファイル・ウレタンリード」などの
+**記述的な日本語名には英語ブランド名を付けていない。** これらは商品名ではなく構造の説明であり、
+英訳して正式名称のように見せるのは不正確。Medtronic 6901・6904・6907・6957・6961・6971・
+6990/6991・6992 などがこれにあたる。
+
+### 4. 本体：SKUの分割と名称の訂正（23件 → 27件）
+
+**「1レコードに複数の型番をまとめない」を原則にした。** 従来は `connector: "DF-4 / DF-1"` のように
+1台が両方に対応するかのような表示になっていたが、実際には別モデルである。
+
+| 対応 | 内容 |
+|---|---|
+| **ACCOLADE MRI を L311 / L331 に分離** | 寸法・質量・容積・寿命がすべて異なる（44.5×50.2×7.5mm／24.8g／12.2cm³ と 44.5×58.8×7.5mm／29.1g／14.2cm³） |
+| **Cobalt XT DR を DDPA2D1 / DDPA2D4 に分離** | DDPA2D1＝DF-1（66×51×13mm／79g／33.1cc）、DDPA2D4＝DF4（68×51×13mm／80g／33.7cc）。**Medtronic公式スペックシートで型番とコネクタの対応を確認済み** |
+| **Gallant DR を CDDRA500Q / CDDRA500T に分離** | Qが DF4、Tが DF-1。従来はCDDRA500Qと表示しながらDF-1も選べるように見えていた |
+| **EMBLEM S-ICD を A209 / A219 に分離** | **A219 のみが EMBLEM MRI S-ICD（1.5T条件付MRI対応）**。まとめておくと旧世代A209にA219のMRI条件を誤って紐付ける危険がある。**MRI安全上いちばん重要な分離** |
+| **Aurora EV-ICD の型番を DVEA3E4 に** | 従来は `model: "Aurora EV-ICD"` とファミリ名が入っていた。正式名 Aurora EV-ICD™ MRI SureScan™ |
+| **Rivacor 7 HF-T → Rivacor 7 HF-T QP に改称** | BIOTRONIK公式では非QP（約60×71.5×10mm／33cc）とQP（IS4・約60×75×10mm／35cc）が別。登録済みの仕様はQP側と一致するため名称を訂正した。**非QP版は未登録** |
+
+全27件に **`en`（正式英語名）** と **`family`（製品ファミリ）** を付与した。
+`model` 欄にファミリ名が入ったままのもの（Acticor Sky DR-T、RESONATE DR、Amvia Sky DR-T など）には
+`model_note` で「SKUは公式資料で要確認」と明示した。
+
+### 5. MRIの扱いを設計として明示した
+
+全本体に `mri_note` を付け、詳細画面に「MRIの判定について」の節を追加した。
+
+> MRI対応は本体だけで決まらない。本体・心房リード・心室リード・LVリード・遺残リードの
+> すべての組合せと撮像条件で判定する。検査前に各社の最新MRI技術マニュアルとPMDA電子添文を確認すること。
+
+引き継ぎメモ8の「磁場強度とSARは本体ではなくリードとの組合せで決まる」を、
+製品タブ側でも画面に出るようにしたもの。
+
+### 6. 数値が食い違ったまま残しているもの
+
+**ACCOLADE MRI の電池寿命**：Boston Scientific Japan 公式は L311＝約8.2年／L331＝約13.2年、
+提供資料のデバイス比較表（2026年）は 7.6年／12.1年。**算出条件が違うため、どちらかに寄せず併記した。**
+電池寿命は「ペーシング率・出力・ショック回数・遠隔モニタリングの有無」で変わるため、
+**数値だけを単独で保存せず条件とセットで持つ**という方針に改めた。他機種も順次この形に直したい。
+
+### 7. 残課題
+
+1. **BIOTRONIK／日本光電の旧日本向けコード群（PX・DFH・DJP・DNP・PE系）**が最大の空白。
+   PMDAにも公開がなく、日本光電か旧代理店の historical catalogue／旧IFU を取り寄せる段階。
+2. CPI/Guidant 4000〜4260系、Vitatron F55／FP57／MIP系、ela medical 0860系、Cordis 330系、
+   Telectronics 033系、Somedics 3000系も同様。
+   **`F55` を「Helifix F55」にするのは避けた。** 国際資料の `VF55＝Helifix` との対応は確認できるが、
+   先頭Vの有無が市場別表記なのか別型式なのかを一次カタログで確定できていない。
+3. **Rivacor 7 HF-T（非QP）と Gallant DR CDDRA500T の寸法・質量**が未確認。公式スペックシート待ち。
+4. 本体の `longevity` を「値＋算出条件」の構造に変える改修。今回はACCOLADEのみ併記で対応した。
+5. Abbott の同一型番3件（2088TC など）は取扱会社違い（フクダ電子／セント・ジュード／日本光電）で
+   **重複ではない**ため統合していない。方針3のとおり。

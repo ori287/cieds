@@ -1025,7 +1025,7 @@ loadMaster(false);
    if(pK&&x.kind!==pK)return false;
    if(pM&&x.maker!==pM)return false;
    if(pC&&x.cat!==pC)return false;
-   if(q){var t=[x.name,x.model,x.maker,x.cat].join(" ").toLowerCase();
+   if(q){var t=[x.name,x.model,x.maker,x.cat,x.en,x.family,x.mfr].join(" ").toLowerCase();
          if(t.indexOf(q)<0)return false}
    return true});
   $("#pCount").textContent=all.length?rows.length+" 件":"";
@@ -1042,7 +1042,7 @@ loadMaster(false);
   /* 検索中は完全一致を最上位に。メーカー見出しは出さずフラットに並べる */
   var flat=!!q;
   if(flat)rows=byRelevance(rows,pQ,function(x){
-    return relRank(x.name||x.model,[x.model,x.maker,x.mfr,x.cat],pQ)});
+    return relRank(x.name||x.model,[x.model,x.maker,x.mfr,x.cat,x.en,x.family],pQ)});
   var out="",cur=null;
   rows.forEach(function(x){
    if(!flat&&x.maker!==cur){cur=x.maker;out+='<p class="mkhead">'+esc(cur)+'</p>'}
@@ -1070,8 +1070,12 @@ loadMaster(false);
    if(!v)return "";
    return /^[0-9.\/×\s]+$/.test(String(v)) ? v+" "+unit : String(v);
   }
+  var CONF={A:"A：一次資料で確認",B:"B：歴史資料・国内資料で裏付け",
+            C:"C：型番のみ確実（固有商品名は未確認）",D:"D：確定できていない"};
   var head=[["メーカー",x.maker],["資料上の表記",x.mfr],["取扱会社",x.dealer],["分類",x.cat],
-            ["型番",x.model],["販売期間",x.period],["状態",x.status]];
+            ["製品ファミリ",x.family],["正式英語名",x.en],
+            ["型番",x.model],["販売期間",x.period],["状態",x.status],
+            ["名称の確度",x.name_conf?(CONF[x.name_conf]||x.name_conf):""]];
   var body=x.kind==="lead"
    ?[sec("基本",[["極性",x.polarity],["適応部位",x.site],["固定形式",x.fixation],
                  ["ステロイド",x.steroid],["コネクタ",x.connector],
@@ -1103,7 +1107,10 @@ loadMaster(false);
    sec("",head).replace("<h4></h4>","")+
    body.join("")+
    (x.note?'<section><h4>備考</h4><p class="body">'+esc(x.note)+'</p></section>':'')+
-   (x.src?'<section><h4>出典</h4><p class="body">'+esc(x.src)+'</p></section>':'')+
+   (x.mri_note?'<section><h4>MRIの判定について</h4><p class="body">'+esc(x.mri_note)+'</p></section>':'')+
+   (x.model_note?'<section><h4>型番について</h4><p class="body">'+esc(x.model_note)+'</p></section>':'')+
+   (x.src||x.name_src?'<section><h4>出典</h4><p class="body">'+
+     esc([x.src,x.name_src].filter(Boolean).join(" ／ "))+'</p></section>':'')+
    (x.unverified?'<section><h4>注意</h4><p class="body">検証未了。一次資料で確認してください。</p></section>':'');
   if(!$("#pBrowse").hidden)pScroll=window.scrollY||document.documentElement.scrollTop||0;
   $("#pBrowse").hidden=true; $("#pDetail").hidden=false; window.scrollTo(0,0);
