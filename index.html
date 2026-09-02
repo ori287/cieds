@@ -842,6 +842,12 @@ async function shareJoin(){const c=$("#sh_code").value.trim();if(!c){alert("接�
 function shareOff(){if(!confirm("この端末の共有を解除します。変更内容は端末に残ります。"))return;sh={key:"",binId:"",on:false,ts:overlay.ts||0};saveSh();updateShare();setView(view);toast("共有を解除しました")}
 
 searchEl.addEventListener("input",e=>{query=e.target.value;clearEl.style.display=query?"block":"none";renderList();renderSuggest()});
+searchEl.addEventListener("keydown",e=>{
+ if(e.key!=="Enter"||e.isComposing||e.keyCode===229)return;   /* 日本語変換の確定は除く */
+ e.preventDefault();
+ query=searchEl.value;clearEl.style.display=query?"block":"none";
+ renderList();hideSuggest();searchEl.blur();                  /* 端末のキーボードを閉じる */
+});
 searchEl.addEventListener("focus",()=>{if(query)renderSuggest()});
 searchEl.addEventListener("blur",()=>setTimeout(hideSuggest,150));
 clearEl.addEventListener("click",()=>{query="";searchEl.value="";clearEl.style.display="none";searchEl.focus();renderList();hideSuggest()});
@@ -1146,6 +1152,27 @@ loadMaster(false);
   if(!e.target)return;
   if(e.target.id==="pQ"){pQ=e.target.value;$("#pQClear").style.display=pQ?"block":"none";renderPList()}
   if(e.target.id==="aQ"){aQ=e.target.value;$("#aQClear").style.display=aQ?"block":"none";renderA()}
+ });
+ /* キーボードのEnterでも検索を確定できるようにする */
+ document.addEventListener("keydown",function(e){
+  if(e.key!=="Enter"||e.isComposing||e.keyCode===229)return;  /* 日本語変換の確定は除く */
+  var el=e.target; if(!el)return;
+  if(el.id==="pQ"){
+   e.preventDefault();
+   pQ=el.value;$("#pQClear").style.display=pQ?"block":"none";
+   renderPList();el.blur();window.scrollTo(0,0);return;
+  }
+  if(el.id==="aQ"){
+   e.preventDefault();
+   aQ=el.value;$("#aQClear").style.display=aQ?"block":"none";
+   renderA();el.blur();window.scrollTo(0,0);return;
+  }
+  /* MRI検索は入力欄ではなく選択式のため、Enterで「検索」ボタンを実行する */
+  if(curTab==="m"&&$("#secMri")&&!$("#secMri").hidden
+     &&!el.closest(".overlay")&&!el.closest("button,a")){   /* ボタン上のEnterは二重に効かせない */
+   var b=$("#mSearch");
+   if(b){e.preventDefault();if(el.blur)el.blur();b.click()}
+  }
  });
  document.addEventListener("click",function(e){
   if(e.target.closest("#pQClear")){pQ="";var i=$("#pQ");i.value="";$("#pQClear").style.display="none";i.focus();renderPList();return}
