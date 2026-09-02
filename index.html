@@ -985,15 +985,15 @@ loadMaster(false);
  }
  var pK="",pM="",pC="",pQ="",pOpen=null,pScroll=0;
  /* 製品の小区分はこの順で並べる（未定義のものは後ろに五十音順） */
- var CAT_ORDER=["IPG SR","IPG DR","CRT-P","ICD VR","ICD DR","CRT-D","S-ICD","EV-ICD",
-   "Leadless","ICM","PMリード","ICDリード","LVリード"];
+ var CAT_ORDER=["PM","Leadless PM","ICD","S-ICD","EV-ICD","CRT-P","CRT-D","ICM",
+   "PMリード","ICDリード","LVリード"];
  function sortCats(list){
   return list.slice().sort(function(a,b){
    var ia=CAT_ORDER.indexOf(a),ib=CAT_ORDER.indexOf(b);
    return (ia<0?99:ia)-(ib<0?99:ib)||String(a).localeCompare(String(b),"ja")});
  }
  var LEADICO='<svg class="ico" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round"><path d="M3 6h3v4H3z"/><path d="M6 8c4 0 4 8 8 8s4-4 7-4"/><circle cx="21" cy="12" r="1.2"/></svg>';
- var DEVICO='<svg class="ico" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="5" width="14" height="14" rx="4"/><path d="M17 9h2M17 13h2"/></svg>';
+ var DEVICO='<svg class="ico" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"><path d="M8.4 4.6h8.6a1.7 1.7 0 0 1 1.7 1.7v1.4a1.7 1.7 0 0 1-1.7 1.7H8.4"/><circle cx="11.6" cy="7" r="0.85"/><circle cx="15.2" cy="7" r="0.85"/><path d="M8.2 9.4h6.4a5 5 0 0 1 0 10H8.2a5 5 0 0 1 0-10Z"/></svg>';
 
  function pLabel(x){return x.name?esc(x.name):'<i>（製品名未登録）</i>'}
  function pSub(x){
@@ -1014,12 +1014,18 @@ loadMaster(false);
  function renderPList(){
   var all=items("products");
   var kinds=uniq(all,"kind");
-  fillSel($("#pKind"),"本体・リード",kinds,pK);
-  Array.prototype.forEach.call($("#pKind").querySelectorAll("option"),function(o){
-   if(o.value==="device")o.textContent="本体のみ"; if(o.value==="lead")o.textContent="リードのみ"});
+  var KLABEL={device:"本体のみ",lead:"リードのみ"};
+  $("#pKind").innerHTML='<option value="">本体・リード</option>'+
+   kinds.map(function(k){
+    return '<option value="'+esc(k)+'"'+(k===pK?' selected':'')+'>'+
+           esc(KLABEL[k]||k)+'</option>'}).join("");
   fillSel($("#pMaker"),"すべてのメーカー",sortPMakers(uniq(all,"maker")),pM);
-  chips($("#pCats"),sortCats(uniq(all.filter(function(x){return !pK||x.kind===pK}),"cat")),pC,
-        function(v){pC=v;renderP()});
+  /* 小区分のチップは「本体・リード」と「メーカー」の絞り込みを反映させる */
+  var scope=all.filter(function(x){
+   return (!pK||x.kind===pK)&&(!pM||x.maker===pM)});
+  var cats=sortCats(uniq(scope,"cat"));
+  if(pC&&cats.indexOf(pC)<0)pC="";          /* 選択中の区分が無くなったら解除 */
+  chips($("#pCats"),cats,pC,function(v){pC=v;renderP()});
   var q=pQ.trim().toLowerCase();
   var rows=all.filter(function(x){
    if(pK&&x.kind!==pK)return false;
@@ -1094,12 +1100,14 @@ loadMaster(false);
                  ["コイル表面積 prox",u(x.csa_p,"mm²")]])]
    :[sec("本体",[["シリーズ",x.series],["コネクタ",x.connector],
                  ["寸法",x.size],["質量",x.mass||(x.weight&&x.weight+" g")],
-                 ["容積",x.volume||""],["電池寿命",x.longevity]]),
+                 ["容積",x.volume||""]]),
      sec("保険・価格",[["償還価格",x.price],["保険区分",x.hoken]]),
      sec("治療・センシング",[["ショック出力",x.shock],["充電時間",x.charge],
                  ["センシングオプション",x.sensing],["最大出力",x.energy&&x.energy+" J"]]),
-     sec("MRI・電池",[["MRI対応",x.mri],["電池表示",x.eri_eos],
-                 ["バックアップ作動",x.backup]])];
+     sec("電池・寿命",[["電池寿命",x.longevity],["算出条件",x.longevity_cond],
+                 ["寿命の出典",x.longevity_src],["電池",x.battery],
+                 ["電池表示",x.eri_eos],["バックアップ作動",x.backup]]),
+     sec("MRI",[["MRI対応",x.mri]])];
   $("#pDetail").innerHTML=
    '<button class="back" id="pBack">‹ 製品一覧</button>'+
    '<h2>'+(x.name?esc(x.name):esc(x.model||""))+'</h2>'+
@@ -1107,7 +1115,6 @@ loadMaster(false);
    sec("",head).replace("<h4></h4>","")+
    body.join("")+
    (x.note?'<section><h4>備考</h4><p class="body">'+esc(x.note)+'</p></section>':'')+
-   (x.mri_note?'<section><h4>MRIの判定について</h4><p class="body">'+esc(x.mri_note)+'</p></section>':'')+
    (x.model_note?'<section><h4>型番について</h4><p class="body">'+esc(x.model_note)+'</p></section>':'')+
    (x.src||x.name_src?'<section><h4>出典</h4><p class="body">'+
      esc([x.src,x.name_src].filter(Boolean).join(" ／ "))+'</p></section>':'')+
@@ -1508,7 +1515,7 @@ loadMaster(false);
  }
  document.addEventListener("click",function(e){
   var b=e.target.closest("#tabbar button"); if(b)go(b.dataset.tab)});
- ["#pKind","#pMaker"].forEach(function(s){
+ (function(){
   document.addEventListener("change",function(e){
    if(e.target.matches("#pKind")){pK=e.target.value;pC="";renderP()}
    if(e.target.matches("#pMaker")){pM=e.target.value;renderP()}
@@ -1516,7 +1523,7 @@ loadMaster(false);
    if(e.target.matches("#aCat")){aC=e.target.value;renderA()}
    if(e.target.matches("#mMaker")){mM=e.target.value;renderM()}
    if(e.target.matches("#mTesla")){mT=e.target.value;renderM()}
-  })});
+  })})();
 })();
 </script>
 
