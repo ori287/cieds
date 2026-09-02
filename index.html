@@ -1037,7 +1037,7 @@ loadMaster(false);
    if(pK&&x.kind!==pK)return false;
    if(pM&&x.maker!==pM)return false;
    if(pC&&x.cat!==pC)return false;
-   if(q){var t=[x.name,x.model,x.maker,x.cat,x.en,x.family,x.mfr].join(" ").toLowerCase();
+   if(q){var t=[x.name,x.model,x.maker,x.cat,x.en,x.alias,x.family,x.mfr].join(" ").toLowerCase();
          if(t.indexOf(q)<0)return false}
    return true});
   $("#pCount").textContent=all.length?rows.length+" 件":"";
@@ -1054,7 +1054,7 @@ loadMaster(false);
   /* 検索中は完全一致を最上位に。メーカー見出しは出さずフラットに並べる */
   var flat=!!q;
   if(flat)rows=byRelevance(rows,pQ,function(x){
-    return relRank(x.name||x.model,[x.model,x.maker,x.mfr,x.cat,x.en,x.family],pQ)});
+    return relRank(x.name||x.model,[x.model,x.maker,x.mfr,x.cat,x.en,x.alias,x.family],pQ)});
   var out="",cur=null;
   rows.forEach(function(x){
    if(!flat&&x.maker!==cur){cur=x.maker;out+='<p class="mkhead">'+esc(cur)+'</p>'}
@@ -1083,7 +1083,7 @@ loadMaster(false);
    return /^[0-9.\/×\s]+$/.test(String(v)) ? v+" "+unit : String(v);
   }
   var head=[["メーカー",x.maker],["資料上の表記",x.mfr],["取扱会社",x.dealer],["分類",x.cat],
-            ["一般名称",x.family],["正式英語名",x.en],
+            ["一般名称",x.family],["正式英語名",x.en],["日本語表記",x.alias],
             ["型番",x.model],["販売期間",x.period]];
   var body=x.kind==="gear"
    ?[sec("概要",[["役割",x.role]]),
@@ -1184,7 +1184,7 @@ loadMaster(false);
   var rows=all.filter(function(x){
    if(aM&&x.maker!==aM)return false;
    if(aC&&x.cat!==aC)return false;
-   if(q){var t=[x.name,x.generic,x.maker,x.cat,x.scope,x.how,x.params,x.models,x.equiv,x.glossary].join(" ").toLowerCase();
+   if(q){var t=[x.name,x.generic,x.maker,x.cat,x.scope,x.how,x.params,x.models,x.ecg,x.pitfall,x.equiv,x.glossary].join(" ").toLowerCase();
          if(t.indexOf(q)<0)return false}
    return true});
   $("#aCount").textContent=all.length?rows.length+" 件":"";
@@ -1266,6 +1266,8 @@ loadMaster(false);
    (params.length?'<section><h4>設定項目</h4><ul class="par">'+
      params.map(function(p){return '<li>'+esc(p)+'</li>'}).join("")+'</ul></section>':'')+
    (x.pathway?'<section><h4>プログラマ操作</h4><p class="path">'+esc(x.pathway)+'</p></section>':'')+
+   (x.ecg?'<section><h4>心電図所見</h4><p class="body">'+esc(x.ecg)+'</p></section>':'')+
+   (x.pitfall?'<section><h4>トラブル事例</h4><p class="body">'+esc(x.pitfall)+'</p></section>':'')+
    (x.caution?'<section><h4>注意点</h4><p class="body">'+esc(x.caution)+'</p></section>':'')+
    (x.equiv?'<section><h4>他社類似機能</h4><ul class="par">'+
      x.equiv.split("\n").filter(Boolean).map(function(s){

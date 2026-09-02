@@ -2422,3 +2422,64 @@ CapSure® IS-1（unipolar）は **CapSure® IS-1（単極）** とした。
 | キャプシュアー／CapSure | 36／40件 |
 | ソーリン電極 | 15件 |
 | カテーテルリード | 8件 |
+
+---
+
+## アルゴリズムに「心電図所見」「トラブル事例」を追加（2026-09-02 追補10）
+
+`algos.json` の160件に `ecg`（心電図所見）と `pitfall`（トラブル事例）を追加した。
+詳細画面では「動作」「設定項目」の後、「注意点」の前に表示される。
+
+| 項目 | 件数 |
+|---|---|
+| 心電図所見（`ecg`） | **115／160** |
+| トラブル事例（`pitfall`） | **148／160** |
+| どちらも記入なし | 12 |
+
+**プログラマ操作経路（`pathway`）は指示により保留。** 引き続き全件で未記入。
+
+### 記入しなかった12件（心電図に現れず、既知のトラブルもないもの）
+
+CardioSync Optimization／Implant Detection／VectorExpress（Medtronic）、
+Auto VectSelect Quartet Test／QuickOpt Optimization（Abbott）、
+Active Threshold Monitoring／Auto LV VectorOpt（BIOTRONIK）、
+Automatic Lead Recognition／LV VectorGuide／SmartCRT／SmartDelay Optimization（Boston Scientific）、
+Automatic Implant Detection（MicroPort CRM）。
+
+いずれも**測定ツールや設定支援**であり、常時動作して心電図に所見を残す性質のものではない。
+「機能によっては追加しなくてよい」という指示のとおり、無理に埋めていない。
+
+### 書いた内容の性格
+
+**確立している事実だけを書き、推測は入れていない。** 具体的には次の範囲。
+
+- **動作の必然として心電図にどう出るか**：MVPのAAI(R)動作中に心室スパイクが出ないこと、
+  自動閾値測定中に非捕捉＋バックアップ刺激でスパイクが2本並ぶこと、
+  マルチポイントペーシングで1拍にスパイクが3本並ぶこと、など
+- **広く知られた落とし穴**：MVPのAAI(R)動作中の長いAV間隔によるRNRVAS、
+  Waveletの感度設定によるクリッピングで一致率が下がり不適切作動につながること、
+  Onsetを厳しくすると洞頻拍から移行したVTの治療が抑制されること、
+  ATPによるVTの加速・VF化、OptiVolの偽陽性、など
+
+数値の閾値やタイミング（バックアップ刺激の遅延時間など）は、機種で異なるため書いていない。
+
+### 特に押さえた組み合わせ
+
+| 内容 | 対象 |
+|---|---|
+| RNRVAS（AAI(R)動作中の長いAV間隔） | MVP／Vp Suppression／RYTHMIQ／SafeR |
+| テンプレート不一致による不適切作動 | Wavelet／Morphology／MorphMatch／Rhythm ID |
+| R-Rが安定した心房細動での鑑別不能 | Stability／Interval Stability／Onset/Stability |
+| ATPによる頻拍の加速 | 各社のVFゾーンATP、iATP |
+| 見かけのペーシング率と実効率の乖離 | 各社のトリガペーシング、CAFR／VRR、EffectivCRT |
+| T波オーバーセンシングとVFアンダーセンシングのトレードオフ | 各社の可変センシング |
+
+**「見かけの両室ペーシング率は上がるが実効的な再同期が得られていないことがある」**という指摘は、
+トリガペーシング（V Sense Response／LV Triggering／Bi-V Trigger／Abbott Triggering）と
+心房細動時のレート制御（CAFR／VRR）の両方に入れた。EffectivCRT の項目と読み合わせられる。
+
+### 画面と検索
+
+- 詳細画面に「心電図所見」「トラブル事例」の2セクションを追加。
+- メーカー別の検索対象に `ecg` と `pitfall` を追加した。
+  **「RNRVAS」「オーバーセンシング」「不適切作動」などの症状側の言葉から機能を引ける。**

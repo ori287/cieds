@@ -13,7 +13,9 @@
    "how": "高レートの頻拍でも、まずATPを行ってから充電に入る設定。無痛で停止できればショックを完全に回避できる。",
    "params": "ATP Before Charging: On／Off",
    "models": "Cobalt XT・Evera 世代（EV-ICDはFVT設定で可）",
-   "equiv": "Abbott: ATP prior to charging（ATP prior/during charging）\nBIOTRONIK: ATP one shot／Early ATP one shot（Stableと判定された場合にATP後に充電）\nBoston Scientific: Quick Convert ATP™\nMicroPort CRM: ATP in fast VT/VF zone"
+   "equiv": "Abbott: ATP prior to charging（ATP prior/during charging）\nBIOTRONIK: ATP one shot／Early ATP one shot（Stableと判定された場合にATP後に充電）\nBoston Scientific: Quick Convert ATP™\nMicroPort CRM: ATP in fast VT/VF zone",
+   "ecg": "頻拍中に、頻拍周期より短い間隔のペーシングスパイクが連続して入る。停止すれば直後から自己調律またはペーシング調律に戻る。",
+   "pitfall": "ATPにより心室頻拍が加速し、より速い頻拍や心室細動へ移行することがある。低左心機能例や非常に速い頻拍では、シーケンス数を増やしすぎない。"
   },
   {
    "id": "MDT-ATP-DURING-CHARGING",
@@ -26,7 +28,9 @@
    "how": "VFゾーンで充電を始めると同時にATPを1シーケンス行い、頻拍が停止すれば充電を中止してショックを出さない。",
    "params": "ATP During Charging: On／Off",
    "models": "Cobalt XT・Evera 世代",
-   "equiv": "Abbott: ATP while charging（ATP prior/during charging）\nBIOTRONIK: —\nBoston Scientific: —\nMicroPort CRM: —"
+   "equiv": "Abbott: ATP while charging（ATP prior/during charging）\nBIOTRONIK: —\nBoston Scientific: —\nMicroPort CRM: —",
+   "ecg": "頻拍中に、頻拍周期より短い間隔のペーシングスパイクが連続して入る。停止すれば直後から自己調律またはペーシング調律に戻る。",
+   "pitfall": "ATPにより心室頻拍が加速し、より速い頻拍や心室細動へ移行することがある。低左心機能例や非常に速い頻拍では、シーケンス数を増やしすぎない。"
   },
   {
    "id": "MDT-ADAPTIVCRTTM",
@@ -39,7 +43,9 @@
    "how": "自己房室伝導と自己QRS幅を定期的に評価し、伝導が保たれていれば左室単独ペーシングで自己興奮と融合させ、房室伝導が障害されていれば両室ペーシングに切り替える。AV・VVディレイも自動調整する。",
    "params": "AdaptivCRT: Adaptive BiV and LV／Adaptive BiV／Non-adaptive CRT",
    "models": "Cobalt XT HF／Claria／Percepta 世代のCRT",
-   "equiv": "Abbott: QuickOpt™ Optimization／SyncAV™ CRT／SyncAV™ Plus CRT\nBIOTRONIK: —\nBoston Scientific: SmartDelay™ Optimization／SmartCRT™\nMicroPort CRM: SonR™ CRT Optimization"
+   "equiv": "Abbott: QuickOpt™ Optimization／SyncAV™ CRT／SyncAV™ Plus CRT\nBIOTRONIK: —\nBoston Scientific: SmartDelay™ Optimization／SmartCRT™\nMicroPort CRM: SonR™ CRT Optimization",
+   "ecg": "左室単独ペーシングで動作している間は右室のスパイクが消え、自己の右室興奮と左室刺激が融合したQRSになる。房室伝導が障害されると両室ペーシングに戻り、スパイクが2本になる。",
+   "pitfall": "自己房室伝導が変動する症例では融合が安定せず、QRS幅が拍ごとに変わることがある。心房細動時は左室単独ペーシングの対象にならない。"
   },
   {
    "id": "MDT-ATRIAL-CAPTURE-MANAGEMENTTM",
@@ -52,7 +58,9 @@
    "how": "定期的に心房閾値を測定し、測定値に安全域倍率を掛けた出力へ自動調整する。捕捉の確認には誘発反応を用いる。",
    "params": "ACM: Adaptive／Monitor／Off；最小補正出力；安全域倍率；測定頻度",
    "models": "Azure XT・Cobalt XT 世代",
-   "equiv": "Abbott: ACap™ Confirm\nBIOTRONIK: Atrial Capture Control（ACC）\nBoston Scientific: PaceSafe™ RA Automatic Threshold\nMicroPort CRM: Atrial Auto-threshold"
+   "equiv": "Abbott: ACap™ Confirm\nBIOTRONIK: Atrial Capture Control（ACC）\nBoston Scientific: PaceSafe™ RA Automatic Threshold\nMicroPort CRM: Atrial Auto-threshold",
+   "ecg": "閾値測定の最中だけ、出力が段階的に下がって捕捉が失われる拍が現れ、その直後に高出力のバックアップ刺激が入る。1拍のなかにスパイクが2本並んで見える。",
+   "pitfall": "融合波や偽融合があると捕捉ありと誤判定して出力を下げすぎることがある。誘発反応が小さい症例では測定そのものが成立せず、安全側の固定出力に戻る。テスト中の非捕捉を不具合と取り違えないよう、記録の時刻とテスト周期を照合する。"
   },
   {
    "id": "MDT-ATRIAL-PREFERENCE-PACING",
@@ -65,7 +73,9 @@
    "how": "自己の心房レートに追随して、それよりわずかに速いレートで心房を刺激し続ける。心房期外収縮の出現を減らして心房細動の契機を減らす。",
    "params": "APP: On／Off；最大介入レート",
    "models": "Azure XT・Cobalt XT 世代",
-   "equiv": "Abbott: AF Suppression™\nBIOTRONIK: Overdrive Prevention Pacing\nBoston Scientific: AP Scan™／Atrial Preference Pacing（APP）／ProACt\nMicroPort CRM: Atrial Overdrive"
+   "equiv": "Abbott: AF Suppression™\nBIOTRONIK: Overdrive Prevention Pacing\nBoston Scientific: AP Scan™／Atrial Preference Pacing（APP）／ProACt\nMicroPort CRM: Atrial Overdrive",
+   "ecg": "心房ペーシング率がほぼ100％になり、自己P波がほとんど見えなくなる。心拍数は自己の洞レートよりわずかに速い状態で推移する。",
+   "pitfall": "心房ペーシングが増えるため電池消耗が大きくなる。心房細動の発症を減らす効果は臨床試験で一貫していないため、効果を過大に見積もらない。"
   },
   {
    "id": "MDT-ATRIAL-RATE-STABILIZATION",
@@ -78,7 +88,9 @@
    "how": "心房期外収縮を検出すると、その後の心房ペーシング間隔をやや短めに設定し、以後は徐々に元のレートへ戻す。短い間隔と長い間隔が交互に現れるのを防ぐ。",
    "params": "ARS: On／Off；最大介入レート",
    "models": "Azure XT・Cobalt XT 世代",
-   "equiv": "Abbott: —\nBIOTRONIK: —\nBoston Scientific: —\nMicroPort CRM: Acceleration on PAC／Acceleration on PVC／Atrial Pacing on PVC／PAC Pause Suppression／PVC Pause Suppression／Post Extrasystolic Pause Suppression"
+   "equiv": "Abbott: —\nBIOTRONIK: —\nBoston Scientific: —\nMicroPort CRM: Acceleration on PAC／Acceleration on PVC／Atrial Pacing on PVC／PAC Pause Suppression／PVC Pause Suppression／Post Extrasystolic Pause Suppression",
+   "ecg": "期外収縮の直後の代償性ポーズが短くなり、以後は徐々に元のレートへ戻る。長いR-Rと短いR-Rが交互に現れる所見が減る。",
+   "pitfall": "ペーシング率が上がるため電池消耗が増える。期外収縮そのものを減らす機能ではない。"
   },
   {
    "id": "MDT-ATRIAL-TRACKING-RECOVERY",
@@ -91,7 +103,8 @@
    "how": "上限追従レート付近やブロックされた心房期外収縮の後で心房追従が失われたとき、AVディレイと不応期の扱いを調整して追従を回復させ、両室ペーシングの脱落を防ぐ。",
    "params": "Atrial Tracking Recovery: On／Off",
    "models": "Cobalt XT HF・Percepta 世代",
-   "equiv": "Abbott: —\nBIOTRONIK: WKB Behaviour／PVC discrimination after As\nBoston Scientific: Tracking Preference\nMicroPort CRM: —"
+   "equiv": "Abbott: —\nBIOTRONIK: WKB Behaviour／PVC discrimination after As\nBoston Scientific: Tracking Preference\nMicroPort CRM: —",
+   "pitfall": "上限追従レート付近の挙動を変えるため、心房レートが高い症例では動作の確認が必要。"
   },
   {
    "id": "MDT-CARDIOSYNCTM-OPTIMIZATION",
@@ -117,7 +130,8 @@
    "how": "同じ頻拍に対して無効だったATPの段階を記録し、以後のエピソードではその段階を飛ばして次の治療へ進む（Smart Mode）。ChargeSaverはATPで停止が見込める場合に充電を先送りして電池を節約する。Switchbackは省略していたATPを条件を満たしたときに再び実施対象へ戻す。",
    "params": "Smart Mode: On／Off；Switchback: On／Off；ChargeSaver: On／Off",
    "models": "Cobalt XT／Evera 世代のICD／Cobalt XT HF／Claria／Percepta 世代のCRT",
-   "equiv": "Abbott: —\nBIOTRONIK: ATP Optimization\nBoston Scientific: —\nMicroPort CRM: Autoswitch ATP"
+   "equiv": "Abbott: —\nBIOTRONIK: ATP Optimization\nBoston Scientific: —\nMicroPort CRM: Autoswitch ATP",
+   "pitfall": "無効だったATPを省略する仕組みのため、頻拍の性質が変わった場合には有効な治療まで飛ばされうる。Switchbackの条件を確認しておく。"
   },
   {
    "id": "MDT-CONDUCTED-AF-RESPONSE",
@@ -130,7 +144,9 @@
    "how": "心房細動で不規則になった心室レートに合わせてペーシングレートを調整し、極端に短い／長いR-R間隔を減らす。CRTでは両室ペーシング率の維持にも寄与する。",
    "params": "Conducted AF Response: On／Off；最大介入レート",
    "models": "Azure XT・Cobalt XT 世代",
-   "equiv": "Abbott: —\nBIOTRONIK: Rate Stabilization\nBoston Scientific: Ventricular Rate Regulation（VRR）\nMicroPort CRM: —"
+   "equiv": "Abbott: —\nBIOTRONIK: Rate Stabilization\nBoston Scientific: Ventricular Rate Regulation（VRR）\nMicroPort CRM: —",
+   "ecg": "心房細動中に心室ペーシングのレートが自己伝導のレートに合わせて上がり、不規則だったR-R間隔が整って見える。",
+   "pitfall": "R-R間隔は整うが、自己興奮と競合してペーシングが実効的に捕捉していないことがある。「両室ペーシング率は高いのにQRSは自己波形」という状態を見逃さない。"
   },
   {
    "id": "MDT-CONFIRMATION",
@@ -144,7 +160,8 @@
    "params": "Confirmation+: On／Off",
    "models": "Cobalt XT／Evera 世代のICD／Cobalt XT HF／Claria／Percepta 世代のCRT",
    "equiv": "Abbott: VF Therapy Assurance\nBIOTRONIK: —\nBoston Scientific: —\nMicroPort CRM: —",
-   "caution": "再確認の分だけ放電までわずかに時間がかかる。"
+   "caution": "再確認の分だけ放電までわずかに時間がかかる。",
+   "pitfall": "充電完了後に再確認するため放電までわずかに時間がかかる。無効（コミッテッド）にすると、自然停止した頻拍にも放電される。"
   },
   {
    "id": "MDT-EFFECTIVCRTTM-DIAGNOSTIC",
@@ -158,7 +175,8 @@
    "params": "EffectivCRT Diagnostic: On／Off",
    "models": "Cobalt XT HF／Claria／Percepta 世代のCRT",
    "equiv": "Abbott: —\nBIOTRONIK: —\nBoston Scientific: —\nMicroPort CRM: —",
-   "caution": "融合や偽融合により、ペーシング率が高くても実効率は低いことがある。"
+   "caution": "融合や偽融合により、ペーシング率が高くても実効率は低いことがある。",
+   "pitfall": "見かけの両室ペーシング率が高くても、融合や偽融合により実効率が低いことがある。ペーシング率だけでCRTの効果を判断しない。"
   },
   {
    "id": "MDT-EFFECTIVCRTTM-DURING-AF",
@@ -171,7 +189,9 @@
    "how": "心房細動中に左室の捕捉が得られていない拍を検出すると、ペーシングレートを一時的に上げて実効的な両室ペーシング率を保つ。",
    "params": "EffectivCRT During AF: On／Off；最大介入レート",
    "models": "Cobalt XT HF／Claria／Percepta 世代のCRT",
-   "equiv": "Abbott: —\nBIOTRONIK: —\nBoston Scientific: —\nMicroPort CRM: —"
+   "equiv": "Abbott: —\nBIOTRONIK: —\nBoston Scientific: —\nMicroPort CRM: —",
+   "ecg": "心房細動中に心室ペーシングのレートが自己伝導のレートに合わせて上がり、不規則だったR-R間隔が整って見える。",
+   "pitfall": "捕捉が得られない拍を検出してレートを上げるため、心房細動中のペーシング率と電池消耗が増える。"
   },
   {
    "id": "MDT-FEATURE-MATCH",
@@ -184,7 +204,8 @@
    "how": "血管外ICD（EV-ICD）で用いる波形識別。取得したテンプレートの特徴量と頻拍時の波形を比較して判定する。",
    "params": "Feature Match: On／Off",
    "models": "Aurora EV-ICD",
-   "equiv": "Abbott: Far Field MD™ Morphology／Morphology\nBIOTRONIK: MorphMatch\nBoston Scientific: INSIGHT\nMicroPort CRM: —"
+   "equiv": "Abbott: Far Field MD™ Morphology／Morphology\nBIOTRONIK: MorphMatch\nBoston Scientific: INSIGHT\nMicroPort CRM: —",
+   "pitfall": "EV-ICDでは徐脈ペーシングと抗頻拍ペーシングの機能が経静脈ICDと異なる。適応の判断に注意する。"
   },
   {
    "id": "MDT-IMPLANT-DETECTION",
@@ -210,7 +231,9 @@
    "how": "直前の頻拍周期と刺激後の反応をもとに、次のシーケンスの刺激間隔を自動的に決める。固定バーストやランプで停止しない頻拍にも対応しやすい。",
    "params": "iATP: On／Off",
    "models": "Cobalt XT／Evera 世代のICD／Cobalt XT HF／Claria／Percepta 世代のCRT",
-   "equiv": "Abbott: —\nBIOTRONIK: ATP Optimization\nBoston Scientific: —\nMicroPort CRM: Autoswitch ATP"
+   "equiv": "Abbott: —\nBIOTRONIK: ATP Optimization\nBoston Scientific: —\nMicroPort CRM: Autoswitch ATP",
+   "ecg": "頻拍中に、頻拍周期より短い間隔のペーシングスパイクが連続して入る。停止すれば直後から自己調律またはペーシング調律に戻る。",
+   "pitfall": "ATPにより心室頻拍が加速し、より速い頻拍や心室細動へ移行することがある。低左心機能例や非常に速い頻拍では、シーケンス数を増やしすぎない。"
   },
   {
    "id": "MDT-LV-CAPTURE-MANAGEMENTTM",
@@ -223,7 +246,9 @@
    "how": "左室の閾値を定期的に測定し、安全域を加えた出力へ自動調整する。左室閾値の上昇による両室ペーシング欠落の早期発見にも役立つ。",
    "params": "LVCM: Adaptive／Monitor／Off；最小補正出力；安全域倍率",
    "models": "Cobalt XT HF／Claria／Percepta 世代のCRT",
-   "equiv": "Abbott: BiVCap™ Confirm／LVCap™ Confirm\nBIOTRONIK: LV Capture Control（LVCC）\nBoston Scientific: PaceSafe™ LV Automatic Threshold\nMicroPort CRM: LV Auto-threshold"
+   "equiv": "Abbott: BiVCap™ Confirm／LVCap™ Confirm\nBIOTRONIK: LV Capture Control（LVCC）\nBoston Scientific: PaceSafe™ LV Automatic Threshold\nMicroPort CRM: LV Auto-threshold",
+   "ecg": "閾値測定の最中だけ、出力が段階的に下がって捕捉が失われる拍が現れ、その直後に高出力のバックアップ刺激が入る。1拍のなかにスパイクが2本並んで見える。",
+   "pitfall": "融合波や偽融合があると捕捉ありと誤判定して出力を下げすぎることがある。誘発反応が小さい症例では測定そのものが成立せず、安全側の固定出力に戻る。テスト中の非捕捉を不具合と取り違えないよう、記録の時刻とテスト周期を照合する。"
   },
   {
    "id": "MDT-LEAD-MONITOR",
@@ -236,7 +261,9 @@
    "how": "ペーシングインピーダンス、ショックインピーダンス、感知波高の推移を定期測定し、設定範囲を外れるとアラートを出す。",
    "params": "Lead Monitor: On／Off；インピーダンス上限・下限",
    "models": "Azure XT・Cobalt XT 世代",
-   "equiv": "Abbott: Lead Monitoring\nBIOTRONIK: —\nBoston Scientific: —\nMicroPort CRM: —"
+   "equiv": "Abbott: Lead Monitoring\nBIOTRONIK: —\nBoston Scientific: —\nMicroPort CRM: —",
+   "ecg": "非生理的に短い間隔の信号が連続して記録される。近接電極（tip-ring）にだけ現れて遠隔電極（coil-can）には現れないのが、リード由来の雑音の典型像。同時にインピーダンスの急な上昇や短周期センシングの増加を伴うことが多い。",
+   "pitfall": "インピーダンスが基準内でも断線が進行していることがあるため、短周期センシングの記録を併せて確認する。"
   },
   {
    "id": "MDT-MANAGED-VENTRICULAR-PACING",
@@ -250,7 +277,9 @@
    "params": "MVP: On／Off",
    "models": "Azure XT・Cobalt XT 世代",
    "equiv": "Abbott: —\nBIOTRONIK: Vp Suppression\nBoston Scientific: RYTHMIQ™\nMicroPort CRM: SafeR™",
-   "caution": "AAI(R)動作中はAV間隔が長くなるため、逆行性室房伝導があるとRNRVASを誘発することがある。"
+   "caution": "AAI(R)動作中はAV間隔が長くなるため、逆行性室房伝導があるとRNRVASを誘発することがある。",
+   "ecg": "AAI(R)相当で動作している間は心房スパイクに続いて自己QRSが出るだけで、心室スパイクは出ない。PP間隔は一定のままAV間隔だけが自己伝導のぶん長く見える。心室の脱落があった拍では、心房刺激からやや遅れて心室のバックアップ刺激が1発だけ入る。DDD(R)へ切り替わると、以後は通常の心房・心室順次ペーシングになる。",
+   "pitfall": "AAI(R)動作中は実質的なAV間隔が長くなるため、逆行性室房伝導がある症例ではRNRVAS（反復性非リエントリー性室房同期）を誘発し、動悸や血行動態の悪化につながることがある。また2:1房室ブロックでは1拍おきに脱落するため、切替の条件を満たすまで心室のポーズが繰り返し記録される。「原因不明のポーズ」として読影されやすいので、モードとアルゴリズムの確認が先。"
   },
   {
    "id": "MDT-MODE-SWITCH",
@@ -263,7 +292,9 @@
    "how": "心室イベント間に心房センシングが2回以上ある拍をエビデンスとして数え、一定数に達するとDDI(R)などへ切り替える。単発の心房期外収縮では切り替わらない。",
    "params": "Mode Switch: On／Off；検出レート；PVAB",
    "models": "Azure XT・Cobalt XT 世代",
-   "equiv": "Abbott: Auto Mode Switch（AMS／FARI）\nBIOTRONIK: Mode Switching\nBoston Scientific: ATR Mode Switch\nMicroPort CRM: Mode Switching"
+   "equiv": "Abbott: Auto Mode Switch（AMS／FARI）\nBIOTRONIK: Mode Switching\nBoston Scientific: ATR Mode Switch\nMicroPort CRM: Mode Switching",
+   "ecg": "心房頻拍の間は心室の追従が止まり、心室レートが下限レートやセンサ指示レートまで落ちる。心房の速い波形と、それに追従しない規則的な心室ペーシングが同時に見える。復帰時は追従が戻る。",
+   "pitfall": "ファーフィールドR波を心房で拾うと、洞調律でも不適切にモードスイッチが起こり心室レートが落ちる。逆に心房波高が低くアンダーセンシングになると、心房頻拍でもモードスイッチせず速い心室追従が続く。心房不応期（PVAB）と心房感度の設定を確認する。"
   },
   {
    "id": "MDT-MULTIPLE-POINT-PACING",
@@ -277,7 +308,9 @@
    "params": "Multiple Point Pacing: On／Off；LV1-LV2ディレイ",
    "models": "Cobalt XT HF／Claria／Percepta 世代のCRT",
    "equiv": "Abbott: MultiPoint™ Pacing\nBIOTRONIK: Multipole Pacing（MPP）\nBoston Scientific: LV Multisite Pacing\nMicroPort CRM: LV Multipoint Pacing",
-   "caution": "刺激回数が増えるため電池消耗が大きくなる。"
+   "caution": "刺激回数が増えるため電池消耗が大きくなる。",
+   "ecg": "1拍のなかに心室のスパイクが3本（左室2点＋右室）並ぶ。QRSの形が両室ペーシング単独のときと変わる。",
+   "pitfall": "刺激回数が増えるぶん電池消耗が大きい。左室の刺激部位が増えることで横隔神経刺激が出ることがある。"
   },
   {
    "id": "MDT-ONSET",
@@ -291,7 +324,9 @@
    "params": "Onset: On／Off；Onset率（％）",
    "models": "Cobalt XT／Evera 世代のICD／Cobalt XT HF／Claria／Percepta 世代のCRT",
    "equiv": "Abbott: Sudden Onset\nBIOTRONIK: Onset\nBoston Scientific: Onset/Stability\nMicroPort CRM: —",
-   "caution": "厳しくしすぎると、洞頻拍から移行した運動誘発性VTの治療を抑制してしまう。"
+   "caution": "厳しくしすぎると、洞頻拍から移行した運動誘発性VTの治療を抑制してしまう。",
+   "ecg": "頻拍開始時のR-R間隔が直前の平均からどれだけ急に短縮したかで判定される。",
+   "pitfall": "厳しく設定しすぎると、洞頻拍から連続して移行した運動誘発性の心室頻拍で治療が抑制される。運動中に発症するVTを持つ症例では慎重に設定する。"
   },
   {
    "id": "MDT-OPTIVOLTM-2-0-FLUID-STATUS-MONITORING",
@@ -305,7 +340,8 @@
    "params": "OptiVol: On／Off；アラート閾値",
    "models": "Cobalt XT／Evera 世代のICD／Cobalt XT HF／Claria／Percepta 世代のCRT",
    "equiv": "Abbott: CorVue™\nBIOTRONIK: Thoracic Impedance（TI）\nBoston Scientific: Thoracic impedance（TI）／Heart Rate Variability\nMicroPort CRM: —",
-   "caution": "胸水・肺炎・ポケットの状態など心不全以外の要因でも変化するため、単独では判断しない。"
+   "caution": "胸水・肺炎・ポケットの状態など心不全以外の要因でも変化するため、単独では判断しない。",
+   "pitfall": "胸水・肺炎・ポケットの状態・植込み直後の局所の変化など、心不全以外の要因でもインピーダンスは下がる。単独で心不全増悪と判断せず、症状・体重・所見と併せて評価する。偽陽性が少なくない。"
   },
   {
    "id": "MDT-PR-LOGICTM",
@@ -319,7 +355,8 @@
    "params": "PR Logic: On／Off；SVTリミット；AF/AFl・Sinus Tach・Other SVTの個別設定",
    "models": "Cobalt XT／Evera 世代のICD／Cobalt XT HF／Claria／Percepta 世代のCRT",
    "equiv": "Abbott: Rate Branch\nBIOTRONIK: SMART® Detection\nBoston Scientific: Rhythm ID™\nMicroPort CRM: PARAD™+",
-   "caution": "心房リードの情報を用いるため、シングルチャンバICDでは使用できない。"
+   "caution": "心房リードの情報を用いるため、シングルチャンバICDでは使用できない。",
+   "pitfall": "心房リードの情報を使うため、シングルチャンバICDでは使用できない。心房のアンダーセンシングやファーフィールドR波の誤感知があると分類を誤る。"
   },
   {
    "id": "MDT-POST-MODE-SWITCH-OVERDRIVE-PACING",
@@ -332,7 +369,9 @@
    "how": "心房頻拍が停止してモードスイッチから復帰した直後、一定時間だけ心房をやや速いレートで刺激し、頻拍の再発を抑える。",
    "params": "PMOP: On／Off；オーバードライブレート；持続時間",
    "models": "Azure XT・Cobalt XT 世代",
-   "equiv": "Abbott: AF Suppression™\nBIOTRONIK: Overdrive Prevention Pacing\nBoston Scientific: AP Scan™／Atrial Preference Pacing（APP）／ProACt\nMicroPort CRM: Atrial Overdrive"
+   "equiv": "Abbott: AF Suppression™\nBIOTRONIK: Overdrive Prevention Pacing\nBoston Scientific: AP Scan™／Atrial Preference Pacing（APP）／ProACt\nMicroPort CRM: Atrial Overdrive",
+   "ecg": "心房頻拍が停止して追従が戻った直後、一定時間だけ心房ペーシングのレートが高くなる。",
+   "pitfall": "心房ペーシングが増えるため電池消耗が大きくなる。心房細動の発症を減らす効果は臨床試験で一貫していないため、効果を過大に見積もらない。"
   },
   {
    "id": "MDT-POST-VT-VF-SHOCK-PACING",
@@ -345,7 +384,9 @@
    "how": "ショックの直後、一定時間だけ高めのレートと出力でペーシングを行い、治療後の心停止や徐脈に備える。",
    "params": "Post Shock Pacing: On／Off；レート；出力；持続時間",
    "models": "Cobalt XT／Evera 世代のICD／Cobalt XT HF／Claria／Percepta 世代のCRT",
-   "equiv": "Abbott: —\nBIOTRONIK: —\nBoston Scientific: Post Therapy Pacing\nMicroPort CRM: Post-shock pacing mode"
+   "equiv": "Abbott: —\nBIOTRONIK: —\nBoston Scientific: Post Therapy Pacing\nMicroPort CRM: Post-shock pacing mode",
+   "ecg": "ショックやATPの直後、一定時間だけ通常より高いレート・高い出力でのペーシングが続く。",
+   "pitfall": "治療直後の徐脈に備える設定であり、高すぎるレートは心筋酸素需要を増やす。"
   },
   {
    "id": "MDT-RV-CAPTURE-MANAGEMENTTM",
@@ -358,7 +399,9 @@
    "how": "右室の閾値を定期的に測定し、安全域倍率を掛けた出力へ自動調整する。閾値の推移はトレンドとして記録される。",
    "params": "RVCM: Adaptive／Monitor／Off；最小補正出力；安全域倍率",
    "models": "Azure XT・Cobalt XT 世代",
-   "equiv": "Abbott: RVCap™ Confirm／Ventricular AutoCapture™\nBIOTRONIK: Ventricular Capture Control（VCC）\nBoston Scientific: PaceSafe™ RV Automatic Capture／PaceSafe™ RV Automatic Threshold／Ventricular Automatic Capture\nMicroPort CRM: RV Auto-threshold／Ventricular Auto-threshold"
+   "equiv": "Abbott: RVCap™ Confirm／Ventricular AutoCapture™\nBIOTRONIK: Ventricular Capture Control（VCC）\nBoston Scientific: PaceSafe™ RV Automatic Capture／PaceSafe™ RV Automatic Threshold／Ventricular Automatic Capture\nMicroPort CRM: RV Auto-threshold／Ventricular Auto-threshold",
+   "ecg": "閾値測定の最中だけ、出力が段階的に下がって捕捉が失われる拍が現れ、その直後に高出力のバックアップ刺激が入る。1拍のなかにスパイクが2本並んで見える。",
+   "pitfall": "融合波や偽融合があると捕捉ありと誤判定して出力を下げすぎることがある。誘発反応が小さい症例では測定そのものが成立せず、安全側の固定出力に戻る。テスト中の非捕捉を不具合と取り違えないよう、記録の時刻とテスト周期を照合する。"
   },
   {
    "id": "MDT-RV-LEAD-NOISE-DISCRIMINATION",
@@ -371,7 +414,9 @@
    "how": "近接電極と遠隔電極の信号を比較し、片方にしか現れない高周波信号を雑音と判定して治療を保留し、アラートを出す。",
    "params": "RV Lead Noise Discrimination: On／Off",
    "models": "Cobalt XT／Evera 世代のICD／Cobalt XT HF／Claria／Percepta 世代のCRT",
-   "equiv": "Abbott: DynamicTx™ Over-Current Detection／SecureSense™ RV Lead Noise\nBIOTRONIK: —\nBoston Scientific: —\nMicroPort CRM: —"
+   "equiv": "Abbott: DynamicTx™ Over-Current Detection／SecureSense™ RV Lead Noise\nBIOTRONIK: —\nBoston Scientific: —\nMicroPort CRM: —",
+   "ecg": "非生理的に短い間隔の信号が連続して記録される。近接電極（tip-ring）にだけ現れて遠隔電極（coil-can）には現れないのが、リード由来の雑音の典型像。同時にインピーダンスの急な上昇や短周期センシングの増加を伴うことが多い。",
+   "pitfall": "雑音と判定した信号では治療が保留されるため、真の心室細動を雑音と誤判定する危険が原理的に残る。アラートが出たら、リードの断線・被覆損傷を画像とインピーダンス推移で確認する。"
   },
   {
    "id": "MDT-RATE-DROP-RESPONSE",
@@ -385,7 +430,9 @@
    "params": "検出方式: Drop／Low Rate；ドロップサイズ；ドロップレート；介入レート；介入時間",
    "models": "Azure XT／Astra 世代のペースメーカ",
    "equiv": "Abbott: Advanced Hysteresis\nBIOTRONIK: Rate Fading\nBoston Scientific: Sudden Brady Response（SBR）\nMicroPort CRM: Acceleration（レートドロップ応答）",
-   "caution": "心抑制型の血管迷走神経性失神が対象で、血管抑制型には効果が乏しい。"
+   "caution": "心抑制型の血管迷走神経性失神が対象で、血管抑制型には効果が乏しい。",
+   "ecg": "自己レートの急な低下の直後から、下限レートより明らかに高いレートでのペーシングが一定時間続き、その後は段階的に下限レートへ戻る。発作の前後で心拍数が階段状に変化する。",
+   "pitfall": "心抑制型の血管迷走神経性失神が対象で、血管抑制型（血圧低下が主体）には効果が乏しい。介入レートを高くしすぎると動悸や不要な高頻度ペーシングにつながる。"
   },
   {
    "id": "MDT-REACTIVE-ATPTM",
@@ -398,7 +445,9 @@
    "how": "心房頻拍が整順化・徐拍化して停止しやすくなった機を捉えて心房ATPを行う。モードスイッチ中も繰り返し試行できる。",
    "params": "Reactive ATP: On／Off；シーケンス数",
    "models": "Azure XT・Cobalt XT 世代",
-   "equiv": "Abbott: —（非搭載）\nBIOTRONIK: Atrial ATP（aATP）\nBoston Scientific: —（非搭載）\nMicroPort CRM: —"
+   "equiv": "Abbott: —（非搭載）\nBIOTRONIK: Atrial ATP（aATP）\nBoston Scientific: —（非搭載）\nMicroPort CRM: —",
+   "ecg": "心房頻拍の間に、心房へ連続したペーシングスパイクが入る。停止すれば洞調律または心房ペーシングに戻る。",
+   "pitfall": "心房ATPにより心房頻拍が心房細動へ移行することがある。心房粗動では停止率が高いが、細動には無効。"
   },
   {
    "id": "MDT-SEARCH-AV",
@@ -411,7 +460,9 @@
    "how": "自己房室伝導が確認できる間はAVディレイを延長して心室刺激を抑制する。伝導が失われるとAVディレイを短縮して確実に刺激する。",
    "params": "Search AV+: On／Off；最大AVディレイ",
    "models": "Azure XT・Cobalt XT 世代",
-   "equiv": "Abbott: Ventricular Intrinsic Preference（VIP™）\nBIOTRONIK: Intrinsic Rhythm Support（IRSplus）／Positive AV Hysteresis with Scan/Repetitive\nBoston Scientific: AV Search +\nMicroPort CRM: Dplus™"
+   "equiv": "Abbott: Ventricular Intrinsic Preference（VIP™）\nBIOTRONIK: Intrinsic Rhythm Support（IRSplus）／Positive AV Hysteresis with Scan/Repetitive\nBoston Scientific: AV Search +\nMicroPort CRM: Dplus™",
+   "ecg": "定期的にAV間隔が延長し、自己QRSが出れば心室スパイクが消える。伝導が失われるとAV間隔が短縮して心室スパイクが戻る。",
+   "pitfall": "探索中は一時的にAV間隔が大きく延長するため、房室同期が崩れて動悸や血圧低下を自覚することがある。CRT症例では両室ペーシングの脱落につながるため、原則として使用しない。"
   },
   {
    "id": "MDT-SENSING-ASSURANCE",
@@ -424,7 +475,9 @@
    "how": "定期的に感知波高を評価し、十分な安全域が保たれるよう感度を自動で調整する。波高が変動しても感知不全を起こしにくくする。",
    "params": "Sensing Assurance: Adaptive／Monitor／Off；最小感度",
    "models": "Azure XT・Cobalt XT 世代",
-   "equiv": "Abbott: SenseAbility™\nBIOTRONIK: Automatic Sensitivity Control\nBoston Scientific: Automatic Gain Control（AGC）\nMicroPort CRM: AutoSensitivityControl"
+   "equiv": "Abbott: SenseAbility™\nBIOTRONIK: Automatic Sensitivity Control\nBoston Scientific: Automatic Gain Control（AGC）\nMicroPort CRM: AutoSensitivityControl",
+   "ecg": "T波を二重に感知すると、マーカー上は自己心拍の2倍のレートが記録される。体表心電図のレートと本体が記録したレートが合わないのが手がかり。",
+   "pitfall": "感度を鋭くしすぎるとT波オーバーセンシングや筋電位の誤感知が起こり、ペーシング抑制や不適切作動につながる。逆に鈍くしすぎると細動波のアンダーセンシングを招く。どちらに振っても危険側があるため、設定変更後は必ず感知の確認を行う。"
   },
   {
    "id": "MDT-SINUS-PREFERENCE",
@@ -437,7 +490,9 @@
    "how": "センサ指示レートより自己洞レートがやや遅いとき、ペーシングレートを一時的に下げて自己洞調律の出現を促す。心房ペーシングの割合を減らす方向に働く。",
    "params": "Sinus Preference: On／Off；検索間隔；探索幅",
    "models": "Azure XT・Cobalt XT 世代",
-   "equiv": "Abbott: AF Suppression™\nBIOTRONIK: Overdrive Prevention Pacing\nBoston Scientific: AP Scan™／Atrial Preference Pacing（APP）／ProACt\nMicroPort CRM: Atrial Overdrive"
+   "equiv": "Abbott: AF Suppression™\nBIOTRONIK: Overdrive Prevention Pacing\nBoston Scientific: AP Scan™／Atrial Preference Pacing（APP）／ProACt\nMicroPort CRM: Atrial Overdrive",
+   "ecg": "自己洞調律が出やすいようにレートが一時的に下がる。",
+   "pitfall": "レートを下げる方向に働くため、変時性不全のある症例では症状に注意する。"
   },
   {
    "id": "MDT-STABILITY",
@@ -450,7 +505,9 @@
    "how": "直近のR-R間隔の変動幅を評価し、ばらつきが大きければ伝導された心房細動として治療を保留する。PR Logicの判定要素としても働く。",
    "params": "Stability: On／Off；判定値（ms）",
    "models": "Cobalt XT／Evera 世代のICD／Cobalt XT HF／Claria／Percepta 世代のCRT",
-   "equiv": "Abbott: Interval Stability\nBIOTRONIK: Stability\nBoston Scientific: —\nMicroPort CRM: —"
+   "equiv": "Abbott: Interval Stability\nBIOTRONIK: Stability\nBoston Scientific: —\nMicroPort CRM: —",
+   "ecg": "頻拍中のR-R間隔の変動幅が記録される。ばらつきが大きいと伝導された心房細動として扱われる。",
+   "pitfall": "心房細動でもR-R間隔が安定していると心室頻拍と誤判定する。逆に多形性心室頻拍のようにR-Rが不安定な心室性不整脈では、治療が保留される危険がある。"
   },
   {
    "id": "MDT-T-WAVE-DISCRIMINATION",
@@ -463,7 +520,9 @@
    "how": "感知した信号の周波数成分を評価してR波とT波を区別し、T波と判定した信号は頻拍の計数から除外する。",
    "params": "T-wave Discrimination: On／Off",
    "models": "Cobalt XT／Evera 世代のICD／Cobalt XT HF／Claria／Percepta 世代のCRT",
-   "equiv": "Abbott: 低周波減衰フィルター（Low Frequency Attenuation）\nBIOTRONIK: High Pass Filter\nBoston Scientific: SMART Pass\nMicroPort CRM: —"
+   "equiv": "Abbott: 低周波減衰フィルター（Low Frequency Attenuation）\nBIOTRONIK: High Pass Filter\nBoston Scientific: SMART Pass\nMicroPort CRM: —",
+   "ecg": "T波を二重に感知すると、マーカー上は自己心拍の2倍のレートが記録される。体表心電図のレートと本体が記録したレートが合わないのが手がかり。",
+   "pitfall": "T波識別を有効にしても、振幅の大きなT波や心室細動時の低振幅の波形では判定が難しい。"
   },
   {
    "id": "MDT-THERAPYGUIDE",
@@ -477,7 +536,8 @@
    "params": "患者プロファイルの選択；推奨値の適用",
    "models": "Azure XT・Cobalt XT 世代",
    "equiv": "Abbott: —\nBIOTRONIK: —\nBoston Scientific: —\nMicroPort CRM: —",
-   "caution": "あくまで推奨であり、最終的な設定は個々の患者に合わせて判断する。"
+   "caution": "あくまで推奨であり、最終的な設定は個々の患者に合わせて判断する。",
+   "pitfall": "推奨設定の提示であり、最終的な設定は個々の患者に合わせて判断する。"
   },
   {
    "id": "MDT-TRUAFTM",
@@ -490,7 +550,8 @@
    "how": "心房イベントの間隔だけでなく心室応答の不規則性も併せて評価し、ファーフィールドR波などによる過剰検出を減らして心房細動の記録精度を高める。",
    "params": "TruAF: On／Off",
    "models": "Azure XT・Cobalt XT 世代",
-   "equiv": "Abbott: —\nBIOTRONIK: —\nBoston Scientific: —\nMicroPort CRM: —"
+   "equiv": "Abbott: —\nBIOTRONIK: —\nBoston Scientific: —\nMicroPort CRM: —",
+   "pitfall": "心房イベントの検出精度を高める機能だが、心房波高が低い症例では限界がある。"
   },
   {
    "id": "MDT-VECTOREXPRESSTM",
@@ -516,7 +577,9 @@
    "how": "右室・左室それぞれで定期的に閾値を測定し、安全域を加えた出力へ自動調整する。RVCM／LVCMを含む総称として用いられる。",
    "params": "VCM: Adaptive／Monitor／Off；最小補正出力；安全域倍率",
    "models": "Azure XT・Cobalt XT 世代",
-   "equiv": "Abbott: RVCap™ Confirm／Ventricular AutoCapture™\nBIOTRONIK: Ventricular Capture Control（VCC）\nBoston Scientific: PaceSafe™ RV Automatic Capture／PaceSafe™ RV Automatic Threshold／Ventricular Automatic Capture\nMicroPort CRM: RV Auto-threshold／Ventricular Auto-threshold"
+   "equiv": "Abbott: RVCap™ Confirm／Ventricular AutoCapture™\nBIOTRONIK: Ventricular Capture Control（VCC）\nBoston Scientific: PaceSafe™ RV Automatic Capture／PaceSafe™ RV Automatic Threshold／Ventricular Automatic Capture\nMicroPort CRM: RV Auto-threshold／Ventricular Auto-threshold",
+   "ecg": "閾値測定の最中だけ、出力が段階的に下がって捕捉が失われる拍が現れ、その直後に高出力のバックアップ刺激が入る。1拍のなかにスパイクが2本並んで見える。",
+   "pitfall": "融合波や偽融合があると捕捉ありと誤判定して出力を下げすぎることがある。誘発反応が小さい症例では測定そのものが成立せず、安全側の固定出力に戻る。テスト中の非捕捉を不具合と取り違えないよう、記録の時刻とテスト周期を照合する。"
   },
   {
    "id": "MDT-VENTRICULAR-RATE-STABILIZATION",
@@ -529,7 +592,9 @@
    "how": "心室期外収縮を検出すると、その後のペーシング間隔をやや短めに設定し、以後は徐々に元のレートへ戻す。長短のR-Rが交互に現れるのを防ぐ。",
    "params": "VRS: On／Off；最大介入レート",
    "models": "Azure XT・Cobalt XT 世代",
-   "equiv": "Abbott: —\nBIOTRONIK: —\nBoston Scientific: —\nMicroPort CRM: Acceleration on PAC／Acceleration on PVC／Atrial Pacing on PVC／PAC Pause Suppression／PVC Pause Suppression／Post Extrasystolic Pause Suppression"
+   "equiv": "Abbott: —\nBIOTRONIK: —\nBoston Scientific: —\nMicroPort CRM: Acceleration on PAC／Acceleration on PVC／Atrial Pacing on PVC／PAC Pause Suppression／PVC Pause Suppression／Post Extrasystolic Pause Suppression",
+   "ecg": "期外収縮の直後の代償性ポーズが短くなり、以後は徐々に元のレートへ戻る。長いR-Rと短いR-Rが交互に現れる所見が減る。",
+   "pitfall": "ペーシング率が上がるため電池消耗が増える。期外収縮そのものを減らす機能ではない。"
   },
   {
    "id": "MDT-VENTRICULAR-SENSE-RESPONSE",
@@ -542,7 +607,9 @@
    "how": "心室センシングを引き金に両室刺激をトリガーし、期外収縮や自己伝導の拍でも再同期を試みる。両室ペーシングの脱落を減らす。",
    "params": "V Sense Response: On／Off；トリガ上限レート",
    "models": "Cobalt XT HF／Claria／Percepta 世代のCRT",
-   "equiv": "Abbott: Triggering（Ventricular Sense Response）\nBIOTRONIK: LV Triggering\nBoston Scientific: Biventricular Trigger\nMicroPort CRM: —"
+   "equiv": "Abbott: Triggering（Ventricular Sense Response）\nBIOTRONIK: LV Triggering\nBoston Scientific: Biventricular Trigger\nMicroPort CRM: —",
+   "ecg": "自己のQRSを感知した直後に心室スパイクが入り、QRSの立ち上がり付近にスパイクが重なって見える。心室期外収縮の直後にも同じ所見が出る。",
+   "pitfall": "見かけの両室ペーシング率は上がるが、自己興奮の直後の刺激では実効的な再同期が得られていないことがある。刺激回数が増えるため電池消耗も大きくなる。EffectivCRTのような実効率の指標と併せて評価する。"
   },
   {
    "id": "MDT-WAVELET",
@@ -556,7 +623,9 @@
    "params": "Wavelet: On／Off；マッチ閾値（％）；テンプレートの取得",
    "models": "Cobalt XT／Evera 世代のICD／Cobalt XT HF／Claria／Percepta 世代のCRT",
    "equiv": "Abbott: Far Field MD™ Morphology／Morphology\nBIOTRONIK: MorphMatch\nBoston Scientific: INSIGHT\nMicroPort CRM: —",
-   "caution": "感度設定が不適切だと波形がクリップされ、マッチ率が下がって不適切作動につながる。"
+   "caution": "感度設定が不適切だと波形がクリップされ、マッチ率が下がって不適切作動につながる。",
+   "ecg": "洞調律時に取得したテンプレートと、頻拍時の波形の一致率が記録に残る。一致率が高ければ上室性、低ければ心室性として扱われる。",
+   "pitfall": "感度設定が不適切だと波形がクリップされて一致率が下がり、上室頻拍を心室頻拍と誤判定して不適切作動につながる。脚ブロックの合併、体位変化、リードの微小な移動でもテンプレートが合わなくなる。ペーシング調律ではテンプレートが使えない。定期的にテンプレートを取り直す。"
   },
   {
    "id": "ABT-ACAPTM-CONFIRM",
@@ -569,7 +638,9 @@
    "how": "設定間隔ごとに心房閾値を検索し、捕捉が得られる最小出力に安全域を加えた値へ出力を自動調整する。捕捉が確認できない拍にはバックアップ刺激を出す。",
    "params": "ACap Confirm: On／Monitor／Off；Backup Pulse Config.: Bipolar；Search Interval: 8h／24h",
    "models": "Assurity MRI・Gallant・Gallant HF 世代",
-   "equiv": "Medtronic: Atrial Capture Management™（ACM）\nBIOTRONIK: Atrial Capture Control（ACC）\nBoston Scientific: PaceSafe™ RA Automatic Threshold\nMicroPort CRM: Atrial Auto-threshold"
+   "equiv": "Medtronic: Atrial Capture Management™（ACM）\nBIOTRONIK: Atrial Capture Control（ACC）\nBoston Scientific: PaceSafe™ RA Automatic Threshold\nMicroPort CRM: Atrial Auto-threshold",
+   "ecg": "閾値測定の最中だけ、出力が段階的に下がって捕捉が失われる拍が現れ、その直後に高出力のバックアップ刺激が入る。1拍のなかにスパイクが2本並んで見える。",
+   "pitfall": "融合波や偽融合があると捕捉ありと誤判定して出力を下げすぎることがある。誘発反応が小さい症例では測定そのものが成立せず、安全側の固定出力に戻る。テスト中の非捕捉を不具合と取り違えないよう、記録の時刻とテスト周期を照合する。"
   },
   {
    "id": "ABT-AF-SUPPRESSIONTM",
@@ -582,7 +653,9 @@
    "how": "自己P波を2拍連続で感知すると心房刺激レートをわずかに上げ、設定拍数のあいだオーバードライブを続けたのちレートを下げて自己調律の出現を確認する。これを繰り返す。",
    "params": "AF Suppression: On／Off；オーバードライブ拍数；最大レート",
    "models": "Assurity MRI・Gallant・Gallant HF 世代",
-   "equiv": "Medtronic: Atrial Preference Pacing（APP）／Post Mode Switch Overdrive Pacing（PMOP）／Sinus Preference\nBIOTRONIK: Overdrive Prevention Pacing\nBoston Scientific: AP Scan™／Atrial Preference Pacing（APP）／ProACt\nMicroPort CRM: Atrial Overdrive"
+   "equiv": "Medtronic: Atrial Preference Pacing（APP）／Post Mode Switch Overdrive Pacing（PMOP）／Sinus Preference\nBIOTRONIK: Overdrive Prevention Pacing\nBoston Scientific: AP Scan™／Atrial Preference Pacing（APP）／ProACt\nMicroPort CRM: Atrial Overdrive",
+   "ecg": "心房ペーシング率がほぼ100％になり、自己P波がほとんど見えなくなる。心拍数は自己の洞レートよりわずかに速い状態で推移する。",
+   "pitfall": "心房ペーシングが増えるため電池消耗が大きくなる。心房細動の発症を減らす効果は臨床試験で一貫していないため、効果を過大に見積もらない。"
   },
   {
    "id": "ABT-ATP-PRIOR-DURING-CHARGING",
@@ -595,7 +668,9 @@
    "how": "VFゾーンで検出した頻拍に対し、充電を始める前（prior）または充電と並行して（during）ATPを1シーケンス行う。停止すれば充電を中止しショックを出さない。",
    "params": "ATP prior to charging: On／Off；ATP while charging: On／Off",
    "models": "Gallant／Entrant 世代のICD／Gallant HF／Quadra Assura MP 世代のCRT-D",
-   "equiv": "Medtronic: ATP Before Charging（EV-ICDはFVT設定で可）\nBIOTRONIK: ATP one shot／Early ATP one shot（Stableと判定された場合にATP後に充電）\nBoston Scientific: Quick Convert ATP™\nMicroPort CRM: ATP in fast VT/VF zone"
+   "equiv": "Medtronic: ATP Before Charging（EV-ICDはFVT設定で可）\nBIOTRONIK: ATP one shot／Early ATP one shot（Stableと判定された場合にATP後に充電）\nBoston Scientific: Quick Convert ATP™\nMicroPort CRM: ATP in fast VT/VF zone",
+   "ecg": "頻拍中に、頻拍周期より短い間隔のペーシングスパイクが連続して入る。停止すれば直後から自己調律またはペーシング調律に戻る。",
+   "pitfall": "ATPにより心室頻拍が加速し、より速い頻拍や心室細動へ移行することがある。低左心機能例や非常に速い頻拍では、シーケンス数を増やしすぎない。"
   },
   {
    "id": "ABT-ADVANCED-HYSTERESIS",
@@ -609,7 +684,9 @@
    "params": "Advanced Hysteresis: On／Off；介入レート；介入時間",
    "models": "Assurity MRI／Endurity 世代のペースメーカ",
    "equiv": "Medtronic: Rate Drop Response（RDR）\nBIOTRONIK: Rate Fading\nBoston Scientific: Sudden Brady Response（SBR）\nMicroPort CRM: Acceleration（レートドロップ応答）",
-   "caution": "心抑制型の血管迷走神経性失神が対象で、血管抑制型には効果が乏しい。"
+   "caution": "心抑制型の血管迷走神経性失神が対象で、血管抑制型には効果が乏しい。",
+   "ecg": "自己レートの急な低下の直後から、下限レートより明らかに高いレートでのペーシングが一定時間続き、その後は段階的に下限レートへ戻る。発作の前後で心拍数が階段状に変化する。",
+   "pitfall": "心抑制型の血管迷走神経性失神が対象で、血管抑制型（血圧低下が主体）には効果が乏しい。介入レートを高くしすぎると動悸や不要な高頻度ペーシングにつながる。"
   },
   {
    "id": "ABT-AUTO-LEAD-POLARITY-DETECTION",
@@ -622,7 +699,8 @@
    "how": "植込み時やリセット後に、単極リードか双極リードかを自動的に判別して設定する。双極設定で単極リードが接続された場合の出力不全を防ぐ。",
    "params": "Lead Polarity: Auto／Bipolar／Unipolar",
    "models": "Assurity MRI・Gallant・Gallant HF 世代",
-   "equiv": "Medtronic: —\nBIOTRONIK: —\nBoston Scientific: Automatic Lead Recognition／Lead Safety Switch\nMicroPort CRM: Lead Polarity Switch"
+   "equiv": "Medtronic: —\nBIOTRONIK: —\nBoston Scientific: Automatic Lead Recognition／Lead Safety Switch\nMicroPort CRM: Lead Polarity Switch",
+   "pitfall": "単極リードに双極設定が残っていると出力が出ないため、判別が働かない条件では手動で極性を確認する。"
   },
   {
    "id": "ABT-AUTO-MODE-SWITCH",
@@ -635,7 +713,9 @@
    "how": "心房インターバルの移動平均（FARI）で心房レートを評価し、基準を超えると非追従モードへ切り替える。移動平均のため期外収縮に過敏になりにくい。",
    "params": "AMS: On／Off；AMSレート；AMSベースレート",
    "models": "Assurity MRI・Gallant 世代",
-   "equiv": "Medtronic: Mode Switch（AT/AFエビデンスカウント）\nBIOTRONIK: Mode Switching\nBoston Scientific: ATR Mode Switch\nMicroPort CRM: Mode Switching"
+   "equiv": "Medtronic: Mode Switch（AT/AFエビデンスカウント）\nBIOTRONIK: Mode Switching\nBoston Scientific: ATR Mode Switch\nMicroPort CRM: Mode Switching",
+   "ecg": "心房頻拍の間は心室の追従が止まり、心室レートが下限レートやセンサ指示レートまで落ちる。心房の速い波形と、それに追従しない規則的な心室ペーシングが同時に見える。復帰時は追従が戻る。",
+   "pitfall": "ファーフィールドR波を心房で拾うと、洞調律でも不適切にモードスイッチが起こり心室レートが落ちる。逆に心房波高が低くアンダーセンシングになると、心房頻拍でもモードスイッチせず速い心室追従が続く。心房不応期（PVAB）と心房感度の設定を確認する。"
   },
   {
    "id": "ABT-AUTO-VECTSELECT-QUARTETTM-TEST",
@@ -661,7 +741,9 @@
    "how": "両室ペーシング時の捕捉を誘発反応で確認し、右室・左室それぞれの出力に安全域を確保する。",
    "params": "BiVCap Confirm: On／Monitor／Off",
    "models": "Gallant HF／Quadra Assura MP 世代のCRT-D",
-   "equiv": "Medtronic: LV Capture Management™（LVCM）\nBIOTRONIK: LV Capture Control（LVCC）\nBoston Scientific: PaceSafe™ LV Automatic Threshold\nMicroPort CRM: LV Auto-threshold"
+   "equiv": "Medtronic: LV Capture Management™（LVCM）\nBIOTRONIK: LV Capture Control（LVCC）\nBoston Scientific: PaceSafe™ LV Automatic Threshold\nMicroPort CRM: LV Auto-threshold",
+   "ecg": "閾値測定の最中だけ、出力が段階的に下がって捕捉が失われる拍が現れ、その直後に高出力のバックアップ刺激が入る。1拍のなかにスパイクが2本並んで見える。",
+   "pitfall": "融合波や偽融合があると捕捉ありと誤判定して出力を下げすぎることがある。誘発反応が小さい症例では測定そのものが成立せず、安全側の固定出力に戻る。テスト中の非捕捉を不具合と取り違えないよう、記録の時刻とテスト周期を照合する。"
   },
   {
    "id": "ABT-CHAMBER-ONSET",
@@ -675,7 +757,8 @@
    "params": "Chamber Onset: On／Off",
    "models": "Gallant／Entrant 世代のICD／Gallant HF／Quadra Assura MP 世代のCRT-D",
    "equiv": "Medtronic: —\nBIOTRONIK: —\nBoston Scientific: —\nMicroPort CRM: —",
-   "caution": "心房リードの情報を用いるため、シングルチャンバICDでは使用できない。"
+   "caution": "心房リードの情報を用いるため、シングルチャンバICDでは使用できない。",
+   "pitfall": "心房リードの情報を使うため、シングルチャンバICDでは使用できない。"
   },
   {
    "id": "ABT-CORVUETM",
@@ -689,7 +772,8 @@
    "params": "CorVue: On／Off；アラート閾値",
    "models": "Gallant／Entrant 世代のICD／Gallant HF／Quadra Assura MP 世代のCRT-D",
    "equiv": "Medtronic: OptiVol™ 2.0 Fluid Status Monitoring\nBIOTRONIK: Thoracic Impedance（TI）\nBoston Scientific: Thoracic impedance（TI）／Heart Rate Variability\nMicroPort CRM: —",
-   "caution": "胸水・肺炎・ポケットの状態など心不全以外の要因でも変化するため、単独では判断しない。"
+   "caution": "胸水・肺炎・ポケットの状態など心不全以外の要因でも変化するため、単独では判断しない。",
+   "pitfall": "心不全以外の要因でも胸郭インピーダンスは変化する。単独で判断しない。"
   },
   {
    "id": "ABT-DEFT-RESPONSETM",
@@ -703,7 +787,8 @@
    "params": "波形調整: 手動設定；ショック極性: Normal／Reverse",
    "models": "Gallant／Entrant 世代のICD／Gallant HF／Quadra Assura MP 世代のCRT-D",
    "equiv": "Medtronic: ショック極性（Normal／Reverse／Alternating）\nBIOTRONIK: Biphasic 2（Phase 2の調整）\nBoston Scientific: —\nMicroPort CRM: Polarity alternation on Max shock",
-   "caution": "設定変更で除細動閾値が変わりうるため、必要に応じて再評価する。"
+   "caution": "設定変更で除細動閾値が変わりうるため、必要に応じて再評価する。",
+   "pitfall": "波形や極性を変更すると除細動閾値が変わりうる。変更後は必要に応じて再評価する。"
   },
   {
    "id": "ABT-DYNAMICTXTM-OVER-CURRENT-DETECTION",
@@ -716,7 +801,8 @@
    "how": "ショック放電時に過大な電流（低インピーダンス＝絶縁不良の疑い）を検出すると、その経路での放電を中止し、別のショック経路へ自動的に切り替える。",
    "params": "DynamicTx: On／Off",
    "models": "Gallant／Entrant 世代のICD／Gallant HF／Quadra Assura MP 世代のCRT-D",
-   "equiv": "Medtronic: RV Lead Noise Discrimination\nBIOTRONIK: —\nBoston Scientific: —\nMicroPort CRM: —"
+   "equiv": "Medtronic: RV Lead Noise Discrimination\nBIOTRONIK: —\nBoston Scientific: —\nMicroPort CRM: —",
+   "pitfall": "過電流の検出は絶縁不良を示唆する。経路を切り替えて放電できても、リードの評価と対応は別途必要。"
   },
   {
    "id": "ABT-FAR-FIELD-MDTM-MORPHOLOGY",
@@ -729,7 +815,9 @@
    "how": "本体（缶）とコイルの間で得られる遠隔電位（far-field）の波形を洞調律テンプレートと比較する。近接電極の波形より体表面心電図に近い形が得られる。",
    "params": "Far Field MD: On／Off；マッチ率閾値",
    "models": "Gallant／Entrant 世代のICD／Gallant HF／Quadra Assura MP 世代のCRT-D",
-   "equiv": "Medtronic: Wavelet／Feature Match\nBIOTRONIK: MorphMatch\nBoston Scientific: INSIGHT\nMicroPort CRM: —"
+   "equiv": "Medtronic: Wavelet／Feature Match\nBIOTRONIK: MorphMatch\nBoston Scientific: INSIGHT\nMicroPort CRM: —",
+   "ecg": "洞調律時に取得したテンプレートと、頻拍時の波形の一致率が記録に残る。一致率が高ければ上室性、低ければ心室性として扱われる。",
+   "pitfall": "感度設定が不適切だと波形がクリップされて一致率が下がり、上室頻拍を心室頻拍と誤判定して不適切作動につながる。脚ブロックの合併、体位変化、リードの微小な移動でもテンプレートが合わなくなる。ペーシング調律ではテンプレートが使えない。定期的にテンプレートを取り直す。"
   },
   {
    "id": "ABT-INTERVAL-STABILITY",
@@ -743,7 +831,9 @@
    "params": "Interval Stability: On／Off；判定値（ms）",
    "models": "Gallant／Entrant 世代のICD／Gallant HF／Quadra Assura MP 世代のCRT-D",
    "equiv": "Medtronic: Stability\nBIOTRONIK: Stability\nBoston Scientific: —\nMicroPort CRM: —",
-   "caution": "心房細動でもR-Rが安定すると鑑別できず、不適切作動につながることがある。"
+   "caution": "心房細動でもR-Rが安定すると鑑別できず、不適切作動につながることがある。",
+   "ecg": "頻拍中のR-R間隔の変動幅が記録される。ばらつきが大きいと伝導された心房細動として扱われる。",
+   "pitfall": "心房細動でもR-R間隔が安定していると心室頻拍と誤判定する。逆に多形性心室頻拍のようにR-Rが不安定な心室性不整脈では、治療が保留される危険がある。"
   },
   {
    "id": "ABT-LVCAPTM-CONFIRM",
@@ -756,7 +846,9 @@
    "how": "左室の刺激閾値を定期的に測定し、安全域を加えた出力へ自動調整する。左室閾値の上昇による両室ペーシング欠落の早期発見にも役立つ。",
    "params": "LVCap Confirm: On／Monitor／Off",
    "models": "Gallant HF／Quadra Assura MP 世代のCRT-D",
-   "equiv": "Medtronic: LV Capture Management™（LVCM）\nBIOTRONIK: LV Capture Control（LVCC）\nBoston Scientific: PaceSafe™ LV Automatic Threshold\nMicroPort CRM: LV Auto-threshold"
+   "equiv": "Medtronic: LV Capture Management™（LVCM）\nBIOTRONIK: LV Capture Control（LVCC）\nBoston Scientific: PaceSafe™ LV Automatic Threshold\nMicroPort CRM: LV Auto-threshold",
+   "ecg": "閾値測定の最中だけ、出力が段階的に下がって捕捉が失われる拍が現れ、その直後に高出力のバックアップ刺激が入る。1拍のなかにスパイクが2本並んで見える。",
+   "pitfall": "融合波や偽融合があると捕捉ありと誤判定して出力を下げすぎることがある。誘発反応が小さい症例では測定そのものが成立せず、安全側の固定出力に戻る。テスト中の非捕捉を不具合と取り違えないよう、記録の時刻とテスト周期を照合する。"
   },
   {
    "id": "ABT-LEAD-MONITORING",
@@ -769,7 +861,9 @@
    "how": "ペーシングインピーダンス、ショックインピーダンス、感知波高の推移を定期測定し、設定範囲を外れるとアラートを出す。",
    "params": "Lead Monitoring: On／Off；インピーダンス上限・下限",
    "models": "Assurity MRI・Gallant・Gallant HF 世代",
-   "equiv": "Medtronic: Lead Monitor\nBIOTRONIK: —\nBoston Scientific: —\nMicroPort CRM: —"
+   "equiv": "Medtronic: Lead Monitor\nBIOTRONIK: —\nBoston Scientific: —\nMicroPort CRM: —",
+   "ecg": "非生理的に短い間隔の信号が連続して記録される。近接電極（tip-ring）にだけ現れて遠隔電極（coil-can）には現れないのが、リード由来の雑音の典型像。同時にインピーダンスの急な上昇や短周期センシングの増加を伴うことが多い。",
+   "pitfall": "インピーダンスが基準内でも断線が進行していることがあるため、短周期センシングの記録を併せて確認する。"
   },
   {
    "id": "ABT-MORPHOLOGY",
@@ -783,7 +877,9 @@
    "params": "Morphology: On／Off；マッチ率閾値（％）；必要拍数；テンプレート取得",
    "models": "Gallant／Entrant 世代のICD／Gallant HF／Quadra Assura MP 世代のCRT-D",
    "equiv": "Medtronic: Wavelet／Feature Match\nBIOTRONIK: MorphMatch\nBoston Scientific: INSIGHT\nMicroPort CRM: —",
-   "caution": "感度設定が不適切だと波形がクリップされ、マッチ率が下がって不適切作動につながる。"
+   "caution": "感度設定が不適切だと波形がクリップされ、マッチ率が下がって不適切作動につながる。",
+   "ecg": "洞調律時に取得したテンプレートと、頻拍時の波形の一致率が記録に残る。一致率が高ければ上室性、低ければ心室性として扱われる。",
+   "pitfall": "感度設定が不適切だと波形がクリップされて一致率が下がり、上室頻拍を心室頻拍と誤判定して不適切作動につながる。脚ブロックの合併、体位変化、リードの微小な移動でもテンプレートが合わなくなる。ペーシング調律ではテンプレートが使えない。定期的にテンプレートを取り直す。"
   },
   {
    "id": "ABT-MULTIPOINTTM-PACING",
@@ -797,7 +893,9 @@
    "params": "MPP: On／Off；LV1-LV2ディレイ；LV2-RVディレイ",
    "models": "Gallant HF／Quadra Assura MP 世代のCRT-D",
    "equiv": "Medtronic: Multiple Point Pacing（MPP）\nBIOTRONIK: Multipole Pacing（MPP）\nBoston Scientific: LV Multisite Pacing\nMicroPort CRM: LV Multipoint Pacing",
-   "caution": "刺激回数が増えるため電池消耗が大きくなる。"
+   "caution": "刺激回数が増えるため電池消耗が大きくなる。",
+   "ecg": "1拍のなかに心室のスパイクが3本（左室2点＋右室）並ぶ。QRSの形が両室ペーシング単独のときと変わる。",
+   "pitfall": "刺激回数が増えるぶん電池消耗が大きい。左室の刺激部位が増えることで横隔神経刺激が出ることがある。"
   },
   {
    "id": "ABT-QUICKOPTTM-OPTIMIZATION",
@@ -823,7 +921,9 @@
    "how": "右室の刺激閾値を定期的に検索し、安全域を加えた出力へ自動調整する。捕捉が確認できない拍にはバックアップ刺激を出す。",
    "params": "RVCap Confirm: On／Monitor／Off；Search Interval",
    "models": "Assurity MRI・Gallant・Gallant HF 世代",
-   "equiv": "Medtronic: RV Capture Management™（RVCM）／Ventricular Capture Management™（VCM）\nBIOTRONIK: Ventricular Capture Control（VCC）\nBoston Scientific: PaceSafe™ RV Automatic Capture／PaceSafe™ RV Automatic Threshold／Ventricular Automatic Capture\nMicroPort CRM: RV Auto-threshold／Ventricular Auto-threshold"
+   "equiv": "Medtronic: RV Capture Management™（RVCM）／Ventricular Capture Management™（VCM）\nBIOTRONIK: Ventricular Capture Control（VCC）\nBoston Scientific: PaceSafe™ RV Automatic Capture／PaceSafe™ RV Automatic Threshold／Ventricular Automatic Capture\nMicroPort CRM: RV Auto-threshold／Ventricular Auto-threshold",
+   "ecg": "閾値測定の最中だけ、出力が段階的に下がって捕捉が失われる拍が現れ、その直後に高出力のバックアップ刺激が入る。1拍のなかにスパイクが2本並んで見える。",
+   "pitfall": "融合波や偽融合があると捕捉ありと誤判定して出力を下げすぎることがある。誘発反応が小さい症例では測定そのものが成立せず、安全側の固定出力に戻る。テスト中の非捕捉を不具合と取り違えないよう、記録の時刻とテスト周期を照合する。"
   },
   {
    "id": "ABT-RATE-BRANCH",
@@ -836,7 +936,8 @@
    "how": "V>A（心室が速い）はVTとして治療、V=AとV<Aではモルフォロジー・Interval Stability・Sudden Onsetなどの識別を適用する、という分岐構造をとる。",
    "params": "Rate Branch: On／Off",
    "models": "Gallant／Entrant 世代のICD／Gallant HF／Quadra Assura MP 世代のCRT-D",
-   "equiv": "Medtronic: PR Logic™\nBIOTRONIK: SMART® Detection\nBoston Scientific: Rhythm ID™\nMicroPort CRM: PARAD™+"
+   "equiv": "Medtronic: PR Logic™\nBIOTRONIK: SMART® Detection\nBoston Scientific: Rhythm ID™\nMicroPort CRM: PARAD™+",
+   "pitfall": "V=A の帯域では判定が難しく、1:1房室伝導を伴う上室頻拍と心室頻拍の区別が付きにくい。"
   },
   {
    "id": "ABT-SECURESENSETM-RV-LEAD-NOISE",
@@ -849,7 +950,9 @@
    "how": "近接電極（tip-ring）と遠隔電極（coil-can）の信号を比較し、片方にしか現れない高周波信号を雑音と判定して治療を保留し、アラートを出す。",
    "params": "SecureSense: Monitor／Passive／On；ノイズアラート",
    "models": "Gallant／Entrant 世代のICD／Gallant HF／Quadra Assura MP 世代のCRT-D",
-   "equiv": "Medtronic: RV Lead Noise Discrimination\nBIOTRONIK: —\nBoston Scientific: —\nMicroPort CRM: —"
+   "equiv": "Medtronic: RV Lead Noise Discrimination\nBIOTRONIK: —\nBoston Scientific: —\nMicroPort CRM: —",
+   "ecg": "非生理的に短い間隔の信号が連続して記録される。近接電極（tip-ring）にだけ現れて遠隔電極（coil-can）には現れないのが、リード由来の雑音の典型像。同時にインピーダンスの急な上昇や短周期センシングの増加を伴うことが多い。",
+   "pitfall": "雑音と判定した信号では治療が保留されるため、真の心室細動を雑音と誤判定する危険が原理的に残る。アラートが出たら、リードの断線・被覆損傷を画像とインピーダンス推移で確認する。"
   },
   {
    "id": "ABT-SENSEABILITYTM",
@@ -863,7 +966,9 @@
    "params": "Minimum threshold；Threshold start（％）；Decay delay；Initial Noise Interval",
    "models": "Gallant／Entrant 世代のICD／Gallant HF／Quadra Assura MP 世代のCRT-D",
    "equiv": "Medtronic: Sensing Assurance\nBIOTRONIK: Automatic Sensitivity Control\nBoston Scientific: Automatic Gain Control（AGC）\nMicroPort CRM: AutoSensitivityControl",
-   "caution": "設定を鋭くしすぎるとT波オーバーセンシング、鈍くしすぎると細動波のアンダーセンシングにつながる。"
+   "caution": "設定を鋭くしすぎるとT波オーバーセンシング、鈍くしすぎると細動波のアンダーセンシングにつながる。",
+   "ecg": "T波を二重に感知すると、マーカー上は自己心拍の2倍のレートが記録される。体表心電図のレートと本体が記録したレートが合わないのが手がかり。",
+   "pitfall": "感度を鋭くしすぎるとT波オーバーセンシングや筋電位の誤感知が起こり、ペーシング抑制や不適切作動につながる。逆に鈍くしすぎると細動波のアンダーセンシングを招く。どちらに振っても危険側があるため、設定変更後は必ず感知の確認を行う。"
   },
   {
    "id": "ABT-SUDDEN-ONSET",
@@ -877,7 +982,9 @@
    "params": "Sudden Onset: On／Off；Onset率（％）",
    "models": "Gallant／Entrant 世代のICD／Gallant HF／Quadra Assura MP 世代のCRT-D",
    "equiv": "Medtronic: Onset\nBIOTRONIK: Onset\nBoston Scientific: Onset/Stability\nMicroPort CRM: —",
-   "caution": "厳しくしすぎると、洞頻拍から移行した運動誘発性VTの治療を抑制してしまう。"
+   "caution": "厳しくしすぎると、洞頻拍から移行した運動誘発性VTの治療を抑制してしまう。",
+   "ecg": "頻拍開始時のR-R間隔が直前の平均からどれだけ急に短縮したかで判定される。",
+   "pitfall": "厳しく設定しすぎると、洞頻拍から連続して移行した運動誘発性の心室頻拍で治療が抑制される。運動中に発症するVTを持つ症例では慎重に設定する。"
   },
   {
    "id": "ABT-SYNCAVTM-CRT",
@@ -890,7 +997,9 @@
    "how": "設定周期ごとに自己PR間隔を測定し、そこから設定したオフセット（デルタ）分だけ短いAVディレイを自動的に用いる。自己の右室興奮と左室刺激を融合させて再同期を得る。",
    "params": "SyncAV: On／Off；SyncAVデルタ（ms）；測定間隔",
    "models": "Gallant HF／Quadra Assura MP 世代のCRT-D",
-   "equiv": "Medtronic: AdaptivCRT™／CardioSync™ Optimization\nBIOTRONIK: —\nBoston Scientific: SmartDelay™ Optimization／SmartCRT™\nMicroPort CRM: SonR™ CRT Optimization"
+   "equiv": "Medtronic: AdaptivCRT™／CardioSync™ Optimization\nBIOTRONIK: —\nBoston Scientific: SmartDelay™ Optimization／SmartCRT™\nMicroPort CRM: SonR™ CRT Optimization",
+   "ecg": "自己PR間隔の測定のため、周期的に心室ペーシングが1拍だけ脱落する。通常はAV間隔が拍ごとにわずかに変動しながら融合QRSが得られる。",
+   "pitfall": "測定のたびにペーシングが脱落するため、両室ペーシング率がわずかに下がる。自己房室伝導が延長・変動する症例では融合が不安定になる。"
   },
   {
    "id": "ABT-SYNCAVTM-PLUS-CRT",
@@ -903,7 +1012,9 @@
    "how": "SyncAVの動作に加え、自己PR間隔に対する調整量を％またはmsで指定できる。個々の伝導時間に合わせた融合ペーシングを狙う。",
    "params": "調整量: Δ%／Δms；測定間隔",
    "models": "Gallant HF／Quadra Assura MP 世代のCRT-D",
-   "equiv": "Medtronic: AdaptivCRT™／CardioSync™ Optimization\nBIOTRONIK: —\nBoston Scientific: SmartDelay™ Optimization／SmartCRT™\nMicroPort CRM: SonR™ CRT Optimization"
+   "equiv": "Medtronic: AdaptivCRT™／CardioSync™ Optimization\nBIOTRONIK: —\nBoston Scientific: SmartDelay™ Optimization／SmartCRT™\nMicroPort CRM: SonR™ CRT Optimization",
+   "ecg": "自己PR間隔に対して設定した割合または時間だけ短いAV間隔で刺激され、融合QRSになる。",
+   "pitfall": "自己房室伝導が変動すると融合の程度が変わる。定期的にQRS幅で効果を確認する。"
   },
   {
    "id": "ABT-TRIGGERING",
@@ -916,7 +1027,9 @@
    "how": "右室センシングを引き金に左室を刺激し、期外収縮や自己伝導の拍でも再同期を試みる。",
    "params": "Triggering: On／Off",
    "models": "Gallant HF・Quadra Assura MP 世代",
-   "equiv": "Medtronic: Ventricular Sense Response\nBIOTRONIK: LV Triggering\nBoston Scientific: Biventricular Trigger\nMicroPort CRM: —"
+   "equiv": "Medtronic: Ventricular Sense Response\nBIOTRONIK: LV Triggering\nBoston Scientific: Biventricular Trigger\nMicroPort CRM: —",
+   "ecg": "自己のQRSを感知した直後に心室スパイクが入り、QRSの立ち上がり付近にスパイクが重なって見える。心室期外収縮の直後にも同じ所見が出る。",
+   "pitfall": "見かけの両室ペーシング率は上がるが、自己興奮の直後の刺激では実効的な再同期が得られていないことがある。刺激回数が増えるため電池消耗も大きくなる。EffectivCRTのような実効率の指標と併せて評価する。"
   },
   {
    "id": "ABT-VF-THERAPY-ASSURANCE",
@@ -929,7 +1042,8 @@
    "how": "鑑別によって治療が保留された状態でも、VFゾーンの頻拍が続いている場合には識別を打ち切って治療へ進む安全機構。",
    "params": "VF Therapy Assurance: On／Off；作動までの時間",
    "models": "Gallant／Entrant 世代のICD／Gallant HF／Quadra Assura MP 世代のCRT-D",
-   "equiv": "Medtronic: Confirmation+\nBIOTRONIK: —\nBoston Scientific: —\nMicroPort CRM: —"
+   "equiv": "Medtronic: Confirmation+\nBIOTRONIK: —\nBoston Scientific: —\nMicroPort CRM: —",
+   "pitfall": "鑑別による保留を打ち切る安全機構であり、無効にすると保留が長引く危険がある。"
   },
   {
    "id": "ABT-VENTRICULAR-AUTOCAPTURETM",
@@ -943,7 +1057,9 @@
    "params": "AutoCapture: On／Monitor／Off；バックアップ出力；検索間隔",
    "models": "Assurity MRI・Gallant・Gallant HF 世代",
    "equiv": "Medtronic: RV Capture Management™（RVCM）／Ventricular Capture Management™（VCM）\nBIOTRONIK: Ventricular Capture Control（VCC）\nBoston Scientific: PaceSafe™ RV Automatic Capture／PaceSafe™ RV Automatic Threshold／Ventricular Automatic Capture\nMicroPort CRM: RV Auto-threshold／Ventricular Auto-threshold",
-   "caution": "誘発反応が小さい症例では動作せず、その場合は固定出力で安全域を確保する。"
+   "caution": "誘発反応が小さい症例では動作せず、その場合は固定出力で安全域を確保する。",
+   "ecg": "拍ごとに捕捉を確認するため、非捕捉と判定された拍では刺激の直後に高出力のバックアップ刺激が入り、スパイクが2本続けて見える。捕捉が続いている間は閾値直上の低出力で単発のスパイクになる。",
+   "pitfall": "誘発反応が小さい症例では動作せず固定出力に戻る。融合波が続くと捕捉の判定が乱れ、バックアップ刺激が頻発することがある。"
   },
   {
    "id": "ABT-VENTRICULAR-INTRINSIC-PREFERENCE",
@@ -957,7 +1073,9 @@
    "params": "VIP: On／Off；検索間隔；延長量（ms）；検索回数",
    "models": "Assurity MRI・Gallant・Gallant HF 世代",
    "equiv": "Medtronic: Search AV+（SAV+）\nBIOTRONIK: Intrinsic Rhythm Support（IRSplus）／Positive AV Hysteresis with Scan/Repetitive\nBoston Scientific: AV Search +\nMicroPort CRM: Dplus™",
-   "caution": "探索中はAV間隔が長くなり、房室同期が一時的に崩れる。"
+   "caution": "探索中はAV間隔が長くなり、房室同期が一時的に崩れる。",
+   "ecg": "設定間隔ごとにAV間隔が段階的に延長する。自己QRSが出れば延長を維持し、出なければ元のAV間隔に戻る。",
+   "pitfall": "探索中は一時的にAV間隔が大きく延長するため、房室同期が崩れて動悸や血圧低下を自覚することがある。CRT症例では両室ペーシングの脱落につながるため、原則として使用しない。"
   },
   {
    "id": "BIO-ATP-OPTIMIZATION",
@@ -970,7 +1088,8 @@
    "how": "過去のエピソードでATPが有効だったか無効だったかを記録し、次回のシーケンスの刺激数や連結期を自動的に調整する。",
    "params": "ATP Optimization: On／Off",
    "models": "Acticor 7／Ilivia Neo 7 世代のICD／Rivacor 7 HF-T／Ilivia Neo 7 HF-T 世代のCRT-D",
-   "equiv": "Medtronic: ChargeSaver™／Switchback™／Smart Mode／Intrinsic ATP™（iATP）\nAbbott: —\nBoston Scientific: —\nMicroPort CRM: Autoswitch ATP"
+   "equiv": "Medtronic: ChargeSaver™／Switchback™／Smart Mode／Intrinsic ATP™（iATP）\nAbbott: —\nBoston Scientific: —\nMicroPort CRM: Autoswitch ATP",
+   "pitfall": "過去の成績に基づく調整のため、頻拍の性質が変わると最適でなくなることがある。"
   },
   {
    "id": "BIO-ATP-ONE-SHOT",
@@ -983,7 +1102,9 @@
    "how": "VFゾーンでも、R-R間隔が安定していると判定された場合に限りATPを1シーケンス行ってから充電に入る。",
    "params": "ATP one shot: On／Off",
    "models": "Acticor 7・Rivacor 7 世代",
-   "equiv": "Medtronic: ATP Before Charging（EV-ICDはFVT設定で可）\nAbbott: ATP prior to charging（ATP prior/during charging）\nBoston Scientific: Quick Convert ATP™\nMicroPort CRM: ATP in fast VT/VF zone"
+   "equiv": "Medtronic: ATP Before Charging（EV-ICDはFVT設定で可）\nAbbott: ATP prior to charging（ATP prior/during charging）\nBoston Scientific: Quick Convert ATP™\nMicroPort CRM: ATP in fast VT/VF zone",
+   "ecg": "頻拍中に、頻拍周期より短い間隔のペーシングスパイクが連続して入る。停止すれば直後から自己調律またはペーシング調律に戻る。",
+   "pitfall": "ATPにより心室頻拍が加速し、より速い頻拍や心室細動へ移行することがある。低左心機能例や非常に速い頻拍では、シーケンス数を増やしすぎない。"
   },
   {
    "id": "BIO-ACTIVE-THRESHOLD-MONITORING",
@@ -1009,7 +1130,9 @@
    "how": "心房頻拍・心房粗動を検出すると、心房に対しBurst・Ramp・高頻度バーストを行って停止を図る。",
    "params": "刺激数；連結期（％）；シーケンス数",
    "models": "Acticor 7／Ilivia Neo 7 世代のICD／Rivacor 7 HF-T／Ilivia Neo 7 HF-T 世代のCRT-D",
-   "equiv": "Medtronic: Reactive ATP™（rATP）\nAbbott: —（非搭載）\nBoston Scientific: —（非搭載）\nMicroPort CRM: —"
+   "equiv": "Medtronic: Reactive ATP™（rATP）\nAbbott: —（非搭載）\nBoston Scientific: —（非搭載）\nMicroPort CRM: —",
+   "ecg": "心房頻拍の間に、心房へ連続したペーシングスパイクが入る。停止すれば洞調律または心房ペーシングに戻る。",
+   "pitfall": "心房ATPにより心房頻拍が心房細動へ移行することがある。心房粗動では停止率が高いが、細動には無効。"
   },
   {
    "id": "BIO-ATRIAL-CAPTURE-CONTROL",
@@ -1022,7 +1145,9 @@
    "how": "定期的に心房閾値を測定し、安全域を確保した出力へ自動的に設定する。測定結果はトレンドとして記録される。",
    "params": "ACC: Auto／ATM（Monitor）／Off；安全域",
    "models": "Amvia Sky・Acticor 7・Rivacor 7 世代",
-   "equiv": "Medtronic: Atrial Capture Management™（ACM）\nAbbott: ACap™ Confirm\nBoston Scientific: PaceSafe™ RA Automatic Threshold\nMicroPort CRM: Atrial Auto-threshold"
+   "equiv": "Medtronic: Atrial Capture Management™（ACM）\nAbbott: ACap™ Confirm\nBoston Scientific: PaceSafe™ RA Automatic Threshold\nMicroPort CRM: Atrial Auto-threshold",
+   "ecg": "閾値測定の最中だけ、出力が段階的に下がって捕捉が失われる拍が現れ、その直後に高出力のバックアップ刺激が入る。1拍のなかにスパイクが2本並んで見える。",
+   "pitfall": "融合波や偽融合があると捕捉ありと誤判定して出力を下げすぎることがある。誘発反応が小さい症例では測定そのものが成立せず、安全側の固定出力に戻る。テスト中の非捕捉を不具合と取り違えないよう、記録の時刻とテスト周期を照合する。"
   },
   {
    "id": "BIO-AUTO-LV-VECTOROPT",
@@ -1048,7 +1173,9 @@
    "how": "感知した波高に応じて感度を自動的に調整する。上限・下限の閾値、感度変化を保留するHold off期間、ペーシング後のブランキングを設定できる。",
    "params": "Sensitivity threshold；Upper & Lower threshold；Hold off periods；Blanking periods after pacing",
    "models": "Acticor 7／Ilivia Neo 7 世代のICD／Rivacor 7 HF-T／Ilivia Neo 7 HF-T 世代のCRT-D",
-   "equiv": "Medtronic: Sensing Assurance\nAbbott: SenseAbility™\nBoston Scientific: Automatic Gain Control（AGC）\nMicroPort CRM: AutoSensitivityControl"
+   "equiv": "Medtronic: Sensing Assurance\nAbbott: SenseAbility™\nBoston Scientific: Automatic Gain Control（AGC）\nMicroPort CRM: AutoSensitivityControl",
+   "ecg": "T波を二重に感知すると、マーカー上は自己心拍の2倍のレートが記録される。体表心電図のレートと本体が記録したレートが合わないのが手がかり。",
+   "pitfall": "感度を鋭くしすぎるとT波オーバーセンシングや筋電位の誤感知が起こり、ペーシング抑制や不適切作動につながる。逆に鈍くしすぎると細動波のアンダーセンシングを招く。どちらに振っても危険側があるため、設定変更後は必ず感知の確認を行う。"
   },
   {
    "id": "BIO-CLOSED-LOOP-STIMULATION",
@@ -1062,7 +1189,9 @@
    "params": "レートレスポンス: CLS／加速度センサ／CLS＋加速度；CLSレスポンス",
    "models": "Amvia Sky・Acticor 7・Rivacor 7 世代",
    "equiv": "Medtronic: 加速度センサ（ADLレート／運動レートの2ゾーン）\nAbbott: 加速度センサ（Accelerometer）\nBoston Scientific: Blended Sensor（加速度＋分時換気量）\nMicroPort CRM: Dual Sensor（加速度＋分時換気量）／SonR™ センサ（レート応答）",
-   "caution": "頻回の心室期外収縮や不安定な右室リード位置があると挙動が乱れることがある。"
+   "caution": "頻回の心室期外収縮や不安定な右室リード位置があると挙動が乱れることがある。",
+   "ecg": "体動がほとんどない状況でもレートが上がる。起立や精神的負荷でレートが追随するのが加速度センサとの違い。",
+   "pitfall": "心室期外収縮が頻発する症例や右室リードが不安定な症例では、心内インピーダンスの変化を拾って不適切なレート上昇が起こることがある。頻脈の訴えがあるときは体動の有無と合わせて評価する。"
   },
   {
    "id": "BIO-EARLY-ATP-ONE-SHOT",
@@ -1075,7 +1204,9 @@
    "how": "頻拍検出の早期にATPを1シーケンス実施し、早い段階での無痛停止を狙う。",
    "params": "Early ATP one shot: On／Off",
    "models": "Acticor 7・Rivacor 7 世代",
-   "equiv": "Medtronic: ATP Before Charging（EV-ICDはFVT設定で可）\nAbbott: ATP prior to charging（ATP prior/during charging）\nBoston Scientific: Quick Convert ATP™\nMicroPort CRM: ATP in fast VT/VF zone"
+   "equiv": "Medtronic: ATP Before Charging（EV-ICDはFVT設定で可）\nAbbott: ATP prior to charging（ATP prior/during charging）\nBoston Scientific: Quick Convert ATP™\nMicroPort CRM: ATP in fast VT/VF zone",
+   "ecg": "頻拍中に、頻拍周期より短い間隔のペーシングスパイクが連続して入る。停止すれば直後から自己調律またはペーシング調律に戻る。",
+   "pitfall": "ATPにより心室頻拍が加速し、より速い頻拍や心室細動へ移行することがある。低左心機能例や非常に速い頻拍では、シーケンス数を増やしすぎない。"
   },
   {
    "id": "BIO-INTRINSIC-RHYTHM-SUPPORT",
@@ -1088,7 +1219,9 @@
    "how": "AVディレイを設定量だけ延長して自己伝導を探索する。Positiveは延長したまま維持し、Negativeは短縮方向に働く。ScanとRepetitiveで探索の頻度を選べる。",
    "params": "IRSplus: Off／Positive／Negative；AVヒステリシス量；Scan／Repetitive",
    "models": "Amvia Sky・Acticor 7・Rivacor 7 世代",
-   "equiv": "Medtronic: Search AV+（SAV+）\nAbbott: Ventricular Intrinsic Preference（VIP™）\nBoston Scientific: AV Search +\nMicroPort CRM: Dplus™"
+   "equiv": "Medtronic: Search AV+（SAV+）\nAbbott: Ventricular Intrinsic Preference（VIP™）\nBoston Scientific: AV Search +\nMicroPort CRM: Dplus™",
+   "ecg": "AVヒステリシスによりAV間隔が延長し、自己QRSが確認できる間はその状態を保つ。",
+   "pitfall": "探索中は一時的にAV間隔が大きく延長するため、房室同期が崩れて動悸や血圧低下を自覚することがある。CRT症例では両室ペーシングの脱落につながるため、原則として使用しない。"
   },
   {
    "id": "BIO-LV-T-WAVE-PROTECTION",
@@ -1101,7 +1234,8 @@
    "how": "左室イベントの後にT波にあたる時期を保護期間として設け、その間の左室刺激を抑制して心室性不整脈の誘発を防ぐ。",
    "params": "LV T-wave Protection: On／Off",
    "models": "Rivacor 7 HF-T／Ilivia Neo 7 HF-T 世代のCRT-D",
-   "equiv": "Medtronic: —\nAbbott: —\nBoston Scientific: Left ventricular protection period（LVPP）\nMicroPort CRM: —"
+   "equiv": "Medtronic: —\nAbbott: —\nBoston Scientific: Left ventricular protection period（LVPP）\nMicroPort CRM: —",
+   "pitfall": "保護期間のあいだ左室刺激が抑制されるため、その拍では両室ペーシングが得られない。"
   },
   {
    "id": "BIO-LV-TRIGGERING",
@@ -1114,7 +1248,9 @@
    "how": "右室で自己興奮を感知した瞬間に左室を刺激し、その拍でも再同期を得ようとする。期外収縮や自己伝導による両室ペーシングの脱落を補う。",
    "params": "LV Triggering: On／Off",
    "models": "Rivacor 7 HF-T／Ilivia Neo 7 HF-T 世代のCRT-D",
-   "equiv": "Medtronic: Ventricular Sense Response\nAbbott: Triggering（Ventricular Sense Response）\nBoston Scientific: Biventricular Trigger\nMicroPort CRM: —"
+   "equiv": "Medtronic: Ventricular Sense Response\nAbbott: Triggering（Ventricular Sense Response）\nBoston Scientific: Biventricular Trigger\nMicroPort CRM: —",
+   "ecg": "自己のQRSを感知した直後に心室スパイクが入り、QRSの立ち上がり付近にスパイクが重なって見える。心室期外収縮の直後にも同じ所見が出る。",
+   "pitfall": "見かけの両室ペーシング率は上がるが、自己興奮の直後の刺激では実効的な再同期が得られていないことがある。刺激回数が増えるため電池消耗も大きくなる。EffectivCRTのような実効率の指標と併せて評価する。"
   },
   {
    "id": "BIO-MODE-SWITCHING",
@@ -1127,7 +1263,9 @@
    "how": "設定した介入レートを超える心房イベントをX out of Zの形で計数し、基準に達するとDDI(R)などへ切り替える。復帰条件も設定できる。",
    "params": "Mode Switching: On／Off；介入レート；X out of Z",
    "models": "Amvia Sky・Acticor 7・Rivacor 7 世代",
-   "equiv": "Medtronic: Mode Switch（AT/AFエビデンスカウント）\nAbbott: Auto Mode Switch（AMS／FARI）\nBoston Scientific: ATR Mode Switch\nMicroPort CRM: Mode Switching"
+   "equiv": "Medtronic: Mode Switch（AT/AFエビデンスカウント）\nAbbott: Auto Mode Switch（AMS／FARI）\nBoston Scientific: ATR Mode Switch\nMicroPort CRM: Mode Switching",
+   "ecg": "心房頻拍の間は心室の追従が止まり、心室レートが下限レートやセンサ指示レートまで落ちる。心房の速い波形と、それに追従しない規則的な心室ペーシングが同時に見える。復帰時は追従が戻る。",
+   "pitfall": "ファーフィールドR波を心房で拾うと、洞調律でも不適切にモードスイッチが起こり心室レートが落ちる。逆に心房波高が低くアンダーセンシングになると、心房頻拍でもモードスイッチせず速い心室追従が続く。心房不応期（PVAB）と心房感度の設定を確認する。"
   },
   {
    "id": "BIO-MORPHMATCH",
@@ -1140,7 +1278,9 @@
    "how": "洞調律時に取得したテンプレートと頻拍時の波形を比較し、一致率が閾値以上なら上室性と判定して治療を保留する。",
    "params": "MorphMatch: On／Off；マッチ率閾値（％）；テンプレート取得",
    "models": "Acticor 7／Ilivia Neo 7 世代のICD／Rivacor 7 HF-T／Ilivia Neo 7 HF-T 世代のCRT-D",
-   "equiv": "Medtronic: Wavelet／Feature Match\nAbbott: Far Field MD™ Morphology／Morphology\nBoston Scientific: INSIGHT\nMicroPort CRM: —"
+   "equiv": "Medtronic: Wavelet／Feature Match\nAbbott: Far Field MD™ Morphology／Morphology\nBoston Scientific: INSIGHT\nMicroPort CRM: —",
+   "ecg": "洞調律時に取得したテンプレートと、頻拍時の波形の一致率が記録に残る。一致率が高ければ上室性、低ければ心室性として扱われる。",
+   "pitfall": "感度設定が不適切だと波形がクリップされて一致率が下がり、上室頻拍を心室頻拍と誤判定して不適切作動につながる。脚ブロックの合併、体位変化、リードの微小な移動でもテンプレートが合わなくなる。ペーシング調律ではテンプレートが使えない。定期的にテンプレートを取り直す。"
   },
   {
    "id": "BIO-MULTIPOLE-PACING",
@@ -1154,7 +1294,9 @@
    "params": "MultiPole Pacing: On／Off；ベクトルの選択",
    "models": "Rivacor 7 HF-T／Ilivia Neo 7 HF-T 世代のCRT-D",
    "equiv": "Medtronic: Multiple Point Pacing（MPP）\nAbbott: MultiPoint™ Pacing\nBoston Scientific: LV Multisite Pacing\nMicroPort CRM: LV Multipoint Pacing",
-   "caution": "刺激回数が増えるため電池消耗が大きくなる。"
+   "caution": "刺激回数が増えるため電池消耗が大きくなる。",
+   "ecg": "1拍のなかに心室のスパイクが3本（左室2点＋右室）並ぶ。QRSの形が両室ペーシング単独のときと変わる。",
+   "pitfall": "刺激回数が増えるぶん電池消耗が大きい。左室の刺激部位が増えることで横隔神経刺激が出ることがある。"
   },
   {
    "id": "BIO-NEGATIVE-AV-HYSTERESIS",
@@ -1167,7 +1309,9 @@
    "how": "自己房室伝導が現れた拍の次から、AVディレイを設定量だけ短くして心室刺激を自己伝導より先行させ、両室ペーシングの脱落を防ぐ。",
    "params": "Negative AV Hysteresis: On／Off；短縮量（ms）",
    "models": "Rivacor 7 HF-T／Ilivia Neo 7 HF-T 世代のCRT-D",
-   "equiv": "Medtronic: —\nAbbott: —\nBoston Scientific: —\nMicroPort CRM: —"
+   "equiv": "Medtronic: —\nAbbott: —\nBoston Scientific: —\nMicroPort CRM: —",
+   "ecg": "自己房室伝導が現れた次の拍から、AV間隔が設定量だけ短くなって心室スパイクが自己QRSより先行する。",
+   "pitfall": "AV間隔を短くしすぎると心房収縮の寄与が失われ、血行動態が悪化することがある。"
   },
   {
    "id": "BIO-ONSET",
@@ -1180,7 +1324,9 @@
    "how": "頻拍開始時のレート上昇が急峻かどうかを評価し、緩やかな立ち上がりは洞頻拍として治療を保留する。SMART Detectionの判定要素の一つとしても働く。",
    "params": "Onset: On／Off；判定値（％）",
    "models": "Acticor 7／Ilivia Neo 7 世代のICD／Rivacor 7 HF-T／Ilivia Neo 7 HF-T 世代のCRT-D",
-   "equiv": "Medtronic: Onset\nAbbott: Sudden Onset\nBoston Scientific: Onset/Stability\nMicroPort CRM: —"
+   "equiv": "Medtronic: Onset\nAbbott: Sudden Onset\nBoston Scientific: Onset/Stability\nMicroPort CRM: —",
+   "ecg": "頻拍開始時のR-R間隔が直前の平均からどれだけ急に短縮したかで判定される。",
+   "pitfall": "厳しく設定しすぎると、洞頻拍から連続して移行した運動誘発性の心室頻拍で治療が抑制される。運動中に発症するVTを持つ症例では慎重に設定する。"
   },
   {
    "id": "BIO-OVERDRIVE-PREVENTION-PACING",
@@ -1193,7 +1339,9 @@
    "how": "自己の心房レートに追随して、それよりわずかに速いレートで心房を刺激し続ける。心房期外収縮の出現を減らして心房細動の契機を減らす。",
    "params": "Overdrive Prevention Pacing: On／Off；最大介入レート",
    "models": "Amvia Sky・Acticor 7・Rivacor 7 世代",
-   "equiv": "Medtronic: Atrial Preference Pacing（APP）／Post Mode Switch Overdrive Pacing（PMOP）／Sinus Preference\nAbbott: AF Suppression™\nBoston Scientific: AP Scan™／Atrial Preference Pacing（APP）／ProACt\nMicroPort CRM: Atrial Overdrive"
+   "equiv": "Medtronic: Atrial Preference Pacing（APP）／Post Mode Switch Overdrive Pacing（PMOP）／Sinus Preference\nAbbott: AF Suppression™\nBoston Scientific: AP Scan™／Atrial Preference Pacing（APP）／ProACt\nMicroPort CRM: Atrial Overdrive",
+   "ecg": "心房ペーシング率がほぼ100％になり、自己P波がほとんど見えなくなる。心拍数は自己の洞レートよりわずかに速い状態で推移する。",
+   "pitfall": "心房ペーシングが増えるため電池消耗が大きくなる。心房細動の発症を減らす効果は臨床試験で一貫していないため、効果を過大に見積もらない。"
   },
   {
    "id": "BIO-PVC-DISCRIMINATION-AFTER-AS",
@@ -1206,7 +1354,8 @@
    "how": "心房センシングの後に現れた早期心室興奮を心室期外収縮として区別し、不要な不応期延長を避けて次の拍の両室ペーシングを維持する。",
    "params": "PVC discrimination: On／Off",
    "models": "Rivacor 7・Ilivia Neo 7 世代",
-   "equiv": "Medtronic: Atrial Tracking Recovery\nAbbott: —\nBoston Scientific: Tracking Preference\nMicroPort CRM: —"
+   "equiv": "Medtronic: Atrial Tracking Recovery\nAbbott: —\nBoston Scientific: Tracking Preference\nMicroPort CRM: —",
+   "pitfall": "期外収縮の判定を誤ると、かえって不応期の扱いが不適切になる。"
   },
   {
    "id": "BIO-POSITIVE-AV-HYSTERESIS-WITH-SCAN-REPETIT",
@@ -1219,7 +1368,9 @@
    "how": "AVディレイを設定量だけ延長して自己伝導を探索する。Scanは一定間隔ごとに探索し、Repetitiveは自己伝導が失われた直後にも繰り返し探索する。",
    "params": "AVヒステリシス量；Scan（探索間隔）／Repetitive（繰り返し回数）",
    "models": "Amvia Sky・Acticor 7・Rivacor 7 世代",
-   "equiv": "Medtronic: Search AV+（SAV+）\nAbbott: Ventricular Intrinsic Preference（VIP™）\nBoston Scientific: AV Search +\nMicroPort CRM: Dplus™"
+   "equiv": "Medtronic: Search AV+（SAV+）\nAbbott: Ventricular Intrinsic Preference（VIP™）\nBoston Scientific: AV Search +\nMicroPort CRM: Dplus™",
+   "ecg": "Scanでは一定間隔ごとに、RepetitiveではAV延長が失敗した直後にも繰り返しAV間隔の延長が現れる。",
+   "pitfall": "探索中は一時的にAV間隔が大きく延長するため、房室同期が崩れて動悸や血圧低下を自覚することがある。CRT症例では両室ペーシングの脱落につながるため、原則として使用しない。"
   },
   {
    "id": "BIO-RATE-FADING",
@@ -1232,7 +1383,9 @@
    "how": "自己レートの急な低下を検出すると、設定した介入レートで一定時間ペーシングする。",
    "params": "Rate Fading: On／Off；介入レート；介入時間",
    "models": "Amvia Sky・Enitra 世代",
-   "equiv": "Medtronic: Rate Drop Response（RDR）\nAbbott: Advanced Hysteresis\nBoston Scientific: Sudden Brady Response（SBR）\nMicroPort CRM: Acceleration（レートドロップ応答）"
+   "equiv": "Medtronic: Rate Drop Response（RDR）\nAbbott: Advanced Hysteresis\nBoston Scientific: Sudden Brady Response（SBR）\nMicroPort CRM: Acceleration（レートドロップ応答）",
+   "ecg": "自己レートの急な低下の直後から、下限レートより明らかに高いレートでのペーシングが一定時間続き、その後は段階的に下限レートへ戻る。発作の前後で心拍数が階段状に変化する。",
+   "pitfall": "心抑制型の血管迷走神経性失神が対象で、血管抑制型（血圧低下が主体）には効果が乏しい。介入レートを高くしすぎると動悸や不要な高頻度ペーシングにつながる。"
   },
   {
    "id": "BIO-RATE-HYSTERESIS-SCAN-REPETITIVE",
@@ -1246,7 +1399,9 @@
    "params": "Rate Hysteresis: On／Off；ヒステリシス量；Scan／Repetitive",
    "models": "Amvia Sky・Acticor 7・Rivacor 7 世代",
    "equiv": "Medtronic: —\nAbbott: —\nBoston Scientific: —\nMicroPort CRM: —",
-   "caution": "探索中は下限レートより低い心拍数となる。"
+   "caution": "探索中は下限レートより低い心拍数となる。",
+   "ecg": "自己脈が出ている間は下限レートより遅い心拍数が許容され、ペーシングが止まる。探索中は一時的に下限レートを下回る。",
+   "pitfall": "探索のあいだ心拍数が下限レートより低くなるため、症状のある症例ではヒステリシス量を抑える。"
   },
   {
    "id": "BIO-RATE-STABILIZATION",
@@ -1259,7 +1414,9 @@
    "how": "先行するR-R間隔をもとに次のペーシング間隔を決め、急激なレート変動を抑える。CRTでは両室ペーシング率の維持にも寄与する。",
    "params": "Rate Stabilization: On／Off；最大介入レート",
    "models": "Acticor 7・Rivacor 7 世代",
-   "equiv": "Medtronic: Conducted AF Response（CAFR）\nAbbott: —\nBoston Scientific: Ventricular Rate Regulation（VRR）\nMicroPort CRM: —"
+   "equiv": "Medtronic: Conducted AF Response（CAFR）\nAbbott: —\nBoston Scientific: Ventricular Rate Regulation（VRR）\nMicroPort CRM: —",
+   "ecg": "期外収縮や心房細動の後でも、次のペーシング間隔が急に長くならず心拍数の変動が小さくなる。",
+   "pitfall": "ペーシング率が上がるため電池消耗が増える。"
   },
   {
    "id": "BIO-SMART-DETECTION",
@@ -1272,7 +1429,8 @@
    "how": "RR間隔とPP間隔の関係、PR間隔の変化、発症の急峻さ、逆行性伝導の妥当性などを順に評価してVTと上室頻拍を区別する。心室レートが設定上限を超えると鑑別を打ち切る。",
    "params": "SMART: On／Off；SVT上限レート",
    "models": "Acticor 7／Ilivia Neo 7 世代のICD／Rivacor 7 HF-T／Ilivia Neo 7 HF-T 世代のCRT-D",
-   "equiv": "Medtronic: PR Logic™\nAbbott: Rate Branch\nBoston Scientific: Rhythm ID™\nMicroPort CRM: PARAD™+"
+   "equiv": "Medtronic: PR Logic™\nAbbott: Rate Branch\nBoston Scientific: Rhythm ID™\nMicroPort CRM: PARAD™+",
+   "pitfall": "心室レートが設定した上限を超えると鑑別を打ち切って治療へ進む。上限の設定が低すぎると上室頻拍でも治療されうる。"
   },
   {
    "id": "BIO-STABILITY",
@@ -1285,7 +1443,9 @@
    "how": "直近のR-R間隔の変動幅を評価し、ばらつきが大きければ伝導された心房細動として治療を保留する。SMART Detectionの判定要素の一つとしても働く。",
    "params": "Stability: On／Off；判定値（ms）",
    "models": "Acticor 7／Ilivia Neo 7 世代のICD／Rivacor 7 HF-T／Ilivia Neo 7 HF-T 世代のCRT-D",
-   "equiv": "Medtronic: Stability\nAbbott: Interval Stability\nBoston Scientific: —\nMicroPort CRM: —"
+   "equiv": "Medtronic: Stability\nAbbott: Interval Stability\nBoston Scientific: —\nMicroPort CRM: —",
+   "ecg": "頻拍中のR-R間隔の変動幅が記録される。ばらつきが大きいと伝導された心房細動として扱われる。",
+   "pitfall": "心房細動でもR-R間隔が安定していると心室頻拍と誤判定する。逆に多形性心室頻拍のようにR-Rが不安定な心室性不整脈では、治療が保留される危険がある。"
   },
   {
    "id": "BIO-SUSTAINED-VT",
@@ -1298,7 +1458,8 @@
    "how": "SMART Detectionなどで治療が保留された頻拍が設定時間を超えて持続した場合、判定を上書きして治療を実行する安全機構。",
    "params": "Sustained VT: On／Off；持続時間",
    "models": "Acticor 7／Ilivia Neo 7 世代のICD／Rivacor 7 HF-T／Ilivia Neo 7 HF-T 世代のCRT-D",
-   "equiv": "Medtronic: —\nAbbott: —\nBoston Scientific: SRD（Sustained Rate Duration）\nMicroPort CRM: Brady-Tachy Overlap（BTO™）"
+   "equiv": "Medtronic: —\nAbbott: —\nBoston Scientific: SRD（Sustained Rate Duration）\nMicroPort CRM: Brady-Tachy Overlap（BTO™）",
+   "pitfall": "時間を長く設定するほど不適切作動は減るが、真の心室頻拍に対する治療が遅れる。失神歴のある症例では短めにするなど、症例ごとに判断する。"
   },
   {
    "id": "BIO-VENTRICULAR-CAPTURE-CONTROL",
@@ -1311,7 +1472,9 @@
    "how": "定期的に心室閾値を測定し、安全域を加えた出力へ自動設定する。ATMと組み合わせて閾値の推移を記録できる。",
    "params": "VCC: Auto／ATM（Monitor）／Off；安全域",
    "models": "Amvia Sky・Acticor 7・Rivacor 7 世代",
-   "equiv": "Medtronic: RV Capture Management™（RVCM）／Ventricular Capture Management™（VCM）\nAbbott: RVCap™ Confirm／Ventricular AutoCapture™\nBoston Scientific: PaceSafe™ RV Automatic Capture／PaceSafe™ RV Automatic Threshold／Ventricular Automatic Capture\nMicroPort CRM: RV Auto-threshold／Ventricular Auto-threshold"
+   "equiv": "Medtronic: RV Capture Management™（RVCM）／Ventricular Capture Management™（VCM）\nAbbott: RVCap™ Confirm／Ventricular AutoCapture™\nBoston Scientific: PaceSafe™ RV Automatic Capture／PaceSafe™ RV Automatic Threshold／Ventricular Automatic Capture\nMicroPort CRM: RV Auto-threshold／Ventricular Auto-threshold",
+   "ecg": "閾値測定の最中だけ、出力が段階的に下がって捕捉が失われる拍が現れ、その直後に高出力のバックアップ刺激が入る。1拍のなかにスパイクが2本並んで見える。",
+   "pitfall": "融合波や偽融合があると捕捉ありと誤判定して出力を下げすぎることがある。誘発反応が小さい症例では測定そのものが成立せず、安全側の固定出力に戻る。テスト中の非捕捉を不具合と取り違えないよう、記録の時刻とテスト周期を照合する。"
   },
   {
    "id": "BIO-VP-SUPPRESSION",
@@ -1325,7 +1488,9 @@
    "params": "Vp Suppression: On／Off",
    "models": "Amvia Sky・Acticor 7・Rivacor 7 世代",
    "equiv": "Medtronic: Managed Ventricular Pacing（MVP™）\nAbbott: —\nBoston Scientific: RYTHMIQ™\nMicroPort CRM: SafeR™",
-   "caution": "AAI(R)動作中はAV間隔が長くなるため、逆行性室房伝導があるとRNRVASを誘発することがある。"
+   "caution": "AAI(R)動作中はAV間隔が長くなるため、逆行性室房伝導があるとRNRVASを誘発することがある。",
+   "ecg": "心房スパイクに続いて自己QRSのみが出る状態が続き、脱落時にDDD(R)へ切り替わって心室スパイクが現れる。",
+   "pitfall": "AAI(R)動作中はAV間隔が長くなるため、逆行性室房伝導があるとRNRVASを誘発することがある。"
   },
   {
    "id": "BSX-AP-SCANTM",
@@ -1338,7 +1503,9 @@
    "how": "心房オーバードライブ中に一定間隔でレートを下げ、自己の心房レートを確かめてから再びわずかに速いレートで刺激する。過剰なペーシングレートの上昇を避ける。",
    "params": "AP Scan: On／Off；探索間隔",
    "models": "ACCOLADE MRI・RESONATE 世代",
-   "equiv": "Medtronic: Atrial Preference Pacing（APP）／Post Mode Switch Overdrive Pacing（PMOP）／Sinus Preference\nAbbott: AF Suppression™\nBIOTRONIK: Overdrive Prevention Pacing\nMicroPort CRM: Atrial Overdrive"
+   "equiv": "Medtronic: Atrial Preference Pacing（APP）／Post Mode Switch Overdrive Pacing（PMOP）／Sinus Preference\nAbbott: AF Suppression™\nBIOTRONIK: Overdrive Prevention Pacing\nMicroPort CRM: Atrial Overdrive",
+   "ecg": "心房ペーシング率がほぼ100％になり、自己P波がほとんど見えなくなる。心拍数は自己の洞レートよりわずかに速い状態で推移する。",
+   "pitfall": "心房ペーシングが増えるため電池消耗が大きくなる。心房細動の発症を減らす効果は臨床試験で一貫していないため、効果を過大に見積もらない。"
   },
   {
    "id": "BSX-ATR-MODE-SWITCH",
@@ -1351,7 +1518,9 @@
    "how": "設定したトリガレートを超える心房イベントが持続すると、DDI(R)などの非追従モードへ移行する。移行時と復帰時はフォールバックとして段階的にレートを変化させる。",
    "params": "ATR: On／Off；ATRトリガレート；Duration；Fallback時間；Entry／Exit Count",
    "models": "ACCOLADE MRI・RESONATE 世代",
-   "equiv": "Medtronic: Mode Switch（AT/AFエビデンスカウント）\nAbbott: Auto Mode Switch（AMS／FARI）\nBIOTRONIK: Mode Switching\nMicroPort CRM: Mode Switching"
+   "equiv": "Medtronic: Mode Switch（AT/AFエビデンスカウント）\nAbbott: Auto Mode Switch（AMS／FARI）\nBIOTRONIK: Mode Switching\nMicroPort CRM: Mode Switching",
+   "ecg": "心房頻拍の間は心室の追従が止まり、心室レートが下限レートやセンサ指示レートまで落ちる。心房の速い波形と、それに追従しない規則的な心室ペーシングが同時に見える。復帰時は追従が戻る。",
+   "pitfall": "ファーフィールドR波を心房で拾うと、洞調律でも不適切にモードスイッチが起こり心室レートが落ちる。逆に心房波高が低くアンダーセンシングになると、心房頻拍でもモードスイッチせず速い心室追従が続く。心房不応期（PVAB）と心房感度の設定を確認する。"
   },
   {
    "id": "BSX-AV-SEARCH",
@@ -1364,7 +1533,9 @@
    "how": "設定周期ごとにAVディレイを延長し、自己QRSが得られるかを確認する。得られれば延長を維持し、得られなければ通常のAVディレイに戻す。",
    "params": "AV Search+: On／Off；検索間隔；延長量（ms）",
    "models": "ACCOLADE MRI・RESONATE 世代",
-   "equiv": "Medtronic: Search AV+（SAV+）\nAbbott: Ventricular Intrinsic Preference（VIP™）\nBIOTRONIK: Intrinsic Rhythm Support（IRSplus）／Positive AV Hysteresis with Scan/Repetitive\nMicroPort CRM: Dplus™"
+   "equiv": "Medtronic: Search AV+（SAV+）\nAbbott: Ventricular Intrinsic Preference（VIP™）\nBIOTRONIK: Intrinsic Rhythm Support（IRSplus）／Positive AV Hysteresis with Scan/Repetitive\nMicroPort CRM: Dplus™",
+   "ecg": "設定周期ごとにAV間隔が延長し、自己QRSの有無で延長の維持／解除が決まる。",
+   "pitfall": "探索中は一時的にAV間隔が大きく延長するため、房室同期が崩れて動悸や血圧低下を自覚することがある。CRT症例では両室ペーシングの脱落につながるため、原則として使用しない。"
   },
   {
    "id": "BSX-ATRIAL-FLUTTER-RESPONSE",
@@ -1377,7 +1548,8 @@
    "how": "心房不応期内に高頻度の心房イベントを検出すると、心房刺激を保留する窓を設ける。粗動波の受攻期に刺激が落ちて不整脈が悪化するのを防ぐ。",
    "params": "AFR: On／Off；AFRレート",
    "models": "ACCOLADE MRI・RESONATE 世代",
-   "equiv": "Medtronic: —\nAbbott: —\nBIOTRONIK: —\nMicroPort CRM: —"
+   "equiv": "Medtronic: —\nAbbott: —\nBIOTRONIK: —\nMicroPort CRM: —",
+   "pitfall": "心房刺激を保留する窓を設けるため、その間は心房ペーシングによる支持が得られない。"
   },
   {
    "id": "BSX-ATRIAL-PREFERENCE-PACING",
@@ -1390,7 +1562,9 @@
    "how": "期外収縮以外の自己心房センシングに反応してペーシングレートを上げ、心房刺激の割合を高める。心房性不整脈のエピソード数を減らすことを狙う。",
    "params": "APP: On／Off；最大介入レート",
    "models": "ACCOLADE MRI・RESONATE 世代",
-   "equiv": "Medtronic: Atrial Preference Pacing（APP）／Post Mode Switch Overdrive Pacing（PMOP）／Sinus Preference\nAbbott: AF Suppression™\nBIOTRONIK: Overdrive Prevention Pacing\nMicroPort CRM: Atrial Overdrive"
+   "equiv": "Medtronic: Atrial Preference Pacing（APP）／Post Mode Switch Overdrive Pacing（PMOP）／Sinus Preference\nAbbott: AF Suppression™\nBIOTRONIK: Overdrive Prevention Pacing\nMicroPort CRM: Atrial Overdrive",
+   "ecg": "心房ペーシング率がほぼ100％になり、自己P波がほとんど見えなくなる。心拍数は自己の洞レートよりわずかに速い状態で推移する。",
+   "pitfall": "心房ペーシングが増えるため電池消耗が大きくなる。心房細動の発症を減らす効果は臨床試験で一貫していないため、効果を過大に見積もらない。"
   },
   {
    "id": "BSX-AUTOMATIC-GAIN-CONTROL",
@@ -1403,7 +1577,9 @@
    "how": "直近の感知波高に応じて増幅度（ゲイン）を自動的に調整し、振幅が変動する心室細動でも感知を保つ。感度の下限（sensing floor）を設定できる。",
    "params": "Sensitivity adjustment；Programmable sensing floor",
    "models": "RESONATE／RESONATE EL 世代のICD／RESONATE X4 世代のCRT-D",
-   "equiv": "Medtronic: Sensing Assurance\nAbbott: SenseAbility™\nBIOTRONIK: Automatic Sensitivity Control\nMicroPort CRM: AutoSensitivityControl"
+   "equiv": "Medtronic: Sensing Assurance\nAbbott: SenseAbility™\nBIOTRONIK: Automatic Sensitivity Control\nMicroPort CRM: AutoSensitivityControl",
+   "ecg": "T波を二重に感知すると、マーカー上は自己心拍の2倍のレートが記録される。体表心電図のレートと本体が記録したレートが合わないのが手がかり。",
+   "pitfall": "感度を鋭くしすぎるとT波オーバーセンシングや筋電位の誤感知が起こり、ペーシング抑制や不適切作動につながる。逆に鈍くしすぎると細動波のアンダーセンシングを招く。どちらに振っても危険側があるため、設定変更後は必ず感知の確認を行う。"
   },
   {
    "id": "BSX-AUTOMATIC-LEAD-RECOGNITION",
@@ -1429,7 +1605,9 @@
    "how": "右室で自己興奮を感知するとただちに両室刺激を出し、その拍でも再同期を維持する。期外収縮や自己伝導による両室ペーシングの脱落を補う。",
    "params": "Bi-V Trigger: On／Off；トリガ上限レート",
    "models": "RESONATE X4 世代のCRT-D",
-   "equiv": "Medtronic: Ventricular Sense Response\nAbbott: Triggering（Ventricular Sense Response）\nBIOTRONIK: LV Triggering\nMicroPort CRM: —"
+   "equiv": "Medtronic: Ventricular Sense Response\nAbbott: Triggering（Ventricular Sense Response）\nBIOTRONIK: LV Triggering\nMicroPort CRM: —",
+   "ecg": "自己のQRSを感知した直後に心室スパイクが入り、QRSの立ち上がり付近にスパイクが重なって見える。心室期外収縮の直後にも同じ所見が出る。",
+   "pitfall": "見かけの両室ペーシング率は上がるが、自己興奮の直後の刺激では実効的な再同期が得られていないことがある。刺激回数が増えるため電池消耗も大きくなる。EffectivCRTのような実効率の指標と併せて評価する。"
   },
   {
    "id": "BSX-INSIGHT",
@@ -1442,7 +1620,8 @@
    "how": "皮下で記録した心電図の波形を解析し、Conditionalゾーンで上室頻拍やT波の誤感知による不適切作動を抑える。",
    "params": "Conditionalゾーン: On／Off",
    "models": "EMBLEM S-ICD",
-   "equiv": "Medtronic: Wavelet／Feature Match\nAbbott: Far Field MD™ Morphology／Morphology\nBIOTRONIK: MorphMatch\nMicroPort CRM: —"
+   "equiv": "Medtronic: Wavelet／Feature Match\nAbbott: Far Field MD™ Morphology／Morphology\nBIOTRONIK: MorphMatch\nMicroPort CRM: —",
+   "pitfall": "S-ICDのConditionalゾーンでのみ働く。ゾーン設定を誤ると識別が適用されない。"
   },
   {
    "id": "BSX-LV-MULTISITE-PACING",
@@ -1456,7 +1635,9 @@
    "params": "MultiSite Pacing: On／Off；LVオフセット",
    "models": "RESONATE X4 世代のCRT-D",
    "equiv": "Medtronic: Multiple Point Pacing（MPP）\nAbbott: MultiPoint™ Pacing\nBIOTRONIK: Multipole Pacing（MPP）\nMicroPort CRM: LV Multipoint Pacing",
-   "caution": "刺激回数が増えるため電池消耗が大きくなる。"
+   "caution": "刺激回数が増えるため電池消耗が大きくなる。",
+   "ecg": "1拍のなかに心室のスパイクが3本（左室2点＋右室）並ぶ。QRSの形が両室ペーシング単独のときと変わる。",
+   "pitfall": "刺激回数が増えるぶん電池消耗が大きい。左室の刺激部位が増えることで横隔神経刺激が出ることがある。"
   },
   {
    "id": "BSX-LV-VECTORGUIDETM",
@@ -1483,7 +1664,9 @@
    "params": "Lead Safety Switch: On／Off",
    "models": "ACCOLADE MRI・RESONATE 世代",
    "equiv": "Medtronic: —\nAbbott: Auto Lead Polarity Detection\nBIOTRONIK: —\nMicroPort CRM: Lead Polarity Switch",
-   "caution": "単極へ切り替わると心電図上のスパイクが大きくなり、大胸筋刺激が起こることがある。"
+   "caution": "単極へ切り替わると心電図上のスパイクが大きくなり、大胸筋刺激が起こることがある。",
+   "ecg": "単極へ切り替わると心電図上のペーシングスパイクが急に大きくなる。双極では小さいスパイクに戻る。",
+   "pitfall": "単極へ切り替わると大胸筋刺激が起こることがある。切替はリード異常の兆候なので、原因の確認を優先する。"
   },
   {
    "id": "BSX-LEFT-VENTRICULAR-PROTECTION-PERIOD",
@@ -1496,7 +1679,8 @@
    "how": "左室イベントの後に一定の保護期間を設け、その間は左室刺激を出さないことで受攻期への刺激を防ぐ。",
    "params": "LVPP: 期間（ms）",
    "models": "RESONATE X4 世代",
-   "equiv": "Medtronic: —\nAbbott: —\nBIOTRONIK: LV T-Wave Protection\nMicroPort CRM: —"
+   "equiv": "Medtronic: —\nAbbott: —\nBIOTRONIK: LV T-Wave Protection\nMicroPort CRM: —",
+   "pitfall": "保護期間のあいだ左室刺激が抑制されるため、その拍では両室ペーシングが得られない。"
   },
   {
    "id": "BSX-ONSET-STABILITY",
@@ -1510,7 +1694,9 @@
    "params": "Onset: On／Off・率（％）；Stability: On／Off・値（ms）",
    "models": "RESONATE／RESONATE EL 世代のICD／RESONATE X4 世代のCRT-D",
    "equiv": "Medtronic: Onset\nAbbott: Sudden Onset\nBIOTRONIK: Onset\nMicroPort CRM: —",
-   "caution": "洞頻拍から移行したVTや、R-Rが安定した心房細動では判定を誤ることがある。"
+   "caution": "洞頻拍から移行したVTや、R-Rが安定した心房細動では判定を誤ることがある。",
+   "ecg": "レートの立ち上がりの急峻さとR-R間隔のばらつきの両方が記録される。",
+   "pitfall": "厳しく設定しすぎると、洞頻拍から連続して移行した運動誘発性の心室頻拍で治療が抑制される。運動中に発症するVTを持つ症例では慎重に設定する。 R-Rが安定した心房細動では鑑別できない。SRDと組み合わせて保留が長引かないようにする。"
   },
   {
    "id": "BSX-PACESAFETM-LV-AUTOMATIC-THRESHOLD",
@@ -1523,7 +1709,9 @@
    "how": "左室の閾値を定期的に測定し、安全域を加えた出力へ自動調整する。左室閾値の上昇による両室ペーシング欠落の早期発見にも役立つ。",
    "params": "LVAT: On／Off；最小出力",
    "models": "RESONATE X4 世代のCRT-D",
-   "equiv": "Medtronic: LV Capture Management™（LVCM）\nAbbott: BiVCap™ Confirm／LVCap™ Confirm\nBIOTRONIK: LV Capture Control（LVCC）\nMicroPort CRM: LV Auto-threshold"
+   "equiv": "Medtronic: LV Capture Management™（LVCM）\nAbbott: BiVCap™ Confirm／LVCap™ Confirm\nBIOTRONIK: LV Capture Control（LVCC）\nMicroPort CRM: LV Auto-threshold",
+   "ecg": "閾値測定の最中だけ、出力が段階的に下がって捕捉が失われる拍が現れ、その直後に高出力のバックアップ刺激が入る。1拍のなかにスパイクが2本並んで見える。",
+   "pitfall": "融合波や偽融合があると捕捉ありと誤判定して出力を下げすぎることがある。誘発反応が小さい症例では測定そのものが成立せず、安全側の固定出力に戻る。テスト中の非捕捉を不具合と取り違えないよう、記録の時刻とテスト周期を照合する。"
   },
   {
    "id": "BSX-PACESAFETM-RA-AUTOMATIC-THRESHOLD",
@@ -1536,7 +1724,9 @@
    "how": "誘発反応を用いて心房の捕捉を確認し、閾値に安全域を加えた出力へ自動調整する。",
    "params": "RAAT: On／Off；最小出力",
    "models": "ACCOLADE MRI・RESONATE 世代",
-   "equiv": "Medtronic: Atrial Capture Management™（ACM）\nAbbott: ACap™ Confirm\nBIOTRONIK: Atrial Capture Control（ACC）\nMicroPort CRM: Atrial Auto-threshold"
+   "equiv": "Medtronic: Atrial Capture Management™（ACM）\nAbbott: ACap™ Confirm\nBIOTRONIK: Atrial Capture Control（ACC）\nMicroPort CRM: Atrial Auto-threshold",
+   "ecg": "閾値測定の最中だけ、出力が段階的に下がって捕捉が失われる拍が現れ、その直後に高出力のバックアップ刺激が入る。1拍のなかにスパイクが2本並んで見える。",
+   "pitfall": "融合波や偽融合があると捕捉ありと誤判定して出力を下げすぎることがある。誘発反応が小さい症例では測定そのものが成立せず、安全側の固定出力に戻る。テスト中の非捕捉を不具合と取り違えないよう、記録の時刻とテスト周期を照合する。"
   },
   {
    "id": "BSX-PACESAFETM-RV-AUTOMATIC-CAPTURE",
@@ -1549,7 +1739,9 @@
    "how": "刺激ごとに誘発反応で捕捉の有無を判定し、非捕捉と判断すると高出力のバックアップ刺激を出す。捕捉が続く限り閾値直上まで出力を下げられる。",
    "params": "RV Automatic Capture: On／Off；バックアップ出力",
    "models": "ACCOLADE MRI・RESONATE 世代",
-   "equiv": "Medtronic: RV Capture Management™（RVCM）／Ventricular Capture Management™（VCM）\nAbbott: RVCap™ Confirm／Ventricular AutoCapture™\nBIOTRONIK: Ventricular Capture Control（VCC）\nMicroPort CRM: RV Auto-threshold／Ventricular Auto-threshold"
+   "equiv": "Medtronic: RV Capture Management™（RVCM）／Ventricular Capture Management™（VCM）\nAbbott: RVCap™ Confirm／Ventricular AutoCapture™\nBIOTRONIK: Ventricular Capture Control（VCC）\nMicroPort CRM: RV Auto-threshold／Ventricular Auto-threshold",
+   "ecg": "拍ごとに捕捉を確認し、非捕捉の拍では直後に高出力のバックアップ刺激が入る。",
+   "pitfall": "融合波や偽融合があると捕捉ありと誤判定して出力を下げすぎることがある。誘発反応が小さい症例では測定そのものが成立せず、安全側の固定出力に戻る。テスト中の非捕捉を不具合と取り違えないよう、記録の時刻とテスト周期を照合する。"
   },
   {
    "id": "BSX-PACESAFETM-RV-AUTOMATIC-THRESHOLD",
@@ -1562,7 +1754,9 @@
    "how": "定期的に右室の閾値を測定し、安全域を加えた出力へ自動調整する。拍ごとの確認を行わない分、動作は穏やかになる。",
    "params": "RVAT: On／Off；最小出力；測定頻度",
    "models": "ACCOLADE MRI・RESONATE 世代",
-   "equiv": "Medtronic: RV Capture Management™（RVCM）／Ventricular Capture Management™（VCM）\nAbbott: RVCap™ Confirm／Ventricular AutoCapture™\nBIOTRONIK: Ventricular Capture Control（VCC）\nMicroPort CRM: RV Auto-threshold／Ventricular Auto-threshold"
+   "equiv": "Medtronic: RV Capture Management™（RVCM）／Ventricular Capture Management™（VCM）\nAbbott: RVCap™ Confirm／Ventricular AutoCapture™\nBIOTRONIK: Ventricular Capture Control（VCC）\nMicroPort CRM: RV Auto-threshold／Ventricular Auto-threshold",
+   "ecg": "閾値測定の最中だけ、出力が段階的に下がって捕捉が失われる拍が現れ、その直後に高出力のバックアップ刺激が入る。1拍のなかにスパイクが2本並んで見える。",
+   "pitfall": "融合波や偽融合があると捕捉ありと誤判定して出力を下げすぎることがある。誘発反応が小さい症例では測定そのものが成立せず、安全側の固定出力に戻る。テスト中の非捕捉を不具合と取り違えないよう、記録の時刻とテスト周期を照合する。"
   },
   {
    "id": "BSX-POST-THERAPY-PACING",
@@ -1575,7 +1769,9 @@
    "how": "ショックやATPの直後、一定時間だけ高めのレートと出力でペーシングを行い、治療後の心停止や徐脈に備える。",
    "params": "Post Therapy Pacing: On／Off；レート；出力；持続時間",
    "models": "RESONATE／RESONATE EL 世代のICD／RESONATE X4 世代のCRT-D",
-   "equiv": "Medtronic: Post VT/VF Shock Pacing\nAbbott: —\nBIOTRONIK: —\nMicroPort CRM: Post-shock pacing mode"
+   "equiv": "Medtronic: Post VT/VF Shock Pacing\nAbbott: —\nBIOTRONIK: —\nMicroPort CRM: Post-shock pacing mode",
+   "ecg": "ショックやATPの直後、一定時間だけ通常より高いレート・高い出力でのペーシングが続く。",
+   "pitfall": "治療直後の徐脈に備える設定であり、高すぎるレートは心筋酸素需要を増やす。"
   },
   {
    "id": "BSX-PROACT",
@@ -1588,7 +1784,9 @@
    "how": "APPと似た仕組みで心房ペーシングの割合を高めるが、ProACtは心房期外収縮（PAC）に反応してレートを上げる点が異なる。",
    "params": "ProACt: On／Off；最大介入レート",
    "models": "ACCOLADE MRI・RESONATE 世代",
-   "equiv": "Medtronic: Atrial Preference Pacing（APP）／Post Mode Switch Overdrive Pacing（PMOP）／Sinus Preference\nAbbott: AF Suppression™\nBIOTRONIK: Overdrive Prevention Pacing\nMicroPort CRM: Atrial Overdrive"
+   "equiv": "Medtronic: Atrial Preference Pacing（APP）／Post Mode Switch Overdrive Pacing（PMOP）／Sinus Preference\nAbbott: AF Suppression™\nBIOTRONIK: Overdrive Prevention Pacing\nMicroPort CRM: Atrial Overdrive",
+   "ecg": "心房ペーシング率がほぼ100％になり、自己P波がほとんど見えなくなる。心拍数は自己の洞レートよりわずかに速い状態で推移する。",
+   "pitfall": "心房ペーシングが増えるため電池消耗が大きくなる。心房細動の発症を減らす効果は臨床試験で一貫していないため、効果を過大に見積もらない。"
   },
   {
    "id": "BSX-QUICK-CONVERT-ATPTM",
@@ -1601,7 +1799,9 @@
    "how": "VFゾーンで検出した頻拍に対し、充電に入る前にワンショットのATPを行う。停止すればショックは出ない。",
    "params": "Quick Convert ATP: On／Off",
    "models": "RESONATE／RESONATE EL 世代のICD／RESONATE X4 世代のCRT-D",
-   "equiv": "Medtronic: ATP Before Charging（EV-ICDはFVT設定で可）\nAbbott: ATP prior to charging（ATP prior/during charging）\nBIOTRONIK: ATP one shot／Early ATP one shot（Stableと判定された場合にATP後に充電）\nMicroPort CRM: ATP in fast VT/VF zone"
+   "equiv": "Medtronic: ATP Before Charging（EV-ICDはFVT設定で可）\nAbbott: ATP prior to charging（ATP prior/during charging）\nBIOTRONIK: ATP one shot／Early ATP one shot（Stableと判定された場合にATP後に充電）\nMicroPort CRM: ATP in fast VT/VF zone",
+   "ecg": "頻拍中に、頻拍周期より短い間隔のペーシングスパイクが連続して入る。停止すれば直後から自己調律またはペーシング調律に戻る。",
+   "pitfall": "ATPにより心室頻拍が加速し、より速い頻拍や心室細動へ移行することがある。低左心機能例や非常に速い頻拍では、シーケンス数を増やしすぎない。"
   },
   {
    "id": "BSX-RYTHMIQTM",
@@ -1615,7 +1815,9 @@
    "params": "RYTHMIQ: On／Off；VVIバックアップレート",
    "models": "ACCOLADE MRI・RESONATE 世代",
    "equiv": "Medtronic: Managed Ventricular Pacing（MVP™）\nAbbott: —\nBIOTRONIK: Vp Suppression\nMicroPort CRM: SafeR™",
-   "caution": "AAI(R)動作中はAV間隔が長くなるため、逆行性室房伝導があるとRNRVASを誘発することがある。"
+   "caution": "AAI(R)動作中はAV間隔が長くなるため、逆行性室房伝導があるとRNRVASを誘発することがある。",
+   "ecg": "AAI(R)で動作し、心室はVVIバックアップとして下限より低いレートでしか出ない。設定拍数のうち一定数で脱落するとDDD(R)へ切り替わり、通常の房室順次ペーシングになる。",
+   "pitfall": "切替の条件を満たすまで心室のポーズが記録される。AAI(R)中のAV間隔延長によるRNRVASにも注意する。"
   },
   {
    "id": "BSX-RHYTHM-IDTM",
@@ -1628,7 +1830,9 @@
    "how": "洞調律の基準波形と頻拍時の波形の相関（VCT: Vector Timing and Correlation）を評価し、相関が高ければ上室性と判定して治療を保留する。",
    "params": "Rhythm ID: On／Off；相関閾値；基準波形の取得",
    "models": "RESONATE／RESONATE EL 世代のICD／RESONATE X4 世代のCRT-D",
-   "equiv": "Medtronic: PR Logic™\nAbbott: Rate Branch\nBIOTRONIK: SMART® Detection\nMicroPort CRM: PARAD™+"
+   "equiv": "Medtronic: PR Logic™\nAbbott: Rate Branch\nBIOTRONIK: SMART® Detection\nMicroPort CRM: PARAD™+",
+   "ecg": "洞調律時に取得したテンプレートと、頻拍時の波形の一致率が記録に残る。一致率が高ければ上室性、低ければ心室性として扱われる。",
+   "pitfall": "感度設定が不適切だと波形がクリップされて一致率が下がり、上室頻拍を心室頻拍と誤判定して不適切作動につながる。脚ブロックの合併、体位変化、リードの微小な移動でもテンプレートが合わなくなる。ペーシング調律ではテンプレートが使えない。定期的にテンプレートを取り直す。"
   },
   {
    "id": "BSX-SMART-PASS",
@@ -1641,7 +1845,8 @@
    "how": "皮下ICDの感知信号に高域通過フィルタをかけ、T波などの低周波成分を抑えてオーバーセンシングによる不適切作動を減らす。",
    "params": "SMART Pass: On／Off",
    "models": "EMBLEM S-ICD",
-   "equiv": "Medtronic: T-wave Discrimination\nAbbott: 低周波減衰フィルター（Low Frequency Attenuation）\nBIOTRONIK: High Pass Filter\nMicroPort CRM: —"
+   "equiv": "Medtronic: T-wave Discrimination\nAbbott: 低周波減衰フィルター（Low Frequency Attenuation）\nBIOTRONIK: High Pass Filter\nMicroPort CRM: —",
+   "pitfall": "S-ICDでR波が小さい症例ではSMART Passが自動的に無効化されることがあり、その状態ではT波オーバーセンシングによる不適切作動が増える。無効化されていないかを確認する。"
   },
   {
    "id": "BSX-SRD",
@@ -1654,7 +1859,8 @@
    "how": "Onset／Stabilityで治療が保留された状態が設定時間を超えて続くと、判定を上書きして治療を実行する安全機構。",
    "params": "SRD: On／Off；持続時間",
    "models": "RESONATE 世代",
-   "equiv": "Medtronic: —\nAbbott: —\nBIOTRONIK: Sustained VT\nMicroPort CRM: Brady-Tachy Overlap（BTO™）"
+   "equiv": "Medtronic: —\nAbbott: —\nBIOTRONIK: Sustained VT\nMicroPort CRM: Brady-Tachy Overlap（BTO™）",
+   "pitfall": "時間を長く設定するほど不適切作動は減るが、真の心室頻拍に対する治療が遅れる。失神歴のある症例では短めにするなど、症例ごとに判断する。"
   },
   {
    "id": "BSX-SMARTCRTTM",
@@ -1694,7 +1900,9 @@
    "params": "SBR: On／Off；介入レート；介入時間",
    "models": "ACCOLADE MRI／ESSENTIO 世代のペースメーカ",
    "equiv": "Medtronic: Rate Drop Response（RDR）\nAbbott: Advanced Hysteresis\nBIOTRONIK: Rate Fading\nMicroPort CRM: Acceleration（レートドロップ応答）",
-   "caution": "心抑制型の血管迷走神経性失神が対象で、血管抑制型には効果が乏しい。"
+   "caution": "心抑制型の血管迷走神経性失神が対象で、血管抑制型には効果が乏しい。",
+   "ecg": "自己レートの急な低下の直後から、下限レートより明らかに高いレートでのペーシングが一定時間続き、その後は段階的に下限レートへ戻る。発作の前後で心拍数が階段状に変化する。",
+   "pitfall": "心抑制型の血管迷走神経性失神が対象で、血管抑制型（血圧低下が主体）には効果が乏しい。介入レートを高くしすぎると動悸や不要な高頻度ペーシングにつながる。"
   },
   {
    "id": "BSX-TRACKING-PREFERENCE",
@@ -1707,7 +1915,8 @@
    "how": "心房レートが上限追従レートに近づいた際に心房不応期の扱いを調整して1:1追従を維持し、両室ペーシングの欠落を減らす。",
    "params": "Tracking Preference: On／Off",
    "models": "RESONATE X4 世代",
-   "equiv": "Medtronic: Atrial Tracking Recovery\nAbbott: —\nBIOTRONIK: WKB Behaviour／PVC discrimination after As\nMicroPort CRM: —"
+   "equiv": "Medtronic: Atrial Tracking Recovery\nAbbott: —\nBIOTRONIK: WKB Behaviour／PVC discrimination after As\nMicroPort CRM: —",
+   "pitfall": "上限追従レート付近の挙動を変えるため、心房レートが高い症例では動作の確認が必要。"
   },
   {
    "id": "BSX-VENTRICULAR-AUTOMATIC-CAPTURE",
@@ -1720,7 +1929,9 @@
    "how": "誘発反応で心室の捕捉を確認し、閾値に安全域を加えた出力へ自動調整する。PaceSafeの心室側の総称として用いられる。",
    "params": "Automatic Capture: On／Off；最小出力",
    "models": "ACCOLADE MRI・RESONATE 世代",
-   "equiv": "Medtronic: RV Capture Management™（RVCM）／Ventricular Capture Management™（VCM）\nAbbott: RVCap™ Confirm／Ventricular AutoCapture™\nBIOTRONIK: Ventricular Capture Control（VCC）\nMicroPort CRM: RV Auto-threshold／Ventricular Auto-threshold"
+   "equiv": "Medtronic: RV Capture Management™（RVCM）／Ventricular Capture Management™（VCM）\nAbbott: RVCap™ Confirm／Ventricular AutoCapture™\nBIOTRONIK: Ventricular Capture Control（VCC）\nMicroPort CRM: RV Auto-threshold／Ventricular Auto-threshold",
+   "ecg": "閾値測定の最中だけ、出力が段階的に下がって捕捉が失われる拍が現れ、その直後に高出力のバックアップ刺激が入る。1拍のなかにスパイクが2本並んで見える。",
+   "pitfall": "融合波や偽融合があると捕捉ありと誤判定して出力を下げすぎることがある。誘発反応が小さい症例では測定そのものが成立せず、安全側の固定出力に戻る。テスト中の非捕捉を不具合と取り違えないよう、記録の時刻とテスト周期を照合する。"
   },
   {
    "id": "BSX-VENTRICULAR-PACING-CHAMBER",
@@ -1733,7 +1944,9 @@
    "how": "ペーシング腔をBiV・LV only・RV onlyから設定する。SmartDelayは自己房室伝導の状態に応じて推奨する腔を提示する。",
    "params": "Pacing Chamber: BiV／LV only／RV only",
    "models": "RESONATE X4 世代のCRT-D",
-   "equiv": "Medtronic: —\nAbbott: —\nBIOTRONIK: —\nMicroPort CRM: —"
+   "equiv": "Medtronic: —\nAbbott: —\nBIOTRONIK: —\nMicroPort CRM: —",
+   "ecg": "左室単独に設定すると右室のスパイクが消え、自己の右室興奮と融合したQRSになる。",
+   "pitfall": "房室伝導が障害された症例では左室単独ペーシングは適さない。"
   },
   {
    "id": "BSX-VENTRICULAR-RATE-REGULATION",
@@ -1746,7 +1959,9 @@
    "how": "部分的に伝導された心房性不整脈の際に、心室ペーシングレートを上げてV-V間隔のばらつきを小さくする。CRTでは両室ペーシング率の維持にも寄与する。",
    "params": "VRR: On／Off；VRR上限レート",
    "models": "ACCOLADE MRI・RESONATE 世代",
-   "equiv": "Medtronic: Conducted AF Response（CAFR）\nAbbott: —\nBIOTRONIK: Rate Stabilization\nMicroPort CRM: —"
+   "equiv": "Medtronic: Conducted AF Response（CAFR）\nAbbott: —\nBIOTRONIK: Rate Stabilization\nMicroPort CRM: —",
+   "ecg": "心房細動中に心室ペーシングのレートが自己伝導のレートに合わせて上がり、不規則だったR-R間隔が整って見える。",
+   "pitfall": "R-R間隔は整うが、自己興奮と競合してペーシングが実効的に捕捉していないことがある。「両室ペーシング率は高いのにQRSは自己波形」という状態を見逃さない。"
   },
   {
    "id": "MCP-ATP-IN-FAST-VT-VF-ZONE",
@@ -1759,7 +1974,9 @@
    "how": "Fast VT／VFゾーンでもATPを行える設定。無痛停止の機会を広げる。",
    "params": "ATP in fast VT/VF zone: On／Off",
    "models": "ULYS・PLATINIUM 世代",
-   "equiv": "Medtronic: ATP Before Charging（EV-ICDはFVT設定で可）\nAbbott: ATP prior to charging（ATP prior/during charging）\nBIOTRONIK: ATP one shot／Early ATP one shot（Stableと判定された場合にATP後に充電）\nBoston Scientific: Quick Convert ATP™"
+   "equiv": "Medtronic: ATP Before Charging（EV-ICDはFVT設定で可）\nAbbott: ATP prior to charging（ATP prior/during charging）\nBIOTRONIK: ATP one shot／Early ATP one shot（Stableと判定された場合にATP後に充電）\nBoston Scientific: Quick Convert ATP™",
+   "ecg": "頻拍中に、頻拍周期より短い間隔のペーシングスパイクが連続して入る。停止すれば直後から自己調律またはペーシング調律に戻る。",
+   "pitfall": "ATPにより心室頻拍が加速し、より速い頻拍や心室細動へ移行することがある。低左心機能例や非常に速い頻拍では、シーケンス数を増やしすぎない。"
   },
   {
    "id": "MCP-ACCELERATION-ON-PAC",
@@ -1772,7 +1989,9 @@
    "how": "心房期外収縮を検出すると、その直後のペーシングレートを一時的に上げて代償性ポーズを短くし、以後は徐々に元のレートへ戻す。",
    "params": "Acceleration on PAC: On／Off；加速量",
    "models": "ALIZEA・ULYS・PLATINIUM 世代",
-   "equiv": "Medtronic: Atrial Rate Stabilization（ARS）／Ventricular Rate Stabilization（VRS）\nAbbott: —\nBIOTRONIK: —\nBoston Scientific: —"
+   "equiv": "Medtronic: Atrial Rate Stabilization（ARS）／Ventricular Rate Stabilization（VRS）\nAbbott: —\nBIOTRONIK: —\nBoston Scientific: —",
+   "ecg": "期外収縮の直後の代償性ポーズが短くなり、以後は徐々に元のレートへ戻る。長いR-Rと短いR-Rが交互に現れる所見が減る。",
+   "pitfall": "ペーシング率が上がるため電池消耗が増える。期外収縮そのものを減らす機能ではない。"
   },
   {
    "id": "MCP-ACCELERATION-ON-PVC",
@@ -1785,7 +2004,9 @@
    "how": "心室期外収縮を検出すると、その直後のペーシングレートを一時的に上げて代償性ポーズを短くし、以後は徐々に元のレートへ戻す。",
    "params": "Acceleration on PVC: On／Off；加速量",
    "models": "ALIZEA・ULYS・PLATINIUM 世代",
-   "equiv": "Medtronic: Atrial Rate Stabilization（ARS）／Ventricular Rate Stabilization（VRS）\nAbbott: —\nBIOTRONIK: —\nBoston Scientific: —"
+   "equiv": "Medtronic: Atrial Rate Stabilization（ARS）／Ventricular Rate Stabilization（VRS）\nAbbott: —\nBIOTRONIK: —\nBoston Scientific: —",
+   "ecg": "期外収縮の直後の代償性ポーズが短くなり、以後は徐々に元のレートへ戻る。長いR-Rと短いR-Rが交互に現れる所見が減る。",
+   "pitfall": "ペーシング率が上がるため電池消耗が増える。期外収縮そのものを減らす機能ではない。"
   },
   {
    "id": "MCP-ACCELERATION",
@@ -1798,7 +2019,9 @@
    "how": "自己レートの急激な低下を検出すると、設定レートまで加速してペーシングする。",
    "params": "Acceleration: On／Off；介入レート",
    "models": "ALIZEA・KORA 世代",
-   "equiv": "Medtronic: Rate Drop Response（RDR）\nAbbott: Advanced Hysteresis\nBIOTRONIK: Rate Fading\nBoston Scientific: Sudden Brady Response（SBR）"
+   "equiv": "Medtronic: Rate Drop Response（RDR）\nAbbott: Advanced Hysteresis\nBIOTRONIK: Rate Fading\nBoston Scientific: Sudden Brady Response（SBR）",
+   "ecg": "自己レートの急な低下の直後から、下限レートより明らかに高いレートでのペーシングが一定時間続き、その後は段階的に下限レートへ戻る。発作の前後で心拍数が階段状に変化する。",
+   "pitfall": "心抑制型の血管迷走神経性失神が対象で、血管抑制型（血圧低下が主体）には効果が乏しい。介入レートを高くしすぎると動悸や不要な高頻度ペーシングにつながる。"
   },
   {
    "id": "MCP-ATRIAL-AUTO-THRESHOLD",
@@ -1811,7 +2034,9 @@
    "how": "定期的に心房閾値を測定し、安全域を加えた出力へ自動調整する。測定結果はトレンドとして記録される。",
    "params": "Atrial Auto-threshold: On／Off；安全域",
    "models": "ALIZEA・ULYS・PLATINIUM 世代",
-   "equiv": "Medtronic: Atrial Capture Management™（ACM）\nAbbott: ACap™ Confirm\nBIOTRONIK: Atrial Capture Control（ACC）\nBoston Scientific: PaceSafe™ RA Automatic Threshold"
+   "equiv": "Medtronic: Atrial Capture Management™（ACM）\nAbbott: ACap™ Confirm\nBIOTRONIK: Atrial Capture Control（ACC）\nBoston Scientific: PaceSafe™ RA Automatic Threshold",
+   "ecg": "閾値測定の最中だけ、出力が段階的に下がって捕捉が失われる拍が現れ、その直後に高出力のバックアップ刺激が入る。1拍のなかにスパイクが2本並んで見える。",
+   "pitfall": "融合波や偽融合があると捕捉ありと誤判定して出力を下げすぎることがある。誘発反応が小さい症例では測定そのものが成立せず、安全側の固定出力に戻る。テスト中の非捕捉を不具合と取り違えないよう、記録の時刻とテスト周期を照合する。"
   },
   {
    "id": "MCP-ATRIAL-OVERDRIVE",
@@ -1824,7 +2049,9 @@
    "how": "自己の心房レートに追随したオーバードライブを行い、心房刺激の割合を高めて心房性不整脈の発生を抑える。",
    "params": "Atrial Overdrive: On／Off；最大介入レート",
    "models": "ALIZEA・ULYS・PLATINIUM 世代",
-   "equiv": "Medtronic: Atrial Preference Pacing（APP）／Post Mode Switch Overdrive Pacing（PMOP）／Sinus Preference\nAbbott: AF Suppression™\nBIOTRONIK: Overdrive Prevention Pacing\nBoston Scientific: AP Scan™／Atrial Preference Pacing（APP）／ProACt"
+   "equiv": "Medtronic: Atrial Preference Pacing（APP）／Post Mode Switch Overdrive Pacing（PMOP）／Sinus Preference\nAbbott: AF Suppression™\nBIOTRONIK: Overdrive Prevention Pacing\nBoston Scientific: AP Scan™／Atrial Preference Pacing（APP）／ProACt",
+   "ecg": "心房ペーシング率がほぼ100％になり、自己P波がほとんど見えなくなる。心拍数は自己の洞レートよりわずかに速い状態で推移する。",
+   "pitfall": "心房ペーシングが増えるため電池消耗が大きくなる。心房細動の発症を減らす効果は臨床試験で一貫していないため、効果を過大に見積もらない。"
   },
   {
    "id": "MCP-ATRIAL-PACING-ON-PVC",
@@ -1837,7 +2064,9 @@
    "how": "心室期外収縮の後、適切なタイミングで心房刺激を行い、房室同期の乱れと逆行性伝導によるPMTの誘発を抑える。",
    "params": "Atrial Pacing on PVC: On／Off",
    "models": "ALIZEA・ULYS・PLATINIUM 世代",
-   "equiv": "Medtronic: Atrial Rate Stabilization（ARS）／Ventricular Rate Stabilization（VRS）\nAbbott: —\nBIOTRONIK: —\nBoston Scientific: —"
+   "equiv": "Medtronic: Atrial Rate Stabilization（ARS）／Ventricular Rate Stabilization（VRS）\nAbbott: —\nBIOTRONIK: —\nBoston Scientific: —",
+   "ecg": "心室期外収縮の直後に心房刺激が入り、房室同期が保たれる。",
+   "pitfall": "逆行性伝導のある症例ではPMTの誘発に注意する。"
   },
   {
    "id": "MCP-AUTOSENSITIVITYCONTROL",
@@ -1850,7 +2079,9 @@
    "how": "感知した波高に応じて感度を自動的に調整し、オーバーセンシングとアンダーセンシングの双方を抑える。感度は段階（Sensitivity levels）で指定する。",
    "params": "Sensitivity levels",
    "models": "ULYS・PLATINIUM 世代",
-   "equiv": "Medtronic: Sensing Assurance\nAbbott: SenseAbility™\nBIOTRONIK: Automatic Sensitivity Control\nBoston Scientific: Automatic Gain Control（AGC）"
+   "equiv": "Medtronic: Sensing Assurance\nAbbott: SenseAbility™\nBIOTRONIK: Automatic Sensitivity Control\nBoston Scientific: Automatic Gain Control（AGC）",
+   "ecg": "T波を二重に感知すると、マーカー上は自己心拍の2倍のレートが記録される。体表心電図のレートと本体が記録したレートが合わないのが手がかり。",
+   "pitfall": "感度を鋭くしすぎるとT波オーバーセンシングや筋電位の誤感知が起こり、ペーシング抑制や不適切作動につながる。逆に鈍くしすぎると細動波のアンダーセンシングを招く。どちらに振っても危険側があるため、設定変更後は必ず感知の確認を行う。"
   },
   {
    "id": "MCP-AUTOMATIC-IMPLANT-DETECTION",
@@ -1876,7 +2107,8 @@
    "how": "過去のエピソードでの停止成否に応じて、実施するATPの種類や順序を自動的に切り替える。",
    "params": "Autoswitch ATP: On／Off",
    "models": "ULYS／PLATINIUM 世代のICD／PLATINIUM SonR-R 世代のCRT-D",
-   "equiv": "Medtronic: ChargeSaver™／Switchback™／Smart Mode／Intrinsic ATP™（iATP）\nAbbott: —\nBIOTRONIK: ATP Optimization\nBoston Scientific: —"
+   "equiv": "Medtronic: ChargeSaver™／Switchback™／Smart Mode／Intrinsic ATP™（iATP）\nAbbott: —\nBIOTRONIK: ATP Optimization\nBoston Scientific: —",
+   "pitfall": "過去の成績に基づく調整のため、頻拍の性質が変わると最適でなくなることがある。"
   },
   {
    "id": "MCP-BRADY-TACHY-OVERLAP",
@@ -1889,7 +2121,8 @@
    "how": "上限追従レートと頻拍検出レートが重なる帯域では通常VTの検出ができないが、PARAD+の判定と組み合わせてこの帯域でもVTを検出できるようにする。",
    "params": "BTO: On／Off",
    "models": "ULYS／PLATINIUM 世代のICD／PLATINIUM SonR-R 世代のCRT-D",
-   "equiv": "Medtronic: —\nAbbott: —\nBIOTRONIK: Sustained VT\nBoston Scientific: SRD（Sustained Rate Duration）"
+   "equiv": "Medtronic: —\nAbbott: —\nBIOTRONIK: Sustained VT\nBoston Scientific: SRD（Sustained Rate Duration）",
+   "pitfall": "徐脈ペーシングの上限と頻拍検出帯が重なる領域を扱うため、上限追従レートの設定と併せて確認する。"
   },
   {
    "id": "MCP-DPLUSTM",
@@ -1902,7 +2135,9 @@
    "how": "AVディレイを設定量まで延長して自己房室伝導の出現を待つ。伝導が確認できる間は心室刺激を抑制する。",
    "params": "Dplus: On／Off；延長量（ms）",
    "models": "ALIZEA・ULYS・PLATINIUM 世代",
-   "equiv": "Medtronic: Search AV+（SAV+）\nAbbott: Ventricular Intrinsic Preference（VIP™）\nBIOTRONIK: Intrinsic Rhythm Support（IRSplus）／Positive AV Hysteresis with Scan/Repetitive\nBoston Scientific: AV Search +"
+   "equiv": "Medtronic: Search AV+（SAV+）\nAbbott: Ventricular Intrinsic Preference（VIP™）\nBIOTRONIK: Intrinsic Rhythm Support（IRSplus）／Positive AV Hysteresis with Scan/Repetitive\nBoston Scientific: AV Search +",
+   "ecg": "AV間隔が延長し、自己房室伝導が出ている間は心室スパイクが出ない。",
+   "pitfall": "探索中は一時的にAV間隔が大きく延長するため、房室同期が崩れて動悸や血圧低下を自覚することがある。CRT症例では両室ペーシングの脱落につながるため、原則として使用しない。"
   },
   {
    "id": "MCP-LV-AUTO-THRESHOLD",
@@ -1915,7 +2150,9 @@
    "how": "左室の閾値を定期的に測定し、安全域を加えた出力へ自動調整する。",
    "params": "LV Auto-threshold: On／Off；安全域",
    "models": "PLATINIUM SonR-R 世代のCRT-D",
-   "equiv": "Medtronic: LV Capture Management™（LVCM）\nAbbott: BiVCap™ Confirm／LVCap™ Confirm\nBIOTRONIK: LV Capture Control（LVCC）\nBoston Scientific: PaceSafe™ LV Automatic Threshold"
+   "equiv": "Medtronic: LV Capture Management™（LVCM）\nAbbott: BiVCap™ Confirm／LVCap™ Confirm\nBIOTRONIK: LV Capture Control（LVCC）\nBoston Scientific: PaceSafe™ LV Automatic Threshold",
+   "ecg": "閾値測定の最中だけ、出力が段階的に下がって捕捉が失われる拍が現れ、その直後に高出力のバックアップ刺激が入る。1拍のなかにスパイクが2本並んで見える。",
+   "pitfall": "融合波や偽融合があると捕捉ありと誤判定して出力を下げすぎることがある。誘発反応が小さい症例では測定そのものが成立せず、安全側の固定出力に戻る。テスト中の非捕捉を不具合と取り違えないよう、記録の時刻とテスト周期を照合する。"
   },
   {
    "id": "MCP-LV-MULTIPOINT-PACING",
@@ -1929,7 +2166,9 @@
    "params": "LV Multipoint Pacing: On／Off；LV1-LV2ディレイ",
    "models": "PLATINIUM SonR-R 世代のCRT-D",
    "equiv": "Medtronic: Multiple Point Pacing（MPP）\nAbbott: MultiPoint™ Pacing\nBIOTRONIK: Multipole Pacing（MPP）\nBoston Scientific: LV Multisite Pacing",
-   "caution": "刺激回数が増えるため電池消耗が大きくなる。"
+   "caution": "刺激回数が増えるため電池消耗が大きくなる。",
+   "ecg": "1拍のなかに心室のスパイクが3本（左室2点＋右室）並ぶ。QRSの形が両室ペーシング単独のときと変わる。",
+   "pitfall": "刺激回数が増えるぶん電池消耗が大きい。左室の刺激部位が増えることで横隔神経刺激が出ることがある。"
   },
   {
    "id": "MCP-LEAD-POLARITY-SWITCH",
@@ -1943,7 +2182,9 @@
    "params": "Lead Polarity Switch: On／Off",
    "models": "ALIZEA・ULYS・PLATINIUM 世代",
    "equiv": "Medtronic: —\nAbbott: Auto Lead Polarity Detection\nBIOTRONIK: —\nBoston Scientific: Automatic Lead Recognition／Lead Safety Switch",
-   "caution": "単極へ切り替わると心電図上のスパイクが大きくなり、大胸筋刺激が起こることがある。"
+   "caution": "単極へ切り替わると心電図上のスパイクが大きくなり、大胸筋刺激が起こることがある。",
+   "ecg": "単極へ切り替わると心電図上のペーシングスパイクが急に大きくなる。双極では小さいスパイクに戻る。",
+   "pitfall": "単極へ切り替わると大胸筋刺激が起こることがある。切替はリード異常の兆候なので、原因の確認を優先する。"
   },
   {
    "id": "MCP-MODE-SWITCHING",
@@ -1956,7 +2197,9 @@
    "how": "WARAD（心房レート加速検出窓）の中で心房:心室がn:1となる拍をサスピションフェーズとして計数し、条件を満たすとDDI(R)などへ切り替える。",
    "params": "Mode Switching: On／Off；Fallbackレート",
    "models": "ALIZEA・ULYS・PLATINIUM 世代",
-   "equiv": "Medtronic: Mode Switch（AT/AFエビデンスカウント）\nAbbott: Auto Mode Switch（AMS／FARI）\nBIOTRONIK: Mode Switching\nBoston Scientific: ATR Mode Switch"
+   "equiv": "Medtronic: Mode Switch（AT/AFエビデンスカウント）\nAbbott: Auto Mode Switch（AMS／FARI）\nBIOTRONIK: Mode Switching\nBoston Scientific: ATR Mode Switch",
+   "ecg": "心房頻拍の間は心室の追従が止まり、心室レートが下限レートやセンサ指示レートまで落ちる。心房の速い波形と、それに追従しない規則的な心室ペーシングが同時に見える。復帰時は追従が戻る。",
+   "pitfall": "ファーフィールドR波を心房で拾うと、洞調律でも不適切にモードスイッチが起こり心室レートが落ちる。逆に心房波高が低くアンダーセンシングになると、心房頻拍でもモードスイッチせず速い心室追従が続く。心房不応期（PVAB）と心房感度の設定を確認する。"
   },
   {
    "id": "MCP-PAC-PAUSE-SUPPRESSION",
@@ -1969,7 +2212,9 @@
    "how": "心房期外収縮の後に生じる代償性ポーズを検出し、心房刺激を早めに出してポーズを短縮する。",
    "params": "PAC Pause Suppression: On／Off",
    "models": "ALIZEA・ULYS・PLATINIUM 世代",
-   "equiv": "Medtronic: Atrial Rate Stabilization（ARS）／Ventricular Rate Stabilization（VRS）\nAbbott: —\nBIOTRONIK: —\nBoston Scientific: —"
+   "equiv": "Medtronic: Atrial Rate Stabilization（ARS）／Ventricular Rate Stabilization（VRS）\nAbbott: —\nBIOTRONIK: —\nBoston Scientific: —",
+   "ecg": "期外収縮の直後の代償性ポーズが短くなり、以後は徐々に元のレートへ戻る。長いR-Rと短いR-Rが交互に現れる所見が減る。",
+   "pitfall": "ペーシング率が上がるため電池消耗が増える。期外収縮そのものを減らす機能ではない。"
   },
   {
    "id": "MCP-PARADTM",
@@ -1982,7 +2227,8 @@
    "how": "R-R間隔の安定性、PR間隔の同期性、加速の様式の順に評価してVTと上室頻拍を区別する。Brady-Tachy Overlapと組み合わせて上限追従レート帯でも検出できる。",
    "params": "PARAD+: On／Off",
    "models": "ULYS／PLATINIUM 世代のICD／PLATINIUM SonR-R 世代のCRT-D",
-   "equiv": "Medtronic: PR Logic™\nAbbott: Rate Branch\nBIOTRONIK: SMART® Detection\nBoston Scientific: Rhythm ID™"
+   "equiv": "Medtronic: PR Logic™\nAbbott: Rate Branch\nBIOTRONIK: SMART® Detection\nBoston Scientific: Rhythm ID™",
+   "pitfall": "1:1房室伝導を伴う上室頻拍では鑑別が難しい。"
   },
   {
    "id": "MCP-PVC-PAUSE-SUPPRESSION",
@@ -1995,7 +2241,9 @@
    "how": "心室期外収縮の後に生じる代償性ポーズを検出し、刺激を早めに出してポーズを短縮する。",
    "params": "PVC Pause Suppression: On／Off",
    "models": "ALIZEA・ULYS・PLATINIUM 世代",
-   "equiv": "Medtronic: Atrial Rate Stabilization（ARS）／Ventricular Rate Stabilization（VRS）\nAbbott: —\nBIOTRONIK: —\nBoston Scientific: —"
+   "equiv": "Medtronic: Atrial Rate Stabilization（ARS）／Ventricular Rate Stabilization（VRS）\nAbbott: —\nBIOTRONIK: —\nBoston Scientific: —",
+   "ecg": "期外収縮の直後の代償性ポーズが短くなり、以後は徐々に元のレートへ戻る。長いR-Rと短いR-Rが交互に現れる所見が減る。",
+   "pitfall": "ペーシング率が上がるため電池消耗が増える。期外収縮そのものを減らす機能ではない。"
   },
   {
    "id": "MCP-POLARITY-ALTERNATION-ON-MAX-SHOCK",
@@ -2008,7 +2256,8 @@
    "how": "最大出力のショックが無効だった場合、次の放電で極性を入れ替えて再試行する。除細動閾値が高い症例での対応手段の一つ。",
    "params": "Polarity alternation on Max shock: On／Off",
    "models": "ULYS／PLATINIUM 世代のICD／PLATINIUM SonR-R 世代のCRT-D",
-   "equiv": "Medtronic: ショック極性（Normal／Reverse／Alternating）\nAbbott: DeFT Response™\nBIOTRONIK: Biphasic 2（Phase 2の調整）\nBoston Scientific: —"
+   "equiv": "Medtronic: ショック極性（Normal／Reverse／Alternating）\nAbbott: DeFT Response™\nBIOTRONIK: Biphasic 2（Phase 2の調整）\nBoston Scientific: —",
+   "pitfall": "極性変更は除細動閾値が高い症例での対応手段であり、根本的な原因（リード位置・システム構成）の評価が先。"
   },
   {
    "id": "MCP-POST-EXTRASYSTOLIC-PAUSE-SUPPRESSION",
@@ -2021,7 +2270,9 @@
    "how": "期外収縮の後に生じる長いポーズを検出し、刺激間隔を短縮して血行動態の乱れと自覚症状を減らす。",
    "params": "Post Extrasystolic Pause Suppression: On／Off",
    "models": "ALIZEA・ULYS・PLATINIUM 世代",
-   "equiv": "Medtronic: Atrial Rate Stabilization（ARS）／Ventricular Rate Stabilization（VRS）\nAbbott: —\nBIOTRONIK: —\nBoston Scientific: —"
+   "equiv": "Medtronic: Atrial Rate Stabilization（ARS）／Ventricular Rate Stabilization（VRS）\nAbbott: —\nBIOTRONIK: —\nBoston Scientific: —",
+   "ecg": "期外収縮の直後の代償性ポーズが短くなり、以後は徐々に元のレートへ戻る。長いR-Rと短いR-Rが交互に現れる所見が減る。",
+   "pitfall": "ペーシング率が上がるため電池消耗が増える。期外収縮そのものを減らす機能ではない。"
   },
   {
    "id": "MCP-POST-SHOCK-PACING-MODE",
@@ -2034,7 +2285,9 @@
    "how": "ショックの直後、一定時間だけ設定したモード・レート・出力でペーシングを行い、治療後の心停止や徐脈に備える。",
    "params": "Post-shock pacing: モード；レート；出力；持続時間",
    "models": "ULYS／PLATINIUM 世代のICD／PLATINIUM SonR-R 世代のCRT-D",
-   "equiv": "Medtronic: Post VT/VF Shock Pacing\nAbbott: —\nBIOTRONIK: —\nBoston Scientific: Post Therapy Pacing"
+   "equiv": "Medtronic: Post VT/VF Shock Pacing\nAbbott: —\nBIOTRONIK: —\nBoston Scientific: Post Therapy Pacing",
+   "ecg": "ショックやATPの直後、一定時間だけ通常より高いレート・高い出力でのペーシングが続く。",
+   "pitfall": "治療直後の徐脈に備える設定であり、高すぎるレートは心筋酸素需要を増やす。"
   },
   {
    "id": "MCP-RV-AUTO-THRESHOLD",
@@ -2047,7 +2300,9 @@
    "how": "右室の閾値を定期的に測定し、安全域を加えた出力へ自動調整する。",
    "params": "RV Auto-threshold: On／Off；安全域",
    "models": "ALIZEA・ULYS・PLATINIUM 世代",
-   "equiv": "Medtronic: RV Capture Management™（RVCM）／Ventricular Capture Management™（VCM）\nAbbott: RVCap™ Confirm／Ventricular AutoCapture™\nBIOTRONIK: Ventricular Capture Control（VCC）\nBoston Scientific: PaceSafe™ RV Automatic Capture／PaceSafe™ RV Automatic Threshold／Ventricular Automatic Capture"
+   "equiv": "Medtronic: RV Capture Management™（RVCM）／Ventricular Capture Management™（VCM）\nAbbott: RVCap™ Confirm／Ventricular AutoCapture™\nBIOTRONIK: Ventricular Capture Control（VCC）\nBoston Scientific: PaceSafe™ RV Automatic Capture／PaceSafe™ RV Automatic Threshold／Ventricular Automatic Capture",
+   "ecg": "閾値測定の最中だけ、出力が段階的に下がって捕捉が失われる拍が現れ、その直後に高出力のバックアップ刺激が入る。1拍のなかにスパイクが2本並んで見える。",
+   "pitfall": "融合波や偽融合があると捕捉ありと誤判定して出力を下げすぎることがある。誘発反応が小さい症例では測定そのものが成立せず、安全側の固定出力に戻る。テスト中の非捕捉を不具合と取り違えないよう、記録の時刻とテスト周期を照合する。"
   },
   {
    "id": "MCP-SAFERTM",
@@ -2061,7 +2316,9 @@
    "params": "SafeR: On／Off；移行条件の設定",
    "models": "ALIZEA・ULYS・PLATINIUM 世代",
    "equiv": "Medtronic: Managed Ventricular Pacing（MVP™）\nAbbott: —\nBIOTRONIK: Vp Suppression\nBoston Scientific: RYTHMIQ™",
-   "caution": "AAI(R)動作中はAV間隔が長くなるため、逆行性室房伝導があるとRNRVASを誘発することがある。"
+   "caution": "AAI(R)動作中はAV間隔が長くなるため、逆行性室房伝導があるとRNRVASを誘発することがある。",
+   "ecg": "AAI(R)で動作し、ポーズ・2度房室ブロック・3度房室ブロックのいずれかを検出した時点でDDD(R)へ移行する。移行の直前に対応する所見（ポーズや連続する脱落）が記録に残る。",
+   "pitfall": "移行条件を満たすまでは心室が脱落するため、症状のある症例では条件設定を見直す。"
   },
   {
    "id": "MCP-SLEEP-APNEA-MONITORING",
@@ -2075,7 +2332,8 @@
    "params": "SAM: On／Off；解析時間帯",
    "models": "ALIZEA・ULYS・PLATINIUM 世代",
    "equiv": "Medtronic: —\nAbbott: —\nBIOTRONIK: —\nBoston Scientific: —",
-   "caution": "スクリーニングの補助であり、睡眠ポリグラフの代替にはならない。"
+   "caution": "スクリーニングの補助であり、睡眠ポリグラフの代替にはならない。",
+   "pitfall": "スクリーニングの補助であり、睡眠ポリグラフ検査の代替にはならない。"
   },
   {
    "id": "MCP-SONRTM-CRT-OPTIMIZATION",
@@ -2089,7 +2347,8 @@
    "params": "SonR最適化: On／Off；最適化の頻度",
    "models": "PLATINIUM SonR-R 世代のCRT-D",
    "equiv": "Medtronic: AdaptivCRT™／CardioSync™ Optimization\nAbbott: QuickOpt™ Optimization／SyncAV™ CRT／SyncAV™ Plus CRT\nBIOTRONIK: —\nBoston Scientific: SmartDelay™ Optimization／SmartCRT™",
-   "caution": "専用のSonRtipリードが必要で、通常の心房リードでは使用できない。"
+   "caution": "専用のSonRtipリードが必要で、通常の心房リードでは使用できない。",
+   "pitfall": "専用のSonRtipリードが必要で、通常の心房リードでは使用できない。"
   },
   {
    "id": "MCP-VENTRICULAR-AUTO-THRESHOLD",
@@ -2102,7 +2361,9 @@
    "how": "心室の閾値を定期的に測定し、安全域を加えた出力へ自動調整する。RV／LVそれぞれの自動閾値測定を含む総称。",
    "params": "Ventricular Auto-threshold: On／Off；安全域",
    "models": "ALIZEA・ULYS・PLATINIUM 世代",
-   "equiv": "Medtronic: RV Capture Management™（RVCM）／Ventricular Capture Management™（VCM）\nAbbott: RVCap™ Confirm／Ventricular AutoCapture™\nBIOTRONIK: Ventricular Capture Control（VCC）\nBoston Scientific: PaceSafe™ RV Automatic Capture／PaceSafe™ RV Automatic Threshold／Ventricular Automatic Capture"
+   "equiv": "Medtronic: RV Capture Management™（RVCM）／Ventricular Capture Management™（VCM）\nAbbott: RVCap™ Confirm／Ventricular AutoCapture™\nBIOTRONIK: Ventricular Capture Control（VCC）\nBoston Scientific: PaceSafe™ RV Automatic Capture／PaceSafe™ RV Automatic Threshold／Ventricular Automatic Capture",
+   "ecg": "閾値測定の最中だけ、出力が段階的に下がって捕捉が失われる拍が現れ、その直後に高出力のバックアップ刺激が入る。1拍のなかにスパイクが2本並んで見える。",
+   "pitfall": "融合波や偽融合があると捕捉ありと誤判定して出力を下げすぎることがある。誘発反応が小さい症例では測定そのものが成立せず、安全側の固定出力に戻る。テスト中の非捕捉を不具合と取り違えないよう、記録の時刻とテスト周期を照合する。"
   },
   {
    "id": "BIO-LV-CAPTURE-CONTROL",
@@ -2115,7 +2376,9 @@
    "how": "左室の閾値を定期的に測定し、安全域を加えた出力へ自動設定する。左室閾値の上昇による両室ペーシングの脱落を早期に見つけられる。",
    "params": "LVCC: Auto／ATM（Monitor）／Off；安全域",
    "models": "Rivacor 7 HF-T／Ilivia Neo 7 HF-T 世代のCRT-D",
-   "equiv": "Medtronic: LV Capture Management™（LVCM）\nAbbott: BiVCap™ Confirm／LVCap™ Confirm\nBoston Scientific: PaceSafe™ LV Automatic Threshold\nMicroPort CRM: LV Auto-threshold"
+   "equiv": "Medtronic: LV Capture Management™（LVCM）\nAbbott: BiVCap™ Confirm／LVCap™ Confirm\nBoston Scientific: PaceSafe™ LV Automatic Threshold\nMicroPort CRM: LV Auto-threshold",
+   "ecg": "閾値測定の最中だけ、出力が段階的に下がって捕捉が失われる拍が現れ、その直後に高出力のバックアップ刺激が入る。1拍のなかにスパイクが2本並んで見える。",
+   "pitfall": "融合波や偽融合があると捕捉ありと誤判定して出力を下げすぎることがある。誘発反応が小さい症例では測定そのものが成立せず、安全側の固定出力に戻る。テスト中の非捕捉を不具合と取り違えないよう、記録の時刻とテスト周期を照合する。"
   }
  ]
 }
