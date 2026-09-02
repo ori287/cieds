@@ -39,7 +39,7 @@
    "how": "自己房室伝導と自己QRS幅を定期的に評価し、伝導が保たれていれば左室単独ペーシングで自己興奮と融合させ、房室伝導が障害されていれば両室ペーシングに切り替える。AV・VVディレイも自動調整する。",
    "params": "AdaptivCRT: Adaptive BiV and LV／Adaptive BiV／Non-adaptive CRT",
    "models": "Cobalt XT HF／Claria／Percepta 世代のCRT",
-   "equiv": "Abbott: QuickOpt™ Optimization／SyncAV™ CRT／SyncAV™ Plus CRT\nBIOTRONIK: —\nBoston Scientific: SmartDelay™ Optimization／SmartCRT™\nMicroPort CRM: SonR™ CRT Optimization"
+   "equiv": "Abbott: QuickOpt™ Optimization／SyncAV™ CRT／SyncAV™ Plus CRT\nBIOTRONIK: —\nBoston Scientific: SmartCRT™／SmartDelay™ Optimization\nMicroPort CRM: SonR™ CRT Optimization"
   },
   {
    "id": "MDT-ATRIAL-CAPTURE-MANAGEMENTTM",
@@ -104,7 +104,7 @@
    "how": "上限追従レート付近やブロックされた心房期外収縮の後で心房追従が失われたとき、AVディレイと不応期の扱いを調整して追従を回復させ、両室ペーシングの脱落を防ぐ。",
    "params": "Atrial Tracking Recovery: On／Off",
    "models": "Cobalt XT HF・Percepta 世代",
-   "equiv": "Abbott: —\nBIOTRONIK: WKB Behaviour／PVC discrimination after As\nBoston Scientific: Tracking Preference\nMicroPort CRM: —"
+   "equiv": "Abbott: —\nBIOTRONIK: PVC discrimination after As／WKB Behaviour\nBoston Scientific: Tracking Preference\nMicroPort CRM: —"
   },
   {
    "id": "MDT-BURST-RAMP-RAMP",
@@ -130,33 +130,7 @@
    "how": "心内電位の時間関係を測定し、AVディレイとVVディレイの推奨値を算出して提示する。デバイス上で完結する至適化手段。",
    "params": "測定の実行；推奨値の適用",
    "models": "Cobalt XT HF／Claria／Percepta 世代のCRT",
-   "equiv": "Abbott: QuickOpt™ Optimization／SyncAV™ CRT／SyncAV™ Plus CRT\nBIOTRONIK: —\nBoston Scientific: SmartDelay™ Optimization／SmartCRT™\nMicroPort CRM: SonR™ CRT Optimization"
-  },
-  {
-   "id": "MDT-CARELINK",
-   "maker": "Medtronic",
-   "cat": "リモート",
-   "name": "CareLink",
-   "generic": "リモートモニタリング",
-   "device": "PM / ICD / CRT",
-   "scope": "デバイス情報を遠隔で確認する",
-   "how": "自宅の送信機やスマートフォンアプリからデータをサーバへ送り、施設側がブラウザで確認する。定期送信とアラート送信がある。",
-   "params": "定期送信スケジュール；アラート設定",
-   "models": "Azure XT・Cobalt XT 世代",
-   "equiv": "Abbott: Merlin.net\nBIOTRONIK: Home Monitoring\nBoston Scientific: LATITUDE NXT\nMicroPort CRM: SMARTVIEW（SmartView Connect）",
-   "caution": "緊急通報システムではないことを患者へ説明する。"
-  },
-  {
-   "id": "MDT-CARELINK-2",
-   "maker": "Medtronic",
-   "cat": "機器",
-   "name": "CareLink プログラマ（Encore 2090／SmartSync）",
-   "generic": "プログラマ",
-   "device": "PM / ICD / CRT",
-   "scope": "デバイスの設定変更とデータ読み出しを行う",
-   "how": "自社デバイスと通信して設定変更・測定・記録の読み出しを行う。SmartSyncはタブレット型。",
-   "models": "全世代",
-   "equiv": "Abbott: Merlin PCS\nBIOTRONIK: Renamic（ICS 3000）\nBoston Scientific: ZOOM／LATITUDE Programming System\nMicroPort CRM: Orchestra Plus"
+   "equiv": "Abbott: QuickOpt™ Optimization／SyncAV™ CRT／SyncAV™ Plus CRT\nBIOTRONIK: —\nBoston Scientific: SmartCRT™／SmartDelay™ Optimization\nMicroPort CRM: SonR™ CRT Optimization"
   },
   {
    "id": "MDT-CHARGESAVERTM-SWITCHBACKTM-SMART-MODE",
@@ -305,32 +279,6 @@
    "caution": "AAI(R)動作中はAV間隔が長くなるため、逆行性室房伝導があるとRNRVASを誘発することがある。"
   },
   {
-   "id": "MDT-MICRA-AV-AV2",
-   "maker": "Medtronic",
-   "cat": "Leadless",
-   "name": "Micra AV／AV2",
-   "generic": "リードレスペースメーカ",
-   "device": "Leadless",
-   "scope": "心房リードなしで房室同期をとる",
-   "how": "内蔵加速度センサが心房の機械的収縮（A4シグナル）を検出し、それを心房イベントとみなしてVDD様に動作する。AV2では感知の設定が簡略化されている。",
-   "params": "A4ウインドウ；A3/A4閾値",
-   "models": "Micra AV／AV2",
-   "equiv": "Abbott: AVEIR VR／AVEIR AR／AVEIR DR（i2i通信）\nBIOTRONIK: —\nBoston Scientific: —\nMicroPort CRM: —",
-   "caution": "心房の機械的収縮を利用するため、心房細動や心房収縮が乏しい症例では同期が得られにくい。"
-  },
-  {
-   "id": "MDT-MICRA-VR",
-   "maker": "Medtronic",
-   "cat": "Leadless",
-   "name": "Micra VR",
-   "generic": "リードレスペースメーカ",
-   "device": "Leadless",
-   "scope": "リードとポケットを用いずに心室ペーシングを行う",
-   "how": "右室内にカプセル型本体を留置し、ニチノールタインで固定してVVI(R)で動作する。大腿静脈からデリバリーカテーテルで送達する。",
-   "models": "Micra VR",
-   "equiv": "Abbott: AVEIR VR／AVEIR AR／AVEIR DR（i2i通信）\nBIOTRONIK: —\nBoston Scientific: —\nMicroPort CRM: —"
-  },
-  {
    "id": "MDT-MODE-SWITCH",
    "maker": "Medtronic",
    "cat": "ペーシング管理",
@@ -356,30 +304,6 @@
    "models": "Cobalt XT HF／Claria／Percepta 世代のCRT",
    "equiv": "Abbott: MultiPoint™ Pacing\nBIOTRONIK: Multipole Pacing（MPP）\nBoston Scientific: LV Multisite Pacing\nMicroPort CRM: LV Multipoint Pacing",
    "caution": "刺激回数が増えるため電池消耗が大きくなる。"
-  },
-  {
-   "id": "MDT-MYCARELINK-RELAY",
-   "maker": "Medtronic",
-   "cat": "リモート",
-   "name": "MyCareLink Relay／スマートフォンアプリ",
-   "generic": "遠隔モニタリング送信機",
-   "device": "PM / ICD / CRT",
-   "scope": "デバイスのデータをサーバへ中継する",
-   "how": "設置型のリレー機器またはスマートフォンアプリがデバイスと無線通信し、データをCareLinkへ送信する。",
-   "models": "Azure XT・Cobalt XT 世代",
-   "equiv": "Abbott: Merlin@home／myMerlinアプリ\nBIOTRONIK: Cardio Messenger smart\nBoston Scientific: LATITUDE コミュニケータ\nMicroPort CRM: スマートビューコネクト"
-  },
-  {
-   "id": "MDT-OMNIASECURE",
-   "maker": "Medtronic",
-   "cat": "CSP",
-   "name": "OmniaSecure",
-   "generic": "His/左脚領域ペーシング（CSP）ツール",
-   "device": "PM / CRT",
-   "scope": "刺激伝導系ペーシング用の細径リード",
-   "how": "3830の設計を踏襲した細径のルーメンレスリード。",
-   "models": "OmniaSecure",
-   "equiv": "Abbott: UltiPace／AVEIR CSP（開発中）\nBIOTRONIK: Solia S＋Selectra 3D\nBoston Scientific: INGEVITY+\nMicroPort CRM: —"
   },
   {
    "id": "MDT-ONSET",
@@ -516,18 +440,6 @@
    "equiv": "Abbott: Ventricular Intrinsic Preference（VIP™）\nBIOTRONIK: Intrinsic Rhythm Support（IRSplus）／Positive AV Hysteresis with Scan/Repetitive\nBoston Scientific: AV Search +\nMicroPort CRM: Dplus™"
   },
   {
-   "id": "MDT-SELECTSECURE-3830-C315-C304",
-   "maker": "Medtronic",
-   "cat": "CSP",
-   "name": "SelectSecure 3830＋C315／C304シース",
-   "generic": "His/左脚領域ペーシング（CSP）ツール",
-   "device": "PM / CRT",
-   "scope": "刺激伝導系ペーシング用のリードとデリバリーシース",
-   "how": "3830はスタイレット内腔を持たないルーメンレスリードで、専用シースで目標部位へ運ぶ。C315は固定形状、C304は可変形状。",
-   "models": "3830／C315／C304",
-   "equiv": "Abbott: UltiPace／AVEIR CSP（開発中）\nBIOTRONIK: Solia S＋Selectra 3D\nBoston Scientific: INGEVITY+\nMicroPort CRM: —"
-  },
-  {
    "id": "MDT-SENSING-ASSURANCE",
    "maker": "Medtronic",
    "cat": "センシング",
@@ -577,20 +489,6 @@
    "params": "Stability: On／Off；判定値（ms）",
    "models": "Cobalt XT／Evera 世代のICD／Cobalt XT HF／Claria／Percepta 世代のCRT",
    "equiv": "Abbott: Interval Stability\nBIOTRONIK: Stability\nBoston Scientific: —\nMicroPort CRM: —"
-  },
-  {
-   "id": "MDT-SURESCAN",
-   "maker": "Medtronic",
-   "cat": "MRI",
-   "name": "SureScan",
-   "generic": "条件付きMRI対応",
-   "device": "PM / ICD / CRT",
-   "scope": "条件を満たすMRI検査を可能にする",
-   "how": "本体とリードがともにSureScan対応であることを前提に、検査前にSureScanモードへ設定して撮像する。設定後は自己心拍固定またはペーシング固定で動作する。",
-   "params": "SureScanモード: On／Off；検査中のモード",
-   "models": "Azure XT・Cobalt XT 世代",
-   "equiv": "Abbott: MRI Ready（MRI Activator併用）\nBIOTRONIK: ProMRI（MRI AutoDetect）\nBoston Scientific: ImageReady\nMicroPort CRM: 条件付きMRI対応（専用ブランド名なし）",
-   "caution": "対応する磁場強度や適合リードは機種ごとに異なる。必ず国内添付文書で確認する。"
   },
   {
    "id": "MDT-T-WAVE-DISCRIMINATION",
@@ -774,55 +672,7 @@
    "how": "VFゾーンで検出した頻拍に対し、充電を始める前（prior）または充電と並行して（during）ATPを1シーケンス行う。停止すれば充電を中止しショックを出さない。",
    "params": "ATP prior to charging: On／Off；ATP while charging: On／Off",
    "models": "Gallant／Entrant 世代のICD／Gallant HF／Quadra Assura MP 世代のCRT-D",
-   "equiv": "Medtronic: ATP During Charging／ATP Before Charging\nBIOTRONIK: ATP one shot／Early ATP one shot\nBoston Scientific: Quick Convert ATP™\nMicroPort CRM: ATP in fast VT/VF zone"
-  },
-  {
-   "id": "ABT-AVEIR-AR",
-   "maker": "Abbott",
-   "cat": "Leadless",
-   "name": "AVEIR AR",
-   "generic": "リードレスペースメーカ",
-   "device": "Leadless",
-   "scope": "心房に留置するリードレスペースメーカ",
-   "how": "右心房に留置する心房用リードレスペースメーカ。単独またはVRと組み合わせて用いる。",
-   "models": "AVEIR AR",
-   "equiv": "Medtronic: Micra VR／Micra AV／AV2\nBIOTRONIK: —\nBoston Scientific: —\nMicroPort CRM: —"
-  },
-  {
-   "id": "ABT-AVEIR-CSP",
-   "maker": "Abbott",
-   "cat": "CSP",
-   "name": "AVEIR CSP（開発中）",
-   "generic": "His/左脚領域ペーシング（CSP）ツール",
-   "device": "Leadless",
-   "scope": "リードレスによる刺激伝導系ペーシングを目指す開発中の機器",
-   "how": "刺激伝導系ペーシングに対応するリードレスデバイスとして開発が進められている。国内では未承認。",
-   "models": "未承認",
-   "equiv": "Medtronic: SelectSecure 3830＋C315／C304シース／OmniaSecure\nBIOTRONIK: Solia S＋Selectra 3D\nBoston Scientific: INGEVITY+\nMicroPort CRM: —"
-  },
-  {
-   "id": "ABT-AVEIR-DR",
-   "maker": "Abbott",
-   "cat": "Leadless",
-   "name": "AVEIR DR（i2i通信）",
-   "generic": "リードレスペースメーカ",
-   "device": "Leadless",
-   "scope": "リードレスでデュアルチャンバ動作を行う",
-   "how": "心房用ARと心室用VRを併用し、i2i（implant-to-implant）と呼ぶ導電性通信で拍ごとにイベントを共有して房室同期をとる。",
-   "models": "AVEIR DR",
-   "equiv": "Medtronic: Micra VR／Micra AV／AV2\nBIOTRONIK: —\nBoston Scientific: —\nMicroPort CRM: —"
-  },
-  {
-   "id": "ABT-AVEIR-VR",
-   "maker": "Abbott",
-   "cat": "Leadless",
-   "name": "AVEIR VR",
-   "generic": "リードレスペースメーカ",
-   "device": "Leadless",
-   "scope": "リードとポケットを用いずに心室ペーシングを行う",
-   "how": "右室内にスクリューで固定するリードレスペースメーカ。留置前に位置の良否を確認できるマッピング機能と、回収を想定した設計を持つ。",
-   "models": "AVEIR VR",
-   "equiv": "Medtronic: Micra VR／Micra AV／AV2\nBIOTRONIK: —\nBoston Scientific: —\nMicroPort CRM: —"
+   "equiv": "Medtronic: ATP Before Charging／ATP During Charging\nBIOTRONIK: ATP one shot／Early ATP one shot\nBoston Scientific: Quick Convert ATP™\nMicroPort CRM: ATP in fast VT/VF zone"
   },
   {
    "id": "ABT-ADVANCED-HYSTERESIS",
@@ -969,7 +819,7 @@
    "how": "本体（缶）とコイルの間で得られる遠隔電位（far-field）の波形を洞調律テンプレートと比較する。近接電極の波形より体表面心電図に近い形が得られる。",
    "params": "Far Field MD: On／Off；マッチ率閾値",
    "models": "Gallant／Entrant 世代のICD／Gallant HF／Quadra Assura MP 世代のCRT-D",
-   "equiv": "Medtronic: Wavelet／Feature Match\nBIOTRONIK: MorphMatch\nBoston Scientific: INSIGHT\nMicroPort CRM: —"
+   "equiv": "Medtronic: Feature Match／Wavelet\nBIOTRONIK: MorphMatch\nBoston Scientific: INSIGHT\nMicroPort CRM: —"
   },
   {
    "id": "ABT-INTERVAL-STABILITY",
@@ -1012,57 +862,6 @@
    "equiv": "Medtronic: Lead Monitor\nBIOTRONIK: —\nBoston Scientific: —\nMicroPort CRM: —"
   },
   {
-   "id": "ABT-MRI-READY",
-   "maker": "Abbott",
-   "cat": "MRI",
-   "name": "MRI Ready（MRI Activator併用）",
-   "generic": "条件付きMRI対応",
-   "device": "PM / ICD / CRT",
-   "scope": "条件を満たすMRI検査を可能にする",
-   "how": "本体とリードの組合せが条件を満たす場合に、専用のMRI Activatorを用いてMRIモードへ切り替えられる。",
-   "params": "MRIモード: On／Off；有効期間",
-   "models": "Assurity MRI・Gallant 世代",
-   "equiv": "Medtronic: SureScan\nBIOTRONIK: ProMRI（MRI AutoDetect）\nBoston Scientific: ImageReady\nMicroPort CRM: 条件付きMRI対応（専用ブランド名なし）",
-   "caution": "3.0Tが可能かどうかはリードとの組合せで決まる。"
-  },
-  {
-   "id": "ABT-MERLIN-PCS",
-   "maker": "Abbott",
-   "cat": "機器",
-   "name": "Merlin PCS",
-   "generic": "プログラマ",
-   "device": "PM / ICD / CRT",
-   "scope": "デバイスの設定変更とデータ読み出しを行う",
-   "how": "自社デバイスと通信して設定変更・測定・記録の読み出しを行う。",
-   "models": "全世代",
-   "equiv": "Medtronic: CareLink プログラマ（Encore 2090／SmartSync）\nBIOTRONIK: Renamic（ICS 3000）\nBoston Scientific: ZOOM／LATITUDE Programming System\nMicroPort CRM: Orchestra Plus"
-  },
-  {
-   "id": "ABT-MERLIN-NET",
-   "maker": "Abbott",
-   "cat": "リモート",
-   "name": "Merlin.net",
-   "generic": "リモートモニタリング",
-   "device": "PM / ICD / CRT",
-   "scope": "デバイス情報を遠隔で確認する",
-   "how": "Merlin@homeまたはmyMerlinアプリからデータを送信し、施設がMerlin.net上で確認する。",
-   "params": "定期送信スケジュール；アラート設定",
-   "models": "Assurity MRI・Gallant 世代",
-   "equiv": "Medtronic: CareLink\nBIOTRONIK: Home Monitoring\nBoston Scientific: LATITUDE NXT\nMicroPort CRM: SMARTVIEW（SmartView Connect）"
-  },
-  {
-   "id": "ABT-MERLIN-HOME-MYMERLIN",
-   "maker": "Abbott",
-   "cat": "リモート",
-   "name": "Merlin@home／myMerlinアプリ",
-   "generic": "遠隔モニタリング送信機",
-   "device": "PM / ICD / CRT",
-   "scope": "デバイスのデータをサーバへ中継する",
-   "how": "設置型送信機またはスマートフォンアプリからMerlin.netへデータを送信する。",
-   "models": "Assurity MRI・Gallant 世代",
-   "equiv": "Medtronic: MyCareLink Relay／スマートフォンアプリ\nBIOTRONIK: Cardio Messenger smart\nBoston Scientific: LATITUDE コミュニケータ\nMicroPort CRM: スマートビューコネクト"
-  },
-  {
    "id": "ABT-MORPHOLOGY",
    "maker": "Abbott",
    "cat": "ICD",
@@ -1073,7 +872,7 @@
    "how": "洞調律時に取得したテンプレートと頻拍時の波形の一致率を評価し、一致率が閾値以上の拍が一定数あれば上室性と判定して治療を保留する。",
    "params": "Morphology: On／Off；マッチ率閾値（％）；必要拍数；テンプレート取得",
    "models": "Gallant／Entrant 世代のICD／Gallant HF／Quadra Assura MP 世代のCRT-D",
-   "equiv": "Medtronic: Wavelet／Feature Match\nBIOTRONIK: MorphMatch\nBoston Scientific: INSIGHT\nMicroPort CRM: —",
+   "equiv": "Medtronic: Feature Match／Wavelet\nBIOTRONIK: MorphMatch\nBoston Scientific: INSIGHT\nMicroPort CRM: —",
    "caution": "感度設定が不適切だと波形がクリップされ、マッチ率が下がって不適切作動につながる。"
   },
   {
@@ -1101,7 +900,7 @@
    "how": "心内電位の幅や心房・心室の伝導時間を測定し、AVディレイとVVディレイの推奨値を短時間で算出する。心エコーによる至適化の代替として用いる。",
    "params": "測定の実行；推奨値の適用",
    "models": "Gallant HF／Quadra Assura MP 世代のCRT-D",
-   "equiv": "Medtronic: AdaptivCRT™／CardioSync™ Optimization\nBIOTRONIK: —\nBoston Scientific: SmartDelay™ Optimization／SmartCRT™\nMicroPort CRM: SonR™ CRT Optimization"
+   "equiv": "Medtronic: AdaptivCRT™／CardioSync™ Optimization\nBIOTRONIK: —\nBoston Scientific: SmartCRT™／SmartDelay™ Optimization\nMicroPort CRM: SonR™ CRT Optimization"
   },
   {
    "id": "ABT-RVCAPTM-CONFIRM",
@@ -1194,7 +993,7 @@
    "how": "設定周期ごとに自己PR間隔を測定し、そこから設定したオフセット（デルタ）分だけ短いAVディレイを自動的に用いる。自己の右室興奮と左室刺激を融合させて再同期を得る。",
    "params": "SyncAV: On／Off；SyncAVデルタ（ms）；測定間隔",
    "models": "Gallant HF／Quadra Assura MP 世代のCRT-D",
-   "equiv": "Medtronic: AdaptivCRT™／CardioSync™ Optimization\nBIOTRONIK: —\nBoston Scientific: SmartDelay™ Optimization／SmartCRT™\nMicroPort CRM: SonR™ CRT Optimization"
+   "equiv": "Medtronic: AdaptivCRT™／CardioSync™ Optimization\nBIOTRONIK: —\nBoston Scientific: SmartCRT™／SmartDelay™ Optimization\nMicroPort CRM: SonR™ CRT Optimization"
   },
   {
    "id": "ABT-SYNCAVTM-PLUS-CRT",
@@ -1207,7 +1006,7 @@
    "how": "SyncAVの動作に加え、自己PR間隔に対する調整量を％またはmsで指定できる。個々の伝導時間に合わせた融合ペーシングを狙う。",
    "params": "調整量: Δ%／Δms；測定間隔",
    "models": "Gallant HF／Quadra Assura MP 世代のCRT-D",
-   "equiv": "Medtronic: AdaptivCRT™／CardioSync™ Optimization\nBIOTRONIK: —\nBoston Scientific: SmartDelay™ Optimization／SmartCRT™\nMicroPort CRM: SonR™ CRT Optimization"
+   "equiv": "Medtronic: AdaptivCRT™／CardioSync™ Optimization\nBIOTRONIK: —\nBoston Scientific: SmartCRT™／SmartDelay™ Optimization\nMicroPort CRM: SonR™ CRT Optimization"
   },
   {
    "id": "ABT-TRIGGERING",
@@ -1221,18 +1020,6 @@
    "params": "Triggering: On／Off",
    "models": "Gallant HF・Quadra Assura MP 世代",
    "equiv": "Medtronic: Ventricular Sense Response\nBIOTRONIK: LV Triggering\nBoston Scientific: Biventricular Trigger\nMicroPort CRM: —"
-  },
-  {
-   "id": "ABT-ULTIPACE",
-   "maker": "Abbott",
-   "cat": "CSP",
-   "name": "UltiPace",
-   "generic": "His/左脚領域ペーシング（CSP）ツール",
-   "device": "PM / CRT",
-   "scope": "刺激伝導系ペーシング用のスタイレット式リード",
-   "how": "スタイレットで形状を与えて中隔深部へ進める方式のリード。",
-   "models": "UltiPace",
-   "equiv": "Medtronic: SelectSecure 3830＋C315／C304シース／OmniaSecure\nBIOTRONIK: Solia S＋Selectra 3D\nBoston Scientific: INGEVITY+\nMicroPort CRM: —"
   },
   {
    "id": "ABT-VF-THERAPY-ASSURANCE",
@@ -1363,7 +1150,7 @@
    "how": "VFゾーンでも、R-R間隔が安定していると判定された場合に限りATPを1シーケンス行ってから充電に入る。",
    "params": "ATP one shot: On／Off",
    "models": "Acticor 7・Rivacor 7 世代",
-   "equiv": "Medtronic: ATP During Charging／ATP Before Charging\nAbbott: ATP prior/during charging\nBoston Scientific: Quick Convert ATP™\nMicroPort CRM: ATP in fast VT/VF zone"
+   "equiv": "Medtronic: ATP Before Charging／ATP During Charging\nAbbott: ATP prior/during charging\nBoston Scientific: Quick Convert ATP™\nMicroPort CRM: ATP in fast VT/VF zone"
   },
   {
    "id": "BIO-ACTIVE-THRESHOLD-MONITORING",
@@ -1457,18 +1244,6 @@
    "equiv": "Medtronic: Burst／Ramp／Ramp+\nAbbott: Burst／Ramp／Scan\nBoston Scientific: Burst／Ramp／Scan\nMicroPort CRM: —"
   },
   {
-   "id": "BIO-CARDIO-MESSENGER-SMART",
-   "maker": "BIOTRONIK",
-   "cat": "リモート",
-   "name": "Cardio Messenger smart",
-   "generic": "遠隔モニタリング送信機",
-   "device": "PM / ICD / CRT",
-   "scope": "デバイスのデータをサーバへ中継する",
-   "how": "携帯型の送信機がデバイスから毎日データを受け取り、サーバへ送信する。",
-   "models": "Amvia Sky・Acticor 7 世代",
-   "equiv": "Medtronic: MyCareLink Relay／スマートフォンアプリ\nAbbott: Merlin@home／myMerlinアプリ\nBoston Scientific: LATITUDE コミュニケータ\nMicroPort CRM: スマートビューコネクト"
-  },
-  {
    "id": "BIO-CLOSED-LOOP-STIMULATION",
    "maker": "BIOTRONIK",
    "cat": "レート応答",
@@ -1493,7 +1268,7 @@
    "how": "頻拍検出の早期にATPを1シーケンス実施し、早い段階での無痛停止を狙う。",
    "params": "Early ATP one shot: On／Off",
    "models": "Acticor 7・Rivacor 7 世代",
-   "equiv": "Medtronic: ATP During Charging／ATP Before Charging\nAbbott: ATP prior/during charging\nBoston Scientific: Quick Convert ATP™\nMicroPort CRM: ATP in fast VT/VF zone"
+   "equiv": "Medtronic: ATP Before Charging／ATP During Charging\nAbbott: ATP prior/during charging\nBoston Scientific: Quick Convert ATP™\nMicroPort CRM: ATP in fast VT/VF zone"
   },
   {
    "id": "BIO-HIGH-PASS-FILTER",
@@ -1507,19 +1282,6 @@
    "params": "フィルタ: Standard／Enhanced T-wave suppression／Enhanced VF sensitivity／Manual",
    "models": "Acticor 7・Rivacor 7 世代",
    "equiv": "Medtronic: T-wave Discrimination\nAbbott: 低周波減衰フィルター（Low Frequency Attenuation）\nBoston Scientific: SMART Pass\nMicroPort CRM: —"
-  },
-  {
-   "id": "BIO-HOME-MONITORING",
-   "maker": "BIOTRONIK",
-   "cat": "リモート",
-   "name": "Home Monitoring",
-   "generic": "リモートモニタリング",
-   "device": "PM / ICD / CRT",
-   "scope": "デバイス情報を遠隔で確認する",
-   "how": "毎日自動でデータを送信する方式が特徴。Cardio Messengerを介してサーバへ送り、施設が確認する。",
-   "params": "毎日送信；アラート設定",
-   "models": "Amvia Sky・Acticor 7 世代",
-   "equiv": "Medtronic: CareLink\nAbbott: Merlin.net\nBoston Scientific: LATITUDE NXT\nMicroPort CRM: SMARTVIEW（SmartView Connect）"
   },
   {
    "id": "BIO-INTRINSIC-RHYTHM-SUPPORT",
@@ -1584,7 +1346,7 @@
    "how": "洞調律時に取得したテンプレートと頻拍時の波形を比較し、一致率が閾値以上なら上室性と判定して治療を保留する。",
    "params": "MorphMatch: On／Off；マッチ率閾値（％）；テンプレート取得",
    "models": "Acticor 7／Ilivia Neo 7 世代のICD／Rivacor 7 HF-T／Ilivia Neo 7 HF-T 世代のCRT-D",
-   "equiv": "Medtronic: Wavelet／Feature Match\nAbbott: Far Field MD™ Morphology／Morphology\nBoston Scientific: INSIGHT\nMicroPort CRM: —"
+   "equiv": "Medtronic: Feature Match／Wavelet\nAbbott: Far Field MD™ Morphology／Morphology\nBoston Scientific: INSIGHT\nMicroPort CRM: —"
   },
   {
    "id": "BIO-MULTIPOLE-PACING",
@@ -1666,20 +1428,6 @@
    "equiv": "Medtronic: Search AV+（SAV+）\nAbbott: Ventricular Intrinsic Preference（VIP™）\nBoston Scientific: AV Search +\nMicroPort CRM: Dplus™"
   },
   {
-   "id": "BIO-PROMRI",
-   "maker": "BIOTRONIK",
-   "cat": "MRI",
-   "name": "ProMRI（MRI AutoDetect）",
-   "generic": "条件付きMRI対応",
-   "device": "PM / ICD / CRT",
-   "scope": "条件を満たすMRI検査を可能にする",
-   "how": "対応機種ではMRI環境を自動検知して設定期間内にMRIモードへ移行し、期間が過ぎると自動的に元へ戻る。戻し忘れを防げる。",
-   "params": "MRI AutoDetect: On／Off；有効期間",
-   "models": "Amvia Sky・Acticor 7 世代",
-   "equiv": "Medtronic: SureScan\nAbbott: MRI Ready（MRI Activator併用）\nBoston Scientific: ImageReady\nMicroPort CRM: 条件付きMRI対応（専用ブランド名なし）",
-   "caution": "国内で承認された適合リードの範囲はCE版マニュアルと異なることがある。"
-  },
-  {
    "id": "BIO-RATE-FADING",
    "maker": "BIOTRONIK",
    "cat": "レート応答",
@@ -1720,18 +1468,6 @@
    "equiv": "Medtronic: Conducted AF Response（CAFR）\nAbbott: —\nBoston Scientific: Ventricular Rate Regulation（VRR）\nMicroPort CRM: —"
   },
   {
-   "id": "BIO-RENAMIC",
-   "maker": "BIOTRONIK",
-   "cat": "機器",
-   "name": "Renamic（ICS 3000）",
-   "generic": "プログラマ",
-   "device": "PM / ICD / CRT",
-   "scope": "デバイスの設定変更とデータ読み出しを行う",
-   "how": "自社デバイスと通信して設定変更・測定・記録の読み出しを行う。",
-   "models": "全世代",
-   "equiv": "Medtronic: CareLink プログラマ（Encore 2090／SmartSync）\nAbbott: Merlin PCS\nBoston Scientific: ZOOM／LATITUDE Programming System\nMicroPort CRM: Orchestra Plus"
-  },
-  {
    "id": "BIO-SMART-DETECTION",
    "maker": "BIOTRONIK",
    "cat": "ICD",
@@ -1743,18 +1479,6 @@
    "params": "SMART: On／Off；SVT上限レート",
    "models": "Acticor 7／Ilivia Neo 7 世代のICD／Rivacor 7 HF-T／Ilivia Neo 7 HF-T 世代のCRT-D",
    "equiv": "Medtronic: PR Logic™\nAbbott: Rate Branch\nBoston Scientific: Rhythm ID™\nMicroPort CRM: PARAD™+"
-  },
-  {
-   "id": "BIO-SOLIA-S-SELECTRA-3D",
-   "maker": "BIOTRONIK",
-   "cat": "CSP",
-   "name": "Solia S＋Selectra 3D",
-   "generic": "His/左脚領域ペーシング（CSP）ツール",
-   "device": "PM / CRT",
-   "scope": "刺激伝導系ペーシング用のリードとデリバリーシース",
-   "how": "能動的固定リードSolia Sを、湾曲形状の異なるSelectra 3Dシースで目標部位へ導く。",
-   "models": "Solia S／Selectra 3D",
-   "equiv": "Medtronic: SelectSecure 3830＋C315／C304シース／OmniaSecure\nAbbott: UltiPace／AVEIR CSP（開発中）\nBoston Scientific: INGEVITY+\nMicroPort CRM: —"
   },
   {
    "id": "BIO-STABILITY",
@@ -1966,18 +1690,6 @@
    "equiv": "Medtronic: Burst／Ramp／Ramp+\nAbbott: Burst／Ramp／Scan\nBIOTRONIK: Burst／Ramp／Scan\nMicroPort CRM: —"
   },
   {
-   "id": "BSX-INGEVITY",
-   "maker": "Boston Scientific",
-   "cat": "CSP",
-   "name": "INGEVITY+",
-   "generic": "His/左脚領域ペーシング（CSP）ツール",
-   "device": "PM / CRT",
-   "scope": "刺激伝導系ペーシングに用いるリード",
-   "how": "左脚領域ペーシングでの使用に対応したリード。",
-   "models": "INGEVITY+",
-   "equiv": "Medtronic: SelectSecure 3830＋C315／C304シース／OmniaSecure\nAbbott: UltiPace／AVEIR CSP（開発中）\nBIOTRONIK: Solia S＋Selectra 3D\nMicroPort CRM: —"
-  },
-  {
    "id": "BSX-INSIGHT",
    "maker": "Boston Scientific",
    "cat": "ICD",
@@ -1988,46 +1700,7 @@
    "how": "皮下で記録した心電図の波形を解析し、Conditionalゾーンで上室頻拍やT波の誤感知による不適切作動を抑える。",
    "params": "Conditionalゾーン: On／Off",
    "models": "EMBLEM S-ICD",
-   "equiv": "Medtronic: Wavelet／Feature Match\nAbbott: Far Field MD™ Morphology／Morphology\nBIOTRONIK: MorphMatch\nMicroPort CRM: —"
-  },
-  {
-   "id": "BSX-IMAGEREADY",
-   "maker": "Boston Scientific",
-   "cat": "MRI",
-   "name": "ImageReady",
-   "generic": "条件付きMRI対応",
-   "device": "PM / ICD / CRT",
-   "scope": "条件を満たすMRI検査を可能にする",
-   "how": "本体とリードの組合せごとに対応磁場強度とSAR条件が定められている。検査前にMRIプロテクションモードへ設定する。",
-   "params": "MRIプロテクションモード: On／Off",
-   "models": "ACCOLADE MRI・RESONATE 世代",
-   "equiv": "Medtronic: SureScan\nAbbott: MRI Ready（MRI Activator併用）\nBIOTRONIK: ProMRI（MRI AutoDetect）\nMicroPort CRM: 条件付きMRI対応（専用ブランド名なし）",
-   "caution": "同じ本体でも組み合わせるリードによって1.5Tのみ／3.0T可が変わる。"
-  },
-  {
-   "id": "BSX-LATITUDE-NXT",
-   "maker": "Boston Scientific",
-   "cat": "リモート",
-   "name": "LATITUDE NXT",
-   "generic": "リモートモニタリング",
-   "device": "PM / ICD / CRT",
-   "scope": "デバイス情報を遠隔で確認する",
-   "how": "コミュニケータを介してデータを送信し、施設がLATITUDE上で確認する。",
-   "params": "定期送信スケジュール；アラート設定",
-   "models": "ACCOLADE MRI・RESONATE 世代",
-   "equiv": "Medtronic: CareLink\nAbbott: Merlin.net\nBIOTRONIK: Home Monitoring\nMicroPort CRM: SMARTVIEW（SmartView Connect）"
-  },
-  {
-   "id": "BSX-LATITUDE",
-   "maker": "Boston Scientific",
-   "cat": "リモート",
-   "name": "LATITUDE コミュニケータ",
-   "generic": "遠隔モニタリング送信機",
-   "device": "PM / ICD / CRT",
-   "scope": "デバイスのデータをサーバへ中継する",
-   "how": "設置型のコミュニケータがデバイスと通信し、LATITUDEへデータを送信する。",
-   "models": "ACCOLADE MRI・RESONATE 世代",
-   "equiv": "Medtronic: MyCareLink Relay／スマートフォンアプリ\nAbbott: Merlin@home／myMerlinアプリ\nBIOTRONIK: Cardio Messenger smart\nMicroPort CRM: スマートビューコネクト"
+   "equiv": "Medtronic: Feature Match／Wavelet\nAbbott: Far Field MD™ Morphology／Morphology\nBIOTRONIK: MorphMatch\nMicroPort CRM: —"
   },
   {
    "id": "BSX-LV-MULTISITE-PACING",
@@ -2186,7 +1859,7 @@
    "how": "VFゾーンで検出した頻拍に対し、充電に入る前にワンショットのATPを行う。停止すればショックは出ない。",
    "params": "Quick Convert ATP: On／Off",
    "models": "RESONATE／RESONATE EL 世代のICD／RESONATE X4 世代のCRT-D",
-   "equiv": "Medtronic: ATP During Charging／ATP Before Charging\nAbbott: ATP prior/during charging\nBIOTRONIK: ATP one shot／Early ATP one shot\nMicroPort CRM: ATP in fast VT/VF zone"
+   "equiv": "Medtronic: ATP Before Charging／ATP During Charging\nAbbott: ATP prior/during charging\nBIOTRONIK: ATP one shot／Early ATP one shot\nMicroPort CRM: ATP in fast VT/VF zone"
   },
   {
    "id": "BSX-RYTHMIQTM",
@@ -2305,7 +1978,7 @@
    "how": "心房レートが上限追従レートに近づいた際に心房不応期の扱いを調整して1:1追従を維持し、両室ペーシングの欠落を減らす。",
    "params": "Tracking Preference: On／Off",
    "models": "RESONATE X4 世代",
-   "equiv": "Medtronic: Atrial Tracking Recovery\nAbbott: —\nBIOTRONIK: WKB Behaviour／PVC discrimination after As\nMicroPort CRM: —"
+   "equiv": "Medtronic: Atrial Tracking Recovery\nAbbott: —\nBIOTRONIK: PVC discrimination after As／WKB Behaviour\nMicroPort CRM: —"
   },
   {
    "id": "BSX-VENTRICULAR-AUTOMATIC-CAPTURE",
@@ -2345,18 +2018,6 @@
    "params": "VRR: On／Off；VRR上限レート",
    "models": "ACCOLADE MRI・RESONATE 世代",
    "equiv": "Medtronic: Conducted AF Response（CAFR）\nAbbott: —\nBIOTRONIK: Rate Stabilization\nMicroPort CRM: —"
-  },
-  {
-   "id": "BSX-ZOOM-LATITUDE-PROGRAMMING-SYSTEM",
-   "maker": "Boston Scientific",
-   "cat": "機器",
-   "name": "ZOOM／LATITUDE Programming System",
-   "generic": "プログラマ",
-   "device": "PM / ICD / CRT",
-   "scope": "デバイスの設定変更とデータ読み出しを行う",
-   "how": "自社デバイスと通信して設定変更・測定・記録の読み出しを行う。",
-   "models": "全世代",
-   "equiv": "Medtronic: CareLink プログラマ（Encore 2090／SmartSync）\nAbbott: Merlin PCS\nBIOTRONIK: Renamic（ICS 3000）\nMicroPort CRM: Orchestra Plus"
   },
   {
    "id": "BSX-ATP",
@@ -2407,7 +2068,7 @@
    "how": "Fast VT／VFゾーンでもATPを行える設定。無痛停止の機会を広げる。",
    "params": "ATP in fast VT/VF zone: On／Off",
    "models": "ULYS・PLATINIUM 世代",
-   "equiv": "Medtronic: ATP During Charging／ATP Before Charging\nAbbott: ATP prior/during charging\nBIOTRONIK: ATP one shot／Early ATP one shot\nBoston Scientific: Quick Convert ATP™"
+   "equiv": "Medtronic: ATP Before Charging／ATP During Charging\nAbbott: ATP prior/during charging\nBIOTRONIK: ATP one shot／Early ATP one shot\nBoston Scientific: Quick Convert ATP™"
   },
   {
    "id": "MCP-ACCELERATION-ON-PAC",
@@ -2620,18 +2281,6 @@
    "equiv": "Medtronic: Mode Switch（AT/AFエビデンスカウント）\nAbbott: Auto Mode Switch（AMS／FARI）\nBIOTRONIK: Mode Switching\nBoston Scientific: ATR Mode Switch"
   },
   {
-   "id": "MCP-ORCHESTRA-PLUS",
-   "maker": "MicroPort CRM",
-   "cat": "機器",
-   "name": "Orchestra Plus",
-   "generic": "プログラマ",
-   "device": "PM / ICD / CRT",
-   "scope": "デバイスの設定変更とデータ読み出しを行う",
-   "how": "自社デバイスと通信して設定変更・測定・記録の読み出しを行う。",
-   "models": "全世代",
-   "equiv": "Medtronic: CareLink プログラマ（Encore 2090／SmartSync）\nAbbott: Merlin PCS\nBIOTRONIK: Renamic（ICS 3000）\nBoston Scientific: ZOOM／LATITUDE Programming System"
-  },
-  {
    "id": "MCP-PAC-PAUSE-SUPPRESSION",
    "maker": "MicroPort CRM",
    "cat": "ペーシング管理",
@@ -2723,19 +2372,6 @@
    "equiv": "Medtronic: RV Capture Management™（RVCM）／Ventricular Capture Management™（VCM）\nAbbott: RVCap™ Confirm／Ventricular AutoCapture™\nBIOTRONIK: Ventricular Capture Control（VCC）\nBoston Scientific: PaceSafe™ RV Automatic Capture／PaceSafe™ RV Automatic Threshold／Ventricular Automatic Capture"
   },
   {
-   "id": "MCP-SMARTVIEW",
-   "maker": "MicroPort CRM",
-   "cat": "リモート",
-   "name": "SMARTVIEW（SmartView Connect）",
-   "generic": "リモートモニタリング",
-   "device": "PM / ICD / CRT",
-   "scope": "デバイス情報を遠隔で確認する",
-   "how": "スマートビューコネクトを介してデータを送信し、施設が確認する。",
-   "params": "定期送信スケジュール；アラート設定",
-   "models": "ALIZEA・ULYS 世代",
-   "equiv": "Medtronic: CareLink\nAbbott: Merlin.net\nBIOTRONIK: Home Monitoring\nBoston Scientific: LATITUDE NXT"
-  },
-  {
    "id": "MCP-SAFERTM",
    "maker": "MicroPort CRM",
    "cat": "ペーシング管理",
@@ -2774,7 +2410,7 @@
    "how": "心房リード先端のマイクロ加速度センサが第1心音に相当する振動を捉え、心収縮力の指標としてAV・VVディレイを定期的に自動で再調整する。安静時と運動時の両方で最適化を行う。",
    "params": "SonR最適化: On／Off；最適化の頻度",
    "models": "PLATINIUM SonR-R 世代のCRT-D",
-   "equiv": "Medtronic: AdaptivCRT™／CardioSync™ Optimization\nAbbott: QuickOpt™ Optimization／SyncAV™ CRT／SyncAV™ Plus CRT\nBIOTRONIK: —\nBoston Scientific: SmartDelay™ Optimization／SmartCRT™",
+   "equiv": "Medtronic: AdaptivCRT™／CardioSync™ Optimization\nAbbott: QuickOpt™ Optimization／SyncAV™ CRT／SyncAV™ Plus CRT\nBIOTRONIK: —\nBoston Scientific: SmartCRT™／SmartDelay™ Optimization",
    "caution": "専用のSonRtipリードが必要で、通常の心房リードでは使用できない。"
   },
   {
@@ -2803,31 +2439,6 @@
    "params": "Ventricular Auto-threshold: On／Off；安全域",
    "models": "ALIZEA・ULYS・PLATINIUM 世代",
    "equiv": "Medtronic: RV Capture Management™（RVCM）／Ventricular Capture Management™（VCM）\nAbbott: RVCap™ Confirm／Ventricular AutoCapture™\nBIOTRONIK: Ventricular Capture Control（VCC）\nBoston Scientific: PaceSafe™ RV Automatic Capture／PaceSafe™ RV Automatic Threshold／Ventricular Automatic Capture"
-  },
-  {
-   "id": "MCP-X",
-   "maker": "MicroPort CRM",
-   "cat": "リモート",
-   "name": "スマートビューコネクト",
-   "generic": "遠隔モニタリング送信機",
-   "device": "PM / ICD / CRT",
-   "scope": "デバイスのデータをサーバへ中継する",
-   "how": "設置型の送信機がデバイスと通信し、SMARTVIEWへデータを送信する。",
-   "models": "ALIZEA・ULYS 世代",
-   "equiv": "Medtronic: MyCareLink Relay／スマートフォンアプリ\nAbbott: Merlin@home／myMerlinアプリ\nBIOTRONIK: Cardio Messenger smart\nBoston Scientific: LATITUDE コミュニケータ"
-  },
-  {
-   "id": "MCP-MRI",
-   "maker": "MicroPort CRM",
-   "cat": "MRI",
-   "name": "条件付きMRI対応（専用ブランド名なし）",
-   "generic": "条件付きMRI対応",
-   "device": "PM / ICD / CRT",
-   "scope": "条件を満たすMRI検査を可能にする",
-   "how": "機種名にMRI表記を持つモデルが条件付きMRI対応となる。ULYSではモデル2240・2540のみが対応する。",
-   "params": "MRIモード: On／Off",
-   "models": "ALIZEA・ULYS（2240／2540）",
-   "equiv": "Medtronic: SureScan\nAbbott: MRI Ready（MRI Activator併用）\nBIOTRONIK: ProMRI（MRI AutoDetect）\nBoston Scientific: ImageReady"
   }
  ]
 }
