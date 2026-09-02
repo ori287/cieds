@@ -9,7 +9,7 @@
    "maker": "Medtronic",
    "dealer": "日本メドトロニック(株)",
    "cat": "PMリード",
-   "name": "キャプシュアーFixシリコンリード",
+   "name": "CapSureFix®（silicone）",
    "model": "5067",
    "polarity": "単極",
    "site": "A/V",
@@ -27,7 +27,7 @@
    "period": "97年〜07年",
    "odmm": "2.7",
    "odfr": "8.1",
-   "en": "CapSureFix®（silicone）"
+   "alias": "キャプシュアーFixシリコンリード"
   },
   {
    "id": "MDT-L-5068",
@@ -35,7 +35,7 @@
    "maker": "Medtronic",
    "dealer": "日本メドトロニック(株)",
    "cat": "PMリード",
-   "name": "キャプシュアーFixシリコンリード",
+   "name": "CapSureFix®（silicone）",
    "model": "5068",
    "polarity": "双極",
    "site": "A/V",
@@ -54,7 +54,7 @@
    "period": "97年〜07年",
    "odmm": "2.7",
    "odfr": "8.1",
-   "en": "CapSureFix®（silicone）"
+   "alias": "キャプシュアーFixシリコンリード"
   },
   {
    "id": "MDT-L-5568",
@@ -62,7 +62,7 @@
    "maker": "Medtronic",
    "dealer": "日本メドトロニック(株)",
    "cat": "PMリード",
-   "name": "キャプシュアーFixシリコンリード",
+   "name": "CapSureFix®（silicone）",
    "model": "5568",
    "polarity": "双極",
    "site": "A/V",
@@ -81,7 +81,7 @@
    "period": "97年〜00年",
    "odmm": "2.72",
    "odfr": "8.2",
-   "en": "CapSureFix®（silicone）"
+   "alias": "キャプシュアーFixシリコンリード"
   },
   {
    "id": "MDT-L-5038",
@@ -89,7 +89,7 @@
    "maker": "Medtronic",
    "dealer": "日本メドトロニック(株)",
    "cat": "PMリード",
-   "name": "キャプシュアーVDD-2リード",
+   "name": "CapSure® VDD-2",
    "model": "5038",
    "polarity": "双極",
    "site": "V+(A)",
@@ -108,7 +108,7 @@
    "period": "98年〜",
    "odmm": "3",
    "odfr": "9.0",
-   "en": "CapSure® VDD-2"
+   "alias": "キャプシュアーVDD-2リード"
   },
   {
    "id": "MDT-L-5038S",
@@ -116,7 +116,7 @@
    "maker": "Medtronic",
    "dealer": "日本メドトロニック(株)",
    "cat": "PMリード",
-   "name": "キャプシュアーVDD-2リード",
+   "name": "CapSure® VDD-2",
    "model": "5038S",
    "polarity": "双極",
    "site": "V+(A)",
@@ -135,7 +135,7 @@
    "period": "98年〜07年",
    "odmm": "3",
    "odfr": "9.0",
-   "en": "CapSure® VDD-2"
+   "alias": "キャプシュアーVDD-2リード"
   },
   {
    "id": "MDT-L-5038L",
@@ -143,7 +143,7 @@
    "maker": "Medtronic",
    "dealer": "日本メドトロニック(株)",
    "cat": "PMリード",
-   "name": "キャプシュアーVDD-2リード",
+   "name": "CapSure® VDD-2",
    "model": "5038L",
    "polarity": "双極",
    "site": "V+(A)",
@@ -162,7 +162,7 @@
    "period": "98年〜",
    "odmm": "3",
    "odfr": "9.0",
-   "en": "CapSure® VDD-2"
+   "alias": "キャプシュアーVDD-2リード"
   },
   {
    "id": "MDT-L-5054",
@@ -170,7 +170,7 @@
    "maker": "Medtronic",
    "dealer": "日本メドトロニック(株)",
    "cat": "PMリード",
-   "name": "キャプシュアーZ NOVUSシリコンリード",
+   "name": "CapSure® Z Novus",
    "model": "5054",
    "polarity": "双極",
    "site": "V",
@@ -189,7 +189,7 @@
    "period": "98年〜",
    "odmm": "2.1",
    "odfr": "6.3",
-   "en": "CapSure® Z Novus"
+   "alias": "キャプシュアーZ NOVUSシリコンリード"
   },
   {
    "id": "MDT-L-5554",
@@ -197,7 +197,7 @@
    "maker": "Medtronic",
    "dealer": "日本メドトロニック(株)",
    "cat": "PMリード",
-   "name": "キャプシュアーZ NOVUSシリコンリード",
+   "name": "CapSure® Z Novus",
    "model": "5554",
    "polarity": "双極",
    "site": "A",
@@ -216,7 +216,7 @@
    "period": "98年〜",
    "odmm": "2.1",
    "odfr": "6.3",
-   "en": "CapSure® Z Novus"
+   "alias": "キャプシュアーZ NOVUSシリコンリード"
   },
   {
    "id": "MDT-L-4592",
@@ -224,7 +224,7 @@
    "maker": "Medtronic",
    "dealer": "日本メドトロニック(株)",
    "cat": "PMリード",
-   "name": "キャプシュアーSPノバスリード",
+   "name": "CapSure® SP Novus",
    "model": "4592",
    "polarity": "双極",
    "site": "A",
@@ -243,7 +243,7 @@
    "period": "00年7月〜",
    "odmm": "2.1",
    "odfr": "6.3",
-   "en": "CapSure® SP Novus"
+   "alias": "キャプシュアーSPノバスリード"
   },
   {
    "id": "MDT-L-4092",
@@ -251,7 +251,7 @@
    "maker": "Medtronic",
    "dealer": "日本メドトロニック(株)",
    "cat": "PMリード",
-   "name": "キャプシュアーSPノバスリード",
+   "name": "CapSure® SP Novus",
    "model": "4092",
    "polarity": "双極",
    "site": "V",
@@ -270,7 +270,7 @@
    "period": "00年7月〜",
    "odmm": "2.1",
    "odfr": "6.3",
-   "en": "CapSure® SP Novus"
+   "alias": "キャプシュアーSPノバスリード"
   },
   {
    "id": "MDT-L-ICF09",
@@ -278,7 +278,7 @@
    "maker": "Medtronic",
    "dealer": "日本メドトロニック(株)",
    "cat": "PMリード",
-   "name": "クリスタルラインActFix",
+   "name": "Crystalline™ ActFix",
    "model": "ICF09",
    "polarity": "単極",
    "site": "心房/心室",
@@ -297,7 +297,7 @@
    "period": "05年4月〜",
    "odmm": "2",
    "odfr": "6.0",
-   "en": "Crystalline™ ActFix"
+   "alias": "クリスタルラインActFix"
   },
   {
    "id": "MDT-L-ICL08",
@@ -305,7 +305,7 @@
    "maker": "Medtronic",
    "dealer": "日本メドトロニック(株)",
    "cat": "PMリード",
-   "name": "クリスタルライン",
+   "name": "Crystalline™",
    "model": "ICL08",
    "polarity": "双極",
    "site": "心室",
@@ -323,7 +323,7 @@
    "period": "05年6月〜",
    "odmm": "1.7",
    "odfr": "5.1",
-   "en": "Crystalline™"
+   "alias": "クリスタルライン"
   },
   {
    "id": "MDT-L-ICL08B",
@@ -331,7 +331,7 @@
    "maker": "Medtronic",
    "dealer": "日本メドトロニック(株)",
    "cat": "PMリード",
-   "name": "クリスタルライン",
+   "name": "Crystalline™",
    "model": "ICL08B",
    "polarity": "双極",
    "site": "心室",
@@ -350,7 +350,7 @@
    "period": "05年6月〜",
    "odmm": "2.3",
    "odfr": "6.9",
-   "en": "Crystalline™"
+   "alias": "クリスタルライン"
   },
   {
    "id": "MDT-L-ICL08JB",
@@ -358,7 +358,7 @@
    "maker": "Medtronic",
    "dealer": "日本メドトロニック(株)",
    "cat": "PMリード",
-   "name": "クリスタルライン",
+   "name": "Crystalline™",
    "model": "ICL08JB",
    "polarity": "双極",
    "site": "心房",
@@ -377,7 +377,7 @@
    "period": "05年6月〜",
    "odmm": "2.3",
    "odfr": "6.9",
-   "en": "Crystalline™"
+   "alias": "クリスタルライン"
   },
   {
    "id": "MDT-L-6940",
@@ -385,7 +385,7 @@
    "maker": "Medtronic",
    "dealer": "日本メドトロニック(株)",
    "cat": "PMリード",
-   "name": "キャプシュアーFix スクリューインリード",
+   "name": "CapSureFix®",
    "model": "6940",
    "polarity": "双極",
    "site": "A",
@@ -404,7 +404,7 @@
    "period": "00年〜06年",
    "odmm": "2.72",
    "odfr": "8.2",
-   "en": "CapSureFix®"
+   "alias": "キャプシュアーFix スクリューインリード"
   },
   {
    "id": "MDT-L-5076",
@@ -438,7 +438,7 @@
    "maker": "Medtronic",
    "dealer": "日本メドトロニック(株)",
    "cat": "PMリード",
-   "name": "Select Secure リード",
+   "name": "SelectSecure™ MRI SureScan™ Pacing Lead",
    "model": "3830",
    "polarity": "双極",
    "site": "A/V",
@@ -457,7 +457,7 @@
    "period": "12年3月〜",
    "odmm": "1.4",
    "odfr": "4.2",
-   "en": "SelectSecure™ MRI SureScan™ Pacing Lead"
+   "alias": "Select Secure リード"
   },
   {
    "id": "MDT-L-5086MRI",
@@ -565,7 +565,7 @@
    "dealer": "日本メドトロニック(株)",
    "cat": "PMリード",
    "model": "4003",
-   "name": "キャプシュアーリード",
+   "name": "CapSure®",
    "polarity": "単極",
    "site": "V",
    "intro": "9F",
@@ -581,7 +581,7 @@
    "period": "89年〜90年",
    "odmm": "2.52",
    "odfr": "7.6",
-   "en": "CapSure®"
+   "alias": "キャプシュアーリード"
   },
   {
    "id": "MDT-L-4003M",
@@ -590,7 +590,7 @@
    "dealer": "日本メドトロニック(株)",
    "cat": "PMリード",
    "model": "4003M",
-   "name": "キャプシュアーIS-1単極リード",
+   "name": "CapSure® IS-1（単極）",
    "polarity": "単極",
    "site": "V",
    "intro": "9F",
@@ -606,7 +606,7 @@
    "period": "90年〜91年",
    "odmm": "2.52",
    "odfr": "7.6",
-   "en": "CapSure® IS-1（unipolar）"
+   "alias": "キャプシュアーIS-1単極リード"
   },
   {
    "id": "MDT-L-4004",
@@ -615,7 +615,7 @@
    "dealer": "日本メドトロニック(株)",
    "cat": "PMリード",
    "model": "4004",
-   "name": "キャプシュアーリード",
+   "name": "CapSure®",
    "polarity": "双極",
    "site": "V",
    "intro": "9F",
@@ -632,7 +632,7 @@
    "period": "89年〜90年",
    "odmm": "3",
    "odfr": "9.0",
-   "en": "CapSure®"
+   "alias": "キャプシュアーリード"
   },
   {
    "id": "MDT-L-4004M",
@@ -641,7 +641,7 @@
    "dealer": "日本メドトロニック(株)",
    "cat": "PMリード",
    "model": "4004M",
-   "name": "キャプシュアーIS-1リード",
+   "name": "CapSure® IS-1",
    "polarity": "双極",
    "site": "V",
    "intro": "9F",
@@ -659,7 +659,7 @@
    "period": "90年〜93年",
    "odmm": "3",
    "odfr": "9.0",
-   "en": "CapSure® IS-1"
+   "alias": "キャプシュアーIS-1リード"
   },
   {
    "id": "MDT-L-4011",
@@ -770,7 +770,7 @@
    "dealer": "日本メドトロニック(株)",
    "cat": "PMリード",
    "model": "4023",
-   "name": "キャプシュアーSPリード",
+   "name": "CapSure® SP",
    "polarity": "単極",
    "site": "V",
    "intro": "7F",
@@ -786,7 +786,7 @@
    "period": "91年〜",
    "odmm": "1.7",
    "odfr": "5.1",
-   "en": "CapSure® SP"
+   "alias": "キャプシュアーSPリード"
   },
   {
    "id": "MDT-L-4024",
@@ -795,7 +795,7 @@
    "dealer": "日本メドトロニック(株)",
    "cat": "PMリード",
    "model": "4024",
-   "name": "キャプシュアーSPリード",
+   "name": "CapSure® SP",
    "polarity": "双極",
    "site": "V",
    "intro": "7F",
@@ -813,7 +813,7 @@
    "period": "91年〜",
    "odmm": "1.9",
    "odfr": "5.7",
-   "en": "CapSure® SP"
+   "alias": "キャプシュアーSPリード"
   },
   {
    "id": "MDT-L-4057",
@@ -922,7 +922,7 @@
    "dealer": "日本メドトロニック(株)",
    "cat": "PMリード",
    "model": "4067",
-   "name": "キャプシュアーFixリード",
+   "name": "CapSureFix®",
    "polarity": "単極",
    "site": "A/V",
    "intro": "9F",
@@ -938,7 +938,7 @@
    "period": "94年〜97年",
    "odmm": "2.7",
    "odfr": "8.1",
-   "en": "CapSureFix®"
+   "alias": "キャプシュアーFixリード"
   },
   {
    "id": "MDT-L-4068",
@@ -947,7 +947,7 @@
    "dealer": "日本メドトロニック(株)",
    "cat": "PMリード",
    "model": "4068",
-   "name": "キャプシュアーFixリード",
+   "name": "CapSureFix®",
    "polarity": "双極",
    "site": "A/V",
    "intro": "9F",
@@ -965,7 +965,7 @@
    "period": "94年〜97年",
    "odmm": "2.72",
    "odfr": "8.2",
-   "en": "CapSureFix®"
+   "alias": "キャプシュアーFixリード"
   },
   {
    "id": "MDT-L-4502",
@@ -1000,7 +1000,7 @@
    "dealer": "日本メドトロニック(株)",
    "cat": "PMリード",
    "model": "4503",
-   "name": "キャプシュアーリード",
+   "name": "CapSure®",
    "polarity": "単極",
    "site": "A",
    "intro": "9F",
@@ -1016,7 +1016,7 @@
    "period": "89年〜90年",
    "odmm": "2.52",
    "odfr": "7.6",
-   "en": "CapSure®"
+   "alias": "キャプシュアーリード"
   },
   {
    "id": "MDT-L-4503M",
@@ -1025,7 +1025,7 @@
    "dealer": "日本メドトロニック(株)",
    "cat": "PMリード",
    "model": "4503M",
-   "name": "キャプシュアーIS-1単極リード",
+   "name": "CapSure® IS-1（単極）",
    "polarity": "単極",
    "site": "A",
    "intro": "9F",
@@ -1041,7 +1041,7 @@
    "period": "90年〜91年",
    "odmm": "2.52",
    "odfr": "7.6",
-   "en": "CapSure® IS-1（unipolar）"
+   "alias": "キャプシュアーIS-1単極リード"
   },
   {
    "id": "MDT-L-4504",
@@ -1050,7 +1050,7 @@
    "dealer": "日本メドトロニック(株)",
    "cat": "PMリード",
    "model": "4504",
-   "name": "キャプシュアーリード",
+   "name": "CapSure®",
    "polarity": "双極",
    "site": "A",
    "intro": "10.5F",
@@ -1068,7 +1068,7 @@
    "period": "89年〜90年",
    "odmm": "3",
    "odfr": "9.0",
-   "en": "CapSure®"
+   "alias": "キャプシュアーリード"
   },
   {
    "id": "MDT-L-4504M",
@@ -1077,7 +1077,7 @@
    "dealer": "日本メドトロニック(株)",
    "cat": "PMリード",
    "model": "4504M",
-   "name": "キャプシュアーIS-1リード",
+   "name": "CapSure® IS-1",
    "polarity": "双極",
    "site": "A",
    "intro": "10.5F",
@@ -1095,7 +1095,7 @@
    "period": "90年〜93年",
    "odmm": "3",
    "odfr": "9.0",
-   "en": "CapSure® IS-1"
+   "alias": "キャプシュアーIS-1リード"
   },
   {
    "id": "MDT-L-4511",
@@ -1153,7 +1153,7 @@
    "dealer": "日本メドトロニック(株)",
    "cat": "PMリード",
    "model": "4523",
-   "name": "キャプシュアーSPリード",
+   "name": "CapSure® SP",
    "polarity": "単極",
    "site": "A",
    "intro": "10.5F",
@@ -1169,7 +1169,7 @@
    "period": "91年〜",
    "odmm": "1.7",
    "odfr": "5.1",
-   "en": "CapSure® SP"
+   "alias": "キャプシュアーSPリード"
   },
   {
    "id": "MDT-L-4524",
@@ -1178,7 +1178,7 @@
    "dealer": "日本メドトロニック(株)",
    "cat": "PMリード",
    "model": "4524",
-   "name": "キャプシュアーSPリード",
+   "name": "CapSure® SP",
    "polarity": "双極",
    "site": "A",
    "intro": "7F",
@@ -1196,7 +1196,7 @@
    "period": "91年〜",
    "odmm": "2.2",
    "odfr": "6.6",
-   "en": "CapSure® SP"
+   "alias": "キャプシュアーSPリード"
   },
   {
    "id": "MDT-L-4568",
@@ -1205,7 +1205,7 @@
    "dealer": "日本メドトロニック(株)",
    "cat": "PMリード",
    "model": "4568",
-   "name": "キャプシュアーFixリード",
+   "name": "CapSureFix®",
    "polarity": "双極",
    "site": "A",
    "intro": "9F",
@@ -1223,7 +1223,7 @@
    "period": "94年〜97年",
    "odmm": "2.7",
    "odfr": "8.1",
-   "en": "CapSureFix®"
+   "alias": "キャプシュアーFixリード"
   },
   {
    "id": "MDT-L-5023",
@@ -1232,7 +1232,7 @@
    "dealer": "日本メドトロニック(株)",
    "cat": "PMリード",
    "model": "5023",
-   "name": "キャプシュアーSPシリコンリード",
+   "name": "CapSure® SP（silicone）",
    "polarity": "単極",
    "site": "V",
    "intro": "9F",
@@ -1248,7 +1248,7 @@
    "period": "90年〜91年",
    "odmm": "1.8",
    "odfr": "5.4",
-   "en": "CapSure® SP（silicone）"
+   "alias": "キャプシュアーSPシリコンリード"
   },
   {
    "id": "MDT-L-5023M",
@@ -1257,7 +1257,7 @@
    "dealer": "日本メドトロニック(株)",
    "cat": "PMリード",
    "model": "5023M",
-   "name": "キャプシュアーSPシリコンリード",
+   "name": "CapSure® SP（silicone）",
    "polarity": "単極",
    "site": "V",
    "intro": "9F",
@@ -1273,7 +1273,7 @@
    "period": "91年〜96年",
    "odmm": "1.8",
    "odfr": "5.4",
-   "en": "CapSure® SP（silicone）"
+   "alias": "キャプシュアーSPシリコンリード"
   },
   {
    "id": "MDT-L-5024M",
@@ -1282,7 +1282,7 @@
    "dealer": "日本メドトロニック(株)",
    "cat": "PMリード",
    "model": "5024M",
-   "name": "キャプシュアーSPシリコンリード",
+   "name": "CapSure® SP（silicone）",
    "polarity": "双極",
    "site": "V",
    "intro": "9F",
@@ -1300,7 +1300,7 @@
    "period": "91年〜96年",
    "odmm": "2.82",
    "odfr": "8.5",
-   "en": "CapSure® SP（silicone）"
+   "alias": "キャプシュアーSPシリコンリード"
   },
   {
    "id": "MDT-L-5032",
@@ -1309,7 +1309,7 @@
    "dealer": "日本メドトロニック(株)",
    "cat": "PMリード",
    "model": "5032",
-   "name": "キャプシュアーVDDリード",
+   "name": "CapSure® VDD",
    "polarity": "双極",
    "site": "V+A",
    "intro": "10.5F",
@@ -1327,7 +1327,7 @@
    "period": "94年〜98年",
    "odmm": "3.25",
    "odfr": "9.8",
-   "en": "CapSure® VDD"
+   "alias": "キャプシュアーVDDリード"
   },
   {
    "id": "MDT-L-5032S",
@@ -1336,7 +1336,7 @@
    "dealer": "日本メドトロニック(株)",
    "cat": "PMリード",
    "model": "5032S",
-   "name": "キャプシュアーVDDリード",
+   "name": "CapSure® VDD",
    "polarity": "双極",
    "site": "V+A",
    "intro": "10.5F",
@@ -1354,7 +1354,7 @@
    "period": "94年〜98年",
    "odmm": "3.25",
    "odfr": "9.8",
-   "en": "CapSure® VDD"
+   "alias": "キャプシュアーVDDリード"
   },
   {
    "id": "MDT-L-5033",
@@ -1363,7 +1363,7 @@
    "dealer": "日本メドトロニック(株)",
    "cat": "PMリード",
    "model": "5033",
-   "name": "キャプシュアーZリード",
+   "name": "CapSure® Z",
    "polarity": "単極",
    "site": "V",
    "intro": "7F",
@@ -1379,7 +1379,7 @@
    "period": "95年〜",
    "odmm": "1.7",
    "odfr": "5.1",
-   "en": "CapSure® Z"
+   "alias": "キャプシュアーZリード"
   },
   {
    "id": "MDT-L-5034",
@@ -1388,7 +1388,7 @@
    "dealer": "日本メドトロニック(株)",
    "cat": "PMリード",
    "model": "5034",
-   "name": "キャプシュアーZリード",
+   "name": "CapSure® Z",
    "polarity": "双極",
    "site": "V",
    "intro": "9F",
@@ -1406,7 +1406,7 @@
    "period": "95年〜98年",
    "odmm": "2.8",
    "odfr": "8.4",
-   "en": "CapSure® Z"
+   "alias": "キャプシュアーZリード"
   },
   {
    "id": "MDT-L-5061",
@@ -1465,7 +1465,7 @@
    "dealer": "日本メドトロニック(株)",
    "cat": "PMリード",
    "model": "5523",
-   "name": "キャプシュアーSPシリコンリード",
+   "name": "CapSure® SP（silicone）",
    "polarity": "単極",
    "site": "A",
    "intro": "9F",
@@ -1481,7 +1481,7 @@
    "period": "90年〜91年",
    "odmm": "1.9",
    "odfr": "5.7",
-   "en": "CapSure® SP（silicone）"
+   "alias": "キャプシュアーSPシリコンリード"
   },
   {
    "id": "MDT-L-5524M",
@@ -1490,7 +1490,7 @@
    "dealer": "日本メドトロニック(株)",
    "cat": "PMリード",
    "model": "5524M",
-   "name": "キャプシュアーSPシリコンリード",
+   "name": "CapSure® SP（silicone）",
    "polarity": "双極",
    "site": "A",
    "intro": "9F",
@@ -1508,7 +1508,7 @@
    "period": "91年〜96年",
    "odmm": "2.82",
    "odfr": "8.5",
-   "en": "CapSure® SP（silicone）"
+   "alias": "キャプシュアーSPシリコンリード"
   },
   {
    "id": "MDT-L-5534",
@@ -1517,7 +1517,7 @@
    "dealer": "日本メドトロニック(株)",
    "cat": "PMリード",
    "model": "5534",
-   "name": "キャプシュアーZリード",
+   "name": "CapSure® Z",
    "polarity": "双極",
    "site": "A",
    "intro": "9F",
@@ -1535,7 +1535,7 @@
    "period": "95年〜98年",
    "odmm": "2.8",
    "odfr": "8.4",
-   "en": "CapSure® Z"
+   "alias": "キャプシュアーZリード"
   },
   {
    "id": "MDT-L-6901",
@@ -1996,7 +1996,7 @@
    "dealer": "バイオトロニックジャパン(株)",
    "cat": "PMリード",
    "model": "Fraste JT 45",
-   "name": "フラステ",
+   "name": "Fraste",
    "polarity": "双極",
    "site": "A",
    "intro": "7F以上",
@@ -2013,7 +2013,8 @@
    "connector": "IS-1",
    "period": "06年11月〜",
    "odmm": "2.2",
-   "odfr": "6.6"
+   "odfr": "6.6",
+   "alias": "フラステ"
   },
   {
    "id": "BIO-L-Fraste-JT-53",
@@ -2022,7 +2023,7 @@
    "dealer": "バイオトロニックジャパン(株)",
    "cat": "PMリード",
    "model": "Fraste JT 53",
-   "name": "フラステ",
+   "name": "Fraste",
    "polarity": "双極",
    "site": "A",
    "intro": "7F以上",
@@ -2039,7 +2040,8 @@
    "connector": "IS-1",
    "period": "06年11月〜",
    "odmm": "2.2",
-   "odfr": "6.6"
+   "odfr": "6.6",
+   "alias": "フラステ"
   },
   {
    "id": "BIO-L-Fraste-ST-53",
@@ -2048,7 +2050,7 @@
    "dealer": "バイオトロニックジャパン(株)",
    "cat": "PMリード",
    "model": "Fraste ST 53",
-   "name": "フラステ",
+   "name": "Fraste",
    "polarity": "双極",
    "site": "V",
    "intro": "7F以上",
@@ -2065,7 +2067,8 @@
    "connector": "IS-1",
    "period": "06年11月〜",
    "odmm": "2.2",
-   "odfr": "6.6"
+   "odfr": "6.6",
+   "alias": "フラステ"
   },
   {
    "id": "BIO-L-Fraste-ST-60",
@@ -2074,7 +2077,7 @@
    "dealer": "バイオトロニックジャパン(株)",
    "cat": "PMリード",
    "model": "Fraste ST 60",
-   "name": "フラステ",
+   "name": "Fraste",
    "polarity": "双極",
    "site": "V",
    "intro": "7F以上",
@@ -2091,7 +2094,8 @@
    "connector": "IS-1",
    "period": "06年11月〜",
    "odmm": "2.2",
-   "odfr": "6.6"
+   "odfr": "6.6",
+   "alias": "フラステ"
   },
   {
    "id": "BIO-L-Fraste-SR-45",
@@ -2100,7 +2104,7 @@
    "dealer": "バイオトロニックジャパン(株)",
    "cat": "PMリード",
    "model": "Fraste SR 45",
-   "name": "フラステSR",
+   "name": "Fraste SR",
    "polarity": "双極",
    "site": "A",
    "intro": "8F以上",
@@ -2117,7 +2121,8 @@
    "connector": "IS-1",
    "period": "06年11月〜",
    "odmm": "2.6",
-   "odfr": "7.8"
+   "odfr": "7.8",
+   "alias": "フラステSR"
   },
   {
    "id": "BIO-L-Fraste-SR-53",
@@ -2126,7 +2131,7 @@
    "dealer": "バイオトロニックジャパン(株)",
    "cat": "PMリード",
    "model": "Fraste SR 53",
-   "name": "フラステSR",
+   "name": "Fraste SR",
    "polarity": "双極",
    "site": "A/V",
    "intro": "8F以上",
@@ -2143,7 +2148,8 @@
    "connector": "IS-1",
    "period": "06年11月〜",
    "odmm": "2.6",
-   "odfr": "7.8"
+   "odfr": "7.8",
+   "alias": "フラステSR"
   },
   {
    "id": "BIO-L-Fraste-SR-60",
@@ -2152,7 +2158,7 @@
    "dealer": "バイオトロニックジャパン(株)",
    "cat": "PMリード",
    "model": "Fraste SR 60",
-   "name": "フラステSR",
+   "name": "Fraste SR",
    "polarity": "双極",
    "site": "V",
    "intro": "8F以上",
@@ -2169,7 +2175,8 @@
    "connector": "IS-1",
    "period": "06年11月〜",
    "odmm": "2.6",
-   "odfr": "7.8"
+   "odfr": "7.8",
+   "alias": "フラステSR"
   },
   {
    "id": "BIO-L-Setrox-S-45",
@@ -2178,7 +2185,7 @@
    "dealer": "バイオトロニックジャパン(株)",
    "cat": "PMリード",
    "model": "Setrox S 45",
-   "name": "セトロックスS",
+   "name": "Setrox S",
    "polarity": "双極",
    "site": "A",
    "intro": "7F以上",
@@ -2196,7 +2203,7 @@
    "period": "08年4月〜",
    "odmm": "2.2",
    "odfr": "6.6",
-   "en": "Setrox S"
+   "alias": "セトロックスS"
   },
   {
    "id": "BIO-L-Setrox-S-53",
@@ -2205,7 +2212,7 @@
    "dealer": "バイオトロニックジャパン(株)",
    "cat": "PMリード",
    "model": "Setrox S 53",
-   "name": "セトロックスS",
+   "name": "Setrox S",
    "polarity": "双極",
    "site": "A/V",
    "intro": "7F以上",
@@ -2223,7 +2230,7 @@
    "period": "08年4月〜",
    "odmm": "2.2",
    "odfr": "6.6",
-   "en": "Setrox S"
+   "alias": "セトロックスS"
   },
   {
    "id": "BIO-L-Setrox-S-60",
@@ -2232,7 +2239,7 @@
    "dealer": "バイオトロニックジャパン(株)",
    "cat": "PMリード",
    "model": "Setrox S 60",
-   "name": "セトロックスS",
+   "name": "Setrox S",
    "polarity": "双極",
    "site": "V",
    "intro": "7F以上",
@@ -2250,7 +2257,7 @@
    "period": "08年4月〜",
    "odmm": "2.2",
    "odfr": "6.6",
-   "en": "Setrox S"
+   "alias": "セトロックスS"
   },
   {
    "id": "BIO-L-Siello-JT-53",
@@ -2259,7 +2266,7 @@
    "dealer": "バイオトロニックジャパン(株)",
    "cat": "PMリード",
    "model": "Siello JT 53",
-   "name": "シエロT",
+   "name": "Siello T",
    "polarity": "双極",
    "site": "A",
    "intro": "6F",
@@ -2277,7 +2284,7 @@
    "period": "10年10月〜",
    "odmm": "1.9",
    "odfr": "5.9",
-   "en": "Siello T"
+   "alias": "シエロT"
   },
   {
    "id": "BIO-L-Siello-T-53",
@@ -2286,7 +2293,7 @@
    "dealer": "バイオトロニックジャパン(株)",
    "cat": "PMリード",
    "model": "Siello T 53",
-   "name": "シエロT",
+   "name": "Siello T",
    "polarity": "双極",
    "site": "V",
    "intro": "6F",
@@ -2304,7 +2311,7 @@
    "period": "10年10月〜",
    "odmm": "1.9",
    "odfr": "5.9",
-   "en": "Siello T"
+   "alias": "シエロT"
   },
   {
    "id": "BIO-L-Siello-T-60",
@@ -2313,7 +2320,7 @@
    "dealer": "バイオトロニックジャパン(株)",
    "cat": "PMリード",
    "model": "Siello T 60",
-   "name": "シエロT",
+   "name": "Siello T",
    "polarity": "双極",
    "site": "V",
    "intro": "6F",
@@ -2331,7 +2338,7 @@
    "period": "10年10月〜",
    "odmm": "1.9",
    "odfr": "5.9",
-   "en": "Siello T"
+   "alias": "シエロT"
   },
   {
    "id": "BIO-L-Siello-S-45",
@@ -2340,7 +2347,7 @@
    "dealer": "バイオトロニックジャパン(株)",
    "cat": "PMリード",
    "model": "Siello S 45",
-   "name": "シエロS",
+   "name": "Siello S",
    "polarity": "双極",
    "site": "A/V",
    "intro": "6F",
@@ -2358,7 +2365,7 @@
    "period": "10年10月〜",
    "odmm": "1.9",
    "odfr": "5.9",
-   "en": "Siello S"
+   "alias": "シエロS"
   },
   {
    "id": "BIO-L-Siello-S-53",
@@ -2367,7 +2374,7 @@
    "dealer": "バイオトロニックジャパン(株)",
    "cat": "PMリード",
    "model": "Siello S 53",
-   "name": "シエロS",
+   "name": "Siello S",
    "polarity": "双極",
    "site": "A/V",
    "intro": "6F",
@@ -2385,7 +2392,7 @@
    "period": "10年10月〜",
    "odmm": "1.9",
    "odfr": "5.9",
-   "en": "Siello S"
+   "alias": "シエロS"
   },
   {
    "id": "BIO-L-Siello-S-60",
@@ -2394,7 +2401,7 @@
    "dealer": "バイオトロニックジャパン(株)",
    "cat": "PMリード",
    "model": "Siello S 60",
-   "name": "シエロS",
+   "name": "Siello S",
    "polarity": "双極",
    "site": "A/V",
    "intro": "6F",
@@ -2412,7 +2419,7 @@
    "period": "10年10月〜",
    "odmm": "1.9",
    "odfr": "5.9",
-   "en": "Siello S"
+   "alias": "シエロS"
   },
   {
    "id": "BIO-L-Solia-S-45",
@@ -4703,7 +4710,7 @@
    "dealer": "日本光電工業(株)",
    "cat": "PMリード",
    "model": "PX45-JBP",
-   "name": "フラクタルリード（ポリロックス）",
+   "name": "Polyrox（Fractal coating）",
    "polarity": "双極",
    "site": "A",
    "intro": "9F",
@@ -4721,7 +4728,7 @@
    "period": "96年〜現在",
    "odmm": "2.6",
    "odfr": "7.8",
-   "en": "Polyrox（Fractal coating）"
+   "alias": "フラクタルリード（ポリロックス）"
   },
   {
    "id": "BIO-L-PX53-BP",
@@ -4730,7 +4737,7 @@
    "dealer": "日本光電工業(株)",
    "cat": "PMリード",
    "model": "PX53-BP",
-   "name": "フラクタルリード（ポリロックス）",
+   "name": "Polyrox（Fractal coating）",
    "polarity": "双極",
    "site": "V",
    "intro": "9F",
@@ -4748,7 +4755,7 @@
    "period": "96年〜現在",
    "odmm": "2.2",
    "odfr": "6.6",
-   "en": "Polyrox（Fractal coating）"
+   "alias": "フラクタルリード（ポリロックス）"
   },
   {
    "id": "BIO-L-PX53-JUP",
@@ -4757,7 +4764,7 @@
    "dealer": "日本光電工業(株)",
    "cat": "PMリード",
    "model": "PX53-JUP",
-   "name": "フラクタルリード（ポリロックス）",
+   "name": "Polyrox（Fractal coating）",
    "polarity": "単極",
    "site": "A",
    "intro": "9F",
@@ -4773,7 +4780,7 @@
    "period": "96年〜04年",
    "odmm": "1.7",
    "odfr": "5.1",
-   "en": "Polyrox（Fractal coating）"
+   "alias": "フラクタルリード（ポリロックス）"
   },
   {
    "id": "BIO-L-PX53-UP",
@@ -4782,7 +4789,7 @@
    "dealer": "日本光電工業(株)",
    "cat": "PMリード",
    "model": "PX53-UP",
-   "name": "フラクタルリード（ポリロックス）",
+   "name": "Polyrox（Fractal coating）",
    "polarity": "単極",
    "site": "V",
    "intro": "9F",
@@ -4798,7 +4805,7 @@
    "period": "96年〜05年",
    "odmm": "1.7",
    "odfr": "5.1",
-   "en": "Polyrox（Fractal coating）"
+   "alias": "フラクタルリード（ポリロックス）"
   },
   {
    "id": "BIO-L-PX60-BP",
@@ -4807,7 +4814,7 @@
    "dealer": "日本光電工業(株)",
    "cat": "PMリード",
    "model": "PX60-BP",
-   "name": "フラクタルリード（ポリロックス）",
+   "name": "Polyrox（Fractal coating）",
    "polarity": "双極",
    "site": "V",
    "intro": "9F",
@@ -4825,7 +4832,7 @@
    "period": "96年〜現在",
    "odmm": "2.2",
    "odfr": "6.6",
-   "en": "Polyrox（Fractal coating）"
+   "alias": "フラクタルリード（ポリロックス）"
   },
   {
    "id": "BIO-L-SX45-JBP",
@@ -4834,7 +4841,7 @@
    "dealer": "日本光電工業(株)",
    "cat": "PMリード",
    "model": "SX45-JBP",
-   "name": "フラクタルリード（シノックス）",
+   "name": "Synox（Fractal coating）",
    "polarity": "双極",
    "site": "A",
    "intro": "8F",
@@ -4852,7 +4859,7 @@
    "period": "96年〜現在",
    "odmm": "2.2",
    "odfr": "6.6",
-   "en": "Synox（Fractal coating）"
+   "alias": "フラクタルリード（シノックス）"
   },
   {
    "id": "BIO-L-SX53-BP",
@@ -4861,7 +4868,7 @@
    "dealer": "日本光電工業(株)",
    "cat": "PMリード",
    "model": "SX53-BP",
-   "name": "フラクタルリード（シノックス）",
+   "name": "Synox（Fractal coating）",
    "polarity": "双極",
    "site": "V",
    "intro": "8F",
@@ -4879,7 +4886,7 @@
    "period": "96年〜現在",
    "odmm": "2.2",
    "odfr": "6.6",
-   "en": "Synox（Fractal coating）"
+   "alias": "フラクタルリード（シノックス）"
   },
   {
    "id": "BIO-L-SX60-BP",
@@ -4888,7 +4895,7 @@
    "dealer": "日本光電工業(株)",
    "cat": "PMリード",
    "model": "SX60-BP",
-   "name": "フラクタルリード（シノックス）",
+   "name": "Synox（Fractal coating）",
    "polarity": "双極",
    "site": "V",
    "intro": "8F",
@@ -4906,7 +4913,7 @@
    "period": "96年〜現在",
    "odmm": "2.2",
    "odfr": "6.6",
-   "en": "Synox（Fractal coating）"
+   "alias": "フラクタルリード（シノックス）"
   },
   {
    "id": "BIO-L-SX60-UP",
@@ -4915,7 +4922,7 @@
    "dealer": "日本光電工業(株)",
    "cat": "PMリード",
    "model": "SX60-UP",
-   "name": "フラクタルリード（シノックス）",
+   "name": "Synox（Fractal coating）",
    "polarity": "単極",
    "site": "V",
    "intro": "7F",
@@ -4931,7 +4938,7 @@
    "period": "96年〜98年",
    "odmm": "1.4",
    "odfr": "4.2",
-   "en": "Synox（Fractal coating）"
+   "alias": "フラクタルリード（シノックス）"
   },
   {
    "id": "BIO-L-RX53-BP",
@@ -4940,7 +4947,7 @@
    "dealer": "日本光電工業(株)",
    "cat": "PMリード",
    "model": "RX53-BP",
-   "name": "スクリューインリード（リトロックス）",
+   "name": "Retrox",
    "polarity": "双極",
    "site": "V",
    "intro": "9F",
@@ -4958,7 +4965,7 @@
    "period": "98年〜01年",
    "odmm": "2.2",
    "odfr": "6.6",
-   "en": "Retrox"
+   "alias": "スクリューインリード（リトロックス）"
   },
   {
    "id": "BIO-L-RX45-JBP",
@@ -4967,7 +4974,7 @@
    "dealer": "日本光電工業(株)",
    "cat": "PMリード",
    "model": "RX45-JBP",
-   "name": "スクリューインリード（リトロックス）",
+   "name": "Retrox",
    "polarity": "双極",
    "site": "V",
    "intro": "9F",
@@ -4985,7 +4992,7 @@
    "period": "98年〜05年",
    "odmm": "2.6",
    "odfr": "7.8",
-   "en": "Retrox"
+   "alias": "スクリューインリード（リトロックス）"
   },
   {
    "id": "BIO-L-SLX65_13-BP",
@@ -4994,7 +5001,7 @@
    "dealer": "日本光電工業(株)",
    "cat": "PMリード",
    "model": "SLX65/13-BP",
-   "name": "シングルリード ソロックス",
+   "name": "Solox（single-pass VDD lead）",
    "polarity": "双極",
    "site": "A/V",
    "intro": "9F",
@@ -5011,7 +5018,8 @@
    "connector": "IS-1",
    "period": "01年〜01年9月",
    "odmm": "2.7",
-   "odfr": "8.1"
+   "odfr": "8.1",
+   "alias": "シングルリード ソロックス"
   },
   {
    "id": "BIO-L-SLX65_11-BP",
@@ -5020,7 +5028,7 @@
    "dealer": "日本光電工業(株)",
    "cat": "PMリード",
    "model": "SLX65/11-BP",
-   "name": "シングルリード ソロックス",
+   "name": "Solox（single-pass VDD lead）",
    "polarity": "双極",
    "site": "A/V",
    "intro": "9F",
@@ -5037,7 +5045,8 @@
    "connector": "IS-1",
    "period": "01年〜01年9月",
    "odmm": "2.7",
-   "odfr": "8.1"
+   "odfr": "8.1",
+   "alias": "シングルリード ソロックス"
   },
   {
    "id": "BIO-L-SLX65_15-BP",
@@ -5046,7 +5055,7 @@
    "dealer": "日本光電工業(株)",
    "cat": "PMリード",
    "model": "SLX65/15-BP",
-   "name": "シングルリード ソロックス",
+   "name": "Solox（single-pass VDD lead）",
    "polarity": "双極",
    "site": "A/V",
    "intro": "9F",
@@ -5063,7 +5072,8 @@
    "connector": "IS-1",
    "period": "01年〜01年9月",
    "odmm": "2.7",
-   "odfr": "8.1"
+   "odfr": "8.1",
+   "alias": "シングルリード ソロックス"
   },
   {
    "id": "BIO-L-SLX58_11-BP",
@@ -5072,7 +5082,7 @@
    "dealer": "日本光電工業(株)",
    "cat": "PMリード",
    "model": "SLX58/11-BP",
-   "name": "シングルリード ソロックス",
+   "name": "Solox（single-pass VDD lead）",
    "polarity": "双極",
    "site": "A/V",
    "intro": "9F",
@@ -5089,7 +5099,8 @@
    "connector": "IS-1",
    "period": "01年4月〜現在",
    "odmm": "2.7",
-   "odfr": "8.1"
+   "odfr": "8.1",
+   "alias": "シングルリード ソロックス"
   },
   {
    "id": "BIO-L-SLX58_13-BP",
@@ -5098,7 +5109,7 @@
    "dealer": "日本光電工業(株)",
    "cat": "PMリード",
    "model": "SLX58/13-BP",
-   "name": "シングルリード ソロックス",
+   "name": "Solox（single-pass VDD lead）",
    "polarity": "双極",
    "site": "A/V",
    "intro": "9F",
@@ -5115,7 +5126,8 @@
    "connector": "IS-1",
    "period": "01年4月〜現在",
    "odmm": "2.7",
-   "odfr": "8.1"
+   "odfr": "8.1",
+   "alias": "シングルリード ソロックス"
   },
   {
    "id": "BIO-L-SLX58_15-BP",
@@ -5124,7 +5136,7 @@
    "dealer": "日本光電工業(株)",
    "cat": "PMリード",
    "model": "SLX58/15-BP",
-   "name": "シングルリード ソロックス",
+   "name": "Solox（single-pass VDD lead）",
    "polarity": "双極",
    "site": "A/V",
    "intro": "9F",
@@ -5141,7 +5153,8 @@
    "connector": "IS-1",
    "period": "01年4月〜現在",
    "odmm": "2.7",
-   "odfr": "8.1"
+   "odfr": "8.1",
+   "alias": "シングルリード ソロックス"
   },
   {
    "id": "BIO-L-ELOX53-BP",
@@ -5150,7 +5163,7 @@
    "dealer": "日本光電工業(株)",
    "cat": "PMリード",
    "model": "ELOX53-BP",
-   "name": "スクリューインリード（イーロックス）",
+   "name": "Elox",
    "polarity": "双極",
    "site": "A/V",
    "intro": "8F",
@@ -5168,7 +5181,7 @@
    "period": "01年1月〜",
    "odmm": "2.6",
    "odfr": "7.8",
-   "en": "Elox"
+   "alias": "スクリューインリード（イーロックス）"
   },
   {
    "id": "BIO-L-ELOX60-BP",
@@ -5177,7 +5190,7 @@
    "dealer": "日本光電工業(株)",
    "cat": "PMリード",
    "model": "ELOX60-BP",
-   "name": "スクリューインリード（イーロックス）",
+   "name": "Elox",
    "polarity": "双極",
    "site": "A/V",
    "intro": "8F",
@@ -5195,7 +5208,7 @@
    "period": "01年1月〜",
    "odmm": "2.6",
    "odfr": "7.8",
-   "en": "Elox"
+   "alias": "スクリューインリード（イーロックス）"
   },
   {
    "id": "BIO-L-PX53_15-BP",
@@ -5256,7 +5269,7 @@
    "dealer": "日本光電工業(株)",
    "cat": "PMリード",
    "model": "SEL-SR45",
-   "name": "セロックスSR",
+   "name": "Selox SR",
    "polarity": "双極",
    "site": "A",
    "intro": "8F以上",
@@ -5274,7 +5287,7 @@
    "period": "05年4月〜",
    "odmm": "2.6",
    "odfr": "7.8",
-   "en": "Selox SR"
+   "alias": "セロックスSR"
   },
   {
    "id": "BIO-L-SEL-SR53",
@@ -5283,7 +5296,7 @@
    "dealer": "日本光電工業(株)",
    "cat": "PMリード",
    "model": "SEL-SR53",
-   "name": "セロックスSR",
+   "name": "Selox SR",
    "polarity": "双極",
    "site": "A/V",
    "intro": "8F以上",
@@ -5301,7 +5314,7 @@
    "period": "05年4月〜",
    "odmm": "2.6",
    "odfr": "7.8",
-   "en": "Selox SR"
+   "alias": "セロックスSR"
   },
   {
    "id": "BIO-L-SEL-SR60",
@@ -5310,7 +5323,7 @@
    "dealer": "日本光電工業(株)",
    "cat": "PMリード",
    "model": "SEL-SR60",
-   "name": "セロックスSR",
+   "name": "Selox SR",
    "polarity": "双極",
    "site": "V",
    "intro": "8F以上",
@@ -5328,7 +5341,7 @@
    "period": "05年4月〜",
    "odmm": "2.6",
    "odfr": "7.8",
-   "en": "Selox SR"
+   "alias": "セロックスSR"
   },
   {
    "id": "BIO-L-SELOX-JT45",
@@ -5337,7 +5350,7 @@
    "dealer": "日本光電工業(株)",
    "cat": "PMリード",
    "model": "SELOX-JT45",
-   "name": "セロックス",
+   "name": "Selox",
    "polarity": "双極",
    "site": "A",
    "intro": "7F以上",
@@ -5355,7 +5368,7 @@
    "period": "06年7月〜",
    "odmm": "2.2",
    "odfr": "6.6",
-   "en": "Selox"
+   "alias": "セロックス"
   },
   {
    "id": "BIO-L-SELOX-JT53",
@@ -5364,7 +5377,7 @@
    "dealer": "日本光電工業(株)",
    "cat": "PMリード",
    "model": "SELOX-JT53",
-   "name": "セロックス",
+   "name": "Selox",
    "polarity": "双極",
    "site": "A",
    "intro": "7F以上",
@@ -5382,7 +5395,7 @@
    "period": "06年7月〜",
    "odmm": "2.2",
    "odfr": "6.6",
-   "en": "Selox"
+   "alias": "セロックス"
   },
   {
    "id": "BIO-L-SELOX-ST53",
@@ -5391,7 +5404,7 @@
    "dealer": "日本光電工業(株)",
    "cat": "PMリード",
    "model": "SELOX-ST53",
-   "name": "セロックス",
+   "name": "Selox",
    "polarity": "双極",
    "site": "V",
    "intro": "7F以上",
@@ -5409,7 +5422,7 @@
    "period": "06年7月〜",
    "odmm": "2.2",
    "odfr": "6.6",
-   "en": "Selox"
+   "alias": "セロックス"
   },
   {
    "id": "BIO-L-SELOX-ST60",
@@ -5418,7 +5431,7 @@
    "dealer": "日本光電工業(株)",
    "cat": "PMリード",
    "model": "SELOX-ST60",
-   "name": "セロックス",
+   "name": "Selox",
    "polarity": "双極",
    "site": "V",
    "intro": "7F以上",
@@ -5436,7 +5449,7 @@
    "period": "06年7月〜",
    "odmm": "2.2",
    "odfr": "6.6",
-   "en": "Selox"
+   "alias": "セロックス"
   },
   {
    "id": "CPI-L-4000",
@@ -5895,7 +5908,7 @@
    "steroid": "無",
    "emat": "プラチナイリジウム",
    "model": "4143",
-   "name": "スイートチップRxリード",
+   "name": "SWEET TIP® Rx",
    "polarity": "単極",
    "site": "A/V",
    "intro": "10(9)F",
@@ -5909,7 +5922,7 @@
    "period": "95年〜現在",
    "odmm": "2.6",
    "odfr": "7.8",
-   "en": "SWEET TIP® Rx"
+   "alias": "スイートチップRxリード"
   },
   {
    "id": "CPI-L-4144",
@@ -5920,7 +5933,7 @@
    "steroid": "無",
    "emat": "プラチナイリジウム",
    "model": "4144",
-   "name": "スイートチップRxリード",
+   "name": "SWEET TIP® Rx",
    "polarity": "単極",
    "site": "A/V",
    "intro": "10(9)F",
@@ -5934,7 +5947,7 @@
    "period": "95年〜現在",
    "odmm": "2.6",
    "odfr": "7.8",
-   "en": "SWEET TIP® Rx"
+   "alias": "スイートチップRxリード"
   },
   {
    "id": "CPI-L-4145",
@@ -5945,7 +5958,7 @@
    "steroid": "無",
    "emat": "プラチナイリジウム",
    "model": "4145",
-   "name": "スイートチップRxリード",
+   "name": "SWEET TIP® Rx",
    "polarity": "単極",
    "site": "A/V",
    "intro": "10(9)F",
@@ -5959,7 +5972,7 @@
    "period": "95年〜現在",
    "odmm": "2.6",
    "odfr": "7.8",
-   "en": "SWEET TIP® Rx"
+   "alias": "スイートチップRxリード"
   },
   {
    "id": "CPI-L-4150",
@@ -6231,7 +6244,7 @@
    "dealer": "ボストン・サイエンティフィックジャパン(株)",
    "cat": "PMリード",
    "model": "4185",
-   "name": "ソリュートリード",
+   "name": "SELUTE™",
    "polarity": "単極",
    "site": "V",
    "intro": "10F",
@@ -6247,7 +6260,7 @@
    "period": "94年〜現在",
    "odmm": "3.7",
    "odfr": "11.1",
-   "en": "SELUTE™"
+   "alias": "ソリュートリード"
   },
   {
    "id": "CPI-L-4193",
@@ -6256,7 +6269,7 @@
    "dealer": "ボストン・サイエンティフィックジャパン(株)",
    "cat": "PMリード",
    "model": "4193",
-   "name": "ソリュートJリード",
+   "name": "SELUTE™ J",
    "polarity": "単極",
    "site": "A",
    "intro": "10F",
@@ -6272,7 +6285,7 @@
    "period": "95年〜現在",
    "odmm": "1.5",
    "odfr": "4.5",
-   "en": "SELUTE™（J型）"
+   "alias": "ソリュートJリード"
   },
   {
    "id": "CPI-L-4194",
@@ -6281,7 +6294,7 @@
    "dealer": "ボストン・サイエンティフィックジャパン(株)",
    "cat": "PMリード",
    "model": "4194",
-   "name": "ソリュートJリード",
+   "name": "SELUTE™ J",
    "polarity": "単極",
    "site": "A",
    "intro": "10F",
@@ -6297,7 +6310,7 @@
    "period": "95年〜現在",
    "odmm": "1.5",
    "odfr": "4.5",
-   "en": "SELUTE™（J型）"
+   "alias": "ソリュートJリード"
   },
   {
    "id": "CPI-L-4209",
@@ -6552,7 +6565,7 @@
    "dealer": "ボストン・サイエンティフィックジャパン(株)",
    "cat": "PMリード",
    "model": "4243",
-   "name": "スイートチップRxリード",
+   "name": "SWEET TIP® Rx",
    "polarity": "双極",
    "site": "A/V",
    "intro": "10(9)F",
@@ -6570,7 +6583,7 @@
    "period": "95年〜現在",
    "odmm": "2.6",
    "odfr": "7.8",
-   "en": "SWEET TIP® Rx"
+   "alias": "スイートチップRxリード"
   },
   {
    "id": "CPI-L-4244",
@@ -6579,7 +6592,7 @@
    "dealer": "ボストン・サイエンティフィックジャパン(株)",
    "cat": "PMリード",
    "model": "4244",
-   "name": "スイートチップRxリード",
+   "name": "SWEET TIP® Rx",
    "polarity": "双極",
    "site": "A/V",
    "intro": "10(9)F",
@@ -6597,7 +6610,7 @@
    "period": "95年〜現在",
    "odmm": "2.6",
    "odfr": "7.8",
-   "en": "SWEET TIP® Rx"
+   "alias": "スイートチップRxリード"
   },
   {
    "id": "CPI-L-4245",
@@ -6606,7 +6619,7 @@
    "dealer": "ボストン・サイエンティフィックジャパン(株)",
    "cat": "PMリード",
    "model": "4245",
-   "name": "スイートチップRxリード",
+   "name": "SWEET TIP® Rx",
    "polarity": "双極",
    "site": "A/V",
    "intro": "10(9)F",
@@ -6624,7 +6637,7 @@
    "period": "95年〜現在",
    "odmm": "2.6",
    "odfr": "7.8",
-   "en": "SWEET TIP® Rx"
+   "alias": "スイートチップRxリード"
   },
   {
    "id": "CPI-L-4250",
@@ -6896,7 +6909,7 @@
    "dealer": "ボストン・サイエンティフィックジャパン(株)",
    "cat": "PMリード",
    "model": "4285",
-   "name": "ソリュートリード",
+   "name": "SELUTE™",
    "polarity": "双極",
    "site": "V",
    "intro": "10F",
@@ -6914,7 +6927,7 @@
    "period": "91年〜現在",
    "odmm": "2.2",
    "odfr": "6.6",
-   "en": "SELUTE™"
+   "alias": "ソリュートリード"
   },
   {
    "id": "CPI-L-4293",
@@ -6923,7 +6936,7 @@
    "dealer": "ボストン・サイエンティフィックジャパン(株)",
    "cat": "PMリード",
    "model": "4293",
-   "name": "ソリュートJリード",
+   "name": "SELUTE™ J",
    "polarity": "双極",
    "site": "A",
    "intro": "10F",
@@ -6941,7 +6954,7 @@
    "period": "91年〜現在",
    "odmm": "2.6",
    "odfr": "7.8",
-   "en": "SELUTE™（J型）"
+   "alias": "ソリュートJリード"
   },
   {
    "id": "CPI-L-4294",
@@ -6950,7 +6963,7 @@
    "dealer": "ボストン・サイエンティフィックジャパン(株)",
    "cat": "PMリード",
    "model": "4294",
-   "name": "ソリュートJリード",
+   "name": "SELUTE™ J",
    "polarity": "双極",
    "site": "A",
    "intro": "10F",
@@ -6968,7 +6981,7 @@
    "period": "91年〜現在",
    "odmm": "2.6",
    "odfr": "7.8",
-   "en": "SELUTE™（J型）"
+   "alias": "ソリュートJリード"
   },
   {
    "id": "CPI-L-4031",
@@ -6977,7 +6990,7 @@
    "dealer": "ボストン・サイエンティフィックジャパン(株)",
    "cat": "PMリード",
    "model": "4031",
-   "name": "ソリュートピコチップリード",
+   "name": "SELUTE PICO TIP™",
    "polarity": "単極",
    "site": "V",
    "intro": "10F",
@@ -6995,7 +7008,7 @@
    "period": "92年〜現在",
    "odmm": "1.5",
    "odfr": "4.5",
-   "en": "SELUTE PICO TIP™"
+   "alias": "ソリュートピコチップリード"
   },
   {
    "id": "CPI-L-4032",
@@ -7004,7 +7017,7 @@
    "dealer": "ボストン・サイエンティフィックジャパン(株)",
    "cat": "PMリード",
    "model": "4032",
-   "name": "ソリュートピコチップリード",
+   "name": "SELUTE PICO TIP™",
    "polarity": "単極",
    "site": "V",
    "intro": "10F",
@@ -7022,7 +7035,7 @@
    "period": "92年〜現在",
    "odmm": "1.5",
    "odfr": "4.5",
-   "en": "SELUTE PICO TIP™"
+   "alias": "ソリュートピコチップリード"
   },
   {
    "id": "CPI-L-4034",
@@ -7031,7 +7044,7 @@
    "dealer": "ボストン・サイエンティフィックジャパン(株)",
    "cat": "PMリード",
    "model": "4034",
-   "name": "ソリュートピコチップリード",
+   "name": "SELUTE PICO TIP™",
    "polarity": "双極",
    "site": "V",
    "intro": "10F",
@@ -7049,7 +7062,7 @@
    "period": "92年〜現在",
    "odmm": "2.2",
    "odfr": "6.6",
-   "en": "SELUTE PICO TIP™"
+   "alias": "ソリュートピコチップリード"
   },
   {
    "id": "CPI-L-4035",
@@ -7058,7 +7071,7 @@
    "dealer": "ボストン・サイエンティフィックジャパン(株)",
    "cat": "PMリード",
    "model": "4035",
-   "name": "ソリュートピコチップリード",
+   "name": "SELUTE PICO TIP™",
    "polarity": "双極",
    "site": "V",
    "intro": "10F",
@@ -7076,7 +7089,7 @@
    "period": "92年〜現在",
    "odmm": "2.2",
    "odfr": "6.6",
-   "en": "SELUTE PICO TIP™"
+   "alias": "ソリュートピコチップリード"
   },
   {
    "id": "CPI-L-4063",
@@ -7085,7 +7098,7 @@
    "dealer": "ボストン・サイエンティフィックジャパン(株)",
    "cat": "PMリード",
    "model": "4063",
-   "name": "ソリュートピコチップリード",
+   "name": "SELUTE PICO TIP™",
    "polarity": "双極",
    "site": "A",
    "intro": "10F",
@@ -7103,7 +7116,7 @@
    "period": "99年〜現在",
    "odmm": "2.2",
    "odfr": "6.6",
-   "en": "SELUTE PICO TIP™"
+   "alias": "ソリュートピコチップリード"
   },
   {
    "id": "CPI-L-4064",
@@ -7112,7 +7125,7 @@
    "dealer": "ボストン・サイエンティフィックジャパン(株)",
    "cat": "PMリード",
    "model": "4064",
-   "name": "ソリュートピコチップリード",
+   "name": "SELUTE PICO TIP™",
    "polarity": "双極",
    "site": "A",
    "intro": "10F",
@@ -7130,7 +7143,7 @@
    "period": "99年〜現在",
    "odmm": "2.2",
    "odfr": "6.6",
-   "en": "SELUTE PICO TIP™"
+   "alias": "ソリュートピコチップリード"
   },
   {
    "id": "CPI-L-4458",
@@ -7139,7 +7152,7 @@
    "dealer": "ボストン・サイエンティフィックジャパン(株)",
    "cat": "PMリード",
    "model": "4458",
-   "name": "ファインラインⅡ ステロックス",
+   "name": "FINELINE™ II Sterox",
    "polarity": "双極",
    "site": "V",
    "intro": "7F",
@@ -7157,7 +7170,7 @@
    "period": "01年3月〜現在",
    "odmm": "2.0",
    "odfr": "6.0",
-   "en": "FINELINE™ II Sterox"
+   "alias": "ファインラインⅡ ステロックス"
   },
   {
    "id": "CPI-L-4459",
@@ -7166,7 +7179,7 @@
    "dealer": "ボストン・サイエンティフィックジャパン(株)",
    "cat": "PMリード",
    "model": "4459",
-   "name": "ファインラインⅡ ステロックス",
+   "name": "FINELINE™ II Sterox",
    "polarity": "双極",
    "site": "V",
    "intro": "7F",
@@ -7184,7 +7197,7 @@
    "period": "01年3月〜現在",
    "odmm": "2.0",
    "odfr": "6.0",
-   "en": "FINELINE™ II Sterox"
+   "alias": "ファインラインⅡ ステロックス"
   },
   {
    "id": "CPI-L-4479",
@@ -7193,7 +7206,7 @@
    "dealer": "ボストン・サイエンティフィックジャパン(株)",
    "cat": "PMリード",
    "model": "4479",
-   "name": "ファインラインⅡ ステロックス",
+   "name": "FINELINE™ II Sterox",
    "polarity": "双極",
    "site": "A",
    "intro": "7F",
@@ -7211,7 +7224,7 @@
    "period": "01年3月〜現在",
    "odmm": "1.7",
    "odfr": "5.1",
-   "en": "FINELINE™ II Sterox"
+   "alias": "ファインラインⅡ ステロックス"
   },
   {
    "id": "CPI-L-4480",
@@ -7220,7 +7233,7 @@
    "dealer": "ボストン・サイエンティフィックジャパン(株)",
    "cat": "PMリード",
    "model": "4480",
-   "name": "ファインラインⅡ ステロックス",
+   "name": "FINELINE™ II Sterox",
    "polarity": "双極",
    "site": "A",
    "intro": "7F",
@@ -7238,7 +7251,7 @@
    "period": "01年3月〜現在",
    "odmm": "1.7",
    "odfr": "5.1",
-   "en": "FINELINE™ II Sterox"
+   "alias": "ファインラインⅡ ステロックス"
   },
   {
    "id": "CPI-L-4456",
@@ -7247,7 +7260,7 @@
    "dealer": "ボストン・サイエンティフィックジャパン(株)",
    "cat": "PMリード",
    "model": "4456",
-   "name": "ファインラインⅡ ステロックス",
+   "name": "FINELINE™ II Sterox",
    "polarity": "双極",
    "site": "V",
    "intro": "7F",
@@ -7265,7 +7278,7 @@
    "period": "01年3月〜現在",
    "odmm": "1.7",
    "odfr": "5.1",
-   "en": "FINELINE™ II Sterox"
+   "alias": "ファインラインⅡ ステロックス"
   },
   {
    "id": "CPI-L-4457",
@@ -7274,7 +7287,7 @@
    "dealer": "ボストン・サイエンティフィックジャパン(株)",
    "cat": "PMリード",
    "model": "4457",
-   "name": "ファインラインⅡ ステロックス",
+   "name": "FINELINE™ II Sterox",
    "polarity": "双極",
    "site": "V",
    "intro": "7F",
@@ -7292,7 +7305,7 @@
    "period": "01年3月〜現在",
    "odmm": "1.7",
    "odfr": "5.1",
-   "en": "FINELINE™ II Sterox"
+   "alias": "ファインラインⅡ ステロックス"
   },
   {
    "id": "CPI-L-4469",
@@ -7301,7 +7314,7 @@
    "dealer": "ボストン・サイエンティフィックジャパン(株)",
    "cat": "PMリード",
    "model": "4469",
-   "name": "ファインラインⅡ ステロックスEZ",
+   "name": "FINELINE™ II Sterox EZ",
    "polarity": "双極",
    "site": "A/V",
    "intro": "7F",
@@ -7319,7 +7332,7 @@
    "period": "01年3月〜現在",
    "odmm": "1.7",
    "odfr": "5.1",
-   "en": "FINELINE™ II Sterox EZ"
+   "alias": "ファインラインⅡ ステロックスEZ"
   },
   {
    "id": "CPI-L-4470",
@@ -7328,7 +7341,7 @@
    "dealer": "ボストン・サイエンティフィックジャパン(株)",
    "cat": "PMリード",
    "model": "4470",
-   "name": "ファインラインⅡ ステロックスEZ",
+   "name": "FINELINE™ II Sterox EZ",
    "polarity": "双極",
    "site": "A/V",
    "intro": "7F",
@@ -7346,7 +7359,7 @@
    "period": "01年3月〜現在",
    "odmm": "1.7",
    "odfr": "5.1",
-   "en": "FINELINE™ II Sterox EZ"
+   "alias": "ファインラインⅡ ステロックスEZ"
   },
   {
    "id": "CPI-L-4471",
@@ -7355,7 +7368,7 @@
    "dealer": "ボストン・サイエンティフィックジャパン(株)",
    "cat": "PMリード",
    "model": "4471",
-   "name": "ファインラインⅡ ステロックスEZ",
+   "name": "FINELINE™ II Sterox EZ",
    "polarity": "双極",
    "site": "A/V",
    "intro": "7F",
@@ -7373,7 +7386,7 @@
    "period": "01年3月〜現在",
    "odmm": "1.7",
    "odfr": "5.1",
-   "en": "FINELINE™ II Sterox EZ"
+   "alias": "ファインラインⅡ ステロックスEZ"
   },
   {
    "id": "CPI-L-4472",
@@ -7382,7 +7395,7 @@
    "dealer": "ボストン・サイエンティフィックジャパン(株)",
    "cat": "PMリード",
    "model": "4472",
-   "name": "ファインラインⅡ ステロックスEZ",
+   "name": "FINELINE™ II Sterox EZ",
    "polarity": "双極",
    "site": "A/V",
    "intro": "7F",
@@ -7400,7 +7413,7 @@
    "period": "01年3月〜現在",
    "odmm": "2",
    "odfr": "6.0",
-   "en": "FINELINE™ II Sterox EZ"
+   "alias": "ファインラインⅡ ステロックスEZ"
   },
   {
    "id": "CPI-L-4473",
@@ -7409,7 +7422,7 @@
    "dealer": "ボストン・サイエンティフィックジャパン(株)",
    "cat": "PMリード",
    "model": "4473",
-   "name": "ファインラインⅡ ステロックスEZ",
+   "name": "FINELINE™ II Sterox EZ",
    "polarity": "双極",
    "site": "A/V",
    "intro": "7F",
@@ -7427,7 +7440,7 @@
    "period": "01年3月〜現在",
    "odmm": "2",
    "odfr": "6.0",
-   "en": "FINELINE™ II Sterox EZ"
+   "alias": "ファインラインⅡ ステロックスEZ"
   },
   {
    "id": "CPI-L-4474",
@@ -7436,7 +7449,7 @@
    "dealer": "ボストン・サイエンティフィックジャパン(株)",
    "cat": "PMリード",
    "model": "4474",
-   "name": "ファインラインⅡ ステロックスEZ",
+   "name": "FINELINE™ II Sterox EZ",
    "polarity": "双極",
    "site": "A/V",
    "intro": "7F",
@@ -7454,7 +7467,7 @@
    "period": "01年3月〜現在",
    "odmm": "2",
    "odfr": "6.0",
-   "en": "FINELINE™ II Sterox EZ"
+   "alias": "ファインラインⅡ ステロックスEZ"
   },
   {
    "id": "CPI-L-4341",
@@ -7463,7 +7476,7 @@
    "dealer": "ボストン・サイエンティフィックジャパン(株)",
    "cat": "PMリード",
    "model": "4341",
-   "name": "ソリュートピコチップVDD",
+   "name": "SELUTE PICO TIP™ VDD",
    "polarity": "双極",
    "site": "A/+V",
    "intro": "9F",
@@ -7480,7 +7493,7 @@
    "period": "01年3月〜現在",
    "odmm": "2.6",
    "odfr": "9.0",
-   "en": "SELUTE PICO TIP™ VDD"
+   "alias": "ソリュートピコチップVDD"
   },
   {
    "id": "CPI-L-7740",
@@ -7489,7 +7502,7 @@
    "dealer": "ボストン・サイエンティフィックジャパン(株)",
    "cat": "PMリード",
    "model": "7740",
-   "name": "インジェヴィティ AFx",
+   "name": "INGEVITY™ AF+",
    "polarity": "双極",
    "site": "A/V",
    "intro": "6F",
@@ -7501,7 +7514,7 @@
    "length": "45",
    "odmm": "2",
    "odfr": "5.7",
-   "en": "INGEVITY™ AF+"
+   "alias": "インジェヴィティ AFx"
   },
   {
    "id": "CPI-L-7741",
@@ -7510,7 +7523,7 @@
    "dealer": "ボストン・サイエンティフィックジャパン(株)",
    "cat": "PMリード",
    "model": "7741",
-   "name": "インジェヴィティ AFx",
+   "name": "INGEVITY™ AF+",
    "polarity": "双極",
    "site": "A/V",
    "intro": "6F",
@@ -7522,7 +7535,7 @@
    "length": "52",
    "odmm": "2",
    "odfr": "5.7",
-   "en": "INGEVITY™ AF+"
+   "alias": "インジェヴィティ AFx"
   },
   {
    "id": "CPI-L-7742",
@@ -7531,7 +7544,7 @@
    "dealer": "ボストン・サイエンティフィックジャパン(株)",
    "cat": "PMリード",
    "model": "7742",
-   "name": "インジェヴィティ AFx",
+   "name": "INGEVITY™ AF+",
    "polarity": "双極",
    "site": "A/V",
    "intro": "6F",
@@ -7543,7 +7556,7 @@
    "length": "59",
    "odmm": "2",
    "odfr": "5.7",
-   "en": "INGEVITY™ AF+"
+   "alias": "インジェヴィティ AFx"
   },
   {
    "id": "CPI-L-7731",
@@ -7552,7 +7565,7 @@
    "dealer": "ボストン・サイエンティフィックジャパン(株)",
    "cat": "PMリード",
    "model": "7731",
-   "name": "インジェヴィティ",
+   "name": "INGEVITY™",
    "polarity": "双極",
    "site": "A/V",
    "intro": "6F",
@@ -7564,7 +7577,7 @@
    "length": "52",
    "odmm": "2",
    "odfr": "5.7",
-   "en": "INGEVITY™"
+   "alias": "インジェヴィティ"
   },
   {
    "id": "CPI-L-7732",
@@ -7573,7 +7586,7 @@
    "dealer": "ボストン・サイエンティフィックジャパン(株)",
    "cat": "PMリード",
    "model": "7732",
-   "name": "インジェヴィティ",
+   "name": "INGEVITY™",
    "polarity": "双極",
    "site": "A/V",
    "intro": "6F",
@@ -7585,7 +7598,7 @@
    "length": "59",
    "odmm": "2",
    "odfr": "5.7",
-   "en": "INGEVITY™"
+   "alias": "インジェヴィティ"
   },
   {
    "id": "CPI-L-7735",
@@ -7594,7 +7607,7 @@
    "dealer": "ボストン・サイエンティフィックジャパン(株)",
    "cat": "PMリード",
    "model": "7735",
-   "name": "インジェヴィティ",
+   "name": "INGEVITY™",
    "polarity": "双極",
    "site": "A",
    "intro": "6F",
@@ -7606,7 +7619,7 @@
    "length": "45",
    "odmm": "2",
    "odfr": "5.7",
-   "en": "INGEVITY™"
+   "alias": "インジェヴィティ"
   },
   {
    "id": "CPI-L-7736",
@@ -7615,7 +7628,7 @@
    "dealer": "ボストン・サイエンティフィックジャパン(株)",
    "cat": "PMリード",
    "model": "7736",
-   "name": "インジェヴィティ",
+   "name": "INGEVITY™",
    "polarity": "双極",
    "site": "A",
    "intro": "6F",
@@ -7627,7 +7640,7 @@
    "length": "52",
    "odmm": "2",
    "odfr": "5.7",
-   "en": "INGEVITY™"
+   "alias": "インジェヴィティ"
   },
   {
    "id": "ELA-L-BJ44",
@@ -7638,7 +7651,7 @@
    "esurf": "マイクロポーラス",
    "insul": "Si",
    "model": "BJ44",
-   "name": "ステラ",
+   "name": "Stela",
    "polarity": "双極",
    "site": "A",
    "intro": "10F",
@@ -7654,7 +7667,7 @@
    "period": "〜98年",
    "odmm": "2.5",
    "odfr": "7.5",
-   "en": "Stela"
+   "alias": "ステラ"
   },
   {
    "id": "ELA-L-BJ45",
@@ -7665,7 +7678,7 @@
    "esurf": "マイクロポーラス",
    "insul": "Si",
    "model": "BJ45",
-   "name": "ステラ",
+   "name": "Stela",
    "polarity": "双極",
    "site": "A",
    "intro": "10F",
@@ -7681,7 +7694,7 @@
    "period": "〜98年",
    "odmm": "2.5",
    "odfr": "7.5",
-   "en": "Stela"
+   "alias": "ステラ"
   },
   {
    "id": "ELA-L-BT45",
@@ -7692,7 +7705,7 @@
    "esurf": "マイクロポーラス",
    "insul": "Si",
    "model": "BT45",
-   "name": "ステラ",
+   "name": "Stela",
    "polarity": "双極",
    "site": "V",
    "intro": "10F",
@@ -7708,7 +7721,7 @@
    "period": "〜98年",
    "odmm": "2.5",
    "odfr": "7.5",
-   "en": "Stela"
+   "alias": "ステラ"
   },
   {
    "id": "ELA-L-BT46",
@@ -7719,7 +7732,7 @@
    "esurf": "マイクロポーラス",
    "insul": "Si",
    "model": "BT46",
-   "name": "ステラ",
+   "name": "Stela",
    "polarity": "双極",
    "site": "V",
    "intro": "10F",
@@ -7735,7 +7748,7 @@
    "period": "〜98年",
    "odmm": "2.5",
    "odfr": "7.5",
-   "en": "Stela"
+   "alias": "ステラ"
   },
   {
    "id": "ELA-L-J83F",
@@ -7746,7 +7759,7 @@
    "esurf": "マイクロポーラス",
    "insul": "Si",
    "model": "J83F",
-   "name": "フォーカス",
+   "name": "Focus",
    "polarity": "単極",
    "site": "A",
    "fixation": "タイン",
@@ -7758,7 +7771,7 @@
    "period": "〜97年",
    "odmm": "1.6",
    "odfr": "4.8",
-   "en": "Focus"
+   "alias": "フォーカス"
   },
   {
    "id": "ELA-L-J84F",
@@ -7769,7 +7782,7 @@
    "esurf": "マイクロポーラス",
    "insul": "Si",
    "model": "J84F",
-   "name": "フォーカス",
+   "name": "Focus",
    "polarity": "双極",
    "site": "A",
    "intro": "10F",
@@ -7785,7 +7798,7 @@
    "period": "〜97年",
    "odmm": "2.5",
    "odfr": "7.5",
-   "en": "Focus"
+   "alias": "フォーカス"
   },
   {
    "id": "ELA-L-RE83",
@@ -7796,7 +7809,7 @@
    "esurf": "マイクロポーラス",
    "insul": "Si",
    "model": "RE83",
-   "name": "フォーカス(PY)",
+   "name": "Focus PY",
    "polarity": "単極",
    "site": "A/V",
    "fixation": "スクリュー",
@@ -7808,7 +7821,7 @@
    "period": "〜97年",
    "odmm": "2.7",
    "odfr": "8.1",
-   "en": "Focus PY"
+   "alias": "フォーカス(PY)"
   },
   {
    "id": "ELA-L-RE84",
@@ -7819,7 +7832,7 @@
    "esurf": "マイクロポーラス",
    "insul": "Si",
    "model": "RE84",
-   "name": "フォーカス(PY)",
+   "name": "Focus PY",
    "polarity": "双極",
    "site": "A/V",
    "fixation": "スクリュー",
@@ -7834,7 +7847,7 @@
    "period": "〜97年",
    "odmm": "2.3",
    "odfr": "6.9",
-   "en": "Focus PY"
+   "alias": "フォーカス(PY)"
   },
   {
    "id": "ELA-L-T43F",
@@ -7845,7 +7858,7 @@
    "esurf": "マイクロポーラス",
    "insul": "Si",
    "model": "T43F",
-   "name": "フォーカス",
+   "name": "Focus",
    "polarity": "単極",
    "site": "V",
    "fixation": "タイン",
@@ -7858,7 +7871,7 @@
    "period": "〜97年",
    "odmm": "1.6",
    "odfr": "4.8",
-   "en": "Focus"
+   "alias": "フォーカス"
   },
   {
    "id": "ELA-L-T83F",
@@ -7869,7 +7882,7 @@
    "esurf": "マイクロポーラス",
    "insul": "Si",
    "model": "T83F",
-   "name": "フォーカス",
+   "name": "Focus",
    "polarity": "単極",
    "site": "V",
    "fixation": "タイン",
@@ -7882,7 +7895,7 @@
    "period": "〜97年",
    "odmm": "1.6",
    "odfr": "4.8",
-   "en": "Focus"
+   "alias": "フォーカス"
   },
   {
    "id": "ELA-L-T84F",
@@ -7893,7 +7906,7 @@
    "esurf": "マイクロポーラス",
    "insul": "Si",
    "model": "T84F",
-   "name": "フォーカス",
+   "name": "Focus",
    "polarity": "双極",
    "site": "V",
    "fixation": "タイン",
@@ -7907,7 +7920,7 @@
    "period": "〜97年",
    "odmm": "2.5",
    "odfr": "7.5",
-   "en": "Focus"
+   "alias": "フォーカス"
   },
   {
    "id": "ELA-L-UJ45",
@@ -7918,7 +7931,7 @@
    "esurf": "マイクロポーラス",
    "insul": "Si",
    "model": "UJ45",
-   "name": "ステラ",
+   "name": "Stela",
    "polarity": "単極",
    "site": "A",
    "intro": "10F",
@@ -7932,7 +7945,7 @@
    "period": "96年〜98年",
    "odmm": "1.6",
    "odfr": "4.8",
-   "en": "Stela"
+   "alias": "ステラ"
   },
   {
    "id": "ELA-L-UT45",
@@ -7943,7 +7956,7 @@
    "esurf": "マイクロポーラス",
    "insul": "Si",
    "model": "UT45",
-   "name": "ステラ",
+   "name": "Stela",
    "polarity": "単極",
    "site": "V",
    "intro": "10F",
@@ -7957,7 +7970,7 @@
    "period": "〜98年",
    "odmm": "1.6",
    "odfr": "4.8",
-   "en": "Stela"
+   "alias": "ステラ"
   },
   {
    "id": "ELA-L-UT46",
@@ -7968,7 +7981,7 @@
    "esurf": "マイクロポーラス",
    "insul": "Si",
    "model": "UT46",
-   "name": "ステラ",
+   "name": "Stela",
    "polarity": "単極",
    "site": "V",
    "intro": "10F",
@@ -7982,7 +7995,7 @@
    "period": "〜98年",
    "odmm": "1.6",
    "odfr": "4.8",
-   "en": "Stela"
+   "alias": "ステラ"
   },
   {
    "id": "ELA-L-T44F",
@@ -7993,7 +8006,7 @@
    "esurf": "マイクロポーラス",
    "insul": "Si",
    "model": "T44F",
-   "name": "フォーカス",
+   "name": "Focus",
    "polarity": "双極",
    "site": "V",
    "intro": "10F",
@@ -8009,7 +8022,7 @@
    "period": "〜97年",
    "odmm": "2.5",
    "odfr": "7.5",
-   "en": "Focus"
+   "alias": "フォーカス"
   },
   {
    "id": "ELA-L-JE84",
@@ -8020,7 +8033,7 @@
    "esurf": "マイクロポーラス",
    "insul": "Si",
    "model": "JE84",
-   "name": "フォーカス",
+   "name": "Focus",
    "polarity": "双極",
    "site": "A",
    "fixation": "タイン",
@@ -8035,7 +8048,7 @@
    "period": "〜97年",
    "odmm": "2.3",
    "odfr": "6.9",
-   "en": "Focus"
+   "alias": "フォーカス"
   },
   {
    "id": "ELA-L-PMA-0860",
@@ -8161,7 +8174,7 @@
    "esurf": "マイクロポーラス",
    "insul": "Si",
    "model": "BT46D",
-   "name": "ステリッド",
+   "name": "Stelid",
    "polarity": "双極",
    "site": "V",
    "intro": "10F",
@@ -8176,7 +8189,7 @@
    "period": "98年〜",
    "odmm": "2.5",
    "odfr": "7.5",
-   "en": "Stelid"
+   "alias": "ステリッド"
   },
   {
    "id": "ELA-L-BT45D",
@@ -8187,7 +8200,7 @@
    "esurf": "マイクロポーラス",
    "insul": "Si",
    "model": "BT45D",
-   "name": "ステリッド",
+   "name": "Stelid",
    "polarity": "双極",
    "site": "V",
    "intro": "10F",
@@ -8202,7 +8215,7 @@
    "period": "98年〜",
    "odmm": "2.6",
    "odfr": "7.8",
-   "en": "Stelid"
+   "alias": "ステリッド"
   },
   {
    "id": "ELA-L-UT46D",
@@ -8213,7 +8226,7 @@
    "esurf": "マイクロポーラス",
    "insul": "Si",
    "model": "UT46D",
-   "name": "ステリッド",
+   "name": "Stelid",
    "polarity": "単極",
    "site": "V",
    "intro": "10F",
@@ -8227,7 +8240,7 @@
    "period": "98年〜",
    "odmm": "1.6",
    "odfr": "4.8",
-   "en": "Stelid"
+   "alias": "ステリッド"
   },
   {
    "id": "ELA-L-UT45D",
@@ -8238,7 +8251,7 @@
    "esurf": "マイクロポーラス",
    "insul": "Si",
    "model": "UT45D",
-   "name": "ステリッド",
+   "name": "Stelid",
    "polarity": "単極",
    "site": "V",
    "intro": "10F",
@@ -8252,7 +8265,7 @@
    "period": "98年〜",
    "odmm": "1.6",
    "odfr": "4.8",
-   "en": "Stelid"
+   "alias": "ステリッド"
   },
   {
    "id": "ELA-L-BJ45D",
@@ -8263,7 +8276,7 @@
    "esurf": "マイクロポーラス",
    "insul": "Si",
    "model": "BJ45D",
-   "name": "ステリッド",
+   "name": "Stelid",
    "polarity": "双極",
    "site": "A",
    "intro": "10F",
@@ -8278,7 +8291,7 @@
    "period": "98年〜",
    "odmm": "2.5",
    "odfr": "7.5",
-   "en": "Stelid"
+   "alias": "ステリッド"
   },
   {
    "id": "ELA-L-BJ44D",
@@ -8289,7 +8302,7 @@
    "esurf": "マイクロポーラス",
    "insul": "Si",
    "model": "BJ44D",
-   "name": "ステリッド",
+   "name": "Stelid",
    "polarity": "双極",
    "site": "A",
    "intro": "10F",
@@ -8304,7 +8317,7 @@
    "period": "98年〜",
    "odmm": "2.5",
    "odfr": "7.5",
-   "en": "Stelid"
+   "alias": "ステリッド"
   },
   {
    "id": "ELA-L-UJ45D",
@@ -8315,7 +8328,7 @@
    "esurf": "マイクロポーラス",
    "insul": "Si",
    "model": "UJ45D",
-   "name": "ステリッド",
+   "name": "Stelid",
    "polarity": "単極",
    "site": "A",
    "intro": "10F",
@@ -8329,7 +8342,7 @@
    "period": "98年〜",
    "odmm": "2.2",
    "odfr": "6.6",
-   "en": "Stelid"
+   "alias": "ステリッド"
   },
   {
    "id": "ELA-L-BTF25D",
@@ -8635,7 +8648,7 @@
    "cat": "PMリード",
    "steroid": "無",
    "model": "425-02",
-   "name": "ユニパス",
+   "name": "UniPass",
    "polarity": "A:双極 V:単極",
    "intro": "11F",
    "fixation": "タインド",
@@ -8650,7 +8663,7 @@
    "period": "93年〜現在",
    "odmm": "3.7",
    "odfr": "11.1",
-   "en": "UniPass"
+   "alias": "ユニパス"
   },
   {
    "id": "ITM-L-425-04",
@@ -8660,7 +8673,7 @@
    "cat": "PMリード",
    "steroid": "無",
    "model": "425-04",
-   "name": "ユニパス",
+   "name": "UniPass",
    "polarity": "A:双極 V:単極",
    "intro": "11F",
    "fixation": "タインド",
@@ -8675,7 +8688,7 @@
    "period": "93年〜現在",
    "odmm": "3.7",
    "odfr": "11.1",
-   "en": "UniPass"
+   "alias": "ユニパス"
   },
   {
    "id": "ITM-L-425-06",
@@ -8685,7 +8698,7 @@
    "cat": "PMリード",
    "steroid": "無",
    "model": "425-06",
-   "name": "ユニパス",
+   "name": "UniPass",
    "polarity": "A:双極 V:単極",
    "intro": "11F",
    "fixation": "タインド",
@@ -8700,7 +8713,7 @@
    "period": "93年〜現在",
    "odmm": "3.7",
    "odfr": "11.1",
-   "en": "UniPass"
+   "alias": "ユニパス"
   },
   {
    "id": "ITM-L-430-02",
@@ -8710,7 +8723,7 @@
    "cat": "PMリード",
    "steroid": "無",
    "model": "430-02",
-   "name": "バイオポアー",
+   "name": "Biopore",
    "polarity": "双極",
    "site": "V",
    "intro": "10F",
@@ -8727,7 +8740,7 @@
    "period": "87年〜94年",
    "odmm": "3.3",
    "odfr": "9.9",
-   "en": "Biopore"
+   "alias": "バイオポアー"
   },
   {
    "id": "ITM-L-430-07",
@@ -8737,7 +8750,7 @@
    "cat": "PMリード",
    "steroid": "無",
    "model": "430-07",
-   "name": "アイロックス",
+   "name": "IROX",
    "polarity": "双極",
    "site": "V",
    "intro": "10F",
@@ -8754,7 +8767,7 @@
    "period": "92年〜現在",
    "odmm": "3.3",
    "odfr": "9.9",
-   "en": "IROX"
+   "alias": "アイロックス"
   },
   {
    "id": "ITM-L-430-10",
@@ -8764,7 +8777,7 @@
    "cat": "PMリード",
    "steroid": "無",
    "model": "430-10",
-   "name": "アイロックス シンライン",
+   "name": "IROX ThinLine",
    "polarity": "双極",
    "site": "V",
    "intro": "8F",
@@ -8781,7 +8794,7 @@
    "period": "93年〜現在",
    "odmm": "2.8",
    "odfr": "8.4",
-   "en": "IROX ThinLine"
+   "alias": "アイロックス シンライン"
   },
   {
    "id": "ITM-L-431-04",
@@ -8791,7 +8804,7 @@
    "cat": "PMリード",
    "steroid": "無",
    "model": "431-04",
-   "name": "バイオポアー",
+   "name": "Biopore",
    "polarity": "単極",
    "site": "V",
    "intro": "10F",
@@ -8806,7 +8819,7 @@
    "period": "87年〜94年",
    "odmm": "1.7",
    "odfr": "5.1",
-   "en": "Biopore"
+   "alias": "バイオポアー"
   },
   {
    "id": "ITM-L-431-07",
@@ -8816,7 +8829,7 @@
    "cat": "PMリード",
    "steroid": "無",
    "model": "431-07",
-   "name": "アイロックス",
+   "name": "IROX",
    "polarity": "単極",
    "site": "V",
    "intro": "10F",
@@ -8831,7 +8844,7 @@
    "period": "92年〜現在",
    "odmm": "1.7",
    "odfr": "5.1",
-   "en": "IROX"
+   "alias": "アイロックス"
   },
   {
    "id": "ITM-L-432-02",
@@ -8841,7 +8854,7 @@
    "cat": "PMリード",
    "steroid": "無",
    "model": "432-02",
-   "name": "バイオポアー",
+   "name": "Biopore",
    "polarity": "双極",
    "site": "A",
    "intro": "10F",
@@ -8858,7 +8871,7 @@
    "period": "87年〜94年",
    "odmm": "3.3",
    "odfr": "9.9",
-   "en": "Biopore"
+   "alias": "バイオポアー"
   },
   {
    "id": "ITM-L-432-03",
@@ -8868,7 +8881,7 @@
    "cat": "PMリード",
    "steroid": "無",
    "model": "432-03",
-   "name": "アイロックス",
+   "name": "IROX",
    "polarity": "双極",
    "site": "V",
    "intro": "10F",
@@ -8885,7 +8898,7 @@
    "period": "92年〜現在",
    "odmm": "3.3",
    "odfr": "9.9",
-   "en": "IROX"
+   "alias": "アイロックス"
   },
   {
    "id": "ITM-L-432-04",
@@ -8895,7 +8908,7 @@
    "cat": "PMリード",
    "steroid": "無",
    "model": "432-04",
-   "name": "アイロックス・シンライン",
+   "name": "IROX ThinLine",
    "polarity": "双極",
    "site": "A",
    "intro": "8F",
@@ -8912,7 +8925,7 @@
    "period": "93年〜現在",
    "odmm": "2.7",
    "odfr": "8.1",
-   "en": "IROX ThinLine"
+   "alias": "アイロックス・シンライン"
   },
   {
    "id": "ITM-L-433-02",
@@ -8922,7 +8935,7 @@
    "cat": "PMリード",
    "steroid": "無",
    "model": "433-02",
-   "name": "バイオポアー",
+   "name": "Biopore",
    "polarity": "単極",
    "site": "A",
    "intro": "10F",
@@ -8937,7 +8950,7 @@
    "period": "87年〜94年",
    "odmm": "3.3",
    "odfr": "9.9",
-   "en": "Biopore"
+   "alias": "バイオポアー"
   },
   {
    "id": "ITM-L-433-03",
@@ -8947,7 +8960,7 @@
    "cat": "PMリード",
    "steroid": "無",
    "model": "433-03",
-   "name": "アイロックス",
+   "name": "IROX",
    "polarity": "単極",
    "site": "A",
    "intro": "10F",
@@ -8962,7 +8975,7 @@
    "period": "92年〜現在",
    "odmm": "3.3",
    "odfr": "9.9",
-   "en": "IROX"
+   "alias": "アイロックス"
   },
   {
    "id": "ITM-L-435-02",
@@ -8972,7 +8985,7 @@
    "cat": "PMリード",
    "steroid": "無",
    "model": "435-02",
-   "name": "カーディフィックス",
+   "name": "Cardiofix",
    "polarity": "単極",
    "site": "A/V",
    "intro": "7F",
@@ -8987,7 +9000,7 @@
    "period": "87年〜97年",
    "odmm": "2.2",
    "odfr": "6.6",
-   "en": "Cardiofix"
+   "alias": "カーディフィックス"
   },
   {
    "id": "ITM-L-435-05",
@@ -8997,7 +9010,7 @@
    "cat": "PMリード",
    "steroid": "無",
    "model": "435-05",
-   "name": "カーディフィックスEZ",
+   "name": "Cardiofix EZ",
    "polarity": "単極",
    "site": "A/V",
    "intro": "7.5F",
@@ -9012,7 +9025,7 @@
    "period": "93年〜97年",
    "odmm": "2.7",
    "odfr": "8.1",
-   "en": "Cardiofix EZ"
+   "alias": "カーディフィックスEZ"
   },
   {
    "id": "ITM-L-435-08",
@@ -9022,7 +9035,7 @@
    "cat": "PMリード",
    "steroid": "無",
    "model": "435-08",
-   "name": "カーディフィックスXRI",
+   "name": "Cardiofix XRI",
    "polarity": "単極",
    "site": "A/V",
    "intro": "8F",
@@ -9037,7 +9050,7 @@
    "period": "93年〜97年",
    "odmm": "3.3",
    "odfr": "9.9",
-   "en": "Cardiofix XRI"
+   "alias": "カーディフィックスXRI"
   },
   {
    "id": "ITM-L-436-02",
@@ -9099,7 +9112,7 @@
    "cat": "PMリード",
    "steroid": "無",
    "model": "438-05",
-   "name": "カーディフィックスEZ",
+   "name": "Cardiofix EZ",
    "polarity": "双極",
    "site": "A/V",
    "intro": "9F",
@@ -9115,7 +9128,7 @@
    "connector": "VS-1",
    "odmm": "3",
    "odfr": "9.0",
-   "en": "Cardiofix EZ"
+   "alias": "カーディフィックスEZ"
   },
   {
    "id": "ITM-L-466-01",
@@ -9752,7 +9765,7 @@
    "dealer": "日本ライフライン(株)",
    "cat": "PMリード",
    "model": "436-07",
-   "name": "シリコーンアイロックス",
+   "name": "IROX（silicone）",
    "polarity": "双極",
    "site": "V",
    "intro": "10F",
@@ -9769,7 +9782,7 @@
    "connector": "VS-1",
    "odmm": "2.5",
    "odfr": "7.5",
-   "en": "IROX（silicone）"
+   "alias": "シリコーンアイロックス"
   },
   {
    "id": "ITM-L-437-07",
@@ -9778,7 +9791,7 @@
    "dealer": "日本ライフライン(株)",
    "cat": "PMリード",
    "model": "437-07",
-   "name": "シリコーンアイロックス",
+   "name": "IROX（silicone）",
    "polarity": "単極",
    "site": "V",
    "intro": "10F",
@@ -9793,7 +9806,7 @@
    "connector": "VS-1",
    "odmm": "2",
    "odfr": "6.0",
-   "en": "IROX（silicone）"
+   "alias": "シリコーンアイロックス"
   },
   {
    "id": "ITM-L-435-07",
@@ -9802,7 +9815,7 @@
    "dealer": "日本ライフライン(株)",
    "cat": "PMリード",
    "model": "435-07",
-   "name": "カーディオフィックスEZIROX",
+   "name": "Cardiofix EZ IROX",
    "polarity": "単極",
    "site": "A/V",
    "intro": "7.5F",
@@ -9818,7 +9831,7 @@
    "period": "97年〜現在",
    "odmm": "1.7",
    "odfr": "5.1",
-   "en": "Cardiofix EZ IROX"
+   "alias": "カーディオフィックスEZIROX"
   },
   {
    "id": "ITM-L-438-07",
@@ -9827,7 +9840,7 @@
    "dealer": "日本ライフライン(株)",
    "cat": "PMリード",
    "model": "438-07",
-   "name": "カーディオフィックスEZIROX",
+   "name": "Cardiofix EZ IROX",
    "polarity": "双極",
    "site": "A/V",
    "intro": "10F",
@@ -9844,7 +9857,7 @@
    "connector": "VS-1",
    "odmm": "2",
    "odfr": "6.0",
-   "en": "Cardiofix EZ IROX"
+   "alias": "カーディオフィックスEZIROX"
   },
   {
    "id": "ITM-L-438-10",
@@ -9853,7 +9866,7 @@
    "dealer": "日本ライフライン(株)",
    "cat": "PMリード",
    "model": "438-10",
-   "name": "シンラインEZ",
+   "name": "ThinLine EZ",
    "polarity": "双極",
    "site": "A/V",
    "intro": "7F",
@@ -9870,7 +9883,7 @@
    "period": "97年〜現在",
    "odmm": "2.2",
    "odfr": "6.6",
-   "en": "ThinLine EZ"
+   "alias": "シンラインEZ"
   },
   {
    "id": "ITM-L-425-31",
@@ -9879,7 +9892,7 @@
    "dealer": "日本ライフライン(株)",
    "cat": "PMリード",
    "model": "425-31",
-   "name": "ユニパスシンライン",
+   "name": "UniPass ThinLine",
    "polarity": "A:双極 V:単極",
    "site": "A/V",
    "intro": "9.5F",
@@ -9897,7 +9910,7 @@
    "period": "97年〜現在",
    "odmm": "2.7",
    "odfr": "8.1",
-   "en": "UniPass ThinLine"
+   "alias": "ユニパスシンライン"
   },
   {
    "id": "ITM-L-425-33",
@@ -9906,7 +9919,7 @@
    "dealer": "日本ライフライン(株)",
    "cat": "PMリード",
    "model": "425-33",
-   "name": "ユニパスシンライン",
+   "name": "UniPass ThinLine",
    "polarity": "A:双極 V:単極",
    "site": "A/V",
    "intro": "9.5F",
@@ -9924,7 +9937,7 @@
    "period": "97年〜現在",
    "odmm": "2.7",
    "odfr": "8.1",
-   "en": "UniPass ThinLine"
+   "alias": "ユニパスシンライン"
   },
   {
    "id": "ITM-L-425-36",
@@ -9933,7 +9946,7 @@
    "dealer": "日本ライフライン(株)",
    "cat": "PMリード",
    "model": "425-36",
-   "name": "ユニパスシンライン",
+   "name": "UniPass ThinLine",
    "polarity": "A:双極 V:単極",
    "site": "A/V",
    "intro": "9.5F",
@@ -9951,7 +9964,7 @@
    "period": "97年〜現在",
    "odmm": "2.7",
    "odfr": "8.1",
-   "en": "UniPass ThinLine"
+   "alias": "ユニパスシンライン"
   },
   {
    "id": "ITM-L-426-31",
@@ -9960,7 +9973,7 @@
    "dealer": "日本ライフライン(株)",
    "cat": "PMリード",
    "model": "426-31",
-   "name": "ユニパスシンライン",
+   "name": "UniPass ThinLine",
    "polarity": "A:双極 V:双極",
    "site": "A/V",
    "intro": "11F",
@@ -9978,7 +9991,7 @@
    "period": "98年〜現在",
    "odmm": "3",
    "odfr": "10.6",
-   "en": "UniPass ThinLine"
+   "alias": "ユニパスシンライン"
   },
   {
    "id": "ITM-L-426-33",
@@ -9987,7 +10000,7 @@
    "dealer": "日本ライフライン(株)",
    "cat": "PMリード",
    "model": "426-33",
-   "name": "ユニパスシンライン",
+   "name": "UniPass ThinLine",
    "polarity": "A:双極 V:双極",
    "site": "A/V",
    "intro": "11F",
@@ -10005,7 +10018,7 @@
    "period": "98年〜現在",
    "odmm": "3",
    "odfr": "10.6",
-   "en": "UniPass ThinLine"
+   "alias": "ユニパスシンライン"
   },
   {
    "id": "ITM-L-426-36",
@@ -10014,7 +10027,7 @@
    "dealer": "日本ライフライン(株)",
    "cat": "PMリード",
    "model": "426-36",
-   "name": "ユニパスシンライン",
+   "name": "UniPass ThinLine",
    "polarity": "A:双極 V:双極",
    "site": "A/V",
    "intro": "11F",
@@ -10032,7 +10045,7 @@
    "period": "98年〜現在",
    "odmm": "2",
    "odfr": "10.6",
-   "en": "UniPass ThinLine"
+   "alias": "ユニパスシンライン"
   },
   {
    "id": "ITM-L-432-35S",
@@ -10041,7 +10054,7 @@
    "dealer": "日本ライフライン(株)",
    "cat": "PMリード",
    "model": "432-35S",
-   "name": "シンラインⅡ ステロックス",
+   "name": "ThinLine II Sterox",
    "polarity": "双極",
    "site": "A",
    "intro": "7F",
@@ -10059,7 +10072,7 @@
    "period": "2000年〜現在",
    "odmm": "2.2",
    "odfr": "6.6",
-   "en": "ThinLine II Sterox"
+   "alias": "シンラインⅡ ステロックス"
   },
   {
    "id": "ITM-L-430-35S",
@@ -10068,7 +10081,7 @@
    "dealer": "日本ライフライン(株)",
    "cat": "PMリード",
    "model": "430-35S",
-   "name": "シンラインⅡ ステロックス",
+   "name": "ThinLine II Sterox",
    "polarity": "双極",
    "site": "A",
    "intro": "7F",
@@ -10086,7 +10099,7 @@
    "period": "2000年〜現在",
    "odmm": "2.2",
    "odfr": "6.6",
-   "en": "ThinLine II Sterox"
+   "alias": "シンラインⅡ ステロックス"
   },
   {
    "id": "ITM-L-430-25S",
@@ -10095,7 +10108,7 @@
    "dealer": "日本ライフライン(株)",
    "cat": "PMリード",
    "model": "430-25S",
-   "name": "シンラインⅡ ステロックス",
+   "name": "ThinLine II Sterox",
    "polarity": "双極",
    "site": "A",
    "intro": "7F",
@@ -10113,7 +10126,7 @@
    "period": "2000年〜現在",
    "odmm": "2.2",
    "odfr": "6.6",
-   "en": "ThinLine II Sterox"
+   "alias": "シンラインⅡ ステロックス"
   },
   {
    "id": "ITM-L-438-25S",
@@ -10122,7 +10135,7 @@
    "dealer": "日本ライフライン(株)",
    "cat": "PMリード",
    "model": "438-25S",
-   "name": "シンラインⅡ ステロックス EZ",
+   "name": "ThinLine II Sterox EZ",
    "polarity": "双極",
    "site": "A/V",
    "intro": "7F",
@@ -10140,7 +10153,7 @@
    "period": "2000年〜現在",
    "odmm": "2.2",
    "odfr": "6.6",
-   "en": "ThinLine II Sterox EZ"
+   "alias": "シンラインⅡ ステロックス EZ"
   },
   {
    "id": "ITM-L-438-35S",
@@ -10149,7 +10162,7 @@
    "dealer": "日本ライフライン(株)",
    "cat": "PMリード",
    "model": "438-35S",
-   "name": "シンラインⅡ ステロックス EZ",
+   "name": "ThinLine II Sterox EZ",
    "polarity": "双極",
    "site": "A/V",
    "intro": "7F",
@@ -10167,7 +10180,7 @@
    "period": "2000年〜現在",
    "odmm": "2.2",
    "odfr": "6.6",
-   "en": "ThinLine II Sterox EZ"
+   "alias": "シンラインⅡ ステロックス EZ"
   },
   {
    "id": "ITM-L-4344",
@@ -10176,7 +10189,7 @@
    "dealer": "日本ライフライン(株)",
    "cat": "PMリード",
    "model": "4344",
-   "name": "ユニパスⅡ",
+   "name": "UniPass II",
    "polarity": "A:双極 V:単極",
    "site": "A/V",
    "intro": "10.5Fr",
@@ -10194,7 +10207,7 @@
    "period": "01年11月〜",
    "odmm": "3",
    "odfr": "9.0",
-   "en": "UniPass II"
+   "alias": "ユニパスⅡ"
   },
   {
    "id": "ITM-L-4345",
@@ -10203,7 +10216,7 @@
    "dealer": "日本ライフライン(株)",
    "cat": "PMリード",
    "model": "4345",
-   "name": "ユニパスⅡ",
+   "name": "UniPass II",
    "polarity": "A:双極 V:単極",
    "site": "A/V",
    "intro": "10.5Fr",
@@ -10221,7 +10234,7 @@
    "period": "01年11月〜",
    "odmm": "3",
    "odfr": "9.0",
-   "en": "UniPass II"
+   "alias": "ユニパスⅡ"
   },
   {
    "id": "ITM-L-4143",
@@ -11381,7 +11394,7 @@
    "dealer": "フクダ電子(株)",
    "cat": "PMリード",
    "model": "1420K",
-   "name": "メンブラン",
+   "name": "Membrane",
    "polarity": "単極",
    "site": "A",
    "intro": "9F",
@@ -11398,7 +11411,7 @@
    "tip": "3.20",
    "odmm": "2.00",
    "odfr": "6.0",
-   "en": "Membrane"
+   "alias": "メンブラン"
   },
   {
    "id": "PSA-L-1420T",
@@ -11407,7 +11420,7 @@
    "dealer": "フクダ電子(株)",
    "cat": "PMリード",
    "model": "1420T",
-   "name": "メンブラン",
+   "name": "Membrane",
    "polarity": "双極",
    "site": "A",
    "intro": "10F",
@@ -11427,7 +11440,7 @@
    "ring": "2.30",
    "odmm": "2.24",
    "odfr": "6.7",
-   "en": "Membrane"
+   "alias": "メンブラン"
   },
   {
    "id": "PSA-L-1422T",
@@ -11462,7 +11475,7 @@
    "dealer": "フクダ電子(株)",
    "cat": "PMリード",
    "model": "1452K",
-   "name": "メンブランⅡ",
+   "name": "Membrane II",
    "polarity": "単極",
    "site": "V",
    "intro": "8F",
@@ -11479,7 +11492,7 @@
    "tip": "2.60",
    "odmm": "1.40",
    "odfr": "4.2",
-   "en": "Membrane II"
+   "alias": "メンブランⅡ"
   },
   {
    "id": "PSA-L-1452T",
@@ -11488,7 +11501,7 @@
    "dealer": "フクダ電子(株)",
    "cat": "PMリード",
    "model": "1452T",
-   "name": "メンブランⅡ",
+   "name": "Membrane II",
    "polarity": "双極",
    "site": "V",
    "intro": "8F",
@@ -11508,7 +11521,7 @@
    "ring": "2.30",
    "odmm": "2.20",
    "odfr": "6.6",
-   "en": "Membrane II"
+   "alias": "メンブランⅡ"
   },
   {
    "id": "PSA-L-1450K",
@@ -11517,7 +11530,7 @@
    "dealer": "フクダ電子(株)",
    "cat": "PMリード",
    "model": "1450K",
-   "name": "メンブランⅡ",
+   "name": "Membrane II",
    "polarity": "単極",
    "site": "V",
    "intro": "8F",
@@ -11534,7 +11547,7 @@
    "tip": "2.60",
    "odmm": "1.40",
    "odfr": "4.2",
-   "en": "Membrane II"
+   "alias": "メンブランⅡ"
   },
   {
    "id": "PSA-L-1450T",
@@ -11543,7 +11556,7 @@
    "dealer": "フクダ電子(株)",
    "cat": "PMリード",
    "model": "1450T",
-   "name": "メンブランⅡ",
+   "name": "Membrane II",
    "polarity": "双極",
    "site": "V",
    "intro": "9F",
@@ -11563,7 +11576,7 @@
    "ring": "2.30",
    "odmm": "2.20",
    "odfr": "6.6",
-   "en": "Membrane II"
+   "alias": "メンブランⅡ"
   },
   {
    "id": "PSA-L-1356C",
@@ -11572,7 +11585,7 @@
    "dealer": "フクダ電子(株)",
    "cat": "PMリード",
    "model": "1356C",
-   "name": "AVプラス",
+   "name": "AV Plus",
    "polarity": "双極",
    "site": "V+A",
    "intro": "9F",
@@ -11590,7 +11603,7 @@
    "period": "96年〜",
    "odmm": "2.24",
    "odfr": "6.7",
-   "en": "AV Plus"
+   "alias": "AVプラス"
   },
   {
    "id": "PSA-L-1358C",
@@ -11599,7 +11612,7 @@
    "dealer": "フクダ電子(株)",
    "cat": "PMリード",
    "model": "1358C",
-   "name": "AVプラス",
+   "name": "AV Plus",
    "polarity": "双極",
    "site": "V+A",
    "intro": "9F",
@@ -11619,7 +11632,7 @@
    "ring": "2.40",
    "odmm": "2.44",
    "odfr": "7.3",
-   "en": "AV Plus"
+   "alias": "AVプラス"
   },
   {
    "id": "PSA-L-1388T",
@@ -11628,7 +11641,7 @@
    "dealer": "フクダ電子(株)",
    "cat": "PMリード",
    "model": "1388T",
-   "name": "テンドリルリード",
+   "name": "Tendril™",
    "polarity": "双極",
    "site": "A/V",
    "intro": "7F",
@@ -11647,7 +11660,7 @@
    "tip": "2.64",
    "odmm": "2.49",
    "odfr": "7.5",
-   "en": "Tendril™"
+   "alias": "テンドリルリード"
   },
   {
    "id": "PSA-L-1474K",
@@ -11656,7 +11669,7 @@
    "dealer": "フクダ電子(株)",
    "cat": "PMリード",
    "model": "1474K",
-   "name": "メンブランEX",
+   "name": "Membrane EX",
    "polarity": "単極",
    "site": "A",
    "intro": "9F",
@@ -11673,7 +11686,7 @@
    "tip": "2.20",
    "odmm": "1.90",
    "odfr": "5.7",
-   "en": "Membrane EX"
+   "alias": "メンブランEX"
   },
   {
    "id": "PSA-L-1474T",
@@ -11682,7 +11695,7 @@
    "dealer": "フクダ電子(株)",
    "cat": "PMリード",
    "model": "1474T",
-   "name": "メンブランEX",
+   "name": "Membrane EX",
    "polarity": "双極",
    "site": "A",
    "intro": "8F",
@@ -11702,7 +11715,7 @@
    "ring": "2.30",
    "odmm": "2.30",
    "odfr": "6.9",
-   "en": "Membrane EX"
+   "alias": "メンブランEX"
   },
   {
    "id": "PSA-L-1488T",
@@ -11711,7 +11724,7 @@
    "dealer": "フクダ電子(株)",
    "cat": "PMリード",
    "model": "1488T",
-   "name": "テンドリルリード",
+   "name": "Tendril™",
    "polarity": "双極",
    "site": "A/V",
    "intro": "7F",
@@ -11731,7 +11744,7 @@
    "ring": "2.06",
    "odmm": "2.06",
    "odfr": "6.2",
-   "en": "Tendril™"
+   "alias": "テンドリルリード"
   },
   {
    "id": "SOR-L-TX25D",
@@ -11792,7 +11805,7 @@
    "dealer": "フクダ電子(株)",
    "cat": "PMリード",
    "model": "1474K",
-   "name": "メンブランEX",
+   "name": "Membrane EX",
    "polarity": "単極",
    "site": "A",
    "intro": "9F",
@@ -11809,7 +11822,7 @@
    "odmm": "2.3",
    "odfr": "6.9",
    "mfr": "St.Jude Medical",
-   "en": "Membrane EX"
+   "alias": "メンブランEX"
   },
   {
    "id": "SJM-FK-1474T",
@@ -11818,7 +11831,7 @@
    "dealer": "フクダ電子(株)",
    "cat": "PMリード",
    "model": "1474T",
-   "name": "メンブランEX",
+   "name": "Membrane EX",
    "polarity": "双極",
    "site": "A",
    "intro": "8F",
@@ -11839,7 +11852,7 @@
    "odmm": "2.3",
    "odfr": "6.9",
    "mfr": "St.Jude Medical",
-   "en": "Membrane EX"
+   "alias": "メンブランEX"
   },
   {
    "id": "SJM-FK-1488T",
@@ -11848,7 +11861,7 @@
    "dealer": "フクダ電子(株)",
    "cat": "PMリード",
    "model": "1488T",
-   "name": "テンドリルリード",
+   "name": "Tendril™",
    "polarity": "双極",
    "site": "A/V",
    "intro": "7F",
@@ -11869,7 +11882,7 @@
    "odmm": "2.06",
    "odfr": "6.2",
    "mfr": "St.Jude Medical",
-   "en": "Tendril™"
+   "alias": "テンドリルリード"
   },
   {
    "id": "SJM-FK-1366",
@@ -11878,7 +11891,7 @@
    "dealer": "フクダ電子(株)",
    "cat": "PMリード",
    "model": "1366",
-   "name": "AVプラスDX",
+   "name": "AV Plus DX",
    "polarity": "双極",
    "site": "V+A",
    "intro": "9F",
@@ -11899,7 +11912,7 @@
    "odmm": "2.44",
    "odfr": "7.3",
    "mfr": "St.Jude Medical",
-   "en": "AV Plus DX"
+   "alias": "AVプラスDX"
   },
   {
    "id": "SJM-FK-1368",
@@ -11908,7 +11921,7 @@
    "dealer": "フクダ電子(株)",
    "cat": "PMリード",
    "model": "1368",
-   "name": "AVプラスDX",
+   "name": "AV Plus DX",
    "polarity": "双極",
    "site": "V+A",
    "intro": "9F",
@@ -11929,7 +11942,7 @@
    "odmm": "2.44",
    "odfr": "7.3",
    "mfr": "St.Jude Medical",
-   "en": "AV Plus DX"
+   "alias": "AVプラスDX"
   },
   {
    "id": "SJM-FK-1342T",
@@ -11938,7 +11951,7 @@
    "dealer": "フクダ電子(株)",
    "cat": "PMリード",
    "model": "1342T",
-   "name": "パッシブプラスDX",
+   "name": "Passive Plus® DX",
    "polarity": "双極",
    "site": "A",
    "intro": "8F",
@@ -11958,7 +11971,7 @@
    "odmm": "2.39",
    "odfr": "7.2",
    "mfr": "St.Jude Medical",
-   "en": "Passive Plus® DX"
+   "alias": "パッシブプラスDX"
   },
   {
    "id": "SJM-FK-1336C",
@@ -11967,7 +11980,7 @@
    "dealer": "フクダ電子(株)",
    "cat": "PMリード",
    "model": "1336C",
-   "name": "パッシブプラスDX",
+   "name": "Passive Plus® DX",
    "polarity": "双極",
    "site": "V",
    "intro": "8F",
@@ -11986,7 +11999,7 @@
    "odmm": "2.26",
    "odfr": "6.8",
    "mfr": "St.Jude Medical",
-   "en": "Passive Plus® DX"
+   "alias": "パッシブプラスDX"
   },
   {
    "id": "SJM-FK-1346T",
@@ -11995,7 +12008,7 @@
    "dealer": "フクダ電子(株)",
    "cat": "PMリード",
    "model": "1346T",
-   "name": "パッシブプラスDX",
+   "name": "Passive Plus® DX",
    "polarity": "双極",
    "site": "V",
    "intro": "8F",
@@ -12016,7 +12029,7 @@
    "odmm": "2.26",
    "odfr": "6.8",
    "mfr": "St.Jude Medical",
-   "en": "Passive Plus® DX"
+   "alias": "パッシブプラスDX"
   },
   {
    "id": "SJM-FK-1646T",
@@ -12025,7 +12038,7 @@
    "dealer": "フクダ電子(株)",
    "cat": "PMリード",
    "model": "1646T",
-   "name": "アイソフレックスリード",
+   "name": "Isoflex™",
    "polarity": "双極",
    "site": "V",
    "intro": "7F",
@@ -12046,7 +12059,7 @@
    "odmm": "2.06",
    "odfr": "6.2",
    "mfr": "St.Jude Medical",
-   "en": "Isoflex™"
+   "alias": "アイソフレックスリード"
   },
   {
    "id": "SJM-FK-1645K",
@@ -12055,7 +12068,7 @@
    "dealer": "フクダ電子(株)",
    "cat": "PMリード",
    "model": "1645K",
-   "name": "アイソフレックスリード",
+   "name": "Isoflex™",
    "polarity": "単極",
    "site": "V",
    "intro": "7F",
@@ -12072,7 +12085,7 @@
    "odmm": "1.60",
    "odfr": "4.8",
    "mfr": "St.Jude Medical",
-   "en": "Isoflex™"
+   "alias": "アイソフレックスリード"
   },
   {
    "id": "SJM-FK-1642T",
@@ -12081,7 +12094,7 @@
    "dealer": "フクダ電子(株)",
    "cat": "PMリード",
    "model": "1642T",
-   "name": "アイソフレックスリード",
+   "name": "Isoflex™",
    "polarity": "双極",
    "site": "A",
    "intro": "7F",
@@ -12102,7 +12115,7 @@
    "odmm": "2.24",
    "odfr": "6.7",
    "mfr": "St.Jude Medical",
-   "en": "Isoflex™"
+   "alias": "アイソフレックスリード"
   },
   {
    "id": "SJM-FK-1643K",
@@ -12111,7 +12124,7 @@
    "dealer": "フクダ電子(株)",
    "cat": "PMリード",
    "model": "1643K",
-   "name": "アイソフレックスリード",
+   "name": "Isoflex™",
    "polarity": "単極",
    "site": "A",
    "intro": "7F",
@@ -12128,7 +12141,7 @@
    "odmm": "1.60",
    "odfr": "4.8",
    "mfr": "St.Jude Medical",
-   "en": "Isoflex™"
+   "alias": "アイソフレックスリード"
   },
   {
    "id": "SJM-FK-1636T",
@@ -12137,7 +12150,7 @@
    "dealer": "フクダ電子(株)",
    "cat": "PMリード",
    "model": "1636T",
-   "name": "アイソフレックスリード",
+   "name": "Isoflex™",
    "polarity": "双極",
    "site": "V",
    "intro": "8F",
@@ -12156,7 +12169,7 @@
    "odmm": "2.06",
    "odfr": "6.2",
    "mfr": "St.Jude Medical",
-   "en": "Isoflex™"
+   "alias": "アイソフレックスリード"
   },
   {
    "id": "SJM-FK-1635K",
@@ -12165,7 +12178,7 @@
    "dealer": "フクダ電子(株)",
    "cat": "PMリード",
    "model": "1635K",
-   "name": "アイソフレックスリード",
+   "name": "Isoflex™",
    "polarity": "単極",
    "site": "V",
    "intro": "8F",
@@ -12182,7 +12195,7 @@
    "odmm": "1.60",
    "odfr": "4.8",
    "mfr": "St.Jude Medical",
-   "en": "Isoflex™"
+   "alias": "アイソフレックスリード"
   },
   {
    "id": "SJM-FK-1688T",
@@ -12191,7 +12204,7 @@
    "dealer": "フクダ電子(株)",
    "cat": "PMリード",
    "model": "1688T",
-   "name": "テンドリルSDXリード",
+   "name": "Tendril™ SDX",
    "polarity": "双極",
    "site": "A/V",
    "intro": "7F",
@@ -12212,7 +12225,7 @@
    "odmm": "2.07",
    "odfr": "6.2",
    "mfr": "St.Jude Medical",
-   "en": "Tendril™ SDX"
+   "alias": "テンドリルSDXリード"
   },
   {
    "id": "SJM-FK-1888TC",
@@ -12221,7 +12234,7 @@
    "dealer": "フクダ電子(株)",
    "cat": "PMリード",
    "model": "1888TC",
-   "name": "テンドリルオプティムリード",
+   "name": "Tendril™ Optim",
    "polarity": "双極",
    "site": "A/V",
    "intro": "6F",
@@ -12240,7 +12253,7 @@
    "odmm": "1.94",
    "odfr": "5.8",
    "mfr": "St.Jude Medical",
-   "en": "Tendril™ Optim"
+   "alias": "テンドリルオプティムリード"
   },
   {
    "id": "SJM-FK-1882TC",
@@ -12249,7 +12262,7 @@
    "dealer": "フクダ電子(株)",
    "cat": "PMリード",
    "model": "1882TC",
-   "name": "テンドリルオプティムリード",
+   "name": "Tendril™ Optim",
    "polarity": "双極",
    "site": "A",
    "intro": "6F",
@@ -12269,7 +12282,7 @@
    "odmm": "1.99",
    "odfr": "6.0",
    "mfr": "St.Jude Medical",
-   "en": "Tendril™ Optim"
+   "alias": "テンドリルオプティムリード"
   },
   {
    "id": "SJM-FK-1948",
@@ -12278,7 +12291,7 @@
    "dealer": "フクダ電子(株)",
    "cat": "PMリード",
    "model": "1948",
-   "name": "アイソフレックスオプティムリード",
+   "name": "Isoflex™ Optim",
    "polarity": "双極",
    "site": "V",
    "intro": "7Fr",
@@ -12298,7 +12311,7 @@
    "odmm": "1.82",
    "odfr": "5.5",
    "mfr": "St.Jude Medical",
-   "en": "Isoflex™ Optim"
+   "alias": "アイソフレックスオプティムリード"
   },
   {
    "id": "SJM-FK-1944",
@@ -12307,7 +12320,7 @@
    "dealer": "フクダ電子(株)",
    "cat": "PMリード",
    "model": "1944",
-   "name": "アイソフレックスオプティムリード",
+   "name": "Isoflex™ Optim",
    "polarity": "双極",
    "site": "A",
    "intro": "7Fr",
@@ -12327,7 +12340,7 @@
    "odmm": "2.01",
    "odfr": "6.0",
    "mfr": "St.Jude Medical",
-   "en": "Isoflex™ Optim"
+   "alias": "アイソフレックスオプティムリード"
   },
   {
    "id": "SJM-FK-2088TC",
@@ -12336,7 +12349,7 @@
    "dealer": "フクダ電子(株)",
    "cat": "PMリード",
    "model": "2088TC",
-   "name": "テンドリルSTS",
+   "name": "Tendril™ STS",
    "polarity": "双極",
    "site": "A/V",
    "intro": "6F",
@@ -12356,7 +12369,7 @@
    "odmm": "1.90",
    "odfr": "5.7",
    "mfr": "St.Jude Medical",
-   "en": "Tendril™ STS"
+   "alias": "テンドリルSTS"
   },
   {
    "id": "SJM-SJ-815",
@@ -13118,7 +13131,7 @@
    "dealer": "セント・ジュード・メディカル(株)",
    "cat": "PMリード",
    "model": "1388T",
-   "name": "テンドリルDX",
+   "name": "Tendril™ DX",
    "polarity": "双極",
    "site": "A/V",
    "intro": "8F",
@@ -13137,7 +13150,7 @@
    "odmm": "2.49",
    "odfr": "7.5",
    "mfr": "St.Jude Medical",
-   "en": "Tendril™ DX"
+   "alias": "テンドリルDX"
   },
   {
    "id": "SJM-SJ-1402T",
@@ -13672,7 +13685,7 @@
    "dealer": "セント・ジュード・メディカル(株)",
    "cat": "PMリード",
    "model": "1688T",
-   "name": "テンドリルSDX",
+   "name": "Tendril™ SDX",
    "polarity": "双極",
    "site": "A/V",
    "intro": "7F",
@@ -13693,7 +13706,7 @@
    "odmm": "2.07",
    "odfr": "6.2",
    "mfr": "St.Jude Medical",
-   "en": "Tendril™ SDX"
+   "alias": "テンドリルSDX"
   },
   {
    "id": "SJM-SJ-1888TC",
@@ -13702,7 +13715,7 @@
    "dealer": "セント・ジュード・メディカル(株)",
    "cat": "PMリード",
    "model": "1888TC",
-   "name": "テンドリルST Optim",
+   "name": "Tendril™ ST Optim",
    "polarity": "双極",
    "site": "A/V",
    "intro": "6F",
@@ -13721,7 +13734,7 @@
    "odmm": "1.94",
    "odfr": "5.6",
    "mfr": "St.Jude Medical",
-   "en": "Tendril™ ST Optim"
+   "alias": "テンドリルST Optim"
   },
   {
    "id": "SJM-SJ-2088TC",
@@ -13730,7 +13743,7 @@
    "dealer": "セント・ジュード・メディカル(株)",
    "cat": "PMリード",
    "model": "2088TC",
-   "name": "テンドリルSTS",
+   "name": "Tendril™ STS",
    "polarity": "双極",
    "site": "A/V",
    "intro": "6F",
@@ -13750,7 +13763,7 @@
    "odmm": "1.90",
    "odfr": "5.5",
    "mfr": "St.Jude Medical",
-   "en": "Tendril™ STS"
+   "alias": "テンドリルSTS"
   },
   {
    "id": "SJM-SJ-1999",
@@ -13759,7 +13772,7 @@
    "dealer": "セント・ジュード・メディカル(株)",
    "cat": "PMリード",
    "model": "1999",
-   "name": "オプティセンスOptim",
+   "name": "OptiSense™ Optim",
    "polarity": "双極",
    "site": "A",
    "intro": "7F",
@@ -13778,7 +13791,7 @@
    "odmm": "1.90",
    "odfr": "6.3",
    "mfr": "St.Jude Medical",
-   "en": "OptiSense™ Optim"
+   "alias": "オプティセンスOptim"
   },
   {
    "id": "SJM-SJ-1688TC",
@@ -13787,7 +13800,7 @@
    "dealer": "セント・ジュード・メディカル(株)",
    "cat": "PMリード",
    "model": "1688TC",
-   "name": "テンドリルSDX",
+   "name": "Tendril™ SDX",
    "polarity": "双極",
    "site": "A/V",
    "intro": "6F",
@@ -13808,7 +13821,7 @@
    "odmm": "2.07",
    "odfr": "6.2",
    "mfr": "St.Jude Medical",
-   "en": "Tendril™ SDX"
+   "alias": "テンドリルSDX"
   },
   {
    "id": "SJM-SJ-LPA1200M-J",
@@ -13817,7 +13830,7 @@
    "dealer": "セント・ジュード・メディカル(株)",
    "cat": "PMリード",
    "model": "LPA1200M",
-   "name": "テンドリル MRI J",
+   "name": "Tendril™ MRI J",
    "polarity": "双極",
    "intro": "8F",
    "fixation": "スクリュー",
@@ -13829,7 +13842,7 @@
    "odmm": "2.30",
    "odfr": "7.9",
    "mfr": "St.Jude Medical",
-   "en": "Tendril™ MRI（J型）"
+   "alias": "テンドリル MRI J"
   },
   {
    "id": "SJM-SJ-LPA1200M",
@@ -13838,7 +13851,7 @@
    "dealer": "セント・ジュード・メディカル(株)",
    "cat": "PMリード",
    "model": "LPA1200M",
-   "name": "テンドリル MRI",
+   "name": "Tendril™ MRI",
    "polarity": "双極",
    "intro": "8F",
    "fixation": "スクリュー",
@@ -13849,7 +13862,7 @@
    "ring": "2.6",
    "odfr": "7.9",
    "mfr": "St.Jude Medical",
-   "en": "Tendril™ MRI"
+   "alias": "テンドリル MRI"
   },
   {
    "id": "SOM-L-3260VB",
@@ -14314,7 +14327,7 @@
    "dealer": "日本光電工業(株)",
    "cat": "PMリード",
    "model": "1948",
-   "name": "アイソフレックス OptimJ",
+   "name": "Isoflex™ Optim J",
    "polarity": "双極",
    "site": "V",
    "intro": "7F",
@@ -14334,7 +14347,7 @@
    "odmm": "1.82",
    "odfr": "6.2",
    "mfr": "St.Jude Medical",
-   "en": "Isoflex™ Optim（J型）"
+   "alias": "アイソフレックス OptimJ"
   },
   {
    "id": "SJM-NK-1944",
@@ -14343,7 +14356,7 @@
    "dealer": "日本光電工業(株)",
    "cat": "PMリード",
    "model": "1944",
-   "name": "アイソフレックス OptimJ",
+   "name": "Isoflex™ Optim J",
    "polarity": "双極",
    "site": "A",
    "intro": "7F",
@@ -14363,7 +14376,7 @@
    "odmm": "2.01",
    "odfr": "6.2",
    "mfr": "St.Jude Medical",
-   "en": "Isoflex™ Optim（J型）"
+   "alias": "アイソフレックス OptimJ"
   },
   {
    "id": "SJM-NK-2088TC",
@@ -14372,7 +14385,7 @@
    "dealer": "日本光電工業(株)",
    "cat": "PMリード",
    "model": "2088TC",
-   "name": "テンドリルSTS",
+   "name": "Tendril™ STS",
    "polarity": "双極",
    "site": "A/V",
    "intro": "6F",
@@ -14392,7 +14405,7 @@
    "odmm": "1.90",
    "odfr": "5.7",
    "mfr": "St.Jude Medical",
-   "en": "Tendril™ STS"
+   "alias": "テンドリルSTS"
   },
   {
    "id": "SJM-NK-1999",
@@ -14401,7 +14414,7 @@
    "dealer": "日本光電工業(株)",
    "cat": "PMリード",
    "model": "1999",
-   "name": "オプティセンスOptimJ",
+   "name": "OptiSense™ Optim J",
    "polarity": "双極",
    "site": "A",
    "intro": "7F",
@@ -14420,7 +14433,7 @@
    "odmm": "1.90",
    "odfr": "6.3",
    "mfr": "St.Jude Medical",
-   "en": "OptiSense™ Optim（J型）"
+   "alias": "オプティセンスOptimJ"
   },
   {
    "id": "SOR-L-S80J",
@@ -15530,7 +15543,7 @@
    "cat": "PMリード",
    "emat": "プラチナ合金",
    "model": "IMD19",
-   "name": "エクセレンスプラス",
+   "name": "Excellence Plus",
    "polarity": "単極",
    "site": "V",
    "intro": "7F",
@@ -15545,7 +15558,7 @@
    "period": "93年8月〜",
    "odmm": "1.2",
    "odfr": "3.6",
-   "en": "Excellence Plus"
+   "alias": "エクセレンスプラス"
   },
   {
    "id": "VIT-L-IMD19B",
@@ -15555,7 +15568,7 @@
    "cat": "PMリード",
    "emat": "プラチナ合金",
    "model": "IMD19B",
-   "name": "エクセレンスプラス",
+   "name": "Excellence Plus",
    "polarity": "双極",
    "site": "V",
    "intro": "7F",
@@ -15572,7 +15585,7 @@
    "period": "93年9月〜",
    "odmm": "1.9",
    "odfr": "5.7",
-   "en": "Excellence Plus"
+   "alias": "エクセレンスプラス"
   },
   {
    "id": "VIT-L-IMD19JB",
@@ -15582,7 +15595,7 @@
    "cat": "PMリード",
    "emat": "プラチナ合金",
    "model": "IMD19JB",
-   "name": "エクセレンスプラス",
+   "name": "Excellence Plus",
    "polarity": "双極",
    "site": "A",
    "intro": "7F",
@@ -15599,7 +15612,7 @@
    "period": "93年9月〜",
    "odmm": "2.1",
    "odfr": "6.3",
-   "en": "Excellence Plus"
+   "alias": "エクセレンスプラス"
   },
   {
    "id": "VIT-L-IMD49",
@@ -15609,7 +15622,7 @@
    "cat": "PMリード",
    "emat": "プラチナ合金",
    "model": "IMD49",
-   "name": "エクセレンスプラス",
+   "name": "Excellence Plus",
    "polarity": "単極",
    "site": "V",
    "intro": "7F",
@@ -15624,7 +15637,7 @@
    "period": "93年11月〜",
    "odmm": "1.2",
    "odfr": "3.6",
-   "en": "Excellence Plus"
+   "alias": "エクセレンスプラス"
   },
   {
    "id": "VIT-L-IMD49B",
@@ -15634,7 +15647,7 @@
    "cat": "PMリード",
    "emat": "プラチナ合金",
    "model": "IMD49B",
-   "name": "エクセレンスプラス",
+   "name": "Excellence Plus",
    "polarity": "双極",
    "site": "V",
    "intro": "7F",
@@ -15651,7 +15664,7 @@
    "period": "1993年10月",
    "odmm": "1.9",
    "odfr": "5.7",
-   "en": "Excellence Plus"
+   "alias": "エクセレンスプラス"
   },
   {
    "id": "VIT-L-IMD49JB",
@@ -15661,7 +15674,7 @@
    "cat": "PMリード",
    "emat": "プラチナ合金",
    "model": "IMD49JB",
-   "name": "エクセレンスプラス",
+   "name": "Excellence Plus",
    "polarity": "双極",
    "site": "A",
    "intro": "7F",
@@ -15678,7 +15691,7 @@
    "period": "1993年10月",
    "odmm": "2.1",
    "odfr": "6.3",
-   "en": "Excellence Plus"
+   "alias": "エクセレンスプラス"
   },
   {
    "id": "VIT-L-IMP15Q",
@@ -15688,7 +15701,7 @@
    "cat": "PMリード",
    "emat": "プラチナ合金",
    "model": "IMP15Q",
-   "name": "ブリリアント",
+   "name": "Brilliant",
    "polarity": "双極",
    "site": "A/V",
    "intro": "11F",
@@ -15703,7 +15716,7 @@
    "connector": "IS-1",
    "odmm": "2.65",
    "odfr": "8.0",
-   "en": "Brilliant"
+   "alias": "ブリリアント"
   },
   {
    "id": "VIT-L-IMP16Q",
@@ -15713,7 +15726,7 @@
    "cat": "PMリード",
    "emat": "プラチナ合金",
    "model": "IMP16Q",
-   "name": "ブリリアント",
+   "name": "Brilliant",
    "polarity": "双極",
    "site": "A/V",
    "intro": "11F",
@@ -15728,7 +15741,7 @@
    "connector": "IS-1",
    "odmm": "2.65",
    "odfr": "8.0",
-   "en": "Brilliant"
+   "alias": "ブリリアント"
   },
   {
    "id": "VIT-L-IMS19B",
@@ -15738,7 +15751,7 @@
    "cat": "PMリード",
    "emat": "プラチナ合金",
    "model": "IMS19B",
-   "name": "ピルエット",
+   "name": "Pirouette",
    "polarity": "双極",
    "site": "A/V",
    "intro": "9F",
@@ -15753,7 +15766,7 @@
    "connector": "IS-1",
    "odmm": "2.4",
    "odfr": "7.2",
-   "en": "Pirouette"
+   "alias": "ピルエット"
   },
   {
    "id": "VIT-L-IMS49",
@@ -15763,7 +15776,7 @@
    "cat": "PMリード",
    "emat": "プラチナ合金",
    "model": "IMS49",
-   "name": "ピルエット",
+   "name": "Pirouette",
    "polarity": "単極",
    "site": "A/V",
    "intro": "9F",
@@ -15776,7 +15789,7 @@
    "connector": "IS-1",
    "odmm": "2.2",
    "odfr": "6.6",
-   "en": "Pirouette"
+   "alias": "ピルエット"
   },
   {
    "id": "VIT-L-IMS49B",
@@ -15786,7 +15799,7 @@
    "cat": "PMリード",
    "emat": "プラチナ合金",
    "model": "IMS49B",
-   "name": "ピルエット",
+   "name": "Pirouette",
    "polarity": "双極",
    "site": "A/V",
    "intro": "9F",
@@ -15801,7 +15814,7 @@
    "connector": "IS-1",
    "odmm": "2.4",
    "odfr": "7.2",
-   "en": "Pirouette"
+   "alias": "ピルエット"
   },
   {
    "id": "VIT-L-IT51B",
@@ -16053,7 +16066,7 @@
    "cat": "PMリード",
    "emat": "プラチナ合金",
    "model": "IMG49-52",
-   "name": "インパルス",
+   "name": "Impulse",
    "polarity": "単極",
    "site": "V",
    "intro": "7F",
@@ -16068,7 +16081,7 @@
    "period": "97年12月〜",
    "odmm": "1.7",
    "odfr": "5.1",
-   "en": "Impulse"
+   "alias": "インパルス"
   },
   {
    "id": "VIT-L-IMG49-58",
@@ -16078,7 +16091,7 @@
    "cat": "PMリード",
    "emat": "プラチナ合金",
    "model": "IMG49-58",
-   "name": "インパルス",
+   "name": "Impulse",
    "polarity": "単極",
    "site": "V",
    "intro": "7F",
@@ -16093,7 +16106,7 @@
    "period": "97年12月〜",
    "odmm": "1.7",
    "odfr": "5.1",
-   "en": "Impulse"
+   "alias": "インパルス"
   },
   {
    "id": "VIT-L-IMG49B-52",
@@ -16103,7 +16116,7 @@
    "cat": "PMリード",
    "emat": "プラチナ合金",
    "model": "IMG49B-52",
-   "name": "インパルス",
+   "name": "Impulse",
    "polarity": "双極",
    "site": "V",
    "intro": "9F",
@@ -16120,7 +16133,7 @@
    "period": "97年12月〜",
    "odmm": "2.8",
    "odfr": "8.4",
-   "en": "Impulse"
+   "alias": "インパルス"
   },
   {
    "id": "VIT-L-IMG49B-58",
@@ -16130,7 +16143,7 @@
    "cat": "PMリード",
    "emat": "プラチナ合金",
    "model": "IMG49B-58",
-   "name": "インパルス",
+   "name": "Impulse",
    "polarity": "双極",
    "site": "V",
    "intro": "9F",
@@ -16147,7 +16160,7 @@
    "period": "97年12月〜",
    "odmm": "2.8",
    "odfr": "8.4",
-   "en": "Impulse"
+   "alias": "インパルス"
   },
   {
    "id": "VIT-L-IMG49JB-45",
@@ -16157,7 +16170,7 @@
    "cat": "PMリード",
    "emat": "プラチナ合金",
    "model": "IMG49JB-45",
-   "name": "インパルス",
+   "name": "Impulse",
    "polarity": "双極",
    "site": "A",
    "intro": "9F",
@@ -16174,7 +16187,7 @@
    "period": "97年12月〜",
    "odmm": "2.8",
    "odfr": "8.4",
-   "en": "Impulse"
+   "alias": "インパルス"
   },
   {
    "id": "VIT-L-IMG49JB-53",
@@ -16184,7 +16197,7 @@
    "cat": "PMリード",
    "emat": "プラチナ合金",
    "model": "IMG49JB-53",
-   "name": "インパルス",
+   "name": "Impulse",
    "polarity": "双極",
    "site": "A",
    "intro": "9F",
@@ -16201,7 +16214,7 @@
    "period": "97年12月〜",
    "odmm": "2.8",
    "odfr": "8.4",
-   "en": "Impulse"
+   "alias": "インパルス"
   },
   {
    "id": "VIT-L-IMR15Q",
@@ -16211,7 +16224,7 @@
    "cat": "PMリード",
    "emat": "プラチナ合金",
    "model": "IMR15Q",
-   "name": "ブリリアントプラス",
+   "name": "Brilliant Plus",
    "polarity": "双極",
    "site": "A/V",
    "intro": "11F",
@@ -16227,7 +16240,7 @@
    "period": "96年12月〜",
    "odmm": "2.65",
    "odfr": "8.0",
-   "en": "Brilliant Plus"
+   "alias": "ブリリアントプラス"
   },
   {
    "id": "VIT-L-IMR16Q",
@@ -16237,7 +16250,7 @@
    "cat": "PMリード",
    "emat": "プラチナ合金",
    "model": "IMR16Q",
-   "name": "ブリリアントプラス",
+   "name": "Brilliant Plus",
    "polarity": "双極",
    "site": "A/V",
    "intro": "11F",
@@ -16253,7 +16266,7 @@
    "period": "96年10月〜",
    "odmm": "2.65",
    "odfr": "8.0",
-   "en": "Brilliant Plus"
+   "alias": "ブリリアントプラス"
   },
   {
    "id": "VIT-L-IRP13",
@@ -16263,7 +16276,7 @@
    "cat": "PMリード",
    "emat": "プラチナ合金",
    "model": "IRP13",
-   "name": "スリムタインS",
+   "name": "Slimtine S",
    "polarity": "単極",
    "site": "V",
    "intro": "7F",
@@ -16277,7 +16290,7 @@
    "connector": "IS-1",
    "odmm": "2.2",
    "odfr": "6.6",
-   "en": "Slimtine S"
+   "alias": "スリムタインS"
   },
   {
    "id": "VIT-L-IRP13B",
@@ -16287,7 +16300,7 @@
    "cat": "PMリード",
    "emat": "プラチナ合金",
    "model": "IRP13B",
-   "name": "スリムタインS",
+   "name": "Slimtine S",
    "polarity": "双極",
    "site": "V",
    "intro": "8F",
@@ -16303,7 +16316,7 @@
    "connector": "IS-1",
    "odmm": "2.7",
    "odfr": "8.1",
-   "en": "Slimtine S"
+   "alias": "スリムタインS"
   },
   {
    "id": "VIT-L-IRP13JB",
@@ -16313,7 +16326,7 @@
    "cat": "PMリード",
    "emat": "プラチナ合金",
    "model": "IRP13JB",
-   "name": "スリムタインS",
+   "name": "Slimtine S",
    "polarity": "双極",
    "site": "A",
    "intro": "8F",
@@ -16329,7 +16342,7 @@
    "connector": "IS-1",
    "odmm": "2.7",
    "odfr": "8.1",
-   "en": "Slimtine S"
+   "alias": "スリムタインS"
   },
   {
    "id": "VIT-L-IRP19",
@@ -16339,7 +16352,7 @@
    "cat": "PMリード",
    "emat": "プラチナ合金",
    "model": "IRP19",
-   "name": "スリムタインS",
+   "name": "Slimtine S",
    "polarity": "単極",
    "site": "V",
    "intro": "7F",
@@ -16353,7 +16366,7 @@
    "connector": "IS-1",
    "odmm": "2.2",
    "odfr": "6.6",
-   "en": "Slimtine S"
+   "alias": "スリムタインS"
   },
   {
    "id": "VIT-L-IRP19B",
@@ -16363,7 +16376,7 @@
    "cat": "PMリード",
    "emat": "プラチナ合金",
    "model": "IRP19B",
-   "name": "スリムタインS",
+   "name": "Slimtine S",
    "polarity": "双極",
    "site": "V",
    "intro": "9F",
@@ -16379,7 +16392,7 @@
    "connector": "IS-1",
    "odmm": "2.3",
    "odfr": "6.9",
-   "en": "Slimtine S"
+   "alias": "スリムタインS"
   },
   {
    "id": "VIT-L-IRP19JB",
@@ -16389,7 +16402,7 @@
    "cat": "PMリード",
    "emat": "プラチナ合金",
    "model": "IRP19JB",
-   "name": "スリムタインS",
+   "name": "Slimtine S",
    "polarity": "双極",
    "site": "V",
    "intro": "9F",
@@ -16406,7 +16419,7 @@
    "period": "98年11月〜",
    "odmm": "2.3",
    "odfr": "6.9",
-   "en": "Slimtine S"
+   "alias": "スリムタインS"
   },
   {
    "id": "VIT-L-IMX49-45",
@@ -16416,7 +16429,7 @@
    "cat": "PMリード",
    "emat": "プラチナ合金",
    "model": "IMX49-45",
-   "name": "ピルエットSプラス",
+   "name": "Pirouette S Plus",
    "polarity": "単極",
    "site": "A/V",
    "intro": "9F",
@@ -16430,7 +16443,7 @@
    "period": "98年11月〜",
    "odmm": "2.2",
    "odfr": "6.6",
-   "en": "Pirouette S Plus"
+   "alias": "ピルエットSプラス"
   },
   {
    "id": "VIT-L-IMX49B-45",
@@ -16440,7 +16453,7 @@
    "cat": "PMリード",
    "emat": "プラチナ合金",
    "model": "IMX49B-45",
-   "name": "ピルエットSプラス",
+   "name": "Pirouette S Plus",
    "polarity": "双極",
    "site": "A/V",
    "intro": "9F",
@@ -16456,7 +16469,7 @@
    "period": "98年11月〜",
    "odmm": "2.4",
    "odfr": "7.2",
-   "en": "Pirouette S Plus"
+   "alias": "ピルエットSプラス"
   },
   {
    "id": "VIT-L-IMX49JB-45",
@@ -16466,7 +16479,7 @@
    "cat": "PMリード",
    "emat": "プラチナ合金",
    "model": "IMX49JB-45",
-   "name": "ピルエットSプラス",
+   "name": "Pirouette S Plus",
    "polarity": "双極",
    "site": "A",
    "intro": "9F",
@@ -16482,7 +16495,7 @@
    "period": "98年11月〜",
    "odmm": "2.5",
    "odfr": "7.5",
-   "en": "Pirouette S Plus"
+   "alias": "ピルエットSプラス"
   },
   {
    "id": "VIT-L-IMX49-52",
@@ -16492,7 +16505,7 @@
    "cat": "PMリード",
    "emat": "プラチナ合金",
    "model": "IMX49-52",
-   "name": "ピルエットSプラス",
+   "name": "Pirouette S Plus",
    "polarity": "単極",
    "site": "A/V",
    "intro": "9F",
@@ -16506,7 +16519,7 @@
    "period": "98年11月〜",
    "odmm": "2.2",
    "odfr": "6.6",
-   "en": "Pirouette S Plus"
+   "alias": "ピルエットSプラス"
   },
   {
    "id": "VIT-L-IMX49B-52",
@@ -16516,7 +16529,7 @@
    "cat": "PMリード",
    "emat": "プラチナ合金",
    "model": "IMX49B-52",
-   "name": "ピルエットSプラス",
+   "name": "Pirouette S Plus",
    "polarity": "双極",
    "site": "A/V",
    "intro": "9F",
@@ -16532,7 +16545,7 @@
    "period": "98年11月〜",
    "odmm": "2.4",
    "odfr": "7.2",
-   "en": "Pirouette S Plus"
+   "alias": "ピルエットSプラス"
   },
   {
    "id": "VIT-L-IMX49JB-53",
@@ -16542,7 +16555,7 @@
    "cat": "PMリード",
    "emat": "プラチナ合金",
    "model": "IMX49JB-53",
-   "name": "ピルエットSプラス",
+   "name": "Pirouette S Plus",
    "polarity": "双極",
    "site": "A",
    "intro": "9F",
@@ -16558,7 +16571,7 @@
    "period": "98年11月〜",
    "odmm": "2.5",
    "odfr": "7.5",
-   "en": "Pirouette S Plus"
+   "alias": "ピルエットSプラス"
   },
   {
    "id": "VIT-L-IMX49-58",
@@ -16568,7 +16581,7 @@
    "cat": "PMリード",
    "emat": "プラチナ合金",
    "model": "IMX49-58",
-   "name": "ピルエットSプラス",
+   "name": "Pirouette S Plus",
    "polarity": "単極",
    "site": "A/V",
    "intro": "9F",
@@ -16582,7 +16595,7 @@
    "period": "98年11月〜",
    "odmm": "2.2",
    "odfr": "6.6",
-   "en": "Pirouette S Plus"
+   "alias": "ピルエットSプラス"
   },
   {
    "id": "VIT-L-IMW14Q",
@@ -16592,7 +16605,7 @@
    "cat": "PMリード",
    "emat": "プラチナ合金",
    "model": "IMW14Q",
-   "name": "ブリリアントSプラス",
+   "name": "Brilliant S Plus",
    "polarity": "双極",
    "site": "A/V",
    "intro": "9F",
@@ -16609,7 +16622,7 @@
    "period": "98年12月〜",
    "odmm": "2.65",
    "odfr": "8.0",
-   "en": "Brilliant S Plus"
+   "alias": "ブリリアントSプラス"
   },
   {
    "id": "VIT-L-IMW15Q",
@@ -16619,7 +16632,7 @@
    "cat": "PMリード",
    "emat": "プラチナ合金",
    "model": "IMW15Q",
-   "name": "ブリリアントSプラス",
+   "name": "Brilliant S Plus",
    "polarity": "双極",
    "site": "A/V",
    "intro": "9F",
@@ -16636,7 +16649,7 @@
    "period": "98年12月〜",
    "odmm": "2.65",
    "odfr": "8.0",
-   "en": "Brilliant S Plus"
+   "alias": "ブリリアントSプラス"
   },
   {
    "id": "VIT-L-IMW16Q",
@@ -16646,7 +16659,7 @@
    "cat": "PMリード",
    "emat": "プラチナ合金",
    "model": "IMW16Q",
-   "name": "ブリリアントSプラス",
+   "name": "Brilliant S Plus",
    "polarity": "双極",
    "site": "A/V",
    "intro": "9F",
@@ -16663,7 +16676,7 @@
    "period": "98年12月〜",
    "odmm": "2.65",
    "odfr": "8.0",
-   "en": "Brilliant S Plus"
+   "alias": "ブリリアントSプラス"
   },
   {
    "id": "VIT-L-ICF09",
@@ -16673,7 +16686,7 @@
    "cat": "PMリード",
    "emat": "プラチナ合金",
    "model": "ICF09",
-   "name": "クリスタルラインActFix",
+   "name": "Crystalline™ ActFix",
    "polarity": "双極",
    "site": "A/V",
    "intro": "7F",
@@ -16690,7 +16703,7 @@
    "period": "05年4月〜",
    "odmm": "2",
    "odfr": "6.0",
-   "en": "Crystalline™ ActFix"
+   "alias": "クリスタルラインActFix"
   },
   {
    "id": "VIT-L-ICL08",
@@ -16700,7 +16713,7 @@
    "cat": "PMリード",
    "emat": "プラチナ合金",
    "model": "ICL08",
-   "name": "クリスタルライン",
+   "name": "Crystalline™",
    "polarity": "単極",
    "site": "V",
    "intro": "7F",
@@ -16715,7 +16728,7 @@
    "period": "05年6月〜",
    "odmm": "1.65",
    "odfr": "5.0",
-   "en": "Crystalline™"
+   "alias": "クリスタルライン"
   },
   {
    "id": "VIT-L-ICL08B",
@@ -16725,7 +16738,7 @@
    "cat": "PMリード",
    "emat": "プラチナ合金",
    "model": "ICL08B",
-   "name": "クリスタルライン",
+   "name": "Crystalline™",
    "polarity": "双極",
    "site": "V",
    "intro": "8F",
@@ -16742,7 +16755,7 @@
    "period": "05年6月〜",
    "odmm": "2.26",
    "odfr": "6.8",
-   "en": "Crystalline™"
+   "alias": "クリスタルライン"
   },
   {
    "id": "VIT-L-ICL08JB",
@@ -16752,7 +16765,7 @@
    "cat": "PMリード",
    "emat": "プラチナ合金",
    "model": "ICL08JB",
-   "name": "クリスタルライン",
+   "name": "Crystalline™",
    "polarity": "双極",
    "site": "A",
    "intro": "8F",
@@ -16769,7 +16782,7 @@
    "period": "05年6月〜",
    "odmm": "2.26",
    "odfr": "6.8",
-   "en": "Crystalline™"
+   "alias": "クリスタルライン"
   },
   {
    "id": "CCS-L-AT-342",
@@ -16779,7 +16792,7 @@
    "cat": "PMリード",
    "emat": "プラチナイリジウム",
    "model": "AT-342",
-   "name": "ポリセーフATリード",
+   "name": "PolySafe AT",
    "polarity": "A:双極 V:単極",
    "site": "A/V",
    "intro": "11F",
@@ -16795,7 +16808,7 @@
    "period": "87年〜現在",
    "odmm": "2.2",
    "odfr": "6.6",
-   "en": "PolySafe AT"
+   "alias": "ポリセーフATリード"
   },
   {
    "id": "CCS-L-AT-343",
@@ -18732,7 +18745,7 @@
    "dealer": "ボストン・サイエンティフィックジャパン(株)",
    "cat": "ICDリード",
    "model": "0125",
-   "name": "エンドタックDSP",
+   "name": "ENDOTAK DSP™",
    "polarity": "双極",
    "site": "V",
    "intro": "11F",
@@ -18752,7 +18765,7 @@
    "odmm": "3.33",
    "odfr": "10.0",
    "coil": "デュアルコイル",
-   "en": "ENDOTAK DSP™"
+   "alias": "エンドタックDSP"
   },
   {
    "id": "GUI-ICD-0134",
@@ -18761,7 +18774,7 @@
    "dealer": "ボストン・サイエンティフィックジャパン(株)",
    "cat": "ICDリード",
    "model": "0134",
-   "name": "エンドタック エンデュランス",
+   "name": "ENDOTAK ENDURANCE™",
    "polarity": "双極",
    "site": "V",
    "intro": "11F",
@@ -18781,7 +18794,7 @@
    "odmm": "3.33",
    "odfr": "10.0",
    "coil": "デュアルコイル",
-   "en": "ENDOTAK ENDURANCE™"
+   "alias": "エンドタック エンデュランス"
   },
   {
    "id": "GUI-ICD-0135",
@@ -18790,7 +18803,7 @@
    "dealer": "ボストン・サイエンティフィックジャパン(株)",
    "cat": "ICDリード",
    "model": "0135",
-   "name": "エンドタック エンデュランス",
+   "name": "ENDOTAK ENDURANCE™",
    "polarity": "双極",
    "site": "V",
    "intro": "11F",
@@ -18810,7 +18823,7 @@
    "odmm": "3.33",
    "odfr": "10.0",
    "coil": "デュアルコイル",
-   "en": "ENDOTAK ENDURANCE™"
+   "alias": "エンドタック エンデュランス"
   },
   {
    "id": "GUI-ICD-0136",
@@ -18819,7 +18832,7 @@
    "dealer": "ボストン・サイエンティフィックジャパン(株)",
    "cat": "ICDリード",
    "model": "0136",
-   "name": "エンドタック エンデュランス",
+   "name": "ENDOTAK ENDURANCE™",
    "polarity": "双極",
    "site": "V",
    "intro": "11F",
@@ -18839,7 +18852,7 @@
    "odmm": "3.33",
    "odfr": "10.0",
    "coil": "デュアルコイル",
-   "en": "ENDOTAK ENDURANCE™"
+   "alias": "エンドタック エンデュランス"
   },
   {
    "id": "GUI-ICD-0154",
@@ -18848,7 +18861,7 @@
    "dealer": "ボストン・サイエンティフィックジャパン(株)",
    "cat": "ICDリード",
    "model": "0154",
-   "name": "エンドタック エンデュランス EZ",
+   "name": "ENDOTAK ENDURANCE™ EZ",
    "polarity": "双極",
    "site": "V",
    "intro": "11F",
@@ -18869,7 +18882,7 @@
    "odmm": "3.33",
    "odfr": "10.0",
    "coil": "デュアルコイル",
-   "en": "ENDOTAK ENDURANCE™ EZ"
+   "alias": "エンドタック エンデュランス EZ"
   },
   {
    "id": "GUI-ICD-0155",
@@ -18878,7 +18891,7 @@
    "dealer": "ボストン・サイエンティフィックジャパン(株)",
    "cat": "ICDリード",
    "model": "0155",
-   "name": "エンドタック エンデュランス EZ",
+   "name": "ENDOTAK ENDURANCE™ EZ",
    "polarity": "双極",
    "site": "V",
    "intro": "11F",
@@ -18899,7 +18912,7 @@
    "odmm": "3.33",
    "odfr": "10.0",
    "coil": "デュアルコイル",
-   "en": "ENDOTAK ENDURANCE™ EZ"
+   "alias": "エンドタック エンデュランス EZ"
   },
   {
    "id": "GUI-ICD-0156",
@@ -18908,7 +18921,7 @@
    "dealer": "ボストン・サイエンティフィックジャパン(株)",
    "cat": "ICDリード",
    "model": "0156",
-   "name": "エンドタック エンデュランス EZ",
+   "name": "ENDOTAK ENDURANCE™ EZ",
    "polarity": "双極",
    "site": "V",
    "intro": "11F",
@@ -18929,7 +18942,7 @@
    "odmm": "3.33",
    "odfr": "10.0",
    "coil": "デュアルコイル",
-   "en": "ENDOTAK ENDURANCE™ EZ"
+   "alias": "エンドタック エンデュランス EZ"
   },
   {
    "id": "GUI-ICD-0147",
@@ -18938,7 +18951,7 @@
    "dealer": "ボストン・サイエンティフィックジャパン(株)",
    "cat": "ICDリード",
    "model": "0147",
-   "name": "エンドタック リライアンス",
+   "name": "ENDOTAK RELIANCE™",
    "polarity": "双極",
    "site": "V",
    "intro": "9F",
@@ -18959,7 +18972,7 @@
    "odmm": "2.7",
    "odfr": "8.1",
    "coil": "デュアルコイル",
-   "en": "ENDOTAK RELIANCE™"
+   "alias": "エンドタック リライアンス"
   },
   {
    "id": "GUI-ICD-0148",
@@ -18968,7 +18981,7 @@
    "dealer": "ボストン・サイエンティフィックジャパン(株)",
    "cat": "ICDリード",
    "model": "0148",
-   "name": "エンドタック リライアンス",
+   "name": "ENDOTAK RELIANCE™",
    "polarity": "双極",
    "site": "V",
    "intro": "9F",
@@ -18989,7 +19002,7 @@
    "odmm": "2.7",
    "odfr": "8.1",
    "coil": "デュアルコイル",
-   "en": "ENDOTAK RELIANCE™"
+   "alias": "エンドタック リライアンス"
   },
   {
    "id": "GUI-ICD-0149",
@@ -18998,7 +19011,7 @@
    "dealer": "ボストン・サイエンティフィックジャパン(株)",
    "cat": "ICDリード",
    "model": "0149",
-   "name": "エンドタック リライアンス",
+   "name": "ENDOTAK RELIANCE™",
    "polarity": "双極",
    "site": "V",
    "intro": "9F",
@@ -19019,7 +19032,7 @@
    "odmm": "2.7",
    "odfr": "8.1",
    "coil": "デュアルコイル",
-   "en": "ENDOTAK RELIANCE™"
+   "alias": "エンドタック リライアンス"
   },
   {
    "id": "GUI-ICD-0127",
@@ -19028,7 +19041,7 @@
    "dealer": "ボストン・サイエンティフィックジャパン(株)",
    "cat": "ICDリード",
    "model": "0127",
-   "name": "エンドタック リライアンス S",
+   "name": "ENDOTAK RELIANCE™ S",
    "polarity": "双極",
    "site": "V Single",
    "intro": "9F",
@@ -19049,7 +19062,7 @@
    "odmm": "2.7",
    "odfr": "8.1",
    "coil": "シングルコイル",
-   "en": "ENDOTAK RELIANCE™ S"
+   "alias": "エンドタック リライアンス S"
   },
   {
    "id": "GUI-ICD-0128",
@@ -19058,7 +19071,7 @@
    "dealer": "ボストン・サイエンティフィックジャパン(株)",
    "cat": "ICDリード",
    "model": "0128",
-   "name": "エンドタック リライアンス S",
+   "name": "ENDOTAK RELIANCE™ S",
    "polarity": "双極",
    "site": "V Single",
    "intro": "9F",
@@ -19079,7 +19092,7 @@
    "odmm": "2.7",
    "odfr": "8.1",
    "coil": "シングルコイル",
-   "en": "ENDOTAK RELIANCE™ S"
+   "alias": "エンドタック リライアンス S"
   },
   {
    "id": "GUI-ICD-0049",
@@ -19088,7 +19101,7 @@
    "dealer": "ボストン・サイエンティフィックジャパン(株)",
    "cat": "ICDリード",
    "model": "0049",
-   "name": "エンドタック SQ ARRAY",
+   "name": "ENDOTAK SQ ARRAY™",
    "sback": "×",
    "ccoat": "×",
    "steroid": "有",
@@ -19100,7 +19113,7 @@
    "period": "01年〜09年",
    "odmm": "2.7",
    "odfr": "8.1",
-   "en": "ENDOTAK SQ ARRAY™"
+   "alias": "エンドタック SQ ARRAY"
   },
   {
    "id": "MDT-ICD-6944",
@@ -19109,7 +19122,7 @@
    "dealer": "日本メドトロニック(株)",
    "cat": "ICDリード",
    "model": "6944",
-   "name": "Sprintクワトロタインドリード",
+   "name": "Sprint Quattro™",
    "polarity": "双極",
    "site": "V",
    "intro": "9F",
@@ -19130,7 +19143,7 @@
    "odmm": "2.84",
    "odfr": "8.5",
    "coil": "デュアルコイル",
-   "en": "Sprint Quattro™"
+   "alias": "Sprintクワトロタインドリード"
   },
   {
    "id": "MDT-ICD-6947",
@@ -19139,7 +19152,7 @@
    "dealer": "日本メドトロニック(株)",
    "cat": "ICDリード",
    "model": "6947",
-   "name": "Sprintクワトロスクリューイン リード",
+   "name": "Sprint Quattro™",
    "polarity": "双極",
    "site": "V",
    "intro": "9F",
@@ -19160,7 +19173,7 @@
    "odmm": "2.84",
    "odfr": "8.5",
    "coil": "デュアルコイル",
-   "en": "Sprint Quattro™"
+   "alias": "Sprintクワトロスクリューイン リード"
   },
   {
    "id": "MDT-ICD-6721S",
@@ -19186,8 +19199,7 @@
    "length": "50",
    "connector": "DF-1",
    "period": "08年4月〜",
-   "coil": "デュアルコイル",
-   "en": "Epicardial Patch Lead（6721S）"
+   "coil": "デュアルコイル"
   },
   {
    "id": "MDT-ICD-6721M",
@@ -19213,8 +19225,7 @@
    "length": "50",
    "connector": "DF-1",
    "period": "08年4月〜",
-   "coil": "デュアルコイル",
-   "en": "Epicardial Patch Lead（6721M）"
+   "coil": "デュアルコイル"
   },
   {
    "id": "MDT-ICD-6721L",
@@ -19240,8 +19251,7 @@
    "length": "50",
    "connector": "DF-1",
    "period": "08年4月〜",
-   "coil": "デュアルコイル",
-   "en": "Epicardial Patch Lead（6721L）"
+   "coil": "デュアルコイル"
   },
   {
    "id": "MDT-ICD-6932",
@@ -19250,7 +19260,7 @@
    "dealer": "日本メドトロニック(株)",
    "cat": "ICDリード",
    "model": "6932",
-   "name": "Sprint タインドリード",
+   "name": "Sprint™",
    "polarity": "双極",
    "site": "V Single",
    "intro": "10.5F",
@@ -19272,7 +19282,7 @@
    "odmm": "3.05",
    "odfr": "9.2",
    "coil": "シングルコイル",
-   "en": "Sprint™"
+   "alias": "Sprint タインドリード"
   },
   {
    "id": "MDT-ICD-6933",
@@ -19281,7 +19291,7 @@
    "dealer": "日本メドトロニック(株)",
    "cat": "ICDリード",
    "model": "6933",
-   "name": "Transvene-SVC経静脈リード",
+   "name": "Transvene™ SVC",
    "polarity": "単極",
    "site": "SVC/CS",
    "intro": "10.5F",
@@ -19299,7 +19309,7 @@
    "period": "98年〜07年",
    "odmm": "2.3",
    "odfr": "6.9",
-   "en": "Transvene™ SVC"
+   "alias": "Transvene-SVC経静脈リード"
   },
   {
    "id": "MDT-ICD-6937",
@@ -19308,7 +19318,7 @@
    "dealer": "日本メドトロニック(株)",
    "cat": "ICDリード",
    "model": "6937",
-   "name": "Transvene-SVC経静脈リード",
+   "name": "Transvene™ SVC",
    "polarity": "単極",
    "site": "SVC/CS",
    "intro": "10.5F",
@@ -19326,7 +19336,7 @@
    "period": "98年〜07年",
    "odmm": "2.3",
    "odfr": "6.9",
-   "en": "Transvene™ SVC"
+   "alias": "Transvene-SVC経静脈リード"
   },
   {
    "id": "MDT-ICD-6942",
@@ -19335,7 +19345,7 @@
    "dealer": "日本メドトロニック(株)",
    "cat": "ICDリード",
    "model": "6942",
-   "name": "Sprint タインドリード",
+   "name": "Sprint™",
    "polarity": "双極",
    "site": "V",
    "intro": "10.5F",
@@ -19357,7 +19367,7 @@
    "odmm": "3.05",
    "odfr": "9.2",
    "coil": "デュアルコイル",
-   "en": "Sprint™"
+   "alias": "Sprint タインドリード"
   },
   {
    "id": "MDT-ICD-6943",
@@ -19366,7 +19376,7 @@
    "dealer": "日本メドトロニック(株)",
    "cat": "ICDリード",
    "model": "6943",
-   "name": "Sprint スクリューイン リード",
+   "name": "Sprint™",
    "polarity": "双極",
    "site": "V Single",
    "intro": "10.5F",
@@ -19388,7 +19398,7 @@
    "odmm": "3.12",
    "odfr": "9.4",
    "coil": "シングルコイル",
-   "en": "Sprint™"
+   "alias": "Sprint スクリューイン リード"
   },
   {
    "id": "MDT-ICD-6945",
@@ -19397,7 +19407,7 @@
    "dealer": "日本メドトロニック(株)",
    "cat": "ICDリード",
    "model": "6945",
-   "name": "Sprint スクリューイン リード",
+   "name": "Sprint™",
    "polarity": "双極",
    "site": "V",
    "intro": "10.5F",
@@ -19419,7 +19429,7 @@
    "odmm": "3.12",
    "odfr": "9.4",
    "coil": "デュアルコイル",
-   "en": "Sprint™"
+   "alias": "Sprint スクリューイン リード"
   },
   {
    "id": "MDT-ICD-6948",
@@ -19428,7 +19438,7 @@
    "dealer": "日本メドトロニック(株)",
    "cat": "ICDリード",
    "model": "6948",
-   "name": "Sprint フィデリスタインドリード",
+   "name": "Sprint Fidelis™",
    "polarity": "双極",
    "site": "V",
    "intro": "7F",
@@ -19450,7 +19460,7 @@
    "odmm": "2.2",
    "odfr": "6.6",
    "coil": "デュアルコイル",
-   "en": "Sprint Fidelis™"
+   "alias": "Sprint フィデリスタインドリード"
   },
   {
    "id": "MDT-ICD-6949",
@@ -19459,7 +19469,7 @@
    "dealer": "日本メドトロニック(株)",
    "cat": "ICDリード",
    "model": "6949",
-   "name": "Sprint フィデリススクリューイン リード",
+   "name": "Sprint Fidelis™",
    "polarity": "双極",
    "site": "V",
    "intro": "7F",
@@ -19481,7 +19491,7 @@
    "odmm": "2.2",
    "odfr": "6.6",
    "coil": "デュアルコイル",
-   "en": "Sprint Fidelis™"
+   "alias": "Sprint フィデリススクリューイン リード"
   },
   {
    "id": "MDT-ICD-6935",
@@ -19490,7 +19500,7 @@
    "dealer": "日本メドトロニック(株)",
    "cat": "ICDリード",
    "model": "6935",
-   "name": "SprintクワトロスクリューインリードS",
+   "name": "Sprint Quattro™ Secure S",
    "polarity": "双極",
    "site": "V Single",
    "intro": "9F",
@@ -19511,7 +19521,7 @@
    "odmm": "2.8",
    "odfr": "8.6",
    "coil": "シングルコイル",
-   "en": "Sprint Quattro™ Secure S"
+   "alias": "SprintクワトロスクリューインリードS"
   },
   {
    "id": "MDT-ICD-6947M",
@@ -19520,7 +19530,7 @@
    "dealer": "日本メドトロニック(株)",
    "cat": "ICDリード",
    "model": "6947M",
-   "name": "Sprintクワトロスクリューイン リード",
+   "name": "Sprint Quattro™",
    "polarity": "双極",
    "site": "V",
    "intro": "9F",
@@ -19541,7 +19551,7 @@
    "odmm": "2.8",
    "odfr": "8.6",
    "coil": "デュアルコイル",
-   "en": "Sprint Quattro™"
+   "alias": "Sprintクワトロスクリューイン リード"
   },
   {
    "id": "MDT-ICD-6936",
@@ -19574,7 +19584,7 @@
    "dealer": "日本メドトロニック(株)",
    "cat": "ICDリード",
    "model": "6935M",
-   "name": "Sprintクワトロスクリューイン リード",
+   "name": "Sprint Quattro™",
    "polarity": "双極",
    "site": "V Single",
    "intro": "9Fr.",
@@ -19594,7 +19604,7 @@
    "odmm": "2.8",
    "odfr": "8.6",
    "coil": "シングルコイル",
-   "en": "Sprint Quattro™"
+   "alias": "Sprintクワトロスクリューイン リード"
   },
   {
    "id": "MDT-ICD-6946M",
@@ -19603,7 +19613,7 @@
    "dealer": "日本メドトロニック(株)",
    "cat": "ICDリード",
    "model": "6946M",
-   "name": "Sprintクワトロタインドリード",
+   "name": "Sprint Quattro™",
    "polarity": "双極",
    "site": "V",
    "intro": "9Fr.",
@@ -19623,7 +19633,7 @@
    "odmm": "2.8",
    "odfr": "8.6",
    "coil": "デュアルコイル",
-   "en": "Sprint Quattro™"
+   "alias": "Sprintクワトロタインドリード"
   },
   {
    "id": "SOR-ICD-2CR5",
@@ -19827,7 +19837,7 @@
    "cond": "平行",
    "steroid": "有",
    "model": "1570",
-   "name": "Riata ICD リード",
+   "name": "Riata™",
    "site": "V",
    "intro": "8F",
    "fixation": "タイン",
@@ -19845,7 +19855,8 @@
    "period": "05年10月〜",
    "odmm": "2.63",
    "odfr": "7.6",
-   "coil": "デュアルコイル"
+   "coil": "デュアルコイル",
+   "alias": "Riata ICD リード"
   },
   {
    "id": "ABT-ICD-FK-1571",
@@ -19858,7 +19869,7 @@
    "cond": "平行",
    "steroid": "有",
    "model": "1571",
-   "name": "Riata ICD リード",
+   "name": "Riata™",
    "site": "V",
    "intro": "8F",
    "fixation": "タイン",
@@ -19876,7 +19887,8 @@
    "period": "05年10月〜",
    "odmm": "2.63",
    "odfr": "7.9",
-   "coil": "デュアルコイル"
+   "coil": "デュアルコイル",
+   "alias": "Riata ICD リード"
   },
   {
    "id": "ABT-ICD-FK-1572",
@@ -19889,7 +19901,7 @@
    "cond": "平行",
    "steroid": "有",
    "model": "1572",
-   "name": "Riata ICD リード",
+   "name": "Riata™",
    "site": "V",
    "intro": "8F",
    "fixation": "タイン",
@@ -19907,7 +19919,8 @@
    "period": "05年10月〜",
    "odmm": "2.6",
    "odfr": "7.8",
-   "coil": "シングルコイル"
+   "coil": "シングルコイル",
+   "alias": "Riata ICD リード"
   },
   {
    "id": "ABT-ICD-FK-1580",
@@ -19920,7 +19933,7 @@
    "cond": "平行",
    "steroid": "有",
    "model": "1580",
-   "name": "Riata ICD リード",
+   "name": "Riata™",
    "site": "V",
    "intro": "8F",
    "fixation": "スクリュー",
@@ -19938,7 +19951,8 @@
    "period": "05年10月〜",
    "odmm": "2.63",
    "odfr": "7.6",
-   "coil": "デュアルコイル"
+   "coil": "デュアルコイル",
+   "alias": "Riata ICD リード"
   },
   {
    "id": "ABT-ICD-FK-1581",
@@ -19951,7 +19965,7 @@
    "cond": "平行",
    "steroid": "有",
    "model": "1581",
-   "name": "Riata ICD リード",
+   "name": "Riata™",
    "site": "V",
    "intro": "8F",
    "fixation": "スクリュー",
@@ -19969,7 +19983,8 @@
    "period": "05年10月〜",
    "odmm": "2.63",
    "odfr": "7.6",
-   "coil": "デュアルコイル"
+   "coil": "デュアルコイル",
+   "alias": "Riata ICD リード"
   },
   {
    "id": "ABT-ICD-FK-1582",
@@ -19982,7 +19997,7 @@
    "cond": "平行",
    "steroid": "有",
    "model": "1582",
-   "name": "Riata ICD リード",
+   "name": "Riata™",
    "site": "V Single",
    "intro": "8F",
    "fixation": "スクリュー",
@@ -20000,7 +20015,8 @@
    "period": "05年10月〜",
    "odmm": "2.67",
    "odfr": "7.6",
-   "coil": "シングルコイル"
+   "coil": "シングルコイル",
+   "alias": "Riata ICD リード"
   },
   {
    "id": "ABT-ICD-FK-1560",
@@ -20013,7 +20029,7 @@
    "cond": "平行",
    "steroid": "有",
    "model": "1560",
-   "name": "Riata ICD リード",
+   "name": "Riata™",
    "site": "V",
    "intro": "8F",
    "fixation": "タイン",
@@ -20031,7 +20047,8 @@
    "period": "05年10月〜",
    "odmm": "2.67",
    "odfr": "7.8",
-   "coil": "デュアルコイル"
+   "coil": "デュアルコイル",
+   "alias": "Riata ICD リード"
   },
   {
    "id": "ABT-ICD-FK-1561",
@@ -20044,7 +20061,7 @@
    "cond": "平行",
    "steroid": "有",
    "model": "1561",
-   "name": "Riata ICD リード",
+   "name": "Riata™",
    "site": "V",
    "intro": "8F",
    "fixation": "タイン",
@@ -20062,7 +20079,8 @@
    "period": "05年10月〜",
    "odmm": "2.67",
    "odfr": "7.8",
-   "coil": "デュアルコイル"
+   "coil": "デュアルコイル",
+   "alias": "Riata ICD リード"
   },
   {
    "id": "ABT-ICD-FK-1590",
@@ -20075,7 +20093,7 @@
    "cond": "平行",
    "steroid": "有",
    "model": "1590",
-   "name": "Riata ICD リード",
+   "name": "Riata™",
    "site": "V",
    "intro": "8F",
    "fixation": "スクリュー",
@@ -20093,7 +20111,8 @@
    "period": "05年10月〜",
    "odmm": "2.67",
    "odfr": "7.6",
-   "coil": "デュアルコイル"
+   "coil": "デュアルコイル",
+   "alias": "Riata ICD リード"
   },
   {
    "id": "ABT-ICD-FK-1591",
@@ -20106,7 +20125,7 @@
    "cond": "平行",
    "steroid": "有",
    "model": "1591",
-   "name": "Riata ICD リード",
+   "name": "Riata™",
    "site": "V",
    "intro": "8F",
    "fixation": "スクリュー",
@@ -20124,7 +20143,8 @@
    "period": "05年10月〜",
    "odmm": "2.67",
    "odfr": "7.6",
-   "coil": "デュアルコイル"
+   "coil": "デュアルコイル",
+   "alias": "Riata ICD リード"
   },
   {
    "id": "ABT-ICD-FK-7070",
@@ -20137,7 +20157,7 @@
    "cond": "平行",
    "steroid": "有",
    "model": "7070",
-   "name": "Riata ST Optim DF-1デュアルコイル",
+   "name": "Riata™ ST Optim（DF-1, dual coil）",
    "site": "V",
    "intro": "7F",
    "fixation": "タイン",
@@ -20155,7 +20175,8 @@
    "period": "08年1月〜",
    "odmm": "2.34",
    "odfr": "6.8",
-   "coil": "デュアルコイル"
+   "coil": "デュアルコイル",
+   "alias": "Riata ST Optim DF-1デュアルコイル"
   },
   {
    "id": "ABT-ICD-FK-7071",
@@ -20168,7 +20189,7 @@
    "cond": "平行",
    "steroid": "有",
    "model": "7071",
-   "name": "Riata ST Optim DF-1デュアルコイル",
+   "name": "Riata™ ST Optim（DF-1, dual coil）",
    "site": "V",
    "intro": "7F",
    "fixation": "タイン",
@@ -20186,7 +20207,8 @@
    "period": "08年1月〜",
    "odmm": "2.34",
    "odfr": "6.8",
-   "coil": "デュアルコイル"
+   "coil": "デュアルコイル",
+   "alias": "Riata ST Optim DF-1デュアルコイル"
   },
   {
    "id": "ABT-ICD-FK-7020",
@@ -20199,7 +20221,7 @@
    "cond": "平行",
    "steroid": "有",
    "model": "7020",
-   "name": "Riata ST Optim スクリューインリード",
+   "name": "Riata™ ST Optim（screw-in）",
    "site": "V",
    "intro": "7F",
    "fixation": "スクリュー",
@@ -20217,7 +20239,8 @@
    "period": "08年1月〜",
    "odmm": "2.34",
    "odfr": "6.8",
-   "coil": "デュアルコイル"
+   "coil": "デュアルコイル",
+   "alias": "Riata ST Optim スクリューインリード"
   },
   {
    "id": "ABT-ICD-FK-7021",
@@ -20230,7 +20253,7 @@
    "cond": "平行",
    "steroid": "有",
    "model": "7021",
-   "name": "Riata ST Optim スクリューインリード",
+   "name": "Riata™ ST Optim（screw-in）",
    "site": "V",
    "intro": "7F",
    "fixation": "スクリュー",
@@ -20248,7 +20271,8 @@
    "period": "08年1月〜",
    "odmm": "2.34",
    "odfr": "6.9",
-   "coil": "デュアルコイル"
+   "coil": "デュアルコイル",
+   "alias": "Riata ST Optim スクリューインリード"
   },
   {
    "id": "ABT-ICD-FK-7022",
@@ -20261,7 +20285,7 @@
    "cond": "平行",
    "steroid": "有",
    "model": "7022",
-   "name": "Riata ST Optim スクリューインリード",
+   "name": "Riata™ ST Optim（screw-in）",
    "site": "V Single",
    "intro": "7F",
    "fixation": "スクリュー",
@@ -20279,7 +20303,8 @@
    "period": "08年1月〜",
    "odmm": "2.34",
    "odfr": "6.8",
-   "coil": "シングルコイル"
+   "coil": "シングルコイル",
+   "alias": "Riata ST Optim スクリューインリード"
   },
   {
    "id": "ABT-ICD-FK-7030",
@@ -20292,7 +20317,7 @@
    "cond": "平行",
    "steroid": "有",
    "model": "7030",
-   "name": "Riata ST Optim スクリューインリード",
+   "name": "Riata™ ST Optim（screw-in）",
    "site": "V",
    "intro": "7F",
    "fixation": "スクリュー",
@@ -20310,7 +20335,8 @@
    "period": "08年1月〜",
    "odmm": "2.34",
    "odfr": "6.9",
-   "coil": "デュアルコイル"
+   "coil": "デュアルコイル",
+   "alias": "Riata ST Optim スクリューインリード"
   },
   {
    "id": "ABT-ICD-FK-7031",
@@ -20323,7 +20349,7 @@
    "cond": "平行",
    "steroid": "有",
    "model": "7031",
-   "name": "Riata ST Optim スクリューインリード",
+   "name": "Riata™ ST Optim（screw-in）",
    "site": "V",
    "intro": "7F",
    "fixation": "スクリュー",
@@ -20341,7 +20367,8 @@
    "period": "08年1月〜",
    "odmm": "2.34",
    "odfr": "6.9",
-   "coil": "デュアルコイル"
+   "coil": "デュアルコイル",
+   "alias": "Riata ST Optim スクリューインリード"
   },
   {
    "id": "ABT-ICD-FK-7170_7171",
@@ -20354,7 +20381,7 @@
    "cond": "平行",
    "steroid": "有",
    "model": "7170/7171",
-   "name": "Durata ICD タインリード",
+   "name": "Durata™（tined）",
    "site": "V",
    "intro": "7F",
    "fixation": "タイン",
@@ -20372,7 +20399,8 @@
    "period": "08年1月〜",
    "odmm": "2.34",
    "odfr": "6.8",
-   "coil": "デュアルコイル"
+   "coil": "デュアルコイル",
+   "alias": "Durata ICD タインリード"
   },
   {
    "id": "ABT-ICD-FK-7120_7121",
@@ -20385,7 +20413,7 @@
    "cond": "平行",
    "steroid": "有",
    "model": "7120/7121",
-   "name": "Durata ICD スクリューインリード",
+   "name": "Durata™（screw-in）",
    "site": "V",
    "intro": "7F",
    "fixation": "スクリュー",
@@ -20403,7 +20431,8 @@
    "period": "08年1月〜",
    "odmm": "2.34",
    "odfr": "6.8",
-   "coil": "デュアルコイル"
+   "coil": "デュアルコイル",
+   "alias": "Durata ICD スクリューインリード"
   },
   {
    "id": "ABT-ICD-FK-7122",
@@ -20416,7 +20445,7 @@
    "cond": "平行",
    "steroid": "有",
    "model": "7122",
-   "name": "Durata ICD シングルコイル",
+   "name": "Durata™（single coil）",
    "site": "V Single",
    "intro": "7F",
    "fixation": "スクリュー",
@@ -20434,7 +20463,8 @@
    "period": "08年1月〜",
    "odmm": "2.34",
    "odfr": "6.8",
-   "coil": "シングルコイル"
+   "coil": "シングルコイル",
+   "alias": "Durata ICD シングルコイル"
   },
   {
    "id": "ABT-ICD-FK-7130_7131",
@@ -20447,7 +20477,7 @@
    "cond": "平行",
    "steroid": "有",
    "model": "7130/7131",
-   "name": "Durata ICD スクリューインリード",
+   "name": "Durata™（screw-in）",
    "site": "V",
    "intro": "7F",
    "fixation": "スクリュー",
@@ -20465,7 +20495,8 @@
    "period": "08年1月〜",
    "odmm": "2.34",
    "odfr": "6.8",
-   "coil": "デュアルコイル"
+   "coil": "デュアルコイル",
+   "alias": "Durata ICD スクリューインリード"
   },
   {
    "id": "ABT-ICD-FK-7170Q_7171Q",
@@ -20478,7 +20509,7 @@
    "cond": "平行",
    "steroid": "有",
    "model": "7170Q/7171Q",
-   "name": "Durata ICD タインドインリード",
+   "name": "Durata™（tined）",
    "site": "V",
    "intro": "7F",
    "fixation": "タイン",
@@ -20496,7 +20527,8 @@
    "period": "08年1月〜12",
    "odmm": "2.34",
    "odfr": "6.9",
-   "coil": "デュアルコイル"
+   "coil": "デュアルコイル",
+   "alias": "Durata ICD タインドインリード"
   },
   {
    "id": "ABT-ICD-FK-7120Q_7121Q",
@@ -20509,7 +20541,7 @@
    "cond": "平行",
    "steroid": "有",
    "model": "7120Q/7121Q",
-   "name": "Durata ICD スクリューインリード",
+   "name": "Durata™（screw-in）",
    "site": "V",
    "intro": "7F",
    "fixation": "スクリュー",
@@ -20527,7 +20559,8 @@
    "period": "10年5月〜",
    "odmm": "2.26",
    "odfr": "6.8",
-   "coil": "デュアルコイル"
+   "coil": "デュアルコイル",
+   "alias": "Durata ICD スクリューインリード"
   },
   {
    "id": "ABT-ICD-FK-7122Q",
@@ -20540,7 +20573,7 @@
    "cond": "平行",
    "steroid": "有",
    "model": "7122Q",
-   "name": "Durata ICD シングルコイル",
+   "name": "Durata™（single coil）",
    "site": "V Single",
    "intro": "7F",
    "fixation": "スクリュー",
@@ -20558,7 +20591,8 @@
    "period": "10年5月〜",
    "odmm": "2.26",
    "odfr": "6.8",
-   "coil": "シングルコイル"
+   "coil": "シングルコイル",
+   "alias": "Durata ICD シングルコイル"
   },
   {
    "id": "ABT-ICD-FK-LDA220",
@@ -20571,7 +20605,7 @@
    "cond": "平行",
    "steroid": "有",
    "model": "LDA220",
-   "name": "Optisure デュアルコイルスクリューインリード",
+   "name": "Optisure™（dual coil, screw-in）",
    "site": "V",
    "intro": "8F",
    "fixation": "スクリュー",
@@ -20580,7 +20614,8 @@
    "ccoat": "×",
    "insul": "Optim/Si",
    "connector": "IS-1/DF-1",
-   "coil": "デュアルコイル"
+   "coil": "デュアルコイル",
+   "alias": "Optisure デュアルコイルスクリューインリード"
   },
   {
    "id": "ABT-ICD-FK-LDA230",
@@ -20593,7 +20628,7 @@
    "cond": "平行",
    "steroid": "有",
    "model": "LDA230",
-   "name": "Optisure デュアルコイルスクリューインリード",
+   "name": "Optisure™（dual coil, screw-in）",
    "site": "V",
    "intro": "8F",
    "fixation": "スクリュー",
@@ -20602,7 +20637,8 @@
    "ccoat": "×",
    "insul": "Optim/Si",
    "connector": "IS-1/DF-1",
-   "coil": "デュアルコイル"
+   "coil": "デュアルコイル",
+   "alias": "Optisure デュアルコイルスクリューインリード"
   },
   {
    "id": "ABT-ICD-FK-LDA220Q",
@@ -20615,7 +20651,7 @@
    "cond": "平行",
    "steroid": "有",
    "model": "LDA220Q",
-   "name": "Optisure デュアルコイルスクリューインリード",
+   "name": "Optisure™（dual coil, screw-in）",
    "site": "V",
    "intro": "8F",
    "fixation": "スクリュー",
@@ -20626,7 +20662,8 @@
    "insul": "Optim/Si",
    "connector": "DF4-LLHH",
    "odfr": "7.3",
-   "coil": "デュアルコイル"
+   "coil": "デュアルコイル",
+   "alias": "Optisure デュアルコイルスクリューインリード"
   },
   {
    "id": "ABT-ICD-FK-LDA230Q",
@@ -20639,7 +20676,7 @@
    "cond": "平行",
    "steroid": "有",
    "model": "LDA230Q",
-   "name": "Optisure デュアルコイルスクリューインリード",
+   "name": "Optisure™（dual coil, screw-in）",
    "site": "V",
    "intro": "8F",
    "fixation": "スクリュー",
@@ -20648,7 +20685,8 @@
    "ccoat": "×",
    "insul": "Optim/Si",
    "connector": "DF4-LLHH",
-   "coil": "デュアルコイル"
+   "coil": "デュアルコイル",
+   "alias": "Optisure デュアルコイルスクリューインリード"
   },
   {
    "id": "ABT-ICD-FK-LDP220",
@@ -20661,7 +20699,7 @@
    "cond": "平行",
    "steroid": "有",
    "model": "LDP220",
-   "name": "Optisure デュアルタインド",
+   "name": "Optisure™（dual coil, tined）",
    "site": "V",
    "intro": "8F",
    "fixation": "タイン",
@@ -20670,7 +20708,8 @@
    "ccoat": "×",
    "insul": "Optim/Si",
    "connector": "IS-1/DF-1",
-   "coil": "デュアルコイル"
+   "coil": "デュアルコイル",
+   "alias": "Optisure デュアルタインド"
   },
   {
    "id": "ABT-ICD-FK-LDP230",
@@ -20683,7 +20722,7 @@
    "cond": "平行",
    "steroid": "有",
    "model": "LDP230",
-   "name": "Optisure デュアルタインド",
+   "name": "Optisure™（dual coil, tined）",
    "site": "V",
    "intro": "8F",
    "fixation": "タイン",
@@ -20692,7 +20731,8 @@
    "ccoat": "×",
    "insul": "Optim/Si",
    "connector": "IS-1/DF-1",
-   "coil": "デュアルコイル"
+   "coil": "デュアルコイル",
+   "alias": "Optisure デュアルタインド"
   },
   {
    "id": "ABT-ICD-FK-LDP220Q",
@@ -20705,7 +20745,7 @@
    "cond": "平行",
    "steroid": "有",
    "model": "LDP220Q",
-   "name": "Optisure デュアルタインド",
+   "name": "Optisure™（dual coil, tined）",
    "site": "V",
    "intro": "8F",
    "fixation": "タイン",
@@ -20714,7 +20754,8 @@
    "ccoat": "×",
    "insul": "Optim/Si",
    "connector": "DF4-LLHH",
-   "coil": "デュアルコイル"
+   "coil": "デュアルコイル",
+   "alias": "Optisure デュアルタインド"
   },
   {
    "id": "ABT-ICD-FK-LDP230Q",
@@ -20727,7 +20768,7 @@
    "cond": "平行",
    "steroid": "有",
    "model": "LDP230Q",
-   "name": "Optisure デュアルタインド",
+   "name": "Optisure™（dual coil, tined）",
    "site": "V",
    "intro": "8F",
    "fixation": "タイン",
@@ -20736,7 +20777,8 @@
    "ccoat": "×",
    "insul": "Optim/Si",
    "connector": "DF4-LLHH",
-   "coil": "デュアルコイル"
+   "coil": "デュアルコイル",
+   "alias": "Optisure デュアルタインド"
   },
   {
    "id": "ABT-ICD-FK-LDA210",
@@ -20749,7 +20791,7 @@
    "cond": "平行",
    "steroid": "有",
    "model": "LDA210",
-   "name": "Optisureシングルスクリューイン",
+   "name": "Optisure™（single coil, screw-in）",
    "site": "V Single",
    "intro": "8F",
    "fixation": "スクリュー",
@@ -20758,7 +20800,8 @@
    "ccoat": "×",
    "insul": "Optim/Si",
    "connector": "IS-1/DF-1",
-   "coil": "シングルコイル"
+   "coil": "シングルコイル",
+   "alias": "Optisureシングルスクリューイン"
   },
   {
    "id": "ABT-ICD-FK-LDA210Q",
@@ -20771,7 +20814,7 @@
    "cond": "平行",
    "steroid": "有",
    "model": "LDA210Q",
-   "name": "Optisureシングルスクリューイン",
+   "name": "Optisure™（single coil, screw-in）",
    "site": "V Single",
    "intro": "8F",
    "fixation": "スクリュー",
@@ -20782,7 +20825,8 @@
    "insul": "Optim/Si",
    "connector": "DF4-LLHO",
    "odfr": "7.3",
-   "coil": "シングルコイル"
+   "coil": "シングルコイル",
+   "alias": "Optisureシングルスクリューイン"
   },
   {
    "id": "ABT-ICD-FK-LDP210Q",
@@ -20795,7 +20839,7 @@
    "cond": "平行",
    "steroid": "有",
    "model": "LDP210Q",
-   "name": "Optisureシングルタインド",
+   "name": "Optisure™（single coil, tined）",
    "site": "V Single",
    "intro": "8F",
    "fixation": "タイン",
@@ -20804,7 +20848,8 @@
    "ccoat": "×",
    "insul": "Optim/Si",
    "connector": "DF4-LLHO",
-   "coil": "シングルコイル"
+   "coil": "シングルコイル",
+   "alias": "Optisureシングルタインド"
   },
   {
    "id": "ABT-ICD-NK-7120_7121",
@@ -20817,7 +20862,7 @@
    "cond": "平行",
    "steroid": "有",
    "model": "7120/7121",
-   "name": "Durata ICD スクリューインリード",
+   "name": "Durata™（screw-in）",
    "site": "V",
    "intro": "7F",
    "fixation": "スクリュー",
@@ -20835,7 +20880,8 @@
    "period": "12年3月〜",
    "odmm": "2.34",
    "odfr": "6.9",
-   "coil": "デュアルコイル"
+   "coil": "デュアルコイル",
+   "alias": "Durata ICD スクリューインリード"
   },
   {
    "id": "ABT-ICD-NK-7120Q_7122Q",
@@ -20848,7 +20894,7 @@
    "cond": "平行",
    "steroid": "有",
    "model": "7120Q/7122Q",
-   "name": "Durata ICD スクリューインリード",
+   "name": "Durata™（screw-in）",
    "site": "V",
    "intro": "7F",
    "fixation": "スクリュー",
@@ -20866,7 +20912,8 @@
    "period": "12年3月〜",
    "odmm": "2.26",
    "odfr": "6.8",
-   "coil": "デュアルコイル"
+   "coil": "デュアルコイル",
+   "alias": "Durata ICD スクリューインリード"
   },
   {
    "id": "ABT-ICD-NK-7122",
@@ -20879,7 +20926,7 @@
    "cond": "平行",
    "steroid": "有",
    "model": "7122",
-   "name": "Durata ICD シングルコイル",
+   "name": "Durata™（single coil）",
    "site": "V Single",
    "intro": "7F",
    "fixation": "スクリュー",
@@ -20897,7 +20944,8 @@
    "period": "12年3月〜",
    "odmm": "2.34",
    "odfr": "6.9",
-   "coil": "シングルコイル"
+   "coil": "シングルコイル",
+   "alias": "Durata ICD シングルコイル"
   },
   {
    "id": "ABT-ICD-NK-7122Q",
@@ -20910,7 +20958,7 @@
    "cond": "平行",
    "steroid": "有",
    "model": "7122Q",
-   "name": "Durata ICD シングルコイル",
+   "name": "Durata™（single coil）",
    "site": "V Single",
    "intro": "7F",
    "fixation": "スクリュー",
@@ -20928,7 +20976,8 @@
    "period": "12年3月〜",
    "odmm": "2.26",
    "odfr": "6.8",
-   "coil": "シングルコイル"
+   "coil": "シングルコイル",
+   "alias": "Durata ICD シングルコイル"
   },
   {
    "id": "ABT-ICD-NK-7170",
@@ -20941,7 +20990,7 @@
    "cond": "平行",
    "steroid": "有",
    "model": "7170",
-   "name": "Durata ICD タインリード",
+   "name": "Durata™（tined）",
    "site": "V",
    "intro": "7F",
    "fixation": "タイン",
@@ -20959,7 +21008,8 @@
    "period": "12年3月〜",
    "odmm": "2.34",
    "odfr": "6.9",
-   "coil": "デュアルコイル"
+   "coil": "デュアルコイル",
+   "alias": "Durata ICD タインリード"
   },
   {
    "id": "ABT-ICD-NK-7170Q_7171Q",
@@ -20972,7 +21022,7 @@
    "cond": "平行",
    "steroid": "有",
    "model": "7170Q/7171Q",
-   "name": "Durata ICD スクリューインリード",
+   "name": "Durata™（screw-in）",
    "site": "V",
    "intro": "7F",
    "fixation": "タイン",
@@ -20990,7 +21040,8 @@
    "period": "12年3月〜",
    "odmm": "2.26",
    "odfr": "6.8",
-   "coil": "デュアルコイル"
+   "coil": "デュアルコイル",
+   "alias": "Durata ICD スクリューインリード"
   },
   {
    "id": "BIO-CS-Corox-OTW-85-BP",
@@ -20999,7 +21050,7 @@
    "dealer": "バイオトロニックジャパン(株)",
    "cat": "LVリード",
    "model": "Corox OTW 85-BP",
-   "name": "コロックス OTW BP",
+   "name": "Corox OTW BP",
    "polarity": "双極",
    "site": "冠静脈",
    "intro": "7F",
@@ -21017,7 +21068,7 @@
    "period": "08年9月〜",
    "odmm": "1.8",
    "odfr": "5.4",
-   "en": "Corox OTW BP"
+   "alias": "コロックス OTW BP"
   },
   {
    "id": "BIO-CS-Corox-OTW-S-85-BP",
@@ -21026,7 +21077,7 @@
    "dealer": "バイオトロニックジャパン(株)",
    "cat": "LVリード",
    "model": "Corox OTW-S 85-BP",
-   "name": "コロックス OTW BP",
+   "name": "Corox OTW BP",
    "polarity": "双極",
    "site": "冠静脈",
    "intro": "7F",
@@ -21044,7 +21095,7 @@
    "period": "08年9月〜",
    "odmm": "1.8",
    "odfr": "5.4",
-   "en": "Corox OTW BP"
+   "alias": "コロックス OTW BP"
   },
   {
    "id": "BIO-CS-Corox-ProMRI-OTW-85-BP",
@@ -21141,7 +21192,7 @@
    "dealer": "ボストン・サイエンティフィックジャパン(株)",
    "cat": "LVリード",
    "model": "4591",
-   "name": "アキュイティ スパイラル",
+   "name": "ACUITY™ Spiral",
    "polarity": "単極",
    "site": "冠静脈",
    "intro": "8F",
@@ -21158,7 +21209,7 @@
    "period": "10年8月〜",
    "odmm": "1.5",
    "odfr": "4.5",
-   "en": "ACUITY™ Spiral"
+   "alias": "アキュイティ スパイラル"
   },
   {
    "id": "BSX-CS-4592",
@@ -21167,7 +21218,7 @@
    "dealer": "ボストン・サイエンティフィックジャパン(株)",
    "cat": "LVリード",
    "model": "4592",
-   "name": "アキュイティ スパイラル",
+   "name": "ACUITY™ Spiral",
    "polarity": "単極",
    "site": "冠静脈",
    "intro": "8F",
@@ -21184,7 +21235,7 @@
    "period": "10年8月〜",
    "odmm": "1.5",
    "odfr": "4.5",
-   "en": "ACUITY™ Spiral"
+   "alias": "アキュイティ スパイラル"
   },
   {
    "id": "BSX-CS-4593",
@@ -21193,7 +21244,7 @@
    "dealer": "ボストン・サイエンティフィックジャパン(株)",
    "cat": "LVリード",
    "model": "4593",
-   "name": "アキュイティ スパイラル",
+   "name": "ACUITY™ Spiral",
    "polarity": "単極",
    "site": "冠静脈",
    "intro": "8F",
@@ -21210,7 +21261,7 @@
    "period": "10年8月〜",
    "odmm": "1.5",
    "odfr": "4.5",
-   "en": "ACUITY™ Spiral"
+   "alias": "アキュイティ スパイラル"
   },
   {
    "id": "BSX-CS-4671",
@@ -21351,7 +21402,7 @@
    "dealer": "ボストン・サイエンティフィックジャパン(株)",
    "cat": "LVリード",
    "model": "4542",
-   "name": "イージートラック 2 リード",
+   "name": "EASYTRAK™ 2",
    "polarity": "双極",
    "site": "冠静脈",
    "intro": "8F",
@@ -21369,7 +21420,7 @@
    "period": "06年10月〜",
    "odmm": "2.08",
    "odfr": "6.3",
-   "en": "EASYTRAK™ 2"
+   "alias": "イージートラック 2 リード"
   },
   {
    "id": "GUI-CS-4543",
@@ -21378,7 +21429,7 @@
    "dealer": "ボストン・サイエンティフィックジャパン(株)",
    "cat": "LVリード",
    "model": "4543",
-   "name": "イージートラック 2 リード",
+   "name": "EASYTRAK™ 2",
    "polarity": "双極",
    "site": "冠静脈",
    "intro": "8F",
@@ -21396,7 +21447,7 @@
    "period": "06年10月〜",
    "odmm": "2.08",
    "odfr": "6.3",
-   "en": "EASYTRAK™ 2"
+   "alias": "イージートラック 2 リード"
   },
   {
    "id": "GUI-CS-4544",
@@ -21405,7 +21456,7 @@
    "dealer": "ボストン・サイエンティフィックジャパン(株)",
    "cat": "LVリード",
    "model": "4544",
-   "name": "イージートラック 2 リード",
+   "name": "EASYTRAK™ 2",
    "polarity": "双極",
    "site": "冠静脈",
    "intro": "8F",
@@ -21423,7 +21474,7 @@
    "period": "06年10月〜",
    "odmm": "2.08",
    "odfr": "6.3",
-   "en": "EASYTRAK™ 2"
+   "alias": "イージートラック 2 リード"
   },
   {
    "id": "GUI-CS-4554",
@@ -21432,7 +21483,7 @@
    "dealer": "ボストン・サイエンティフィックジャパン(株)",
    "cat": "LVリード",
    "model": "4554",
-   "name": "アキュイティ スティーラブル",
+   "name": "ACUITY™ Steerable",
    "polarity": "双極",
    "site": "冠静脈",
    "intro": "8F",
@@ -21450,7 +21501,7 @@
    "period": "06年10月〜",
    "odmm": "2.08",
    "odfr": "6.3",
-   "en": "ACUITY™ Steerable"
+   "alias": "アキュイティ スティーラブル"
   },
   {
    "id": "GUI-CS-4555",
@@ -21459,7 +21510,7 @@
    "dealer": "ボストン・サイエンティフィックジャパン(株)",
    "cat": "LVリード",
    "model": "4555",
-   "name": "アキュイティ スティーラブル",
+   "name": "ACUITY™ Steerable",
    "polarity": "双極",
    "site": "冠静脈",
    "intro": "8F",
@@ -21477,7 +21528,7 @@
    "period": "06年10月〜",
    "odmm": "2.08",
    "odfr": "6.3",
-   "en": "ACUITY™ Steerable"
+   "alias": "アキュイティ スティーラブル"
   },
   {
    "id": "GUI-CS-4591",
@@ -21486,7 +21537,7 @@
    "dealer": "ボストン・サイエンティフィックジャパン(株)",
    "cat": "LVリード",
    "model": "4591",
-   "name": "アキュイティ スパイラル",
+   "name": "ACUITY™ Spiral",
    "polarity": "単極",
    "site": "冠静脈",
    "intro": "8F",
@@ -21503,7 +21554,7 @@
    "period": "10年8月〜",
    "odmm": "1.5",
    "odfr": "4.5",
-   "en": "ACUITY™ Spiral"
+   "alias": "アキュイティ スパイラル"
   },
   {
    "id": "GUI-CS-4592",
@@ -21512,7 +21563,7 @@
    "dealer": "ボストン・サイエンティフィックジャパン(株)",
    "cat": "LVリード",
    "model": "4592",
-   "name": "アキュイティ スパイラル",
+   "name": "ACUITY™ Spiral",
    "polarity": "単極",
    "site": "冠静脈",
    "intro": "8F",
@@ -21529,7 +21580,7 @@
    "period": "10年8月〜",
    "odmm": "1.5",
    "odfr": "4.5",
-   "en": "ACUITY™ Spiral"
+   "alias": "アキュイティ スパイラル"
   },
   {
    "id": "GUI-CS-4593",
@@ -21538,7 +21589,7 @@
    "dealer": "ボストン・サイエンティフィックジャパン(株)",
    "cat": "LVリード",
    "model": "4593",
-   "name": "アキュイティ スパイラル",
+   "name": "ACUITY™ Spiral",
    "polarity": "単極",
    "site": "冠静脈",
    "intro": "8F",
@@ -21555,7 +21606,7 @@
    "period": "10年8月〜",
    "odmm": "1.5",
    "odfr": "4.5",
-   "en": "ACUITY™ Spiral"
+   "alias": "アキュイティ スパイラル"
   },
   {
    "id": "MDT-CS-2187",
@@ -21564,7 +21615,7 @@
    "dealer": "日本メドトロニック(株)",
    "cat": "LVリード",
    "model": "2187",
-   "name": "Attain LV リード",
+   "name": "Attain™",
    "polarity": "単極",
    "site": "冠静脈分岐",
    "intro": "7F",
@@ -21580,7 +21631,7 @@
    "period": "03年5月〜",
    "odmm": "2",
    "odfr": "6.0",
-   "en": "Attain™"
+   "alias": "Attain LV リード"
   },
   {
    "id": "MDT-CS-4193",
@@ -21589,7 +21640,7 @@
    "dealer": "日本メドトロニック(株)",
    "cat": "LVリード",
    "model": "4193",
-   "name": "Attain OTW リード",
+   "name": "Attain™ OTW",
    "polarity": "単極",
    "site": "冠静脈分岐",
    "intro": "7F",
@@ -21605,7 +21656,7 @@
    "period": "05年8月〜",
    "odmm": "1.8",
    "odfr": "5.4",
-   "en": "Attain™ OTW"
+   "alias": "Attain OTW リード"
   },
   {
    "id": "MDT-CS-4194",
@@ -21614,7 +21665,7 @@
    "dealer": "日本メドトロニック(株)",
    "cat": "LVリード",
    "model": "4194",
-   "name": "Attain OTW Bipolar リード",
+   "name": "Attain™ OTW Bipolar",
    "polarity": "双極",
    "site": "冠静脈分岐",
    "intro": "7F",
@@ -21631,7 +21682,7 @@
    "period": "07年8月〜",
    "odmm": "2.1",
    "odfr": "6.3",
-   "en": "Attain™ OTW Bipolar"
+   "alias": "Attain OTW Bipolar リード"
   },
   {
    "id": "MDT-CS-4195",
@@ -21640,7 +21691,7 @@
    "dealer": "日本メドトロニック(株)",
    "cat": "LVリード",
    "model": "4195",
-   "name": "Attain StarFix リード",
+   "name": "Attain StarFix™",
    "polarity": "単極",
    "site": "冠静脈分岐",
    "intro": "7F",
@@ -21657,7 +21708,7 @@
    "period": "09年4月〜",
    "odmm": "1.8",
    "odfr": "5.4",
-   "en": "Attain StarFix™"
+   "alias": "Attain StarFix リード"
   },
   {
    "id": "MDT-CS-4196",
@@ -21666,7 +21717,7 @@
    "dealer": "日本メドトロニック(株)",
    "cat": "LVリード",
    "model": "4196",
-   "name": "Attain Ability リード",
+   "name": "Attain Ability™",
    "polarity": "双極",
    "site": "冠静脈分岐",
    "intro": "7F",
@@ -21683,7 +21734,7 @@
    "period": "08年12月〜",
    "odmm": "2.1",
    "odfr": "6.3",
-   "en": "Attain Ability™"
+   "alias": "Attain Ability リード"
   },
   {
    "id": "MDT-CS-4296",
@@ -21692,7 +21743,7 @@
    "dealer": "日本メドトロニック(株)",
    "cat": "LVリード",
    "model": "4296",
-   "name": "Attain Ability Plusリード",
+   "name": "Attain Ability™ Plus",
    "polarity": "双極",
    "site": "冠静脈分岐",
    "intro": "7F",
@@ -21710,7 +21761,7 @@
    "period": "10年11月〜",
    "odmm": "1.5",
    "odfr": "4.5",
-   "en": "Attain Ability™ Plus"
+   "alias": "Attain Ability Plusリード"
   },
   {
    "id": "MDT-CS-4396",
@@ -21719,7 +21770,7 @@
    "dealer": "日本メドトロニック(株)",
    "cat": "LVリード",
    "model": "4396",
-   "name": "Attain Ability Straightリード",
+   "name": "Attain Ability™ Straight",
    "polarity": "双極",
    "site": "冠静脈分岐",
    "intro": "7F",
@@ -21737,7 +21788,7 @@
    "period": "10年12月〜",
    "odmm": "1.5",
    "odfr": "4.5",
-   "en": "Attain Ability™ Straight"
+   "alias": "Attain Ability Straightリード"
   },
   {
    "id": "MDT-CS-6992",
@@ -21863,7 +21914,7 @@
    "dealer": "日本ライフライン(株)",
    "cat": "LVリード",
    "model": "BW28D",
-   "name": "Situs 2 OTW リード",
+   "name": "Situs 2 OTW",
    "polarity": "双極",
    "site": "冠静脈",
    "intro": "7F",
@@ -21879,7 +21930,8 @@
    "connector": "IS-1",
    "period": "11年5月〜",
    "odmm": "2",
-   "odfr": "6.0"
+   "odfr": "6.0",
+   "alias": "Situs 2 OTW リード"
   },
   {
    "id": "SOR-CS-CELERITY-3D-75",
@@ -21987,7 +22039,7 @@
    "dealer": "セント・ジュード・メディカル(株)／フクダ電子(株)",
    "cat": "LVリード",
    "model": "1056K",
-   "name": "クイックサイト",
+   "name": "QuickSite™",
    "polarity": "単極",
    "site": "冠静脈",
    "intro": "7F",
@@ -22004,7 +22056,7 @@
    "period": "07年7月〜",
    "odmm": "1.87",
    "odfr": "5.6",
-   "en": "QuickSite™"
+   "alias": "クイックサイト"
   },
   {
    "id": "ABT-CS-FK-1156T",
@@ -22014,7 +22066,7 @@
    "dealer": "セント・ジュード・メディカル(株)／フクダ電子(株)",
    "cat": "LVリード",
    "model": "1156T",
-   "name": "クイックフレックス",
+   "name": "QuickFlex™",
    "polarity": "双極",
    "site": "冠静脈",
    "intro": "7F",
@@ -22032,7 +22084,7 @@
    "period": "09年2月〜",
    "odmm": "1.85",
    "odfr": "5.6",
-   "en": "QuickFlex™"
+   "alias": "クイックフレックス"
   },
   {
    "id": "ABT-CS-FK-1158T",
@@ -22042,7 +22094,7 @@
    "dealer": "セント・ジュード・メディカル(株)／フクダ電子(株)",
    "cat": "LVリード",
    "model": "1158T",
-   "name": "クイックフレックス",
+   "name": "QuickFlex™",
    "polarity": "双極",
    "site": "冠静脈",
    "intro": "7F",
@@ -22060,7 +22112,7 @@
    "period": "09年2月〜",
    "odmm": "1.85",
    "odfr": "5.6",
-   "en": "QuickFlex™"
+   "alias": "クイックフレックス"
   },
   {
    "id": "ABT-CS-FK-1256T",
@@ -22070,7 +22122,7 @@
    "dealer": "セント・ジュード・メディカル(株)／フクダ電子(株)",
    "cat": "LVリード",
    "model": "1256T",
-   "name": "クイックフレックスマイクロ",
+   "name": "QuickFlex™ μ",
    "polarity": "双極",
    "site": "冠静脈",
    "intro": "5F",
@@ -22088,7 +22140,7 @@
    "period": "10年12月〜",
    "odmm": "1.5",
    "odfr": "4.5",
-   "en": "QuickFlex™ μ"
+   "alias": "クイックフレックスマイクロ"
   },
   {
    "id": "ABT-CS-FK-1458Q",
@@ -22098,7 +22150,7 @@
    "dealer": "セント・ジュード・メディカル(株)／フクダ電子(株)",
    "cat": "LVリード",
    "model": "1458Q",
-   "name": "カルテット",
+   "name": "Quartet™",
    "polarity": "四極",
    "site": "冠静脈",
    "intro": "5F",
@@ -22112,7 +22164,7 @@
    "connector": "IS4-LLLL",
    "odmm": "1.7",
    "odfr": "5.1",
-   "en": "Quartet™"
+   "alias": "カルテット"
   },
   {
    "id": "ABT-CS-FK-1457Q",
@@ -22122,7 +22174,7 @@
    "dealer": "セント・ジュード・メディカル(株)／フクダ電子(株)",
    "cat": "LVリード",
    "model": "1457Q",
-   "name": "カルテット",
+   "name": "Quartet™",
    "polarity": "四極",
    "site": "冠静脈",
    "intro": "5F",
@@ -22136,7 +22188,7 @@
    "connector": "IS4-LLLL",
    "odmm": "1.7",
    "odfr": "5.1",
-   "en": "Quartet™"
+   "alias": "カルテット"
   },
   {
    "id": "ABT-CS-FK-1458Q-2",
@@ -22146,7 +22198,7 @@
    "dealer": "セント・ジュード・メディカル(株)／フクダ電子(株)",
    "cat": "LVリード",
    "model": "1458Q",
-   "name": "カルテット",
+   "name": "Quartet™",
    "polarity": "四極",
    "site": "冠静脈",
    "intro": "5F",
@@ -22160,7 +22212,7 @@
    "connector": "IS4-LLLL",
    "odmm": "1.7",
    "odfr": "5.1",
-   "en": "Quartet™"
+   "alias": "カルテット"
   },
   {
    "id": "ABT-CS-FK-1458QL",
@@ -22170,7 +22222,7 @@
    "dealer": "セント・ジュード・メディカル(株)／フクダ電子(株)",
    "cat": "LVリード",
    "model": "1458QL",
-   "name": "カルテット",
+   "name": "Quartet™",
    "polarity": "四極",
    "site": "冠静脈",
    "intro": "5F",
@@ -22184,7 +22236,7 @@
    "connector": "IS4-LLLL",
    "odmm": "1.7",
    "odfr": "5.1",
-   "en": "Quartet™"
+   "alias": "カルテット"
   },
   {
    "id": "ABT-CS-NK-1258T",
@@ -22194,7 +22246,7 @@
    "dealer": "セント・ジュード・メディカル(株)／日本光電工業(株)",
    "cat": "LVリード",
    "model": "1258T",
-   "name": "クイックフレックスマイクロJ",
+   "name": "QuickFlex™ μ J",
    "polarity": "双極",
    "site": "冠静脈",
    "intro": "5F",
@@ -22212,7 +22264,7 @@
    "period": "2012年3月",
    "odmm": "1.56",
    "odfr": "4.7",
-   "en": "QuickFlex™ μ（J型）"
+   "alias": "クイックフレックスマイクロJ"
   },
   {
    "id": "MDT-D-W2DR01",
@@ -22794,9 +22846,9 @@
    "maker": "Medtronic",
    "dealer": "日本メドトロニック(株)",
    "cat": "プログラマ",
-   "name": "CareLink プログラマ（Encore 2090／SmartSync）",
-   "en": "CareLink™ Programmer / CareLink SmartSync™",
-   "role": "デバイスと通信して設定変更・測定・記録の読み出しを行う。"
+   "name": "CareLink™ Programmer / CareLink SmartSync™",
+   "role": "デバイスと通信して設定変更・測定・記録の読み出しを行う。",
+   "alias": "CareLink プログラマ（Encore 2090／SmartSync）"
   },
   {
    "id": "GEAR-PRG-2",
@@ -22894,9 +22946,9 @@
    "maker": "Medtronic",
    "dealer": "日本メドトロニック(株)",
    "cat": "送信機",
-   "name": "MyCareLink Relay／スマートフォンアプリ",
-   "en": "MyCareLink Relay™",
-   "role": "設置型リレー機器またはスマートフォンアプリがデバイスと通信し、CareLinkへ送信する。"
+   "name": "MyCareLink Relay™",
+   "role": "設置型リレー機器またはスマートフォンアプリがデバイスと通信し、CareLinkへ送信する。",
+   "alias": "MyCareLink Relay／スマートフォンアプリ"
   },
   {
    "id": "GEAR-TX-2",
@@ -22904,9 +22956,9 @@
    "maker": "Abbott",
    "dealer": "アボットメディカルジャパン(同)",
    "cat": "送信機",
-   "name": "Merlin@home／myMerlinアプリ",
-   "en": "Merlin@home™ / myMerlin™",
-   "role": "設置型送信機またはスマートフォンアプリからMerlin.netへ送信する。"
+   "name": "Merlin@home™ / myMerlin™",
+   "role": "設置型送信機またはスマートフォンアプリからMerlin.netへ送信する。",
+   "alias": "Merlin@home／myMerlinアプリ"
   },
   {
    "id": "GEAR-TX-3",
@@ -22924,9 +22976,9 @@
    "maker": "Boston Scientific",
    "dealer": "ボストン・サイエンティフィックジャパン(株)",
    "cat": "送信機",
-   "name": "LATITUDE コミュニケータ",
-   "en": "LATITUDE™ Communicator",
-   "role": "設置型のコミュニケータがデバイスと通信し、LATITUDEへ送信する。"
+   "name": "LATITUDE™ Communicator",
+   "role": "設置型のコミュニケータがデバイスと通信し、LATITUDEへ送信する。",
+   "alias": "LATITUDE コミュニケータ"
   },
   {
    "id": "GEAR-TX-5",
@@ -22934,9 +22986,9 @@
    "maker": "MicroPort CRM",
    "dealer": "日本ライフライン(株)",
    "cat": "送信機",
-   "name": "スマートビューコネクト",
-   "en": "SmartView Connect™",
-   "role": "設置型の送信機がデバイスと通信し、SMARTVIEWへ送信する。"
+   "name": "SmartView Connect™",
+   "role": "設置型の送信機がデバイスと通信し、SMARTVIEWへ送信する。",
+   "alias": "スマートビューコネクト"
   },
   {
    "id": "GEAR-SH-1",
@@ -22944,9 +22996,9 @@
    "maker": "Medtronic",
    "dealer": "日本メドトロニック(株)",
    "cat": "デリバリーシース",
-   "name": "C315／C304 デリバリーシース",
-   "en": "SelectSite™ C315 / C304",
-   "role": "ルーメンレスリード（3830）を目標部位へ運ぶ。C315は固定形状、C304は可変形状。"
+   "name": "SelectSite™ C315 / C304",
+   "role": "ルーメンレスリード（3830）を目標部位へ運ぶ。C315は固定形状、C304は可変形状。",
+   "alias": "C315／C304 デリバリーシース"
   },
   {
    "id": "GEAR-SH-2",
@@ -23109,15 +23161,15 @@
    "maker": "Abbott",
    "dealer": "アボットメディカルジャパン(同)",
    "cat": "デリバリーシース",
-   "name": "CPS ロケーター 3D",
-   "en": "CPS Locator™ 3D Delivery Catheter",
+   "name": "CPS Locator™ 3D Delivery Catheter",
    "family": "CPS（Cardiac Positioning System）",
    "role": "ペーシングリードや除細動リードを目標部位へ導く単回使用のデリバリーカテーテル。遠位のカーブ形状が異なる複数のサイズがあり、解剖に合わせて選ぶ。左脚領域ペーシング（LBBAP）での使用実績があり、冠静脈洞からの左室リード留置にも用いる。止血弁を備え、遠位端はX線不透過。抜去時は専用スリッターでシースを切開する。",
    "idfr": "7F",
    "odfr": "9F",
    "leadfit": "6Fリードに適合（42cmカテーテルは58cm以上、45cmカテーテルは65cm以上のリード長を推奨）",
    "length": "42cm／45cm",
-   "gw": "0.035インチガイドワイヤ対応（ダイレータ）"
+   "gw": "0.035インチガイドワイヤ対応（ダイレータ）",
+   "alias": "CPS ロケーター 3D"
   },
   {
    "id": "GEAR-SH-4",
