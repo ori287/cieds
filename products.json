@@ -22312,7 +22312,8 @@
    "mri_cond": "傾斜磁場スルーレート ≤200T/m/s／最大空間勾配磁場 20T/m（2,000ガウス/cm）以下（要再確認）／SAR 全身 ≤2.0W/kg（1.5T）／≤4.0W/kg（3.0T）、頭部 ≤3.2W/kg／B1+rms 3.0Tでアイソセンタを第7頸椎より下に配置する場合、B1+RMSを表示できる装置で ≦2.8μT",
    "diag": "",
    "mri_group": "MDT-PM-DR",
-   "approval": ""
+   "approval": "23000BZX00027000",
+   "sales_name": "Medtronic Azure MRIシリーズ"
   },
   {
    "id": "ABT-D-PM2272",
@@ -22361,7 +22362,8 @@
    "mri_cond": "傾斜磁場スルーレート ≦200T/m/s／最大空間勾配磁場 30T/m／SAR 全身 ≦2.0W/kg／頭部 ≦3.2W/kg",
    "diag": "",
    "mri_group": "ABT-PM-C3B",
-   "approval": ""
+   "approval": "22700BZX00181000",
+   "sales_name": "アシュリティ MRI"
   },
   {
    "id": "BIO-D-AMVIA-SKY-DR",
@@ -22409,13 +22411,14 @@
    "mri_cond": "傾斜磁場スルーレート 200T/m/s以下（1軸）／最大空間勾配磁場 制限なし／SAR 頭部 ≦3.2W/kg、全身 ≦2.0W/kg（通常操作モード）",
    "diag": "",
    "mri_group": "BIO-PM4",
-   "approval": "30500BZX00070000"
+   "approval": "30500BZX00070000",
+   "sales_name": "アムヴィア Sky"
   },
   {
    "id": "MCP-D-TPM020C",
    "kind": "device",
    "maker": "MicroPort CRM",
-   "dealer": "日本ライフライン(株)",
+   "dealer": "日本マイクロポートCRM(株)",
    "cat": "PM",
    "name": "ALIZEA",
    "model": "TPM020C",
@@ -22434,14 +22437,14 @@
    "longevity_cond": "算出条件は提供資料に記載なし。MicroPort公式資料で要確認",
    "port_ra": "IS-1",
    "port_rv": "IS-1",
-   "comm_tech": "MICS（402〜405MHz）",
+   "comm_tech": "Bluetooth＋MICS",
    "rm_network": "SMARTVIEW",
    "rf": "○",
    "rm": "○",
-   "bt": "×",
-   "app": "×（スマートビューコネクトを使用）",
+   "bt": "○",
+   "app": "○（SmartView Connect アプリ／専用汎用通信端末）",
    "nbg": "DDDR",
-   "jp_release": "",
+   "jp_release": "2022年2月（承認2022年1月7日／保険収載2022年2月1日）",
    "xray": "",
    "screwdriver": "",
    "battery_model": "",
@@ -22457,7 +22460,8 @@
    "mri_cond": "傾斜磁場スルーレート 一軸あたり 200T/m/s 以下／最大空間勾配磁場 20T/m／SAR 全身 ≦2.0W/kg／頭部 ≦3.2W/kg",
    "diag": "",
    "mri_group": "MP-ALIZEA",
-   "approval": ""
+   "approval": "",
+   "sales_name": "アリゼア"
   },
   {
    "id": "MDT-D-AURORA-EVICD",
@@ -22502,7 +22506,8 @@
    "mri_cond": "傾斜磁場スルーレート ≤200T/m/s／最大空間勾配磁場 20T/m（2,000ガウス/cm）以下（要再確認）／SAR 全身 ≤2.0W/kg（1.5T）／≤4.0W/kg（3.0T）、頭部 ≤3.2W/kg／B1+rms 3.0Tでアイソセンタを第7頸椎より下に配置する場合、B1+RMSを表示できる装置で ≦2.8μT",
    "diag": "",
    "mri_group": "MDT-EVICD",
-   "approval": ""
+   "approval": "",
+   "sales_name": ""
   },
   {
    "id": "ABT-D-GALLANT-DR",
@@ -22533,7 +22538,7 @@
    "bt": "○",
    "app": "○（myMerlin アプリ）",
    "nbg": "",
-   "jp_release": "",
+   "jp_release": "2020年10月27日",
    "xray": "",
    "screwdriver": "",
    "battery_model": "",
@@ -22548,7 +22553,8 @@
    "mri_xray": "",
    "mri_cond": "",
    "diag": "",
-   "approval": ""
+   "approval": "30200BZX00247000",
+   "sales_name": "ギャラン ICD"
   },
   {
    "id": "BIO-D-ACTICOR-SKY-DR",
@@ -22593,7 +22599,8 @@
    "mri_xray": "",
    "mri_cond": "",
    "diag": "",
-   "approval": ""
+   "approval": "30700BZX00307000",
+   "sales_name": ""
   },
   {
    "id": "BSX-D-RESONATE-DR",
@@ -22638,13 +22645,14 @@
    "mri_xray": "",
    "mri_cond": "",
    "diag": "",
-   "approval": ""
+   "approval": "",
+   "sales_name": ""
   },
   {
    "id": "MCP-D-ULYS-DR",
    "kind": "device",
    "maker": "MicroPort CRM",
-   "dealer": "日本ライフライン(株)",
+   "dealer": "日本マイクロポートCRM(株)",
    "cat": "ICD",
    "name": "ULYS DR",
    "model": "2540",
@@ -22669,7 +22677,7 @@
    "bt": "×",
    "app": "×（スマートビューコネクトを使用）",
    "nbg": "",
-   "jp_release": "",
+   "jp_release": "2023年6月 製造販売承認取得、同年 国内販売開始",
    "xray": "",
    "screwdriver": "",
    "battery_model": "",
@@ -22685,13 +22693,14 @@
    "mri_cond": "傾斜磁場スルーレート 一軸あたり 200T/m/s 以下／最大空間勾配磁場 20T/m／SAR 全身 ≦2.0W/kg／頭部 ≦3.2W/kg",
    "diag": "",
    "mri_group": "MP-ULYS",
-   "approval": ""
+   "approval": "",
+   "sales_name": "ユリス"
   },
   {
    "id": "MCP-D-ULYS-VR",
    "kind": "device",
    "maker": "MicroPort CRM",
-   "dealer": "日本ライフライン(株)",
+   "dealer": "日本マイクロポートCRM(株)",
    "cat": "ICD",
    "name": "ULYS VR",
    "model": "2240",
@@ -22712,7 +22721,7 @@
    "bt": "×",
    "app": "×（スマートビューコネクトを使用）",
    "nbg": "",
-   "jp_release": "",
+   "jp_release": "2023年6月 製造販売承認取得、同年 国内販売開始",
    "xray": "",
    "screwdriver": "",
    "battery_model": "",
@@ -22728,7 +22737,8 @@
    "mri_cond": "傾斜磁場スルーレート 一軸あたり 200T/m/s 以下／最大空間勾配磁場 20T/m／SAR 全身 ≦2.0W/kg／頭部 ≦3.2W/kg",
    "diag": "",
    "mri_group": "MP-ULYS",
-   "approval": ""
+   "approval": "",
+   "sales_name": "ユリス"
   },
   {
    "id": "BIO-D-ACTICOR7-DR",
@@ -22759,7 +22769,7 @@
    "bt": "×",
    "app": "×（CardioMessenger Smart を使用）",
    "nbg": "",
-   "jp_release": "",
+   "jp_release": "2019年4月1日",
    "xray": "",
    "screwdriver": "",
    "battery_model": "",
@@ -22774,7 +22784,8 @@
    "mri_xray": "",
    "mri_cond": "",
    "diag": "",
-   "approval": ""
+   "approval": "23100BZX00029000",
+   "sales_name": "アクティコア 7 ICD ProMRI（条件付MRI対応）"
   },
   {
    "id": "BIO-D-ILIVIANEO7-DR",
@@ -22820,7 +22831,8 @@
    "mri_xray": "",
    "mri_cond": "",
    "diag": "",
-   "approval": ""
+   "approval": "30100BZX00067000",
+   "sales_name": "イリヴィア Neo 7 ICD ProMRI"
   },
   {
    "id": "BSX-D-RESONATE-EL",
@@ -22851,7 +22863,7 @@
    "bt": "×",
    "app": "×（LATITUDE コミュニケータを使用）",
    "nbg": "",
-   "jp_release": "",
+   "jp_release": "2019年9月〜（日本ライフラインによる販売開始）",
    "xray": "",
    "screwdriver": "",
    "battery_model": "",
@@ -22866,7 +22878,8 @@
    "mri_xray": "",
    "mri_cond": "",
    "diag": "",
-   "approval": ""
+   "approval": "",
+   "sales_name": ""
   },
   {
    "id": "MCP-D-PLATINIUM-DR",
@@ -22913,7 +22926,8 @@
    "mri_xray": "",
    "mri_cond": "",
    "diag": "",
-   "approval": ""
+   "approval": "",
+   "sales_name": ""
   },
   {
    "id": "BIO-D-RIVACOR7-HFT",
@@ -22959,7 +22973,8 @@
    "mri_xray": "",
    "mri_cond": "",
    "diag": "",
-   "approval": ""
+   "approval": "30500BZX00218000",
+   "sales_name": "リヴァコア 7 CRT-D ProMRI"
   },
   {
    "id": "BIO-D-ILIVIANEO7-HFT",
@@ -23005,7 +23020,8 @@
    "mri_xray": "",
    "mri_cond": "",
    "diag": "",
-   "approval": "30100BZX00066000"
+   "approval": "30100BZX00066000",
+   "sales_name": "イリヴィア Neo 7 CRT-D ProMRI"
   },
   {
    "id": "MDT-D-COBALT-XT-HF",
@@ -23052,7 +23068,8 @@
    "mri_cond": "傾斜磁場スルーレート ≤200T/m/s／最大空間勾配磁場 20T/m（2,000ガウス/cm）以下（要再確認）／SAR 全身 ≤2.0W/kg（1.5T）／≤4.0W/kg（3.0T）、頭部 ≤3.2W/kg／B1+rms 3.0Tでアイソセンタを第7頸椎より下に配置する場合、B1+RMSを表示できる装置で ≦2.8μT",
    "diag": "",
    "mri_group": "MDT-CRTD",
-   "approval": "30200BZX00098000"
+   "approval": "30200BZX00098000",
+   "sales_name": "Cobalt MRI CRT-Dシリーズ"
   },
   {
    "id": "BSX-D-RESONATE-X4",
@@ -23083,7 +23100,7 @@
    "bt": "×",
    "app": "×（LATITUDE コミュニケータを使用）",
    "nbg": "DDDRV",
-   "jp_release": "",
+   "jp_release": "2019年9月〜（日本ライフラインによる販売開始）",
    "xray": "",
    "screwdriver": "",
    "battery_model": "",
@@ -23098,7 +23115,8 @@
    "mri_xray": "",
    "mri_cond": "",
    "diag": "",
-   "approval": ""
+   "approval": "",
+   "sales_name": ""
   },
   {
    "id": "ABT-D-GALLANT-HF",
@@ -23130,7 +23148,7 @@
    "bt": "○",
    "app": "○（myMerlin アプリ）",
    "nbg": "DDDRV",
-   "jp_release": "",
+   "jp_release": "2020年10月27日",
    "xray": "",
    "screwdriver": "",
    "battery_model": "",
@@ -23146,7 +23164,8 @@
    "mri_cond": "傾斜磁場スルーレート ≦200T/m/s／最大空間勾配磁場 30T/m／SAR 全身 ≦2.0W/kg／頭部 ≦3.2W/kg",
    "diag": "",
    "mri_group": "ABT-CRTD-GALLANT-TMRI",
-   "approval": ""
+   "approval": "30200BZX00246000",
+   "sales_name": "ギャラン HF"
   },
   {
    "id": "MCP-D-PLATINIUM-SONR",
@@ -23193,7 +23212,8 @@
    "mri_xray": "",
    "mri_cond": "",
    "diag": "",
-   "approval": ""
+   "approval": "",
+   "sales_name": ""
   },
   {
    "kind": "device",
@@ -23241,7 +23261,8 @@
    "mri_cond": "傾斜磁場スルーレート 一軸あたり 200T/m/s 以下／最大空間勾配磁場 50T/m（5,000G/cm）を超えないこと／SAR 全身 ≦4.0W/kg／頭部 ≦3.2W/kg",
    "diag": "",
    "mri_group": "BSX-ACCOLADE-INGEVITY",
-   "approval": ""
+   "approval": "22700BZX00334000",
+   "sales_name": "アコレード MRI"
   },
   {
    "kind": "device",
@@ -23289,7 +23310,8 @@
    "mri_cond": "傾斜磁場スルーレート 一軸あたり 200T/m/s 以下／最大空間勾配磁場 50T/m（5,000G/cm）を超えないこと／SAR 全身 ≦4.0W/kg／頭部 ≦3.2W/kg",
    "diag": "",
    "mri_group": "BSX-ACCOLADE-INGEVITY",
-   "approval": ""
+   "approval": "22700BZX00334000",
+   "sales_name": "アコレード MRI"
   },
   {
    "kind": "device",
@@ -23338,7 +23360,8 @@
    "mri_cond": "傾斜磁場スルーレート ≤200T/m/s／最大空間勾配磁場 20T/m（2,000ガウス/cm）以下（要再確認）／SAR 全身 ≤2.0W/kg（1.5T）／≤4.0W/kg（3.0T）、頭部 ≤3.2W/kg／B1+rms 3.0Tでアイソセンタを第7頸椎より下に配置する場合、B1+RMSを表示できる装置で ≦2.8μT",
    "diag": "",
    "mri_group": "MDT-ICD",
-   "approval": "30200BZX00097000"
+   "approval": "30200BZX00097000",
+   "sales_name": "Cobalt MRI ICDシリーズ"
   },
   {
    "kind": "device",
@@ -23387,7 +23410,8 @@
    "mri_cond": "傾斜磁場スルーレート ≤200T/m/s／最大空間勾配磁場 20T/m（2,000ガウス/cm）以下（要再確認）／SAR 全身 ≤2.0W/kg（1.5T）／≤4.0W/kg（3.0T）、頭部 ≤3.2W/kg／B1+rms 3.0Tでアイソセンタを第7頸椎より下に配置する場合、B1+RMSを表示できる装置で ≦2.8μT",
    "diag": "",
    "mri_group": "MDT-ICD",
-   "approval": "30200BZX00097000"
+   "approval": "30200BZX00097000",
+   "sales_name": "Cobalt MRI ICDシリーズ"
   },
   {
    "id": "ABT-D-CDDRA500T",
@@ -23418,7 +23442,7 @@
    "bt": "○",
    "app": "○（myMerlin アプリ）",
    "nbg": "",
-   "jp_release": "",
+   "jp_release": "2020年10月27日",
    "xray": "",
    "screwdriver": "",
    "battery_model": "",
@@ -23433,7 +23457,8 @@
    "mri_xray": "",
    "mri_cond": "",
    "diag": "",
-   "approval": ""
+   "approval": "30200BZX00247000",
+   "sales_name": "ギャラン ICD"
   },
   {
    "kind": "device",
@@ -23463,7 +23488,7 @@
    "bt": "×",
    "app": "×（LATITUDE コミュニケータを使用）",
    "nbg": "",
-   "jp_release": "",
+   "jp_release": "2016年2月（EMBLEM S-ICD システムとして）",
    "xray": "",
    "screwdriver": "",
    "battery_model": "",
@@ -23479,7 +23504,8 @@
    "mri_cond": "傾斜磁場スルーレート 一軸あたり 200T/m/s 以下／最大空間勾配磁場 30T/m／SAR 全身 ≦2.0W/kg／頭部 ≦3.2W/kg（通常操作モード）",
    "diag": "",
    "mri_group": "BSX-EMBLEM-SICD",
-   "approval": ""
+   "approval": "",
+   "sales_name": ""
   },
   {
    "kind": "device",
@@ -23509,7 +23535,7 @@
    "bt": "×",
    "app": "×（LATITUDE コミュニケータを使用）",
    "nbg": "",
-   "jp_release": "",
+   "jp_release": "2017年1月16日（EMBLEM MRI S-ICD システムとして）／2019年4月〜 日本ライフラインが先行販売",
    "xray": "",
    "screwdriver": "",
    "battery_model": "Li/MnO₂",
@@ -23524,7 +23550,8 @@
    "mri_xray": "",
    "mri_cond": "",
    "diag": "",
-   "approval": ""
+   "approval": "",
+   "sales_name": ""
   },
   {
    "id": "BIO-D-RIVACOR7-HFT-NONQP",
@@ -23570,7 +23597,8 @@
    "mri_xray": "",
    "mri_cond": "",
    "diag": "",
-   "approval": ""
+   "approval": "30500BZX00218000",
+   "sales_name": "リヴァコア 7 CRT-D ProMRI"
   },
   {
    "id": "GEAR-PRG-1",
@@ -23798,7 +23826,7 @@
    "bt": "○",
    "app": "○（MyCareLink Heart アプリ）",
    "nbg": "",
-   "jp_release": "",
+   "jp_release": "2017年",
    "xray": "",
    "screwdriver": "",
    "battery_model": "",
@@ -23814,7 +23842,8 @@
    "mri_cond": "傾斜磁場スルーレート ≤200T/m/s／最大空間勾配磁場 25T/m（2,500ガウス/cm）以下（要再確認）／SAR 全身 ≤2.0W/kg（1.5T）／≤4.0W/kg（3.0T）、頭部 ≤3.2W/kg／B1+rms 3.0Tでアイソセンタを第7頸椎より下に配置する場合、B1+RMS ≦2.0μT",
    "diag": "",
    "mri_group": "MDT-MICRA",
-   "approval": ""
+   "approval": "22900BZX00047000",
+   "sales_name": "Micra経カテーテルペーシングシステム"
   },
   {
    "id": "MDT-D-MICRA-AV",
@@ -23839,7 +23868,7 @@
    "bt": "○",
    "app": "○（MyCareLink Heart アプリ）",
    "nbg": "",
-   "jp_release": "",
+   "jp_release": "2022年1月（承認2021年7月29日／保険収載2021年12月1日）",
    "xray": "",
    "screwdriver": "",
    "battery_model": "",
@@ -23855,7 +23884,8 @@
    "mri_cond": "傾斜磁場スルーレート ≤200T/m/s／最大空間勾配磁場 25T/m（2,500ガウス/cm）以下（要再確認）／SAR 全身 ≤2.0W/kg（1.5T）／≤4.0W/kg（3.0T）、頭部 ≤3.2W/kg／B1+rms 3.0Tでアイソセンタを第7頸椎より下に配置する場合、B1+RMS ≦2.0μT",
    "diag": "",
    "mri_group": "MDT-MICRA",
-   "approval": ""
+   "approval": "22900BZX00047000",
+   "sales_name": "Micra経カテーテルペーシングシステム"
   },
   {
    "id": "MDT-D-MICRA-VR2",
@@ -23897,7 +23927,8 @@
    "mri_cond": "傾斜磁場スルーレート ≤200T/m/s／最大空間勾配磁場 25T/m（2,500ガウス/cm）以下（要再確認）／SAR 全身 ≤2.0W/kg（1.5T）／≤4.0W/kg（3.0T）、頭部 ≤3.2W/kg／B1+rms 3.0Tでアイソセンタを第7頸椎より下に配置する場合、B1+RMS ≦2.0μT",
    "diag": "",
    "mri_group": "MDT-MICRA",
-   "approval": ""
+   "approval": "22900BZX00047000",
+   "sales_name": "Micra経カテーテルペーシングシステム"
   },
   {
    "id": "MDT-D-MICRA-AV2",
@@ -23939,7 +23970,8 @@
    "mri_cond": "傾斜磁場スルーレート ≤200T/m/s／最大空間勾配磁場 25T/m（2,500ガウス/cm）以下（要再確認）／SAR 全身 ≤2.0W/kg（1.5T）／≤4.0W/kg（3.0T）、頭部 ≤3.2W/kg／B1+rms 3.0Tでアイソセンタを第7頸椎より下に配置する場合、B1+RMS ≦2.0μT",
    "diag": "",
    "mri_group": "MDT-MICRA",
-   "approval": ""
+   "approval": "22900BZX00047000",
+   "sales_name": "Micra経カテーテルペーシングシステム"
   },
   {
    "id": "ABT-D-AVEIR-VR",
@@ -23976,7 +24008,8 @@
    "mri_cond": "傾斜磁場スルーレート ≦200T/m/s／SAR 全身・頭部とも 通常操作モード もしくは 第一次水準管理操作モード（IEC60601-2-33 / JIS Z 4951:2017）",
    "diag": "",
    "mri_group": "ABT-AVEIR",
-   "approval": ""
+   "approval": "30400BZX00287000",
+   "sales_name": "アヴェイル LP（条件付MRI対応）"
   },
   {
    "id": "ABT-D-AVEIR-AR",
@@ -23999,7 +24032,7 @@
    "bt": "○",
    "app": "○（myMerlin アプリ）",
    "nbg": "",
-   "jp_release": "",
+   "jp_release": "2024年9月27日 一部変更承認",
    "xray": "",
    "screwdriver": "",
    "battery_model": "Li-CFx（Greatbatch Medical model 4350）",
@@ -24015,7 +24048,8 @@
    "mri_cond": "傾斜磁場スルーレート ≦200T/m/s／SAR 全身・頭部とも 通常操作モード もしくは 第一次水準管理操作モード（IEC60601-2-33 / JIS Z 4951:2017）",
    "diag": "",
    "mri_group": "ABT-AVEIR",
-   "approval": ""
+   "approval": "30400BZX00287000",
+   "sales_name": "アヴェイル LP（条件付MRI対応）"
   },
   {
    "id": "ABT-D-AVEIR-DR",
@@ -24036,7 +24070,7 @@
    "bt": "○",
    "app": "○（myMerlin アプリ）",
    "nbg": "",
-   "jp_release": "",
+   "jp_release": "2024年9月27日 一部変更承認（AR＋VRの組合せ）",
    "xray": "",
    "screwdriver": "",
    "battery_model": "",
@@ -24051,7 +24085,8 @@
    "mri_xray": "",
    "mri_cond": "",
    "diag": "",
-   "approval": ""
+   "approval": "30400BZX00287000",
+   "sales_name": "アヴェイル LP（条件付MRI対応）"
   },
   {
    "id": "GEAR-SH-3",

@@ -219,6 +219,10 @@ header{background-attachment:scroll}
 .adet h4{margin:0 0 6px;font-size:12px;font-weight:800;letter-spacing:.05em;
  text-transform:uppercase;color:var(--teal-d)}
 .adet p.body{margin:0;font-size:14px;line-height:1.85;color:var(--ink)}
+.connbox{margin:2px 0 10px;padding:12px 10px;background:var(--bg);
+ border:1px solid var(--border);border-radius:12px;color:var(--sub);overflow-x:auto}
+.connbox svg{display:block;width:100%;max-width:330px;height:auto;margin:0 auto}
+.connbox .cap{margin:6px 0 0;font-size:11px;color:var(--muted);text-align:center}
 .adet ul.par{margin:0;padding-left:18px;font-size:14px;line-height:1.9;color:var(--ink)}
 .adet .path{margin:0;font-size:13.5px;line-height:1.7;color:var(--ink);
  background:#f1f5f9;border-radius:9px;padding:9px 11px}
@@ -1104,20 +1108,20 @@ loadMaster(false);
   function connSvg(rows){
    if(!rows.length)return "";
    var h=30, pad=12, bw=176, H=pad*2+rows.length*h, W=330;
-   var s='<svg class="connsvg" viewBox="0 0 '+W+' '+H+'" width="100%" '+
-         'style="max-width:330px;margin:2px 0 10px" role="img" aria-label="コネクタヘッダ">';
+   var s='<svg viewBox="0 0 '+W+' '+H+'" width="'+W+'" height="'+H+'" '+
+         'xmlns="http://www.w3.org/2000/svg" role="img" aria-label="コネクタヘッダの断面図">';
    s+='<path d="M14 '+(pad-4)+' h'+(bw-14)+' v'+(H-pad*2+8)+' H14 a14 14 0 0 1 0-'+(H-pad*2+8)+' z" '+
-      'fill="var(--card,#eef1f6)" stroke="currentColor" stroke-width="1.4" opacity=".85"/>';
+      'fill="#e9edf3" stroke="#64748b" stroke-width="1.4"/>';
    rows.forEach(function(r,i){
     var y=pad+i*h+h/2, n=connPins(r[0]);
     s+='<rect x="34" y="'+(y-8)+'" width="'+(bw-46)+'" height="16" rx="3" '+
-       'fill="#fff" stroke="currentColor" stroke-width="1.1" opacity=".9"/>';
-    s+='<circle cx="27" cy="'+y+'" r="3.4" fill="none" stroke="currentColor" stroke-width="1.3"/>';
+       'fill="#ffffff" stroke="#64748b" stroke-width="1.1"/>';
+    s+='<circle cx="27" cy="'+y+'" r="3.4" fill="none" stroke="#64748b" stroke-width="1.3"/>';
     for(var k=0;k<n;k++){
      var cx=46+k*Math.min(22,(bw-70)/Math.max(n,1));
-     s+='<circle cx="'+cx+'" cy="'+y+'" r="4.2" fill="none" stroke="currentColor" stroke-width="1.3"/>';
+     s+='<circle cx="'+cx+'" cy="'+y+'" r="4.2" fill="#dbe3ee" stroke="#334155" stroke-width="1.3"/>';
     }
-    s+='<text x="'+(bw+16)+'" y="'+(y+4)+'" font-size="12" fill="currentColor">'+
+    s+='<text x="'+(bw+16)+'" y="'+(y+4)+'" font-size="12" fill="#0f172a">'+
        esc(connStd(r[0]))+' <tspan font-weight="700">('+esc(r[1])+')</tspan></text>';
    });
    return s+'</svg>';
@@ -1129,6 +1133,7 @@ loadMaster(false);
   }
   var head=[["メーカー",x.maker],["資料上の表記",x.mfr],["取扱会社",x.dealer],["分類",x.cat],
             ["一般名称",x.family],["正式英語名",x.en],["日本語表記",x.alias],
+            ["販売名（薬事）",x.sales_name],
             ["型番",x.model],["NBG/NBDコード",x.nbg],
             ["国内発売",x.jp_release],["承認番号",x.approval],["販売期間",x.period]];
   var body=x.kind==="gear"
@@ -1159,7 +1164,10 @@ loadMaster(false);
      sec("寸法とイメージング",[["寸法（W×H×D）",x.size],["容積",x.volume],
                  ["質量",x.mass||(x.weight&&x.weight+" g")],
                  ["X線識別マーカ",x.xray]]),
-     (ports.length?'<section><h4>コネクタヘッダ</h4>'+connSvg(ports)+
+     (ports.length?'<section><h4>コネクタヘッダ</h4>'+
+       '<div class="connbox">'+connSvg(ports)+
+       '<p class="cap">'+esc(ports.map(function(r){return connStd(r[0])+"（"+r[1]+"）"}).join(" ／ "))+
+       '</p></div>'+
        '<dl class="kv">'+ports.map(function(r){
          return '<div><dt>'+esc(r[1])+'ポート</dt><dd>'+esc(r[0])+'</dd></div>'}).join("")+
        (x.screwdriver?'<div><dt>ドライバサイズ</dt><dd>'+esc(x.screwdriver)+'</dd></div>':'')+
