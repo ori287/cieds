@@ -219,6 +219,7 @@ header{background-attachment:scroll}
 .adet h4{margin:0 0 6px;font-size:12px;font-weight:800;letter-spacing:.05em;
  text-transform:uppercase;color:var(--teal-d)}
 .adet p.body{margin:0;font-size:14px;line-height:1.85;color:var(--ink)}
+.kv dd .cond{display:block;margin-top:3px;font-size:11px;line-height:1.6;color:var(--muted)}
 .connbox{margin:2px 0 10px;padding:12px 10px;background:var(--bg);
  border:1px solid var(--border);border-radius:12px;color:var(--sub);overflow-x:auto}
 .connbox svg{display:block;width:100%;max-width:330px;height:auto;margin:0 auto}
@@ -1047,7 +1048,7 @@ loadMaster(false);
    if(pK&&x.kind!==pK)return false;
    if(pM&&x.maker!==pM)return false;
    if(pC&&x.cat!==pC)return false;
-   if(q){var t=[x.name,x.model,x.maker,x.cat,x.en,x.alias,x.family,x.mfr].join(" ").toLowerCase();
+   if(q){var t=[x.name,x.model,x.maker,x.cat,x.en,x.alias,x.family,x.mfr,x.mri].join(" ").toLowerCase();
          if(t.indexOf(q)<0)return false}
    return true});
   $("#pCount").textContent=all.length?rows.length+" 件":"";
@@ -1132,10 +1133,10 @@ loadMaster(false);
    return /^[0-9.\/×\s]+$/.test(String(v)) ? v+" "+unit : String(v);
   }
   var head=[["メーカー",x.maker],["資料上の表記",x.mfr],["取扱会社",x.dealer],["分類",x.cat],
-            ["一般名称",x.family],["正式英語名",x.en],["日本語表記",x.alias],
-            ["販売名（薬事）",x.sales_name],
+            ["一般名称",x.family||x.en],
+            ["正式英語名",(x.en&&x.en!==x.family)?x.en:""],["日本語表記",x.alias],
             ["型番",x.model],["NBG/NBDコード",x.nbg],
-            ["国内発売",x.jp_release],["承認番号",x.approval],["販売期間",x.period]];
+            ["国内発売",x.jp_release],["販売期間",x.period]];
   var body=x.kind==="gear"
    ?[sec("概要",[["役割",x.role]]),
      sec("仕様",[["内径",x.idfr],["外径",x.odfr],["有効長",x.length],
@@ -1156,35 +1157,36 @@ loadMaster(false);
                  ["コイルデザイン",x.cdesign],["コイル表面コーティング",x.ccoat],
                  ["コイル間距離",u(x.cgap,"mm")],
                  ["コイル表面積 distal",u(x.csa_d,"mm²")],
-                 ["コイル表面積 prox",u(x.csa_p,"mm²")]])]
+                 ["コイル表面積 prox",u(x.csa_p,"mm²")]]),
+     sec("MRI",[["MRI対応",x.mri],["撮像条件",x.mri_cond]])]
    :(function(){
-     var ports=[[x.port_ra,"RA"],[x.port_rv,"RV"],[x.port_lv,"LV"],[x.port_hv,"HV"]]
+     var ports=[[x.port_ra,"心房（RA）"],[x.port_rv,"右室（RV）"],
+                [x.port_lv,"左室（LV）"],[x.port_hv,"高電圧（HV）"]]
                .filter(function(r){return r[0]});
+     /* 電池寿命は値の下に算出条件を小さく添える */
+     var lon = x.longevity
+       ? '<section><h4>電池・寿命</h4><dl class="kv">'+
+         '<div><dt>電池寿命</dt><dd>'+esc(x.longevity)+
+         (x.longevity_cond?'<span class="cond">'+esc(x.longevity_cond)+'</span>':'')+'</dd></div>'+
+         [["電池型番",x.battery_model],["電池容量",x.battery_cap],
+          ["マグネットレート @BOL",x.magnet_bol],["マグネットレート @EOS/RRT",x.magnet_eos],
+          ["ERIからEOSまで",x.eri_eos],["EOS/RRT の挙動",x.eos_behavior],
+          ["バックアップ作動",x.backup]]
+          .filter(function(r){return r[1]})
+          .map(function(r){return '<div><dt>'+esc(r[0])+'</dt><dd>'+esc(r[1])+'</dd></div>'}).join("")+
+         '</dl></section>'
+       : "";
      return [
      sec("寸法とイメージング",[["寸法（W×H×D）",x.size],["容積",x.volume],
-                 ["質量",x.mass||(x.weight&&x.weight+" g")],
-                 ["X線識別マーカ",x.xray]]),
-     (ports.length?'<section><h4>コネクタヘッダ</h4>'+
-       '<div class="connbox">'+connSvg(ports)+
-       '<p class="cap">'+esc(ports.map(function(r){return connStd(r[0])+"（"+r[1]+"）"}).join(" ／ "))+
-       '</p></div>'+
-       '<dl class="kv">'+ports.map(function(r){
-         return '<div><dt>'+esc(r[1])+'ポート</dt><dd>'+esc(r[0])+'</dd></div>'}).join("")+
-       (x.screwdriver?'<div><dt>ドライバサイズ</dt><dd>'+esc(x.screwdriver)+'</dd></div>':'')+
-       '</dl></section>'
-      :sec("コネクタヘッダ",[["コネクタ",x.connector],["ドライバサイズ",x.screwdriver]])),
-     sec("MRI",[["対応磁場",x.mri],["撮像条件",x.mri_cond],
-                 ["撮像範囲",x.mri_zone],["ガントリ",x.mri_gantry],
+                 ["質量",x.mass],["X線識別マーカ",x.xray]]),
+     sec("コネクタ",ports.map(function(r){return [r[1],r[0]]})
+                 .concat([["コネクタ構成",ports.length?"":x.connector],
+                          ["ドライバサイズ",x.screwdriver]])),
+     sec("MRI",[["MRI対応",x.mri],["撮像条件",x.mri_cond],
+                 ["撮像範囲・患者条件",x.mri_zone],["ガントリ",x.mri_gantry],
                  ["MRI識別マーカ",x.mri_xray]]),
-     sec("電池・寿命",[["電池寿命",x.longevity],["算出条件",x.longevity_cond],
-                 ["電池型番",x.battery_model],["電池容量",x.battery_cap],
-                 ["ペーシングレート @BOL",x.pace_bol],["ペーシングレート @EOS/RRT",x.pace_eos],
-                 ["マグネットレート @BOL",x.magnet_bol],["マグネットレート @EOS/RRT",x.magnet_eos],
-                 ["EOS/RRT の挙動",x.eos_behavior],["電池表示",x.eri_eos],
-                 ["バックアップ作動",x.backup]]),
-     sec("通信",[["無線テレメトリ",x.rf],["遠隔モニタリング",x.rm],
-                 ["Bluetooth",x.bt],["患者アプリ",x.app],
-                 ["通信方式",x.comm_tech],["遠隔モニタリング網",x.rm_network]]),
+     lon,
+     sec("通信",[["遠隔モニタリング",x.rm],["無線テレメトリ",x.rf]]),
      sec("診断機能",[["診断",x.diag]]),
      sec("治療・センシング",[["ショック出力",x.shock],["充電時間",x.charge],
                  ["センシングオプション",x.sensing]]),
