@@ -1,6 +1,6 @@
 {
- "v": 20,
- "updated": "2026-09-02",
+ "v": 24,
+ "updated": "2026-09-04",
  "gloss": [
   {
    "term": "VVT",
@@ -7751,6 +7751,396 @@
    "maker": "General",
    "short": "MRI検査で撮像できる範囲を身体の一部に限定する条件。機種によっては3.0Tでの撮像がこの条件に限られる。",
    "tags": "部分ボディスキャン Partial body scan PBS"
+  },
+  {
+   "term": "心房頻拍検出レート",
+   "en": "Atrial Tachycardia Detection Rate",
+   "abbr": "ATDR",
+   "cat": "モード",
+   "device": "PM / ICD / CRT",
+   "maker": "Abbott",
+   "short": "アボットのモードスイッチ開始基準。心房インターバルの移動平均（FARI）がこのレートより速くなるとAMSモードへ移行する。復帰は最大トラッキングレートまたはセンサ指示レートを基準とする。",
+   "tags": "Abbott / PM / ICD / CRT / ATDR / mode switch / FARI"
+  },
+  {
+   "term": "AMS基本レート",
+   "en": "AMS base rate",
+   "abbr": "",
+   "cat": "モード",
+   "device": "PM / ICD / CRT",
+   "maker": "Abbott",
+   "short": "モードスイッチ中だけ用いる基本レート。心房収縮の消失で失われる1回拍出量（心房寄与分は約20%）を心拍数で補う目的で、通常の基本レートとは別に設定する。",
+   "tags": "Abbott / PM / ICD / CRT / AMS / base rate / mode switch"
+  },
+  {
+   "term": "レートリカバリ",
+   "en": "rate recovery",
+   "abbr": "",
+   "cat": "ペーシング",
+   "device": "PM / ICD / CRT",
+   "maker": "Abbott",
+   "short": "心房オーバードライブ終了後に、ペーシング間隔を1サイクルずつ延ばしてレートを緩やかに下げる期間。急に基本レートへ戻さないことで自己調律の出現を確認する。",
+   "tags": "Abbott / PM / overdrive / AF suppression / rate recovery"
+  },
+  {
+   "term": "ストアードEGM",
+   "en": "stored electrogram",
+   "abbr": "",
+   "cat": "フォロー",
+   "device": "PM / ICD / CRT",
+   "maker": "General",
+   "short": "エピソード発生時に本体が保存する心内電位波形。記録するチャンネル数・極性・保存時間・トリガ条件を設定でき、チャンネルを増やすと1エピソードあたりの記録時間は短くなる。",
+   "tags": "Clinical / PM / ICD / CRT / stored EGM / episode / follow-up"
+  },
+  {
+   "term": "プレトリガ／ポストトリガ",
+   "en": "pre-trigger / post-trigger",
+   "abbr": "",
+   "cat": "フォロー",
+   "device": "PM / ICD / CRT",
+   "maker": "General",
+   "short": "ストアードEGMで、トリガが成立した時点より前・後に記録する時間。発端の判断にはプレトリガが要るため、トリガ種別ごとに配分が決められている。",
+   "tags": "Clinical / PM / ICD / CRT / pre-trigger / post-trigger / stored EGM"
+  },
+  {
+   "term": "エピソードトリガの優先度",
+   "en": "episode trigger priority",
+   "abbr": "",
+   "cat": "フォロー",
+   "device": "PM / ICD / CRT",
+   "maker": "Abbott",
+   "short": "限られた記録容量を配分するため、トリガ種別ごとにOff／Low／Highを設定する仕組み。優先度と別に、AT/AF・AMSでは最新・初回・最高レートのエピソードが保護される。",
+   "tags": "Abbott / PM / ICD / CRT / episode trigger / priority / stored EGM"
+  },
+  {
+   "term": "マグネットレート",
+   "en": "magnet rate",
+   "abbr": "",
+   "cat": "電池",
+   "device": "PM / CRT-P",
+   "maker": "General",
+   "short": "マグネットを当てたときの非同期ペーシングレート。電池電圧の低下に伴って下がるため、電池残量の目安として使われる。低下の仕方は電池の種類と機種で異なる。",
+   "tags": "Clinical / PM / CRT-P / magnet / battery / ERI"
+  },
+  {
+   "term": "リチウムヨウ素電池",
+   "en": "lithium-iodine battery",
+   "abbr": "Li-I",
+   "cat": "電池",
+   "device": "PM / CRT-P",
+   "maker": "General",
+   "short": "従来からペースメーカに使われる電池。取り出せる電力は小さいが自己放電が少なく、電圧は寿命末期まで緩やかに下がったのち急に低下する。",
+   "tags": "Clinical / PM / CRT-P / battery / lithium iodine"
+  },
+  {
+   "term": "銀酸化バナジウム電池",
+   "en": "silver vanadium oxide battery",
+   "abbr": "SVO",
+   "cat": "電池",
+   "device": "ICD / CRT-D",
+   "maker": "General",
+   "short": "ICDの充電に用いる電池。大きな電力を短時間で取り出せるが、ペーシングのような低い消費電流では効率がよくない。",
+   "tags": "Clinical / ICD / CRT-D / battery / SVO / charge"
+  },
+  {
+   "term": "QMR電池",
+   "en": "QMR (Q mid rate) battery",
+   "abbr": "QMR",
+   "cat": "電池",
+   "device": "PM / CRT-P",
+   "maker": "Abbott",
+   "short": "RFテレメトリーなど電力を要する機能を持つペースメーカ向けの電池。リチウムを一方の電極、銀酸化バナジウム（SVO）とポリカーボンモノフルオライド（CFx）をもう一方に用いる。植込み後しばらくで電圧が急に下がり、その後ERIまで緩やかに低下する。",
+   "tags": "Abbott / PM / CRT-P / battery / QMR / SVO / CFx"
+  },
+  {
+   "term": "ロスオブキャプチャー",
+   "en": "loss of capture",
+   "abbr": "LOC",
+   "cat": "ペーシング",
+   "device": "PM / ICD / CRT",
+   "maker": "General",
+   "short": "ペーシング刺激が心筋を捕捉できず、脱分極が起こらないこと。自動閾値測定では捕捉ありをCAP、捕捉喪失をLOCと呼び、判定結果に応じて出力を上下させる。",
+   "tags": "Clinical / PM / ICD / CRT / LOC / capture / threshold"
+  },
+  {
+   "term": "ER検出ウィンドウ",
+   "en": "evoked response detection window",
+   "abbr": "",
+   "cat": "ペーシング管理",
+   "device": "PM / CRT-P",
+   "maker": "Abbott",
+   "short": "誘発反応を探す時間枠。ペーシング直後は分極の誤感知を避けるためクローズし、続く期間をオープンにしてERを探す。その後バックアップパルスを準備する処理時間を経て絶対不応期に入る。",
+   "tags": "Abbott / PM / CRT-P / evoked response / auto capture / window"
+  },
+  {
+   "term": "PDI",
+   "en": "post-pace depolarization integral",
+   "abbr": "PDI",
+   "cat": "ペーシング管理",
+   "device": "PM / CRT-P",
+   "maker": "Abbott",
+   "short": "ペース後脱分極積分。誘発反応の面積を計算して捕捉の有無を判定する方式。アボットの自動閾値測定で用いる2方式のうちの一つ。",
+   "tags": "Abbott / PM / CRT-P / PDI / evoked response / auto capture"
+  },
+  {
+   "term": "DMAX",
+   "en": "maximum slope of evoked response",
+   "abbr": "DMAX",
+   "cat": "ペーシング管理",
+   "device": "PM / CRT-P",
+   "maker": "Abbott",
+   "short": "誘発反応の傾きを比較して捕捉の有無を判定する方式。アボットではユニポーラペーシングとバイポーラセンシングを組み合わせたときにこの方式が使われる。",
+   "tags": "Abbott / PM / CRT-P / DMAX / evoked response / auto capture"
+  },
+  {
+   "term": "Kendall Tau相関",
+   "en": "Kendall's tau correlation",
+   "abbr": "",
+   "cat": "ペーシング管理",
+   "device": "PM / CRT-P",
+   "maker": "Abbott",
+   "short": "波形上の2点を結んだ線の向きをテンプレートと比べ、向きが一致した数を集計して波形の似かたを点数化する手法。アボットの心房自動閾値測定で捕捉の判定に用いる。",
+   "tags": "Abbott / PM / CRT-P / Kendall tau / morphology / ACap"
+  },
+  {
+   "term": "セットアップテスト",
+   "en": "setup test",
+   "abbr": "",
+   "cat": "ペーシング管理",
+   "device": "PM / CRT-P",
+   "maker": "Abbott",
+   "short": "自動閾値測定を有効にする前に、捕捉時と捕捉喪失時の誘発反応を実際に取得し、両者を区別できるかを確認するテスト。区別できない場合は機能を有効にできない。",
+   "tags": "Abbott / PM / CRT-P / setup test / auto capture / evoked response"
+  },
+  {
+   "term": "フュージョン回避アルゴリズム",
+   "en": "fusion avoidance algorithm",
+   "abbr": "",
+   "cat": "ペーシング管理",
+   "device": "PM / CRT-P",
+   "maker": "Abbott",
+   "short": "融合収縮を捕捉喪失と誤判定して不要な閾値測定が始まるのを防ぐしくみ。捕捉喪失の次の拍でAVディレイを延長し、自己伝導が出るかどうかで融合か真の捕捉喪失かを見分ける。",
+   "tags": "Abbott / PM / CRT-P / fusion / auto capture / AV delay"
+  },
+  {
+   "term": "AICS",
+   "en": "Auto Intrinsic Conduction Search",
+   "abbr": "AICS",
+   "cat": "ペーシング管理",
+   "device": "PM",
+   "maker": "Abbott",
+   "short": "AbbottのIdentity以前の機種に搭載された自動自己伝導サーチ。AVディレイを＋10〜120ms（10ms間隔）延長し、5・10・15・30分のいずれかの間隔で自己伝導を探す。レート90min⁻¹以上では延長しない。VIPと同種の機能だが、サーチ外では作動せず、サーチサイクルは1回、1回のペーシングで解除される。",
+   "tags": "Abbott / PM / AICS / Auto Intrinsic Conduction Search / VIP / 自己伝導サーチ / Identity"
+  },
+  {
+   "term": "VIP延長（VIPデルタ）",
+   "en": "VIP extension (delta)",
+   "abbr": "",
+   "cat": "AV・タイミング",
+   "device": "PM / ICD / CRT",
+   "maker": "Abbott",
+   "short": "VIPのサーチで設定AVディレイに上乗せする延長量。延長した分だけ自己房室伝導を待てるが、AV間隔が長くなるほど心室充満やRNRVASの面で不利になる。",
+   "tags": "Abbott / VIP / delta 延長 AVディレイ VIPデルタ"
+  },
+  {
+   "term": "サーチ サイクル数",
+   "en": "Search cycles",
+   "abbr": "",
+   "cat": "ペーシング管理",
+   "device": "PM / ICD / CRT",
+   "maker": "Abbott",
+   "short": "VIPが1回のサーチで自己収縮を探す拍数（1〜3）。この拍数のうち1拍でも自己収縮があればVIPが作動し、同じ拍数だけ連続して心室ペーシングになると解除される。",
+   "tags": "Abbott / VIP / search cycles サーチサイクル 自己収縮 探索"
+  },
+  {
+   "term": "房室伝導監視型心室ペーシング抑制機能",
+   "en": "AV conduction monitoring based ventricular pacing inhibition",
+   "abbr": "",
+   "cat": "ペーシング管理",
+   "device": "PM",
+   "maker": "General",
+   "short": "自己房室伝導を監視して不要な心室ペーシングを抑える機能の、国内の機能区分上の呼びかた。デュアルチャンバIV型の要件のひとつ。",
+   "tags": "機能区分 房室伝導監視 心室ペーシング抑制 デュアルチャンバ IV型 保険"
+  },
+  {
+   "term": "デュアルチャンバIV型",
+   "en": "Dual chamber type IV",
+   "abbr": "",
+   "cat": "ペーシング管理",
+   "device": "PM",
+   "maker": "General",
+   "short": "デュアルチャンバ型であること、レート応答機能と上室性頻拍抑止機能を持つこと、房室伝導監視型心室ペーシング抑制機能を持つことの3つをすべて満たす機能区分。AICS搭載機種はIII型に区分される。",
+   "tags": "機能区分 デュアルチャンバ IV型 III型 レート応答 上室性頻拍抑止 房室伝導監視"
+  },
+  {
+   "term": "SAVopt／PAVopt",
+   "en": "Optimal sensed / paced AV delay",
+   "abbr": "",
+   "cat": "AV・タイミング",
+   "device": "CRT / PM",
+   "maker": "Abbott",
+   "short": "QuickOptが算出する至適AVディレイ。計測したP波幅Asに加算値Δを足して求める。センス後はΔ＝30または60ms、ペース後は心房ペーシング分の50msを加えてΔ＝80または110ms。P波幅が100ms以上なら小さいΔ、100ms以下なら大きいΔを使う。",
+   "tags": "Abbott / QuickOpt / SAVopt PAVopt 至適AVディレイ P波幅 デルタ"
+  },
+  {
+   "term": "P波幅",
+   "en": "P wave duration",
+   "abbr": "",
+   "cat": "心電図",
+   "device": "PM / ICD / CRT",
+   "maker": "General",
+   "short": "P波の始まりから終わりまでの時間。心房内・心房間の伝導時間を反映し、延長は左房への伝導遅延を示す。QuickOptではこの幅の平均値から至適AVディレイを算出する。",
+   "tags": "P波幅 P wave duration 心房内伝導 心房間伝導 QuickOpt 至適AVディレイ"
+  },
+  {
+   "term": "心房間伝導時間",
+   "en": "Interatrial conduction time",
+   "abbr": "",
+   "cat": "AV・タイミング",
+   "device": "PM / ICD / CRT",
+   "maker": "General",
+   "short": "右房の興奮が左房に伝わるまでの時間。延長していると左房収縮が遅れ、AVディレイをそのままにすると心室充満と僧帽弁閉鎖のタイミングがずれる。P波幅から推定する。",
+   "tags": "心房間伝導時間 interatrial conduction バッハマン束 P波幅 至適AVディレイ"
+  },
+  {
+   "term": "サーチ機能付ネガティブAVヒステリシス",
+   "en": "Negative AV hysteresis with search",
+   "abbr": "",
+   "cat": "AV・タイミング",
+   "device": "PM / ICD / CRT",
+   "maker": "Abbott",
+   "short": "自己房室伝導が現れたときにAVディレイを短縮して心室ペーシングを先行させ、一定間隔で自己伝導の有無を探索する機能。Abbottの［ディレイ］画面でVIPと並んで設定し、有効にするとVIPは無効になる。",
+   "tags": "Abbott / negative AV hysteresis search ネガティブAVヒステリシス VIP ディレイ"
+  },
+  {
+   "term": "レスト レート",
+   "en": "Rest Rate",
+   "abbr": "",
+   "cat": "レート応答",
+   "device": "PM / ICD / CRT",
+   "maker": "Abbott",
+   "short": "睡眠中や長時間の安静時に、基本レートより低いレートでペーシングする機能。Abbottは時計ではなく体動に基づいて判定するため、就寝時刻が一定でない患者や時差のある場所でも設定を変えずに使える。安静時に5〜10ppm下げることで安寧感が得られ、電池寿命も延びる。",
+   "tags": "Abbott / rest rate レストレート 睡眠 安静 スリープファンクション ナイトプログラム 体動"
+  },
+  {
+   "term": "活動偏差閾値",
+   "en": "Activity variance threshold",
+   "abbr": "",
+   "cat": "レート応答",
+   "device": "PM",
+   "maker": "Abbott",
+   "short": "レストレートで安静と活動を分ける境目。1週間ぶんの体動レベルの変動をヒストグラムにし、活動の少ない側から29%（1日約7時間の睡眠に相当）の位置を閾値とする。閾値は7日ごとに更新するが、寝たきりなどで分布が1つの山になった場合は更新せず前回の閾値を使う。",
+   "tags": "Abbott / rest rate 活動偏差 閾値 29% 移動平均 体動 寝たきり"
+  },
+  {
+   "term": "MAS",
+   "en": "Measured Average Sensor",
+   "abbr": "MAS",
+   "cat": "レート応答",
+   "device": "PM / ICD / CRT",
+   "maker": "Abbott",
+   "short": "18時間ぶんの体動データから算出する平均センサ値。18時間ごとに更新され、センサ閾値の自動調整（Auto）の基準になる。設定がAuto（+1.0）でMASが2.0なら、センサ閾値の実効値は3.0となる。",
+   "tags": "Abbott / MAS Measured Average Sensor センサ閾値 Auto 18時間 体動"
+  },
+  {
+   "term": "センサ閾値",
+   "en": "Sensor threshold",
+   "abbr": "",
+   "cat": "レート応答",
+   "device": "PM / ICD / CRT",
+   "maker": "Abbott",
+   "short": "センサ指示レートを上げ始める体動レベル（トリガポイント）。低くすると軽い活動でもレートが上がり、高くすると強い活動にしか反応しない。AbbottではAuto（−0.5〜+2.0）を選ぶとMASに基づいて自動調整される。",
+   "tags": "Abbott / sensor threshold センサ閾値 トリガポイント MAS Auto 体動"
+  },
+  {
+   "term": "最大センサ レート",
+   "en": "Maximum Sensor Rate",
+   "abbr": "MSR",
+   "cat": "レート応答",
+   "device": "PM / ICD / CRT",
+   "maker": "General",
+   "short": "センサによる上昇の上限レート。（220−年齢）×0.9 を目安に設定する。最大トラッキングレートとは別に設定する。",
+   "tags": "MSR Maximum Sensor Rate 最大センサレート 220-年齢 上限"
+  },
+  {
+   "term": "Passive（センサ設定）",
+   "en": "Passive sensor mode",
+   "abbr": "",
+   "cat": "レート応答",
+   "device": "PM / ICD / CRT",
+   "maker": "Abbott",
+   "short": "センサの信号にレートは反応しないが、センサのデータは記録される設定。ノミナルはPassiveで、レートヒストグラムのセンサ指示レートを見てからOn／Offを判断できる。Offにするとデータも記録されない。",
+   "tags": "Abbott / passive sensor センサ On Off ノミナル ヒストグラム センサ指示レート"
+  },
+  {
+   "term": "アラート ピリオド",
+   "en": "Alert period",
+   "abbr": "",
+   "cat": "AV・タイミング",
+   "device": "PM / ICD / CRT",
+   "maker": "General",
+   "short": "不応期が明けてからイベントを待ち受ける期間。この期間に自己波を感知すれば通常のタイミングに戻り、感知しなければ期間の終わりでペーシングが出る。",
+   "tags": "alert period アラートピリオド 不応期 待ち受け エスケープ"
+  },
+  {
+   "term": "インターベンション レート",
+   "en": "Intervention Rate",
+   "abbr": "",
+   "cat": "レート応答",
+   "device": "PM",
+   "maker": "Abbott",
+   "short": "アドバンストヒステリシスが発作と判断したときに引き上げる目標レート。Off、基本レート、自己レート＋0〜＋30、80〜120ppmから選ぶ。自己レートは直近の心室レート64拍の平均を指す。",
+   "tags": "Abbott / intervention rate インターベンションレート アドバンストヒステリシス 神経調節性失神 64拍"
+  },
+  {
+   "term": "A Pace on PVC",
+   "en": "A Pace on PVC",
+   "abbr": "",
+   "cat": "AV・タイミング",
+   "device": "PM",
+   "maker": "Abbott",
+   "short": "AbbottのPVCレスポンスの選択肢のひとつ（Accentでは「心房ペーシング」と表示）。PVCを検出するとPVARPを自動延長し、延長したPVARP内に心房イベントがあればPVARPを直ちに終了して心房ペーシングを出す。心房イベントがなければVAインターバル後に心房ペーシングを出す。",
+   "tags": "Abbott / A Pace on PVC 心房ペーシング PVCレスポンス PVARP PMT予防 Zephyr Victory Accent"
+  },
+  {
+   "term": "+PVARP on PVC",
+   "en": "+PVARP on PVC",
+   "abbr": "",
+   "cat": "AV・タイミング",
+   "device": "PM",
+   "maker": "Abbott",
+   "short": "AbbottのPVCレスポンスのうち、PVCの検出後にPVARPを延長して逆行性伝導を隠し、トラッキングによる心室ペーシングを避ける方式。旧機種の設定で、Zephyr・VictoryではVDD(R)モードのときに選ばれる。延長後のアラートピリオド中に心房センシングすればトラッキングは可能。",
+   "tags": "Abbott / +PVARP on PVC PVARP延長 PVCレスポンス VDD Identity Integrity Verity 旧機種"
+  },
+  {
+   "term": "Auto Detect（PMTレスポンス）",
+   "en": "Auto Detect",
+   "abbr": "",
+   "cat": "AV・タイミング",
+   "device": "PM",
+   "maker": "Abbott",
+   "short": "AbbottのPMTレスポンスの選択肢（Accentでは「心房ペーシング」と表示）。VP-ASインターバルの安定性を見てPMTかどうかを判定し、PMTと判断すると次の心室ペーシングを抑制して逆行性P波の後に心房ペーシングを入れ、連鎖を断つ。判定にはセンス後AVディレイを一時的に変化させる。",
+   "tags": "Abbott / Auto Detect PMTレスポンス PMT VP-AS 安定性 心房ペーシング Zephyr Accent"
+  },
+  {
+   "term": "10 Beats > PMT",
+   "en": "10 Beats > PMT",
+   "abbr": "",
+   "cat": "AV・タイミング",
+   "device": "PM",
+   "maker": "Abbott",
+   "short": "AbbottのPMTレスポンスの旧方式。PMT検出レートを超えるAS-VPイベントが10回連続したあと、1サイクルだけPVARPを延長して連鎖を断つ。安定性の評価を行わないため、洞頻拍でも作動しうる。Zephyr以前の機種で選択できる。",
+   "tags": "Abbott / 10 Beats PMT PVARP延長 PMT検出レート 洞頻拍 Zephyr 旧機種"
+  },
+  {
+   "term": "PMT検出レート",
+   "en": "PMT detection rate",
+   "abbr": "",
+   "cat": "AV・タイミング",
+   "device": "PM / ICD / CRT",
+   "maker": "Abbott",
+   "short": "PMTレスポンスが判定を始めるレートの下限。これを上回る心房レートが出たときにPMTかどうかの評価が動く。低く設定すると洞頻拍でも評価が働き、高くすると遅いPMTを取りこぼす。",
+   "tags": "Abbott / PMT detection rate PMT検出レート FARI PMTレスポンス"
   }
  ],
  "feats": [
