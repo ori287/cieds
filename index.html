@@ -1083,6 +1083,45 @@ loadMaster(false);
     return '<div><dt>'+esc(p[0])+'</dt><dd>'+esc(p[1])+'</dd></div>'}).join("");
    return r?'<section><h4>'+esc(title)+'</h4><dl class="kv">'+r+'</dl></section>':'';
   }
+  /* コネクタ規格ごとの接点数。イラストのリング数に反映する */
+  function connPins(s){
+   var k=String(s||"").toUpperCase();
+   if(k.indexOf("IS4")>=0||k.indexOf("IS-4")>=0)return 4;
+   if(k.indexOf("DF4")>=0||k.indexOf("DF-4")>=0)return 4;
+   if(k.indexOf("DF-1")>=0)return 1;
+   if(k.indexOf("SQ-1")>=0)return 1;
+   if(k.indexOf("6MM")>=0||k.indexOf("5MM")>=0)return 1;
+   if(k.indexOf("VS-1")>=0)return 2;
+   if(k.indexOf("IS-1")>=0)return 2;
+   return 2;
+  }
+  /* 規格名だけを取り出す（「DF4（感知・ペーシング一体）」→「DF4」） */
+  function connStd(s){
+   var m=String(s||"").match(/IS-?4|DF-?4|DF-1|IS-1|VS-1|SQ-1|6mm|5mm/i);
+   return m?m[0]:String(s||"").split("（")[0];
+  }
+  /* ヘッダーの断面イラスト。ポートごとに接点数の違う差込口を描く */
+  function connSvg(rows){
+   if(!rows.length)return "";
+   var h=30, pad=12, bw=176, H=pad*2+rows.length*h, W=330;
+   var s='<svg class="connsvg" viewBox="0 0 '+W+' '+H+'" width="100%" '+
+         'style="max-width:330px;margin:2px 0 10px" role="img" aria-label="コネクタヘッダ">';
+   s+='<path d="M14 '+(pad-4)+' h'+(bw-14)+' v'+(H-pad*2+8)+' H14 a14 14 0 0 1 0-'+(H-pad*2+8)+' z" '+
+      'fill="var(--card,#eef1f6)" stroke="currentColor" stroke-width="1.4" opacity=".85"/>';
+   rows.forEach(function(r,i){
+    var y=pad+i*h+h/2, n=connPins(r[0]);
+    s+='<rect x="34" y="'+(y-8)+'" width="'+(bw-46)+'" height="16" rx="3" '+
+       'fill="#fff" stroke="currentColor" stroke-width="1.1" opacity=".9"/>';
+    s+='<circle cx="27" cy="'+y+'" r="3.4" fill="none" stroke="currentColor" stroke-width="1.3"/>';
+    for(var k=0;k<n;k++){
+     var cx=46+k*Math.min(22,(bw-70)/Math.max(n,1));
+     s+='<circle cx="'+cx+'" cy="'+y+'" r="4.2" fill="none" stroke="currentColor" stroke-width="1.3"/>';
+    }
+    s+='<text x="'+(bw+16)+'" y="'+(y+4)+'" font-size="12" fill="currentColor">'+
+       esc(connStd(r[0]))+' <tspan font-weight="700">('+esc(r[1])+')</tspan></text>';
+   });
+   return s+'</svg>';
+  }
   /* 資料に単位が含まれる値（例「6.5F」）には単位を付け足さない */
   function u(v,unit){
    if(!v)return "";
@@ -1090,7 +1129,8 @@ loadMaster(false);
   }
   var head=[["メーカー",x.maker],["資料上の表記",x.mfr],["取扱会社",x.dealer],["分類",x.cat],
             ["一般名称",x.family],["正式英語名",x.en],["日本語表記",x.alias],
-            ["型番",x.model],["販売期間",x.period]];
+            ["型番",x.model],["NBG/NBDコード",x.nbg],
+            ["国内発売",x.jp_release],["承認番号",x.approval],["販売期間",x.period]];
   var body=x.kind==="gear"
    ?[sec("概要",[["役割",x.role]]),
      sec("仕様",[["内径",x.idfr],["外径",x.odfr],["有効長",x.length],
@@ -1112,16 +1152,35 @@ loadMaster(false);
                  ["コイル間距離",u(x.cgap,"mm")],
                  ["コイル表面積 distal",u(x.csa_d,"mm²")],
                  ["コイル表面積 prox",u(x.csa_p,"mm²")]])]
-   :[sec("本体",[["シリーズ",x.series],["コネクタ",x.connector],
-                 ["寸法",x.size],["質量",x.mass||(x.weight&&x.weight+" g")],
-                 ["容積",x.volume||""]]),
-     sec("保険・価格",[["償還価格",x.price],["保険区分",x.hoken]]),
-     sec("治療・センシング",[["ショック出力",x.shock],["充電時間",x.charge],
-                 ["センシングオプション",x.sensing],["最大出力",x.energy&&x.energy+" J"]]),
+   :(function(){
+     var ports=[[x.port_ra,"RA"],[x.port_rv,"RV"],[x.port_lv,"LV"],[x.port_hv,"HV"]]
+               .filter(function(r){return r[0]});
+     return [
+     sec("寸法とイメージング",[["寸法（W×H×D）",x.size],["容積",x.volume],
+                 ["質量",x.mass||(x.weight&&x.weight+" g")],
+                 ["X線識別マーカ",x.xray]]),
+     (ports.length?'<section><h4>コネクタヘッダ</h4>'+connSvg(ports)+
+       '<dl class="kv">'+ports.map(function(r){
+         return '<div><dt>'+esc(r[1])+'ポート</dt><dd>'+esc(r[0])+'</dd></div>'}).join("")+
+       (x.screwdriver?'<div><dt>ドライバサイズ</dt><dd>'+esc(x.screwdriver)+'</dd></div>':'')+
+       '</dl></section>'
+      :sec("コネクタヘッダ",[["コネクタ",x.connector],["ドライバサイズ",x.screwdriver]])),
+     sec("MRI",[["対応磁場",x.mri],["撮像条件",x.mri_cond],
+                 ["撮像範囲",x.mri_zone],["ガントリ",x.mri_gantry],
+                 ["MRI識別マーカ",x.mri_xray]]),
      sec("電池・寿命",[["電池寿命",x.longevity],["算出条件",x.longevity_cond],
-                 ["電池",x.battery],["電池表示",x.eri_eos],
+                 ["電池型番",x.battery_model],["電池容量",x.battery_cap],
+                 ["ペーシングレート @BOL",x.pace_bol],["ペーシングレート @EOS/RRT",x.pace_eos],
+                 ["マグネットレート @BOL",x.magnet_bol],["マグネットレート @EOS/RRT",x.magnet_eos],
+                 ["EOS/RRT の挙動",x.eos_behavior],["電池表示",x.eri_eos],
                  ["バックアップ作動",x.backup]]),
-     sec("MRI",[["MRI対応",x.mri]])];
+     sec("通信",[["無線テレメトリ",x.rf],["遠隔モニタリング",x.rm],
+                 ["Bluetooth",x.bt],["患者アプリ",x.app],
+                 ["通信方式",x.comm_tech],["遠隔モニタリング網",x.rm_network]]),
+     sec("診断機能",[["診断",x.diag]]),
+     sec("治療・センシング",[["ショック出力",x.shock],["充電時間",x.charge],
+                 ["センシングオプション",x.sensing]]),
+     sec("保険・価格",[["償還価格",x.price],["保険区分",x.hoken]])]})();
   $("#pDetail").innerHTML=
    '<button class="back" id="pBack">‹ 製品一覧</button>'+
    '<h2>'+(x.name?esc(x.name):esc(x.model||""))+'</h2>'+
