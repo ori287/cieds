@@ -1,6 +1,6 @@
 {
- "v": 28,
- "updated": "2026-09-04",
+ "v": 31,
+ "updated": "2026-09-05",
  "gloss": [
   {
    "term": "VVT",
@@ -8259,8 +8259,8 @@
    "cat": "AV・タイミング",
    "device": "PM",
    "maker": "Abbott",
-   "short": "自己波を感知した後に設けられる不応期。Accentのノミナルは心房93ms・心室250msで、ペーシング後の不応期（心房190ms・心室250ms）とは別に設定する。",
-   "tags": "Abbott / sensing refractory period センシング不応期 ペーシング不応期 93ms 250ms 190ms"
+   "short": "自己波を感知した後に設けられる不応期。この窓の中で最大波高値を取り込み、窓内の信号はすべて同一の心内電位として扱うため、大きな電位が入ってもレート検出には影響しない。AbbottのICDのノミナルは心房93ms・心室125ms（ほかに125／157ms）。ペースメーカ Accent のノミナルは心房93ms・心室250msで、ペーシング後の不応期とは別に設定する。",
+   "tags": "Abbott / sensing refractory period センシング不応期 ペーシング不応期 93ms 250ms 190ms SRP Sensed Refractory Period 93ms 125ms 157ms 最大波高値 取り込み レート検出に影響しない ICD"
   },
   {
    "term": "レートブランチ",
@@ -8691,6 +8691,346 @@
    "maker": "General",
    "short": "双極リードの先端電極とリング電極の距離。間隔が狭いほど感知する範囲が局所に限られ、ファーフィールドR波の混入が減る。心房リードでは間隔が広いほどFFRWの検出率が上がると報告されている。",
    "tags": "チップ-リング間隔 電極間隔 Tip-to-Ring spacing 1.1mm 10mm FFRW ファーフィールド 心房リード OptiSense"
+  },
+  {
+   "term": "ビニング（Binning）",
+   "en": "Binning",
+   "abbr": "",
+   "cat": "ICD",
+   "device": "ICD / CRT-D",
+   "maker": "Abbott",
+   "short": "AbbottのICDが心室イベントをゾーンに振り分けて積算する方式。CIとIAが同じゾーンならそのゾーンへ、異なるゾーンなら速いほうへBinし、どちらかがサイナスゾーンなら保留（Not Binned）とする。",
+   "tags": "Binning ビニング Binned Not Binned CI IA 積算 ゾーン 振り分け Abbott"
+  },
+  {
+   "term": "カレントインターバル",
+   "en": "Current Interval",
+   "abbr": "CI",
+   "cat": "ICD",
+   "device": "ICD / CRT-D",
+   "maker": "Abbott",
+   "short": "連続する2つの心室イベント（VS-VS、VS-VP、VP-VS、VP-VP）の間隔をミリ秒に換算した値。頻拍検出でインターバルアベレージと組み合わせて使う。",
+   "tags": "Current Interval CI カレントインターバル 心室イベント 間隔 VS VP Binning"
+  },
+  {
+   "term": "インターバルアベレージ",
+   "en": "Interval Average",
+   "abbr": "IA",
+   "cat": "ICD",
+   "device": "ICD / CRT-D",
+   "maker": "Abbott",
+   "short": "カレントインターバルと直前3心拍を足して4で割った平均値。平均レートの変化をなめらかにとらえるために使う。サドンオンセットの比較やATPのBCL算出でも基準になる。",
+   "tags": "Interval Average IA インターバルアベレージ 4拍平均 平均レート サドンオンセット BCL Binning"
+  },
+  {
+   "term": "サイナス再検出",
+   "en": "Sinus redetection",
+   "abbr": "",
+   "cat": "ICD",
+   "device": "ICD / CRT-D",
+   "maker": "Abbott",
+   "short": "頻拍が停止して洞調律に戻ったと判断する条件。プログラムされたインターバル数ぶんの VS または VP が必要で、Fast 3／Nominal 5／Slow 7 インターバルから選ぶ。VS・VP は連続である必要はないが、\"F\"／\"T2\"／\"T\" の Binned が入るとカウントはリセットされる。",
+   "tags": "サイナス再検出 Sinus redetection サイナス復帰 3 5 7 インターバル 頻拍停止 Abbott 連続でなくてよい リセット Binned F T2 T"
+  },
+  {
+   "term": "再検出（頻拍）",
+   "en": "Redetection",
+   "abbr": "",
+   "cat": "ICD",
+   "device": "ICD / CRT-D",
+   "maker": "General",
+   "short": "初回の治療後に頻拍がまだ続いているかを判定するための条件。初回検出よりインターバル数を少なくするのが原則で、AbbottではVTゾーン6〜20（ノミナル6）、VFゾーンは6インターバル固定。",
+   "tags": "再検出 Redetection 初回検出 VT再検出 VF再検出 6インターバル 固定 治療後"
+  },
+  {
+   "term": "最高感度（可変センシング）",
+   "en": "Maximum sensitivity",
+   "abbr": "",
+   "cat": "センシング",
+   "device": "ICD / CRT-D",
+   "maker": "Abbott",
+   "short": "可変センシングで感度が減衰しきったときに到達する最も鋭い値。これより鈍くはならず、センシング可能な最小の心内活動電位を決める。Abbottは心室で Defibrillator と Pacemaker を個別に設定でき、Current™ 世代のノミナルは心房0.2mV・心室Defib 0.3mV。プログラマ上の項目名は Minimum threshold（最小感度）。",
+   "tags": "最高感度 最高到達感度 Maximum sensitivity Minimum threshold 最小感度 0.2mV 0.3mV Defibrillator Pacemaker 個別 SenseAbility 可変センシング"
+  },
+  {
+   "term": "BCL",
+   "en": "Burst Cycle Length",
+   "abbr": "BCL",
+   "cat": "ICD",
+   "device": "ICD / CRT-D",
+   "maker": "Abbott",
+   "short": "ATPの刺激間隔を、頻拍のレートに対する割合で指定する設定。検出時のインターバルアベレージ（IA）をVTレートとして判断し、その設定％のインターバルでペーシングを入れる。設定50〜100％（ノミナル85％）。",
+   "tags": "BCL Burst Cycle Length バーストサイクルレングス ATP 刺激間隔 85% IA 頻拍周期"
+  },
+  {
+   "term": "Min BCL",
+   "en": "Minimum Burst Cycle Length",
+   "abbr": "",
+   "cat": "ICD",
+   "device": "ICD / CRT-D",
+   "maker": "Abbott",
+   "short": "ATPの刺激間隔がこれより短くならないようにする下限。スキャンやランプで間隔を詰めていってもこの値で止まる。画面例は200ms。 [ATP BCL] は [Min BCL] 以上でなければならず、検出インターバル×BCL(％) が Min BCL を下回るとプログラマが競合として警告する。",
+   "tags": "Min BCL 最小BCL 下限 200ms ATP スキャン ランプ 刺激間隔"
+  },
+  {
+   "term": "バースト回数",
+   "en": "Number of Bursts",
+   "abbr": "",
+   "cat": "ICD",
+   "device": "ICD / CRT-D",
+   "maker": "Abbott",
+   "short": "ATP中に出力されるペーシングバーストを何回実施するかの設定。設定1、2、…15（ノミナル3）。",
+   "tags": "バースト回数 Number of Bursts ATP シーケンス 3回 15回 バースト"
+  },
+  {
+   "term": "刺激回数",
+   "en": "Number of Stimuli",
+   "abbr": "",
+   "cat": "ICD",
+   "device": "ICD / CRT-D",
+   "maker": "Abbott",
+   "short": "各バーストにおいて出力される刺激（パルス）の数。設定2、3、…20（ノミナル8）。多いほど停止率は上がるが、加速のリスクも増える。",
+   "tags": "刺激回数 Number of Stimuli パルス数 8発 20発 ATP バースト"
+  },
+  {
+   "term": "追加刺激／バースト",
+   "en": "Add Stimuli Per Burst",
+   "abbr": "",
+   "cat": "ICD",
+   "device": "ICD / CRT-D",
+   "maker": "Abbott",
+   "short": "最初のバーストのあと、バーストごとに刺激を1つずつ追加していく設定。バーストあたりの全刺激数は20刺激までに制限される。設定 On／Off（ノミナル Off）。",
+   "tags": "追加刺激 Add Stimuli Per Burst バーストあたり 20刺激 ATP"
+  },
+  {
+   "term": "リアダプティブ",
+   "en": "Readaptive",
+   "abbr": "",
+   "cat": "ICD",
+   "device": "ICD / CRT-D",
+   "maker": "Abbott",
+   "short": "ATPを行う前に毎回VTのサイクルレングスを測定し直してBCLを計算する設定。頻拍周期が変化していく症例に対応できる。",
+   "tags": "リアダプティブ Readaptive ATP BCL VTサイクルレングス 再測定"
+  },
+  {
+   "term": "スキャン ステップ",
+   "en": "Scan Step",
+   "abbr": "",
+   "cat": "ICD",
+   "device": "ICD / CRT-D",
+   "maker": "Abbott",
+   "short": "ATPでスキャンをOnにしたとき、1つのバーストと次のバーストとのあいだで初期BCLを短縮する幅。ランプステップがバースト内の短縮幅であるのに対し、こちらはバースト間の短縮幅。",
+   "tags": "スキャンステップ Scan Step ランプステップ Ramp Step 最大ステップ 10ms ATP バースト間"
+  },
+  {
+   "term": "キャパシタ リフォーミング",
+   "en": "Capacitor reformation",
+   "abbr": "",
+   "cat": "ICD",
+   "device": "ICD / CRT-D",
+   "maker": "General",
+   "short": "アルミ電解コンデンサの酸化アルミニウム被膜が長期間の未使用で失われた状態（Deformation）を、充電によって回復させる操作。放置するとチャージ時間が延長し電池消耗が進むため、ICDは定期的に自動で実施する。",
+   "tags": "キャパシタ リフォーミング Reformation Deformation 酸化被膜 アルミ電解コンデンサ チャージ時間 メンテナンス"
+  },
+  {
+   "term": "キャパシタ メンテナンス",
+   "en": "Capacitor maintenance",
+   "abbr": "",
+   "cat": "ICD",
+   "device": "ICD / CRT-D",
+   "maker": "Abbott",
+   "short": "キャパシタの被膜劣化から再形成までの一連の流れを指すAbbottの呼称。設定したチャージインターバル（1〜6か月）ごとに自動で行われ、手動実行では最大電圧までチャージしたのち約1分で完了する。開始後は中止できない。",
+   "tags": "キャパシタメンテナンス Capacitor maintenance チャージインターバル 845V 1〜6か月 手動 自動 中止できない"
+  },
+  {
+   "term": "パリレンコーティング",
+   "en": "Parylene coating",
+   "abbr": "",
+   "cat": "リード",
+   "device": "ICD",
+   "maker": "Abbott",
+   "short": "ICDリードのトラブル発生原因への対策として用いられる被膜。DynamicTx（ショート発生時の対策）、SecureSense（検出強化と不適切作動低減）と並ぶ、リード不全対策の3本柱のひとつと位置づけられている。",
+   "tags": "パリレンコーティング Parylene coating リード不全対策 DynamicTx SecureSense 被膜 絶縁"
+  },
+  {
+   "term": "過電流検出",
+   "en": "Over-Current Detection",
+   "abbr": "OCD",
+   "cat": "ICD",
+   "device": "ICD / CRT-D",
+   "maker": "Abbott",
+   "short": "高電圧ショックの放電時に電流値を測定し、過電流を検出した時点で放電を自動的に中止する機能。Abbottの判定値は60A。デバイスとリードを過大な負荷から守るための仕組みで、DynamicTx はこれに極性の自動変更を加えたもの。",
+   "tags": "過電流検出 OCD Over-Current Detection 60A 放電中止 ショート 絶縁不良 DynamicTx"
+  },
+  {
+   "term": "DynamicTx™",
+   "en": "DynamicTx",
+   "abbr": "",
+   "cat": "ICD",
+   "device": "ICD / CRT-D",
+   "maker": "Abbott",
+   "short": "除細動系に電気的ショートが生じた際、過電流を検出して放電を中止し、頻拍が続いていれば次の治療でショック極性を自動的に変更する機能。RV−SVC/CAN → RV/CAN → RV/SVC の順に切り替える。",
+   "tags": "DynamicTx ダイナミックTx 過電流 OCD 60A ショック極性 RV SVC CAN 絶縁不良 Abbott"
+  },
+  {
+   "term": "SecureSense™",
+   "en": "SecureSense",
+   "abbr": "",
+   "cat": "ICD",
+   "device": "ICD / CRT-D",
+   "maker": "Abbott",
+   "short": "RV Tip-Ring（近接）とRV Coil-Can（遠隔）のインターバルを比較し、相関がなければリードノイズと判断して治療を抑制する機能。設定は On（ノミナル）／Off／Passive。",
+   "tags": "SecureSense セキュアセンス リードノイズ RV Tip-Ring RV Coil-Can near field far field 相関 治療抑制 Abbott"
+  },
+  {
+   "term": "エピソーダルペーシング",
+   "en": "Episodal pacing",
+   "abbr": "",
+   "cat": "ICD",
+   "device": "ICD / CRT-D",
+   "maker": "Abbott",
+   "short": "頻拍を検出しているあいだ、徐脈ペーシングを非トラッキングモード（VVI／DDI／AAI）へ切り替える機能。心室イベントが3つVT/VFにBinされると開始し、サイナス復帰まで継続する。",
+   "tags": "エピソーダルペーシング Episodal pacing 非トラッキングモード DDI VVI AAI 頻拍中 サイナス復帰 Abbott"
+  },
+  {
+   "term": "If Any／If All（SVT診断オプション）",
+   "en": "If Any / If All",
+   "abbr": "",
+   "cat": "ICD",
+   "device": "ICD / CRT-D",
+   "maker": "Abbott",
+   "short": "レートブランチ内の追加ディスクリミネータで診断が割れたときの扱いを決める設定。If Any は1つでもVTと診断すれば治療、If All は全員一致でVTと診断したときだけ治療する（ノミナル）。If Any は感度側、If All は特異度側に働く。",
+   "tags": "If Any If All SVT診断オプション 診断 レートブランチ ディスクリミネータ 感度 特異度 ノミナル Abbott"
+  },
+  {
+   "term": "ASC",
+   "en": "Auto Sensitivity Control",
+   "abbr": "ASC",
+   "cat": "センシング",
+   "device": "ICD / CRT-D",
+   "maker": "Abbott",
+   "short": "AbbottのICDの可変センシング機構の正式名称で、製品名は SenseAbility™。Photon® DR 以降の St. Jude Medical・ICD 全機種に搭載されている。",
+   "tags": "ASC Auto Sensitivity Control SenseAbility 可変センシング 自動感度調整 Photon DR Abbott 全機種"
+  },
+  {
+   "term": "デジタル整流波形",
+   "en": "Digitally Rectified Signal",
+   "abbr": "",
+   "cat": "センシング",
+   "device": "ICD / CRT-D",
+   "maker": "Abbott",
+   "short": "フィルタ処理した心内電位を、すべて陽性の単相性波形に置き換えたもの。AbbottのICDはこの整流後の波形に対して感度のしきい値を当てて感知を判定する。波形の向きに左右されずに波高を評価できる。",
+   "tags": "デジタル整流 Digitally Rectified Signal Filtered Signal 単相性 整流 陽性 フィルタ処理 センシング Abbott"
+  },
+  {
+   "term": "センシングモード（自動／固定）",
+   "en": "Sensing mode (auto / fixed)",
+   "abbr": "",
+   "cat": "センシング",
+   "device": "ICD / CRT-D",
+   "maker": "Abbott",
+   "short": "感度を自動で可変させるか一定に保つかの選択。AbbottのICDでは心房のみ自動と固定を選べ、固定にすると通常のペースメーカと同じ固定感度になる。心室は自動のみで固定は選べない。",
+   "tags": "センシングモード オートセンシング 自動 固定 Fixed Sensing Automatic Sensing 心房のみ 心室 Abbott"
+  },
+  {
+   "term": "ペーシング後 Threshold Start",
+   "en": "Post-Paced Threshold Start",
+   "abbr": "",
+   "cat": "センシング",
+   "device": "ICD / CRT-D",
+   "maker": "Abbott",
+   "short": "ペーシング後の可変センシングで用いる開始感度。ペーシング後はR波・P波が存在しないため、センシング後のように％では指定できず mV で直接設定する（0.2〜3.0mV）。心室では［Auto］が選べ、レート上昇に応じて値が下がる。",
+   "tags": "ペーシング後 Threshold Start Post-Paced Threshold Start 0.2 3.0mV Auto QT間隔短縮 模倣 Abbott"
+  },
+  {
+   "term": "ペーシング後不応期（ICD）",
+   "en": "Pace Refractory",
+   "abbr": "",
+   "cat": "センシング",
+   "device": "ICD / CRT-D",
+   "maker": "Abbott",
+   "short": "ペーシング後に設けるセンシングの不応期。Abbottの心室では 125ms／160〜400ms（30ms刻み）／440／470ms から選び、ノミナルは250ms。センシング後の不応期（センシング不応期）とは別に設定する。",
+   "tags": "ペーシング後不応期 Pace Refractory 250ms 125ms 440 470 センシング不応期 SRP Abbott"
+  },
+  {
+   "term": "Far Rサプレッション",
+   "en": "Far R suppression",
+   "abbr": "",
+   "cat": "センシング",
+   "device": "PM / ICD / CRT",
+   "maker": "Abbott",
+   "short": "Atlas+Ⅱ までの世代で PVAB に相当していた機能の名称。心室ペーシング後・センシングイベント後に心房不応期を設け、心房チャンネルがファーフィールドR波を検出するのを防ぐ。Current™ 以降は PVAB という名称に変わった（機能は同じ）。",
+   "tags": "Far Rサプレッション Far R suppression PVAB Atlas+II Current 名称変更 ファーフィールドR波 心房ブランキング Abbott"
+  },
+  {
+   "term": "ゾーン設定（Configuration）",
+   "en": "Zone configuration",
+   "abbr": "",
+   "cat": "ICD",
+   "device": "ICD / CRT-D",
+   "maker": "Abbott",
+   "short": "段階的に治療を行うために検出ゾーンをいくつ置くかの設定。Off／1ゾーン／2ゾーン／3ゾーンから選ぶ。Off は「除細動機能Off・抗徐脈機能On または Off」を意味し、手術時や不適切作動の回避に用いる。",
+   "tags": "ゾーン設定 Configuration 0〜3ゾーン Off 1ゾーン 2ゾーン 3ゾーン 除細動機能Off 抗徐脈機能 電気メス Abbott"
+  },
+  {
+   "term": "前回設定の復帰",
+   "en": "Restore previous settings",
+   "abbr": "",
+   "cat": "ICD",
+   "device": "ICD / CRT-D",
+   "maker": "Abbott",
+   "short": "ゾーン設定をOffにする際、Offにする前の設定をICDが記憶しておき、あとから呼び出す機能。［前回設定の復帰］ボタンで呼び出せ、同一のプログラマでなくても復帰できる。",
+   "tags": "前回設定の復帰 Restore ゾーン設定Off 記憶 呼び出し 別のプログラマ 手術 Abbott"
+  },
+  {
+   "term": "CVRT",
+   "en": "Cardioversion Therapy",
+   "abbr": "CVRT",
+   "cat": "ICD",
+   "device": "ICD / CRT-D",
+   "maker": "Abbott",
+   "short": "Abbottのプログラマ画面で同期下ショック（カルディオバージョン）を指す表記。VTゾーンの治療は［ATP／CVRT／Off］から選び、ATP治療の後に選べるのは CVRT か Off だけ。最大出力での治療は Defib と表記される。",
+   "tags": "CVRT Cardioversion Therapy カルディオバージョン 同期下ショック Defib ATP ゾーン治療 Abbott"
+  },
+  {
+   "term": "Binnedマーカ（T／T2／F）",
+   "en": "Binned markers",
+   "abbr": "",
+   "cat": "ICD",
+   "device": "ICD / CRT-D",
+   "maker": "Abbott",
+   "short": "AbbottのICDのマーカーで、どのゾーンに振り分け（Bin）られたかを示す記号。VTゾーンが T、VT-2ゾーンが T2、VFゾーンが F。サイナスや Not Binned の拍には印が付かないため、カウントが進んでいない区間が読み取れる。",
+   "tags": "Binnedマーカ T T2 F マーカ VTゾーン VT-2 VFゾーン Not Binned 積算 検出 Abbott"
+  },
+  {
+   "term": "モニタゾーン",
+   "en": "Monitor zone",
+   "abbr": "",
+   "cat": "ICD",
+   "device": "ICD / CRT-D",
+   "maker": "General",
+   "short": "治療を行わず記録だけを行うよう設定した検出ゾーン。頻拍の頻度や持続を把握したいが治療は避けたい場合に使う。Abbottでは2ゾーン設定のVT、3ゾーン設定のVT-1に設定でき、VT-2には設定できない。",
+   "tags": "モニタゾーン Monitor zone モニタのみ 治療なし 記録 VT-1 VT-2 設定できない Abbott"
+  },
+  {
+   "term": "再検出レート",
+   "en": "Redetection rate / interval",
+   "abbr": "",
+   "cat": "ICD",
+   "device": "ICD / CRT-D",
+   "maker": "Abbott",
+   "short": "治療後に頻拍が続いているかを判定するときのゾーン境界。［VFと同じ］［VF＋50ms］［VTと同じ］［VT＋30ms］または個別レートから選ぶ。遅い側へ広げると、治療後にレートが落ちた頻拍も同じゾーンで捉えられる。",
+   "tags": "再検出レート Redetection rate VFと同じ VF+50ms VTと同じ VT+30ms ゾーン境界 治療後 Abbott"
+  },
+  {
+   "term": "FastPath™ サマリー",
+   "en": "FastPath Summary",
+   "abbr": "",
+   "cat": "フォロー",
+   "device": "ICD / CRT-D",
+   "maker": "Abbott",
+   "short": "Merlin™ PCS の初期画面で、アラート・電池状態・テスト結果（閾値、波高値、リードインピーダンス、HVリードインピーダンス）・ゾーン設定・エピソード数・ペーシング率を1画面にまとめて表示する。",
+   "tags": "FastPath サマリー FastPath Summary Merlin PCS 初期画面 アラート エピソード数 AP% VP% AMS% Abbott"
   }
  ],
  "feats": [
@@ -9382,7 +9722,7 @@
    "cat": "ICD",
    "note": "アルゴリズムタブ（メーカー別）の登録内容から自動生成。",
    "mdt": "Post VT/VF Shock Pacing",
-   "abt": "—",
+   "abt": "ショック後ペーシング（Post-Shock Pacing）",
    "bio": "—",
    "bsx": "Post Therapy Pacing",
    "mcp": "Post-shock pacing mode"
