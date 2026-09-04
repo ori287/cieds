@@ -1,5 +1,5 @@
 {
- "v": 25,
+ "v": 28,
  "updated": "2026-09-04",
  "gloss": [
   {
@@ -5499,8 +5499,8 @@
    "cat": "ICD",
    "device": "ICD",
    "maker": "General",
-   "short": "洞調律時のQRS波形を記録し、頻拍波形とのマッチ率で鑑別する基準波形の取得。感度が不適切だと波形がクリップされマッチ率が下がる。",
-   "tags": "テンプレート取得 Template acquisition テンプレート template マッチ率 二峰性 クリッピング 波形識別"
+   "short": "洞調律時のQRS波形を記録し、頻拍波形とのマッチ率で鑑別する基準波形の取得。取得しないままモーフォロジーをOnにするとスコアリングがすべて0％になり、頻拍がすべてVTと診断される。感度が不適切だと波形がクリップされマッチ率が下がる。",
+   "tags": "テンプレート取得 Template acquisition テンプレート template マッチ率 二峰性 クリッピング 波形識別 0% 未取得 不適切作動 自動取得 マニュアル取得"
   },
   {
    "term": "Wavelet",
@@ -5519,8 +5519,8 @@
    "cat": "ICD",
    "device": "ICD",
    "maker": "General",
-   "short": "Abbottの頻拍鑑別ロジック。A-Vインターバル、モフォロジー、AV associationで判定。V>AならVT、V<AならAF/AFLとして評価する。",
-   "tags": "SVT discriminators SVT discriminators (Abbott) SVT discriminators Abbott モフォロジー AV association Interval Stability"
+   "short": "Abbottの頻拍鑑別ロジックの総称。デュアルチャンバではレートブランチでV＜A・V＝A・V＞Aに分け、ブランチごとにモーフォロジー、インターバルスタビリティ、不整脈オンセットを適用して、結論を If Any／If All で統合する。",
+   "tags": "SVT discriminators SVT discriminators (Abbott) SVT discriminators Abbott レートブランチ Rate Branch モーフォロジー Morphology Interval Stability 不整脈オンセット AV Association If Any If All ShockGuard"
   },
   {
    "term": "SMART",
@@ -6999,8 +6999,8 @@
    "cat": "ICD",
    "device": "ICD",
    "maker": "Abbott",
-   "short": "Abbottのショック波形調整機能。ショックリードのインピーダンスに応じてPhase 1と Phase 2の持続時間が適正化される。チルトを変更できる数少ない機能で、高除細動閾値の症例に用いる。",
-   "tags": "Manufacturer / ICD / Abbott / DeFT Response tilt チルト Phase1 Phase2 高DFT"
+   "short": "Abbottのショック調整オプション。パルス幅調整・可変チルト・極性変更・SVCコイル On/Off の4つを組み合わせて高除細動閾値の症例に対応する。ショックリードのインピーダンスに応じてPhase 1・Phase 2 の持続時間が適正化される。",
+   "tags": "Manufacturer / ICD / Abbott / DeFT Response tilt チルト Phase1 Phase2 高DFT パルス幅 SVCコイル 極性 高DFT 細胞膜反応時間 Fortify Ellipse"
   },
   {
    "term": "Fine VF detection",
@@ -7189,8 +7189,8 @@
    "cat": "センシング",
    "device": "ICD",
    "maker": "Abbott",
-   "short": "AbbottのT波識別に用いるフィルタ。低周波成分を減衰させてT波オーバーセンシングを抑える。",
-   "tags": "Manufacturer / ICD / Abbott / 低周波減衰 フィルタ TWOS T波"
+   "short": "AbbottのT波識別に用いるフィルタ。低周波成分を減衰させてT波オーバーセンシングを抑え、R波とT波の振幅比を従来の約2〜3倍にする。ノミナルOn。変更すると SenseAbility™ の設定も変わる。",
+   "tags": "Manufacturer / ICD / Abbott / 低周波減衰 フィルタ TWOS T波 Low Frequency Attenuation R波/T波比 高度な設定 SenseAbility 連動 Ellipse"
   },
   {
    "term": "Thoracic Impedance（BIOTRONIK）",
@@ -8261,6 +8261,436 @@
    "maker": "Abbott",
    "short": "自己波を感知した後に設けられる不応期。Accentのノミナルは心房93ms・心室250msで、ペーシング後の不応期（心房190ms・心室250ms）とは別に設定する。",
    "tags": "Abbott / sensing refractory period センシング不応期 ペーシング不応期 93ms 250ms 190ms"
+  },
+  {
+   "term": "レートブランチ",
+   "en": "Rate Branch",
+   "abbr": "",
+   "cat": "ICD",
+   "device": "ICD / CRT-D",
+   "maker": "Abbott",
+   "short": "頻拍検出時に心房レートと心室レートの中央値を比べ、V＜A（AF/AFL）・V＝A（Sinus Tachy）・V＞A（VT/VF）に振り分けるAbbottのSVT鑑別の入口。V＞Aは追加鑑別なしで治療に進む。V＝Aは差が30ms以内。",
+   "tags": "レートブランチ Rate Branch Abbott SVT鑑別 V<A V=A V>A AF/AFL Sinus Tachy VT/VF 分岐"
+  },
+  {
+   "term": "ファーフィールドMD",
+   "en": "Far Field MD Morphology",
+   "abbr": "FFMD",
+   "cat": "ICD",
+   "device": "ICD / CRT-D",
+   "maker": "Abbott",
+   "short": "RVコイル（またはRVチップ）と本体缶の間の遠隔電位でテンプレートと波形を比べるモーフォロジー方式。Ellipse以降のノミナル。マッチ率は65〜95％（ノミナル90％）。",
+   "tags": "ファーフィールドMD Far Field MD FFMD Morphology Discriminator RVコイル Can 遠隔電位 テンプレート Abbott"
+  },
+  {
+   "term": "オリジナルMD",
+   "en": "Original MD Morphology",
+   "abbr": "",
+   "cat": "ICD",
+   "device": "ICD / CRT-D",
+   "maker": "Abbott",
+   "short": "RVtip–RVringの局所心内心電図で、波形を区画に分けて面積や極性から一致率を出すモーフォロジー方式。マッチ率は30〜95％（ノミナル60％）で、ファーフィールドMDより広く振れる。",
+   "tags": "オリジナルMD Original MD Morphology Discriminator RVtip RVring 局所 面積 極性 マッチ率 Abbott"
+  },
+  {
+   "term": "マッチ率（モーフォロジー）",
+   "en": "Template match percentage",
+   "abbr": "",
+   "cat": "ICD",
+   "device": "ICD / CRT-D",
+   "maker": "Abbott",
+   "short": "テンプレートと頻拍時波形の一致率のしきい値。5％刻みで設定する。下げるほど特異度が上がり（SVTと判定しやすい）、上げるほど感度が上がる。ファーフィールドMDは65〜95％、オリジナルMDは30〜95％。",
+   "tags": "マッチ率 Template match percentage テンプレート 一致率 モーフォロジー 感度 特異度 Abbott 5%刻み スコアリング 三角形"
+  },
+  {
+   "term": "テンプレートマッチ基準",
+   "en": "Template match criteria",
+   "abbr": "",
+   "cat": "ICD",
+   "device": "ICD / CRT-D",
+   "maker": "Abbott",
+   "short": "マッチ率を満たした拍が、ウィンドウ内で何拍あればSVTとするかの基準（3/10、7/12 など）。分子は分母より大きくできず、検出拍数より大きくもできない。分子が1に近いほど感度が上がる。",
+   "tags": "テンプレートマッチ基準 Template match criteria マッチ数 ウィンドウサイズ 3/10 7/12 X of Y Abbott"
+  },
+  {
+   "term": "インターバルスタビリティ",
+   "en": "Interval Stability",
+   "abbr": "",
+   "cat": "ICD",
+   "device": "ICD / CRT-D",
+   "maker": "Abbott",
+   "short": "V＜Aブランチで使うR-R間隔の安定性の評価。ウィンドウ内の最長・最短を無視した第2最長と第2最短の差をスタビリティデルタと比べ、大きければ心房細動として治療を抑制する。",
+   "tags": "インターバルスタビリティ Interval Stability 安定性 第2最長 第2最短 心房細動 治療抑制 Abbott"
+  },
+  {
+   "term": "スタビリティデルタ",
+   "en": "Stability delta",
+   "abbr": "",
+   "cat": "ICD",
+   "device": "ICD / CRT-D",
+   "maker": "Abbott",
+   "short": "インターバルスタビリティで安定・不安定を分けるしきい値。30〜500ms。Gallant／Entrant 世代の資料はノミナル40ms、Current 世代の資料はノミナル80msで世代差と思われる。大きくすると感度が上がり、小さくすると特異度が上がる。",
+   "tags": "スタビリティデルタ Stability delta Δ値 40ms 感度 特異度 心房細動 Abbott 80ms 世代差 Current"
+  },
+  {
+   "term": "スタビリティウィンドウ",
+   "en": "Stability window size",
+   "abbr": "",
+   "cat": "ICD",
+   "device": "ICD / CRT-D",
+   "maker": "Abbott",
+   "short": "インターバルスタビリティが安定性を評価する対象のインターバル数。8〜20（ノミナル12）。この中の最長と最短は無視される。",
+   "tags": "スタビリティウィンドウ Stability window size インターバル数 12インターバル Abbott"
+  },
+  {
+   "term": "AVアソシエーション",
+   "en": "AV Association",
+   "abbr": "AVA",
+   "cat": "ICD",
+   "device": "ICD / CRT-D",
+   "maker": "Abbott",
+   "short": "インターバルスタビリティに付属するサブディスクリミネータ。VTと判断されたときに、R波に先行するPR間隔の安定性を見る。PR安定ならAV同期＝心房粗動（SVT）、PR不安定ならAV解離＝VT。ノミナルの記載は資料により異なる（Current 世代の資料は Passive）。",
+   "tags": "AVアソシエーション AV Association AVA サブディスクリミネータ PR間隔 心房粗動 AV解離 Atrial Flutter Abbott Passive ノミナル 世代差"
+  },
+  {
+   "term": "AVアソシエーションデルタ",
+   "en": "AV association delta",
+   "abbr": "",
+   "cat": "ICD",
+   "device": "ICD / CRT-D",
+   "maker": "Abbott",
+   "short": "AVアソシエーションでPR間隔の安定・不安定を分けるしきい値。30〜150ms（ノミナル60ms）。Ellipse™ 世代の資料でもノミナル60msと明記されている。スタビリティデルタとは逆向きで、小さくすると感度、大きくすると特異度が上がる。",
+   "tags": "AVアソシエーションデルタ AV association delta 60ms PR間隔 感度 特異度 Abbott"
+  },
+  {
+   "term": "サイナスインターバルヒストリー",
+   "en": "Sinus Interval History",
+   "abbr": "SIH",
+   "cat": "ICD",
+   "device": "ICD / CRT-D",
+   "maker": "Abbott",
+   "short": "［心室のみ］設定のときだけ使えるインターバルスタビリティのサブディスクリミネータ。スタビリティウィンドウ内に CI または IA がサイナスと判定された拍がいくつあるかを数え、SIHカウント（1〜8、ノミナル2）以上あればSVTとする。デュアルチャンバ設定では選べない。",
+   "tags": "サイナスインターバルヒストリー Sinus Interval History SIH 心室のみ Not Binned VS Sinus カウント Abbott CI IA サイナス カウント デュアルチャンバでは設定不可"
+  },
+  {
+   "term": "サドンオンセット",
+   "en": "Sudden Onset",
+   "abbr": "",
+   "cat": "ICD",
+   "device": "ICD / CRT-D",
+   "maker": "Abbott",
+   "short": "ノンサイナス拍のインターバルと2・4・6・8拍前のインターバルの差の最大値をオンセットデルタと比べ、突然の立ち上がりならVTとする方式。シングルチャンバや［心室のみ］ではこちらだけが使える。",
+   "tags": "サドンオンセット Sudden Onset 不整脈オンセット オンセットデルタ IA 2拍前 4拍前 突然 洞頻拍 Abbott"
+  },
+  {
+   "term": "チャンバオンセット",
+   "en": "Chamber Onset",
+   "abbr": "",
+   "cat": "ICD",
+   "device": "ICD / CRT-D",
+   "maker": "Abbott",
+   "short": "VTゾーンに入ったVイベントから8秒前まで遡り、心房と心室のどちらが先にレート上昇したかで鑑別する方式。有効なイベントは40ms以上短縮しその後も持続しているもの。不整脈オンセットのノミナル。",
+   "tags": "チャンバオンセット Chamber Onset 不整脈オンセット 8秒 40ms 有効なVsイベント 有効なAsイベント 発症腔 Abbott"
+  },
+  {
+   "term": "オンセットデルタ",
+   "en": "Onset delta",
+   "abbr": "",
+   "cat": "ICD",
+   "device": "ICD / CRT-D",
+   "maker": "Abbott",
+   "short": "サドンオンセットで突然か緩やかかを分けるしきい値。固定は30〜500ms（ノミナル100ms）、アダプティブは変化率で4〜86％（ノミナル18％）。小さくすると感度、大きくすると特異度が上がる。",
+   "tags": "オンセットデルタ Onset delta 100ms 18% 固定 アダプティブ 変化率 感度 特異度 Abbott"
+  },
+  {
+   "term": "SVT ディスクリミネーション タイムアウト",
+   "en": "SVT discrimination timeout",
+   "abbr": "",
+   "cat": "ICD",
+   "device": "ICD / CRT-D",
+   "maker": "Abbott",
+   "short": "VTゾーンでSVTと識別して治療を抑制した場合に働く安全タイマー。Off（ノミナル）または20秒〜60分で、Atlas®までの世代はノミナル30秒。最初のVTインターバルの検出時点から動き、終了時は［タイムアウト後治療］（VT治療／VF治療、ノミナルVF治療）に進む。",
+   "tags": "SVTディスクリミネーションタイムアウト SVT discrimination timeout 安全タイマー 治療抑制 タイムアウト後治療 Sustained VT SRD Abbott アトラス 30秒 タイマー起点 VT治療 VF治療"
+  },
+  {
+   "term": "診断基準（If Any／If All）",
+   "en": "Diagnosis criteria (If Any / If All)",
+   "abbr": "",
+   "cat": "ICD",
+   "device": "ICD / CRT-D",
+   "maker": "Abbott",
+   "short": "複数の追加ディスクリミネータの結論が割れたときの統合ルール。If Anyは1つでもVTなら治療、If Allは全部がVTなら治療。［心室のみ］では3つのうち2つとする「2/3の場合」も選べる。",
+   "tags": "診断基準 If Any If All 2/3の場合 統合 追加ディスクリミネータ 感度 特異度 Abbott"
+  },
+  {
+   "term": "Passive（ディスクリミネータ設定）",
+   "en": "Passive (discriminator)",
+   "abbr": "",
+   "cat": "ICD",
+   "device": "ICD / CRT-D",
+   "maker": "Abbott",
+   "short": "ディスクリミネータを判定には使わず、データの収集と「Onにしていたらどう診断していたか」の記録だけを行う設定。実際の作動には影響しない。設定変更の影響をエピソード記録で見てからOnにするかを決められる。",
+   "tags": "Passive ディスクリミネータ モニタのみ モニターだけ 記録 On Off Abbott"
+  },
+  {
+   "term": "SVT アッパーリミット",
+   "en": "SVT upper limit",
+   "abbr": "",
+   "cat": "ICD",
+   "device": "ICD / CRT-D",
+   "maker": "Abbott",
+   "short": "SVTディスクリミネータを効かせるレートの上限。これを超える速さでは鑑別を行わず治療に進む。ノミナルは2ゾーン設定で「VFと同じ」、3ゾーン設定で「VT-2と同じ」。個別レートも選べる。",
+   "tags": "SVTアッパーリミット SVT upper limit レート上限 VFと同じ 鑑別 Abbott 2ゾーン 3ゾーン VT-2と同じ サイナスタキ AFタキ 上限レート"
+  },
+  {
+   "term": "ShockGuard™",
+   "en": "ShockGuard Technology",
+   "abbr": "",
+   "cat": "ICD",
+   "device": "ICD / CRT-D",
+   "maker": "Abbott",
+   "short": "Abbottの不適切作動対策の総称。ゾーン設定、SVTディスクリミネーション、SecureSense™リードノイズ識別、SenseAbility™などを含む。プログラマの設定画面名にも使われる。",
+   "tags": "ShockGuard ShockGuard Technology ゾーン設定 SVTディスクリミネーション SecureSense SenseAbility 不適切作動 Abbott"
+  },
+  {
+   "term": "感度と特異度（不整脈識別）",
+   "en": "Sensitivity and specificity (arrhythmia discrimination)",
+   "abbr": "",
+   "cat": "ICD",
+   "device": "ICD",
+   "maker": "General",
+   "short": "VTをVTと識別して治療できる割合が感度、SVTをSVTと識別して治療を抑制できる割合が特異度。ICDの鑑別設定では感度100％を保ったうえで特異度を高めることが求められ、両者はトレードオフになる。",
+   "tags": "感度 特異度 Sensitivity Specificity 不整脈識別 SVT鑑別 トレードオフ 不適切作動 治療抑制"
+  },
+  {
+   "term": "Binned／Not Binned",
+   "en": "Binned / Not binned",
+   "abbr": "",
+   "cat": "ICD",
+   "device": "ICD / CRT-D",
+   "maker": "Abbott",
+   "short": "感知した心室イベントが頻拍ゾーンのインターバルとして数えられたか（Binned）、数えられなかったか（Not Binned、マーカ上は「−」）の区別。SIHのカウントで用いる。",
+   "tags": "Binned Not Binned ビン マーカ 「−」 VS Sinus SIH 頻拍カウント Abbott"
+  },
+  {
+   "term": "レートオーバーラップ",
+   "en": "Rate overlap",
+   "abbr": "",
+   "cat": "ICD",
+   "device": "ICD / CRT-D",
+   "maker": "General",
+   "short": "上室性のレート上昇がVTゾーンにまで及び、上室頻拍とVTのレートが重なる帯のこと。例：治療が必要なSlow VTが約140min⁻¹にあり、運動でも160min⁻¹まで上がる症例では140〜160min⁻¹が重なる。SVTディスクリミネータはこの重なりがある症例に使う。",
+   "tags": "レートオーバーラップ Rate overlap 重なり Slow VT 洞頻拍 SVT鑑別 適応 140 160"
+  },
+  {
+   "term": "二段脈アボイダンス",
+   "en": "Bigeminal Avoidance",
+   "abbr": "",
+   "cat": "ICD",
+   "device": "ICD / CRT-D",
+   "maker": "Abbott",
+   "short": "心室二段脈の短い側のインターバルだけが数えられて検出が成立するのを防ぐAbbottの機能。Tach/Sinusカウンタで頻拍か二段脈かを判定し、二段脈なら治療を回避する。Offにはできない。",
+   "tags": "二段脈アボイダンス Bigeminal Avoidance 二段脈 bigeminy 誤検出 Tach/Sinus カウンタ Off不可 Abbott"
+  },
+  {
+   "term": "Tach/Sinus カウンタ",
+   "en": "Tach/Sinus counter",
+   "abbr": "T/S counter",
+   "cat": "ICD",
+   "device": "ICD / CRT-D",
+   "maker": "Abbott",
+   "short": "二段脈アボイダンスが頻拍と二段脈を見分けるためのカウンタ。サイナス拍ごとに−1、2.5秒経過ごとに−1、ノンサイナス拍ごとに+1で数え、3以上なら頻拍、3未満なら二段脈と判定する。",
+   "tags": "Tach/Sinus カウンタ T/S counter 二段脈アボイダンス サイナス ノンサイナス 2.5秒 しきい値3 Abbott"
+  },
+  {
+   "term": "VT治療タイムアウト",
+   "en": "VT therapy timeout",
+   "abbr": "",
+   "cat": "ICD",
+   "device": "ICD / CRT-D",
+   "maker": "Abbott",
+   "short": "VTゾーンの治療を続けてよい時間の上限。治療開始からタイマーが動き（画面例60秒）、経過しても頻拍が続けば［タイムアウト トリガ］で指定した治療へ進む。SVTディスクリミネーション タイムアウトとは別物で、設定画面も［ゾーン治療］と異なる。",
+   "tags": "VT治療タイムアウト VT therapy timeout ゾーン治療 タイムアウトトリガ 60秒 ATP チャージ開始 Abbott"
+  },
+  {
+   "term": "タイムアウト後治療",
+   "en": "Post-timeout therapy",
+   "abbr": "",
+   "cat": "ICD",
+   "device": "ICD / CRT-D",
+   "maker": "Abbott",
+   "short": "SVTディスクリミネーション タイムアウトの終了時に開始する治療の選択。VT治療かVF治療かを選び、ノミナルはVF治療。レートがVTゾーンにあってもVF治療を開始できる。",
+   "tags": "タイムアウト後治療 Post-timeout therapy VT治療 VF治療 ノミナル SVTディスクリミネーションタイムアウト Abbott"
+  },
+  {
+   "term": "テンプレート自動更新",
+   "en": "Template auto-update",
+   "abbr": "",
+   "cat": "ICD",
+   "device": "ICD / CRT-D",
+   "maker": "Abbott",
+   "short": "モーフォロジーの基準波形を定期的に見直す機能。Off／8時間／1日／3・7・14・30日から選ぶ（ノミナル1日）。現テンプレートとの一致率が6/8・80％以上なら継続使用、未満なら現波形を仮採用して8時間後に再判定する。",
+   "tags": "テンプレート自動更新 Template auto-update 自動更新 8時間 1day 6/8 80% 仮採用 モーフォロジー Abbott"
+  },
+  {
+   "term": "仮採用テンプレート",
+   "en": "Provisional template",
+   "abbr": "",
+   "cat": "ICD",
+   "device": "ICD / CRT-D",
+   "maker": "Abbott",
+   "short": "自動更新で一致率が6/8・80％未満だったときに一時的に採用される波形。従来のテンプレートも保存され、8時間後の再判定で一致すれば本採用、しなければ破棄して元のテンプレートに戻る。",
+   "tags": "仮採用テンプレート Provisional template 自動更新 8時間後 本採用 破棄 モーフォロジー Abbott"
+  },
+  {
+   "term": "モーフォロジースコアリング",
+   "en": "Morphology scoring",
+   "abbr": "",
+   "cat": "ICD",
+   "device": "ICD / CRT-D",
+   "maker": "Abbott",
+   "short": "QRS波形を基線から3つの三角形に分け、それぞれの向き・波高値・面積をテンプレートと突き合わせて一致率を％で出す方法。差がなければ100％マッチ、差が大きいほどノンマッチの割合が増える。",
+   "tags": "モーフォロジースコアリング Morphology scoring 三角形 面積 波高値 極性 一致率 100%マッチ Abbott"
+  },
+  {
+   "term": "第2最長／第2最短インターバル",
+   "en": "Second longest / second shortest interval",
+   "abbr": "",
+   "cat": "ICD",
+   "device": "ICD / CRT-D",
+   "maker": "Abbott",
+   "short": "インターバルスタビリティが安定性を測るときに使う値。ウィンドウ内の最長と最短を外れ値として無視し、残りのうち2番目に長い間隔と2番目に短い間隔の差をデルタ値として評価する。",
+   "tags": "第2最長 第2最短 second longest second shortest 外れ値 デルタ値 インターバルスタビリティ Abbott"
+  },
+  {
+   "term": "検出の継続（SVT識別後）",
+   "en": "Continued detection after SVT classification",
+   "abbr": "",
+   "cat": "ICD",
+   "device": "ICD / CRT-D",
+   "maker": "Abbott",
+   "short": "SVTと識別して治療を抑制したあとも6心室イベントごとに判定を続けること。VT診断への変化、タイムアウト、VFゾーンへの上昇、SVTアッパーリミット超過、V＞Aへの移行、サイナス復帰のいずれかで終了する。",
+   "tags": "検出の継続 6心室イベント 再評価 SVT抑制 サイナス復帰 アッパーリミット V>A タイムアウト Abbott"
+  },
+  {
+   "term": "サイナスレートクロスオーバー",
+   "en": "Sinus Rate Crossover",
+   "abbr": "",
+   "cat": "ICD",
+   "device": "ICD / CRT-D",
+   "maker": "General",
+   "short": "洞頻拍が徐々にレートを上げて検出レートを越えていく様子と、病的頻拍が1拍で検出レートを越える様子を対比した考え方。サドンオンセットが立ち上がりの急峻さでこの2つを分ける根拠になる。",
+   "tags": "サイナスレートクロスオーバー Sinus Rate Crossover 洞頻拍 徐々 突然 サドンオンセット 検出レート"
+  },
+  {
+   "term": "心室二段脈",
+   "en": "Ventricular bigeminy",
+   "abbr": "",
+   "cat": "ICD",
+   "device": "PM / ICD / CRT",
+   "maker": "General",
+   "short": "自己収縮と心室期外収縮が交互に現れる調律。短い間隔と長い間隔が交互に並ぶため、短い側だけを数えるICDでは頻拍と誤検出されうる。二段脈アボイダンスはこれを避けるための機能。",
+   "tags": "心室二段脈 bigeminy 二段脈 期外収縮 PVC 交互 誤検出 短い間隔 長い間隔"
+  },
+  {
+   "term": "STモニタリング",
+   "en": "ST Monitoring",
+   "abbr": "",
+   "cat": "ICD",
+   "device": "ICD / CRT-D",
+   "maker": "Abbott",
+   "short": "本体缶とRVチップ間の心内心電図から90秒ごとにST偏差を評価し、無症候性心筋虚血を捉えてPatient Notifier で知らせるAbbottの機能。閾値は過去7日間の実測から推奨値が提示される。",
+   "tags": "STモニタリング ST Monitoring 虚血 ST偏差 Can to RV Tip 90秒 Patient Notifier 無症候性心筋虚血 Abbott"
+  },
+  {
+   "term": "STシフト／ノンシフト／非分類",
+   "en": "Shift / Non-Shift / Non-Classified",
+   "abbr": "",
+   "cat": "ICD",
+   "device": "ICD / CRT-D",
+   "maker": "Abbott",
+   "short": "STモニタリングの1セットごとの判定。8拍中6拍以上（最大15拍）が閾値以上偏移していればシフト、6/8拍未満ならノンシフト。自己心拍が40min⁻¹以下やペーシング依存、140min⁻¹以上・頻拍ゾーン以上は非分類。",
+   "tags": "STシフト Non-Shift Non-Classified 6/8拍 15拍 ペーシング依存 頻拍ゾーン STモニタリング Abbott"
+  },
+  {
+   "term": "Patient Notifier",
+   "en": "Patient Notifier",
+   "abbr": "",
+   "cat": "ICD",
+   "device": "ICD / CRT-D",
+   "maker": "Abbott",
+   "short": "設定した条件を満たしたときに患者本人へ知らせる本体の通知機能。STモニタリングでは、ST偏差が閾値を超えたときに作動する。",
+   "tags": "Patient Notifier 患者通知 アラート STモニタリング 閾値 Abbott"
+  },
+  {
+   "term": "リードノイズ検出カウンター",
+   "en": "Lead Noise Detection Counter",
+   "abbr": "LNDC",
+   "cat": "ICD",
+   "device": "ICD / CRT-D",
+   "maker": "Abbott",
+   "short": "SecureSense™ がリードノイズを判定するためのカウンタ。カウンタが10を超えるとノイズと判断して治療を抑制し、10以下ならノイズではないとして治療を実行する。",
+   "tags": "リードノイズ検出カウンター Lead Noise Detection Counter LNDC SecureSense 10 治療抑制 Abbott"
+  },
+  {
+   "term": "V波ダブルカウント",
+   "en": "R-wave double counting (ventricular)",
+   "abbr": "",
+   "cat": "トラブル",
+   "device": "ICD / CRT-D",
+   "maker": "General",
+   "short": "1つの心室興奮を2回数えてしまう現象。幅の広いQRSや脚ブロックで起こりやすく、頻拍の過剰検出につながる。心室オーバーセンシングの原因の一つとして報告されている。",
+   "tags": "V波ダブルカウント R波ダブルカウント double counting 心室オーバーセンシング 幅広QRS 脚ブロック 不適切作動"
+  },
+  {
+   "term": "テンプレートペーシングヒステリシス",
+   "en": "Template pacing hysteresis",
+   "abbr": "",
+   "cat": "ICD",
+   "device": "ICD / CRT-D",
+   "maker": "Abbott",
+   "short": "心室ペーシング率の高い症例でもモーフォロジーのテンプレートを取得できるようにする機能。ノミナルOff（CRTデバイスではOn）。1週間更新されないと夜間（レストレート設定時はその時間）に作動し、120サイクル以上は作動しない。",
+   "tags": "テンプレートペーシングヒステリシス Template pacing hysteresis 自己伝導 夜間 レストレート 120サイクル CRT Abbott"
+  },
+  {
+   "term": "テンプレートの時相合わせ（基準点）",
+   "en": "Template alignment (fiducial point)",
+   "abbr": "",
+   "cat": "ICD",
+   "device": "ICD / CRT-D",
+   "maker": "Abbott",
+   "short": "ファーフィールドMDで、テンプレートと頻拍中のRV Coil-Can波形を比べる際に時相を揃えるしくみ。RV Tip-Ring の心内心電図を基準点として使い、判定そのものには用いない。",
+   "tags": "基準点 時相 アライメント fiducial RV Tip-Ring RV Coil-Can ファーフィールドMD テンプレート Abbott"
+  },
+  {
+   "term": "細胞膜反応時間",
+   "en": "Membrane response time",
+   "abbr": "",
+   "cat": "ICD",
+   "device": "ICD / CRT-D",
+   "maker": "General",
+   "short": "ショック通電に対して心筋細胞膜が応答するのにかかる時間。約3.5msとされ、この時間に対して通電が長すぎても短すぎても除細動の効率が落ちる。パルス幅調整の根拠になる。",
+   "tags": "細胞膜反応時間 membrane response time 3.5ms パルス幅 チルト 除細動閾値 DeFT Response"
+  },
+  {
+   "term": "無症候性心筋虚血",
+   "en": "Silent myocardial ischemia",
+   "abbr": "",
+   "cat": "疾患",
+   "device": "PM / ICD / CRT",
+   "maker": "General",
+   "short": "胸痛を伴わずに起こる心筋虚血。症候性に比べ心事故の発生が2〜7倍多いとされる。痛みが出にくい背景として加齢による疼痛閾値の上昇、糖尿病性神経障害、高次脳機能障害が挙げられる。",
+   "tags": "無症候性心筋虚血 silent ischemia 無痛性 糖尿病性神経障害 疼痛閾値 心事故 STモニタリング"
+  },
+  {
+   "term": "チップ-リング間隔（電極間隔）",
+   "en": "Tip-to-ring spacing",
+   "abbr": "",
+   "cat": "リード",
+   "device": "PM / ICD / CRT",
+   "maker": "General",
+   "short": "双極リードの先端電極とリング電極の距離。間隔が狭いほど感知する範囲が局所に限られ、ファーフィールドR波の混入が減る。心房リードでは間隔が広いほどFFRWの検出率が上がると報告されている。",
+   "tags": "チップ-リング間隔 電極間隔 Tip-to-Ring spacing 1.1mm 10mm FFRW ファーフィールド 心房リード OptiSense"
   }
  ],
  "feats": [
@@ -8939,9 +9369,9 @@
    "fn": "鑑別による治療保留の上限（安全機構）",
    "en": "Sustained rate / therapy assurance",
    "cat": "ICD",
-   "note": "アルゴリズムタブ（メーカー別）の登録内容から自動生成。",
+   "note": "鑑別が上室性と判定して治療を抑制し続けるのを防ぐ安全機構。Abbott は VTゾーンに限って抑制してよい時間の上限を決める方式で、ノミナルは Off。アルゴリズムタブ（メーカー別）の登録内容から自動生成。",
    "mdt": "—",
-   "abt": "—",
+   "abt": "SVT ディスクリミネーション タイムアウト",
    "bio": "Sustained VT",
    "bsx": "SRD（Sustained Rate Duration）",
    "mcp": "Brady-Tachy Overlap（BTO™）"
