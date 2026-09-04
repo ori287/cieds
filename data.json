@@ -1,5 +1,5 @@
 {
- "v": 24,
+ "v": 25,
  "updated": "2026-09-04",
  "gloss": [
   {
@@ -8141,6 +8141,126 @@
    "maker": "Abbott",
    "short": "PMTレスポンスが判定を始めるレートの下限。これを上回る心房レートが出たときにPMTかどうかの評価が動く。低く設定すると洞頻拍でも評価が働き、高くすると遅いPMTを取りこぼす。",
    "tags": "Abbott / PMT detection rate PMT検出レート FARI PMTレスポンス"
+  },
+  {
+   "term": "ヒステリシス デルタ",
+   "en": "Hysteresis delta",
+   "abbr": "",
+   "cat": "AV・タイミング",
+   "device": "PM",
+   "maker": "Abbott",
+   "short": "サーチ機能付ネガティブAVヒステリシスで、実測したAVインターバルから差し引く短縮量。実測値からこの値を引いたAVインターバルで一定サイクル動作する。",
+   "tags": "Abbott / hysteresis delta ヒステリシスデルタ ネガティブAVヒステリシス AV短縮"
+  },
+  {
+   "term": "最短 AV ディレイ",
+   "en": "Minimum AV delay",
+   "abbr": "",
+   "cat": "AV・タイミング",
+   "device": "PM",
+   "maker": "Abbott",
+   "short": "レート応答AVディレイとサーチ機能付ネガティブAVヒステリシスで、AVディレイがこれ以上短くならない下限値。Accentは25〜120ms、Zephyrは30〜120msで、レート応答AVディレイを選択したときのみ設定できる。",
+   "tags": "Abbott / minimum AV delay 最短AVディレイ 下限 レート応答AVディレイ ネガティブAVヒステリシス"
+  },
+  {
+   "term": "レート応答 PVARP／V Ref",
+   "en": "Rate responsive PVARP / V Ref",
+   "abbr": "",
+   "cat": "AV・タイミング",
+   "device": "PM",
+   "maker": "Abbott",
+   "short": "レートの増減に応じてPVARPと心室ペーシング不応期を自動で伸縮させる設定。Lowは1min⁻¹につき1ms、Mediumは2ms、Highは3msずつ短縮する。速いレートでの追従を保つ一方、短縮しすぎるとPMTのリスクが上がる。",
+   "tags": "Abbott / rate responsive PVARP VREF レート応答PVARP 不応期 短縮 Low Medium High"
+  },
+  {
+   "term": "最短 PVARP／V Ref",
+   "en": "Minimum PVARP / V Ref",
+   "abbr": "",
+   "cat": "AV・タイミング",
+   "device": "PM",
+   "maker": "Abbott",
+   "short": "レート応答PVARP／V Refで不応期がこれ以上短くならない下限値。125〜475msで設定し、ノミナルは175ms。VA伝導のある症例では伝導時間＋50ms程度より短くしない。",
+   "tags": "Abbott / minimum PVARP VREF 最短PVARP 下限 VA伝導 PMT"
+  },
+  {
+   "term": "心室セーフティ スタンバイ",
+   "en": "Ventricular Safety Standby",
+   "abbr": "",
+   "cat": "AV・タイミング",
+   "device": "PM",
+   "maker": "Abbott",
+   "short": "クロストークを不適切にセンシングして心室パルス出力が抑制されるのを防ぐ機能。クロストーク検出ウインドウで信号を拾うと、心房ペーシングパルスの120ms後に心室ペーシングパルスを出力する。作動した拍は設定AVディレイより明らかに短いAV間隔になる。",
+   "tags": "Abbott / ventricular safety standby VSP 心室セーフティ スタンバイ クロストーク 120ms セーフティペーシング"
+  },
+  {
+   "term": "心室ブランキング（Auto）",
+   "en": "Auto Ventricular Blanking",
+   "abbr": "",
+   "cat": "AV・タイミング",
+   "device": "PM",
+   "maker": "Abbott",
+   "short": "心房ペーシング直後の心室絶対不応期を、クロストーク信号の長さに応じて自動調整する設定。12msのウインドウで信号を拾うたびに12msずつ延長し、最大52ms（延長分を含めた最大は64ms）まで伸びる。何も拾わなければそこで終了する。",
+   "tags": "Abbott / auto ventricular blanking 心室ブランキング Auto クロストーク 12ms 52ms 64ms"
+  },
+  {
+   "term": "ノイズ サンプリング ピリオド",
+   "en": "Noise sampling period",
+   "abbr": "",
+   "cat": "センシング",
+   "device": "PM",
+   "maker": "Abbott",
+   "short": "ノイズを検出したときに設けられる150msの不応期延長。前半75msが絶対不応期、後半75msが相対不応期で、相対不応期中にノイズが検出されなければ通常動作へ戻る。ノイズが続くとさらに150msが追加される。",
+   "tags": "Abbott / noise sampling period ノイズサンプリングピリオド 150ms 75ms ノイズリバージョン Zephyr"
+  },
+  {
+   "term": "心室ノイズ リバージョン モード",
+   "en": "Ventricular noise reversion mode",
+   "abbr": "",
+   "cat": "センシング",
+   "device": "PM",
+   "maker": "Abbott",
+   "short": "心室チャンネルでノイズを検出したときに移行する動作の設定。ペーシングOff／VOO／DOOから選ぶ。VOOまたはDOOでは基本レートで非同期ペーシングする。ペーシングOffはペースメーカ依存例では選ばない。",
+   "tags": "Abbott / ventricular noise reversion mode 心室ノイズリバージョン DOO VOO ペーシングOff 非同期"
+  },
+  {
+   "term": "最大トリガ レート",
+   "en": "Maximum trigger rate",
+   "abbr": "",
+   "cat": "レート応答",
+   "device": "PM / CRT",
+   "maker": "Abbott",
+   "short": "心室トリガ機能が働くときの上限レート。［レート］画面で基本レート・レストレート・最大センサレート・最大トラッキングレートと並ぶ。心室トリガがOffのときはn/aとなる。",
+   "tags": "Abbott / maximum trigger rate 最大トリガレート 心室トリガ レート画面"
+  },
+  {
+   "term": "心室トリガ",
+   "en": "Ventricular trigger",
+   "abbr": "",
+   "cat": "モード",
+   "device": "PM / CRT",
+   "maker": "Abbott",
+   "short": "心室で自己波を感知した時点で刺激を出す設定。刺激は不応期に落ちるため無害で、感知が働いていることを心電図上で確認できる。［基本動作］画面でOn／Offを設定する。",
+   "tags": "Abbott / ventricular trigger 心室トリガ VVT トリガーペーシング 基本動作"
+  },
+  {
+   "term": "バッテリー テスト（マグネット レスポンス）",
+   "en": "Battery test (magnet response)",
+   "abbr": "",
+   "cat": "電池",
+   "device": "PM",
+   "maker": "Abbott",
+   "short": "マグネット装着中に一定レートの非同期ペーシングを行い、そのレートから電池電圧を推定できるようにする設定。マグネットレスポンスの選択肢はOffとバッテリーテストの2つで、Offにするとマグネットに反応しない。マグネットレスポンス中のAVディレイは120msに固定される。",
+   "tags": "Abbott / battery test magnet response バッテリーテスト マグネットレスポンス マグネットレート 120ms"
+  },
+  {
+   "term": "センシング不応期",
+   "en": "Sensing refractory period",
+   "abbr": "",
+   "cat": "AV・タイミング",
+   "device": "PM",
+   "maker": "Abbott",
+   "short": "自己波を感知した後に設けられる不応期。Accentのノミナルは心房93ms・心室250msで、ペーシング後の不応期（心房190ms・心室250ms）とは別に設定する。",
+   "tags": "Abbott / sensing refractory period センシング不応期 ペーシング不応期 93ms 250ms 190ms"
   }
  ],
  "feats": [
