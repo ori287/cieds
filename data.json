@@ -1,5 +1,5 @@
 {
- "v": 38,
+ "v": 39,
  "updated": "2026-09-05",
  "gloss": [
   {
@@ -1289,8 +1289,8 @@
    "cat": "リードレス",
    "device": "Leadless",
    "maker": "Abbott",
-   "short": "Abbott AVEIRの心室用リードレスペースメーカ。スクリュー固定・マッピング・回収設計を特徴とする。留置前に位置の良否を確かめられるマッピング機能を持つ。",
-   "tags": "Leadless / Abbott / Aveir / VR"
+   "short": "Abbott AVEIRの心室用リードレスペースメーカ（LSP112V）。全長38.0mm・容積1.1cc・質量2.4g・外径6.5mm。シングルヘリックス設計で、1.63mmのアウターヘリックスが固定と先端電極を兼ねる。バッテリー容量243mAh、ISO規格設定（VVIR 60bpm・2.5V／0.4ms・600Ω・100％ペーシング）に基づく予測寿命は10.3年。レート応答は温度ベース。固定前のプレマッピングが可能で、専用リトリーバルカテーテルによる抜去に対応する。推奨留置部位は右心室の低位中隔から中隔。X線コードは NT。",
+   "tags": "Leadless / Abbott / Aveir / VR LSP112V 38.0mm 1.1cc 2.4g 6.5mm 243mAh 10.3年 10.3 years 温度ベース 低位中隔 シングルヘリックス 1.63mm NT アヴェイル LP"
   },
   {
    "term": "Aveir AR",
@@ -1299,8 +1299,8 @@
    "cat": "リードレス",
    "device": "Leadless",
    "maker": "Abbott",
-   "short": "Abbott AVEIRの心房用リードレスペースメーカ（LSP201A）。単独では AAI(R)、心室用 AVEIR VR と組み合わせると AAI(R)＋VVI または DDD(R) で使える。第2世代の AVEIR AR2（LSP203A）が後継。",
-   "tags": "Leadless / Abbott / Aveir / AR LSP201A AR2 LSP203A アヴェイル LP AAI AAI+VVI DDD"
+   "short": "Abbott AVEIRの心房用リードレスペースメーカ（LSP201A）。全長32.2mm・外径6.5mm、デュアルヘリックス設計（アウターヘリックス1.63mmで固定、インナーヘリックスが固定性・安定性を高めると同時に先端電極として機能）。推奨留置部位は右心耳基部。単独では AAI(R)、心室用 AVEIR VR と組み合わせると AAI(R)＋VVI または DDD(R) で使える。第2世代の AVEIR AR2（LSP203A）が後継。植込み3か月後の有効性エンドポイント（閾値≦3.0V@0.4ms かつ P波高値≧1mV）の達成率は90.2％、波高値を0.5mV以上とした場合は95.2％。",
+   "tags": "Leadless / Abbott / Aveir / AR LSP201A AR2 LSP203A アヴェイル LP AAI AAI+VVI DDD 32.2mm 6.5mm デュアルヘリックス 1.63mm 右心耳基部 90.2% 95.2% 3.0V 1mV 0.5mV"
   },
   {
    "term": "Aveir DR",
@@ -1309,8 +1309,8 @@
    "cat": "リードレス",
    "device": "Leadless",
    "maker": "Abbott",
-   "short": "AVEIR ARとVRを組み合わせ、i2i通信でbeat-to-beatのデュアルチャンバー同期を行うシステム。リードレスでDDD様の動作を可能にした。AAI(R)＋VVI モードを選べば、心房ペーシング主体で心室はバックアップとなり、両デバイスの寿命延長が期待できる。",
-   "tags": "Leadless / Abbott / Aveir / DR / threshold / capture AAI+VVI DDD(R) i2i 4/4 寿命延長 バックアップ"
+   "short": "AVEIR ARとVRを組み合わせ、i2i通信でbeat-to-beatのデュアルチャンバー同期を行うシステム。リードレスでDDD様の動作を可能にした。AAI(R)＋VVI モードを選べば、心房ペーシング主体で心室はバックアップとなり、両デバイスの寿命延長が期待できる。AVEIR DR i2i スタディでは、デュアルチャンバの手術成功率98.3％、複数の姿勢と歩行で観察された平均房室同期97.3％、安全性達成率90.3％、心房用LPの有効性エンドポイント90.2％が報告されている（NEJM 2023）。デュアルチャンバのアルゴリズムとして AMS（心内心電図を最大4つ保存）・VIP・ヒステリシス・A Pace on PMT を持つ。",
+   "tags": "Leadless / Abbott / Aveir / DR / threshold / capture AAI+VVI DDD(R) i2i 4/4 寿命延長 バックアップ 98.3% 手術成功率 97.3% AV同期 90.3% 安全性 90.2% 有効性 NEJM 2023 Knops アップグレーダブル ペアリング AMS VIP A Pace on PMT"
   },
   {
    "term": "i2i communication",
@@ -1319,8 +1319,8 @@
    "cat": "リードレス",
    "device": "Leadless",
    "maker": "Abbott",
-   "short": "AVEIRの心房・心室デバイス間で、低エネルギーの導電性通信を用いて毎拍イベントを共有する技術。無線に比べ消費電力が少ないのが利点。これによりリードなしで DDD(R) の房室同期が成立する。設定は画面上「i2i＝4/4」のように表示されるが、資料に定義の記載はない。",
-   "tags": "Leadless / Abbott / Implant-to-Implant / communication i2i 4/4 導電性通信 房室同期 DDD"
+   "short": "AVEIRの心房・心室デバイス間で、低エネルギーの導電性通信を用いて毎拍イベントを共有する技術。無線に比べ消費電力が少ないのが利点。データパルスは各ペーシングイベントまたはセンシングイベントと同時に送信されるため、ペーシングやセンシングそのものには影響しない。さまざまな姿勢で観察された平均房室（AV）同期率は95％以上とされる。設定は画面上「i2i＝4/4」のように表示されるが、電池寿命表の条件として引用されるのみで、定義は資料に記載がない。",
+   "tags": "Leadless / Abbott / Implant-to-Implant / communication i2i 4/4 導電性通信 房室同期 DDD 毎心拍 データパルス 同時送信 95% AV同期率 beat-to-beat synchrony"
   },
   {
    "term": "Pre-mapping",
@@ -1549,8 +1549,8 @@
    "cat": "電池",
    "device": "PM / ICD / CRT / Leadless",
    "maker": "General",
-   "short": "メーカーが交換を推奨する電池ステータス。名称と定義は製品群で異なる。表示後も一定の猶予期間があるが、放置はしない。",
-   "tags": "Battery / PM / ICD / CRT / Leadless / General"
+   "short": "メーカーが交換を推奨する電池ステータス。名称と定義は製品群で異なる。表示後も一定の猶予期間があるが、放置はしない。AVEIR VR では RRT＝2.71V で、到達するとアラート表示・センサOff・マグネットモード65bpmとなる。電池は24時間ごとに自動テストされ、電圧のトレンドが表示される。",
+   "tags": "Battery / PM / ICD / CRT / Leadless / General AVEIR VR 2.71V センサOff マグネット65bpm 24時間ごと自動テスト リードレス"
   },
   {
    "term": "EOS",
@@ -1949,8 +1949,8 @@
    "cat": "レート応答",
    "device": "PM / ICD / CRT",
    "maker": "General",
-   "short": "センサが算出した『今出すべきレート』。実際のペーシングレートの目安。実際のレートと見比べて設定の適否を評価する。",
-   "tags": "SIR sensor indicated rate"
+   "short": "センサが算出した『今出すべきレート』。実際のペーシングレートの目安。実際のレートと見比べて設定の適否を評価する。AVEIR VR では心室レートヒストグラム上に黄色の点として表示される（センサがOnまたはPassiveの場合）。",
+   "tags": "SIR sensor indicated rate AVEIR 心室レートヒストグラム 黄色の点 ノイズリバージョン 非同期"
   },
   {
    "term": "睡眠時レート",
@@ -2059,8 +2059,8 @@
    "cat": "AV・タイミング",
    "device": "PM / ICD / CRT",
    "maker": "General",
-   "short": "連続雑音を感知すると一時的に非同期ペーシングへ切替え、過抑制を防ぐ。DOO/VOO/AOOの下限レートで非同期ペーシングとなる。",
-   "tags": "noise reversion 雑音 非同期 noise reversion DOO VOO AOO 非同期 自己脈識別"
+   "short": "連続雑音を感知すると一時的に非同期ペーシングへ切替え、過抑制を防ぐ。DOO/VOO/AOOの下限レートで非同期ペーシングとなる。AVEIR VR（リードレス）では、不応期に連続ノイズがセンシングされると発動し、基本レートまたはセンサ指示レート（SIR）で非同期ペーシングを行い、ノイズがなくなると終了する。",
+   "tags": "noise reversion 雑音 非同期 noise reversion DOO VOO AOO 非同期 自己脈識別 AVEIR VR リードレス 基本レート SIR 非同期 ノイズ消失で終了"
   },
   {
    "term": "レスポンスファクター（スロープ）",
@@ -2719,8 +2719,8 @@
    "cat": "トラブル",
    "device": "PM / ICD / CRT",
    "maker": "General",
-   "short": "強い電磁干渉などで設定が初期値へ戻る現象（パワーオンリセット）。予期せぬモード・レートになりうるため点検で確認する。基本レートでのVVIとなるため、検脈値が発見の手がかりになる。",
-   "tags": "デバイスリセット  Device reset パワーオンリセット リセット値 VVI 電磁干渉"
+   "short": "強い電磁干渉などで設定が初期値へ戻る現象（パワーオンリセット）。予期せぬモード・レートになりうるため点検で確認する。基本レートでのVVIとなるため、検脈値が発見の手がかりになる。AVEIR LP（リードレス）では、まず正常な動作条件の回復を試み、成功しなかった場合は読取り専用メモリモードおよび EVVI ペーシングになる。いずれの場合もアラートが表示される。",
+   "tags": "デバイスリセット  Device reset パワーオンリセット リセット値 VVI 電磁干渉 AVEIR LP LP Device Reset 読取り専用メモリモード EVVI アラート リードレス"
   },
   {
    "term": "フィードスルー",
@@ -4849,8 +4849,8 @@
    "cat": "リードレス",
    "device": "Leadless",
    "maker": "General",
-   "short": "リードレス本体近位端の回収用構造。スネアで把持し回収。抜去や位置調整の際にスネアで把持する。",
-   "tags": "リトリーバルヘッド Retrieval feature retrieval head リトリーバル スネア 回収"
+   "short": "リードレス本体近位端の回収用構造。スネアで把持し回収。抜去や位置調整の際にスネアで把持する。AVEIRではドッキング／リトリーバル ボタンと呼び、デリバリー時のドッキングと抜去時のスネア把持を兼ねる。",
+   "tags": "リトリーバルヘッド Retrieval feature retrieval head リトリーバル スネア 回収 ドッキングボタン docking button AVEIR トリループスネア 再ドッキング"
   },
   {
    "term": "デリバリーカテーテル（リードレス）",
@@ -4859,8 +4859,8 @@
    "cat": "リードレス",
    "device": "Leadless",
    "maker": "General",
-   "short": "27Frイントロデューサー経由でリードレス本体を運ぶ可変式シース。テザーでつないだまま位置と測定値を確認してから切り離す。",
-   "tags": "デリバリーカテーテル（リードレス） Leadless delivery catheter デリバリーカテーテル 27Fr イントロデューサ テザー 大腿静脈"
+   "short": "リードレス本体を目標部位へ運ぶディフレクタブルなカテーテル。ガイディングカテーテルと一体化しており、テザーでつないだまま位置と測定値を確認してから切り離す。AVEIRでは専用イントロデューサ（外径27Fr／内径25Fr）を介して大腿静脈から挿入する。AVEIR DR 用の改良版はテザーの長さを7〜33mmに調整でき、テザーモードでの柔軟性が高い。",
+   "tags": "デリバリーカテーテル（リードレス） Leadless delivery catheter デリバリーカテーテル 27Fr イントロデューサ テザー 大腿静脈 27Fr 25Fr ディフレクタブル ガイディングカテーテル一体 テザー7-33mm LSCD111 AVEIR DR"
   },
   {
    "term": "心室ペーシング閾値測定",
@@ -9469,8 +9469,8 @@
    "cat": "植込み・手技",
    "device": "PM / ICD / CRT / CSP / Leadless",
    "maker": "General",
-   "short": "リード先端が心筋に接触・固定された直後に生じる電位変化（ST偏位）。スクリュー固定での組織接触の指標になる一方、植込み直後の計測値を不安定にする。STモニタリングが植込みから4時間はデータを取得しないのは、これとポケット内状態の不安定さのため。LBBAPでは、大幅な変化や消失が中隔穿孔の手がかりになる。",
-   "tags": "傷害電流 current of injury COI リード固定 心筋 接触 植込み直後 4時間 STモニタリング ポケット 障害電流 injury current Injury current ST上昇 損傷電流 スクリュー固定 組織接触 CSP LBBAP 穿孔"
+   "short": "リード先端が心筋に接触・固定された直後に生じる電位変化（ST偏位）。スクリュー固定での組織接触の指標になる一方、植込み直後の計測値を不安定にする。STモニタリングが植込みから4時間はデータを取得しないのは、これとポケット内状態の不安定さのため。LBBAPでは、大幅な変化や消失が中隔穿孔の手がかりになる。AVEIR LP ではプログラマのコマンドEGMで傷害電流を計測でき、プレマッピング後・固定後・テザーモードでの評価に用いる。",
+   "tags": "傷害電流 current of injury COI リード固定 心筋 接触 植込み直後 4時間 STモニタリング ポケット 障害電流 injury current Injury current ST上昇 損傷電流 スクリュー固定 組織接触 CSP LBBAP 穿孔 コマンドEGM AVEIR リードレス プレマッピング 固定確認"
   },
   {
    "term": "ストアードEGM容量",
@@ -9919,8 +9919,8 @@
    "cat": "リードレス",
    "device": "Leadless",
    "maker": "Abbott",
-   "short": "第2世代の心房用リードレスペースメーカ（LSP203A）。デバイスサイズは従来のままで、シングル・デュアルチャンバの全ペーシングモードで従来比 約25％の電池寿命向上が示されている。AAI(R) または AAI(R)＋VVI で使用した場合、電池寿命は10年以上と予測されている。",
-   "tags": "Aveir AR2 AVEIR AR2 LSP203A 第2世代 心房用 リードレス 25% 10年以上 アヴェイル LP Abbott"
+   "short": "第2世代の心房用リードレスペースメーカ（LSP203A）。全長32.2mm・外径6.5mm、デュアルヘリックス設計。デバイスサイズは従来のままで、シングル・デュアルチャンバの全ペーシングモードで従来比 約25％の電池寿命向上が示されている。AAI(R)／AAI(R)＋VVI・50bpm・300Ω・1.5V／0.4msで、ペーシング率50％ 12.9年→16.1年、100％ 9.8年→12.4年（AR＝LSP201Aとの比較）。メーカー資料の表は LONGEVITY (YRS) と明記されており、値の単位は「年」である。",
+   "tags": "Aveir AR2 AVEIR AR2 LSP203A 第2世代 心房用 リードレス 25% 10年以上 アヴェイル LP Abbott LONGEVITY YRS 年 16.1 12.4 8.6 7.3 32.2mm 6.5mm デュアルヘリックス"
   },
   {
    "term": "AAI(R)＋VVI モード",
@@ -9951,6 +9951,256 @@
    "maker": "General",
    "short": "観察期間に心房がペーシングされていた割合。電池寿命の見積りに直結する。リードレスのデュアルチャンバでは、洞不全症候群で高く（AVEIR DR i2i 試験で平均42.6％）、房室ブロックでは低い（同14.0％）ため、疾患によって想定が大きく変わる。",
    "tags": "心房ペーシング率 AP% atrial pacing percentage 42.6% 14.0% 洞不全症候群 房室ブロック 電池寿命 リードレス"
+  },
+  {
+   "term": "中心静脈温レートレスポンス",
+   "en": "Central venous temperature-based rate response",
+   "abbr": "CVT",
+   "cat": "レート応答",
+   "device": "Leadless",
+   "maker": "Abbott",
+   "short": "中心静脈温（CVT）の変化を活動量の指標に使うレート応答。CVTは代謝活動とともに変化し、運動開始直後はいったん低下し（0.1〜0.5℃）、約5分後から上昇に転じ、運動を止めると徐々にベースラインへ戻る。AVEIR LPはこの温度変化にディップ／スロープ／マグニチュードの3つのレスポンスで対応する。",
+   "tags": "中心静脈温 central venous temperature CVT 温度センサ レート応答 0.1℃ 0.5℃ 5分 ディップ スロープ マグニチュード AVEIR リードレス Abbott"
+  },
+  {
+   "term": "ディップ レスポンス",
+   "en": "Dip Response",
+   "abbr": "D",
+   "cat": "レート応答",
+   "device": "Leadless",
+   "maker": "Abbott",
+   "short": "温度ベースのレート応答のうち、運動開始直後に中心静脈温がいったん低下する反応をとらえ、心拍数を急速に上昇させる要素。立ち上がりの遅れを補う。",
+   "tags": "ディップレスポンス Dip Response D 温度 CVT 運動開始 立ち上がり AVEIR リードレス Abbott"
+  },
+  {
+   "term": "スロープ レスポンス",
+   "en": "Slope Response",
+   "abbr": "S",
+   "cat": "レート応答",
+   "device": "Leadless",
+   "maker": "Abbott",
+   "short": "温度ベースのレート応答のうち、運動開始による温度上昇の傾きに比例して短期間のペーシングレートを与える要素。",
+   "tags": "スロープレスポンス Slope Response S 温度 傾き 短期間 CVT AVEIR リードレス Abbott"
+  },
+  {
+   "term": "マグニチュード レスポンス",
+   "en": "Magnitude Response",
+   "abbr": "M",
+   "cat": "レート応答",
+   "device": "Leadless",
+   "maker": "Abbott",
+   "short": "温度ベースのレート応答のうち、温度ベースラインからの全体的な上昇量に応じた心拍数レスポンスを与える要素。運動量の大きさを反映する。",
+   "tags": "マグニチュードレスポンス Magnitude Response M 温度 ベースライン 上昇 CVT AVEIR リードレス Abbott"
+  },
+  {
+   "term": "RRO スナップショット",
+   "en": "Rate Response Optimization snapshot",
+   "abbr": "RRO",
+   "cat": "レート応答",
+   "device": "Leadless",
+   "maker": "Abbott",
+   "short": "レート応答パラメータを至適化するための可視化ツール。センサをOnまたはPassiveにしてテストを開始し、患者から心電図ケーブルを外して歩行させる。温度・自己レート・本テスト時のレート（SIR）が報告され、センサレスポンスモデルが作成される。「AS MODELED」列でセンサゲイン・最大センサレート・基本レートを変えると、モデル化されたセンサレートが緑色でプロットされ、変更の影響を確認できる。最大センサレートがSIRに与えるプラトーに注意する。",
+   "tags": "RROスナップショット Rate Response Optimization 至適化 患者歩行テスト AS MODELED モデルのSIR プラトー センサゲイン 最大センサレート AVEIR リードレス Abbott"
+  },
+  {
+   "term": "センサ ゲイン",
+   "en": "Sensor Gain",
+   "abbr": "",
+   "cat": "レート応答",
+   "device": "Leadless",
+   "maker": "Abbott",
+   "short": "所定の活動量に対するレート応答性の強さを決める設定。AVEIR LPではノミナル4、範囲1〜7。値を上げると応答性が上昇し、下げると低下する。センサ設定にはOn／Off／Passiveがあり、Passiveはセンサデータを収集してヒストグラムにプロットするがレート調整は行わない。",
+   "tags": "センサゲイン Sensor Gain ノミナル4 1-7 Passive On Off ヒストグラム レート応答性 AVEIR リードレス Abbott"
+  },
+  {
+   "term": "プレマッピング",
+   "en": "Pre-mapping",
+   "abbr": "",
+   "cat": "リードレス",
+   "device": "Leadless",
+   "maker": "Abbott",
+   "short": "リードレス本体を固定する前に、先端電極を心内膜に軽く触れさせた状態でP／R波・インピーダンス・ペーシング閾値を測定する機能。留置位置の変更（リポジショニング）回数を減らすことを狙う。メーカー資料では、心室用LPで98％、心房用LPで90％の患者が1回以下の位置変更で植込みに成功したとされる。",
+   "tags": "プレマッピング pre-mapping 留置前計測 リポジショニング 98% 90% P波 R波 インピーダンス 閾値 AVEIR リードレス Abbott"
+  },
+  {
+   "term": "テザー（リードレス）",
+   "en": "Tether",
+   "abbr": "",
+   "cat": "リードレス",
+   "device": "Leadless",
+   "maker": "Abbott",
+   "short": "リードレス本体をデリバリーカテーテルにつなぎとめる細いワイヤ。AVEIRでは2本のテザーがドッキングボタン内で重なって固定され、片側がずれることでリリースされる。体外のカテーテルを曲げると先端のテザーがずれる可能性があるため、体外部分はまっすぐな状態を保つ。",
+   "tags": "テザー tether 2本 ドッキングボタン リリース まっすぐ TOO MUCH FLEX AVEIR リードレス Abbott"
+  },
+  {
+   "term": "テザー モード",
+   "en": "Tether mode",
+   "abbr": "",
+   "cat": "リードレス",
+   "device": "Leadless",
+   "maker": "Abbott",
+   "short": "リードレス本体を固定したあと、テザーでつないだまま電気的パラメータを評価する状態。この状態でディフレクションテストを行い、傷害電流・ペーシング閾値・センシング・インピーダンスを再測定する。テザーモードではドッキングキャップとドッキングボタンの位置を揃える。",
+   "tags": "テザーモード tether mode 固定後 電気的パラメータ ディフレクションテスト ドッキングキャップ AVEIR リードレス Abbott"
+  },
+  {
+   "term": "ディフレクション テスト",
+   "en": "Deflection test",
+   "abbr": "",
+   "cat": "リードレス",
+   "device": "Leadless",
+   "maker": "Abbott",
+   "short": "リードレス本体を固定したのち、テザーモードで30〜45度のディフレクションを行い、ヘリックスが固定されたままであることを確認する手技。確認後にプログラマで傷害電流・閾値・センシング・インピーダンスを再測定する。",
+   "tags": "ディフレクションテスト deflection test 30度 45度 テザーモード ヘリックス固定確認 AVEIR リードレス Abbott"
+  },
+  {
+   "term": "ローディング ツール",
+   "en": "Loading tool",
+   "abbr": "",
+   "cat": "リードレス",
+   "device": "Leadless",
+   "maker": "Abbott",
+   "short": "リードレス本体をデリバリーカテーテルに装填するための治具。AVEIR LPはデリバリーカテーテルとは別梱包で供給され、テザーが適切な位置に揃っていることを確認してからローディングツールに挿入する。取り出したデバイスは、ヘリックス損傷を防ぐため滅菌テーブルに触れさせない。",
+   "tags": "ローディングツール loading tool 別梱包 テザー ヘリックス損傷防止 滅菌テーブル AVEIR リードレス Abbott"
+  },
+  {
+   "term": "保護スリーブ（リードレス）",
+   "en": "Protective sleeve",
+   "abbr": "",
+   "cat": "リードレス",
+   "device": "Leadless",
+   "maker": "Abbott",
+   "short": "カテーテル操作中にリードレス本体のヘリックスを完全に覆い、心血管組織やヘリックスの損傷リスクを下げる柔軟なニチノール製スリーブ。ハブロックで固定し、造影剤の注入ポートも兼ねる（充填量は約10cc）。",
+   "tags": "保護スリーブ protective sleeve ニチノール ヘリックス ハブロック 造影剤 10cc AVEIR リードレス Abbott"
+  },
+  {
+   "term": "バルブ バイパス ツール",
+   "en": "Valve bypass tool",
+   "abbr": "",
+   "cat": "リードレス",
+   "device": "Leadless",
+   "maker": "Abbott",
+   "short": "イントロデューサの止血弁を通してデリバリー／リトリーバルカテーテルをスムーズに挿入・操作するための器具（インサータ）。保護スリーブを覆ってイントロデューサに挿入しロックする。抜去時はロックを解除してからカテーテルを抜く。",
+   "tags": "バルブバイパスツール valve bypass tool インサータ 止血弁 イントロデューサ ロック AVEIR リードレス Abbott"
+  },
+  {
+   "term": "トリループ スネア",
+   "en": "Tri-loop snare",
+   "abbr": "",
+   "cat": "リードレス",
+   "device": "Leadless",
+   "maker": "Abbott",
+   "short": "リトリーバルカテーテル先端の3つのループからなるスネア。リードレス本体のドッキングボタンをキャッチして回収する。再ドッキング機構を持ち、コントロールノブでスネアを開閉できる。",
+   "tags": "トリループスネア tri-loop snare 3ループ ドッキングボタン 再ドッキング コントロールノブ リトリーバル AVEIR リードレス Abbott"
+  },
+  {
+   "term": "ドッキング ボタン",
+   "en": "Docking / Retrieval button",
+   "abbr": "",
+   "cat": "リードレス",
+   "device": "Leadless",
+   "maker": "Abbott",
+   "short": "リードレス本体の近位端にある構造。デリバリー時はカテーテルとのドッキングに、抜去時はトリループスネアで把持する回収点として使う。内部で2本のテザーが重なって固定されている。",
+   "tags": "ドッキングボタン docking button retrieval button 近位端 テザー トリループスネア AVEIR リードレス Abbott"
+  },
+  {
+   "term": "シェブロン マーカ",
+   "en": "Chevron marker",
+   "abbr": "",
+   "cat": "リードレス",
+   "device": "Leadless",
+   "maker": "Abbott",
+   "short": "リードレス本体上のX線マーカ。スクリューイン前にシネで位置を確認し、LPコントロールノブを1秒に1クリックの速度でゆっくり回転させ、シェブロンマーカが1.5回転したら固定完了とする。",
+   "tags": "シェブロンマーカ chevron marker X線 シネ 1.5回転 1秒1クリック LPコントロールノブ 固定 AVEIR リードレス Abbott"
+  },
+  {
+   "term": "デュアル ヘリックス設計",
+   "en": "Dual helix design",
+   "abbr": "",
+   "cat": "リードレス",
+   "device": "Leadless",
+   "maker": "Abbott",
+   "short": "心房用リードレスペースメーカ（AVEIR AR／AR2）の固定構造。1.63mmのアウターヘリックスで固定し、インナーヘリックスが右心房内での固定性・安定性を強化すると同時に先端電極として機能する。心室用（AVEIR VR）はシングルヘリックス設計で、アウターヘリックスが先端電極を兼ねる。",
+   "tags": "デュアルヘリックス dual helix アウターヘリックス インナーヘリックス 1.63mm シングルヘリックス 先端電極 右心房 AVEIR AR AR2 VR Abbott"
+  },
+  {
+   "term": "アヴェイル リンク モジュール",
+   "en": "Aveir Link Module",
+   "abbr": "",
+   "cat": "リードレス",
+   "device": "Leadless",
+   "maker": "Abbott",
+   "short": "AVEIR LPとプログラマの通信を仲介するモジュール（LSL02）。Merlin™ PCS プログラマ左側のUSBポートに接続し、下部に心電図ケーブルを接続する。接続時は他のBluetooth®ドングルを取り外す。AVEIR LPは体表面心電図電極を通して伝導的に通信するため、電極の適切な配置が伝導テレメトリの鍵になる。",
+   "tags": "アヴェイルリンクモジュール Aveir Link Module LSL02 USB Merlin PCS 心電図ケーブル Bluetooth 伝導テレメトリ コミュニケーションウィンドウ AVEIR リードレス Abbott"
+  },
+  {
+   "term": "コマンド EGM",
+   "en": "Command EGM",
+   "abbr": "",
+   "cat": "植込み・手技",
+   "device": "Leadless",
+   "maker": "Abbott",
+   "short": "プログラマからの指示で取得する心内心電図。AVEIR LPでは傷害電流の計測に用い、プレマッピング後・固定後・テザーモードでの評価に使う。プログラマ画面のマーカでは、実施されたセンシングテストおよびコマンドによる心内心電図テストが M と表示される。",
+   "tags": "コマンドEGM command EGM 傷害電流 プレマッピング テザーモード Mマーカ AVEIR リードレス Abbott"
+  },
+  {
+   "term": "右心耳基部",
+   "en": "Base of the right atrial appendage",
+   "abbr": "",
+   "cat": "リードレス",
+   "device": "Leadless",
+   "maker": "Abbott",
+   "short": "心房用リードレスペースメーカ（AVEIR AR／AR2）の推奨留置部位。デュアルヘリックス設計により右心房内での固定性・安定性を確保する。",
+   "tags": "右心耳基部 right atrial appendage RAA 推奨留置部位 心房用LP AVEIR AR AR2 リードレス Abbott"
+  },
+  {
+   "term": "低位中隔",
+   "en": "Low septum (RV)",
+   "abbr": "",
+   "cat": "リードレス",
+   "device": "Leadless",
+   "maker": "Abbott",
+   "short": "心室用リードレスペースメーカ（AVEIR VR）の推奨留置部位。右心室の中隔下部から中隔にかけての領域を指す。留置時はRAO 30度でディフレクションを開始し、RAOとLAOで位置を確認する。",
+   "tags": "低位中隔 low septum 右心室 中隔下部 推奨留置部位 RAO30 LAO 心室用LP AVEIR VR リードレス Abbott"
+  },
+  {
+   "term": "エマージェンシー VVI",
+   "en": "Emergency VVI",
+   "abbr": "EVVI",
+   "cat": "トラブル",
+   "device": "Leadless",
+   "maker": "Abbott",
+   "short": "AVEIR LPの緊急ペーシング。プログラマの赤色のEVVIボタンで作動し、70bpm・6.0V／0.6ms・感度2.0mVでペーシングする。「EVVIから元に戻す」を選ぶとプログラムされた設定に戻る。LPのインテロゲーション中、ファームウェアのアップデート中、新しいLPの最終確定中／以前のLPの無効化中（デバイスの交換中）は使用できない。",
+   "tags": "エマージェンシーVVI EVVI Emergency VVI 70bpm 6.0V 0.6ms 2.0mV 赤ボタン 緊急ペーシング AVEIR リードレス Abbott"
+  },
+  {
+   "term": "アップグレーダブル システム（リードレス）",
+   "en": "Upgradeable leadless system",
+   "abbr": "",
+   "cat": "リードレス",
+   "device": "Leadless",
+   "maker": "Abbott",
+   "short": "心房または心室のリードレスデバイスを単独で植込んだあと、もう一方を追加植込みしてデュアルチャンバペーシングへ移行できる考え方。洞不全症候群にARを植込んだのち房室ブロックが出ればVRを追加し、間欠性房室ブロックにVRを植込んだのち洞不全が出ればARを追加して、i2i™通信でDDDを有効化する。",
+   "tags": "アップグレーダブル upgradeable system 追加植込み デュアルチャンバ移行 SSS AVB AR VR i2i DDD AVEIR リードレス Abbott"
+  },
+  {
+   "term": "アヴェイル イントロデューサ",
+   "en": "Aveir Introducer",
+   "abbr": "",
+   "cat": "リードレス",
+   "device": "Leadless",
+   "maker": "Abbott",
+   "short": "AVEIR LPのデリバリー／リトリーバルカテーテル共用のイントロデューサ。外径27Fr／内径25Fr。長さは30cmと50cmの2種類（LSN25301／LSN25501）。止血弁を備えるため、カテーテル側のバルブバイパスツールを併用するとスムーズに挿入・操作できる。挿入前に血管または組織の拡張を行う。充填量は約30cc。",
+   "tags": "アヴェイルイントロデューサ Aveir Introducer 27Fr 25Fr 30cm 50cm LSN25301 LSN25501 止血弁 バルブバイパスツール 30cc AVEIR リードレス Abbott"
+  },
+  {
+   "term": "リードレスの推定電池寿命（実測ベース）",
+   "en": "Real-world projected battery longevity (leadless)",
+   "abbr": "",
+   "cat": "エビデンス",
+   "device": "Leadless",
+   "maker": "Abbott",
+   "short": "12か月フォローアップ時点の残存寿命に基づく推定電池寿命（中央値）。デュアルチャンバ（i2i通信On）では心房6.4年［5.9, 6.8］（N=263）・心室11.3年［10.6, 11.9］（N=265）、シングルチャンバモードに変更された患者では心房9.8年［7.7, 12.0］（N=44）・心室19.1年［17.0, 21.3］（N=48）。（R. Knops ほか、HRS 2024、2024年5月18日、ボストン）。カタログの予測寿命とは算出の前提が異なる。",
+   "tags": "リードレス 推定電池寿命 実測 6.4年 11.3年 9.8年 19.1年 中央値 95%CI Knops HRS2024 i2i通信On シングルチャンバ AVEIR DR Abbott"
   }
  ],
  "feats": [
