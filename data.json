@@ -1,5 +1,5 @@
 {
- "v": 31,
+ "v": 34,
  "updated": "2026-09-05",
  "gloss": [
   {
@@ -7759,8 +7759,8 @@
    "cat": "モード",
    "device": "PM / ICD / CRT",
    "maker": "Abbott",
-   "short": "アボットのモードスイッチ開始基準。心房インターバルの移動平均（FARI）がこのレートより速くなるとAMSモードへ移行する。復帰は最大トラッキングレートまたはセンサ指示レートを基準とする。",
-   "tags": "Abbott / PM / ICD / CRT / ATDR / mode switch / FARI"
+   "short": "アボットのモードスイッチ開始基準。心房インターバルの移動平均（FARI）がこのレートより速くなるとAMSモードへ移行する。復帰は最大トラッキングレートまたはセンサ指示レートを基準とする。 STモニタリングは心房レートがATDR以上では解析を行わない。",
+   "tags": "Abbott / PM / ICD / CRT / ATDR / mode switch / FARI ATDR STモニタリング 解析しない"
   },
   {
    "term": "AMS基本レート",
@@ -9031,6 +9031,456 @@
    "maker": "Abbott",
    "short": "Merlin™ PCS の初期画面で、アラート・電池状態・テスト結果（閾値、波高値、リードインピーダンス、HVリードインピーダンス）・ゾーン設定・エピソード数・ペーシング率を1画面にまとめて表示する。",
    "tags": "FastPath サマリー FastPath Summary Merlin PCS 初期画面 アラート エピソード数 AP% VP% AMS% Abbott"
+  },
+  {
+   "term": "デフォーメーション",
+   "en": "Deformation",
+   "abbr": "",
+   "cat": "ICD",
+   "device": "ICD / CRT-D",
+   "maker": "General",
+   "short": "ICDのキャパシタが長時間チャージされないと、誘電体の酸化アルミニウム被膜がアルミニウムに変化してしまう現象。チャージ時間の延長と電池消耗を招くため、定期的なリフォーミングで被膜を再形成する。",
+   "tags": "デフォーメーション Deformation キャパシタ 酸化アルミニウム 被膜 劣化 チャージ時間延長"
+  },
+  {
+   "term": "リフォーメーション",
+   "en": "Reformation",
+   "abbr": "",
+   "cat": "ICD",
+   "device": "ICD / CRT-D",
+   "maker": "General",
+   "short": "デフォーメーションで失われたキャパシタの酸化被膜を、チャージによって再形成すること。Deformation → Capacitor Maintenance → Reformation という流れで説明される。",
+   "tags": "リフォーメーション Reformation リフォーミング キャパシタ 被膜再形成 メンテナンス"
+  },
+  {
+   "term": "ダンプ（キャパシタ）",
+   "en": "Dump",
+   "abbr": "",
+   "cat": "ICD",
+   "device": "ICD / CRT-D",
+   "maker": "Abbott",
+   "short": "キャパシタに残っている電荷を体内へ通電せずに放出させる操作。AbbottではAtlas+Ⅱまでの世代に［テスト］＞［キャパシタ］画面の［ダンプ］項目があり、Current™以降は自動でダンプが行われる。",
+   "tags": "ダンプ Dump キャパシタ 残存電圧 Atlas+II Current 自動ダンプ 放電"
+  },
+  {
+   "term": "残存電圧",
+   "en": "Residual voltage",
+   "abbr": "",
+   "cat": "ICD",
+   "device": "ICD / CRT-D",
+   "maker": "Abbott",
+   "short": "キャパシタ メンテナンスやアボートされた治療のあとにキャパシタへ残っている電圧。Abbottの資料ではおおよそ1時間かけてゆっくりと消散していくとされ、プログラマの［キャパシタ］画面で確認できる。",
+   "tags": "残存電圧 Residual voltage キャパシタ 1時間 消散 ダンプ Abbott"
+  },
+  {
+   "term": "チャージ インターバル",
+   "en": "Charge interval",
+   "abbr": "",
+   "cat": "ICD",
+   "device": "ICD / CRT-D",
+   "maker": "Abbott",
+   "short": "キャパシタ メンテナンスを自動で行う間隔。1〜6か月で設定する。変更してもスケジュールされていた（古い設定の）メンテナンスが実施されるまでタイマーはリセットされないため、直ちに切り替えるには手動でメンテナンスを実施する。",
+   "tags": "チャージインターバル Charge interval キャパシタメンテナンス 1〜6か月 3か月 タイマー リセット"
+  },
+  {
+   "term": "前回最大チャージ",
+   "en": "Last maximum charge",
+   "abbr": "",
+   "cat": "ICD",
+   "device": "ICD / CRT-D",
+   "maker": "Abbott",
+   "short": "プログラマの［キャパシタ］／［バッテリー & リード］画面に表示される、直近のフルチャージに要した時間とその実施日。チャージ時間の延長は被膜劣化と電池消耗の両方のサインになるため、推移で判断する。",
+   "tags": "前回最大チャージ Last maximum charge チャージタイム 充電時間 キャパシタ 電池消耗 Abbott"
+  },
+  {
+   "term": "アボーテッド セラピー",
+   "en": "Aborted therapy",
+   "abbr": "",
+   "cat": "ICD",
+   "device": "ICD / CRT-D",
+   "maker": "General",
+   "short": "チャージ中に頻拍の停止（サイナス再検出）が確認され、チャージを中断して治療そのものを断念すること。ノンコミッテッド方式の帰結で、記録には「チャージしたが放電しなかった」形で残る。故障ではない。",
+   "tags": "アボーテッドセラピー Aborted therapy Abort 治療の中止 中断 放棄 ノンコミッテッド サイナス再検出 チャージ中止"
+  },
+  {
+   "term": "ノンサイナス コンプレックス",
+   "en": "Non-Sinus Complex",
+   "abbr": "",
+   "cat": "ICD",
+   "device": "ICD / CRT-D",
+   "maker": "Abbott",
+   "short": "頻拍ゾーンにBinされた拍のこと。AbbottのICDはチャージ終了後に一拍飛ばし、次のノンサイナス コンプレックスに同期して通電する。「Sinus」および「Not Binned」の拍には同期しない。",
+   "tags": "ノンサイナスコンプレックス Non-Sinus Complex Binned Not Binned Sinus 同期 ショック 一拍飛ばし Abbott"
+  },
+  {
+   "term": "ランプ ステップ",
+   "en": "Ramp Step",
+   "abbr": "",
+   "cat": "ICD",
+   "device": "ICD / CRT-D",
+   "maker": "Abbott",
+   "short": "ATPでランプをOnにしたとき、1つのバースト内で各ペーシングインターバルを短縮していく量。スキャンステップがバースト間の短縮幅であるのに対し、こちらはバースト内の短縮幅。ノミナル10。",
+   "tags": "ランプステップ Ramp Step ATP ランプ バースト内 短縮 スキャンステップ 10ms"
+  },
+  {
+   "term": "最大ステップ",
+   "en": "Max Step",
+   "abbr": "",
+   "cat": "ICD",
+   "device": "ICD / CRT-D",
+   "maker": "Abbott",
+   "short": "ATPのスキャンで短縮できる合計量の上限。リアダプティブをOnにすると設定できるようになり、ノミナル50msで、50ms以上はステップしない。",
+   "tags": "最大ステップ Max Step 最大スキャンステップ ATP スキャン リアダプティブ 50ms 上限"
+  },
+  {
+   "term": "ATP パルス振幅",
+   "en": "ATP Pulse Amplitude",
+   "abbr": "",
+   "cat": "ICD",
+   "device": "ICD / CRT-D",
+   "maker": "Abbott",
+   "short": "抗頻拍ペーシングの出力電圧。通常の徐脈ペーシングより高出力に設定し、Abbottでは7.5V。捕捉できなければ頻拍に介入できないため、余裕をもった設定にする。",
+   "tags": "ATPパルス振幅 ATP Pulse Amplitude 7.5V 抗頻拍ペーシング 出力 高出力"
+  },
+  {
+   "term": "ATP パルス幅",
+   "en": "ATP Pulse Width",
+   "abbr": "",
+   "cat": "ICD",
+   "device": "ICD / CRT-D",
+   "maker": "Abbott",
+   "short": "抗頻拍ペーシングのパルス幅。Abbottでは1.0msまたは1.5msに設定する。通常の徐脈ペーシングより広く取り、確実な捕捉を狙う。",
+   "tags": "ATPパルス幅 ATP Pulse Width 1.0ms 1.5ms 抗頻拍ペーシング 捕捉"
+  },
+  {
+   "term": "固定チルト",
+   "en": "Fixed Tilt",
+   "abbr": "",
+   "cat": "ICD",
+   "device": "ICD / CRT-D",
+   "maker": "Abbott",
+   "short": "ショック波形をチルト（％）で指定し、パルス幅を自動調整させる設定方法。Abbottでは Nominal 設定にあたり、CVRTとDefibで別個に設定できる。チルト固定のときショック出力はジュールで設定する。",
+   "tags": "固定チルト Fixed Tilt チルト固定 65% Nominal CVRT Defib パルス幅自動調整 DeFT Response"
+  },
+  {
+   "term": "固定パルス幅",
+   "en": "Fixed Pulse Width",
+   "abbr": "",
+   "cat": "ICD",
+   "device": "ICD / CRT-D",
+   "maker": "Abbott",
+   "short": "ショック波形をパルス幅（ms）で指定し、チルトを自動調整させる設定方法。CVRTとDefibで別個に設定でき、このときショック出力は電圧で設定する（J値は予測値）。ショックインピーダンスに左右されにくい。",
+   "tags": "固定パルス幅 Fixed Pulse Width パルス幅固定 チルト自動調整 電圧設定 SJM DeFT Response"
+  },
+  {
+   "term": "頻拍の加速（ATP）",
+   "en": "Acceleration by ATP",
+   "abbr": "",
+   "cat": "ICD",
+   "device": "ICD / CRT-D",
+   "maker": "General",
+   "short": "ATPによって心室頻拍がより速い頻拍や心室細動へ移行してしまうこと。バースト回数・刺激回数を増やすほど停止率とともに加速のリスクも上がる。血行動態が破綻しているVTでは特に注意する。",
+   "tags": "頻拍の加速 加速 増悪 acceleration ATP プロアリズミア VT VF 刺激回数 バースト回数"
+  },
+  {
+   "term": "HVLIC",
+   "en": "High Voltage Lead Integrity Check",
+   "abbr": "HVLIC",
+   "cat": "ICD",
+   "device": "ICD / CRT-D",
+   "maker": "Abbott",
+   "short": "除細動コイルの低抵抗値を検出する仕組み。HVLICで低抵抗を検出しても DynamicTx™ による極性の自動変更は行われない。極性変更が働くのは実際の放電でOCD（60A以上）を検出したときだけ。",
+   "tags": "HVLIC High Voltage Lead Integrity Check 除細動コイル 低抵抗 DynamicTx OCD 極性変更されない"
+  },
+  {
+   "term": "リファレンス インピーダンス",
+   "en": "Reference impedance",
+   "abbr": "",
+   "cat": "心不全",
+   "device": "ICD / CRT-D",
+   "maker": "Abbott",
+   "short": "CorVue™ が比較の基準に使うインピーダンス。ICDは最初の12日間、CRT-Dは14日間かけて作成し、この間データは表示されない。実測（日別）インピーダンスがこれを下回る状態が続くとアラートに向かってカウントが進む。",
+   "tags": "リファレンスインピーダンス Reference impedance 基準インピーダンス CorVue 12日 14日 日別インピーダンス"
+  },
+  {
+   "term": "日別インピーダンス",
+   "en": "Daily impedance",
+   "abbr": "",
+   "cat": "心不全",
+   "device": "ICD / CRT-D",
+   "maker": "Abbott",
+   "short": "CorVue™ が2時間ごとに測定したインピーダンスを、その日の平均値として算出したもの。実測インピーダンスとも呼ぶ。トレンド画面ではリファレンスと重ねて表示される。",
+   "tags": "日別インピーダンス Daily impedance 実測インピーダンス 2時間ごと 平均値 CorVue トレンド"
+  },
+  {
+   "term": "CorVue™ トリガ日数",
+   "en": "CorVue trigger days",
+   "abbr": "",
+   "cat": "心不全",
+   "device": "ICD / CRT-D",
+   "maker": "Abbott",
+   "short": "CorVue™ がアラートを出すまでにうっ血状態が続く必要のある日数。8〜18日で設定し、ノミナルは CRT-D 14日／ICD 13日。ここでいう1日はインデックス12カウント分で、暦の1日とは一致しない。",
+   "tags": "CorVueトリガ日数 trigger days 8〜18日 13日 14日 カレンダー日数 12カウント CorVue"
+  },
+  {
+   "term": "CorVue™ インデックス",
+   "en": "CorVue index",
+   "abbr": "",
+   "cat": "心不全",
+   "device": "ICD / CRT-D",
+   "maker": "Abbott",
+   "short": "CorVue™ が2時間ごとの判定を積み上げるカウンター。12カウントで1日と定義し、実測がリファレンスを下回れば+1、下回らなければ−1する。設定日数（日数×12）に達し、さらに12回連続で増加するとアラートをトリガする。",
+   "tags": "CorVueインデックス CorVue index カウンター 12カウント 1日 132 144 増減 アラート"
+  },
+  {
+   "term": "CorVue™ モニタリング",
+   "en": "CorVue monitoring",
+   "abbr": "",
+   "cat": "心不全",
+   "device": "ICD / CRT-D",
+   "maker": "Abbott",
+   "short": "Abbottの胸郭インピーダンスによる心不全モニタ。2時間ごとに測定し、リファレンスを下回る状態が設定日数続くとアラートする。ノミナルはOff。植込み後30日を経過するまで使用しない。",
+   "tags": "CorVue CorVueモニタリング 胸郭インピーダンス 経胸壁インピーダンス 心不全 肺水腫 うっ血 ノミナルOff 30日"
+  },
+  {
+   "term": "ペイシェント ノーティファイアー",
+   "en": "Patient notifier",
+   "abbr": "",
+   "cat": "ICD",
+   "device": "PM / ICD / CRT",
+   "maker": "Abbott",
+   "short": "アラートを本体から患者本人に知らせる通知経路。［アラート トリガ］画面で項目ごとにチェックし、［全ノーティファイアー無効］でまとめて解除できる。FastPath™ への表示とは別のチェックである。",
+   "tags": "ペイシェントノーティファイアー Patient notifier 患者通知 アラート 全ノーティファイアー無効 FastPath Tone"
+  },
+  {
+   "term": "肺うっ血とインピーダンス",
+   "en": "Pulmonary congestion and impedance",
+   "abbr": "",
+   "cat": "心不全",
+   "device": "ICD / CRT",
+   "maker": "General",
+   "short": "体液（血液）は電気を通す導電体、空気は通さない絶縁体であるため、肺うっ血が起こると胸郭の電気抵抗は低下する。左室拡張末期圧（LVEDP）と胸郭インピーダンスは逆相関することが動物実験で示されている。",
+   "tags": "肺うっ血 インピーダンス 導電体 絶縁体 LVEDP 左室拡張末期圧 逆相関 肺水腫 胸郭インピーダンス"
+  },
+  {
+   "term": "左室拡張末期圧",
+   "en": "Left ventricular end-diastolic pressure",
+   "abbr": "LVEDP",
+   "cat": "心不全",
+   "device": "ICD / CRT",
+   "maker": "General",
+   "short": "拡張末期の左室内圧。上昇すると左房圧が上がり肺うっ血につながる。胸郭インピーダンスと逆相関し、インピーダンスモニタが心不全増悪の指標になる根拠のひとつ。",
+   "tags": "LVEDP 左室拡張末期圧 left ventricular end-diastolic pressure 左房圧 肺うっ血 胸郭インピーダンス"
+  },
+  {
+   "term": "ニアフィールド／ファーフィールド（センシング）",
+   "en": "Near field / Far field sensing",
+   "abbr": "",
+   "cat": "ICD",
+   "device": "ICD / CRT-D",
+   "maker": "General",
+   "short": "心室センシング極性（RV Tip-Ring）で見る局所の信号がニアフィールド、RVコイル−Can や RV Ring−Can で見る広い範囲の信号がファーフィールド。両者の一致・不一致がリードノイズ識別やモーフォロジー判定の手がかりになる。",
+   "tags": "ニアフィールド ファーフィールド near field far field RV Tip-Ring RVコイル-Can RV Ring-Can SecureSense モーフォロジー"
+  },
+  {
+   "term": "全ノーティファイアー無効",
+   "en": "Disable all notifiers",
+   "abbr": "",
+   "cat": "ICD",
+   "device": "PM / ICD / CRT",
+   "maker": "Abbott",
+   "short": "［アラート トリガ］画面のボタンで、患者への通知だけを一括して解除する。音に強い不安を訴える患者では選択肢になるが、解除したこと自体を記録に残さないと次の担当者が誤解する。",
+   "tags": "全ノーティファイアー無効 Disable all notifiers 患者通知 一括解除 アラートトリガ Abbott"
+  },
+  {
+   "term": "HVリード インピーダンス範囲外通知",
+   "en": "HV lead impedance out-of-range alert",
+   "abbr": "",
+   "cat": "ICD",
+   "device": "ICD / CRT-D",
+   "maker": "Abbott",
+   "short": "除細動コイルのインピーダンスが設定範囲（画面例 20〜125Ω）を外れたときに出るアラート。低下側は絶縁被覆損傷による短絡、上昇側は断線やコネクタ接続不良を示唆する。",
+   "tags": "HVリードインピーダンス 範囲外通知 20-125Ω アラート 除細動コイル 短絡 断線 Lead Monitoring"
+  },
+  {
+   "term": "デリバードパルス幅",
+   "en": "Delivered pulse width",
+   "abbr": "",
+   "cat": "ICD",
+   "device": "ICD / CRT-D",
+   "maker": "Abbott",
+   "short": "プログラマの［HV Therapy］一覧に表示される、実際に通電された時間。OCDで中止された治療では0.2ms程度と極端に短くなるため、コイル抵抗値と並べて見ると短絡の有無を読み取れる。",
+   "tags": "デリバードパルス幅 Delivered PW 通電時間 OCD 0.2ms HV Therapy 短絡 コイル抵抗値"
+  },
+  {
+   "term": "プレトリガ状態／ポストトリガ状態（CorVue）",
+   "en": "Pre-trigger / Post-trigger state",
+   "abbr": "",
+   "cat": "心不全",
+   "device": "ICD / CRT-D",
+   "maker": "Abbott",
+   "short": "CorVue™ のトレンド下段のバーの色。青がアラートをトリガする前（長さは設定したトリガ日数で変わる）、橙がトリガした後（日別インピーダンスがリファレンスを上回るまで）。7日＝インデックス84に達したイベントから青バーで表示される。",
+   "tags": "プレトリガ状態 ポストトリガ状態 青バー 橙バー CorVue トレンド 84 7日 Pre-Trigger Post-Trigger"
+  },
+  {
+   "term": "インデックスのリセット（CorVue）",
+   "en": "Index reset",
+   "abbr": "",
+   "cat": "心不全",
+   "device": "ICD / CRT-D",
+   "maker": "Abbott",
+   "short": "CorVue™ のインデックスが連続で低下するとゼロにリセットされ、エピソードが終了する。長期のエピソードで利尿薬などにより急激に水分が除去される場合に、直ちにエピソードを終わらせるための設計。",
+   "tags": "インデックスのリセット エピソード終了 CorVue 連続低下 ゼロ 利尿薬 利尿"
+  },
+  {
+   "term": "等電位インターバル",
+   "en": "Isoelectric interval",
+   "abbr": "",
+   "cat": "ICD",
+   "device": "ICD / CRT-D",
+   "maker": "Abbott",
+   "short": "STモニタリングでST偏差・STヒストグラムを作るときの基準となる電位。Vsイベントの手前部分にとり、0mVとして表示される。開始位置と持続時間を安静時とレート範囲1〜3のそれぞれに設定できる。",
+   "tags": "等電位インターバル Isoelectric interval 基準電位 0mV Vsイベント 手前 STモニタリング 設定変更可能"
+  },
+  {
+   "term": "STインターバル",
+   "en": "ST interval",
+   "abbr": "",
+   "cat": "ICD",
+   "device": "ICD / CRT-D",
+   "maker": "Abbott",
+   "short": "STモニタリングでST変化を評価するポイント。Vsイベントの後ろ部分にとり、等電位インターバルに対する差を＋○○mV／−○○mVとして示す。QRSの最後に掛かっていると正しく評価できないため、平坦な部分へずらす。",
+   "tags": "STインターバル ST interval Vsイベント 後ろ 評価ポイント QRS 平坦 セットアップ 等電位インターバル"
+  },
+  {
+   "term": "ST偏差",
+   "en": "ST deviation",
+   "abbr": "",
+   "cat": "ICD",
+   "device": "ICD / CRT-D",
+   "maker": "Abbott",
+   "short": "STが基線よりずれること。またSTモニタリングの診断データのひとつで、等電位インターバルとSTインターバルの差を過去6か月分プロットする。6か月表示は1プロットが1週間分、1か月表示は1日分。四角が最多値、上下の線が範囲。",
+   "tags": "ST偏差 ST deviation 基線 ずれ 6か月 1週間 最多値 範囲 心拍数ゾーン トレンド"
+  },
+  {
+   "term": "STヒストグラム",
+   "en": "ST histogram",
+   "abbr": "",
+   "cat": "ICD",
+   "device": "ICD / CRT-D",
+   "maker": "Abbott",
+   "short": "STモニタリングの診断データのひとつ。過去7日間の等電位インターバルとSTインターバルの差を、心拍数ゾーンごとに色分けして表示する。縦軸は対数の拍数、横軸はST偏差（mV）。各1日ごとの表示もできる。",
+   "tags": "STヒストグラム ST histogram 7日間 対数 拍数 心拍数ゾーン 色分け mV"
+  },
+  {
+   "term": "STエピソードログ",
+   "en": "ST episode log",
+   "abbr": "",
+   "cat": "ICD",
+   "device": "ICD / CRT-D",
+   "maker": "Abbott",
+   "short": "STインターバルが設定閾値を超えたときに残る記録。最大30件でFirst-in First-out。日付＆時刻・エピソードのタイプ・継続時間・オンセット時心拍数・最大STシフト％のほか、STエピソードから15分以内の新しいVT/VFエピソード数が明記される。",
+   "tags": "STエピソードログ ST episode log 30件 First-in First-out 最大STシフト オンセット時心拍数 15分以内 VT/VF 255"
+  },
+  {
+   "term": "STエピソードEGM",
+   "en": "ST episode EGM",
+   "abbr": "",
+   "cat": "ICD",
+   "device": "ICD / CRT-D",
+   "maker": "Abbott",
+   "short": "STエピソードに付随して保存される心内心電図。5件・1件あたり12秒分で、24時間以上前のベースライン／STオンセット／ST最大シフトの3枚が並ぶ。「最も古い1件＋最新4件」という記載と「First in First out」という記載が資料内に併存する。",
+   "tags": "STエピソードEGM ST episode EGM 5件 12秒 ベースライン オンセット 最大シフト 24時間 First in First out"
+  },
+  {
+   "term": "心拍数ゾーン（STモニタリング）",
+   "en": "Heart rate zone",
+   "abbr": "",
+   "cat": "ICD",
+   "device": "ICD / CRT-D",
+   "maker": "Abbott",
+   "short": "STモニタリングがデータを振り分ける4つの帯（安静時／レート範囲1／2／3）。最下限は基本レートまたは40min⁻¹、最上限はVT検出レートまたは140min⁻¹。設定変更できるのは安静時ゾーンの上限のみ（ノミナル86min⁻¹）で、上の3帯は均等に分割される。",
+   "tags": "心拍数ゾーン Heart rate zone 安静時 レート範囲 4ゾーン 86min-1 40bpm 140bpm 均等分割 STモニタリング"
+  },
+  {
+   "term": "上昇の閾値／下降の閾値",
+   "en": "Elevation / Depression threshold",
+   "abbr": "",
+   "cat": "ICD",
+   "device": "ICD / CRT-D",
+   "maker": "Abbott",
+   "short": "STインターバルがこれを超えるとSTエピソードを取得する境界。％で表し、ベースラインのR波高値（base to peak）を100％とする。デバイスが自動算出するが、推奨値は手動でプログラミングしないと反映されない。",
+   "tags": "上昇の閾値 下降の閾値 elevation depression threshold ％ R波高値 base to peak 推奨値 手動プログラミング 3σ"
+  },
+  {
+   "term": "STフリーズ",
+   "en": "ST freeze",
+   "abbr": "",
+   "cat": "ICD",
+   "device": "ICD / CRT-D",
+   "maker": "Abbott",
+   "short": "STモニタリングのセットアップで、現在のSTモニタリング波形（Can → RV Tip）を静止画として取得する操作。HRが安静時心拍数範囲にないと取得できない。取得後、1心拍を選んで等電位インターバルとSTインターバルを確認・調整する。",
+   "tags": "STフリーズ ST freeze セットアップ 波形取得 Can RVtip 安静時心拍数範囲 拍動を選択 等電位インターバル"
+  },
+  {
+   "term": "ST エピソード タイプ1／タイプ2",
+   "en": "ST episode Type 1 / Type 2",
+   "abbr": "",
+   "cat": "ICD",
+   "device": "ICD / CRT-D",
+   "maker": "Abbott",
+   "short": "Ellipse™ 以降のEnhanced ST MonitoringでSTエピソードを分ける区分。タイプ1は臨床的な意味が高いエピソード、タイプ2は真の安静時ではなく持続も10分以内で臨床的な意味が低い可能性のあるエピソード。通知先のノミナルも異なる。",
+   "tags": "STエピソードタイプ Type 1 Type 2 タイプI タイプII Enhanced ST Monitoring Ellipse 10分 安静時 臨床的意味"
+  },
+  {
+   "term": "ベースライン（基準波形）",
+   "en": "Baseline waveform",
+   "abbr": "",
+   "cat": "ICD",
+   "device": "ICD / CRT-D",
+   "maker": "Abbott",
+   "short": "STモニタリングが比較の基準にする波形。6時間ごとに取得した4つの平均のSTの高さを0mVとする。植込み後は安静時ゾーン内のVsイベント4060拍と96時間（4日間）をかけて完成する。",
+   "tags": "ベースライン 基準波形 baseline 6時間ごと 4つの平均 0mV 4060拍 96時間 4日間 STモニタリング"
+  },
+  {
+   "term": "冠攣縮性狭心症",
+   "en": "Vasospastic angina",
+   "abbr": "SPASM",
+   "cat": "不整脈・EP",
+   "device": "ICD / CRT-D",
+   "maker": "General",
+   "short": "冠動脈の攣縮による狭心症。日本人に多く欧米人の約3倍とされ、薬物治療の反応は比較的良好。夜間から早朝に起こりやすく、寒風・喫煙・飲酒・ストレスが誘因。診断にアセチルコリン・エルゴノビン負荷試験を用いる。難治性で発作を予防できなければVFに対するICDも考慮されるが統一見解はない。",
+   "tags": "冠攣縮性狭心症 SPASM 攣縮 異型狭心症 アセチルコリン エルゴノビン 負荷試験 夜間 早朝 日本人 3倍"
+  },
+  {
+   "term": "不安定狭心症",
+   "en": "Unstable angina",
+   "abbr": "",
+   "cat": "不整脈・EP",
+   "device": "PM / ICD / CRT",
+   "maker": "General",
+   "short": "最近3週間以内に発作が初発もしくは増悪した狭心症。発作の強さや頻度が一定の安定狭心症と対比される経過（時期）からの分類。急性冠症候群の一部として扱われる。",
+   "tags": "不安定狭心症 unstable angina 安定狭心症 3週間 初発 増悪 急性冠症候群 経過 分類"
+  },
+  {
+   "term": "労作性狭心症／安静時狭心症",
+   "en": "Effort angina / Rest angina",
+   "abbr": "",
+   "cat": "不整脈・EP",
+   "device": "PM / ICD / CRT",
+   "maker": "General",
+   "short": "誘因の観点からの狭心症の分類。労作性は体を動かした時に症状が出るもの、安静時は安静にしている時に症状が出るもの。STモニタリングのエピソードのタイプ分けとは定義が異なるため、単純には対応しない。",
+   "tags": "労作性狭心症 安静時狭心症 effort angina rest angina 誘因 分類 STエピソードタイプ"
+  },
+  {
+   "term": "傷害電流",
+   "en": "Current of injury",
+   "abbr": "COI",
+   "cat": "植込み・手技",
+   "device": "PM / ICD / CRT",
+   "maker": "General",
+   "short": "リード先端が心筋に接触・固定された直後に生じる電位変化。良好な固定の指標になる一方、植込み直後の計測値を不安定にする。STモニタリングが植込みから4時間はデータを取得しないのは、これとポケット内状態の不安定さのため。",
+   "tags": "傷害電流 current of injury COI リード固定 心筋 接触 植込み直後 4時間 STモニタリング ポケット"
   }
  ],
  "feats": [
