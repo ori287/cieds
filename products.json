@@ -1,6 +1,6 @@
 {
- "v": 2,
- "updated": "2026-09-02",
+ "v": 5,
+ "updated": "2026-09-05",
  "note": "リードデータ一覧表（2018年版）を基礎とし、Boston Scientific 歴史的リファレンス・FDA 510(k)・各社公式情報で照合。製品名が確認できないものは型番を製品名として表示している。",
  "items": [
   {
@@ -27987,20 +27987,23 @@
    "maker": "Abbott",
    "dealer": "アボットメディカルジャパン(同)",
    "cat": "PMリード",
-   "name": "UltiPace",
-   "en": "UltiPace™",
-   "model": "UltiPace",
+   "name": "UltiPace™",
+   "en": "UltiPace™ Pacing Lead",
+   "model": "LPA1231",
    "polarity": "双極",
-   "site": "V",
+   "site": "A/V",
    "fixation": "スクリュー",
    "steroid": "有",
    "connector": "IS-1",
-   "cond": "スタイレット式",
+   "cond": "同軸（内側コイル・外側コイルは従来と同じ）",
    "mri": "",
    "mri_cond": "",
    "csa_d": "",
    "csa_p": "",
-   "cgap": ""
+   "cgap": "",
+   "alias": "アルティペース",
+   "intro": "6F",
+   "insul": "Optim/Si（近位部にPTFE内側・外側ライナーを追加）"
   },
   {
    "id": "MDT-D-MICRA-VR",
@@ -28184,13 +28187,14 @@
    "diag": "",
    "mri_group": "ABT-AVEIR",
    "mri": "1.5F／3.0F",
-   "eri_eos": ""
+   "eri_eos": "",
+   "alias": "アヴェイル LP"
   },
   {
    "id": "ABT-D-AVEIR-AR",
    "maker": "Abbott",
    "name": "AVEIR AR",
-   "model": "RA2",
+   "model": "LSP201A",
    "en": "AVEIR™ AR",
    "family": "AVEIR",
    "sensing": "心房用（AAI(R)）",
@@ -28219,7 +28223,39 @@
    "mri_cond": "傾斜磁場スルーレート ≦200T/m/s／SAR 全身・頭部とも 通常操作モード もしくは 第一次水準管理操作モード（IEC60601-2-33 / JIS Z 4951:2017）",
    "diag": "",
    "mri_group": "ABT-AVEIR",
-   "mri": "1.5F／3.0F"
+   "mri": "1.5F／3.0F",
+   "alias": "アヴェイル LP"
+  },
+  {
+   "id": "ABT-D-AVEIR-AR2",
+   "kind": "device",
+   "maker": "Abbott",
+   "dealer": "アボットメディカルジャパン(同)",
+   "cat": "Leadless PM",
+   "name": "AVEIR AR2",
+   "en": "AVEIR™ AR2 Atrial Leadless Pacemaker",
+   "family": "AVEIR",
+   "model": "LSP203A",
+   "alias": "アヴェイル LP",
+   "sensing": "心房用（AAI(R)）。心室用 AVEIR™ VR と組み合わせて AAI(R)＋VVI／DDD(R) が可能",
+   "longevity": "10年以上（AAI(R)／AAI(R)＋VVI）",
+   "longevity_cond": "1.5V／300Ω／0.4ms／50bpm／心房ペーシング100％。資料の比較表では AAI(R)・AAI(R)＋VVI がペーシング率50％で16.1／100％で12.4、DDD(R)（i2i＝4/4）が50％で8.6／100％で7.3（表の見出しは「消費電力」だが単位の記載がなく年数と読める。未確定）",
+   "rf": "○（BLE＋MICS）",
+   "rm": "○（Merlin.net）",
+   "mri": "1.5F／3.0F",
+   "mri_cond": "傾斜磁場スルーレート ≦200T/m/s／SAR 全身・頭部とも 通常操作モード もしくは 第一次水準管理操作モード（IEC60601-2-33 / JIS Z 4951:2017）",
+   "mri_group": "ABT-AVEIR",
+   "diag": "",
+   "nbg": "",
+   "jp_release": "",
+   "xray": "",
+   "screwdriver": "",
+   "battery_model": "",
+   "battery_cap": "",
+   "magnet_bol": "",
+   "magnet_eos": "",
+   "eos_behavior": "",
+   "eri_eos": ""
   },
   {
    "id": "ABT-D-AVEIR-DR",
@@ -28252,7 +28288,8 @@
    "mri_cond": "",
    "diag": "",
    "mri": "1.5F／3.0F",
-   "eri_eos": ""
+   "eri_eos": "",
+   "alias": "アヴェイル LP"
   },
   {
    "id": "GEAR-SH-3",
@@ -28261,14 +28298,17 @@
    "dealer": "アボットメディカルジャパン(同)",
    "cat": "デリバリーシース",
    "name": "CPS Locator™ 3D Delivery Catheter",
-   "family": "CPS（Cardiac Positioning System）",
-   "role": "ペーシングリードや除細動リードを目標部位へ導く単回使用のデリバリーカテーテル。遠位のカーブ形状が異なる複数のサイズがあり、解剖に合わせて選ぶ。左脚領域ペーシング（LBBAP）での使用実績があり、冠静脈洞からの左室リード留置にも用いる。止血弁を備え、遠位端はX線不透過。抜去時は専用スリッターでシースを切開する。",
-   "idfr": "7F",
-   "odfr": "9F",
-   "leadfit": "6Fリードに適合（42cmカテーテルは58cm以上、45cmカテーテルは65cm以上のリード長を推奨）",
-   "length": "42cm／45cm",
-   "gw": "0.035インチガイドワイヤ対応（ダイレータ）",
-   "alias": "CPS ロケーター 3D"
+   "family": "心臓用カテーテルイントロデューサキット（JMDN 10598000）",
+   "role": "ペーシングリードや除細動リードを目標部位へ導く単回使用のデリバリーカテーテル。本体（カテーテル）とダイレータで構成され、立体的な遠位カーブを備える。カーブ形状は Small／Medium／Large の3種類、有効長は42cmと45cmの2種類（Extra Long は Medium と Large のみ）で、解剖に合わせて選ぶ。左脚領域ペーシング（LBBAP）で用いられ、冠静脈洞からの左室リード留置にも使う。止血弁を備え、遠位端はX線不透過。留置後は一般的な手技で抜去するか、専用スリッタでスリッティングして抜去する。製造はセンターポイント社（アメリカ合衆国）、製造販売はアボットメディカルジャパン合同会社。添付文書は2023年8月作成（第1版）。【禁忌・警告】MRI環境下では使用しない。重篤な梗塞のある患者、心室に使用する場合の三尖弁疾患のある患者には使用しない。静脈アクセスのための血管が閉塞またはアクセスできない場合は使用しない。使用前にフラッシュして空気を除き、処置中はサイドポートを閉じたままにする。抵抗を感じたときは挿入・抜去せず、中断して原因を究明する。造影剤等の高圧注入は行わない（破損のおそれ）。スリッタで除去する際はペーシングリードを傷つけないよう注意する。",
+   "idfr": "7F（2.44mm）",
+   "odfr": "9F（3.00mm）",
+   "leadfit": "6Fリードに適合。42cmカテーテルはリード長58cm以上、45cmカテーテルは65cm以上を推奨",
+   "length": "有効長 42cm（全長45cm）／有効長 45cm（全長48cm）",
+   "gw": "ダイレータは0.035インチガイドワイヤに対応。カテーテル挿入には0.035インチのJ字型チップガイドワイヤを使用する",
+   "alias": "ロケーター 3D",
+   "en": "CPS Locator™ 3D Delivery Catheter",
+   "model": "DS2C100-42（Small）／DS2C200-42（Medium）／DS2C300-42（Large）／DS2C200-45（Medium, Extra Long）／DS2C300-45（Large, Extra Long）",
+   "approval": "ロケーター 3D（30500BZX00183000）。別売のスリッタはアジリス HisPro（30300BZX00309000）"
   },
   {
    "id": "GEAR-SH-4",
@@ -28317,6 +28357,32 @@
    "csa_d": "",
    "csa_p": "",
    "cgap": ""
+  },
+  {
+   "id": "GEAR-SH-5",
+   "kind": "gear",
+   "maker": "Abbott",
+   "dealer": "アボットメディカルジャパン(同)",
+   "cat": "スリッター・ツール",
+   "name": "Agilis HisPro™ Slitter",
+   "en": "Agilis HisPro™ Slitter",
+   "model": "DS3A001",
+   "alias": "アジリス HisPro スリッター",
+   "role": "デリバリーカテーテルを切開して抜去するためのスリッター。スパイラル状のスタビライゼーションチャネルにより、スリッティング時にカテーテルの位置がぶれないよう設計されている。スリッティング中のリードの保持（アライメント）と保護を担う。ロケーター 3D の抜去に用いる別売品で、切開時はペーシングリードを傷つけないよう注意する。",
+   "leadfit": "ロケーター 3D（CPS Locator™ 3D Delivery Catheter）用",
+   "approval": "アジリス HisPro（30300BZX00309000）"
+  },
+  {
+   "id": "GEAR-SH-6",
+   "kind": "gear",
+   "maker": "Abbott",
+   "dealer": "アボットメディカルジャパン(同)",
+   "cat": "スリッター・ツール",
+   "name": "Helix Locking Tool（HLT）",
+   "en": "Helix Locking Tool",
+   "alias": "ヘリックス ロッキング ツール",
+   "role": "ヘリックス（スクリュー）の伸展と格納を制御し、リードの固定を助ける専用ツール。左脚領域ペーシング（LBBAP）では、Tendril™ STS 2088TC を用いる場合に時計回り8〜18回転でヘリックスを伸展させ、中隔組織内に固定したあとさらに5回転させる。",
+   "leadfit": "Tendril™ STS（2088TC）ほかのスクリュー固定リード"
   }
  ]
 }

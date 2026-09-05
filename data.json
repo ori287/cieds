@@ -1,5 +1,5 @@
 {
- "v": 34,
+ "v": 38,
  "updated": "2026-09-05",
  "gloss": [
   {
@@ -1209,8 +1209,8 @@
    "cat": "CRT・CSP",
    "device": "PM / CRT",
    "maker": "General",
-   "short": "深部中隔から左脚領域を刺激するLeft Bundle Branch Area Pacing。LBB captureを確認できないLV septal pacingも包括し得る。閾値が安定しやすく、近年広く行われている。",
-   "tags": "CSP / PM / CRT / General / Left / Bundle / Branch / Area / threshold / capture 左脚ペーシング クラスIIb ヒス束無効時 2021年ガイドライン left bundle branch area pacing 左脚領域ペーシング"
+   "short": "深部中隔から左脚領域を刺激するLeft Bundle Branch Area Pacing。LBB captureを確認できないLV septal pacingも包括し得る。閾値が安定しやすく、近年広く行われている。ターゲットはRAO30度でヒス電位から心尖方向に15〜35mm、三尖弁輪の中隔尖の下で、LAO30度で中隔に垂直に貫通する向きに留置する。",
+   "tags": "CSP / PM / CRT / General / Left / Bundle / Branch / Area / threshold / capture 左脚ペーシング クラスIIb ヒス束無効時 2021年ガイドライン left bundle branch area pacing 左脚領域ペーシング RAO30 LAO30 15mm 35mm 三尖弁輪 中隔尖 ターゲット部位 Abbott"
   },
   {
    "term": "LVAT",
@@ -1219,8 +1219,8 @@
    "cat": "CRT・CSP",
    "device": "PM / CRT",
    "maker": "General",
-   "short": "左室活性化時間。CSPでは刺激からV6 R波頂点などまでの時間として評価する。左脚が捕捉できているかの判断材料になる。",
-   "tags": "CSP / PM / CRT / General / Left / Ventricular / Activation / Time / threshold / capture left ventricular activation time 左室興奮時間"
+   "short": "左室活性化時間。ペーシング刺激からV5またはV6誘導のR波ピークまでの時間として計測し、80ms未満が目安。左脚が捕捉できているかの判断材料になる。高出力でも低出力でも一貫していることが重要で、LVATが短く一貫していてインピーダンスが高いままなら、リード本体を回転させて固定を進める。",
+   "tags": "CSP / PM / CRT / General / Left / Ventricular / Activation / Time / threshold / capture left ventricular activation time 左室興奮時間 LVAT 80ms V5 V6 R波ピーク 高出力 低出力 一貫 リード固定 Abbott LBBAP"
   },
   {
    "term": "V6 RWPT",
@@ -1229,8 +1229,8 @@
    "cat": "CRT・CSP",
    "device": "PM / CRT",
    "maker": "General",
-   "short": "刺激スパイクからV6誘導R波頂点までの時間。LBB capture評価に用いられる指標。左脚捕捉が得られていれば短く一定になる。",
-   "tags": "CSP / PM / CRT / General / V6 / R-wave / Peak / Time / threshold / capture V6 R wave peak time"
+   "short": "刺激スパイクからV6誘導R波頂点までの時間。LBB capture評価に用いる。V1誘導はRV中隔、V6誘導は外側LVを観察しており、両者のRWPTの差（V6−V1）で判定する。差がわずかなら心筋／LV中隔での捕捉（脱分極は同時）、44msより大きければセレクティブLBBAP、33msより大きければノンセレクティブかセレクティブのどちらかが達成されている。",
+   "tags": "CSP / PM / CRT / General / V6 / R-wave / Peak / Time / threshold / capture V6 R wave peak time V6-V1 RWPT差 44ms 33ms interpeak V1 RV中隔 外側LV セレクティブ ノンセレクティブ"
   },
   {
    "term": "Selective HBP",
@@ -1299,8 +1299,8 @@
    "cat": "リードレス",
    "device": "Leadless",
    "maker": "Abbott",
-   "short": "Abbott AVEIRの心房用リードレスペースメーカ。単独心房ペーシングまたはDR構成に使用。心室用と組み合わせてデュアルチャンバー構成をとれる。",
-   "tags": "Leadless / Abbott / Aveir / AR"
+   "short": "Abbott AVEIRの心房用リードレスペースメーカ（LSP201A）。単独では AAI(R)、心室用 AVEIR VR と組み合わせると AAI(R)＋VVI または DDD(R) で使える。第2世代の AVEIR AR2（LSP203A）が後継。",
+   "tags": "Leadless / Abbott / Aveir / AR LSP201A AR2 LSP203A アヴェイル LP AAI AAI+VVI DDD"
   },
   {
    "term": "Aveir DR",
@@ -1309,8 +1309,8 @@
    "cat": "リードレス",
    "device": "Leadless",
    "maker": "Abbott",
-   "short": "AVEIR ARとVRを組み合わせ、i2i通信でbeat-to-beatのデュアルチャンバー同期を行うシステム。リードレスでDDD様の動作を可能にした。",
-   "tags": "Leadless / Abbott / Aveir / DR / threshold / capture"
+   "short": "AVEIR ARとVRを組み合わせ、i2i通信でbeat-to-beatのデュアルチャンバー同期を行うシステム。リードレスでDDD様の動作を可能にした。AAI(R)＋VVI モードを選べば、心房ペーシング主体で心室はバックアップとなり、両デバイスの寿命延長が期待できる。",
+   "tags": "Leadless / Abbott / Aveir / DR / threshold / capture AAI+VVI DDD(R) i2i 4/4 寿命延長 バックアップ"
   },
   {
    "term": "i2i communication",
@@ -1319,8 +1319,8 @@
    "cat": "リードレス",
    "device": "Leadless",
    "maker": "Abbott",
-   "short": "AVEIRの心房・心室デバイス間で、低エネルギーの導電性通信を用いて毎拍イベントを共有する技術。無線に比べ消費電力が少ないのが利点。",
-   "tags": "Leadless / Abbott / Implant-to-Implant / communication"
+   "short": "AVEIRの心房・心室デバイス間で、低エネルギーの導電性通信を用いて毎拍イベントを共有する技術。無線に比べ消費電力が少ないのが利点。これによりリードなしで DDD(R) の房室同期が成立する。設定は画面上「i2i＝4/4」のように表示されるが、資料に定義の記載はない。",
+   "tags": "Leadless / Abbott / Implant-to-Implant / communication i2i 4/4 導電性通信 房室同期 DDD"
   },
   {
    "term": "Pre-mapping",
@@ -2821,16 +2821,6 @@
    "maker": "General",
    "short": "リード刺激回路のインピーダンス。通常Ωで表示し、絶縁・導体・接続状態の評価に用いる。断線では上昇、絶縁不良では低下し、推移の比較が重要。",
    "tags": "Lead / PM / ICD / CRT / General / lead / impedance / noise / oversensing / lead trouble リード抵抗 リード抵抗 impedance"
-  },
-  {
-   "term": "障害電流",
-   "en": "Current of injury",
-   "abbr": "",
-   "cat": "植込み・手技",
-   "device": "PM / CSP / Leadless",
-   "maker": "General",
-   "short": "電極固定直後の局所心筋傷害に伴うST偏位/電位変化。スクリュー固定の組織接触評価の一助。電極が心筋にしっかり接していることを示す所見。",
-   "tags": "Procedure / PM / CSP / Leadless / General / Current / of / injury / threshold / capture Injury current injury current ST上昇 損傷電流"
   },
   {
    "term": "グロメット",
@@ -9477,10 +9467,490 @@
    "en": "Current of injury",
    "abbr": "COI",
    "cat": "植込み・手技",
+   "device": "PM / ICD / CRT / CSP / Leadless",
+   "maker": "General",
+   "short": "リード先端が心筋に接触・固定された直後に生じる電位変化（ST偏位）。スクリュー固定での組織接触の指標になる一方、植込み直後の計測値を不安定にする。STモニタリングが植込みから4時間はデータを取得しないのは、これとポケット内状態の不安定さのため。LBBAPでは、大幅な変化や消失が中隔穿孔の手がかりになる。",
+   "tags": "傷害電流 current of injury COI リード固定 心筋 接触 植込み直後 4時間 STモニタリング ポケット 障害電流 injury current Injury current ST上昇 損傷電流 スクリュー固定 組織接触 CSP LBBAP 穿孔"
+  },
+  {
+   "term": "ストアードEGM容量",
+   "en": "Stored EGM capacity",
+   "abbr": "",
+   "cat": "フォロー",
+   "device": "ICD / CRT-D",
+   "maker": "Abbott",
+   "short": "Abbott のICD／CRT-Dで保存できるEGMの総時間。チャンネル数で決まり、1チャンネル45分／2チャンネル22分／3チャンネル15分。ノミナルは2チャンネル。",
+   "tags": "ストアードEGM容量 stored EGM capacity 45分 22分 15分 チャンネル 2チャンネル Abbott"
+  },
+  {
+   "term": "EGMステッチング",
+   "en": "EGM stitching",
+   "abbr": "",
+   "cat": "フォロー",
+   "device": "ICD / CRT-D",
+   "maker": "Abbott",
+   "short": "複数回のトリガのプレ／ポストをつなぎ合わせ、長いエピソードでもサイナス復帰したところまでEGMを残す仕組み。Current™・Promote™ 以降に搭載。Atlas®Ⅱ までは単純なプレ／ポスト時間で、頻拍が停止した部分が残らないことがあった。",
+   "tags": "EGMステッチング stitching ストアードEGM Current Promote Atlas サイナス復帰 Abbott"
+  },
+  {
+   "term": "リードレスECG",
+   "en": "Leadless ECG",
+   "abbr": "",
+   "cat": "センシング",
+   "device": "ICD / CRT-D",
+   "maker": "Abbott",
+   "short": "体表面心電図と同じような波形が記録される極性。ストアードEGMのチャンネル3などに割り当てる。DRモデルは A チップ to RV コイル、VRモデルは SVC to CAN。",
+   "tags": "リードレスECG leadless ECG 体表面心電図 Aチップ RVコイル SVC CAN 極性 Abbott"
+  },
+  {
+   "term": "センス アンプEGM",
+   "en": "Sense amplifier EGM",
+   "abbr": "",
+   "cat": "センシング",
+   "device": "ICD / CRT-D",
+   "maker": "Abbott",
+   "short": "ICDが検出（Binning）に用いているEGMそのもの。ストアードEGMの極性のノミナルでもある。心室センス アンプ以外の極性を表示に選んでも、検出には常にこのEGMが使われる。",
+   "tags": "センスアンプ sense amplifier EGM 検出 Binning 極性 ノミナル Abbott"
+  },
+  {
+   "term": "エピソード ツリー",
+   "en": "Episode tree",
+   "abbr": "",
+   "cat": "フォロー",
+   "device": "ICD / CRT-D",
+   "maker": "Abbott",
+   "short": "VT側（SVT／NSVT／VT）とVF側（NSVF／VF）に枝分かれし、治療成功・治療不成功の件数まで表示するエピソード集計画面。各ノードのアイコンからストアードEGMへ飛べる。",
+   "tags": "エピソードツリー episode tree SVT NSVT VT NSVF VF 治療成功 治療不成功 Merlin Abbott"
+  },
+  {
+   "term": "非持続性心室細動",
+   "en": "Non-sustained VF",
+   "abbr": "NSVF",
+   "cat": "不整脈・EP",
+   "device": "ICD / CRT-D",
+   "maker": "Abbott",
+   "short": "トリガはしたが治療にいたらなかったエピソード。チャージ中に停止したものを指す。エピソード ツリーでは NSVT とともに独立した枝として集計される。",
+   "tags": "NSVF 非持続性心室細動 non-sustained VF チャージ中に停止 未治療 エピソードツリー"
+  },
+  {
+   "term": "ログ＆サマリー",
+   "en": "Log & Summary",
+   "abbr": "",
+   "cat": "フォロー",
+   "device": "ICD / CRT-D",
+   "maker": "Abbott",
+   "short": "SVT診断・治療・HVチャージ・モーフォロジー テンプレート・デバイス リバージョンの実績を1画面に集計するタブ。個々のエピソードではなく、期間全体の傾向を見るために使う。",
+   "tags": "ログ&サマリー Log Summary SVT診断サマリー 治療サマリー HVチャージ デバイスリバージョン Merlin Abbott"
+  },
+  {
+   "term": "SVT 診断サマリー",
+   "en": "SVT diagnostic summary",
+   "abbr": "",
+   "cat": "フォロー",
+   "device": "ICD / CRT-D",
+   "maker": "Abbott",
+   "short": "鑑別の結果を AF/AFL（V＜A）／Sinus Tach（V≒A）／VT（V＞A）／SVTエピソード／エピソード内でのSVT診断 に分けて件数表示する集計。どのディスクリミネータがVTと診断したかも並ぶ。",
+   "tags": "SVT診断サマリー SVT diagnostic summary AF AFL Sinus Tach VT レートブランチ インターバルスタビリティ モーフォロジー サドンオンセット Abbott"
+  },
+  {
+   "term": "治療サマリー",
+   "en": "Therapy summary",
+   "abbr": "",
+   "cat": "フォロー",
+   "device": "ICD / CRT-D",
+   "maker": "Abbott",
+   "short": "実行されたATP・ショックの回数、中止となったショックの総数と原因（マグネット／ノイズ、Sinus 復帰）、最新HVリード インピーダンスをまとめた集計。ATP実行の結果（VT停止／未停止／加速）も併記される。",
+   "tags": "治療サマリー therapy summary ATP ショック 中止 Aborted マグネット ノイズ Sinus復帰 HVリードインピーダンス Abbott"
+  },
+  {
+   "term": "HV チャージ（エネルギー別集計）",
+   "en": "HV charge summary",
+   "abbr": "",
+   "cat": "ICD",
+   "device": "ICD / CRT-D",
+   "maker": "Abbott",
+   "short": "植込み時からのチャージ総数とマニュアル チャージ数を、26〜125V から 726〜830V、＞830V までの電圧区分ごとに集計した表。チャージ時間の推移とあわせてキャパシタと電池の状態を判断する。",
+   "tags": "HVチャージ charge summary 電圧区分 830V チャージ総数 マニュアルチャージ キャパシタ Abbott"
+  },
+  {
+   "term": "保護されるエピソード",
+   "en": "Protected episode",
+   "abbr": "",
+   "cat": "フォロー",
+   "device": "ICD / CRT-D",
+   "maker": "Abbott",
+   "short": "メモリが一杯になっても上書きされないエピソード。VT／VF／PMT／マグネットは最初の1件、心房エピソードは最新・最初・最速レート、モーフォロジーとエマージェンシー（PC）ショックは最新の1件。",
+   "tags": "保護されるエピソード protected episode 上書き FIFO 最初 最新 最速レート ストアードEGM Abbott"
+  },
+  {
+   "term": "エマージェンシー（PC）ショック",
+   "en": "Emergency shock",
+   "abbr": "PC",
+   "cat": "ICD",
+   "device": "ICD / CRT-D",
+   "maker": "Abbott",
+   "short": "プログラマの操作で実施する緊急ショック。ストアードEGMでは最新の1件が保護され、保存時間はプレトリガ12秒／ポストトリガ4秒に固定。治療サマリーでは中止となった件数も別に集計される。",
+   "tags": "エマージェンシーショック PCショック emergency shock programmer commanded 緊急ショック プレトリガ12秒 Abbott"
+  },
+  {
+   "term": "Wrap-up™ 概要",
+   "en": "Wrap-up Overview",
+   "abbr": "",
+   "cat": "フォロー",
+   "device": "ICD / CRT-D",
+   "maker": "Abbott",
+   "short": "セッションの締めくくり画面。電池情報、テスト ステータス、セッション ノート（未確認のアラートや未消去のEGM）、プログラム変更のイニシャル／現在の対比、レポートの選択・PDF出力をまとめて扱う。",
+   "tags": "Wrap-up 概要 Wrap-up Overview セッションノート プログラム変更 テストステータス PDF出力 Merlin Abbott"
+  },
+  {
+   "term": "Heart in Focus™",
+   "en": "Heart in Focus",
+   "abbr": "",
+   "cat": "フォロー",
+   "device": "PM / ICD / CRT",
+   "maker": "Abbott",
+   "short": "患者説明・紹介用の1ページ レポート。現在のパラメータに加え、日別エクササイズ トレーニング、日別合計アクティビティ、AT/AFバーデン、心室レート ヒストグラム、AMS ログの代表エピソードが載る。",
+   "tags": "Heart in Focus 紹介レポート 患者説明 エクササイズ アクティビティ AT/AFバーデン Merlin Abbott"
+  },
+  {
+   "term": "AMS ログ",
+   "en": "AMS log / AT-AF log",
+   "abbr": "",
+   "cat": "フォロー",
+   "device": "PM / ICD / CRT",
+   "maker": "Abbott",
+   "short": "モードスイッチ（AMS）エピソードの一覧。日付・時間・ピーク心房レート・持続時間が並び、EGMへ飛べる。合計32イベントで、16イベントは固定、16イベントは First in / First out。",
+   "tags": "AMSログ AT/AFログ AMS log 32イベント 16固定 FIFO ピーク心房レート 持続時間 Abbott"
+  },
+  {
+   "term": "AT/AF バーデン",
+   "en": "AT/AF burden",
+   "abbr": "",
+   "cat": "フォロー",
    "device": "PM / ICD / CRT",
    "maker": "General",
-   "short": "リード先端が心筋に接触・固定された直後に生じる電位変化。良好な固定の指標になる一方、植込み直後の計測値を不安定にする。STモニタリングが植込みから4時間はデータを取得しないのは、これとポケット内状態の不安定さのため。",
-   "tags": "傷害電流 current of injury COI リード固定 心筋 接触 植込み直後 4時間 STモニタリング ポケット"
+   "short": "一定期間に占める心房頻拍・心房細動の時間割合。抗凝固の判断や治療効果の評価に使う。アンダーセンシングやモードスイッチ設定の影響を受けるため、エピソードEGMと合わせて読む。",
+   "tags": "AT/AFバーデン AT AF burden 心房細動バーデン 抗凝固 モードスイッチ 診断データ"
+  },
+  {
+   "term": "エクササイズ＆アクティビティ診断",
+   "en": "Exercise & Activity diagnostics",
+   "abbr": "",
+   "cat": "フォロー",
+   "device": "PM / ICD / CRT",
+   "maker": "Abbott",
+   "short": "1分以上の活動を運動としてとらえ、目標心拍数に対する日別の運動時間と、30日間の日別活動時間をトレンド表示する診断機能。心臓リハビリテーションの評価に使う。",
+   "tags": "エクササイズ アクティビティ 診断機能 exercise activity 目標心拍数 30日 デイリートレンド 心臓リハビリ Abbott"
+  },
+  {
+   "term": "目標心拍数",
+   "en": "Target heart rate",
+   "abbr": "",
+   "cat": "フォロー",
+   "device": "PM / ICD / CRT",
+   "maker": "Abbott",
+   "short": "エクササイズ診断で「患者の運動として理想的な心拍数」とする帯。最大心拍数に対する％で設定し、これを基準にバーが3色（超えている／目標帯／下回っている）に分かれる。",
+   "tags": "目標心拍数 ターゲットレート target heart rate 最大心拍数 % エクササイズ Abbott"
+  },
+  {
+   "term": "最大心拍数（220−年齢）",
+   "en": "Maximum heart rate",
+   "abbr": "",
+   "cat": "フォロー",
+   "device": "PM / ICD / CRT",
+   "maker": "General",
+   "short": "年齢から推定する運動時の上限心拍数。220から年齢を引いて求める。Abbott のエクササイズ診断では患者データの生年月日から自動計算し、未入力の場合は60歳として計算される。",
+   "tags": "最大心拍数 220-年齢 maximum heart rate 予測最大心拍数 目標心拍数 生年月日 60歳"
+  },
+  {
+   "term": "アクティビティの再較正",
+   "en": "Activity recalibration",
+   "abbr": "",
+   "cat": "フォロー",
+   "device": "PM / ICD / CRT",
+   "maker": "Abbott",
+   "short": "患者の容態が変化したときに活動レベルを測り直す操作。いったん開始すると自動的に完了し、途中で中止できない。",
+   "tags": "アクティビティの再較正 recalibration 活動レベル 再測定 中止できない Abbott"
+  },
+  {
+   "term": "リード留置順序（CRT）",
+   "en": "Lead placement order",
+   "abbr": "",
+   "cat": "植込み・手技",
+   "device": "CRT",
+   "maker": "General",
+   "short": "①RV→RA→CS、②RV→CS→RA、③CS→RV→RA の3通り。①②はRVによるバックアップが得られCS入口部のマーカーにも使えるが、CS留置後のRV位置変更が難しい。③は心腔内スペースに余裕があり、CS留置位置からRV位置を決められる。②③はRA留置時にCSリードへ引っ掛ける可能性がある。",
+   "tags": "リード留置順序 lead placement order RV RA CS バックアップ CS入口部 マーカー ディスロッジ CRT植込み"
+  },
+  {
+   "term": "アウターシース（CRT植込み）",
+   "en": "Outer sheath",
+   "abbr": "",
+   "cat": "植込み・手技",
+   "device": "CRT",
+   "maker": "General",
+   "short": "CSガイディング（CPS）を挿入する際に併用する外側のシース。10F（一部メーカーのシースでは9F）を使う。ガイディングの入替えが容易になり細い鎖骨下静脈でも操作しやすい一方、外径が太くスリッティング後の出血や、抜去作業の追加というデメリットがある。",
+   "tags": "アウターシース outer sheath 10F 9F ガイディング CPS 鎖骨下静脈 スリッティング CRT植込み"
+  },
+  {
+   "term": "テスト ショット（CS造影）",
+   "en": "Test injection",
+   "abbr": "",
+   "cat": "CRT・CSP",
+   "device": "CRT",
+   "maker": "General",
+   "short": "本番の造影前に少量の造影剤で行う確認撮影。CSの血管径（バルーンで閉塞できるか）と枝の有無・位置（枝を塞がないか）を確かめ、バルーンを膨らませる位置を決める。",
+   "tags": "テストショット test injection CS造影 血管径 ブランチ バルーン閉塞 分岐部 CRT植込み"
+  },
+  {
+   "term": "オクルージョン バルーン",
+   "en": "Occlusion balloon",
+   "abbr": "",
+   "cat": "CRT・CSP",
+   "device": "CRT",
+   "maker": "General",
+   "short": "CS本管を一時的に閉塞して静脈造影を行うためのバルーン カテーテル。エンドホールタイプを用い、サイドホールのあるものは使わない。先端が硬いためガイドワイヤを先行させる。造影は2方向以上、左室が全て見える位置で撮影するのが望ましい。",
+   "tags": "オクルージョンバルーン occlusion balloon エンドホール サイドホール CS造影 2方向 逆行性造影 CRT植込み"
+  },
+  {
+   "term": "ターゲット ブランチ",
+   "en": "Target branch",
+   "abbr": "",
+   "cat": "CRT・CSP",
+   "device": "CRT",
+   "maker": "General",
+   "short": "CSリードを留置する目標の冠静脈枝。本管からの屈曲度合、ターゲットエリアの枝の太さ、そこまでの蛇行度合で選ぶ。0.014インチのガイドワイヤで選択し、可能な限り深くまで進めておく。",
+   "tags": "ターゲットブランチ target branch 冠静脈 側枝 屈曲 蛇行 0.014 ガイドワイヤ 側壁枝 CRT植込み"
+  },
+  {
+   "term": "CSリードの最終測定極性",
+   "en": "Final LV lead measurement polarity",
+   "abbr": "",
+   "cat": "CRT・CSP",
+   "device": "CRT",
+   "maker": "Abbott",
+   "short": "留置後にPSAで確認する極性の組合せ。IS-1／DF-1 および DF-4 構成では Bi-polar／LVtip-RVcoil／LVring-RVcoil の3極性、Anthem™ は LVtip-CAN を含む4極性、Frontier™Ⅱ は LVring-RVring を除く3極性で測定する。",
+   "tags": "CSリード 最終測定 極性 Bi-polar LVtip-RVcoil LVring-RVcoil LVtip-CAN Anthem FrontierⅡ PSA Abbott"
+  },
+  {
+   "term": "本体へのリード接続順序",
+   "en": "Lead connection order",
+   "abbr": "",
+   "cat": "植込み・手技",
+   "device": "ICD / CRT-D",
+   "maker": "Abbott",
+   "short": "コネクタ形状によって推奨順が違う。IS-1／DF-1 構成は RV IS-1→RV DF-1→RV SVC DF-1→LV IS-1→RA IS-1（IS-1は2箇所留め、DF-1は1箇所留め）、DF-4 構成は RV DF4→LV IS-1→RA IS-1（ともに1箇所留め）。Frontier™Ⅱ は下から LV IS-1→RV IS-1→RA IS-1 で、他機種と配列が異なる。",
+   "tags": "リード接続順序 コネクタ IS-1 DF-1 DF-4 SVC LV RA 留めネジ FrontierⅡ Promote+ 配列 Abbott"
+  },
+  {
+   "term": "フレンチサイズ",
+   "en": "French size",
+   "abbr": "Fr",
+   "cat": "植込み・手技",
+   "device": "PM / ICD / CRT",
+   "maker": "General",
+   "short": "カテーテル・シースの外径を表す単位。1Fr＝1/3mmで、外径(mm)＝Fr÷3。6Fr＝2.00mm、7Fr＝2.33mm、9Fr＝3.00mm、10Fr＝3.33mm。",
+   "tags": "フレンチサイズ French size Fr 外径 1/3mm 6Fr 7Fr 9Fr 10Fr シース カテーテル 換算"
+  },
+  {
+   "term": "ゲージ",
+   "en": "Gauge",
+   "abbr": "G",
+   "cat": "植込み・手技",
+   "device": "PM / ICD / CRT",
+   "maker": "General",
+   "short": "針や細径チューブの外径を表す単位。数字が大きいほど細い。0.9mm＝20G、0.8mm＝21G、0.7mm＝22G、0.6mm＝23G、0.5mm＝25G。色分け（イエロー、ディープグリーン、ブラック等）が対応づけられている。",
+   "tags": "ゲージ Gauge G 外径 20G 21G 22G 23G 25G カラーコード 穿刺針 換算"
+  },
+  {
+   "term": "インチ−ミリ換算（ガイドワイヤ径）",
+   "en": "Inch to millimeter conversion",
+   "abbr": "",
+   "cat": "植込み・手技",
+   "device": "PM / ICD / CRT",
+   "maker": "General",
+   "short": "1インチ＝25.4mm。0.014インチ＝0.36mm、0.018インチ＝0.46mm、0.035インチ＝0.89mm、0.038インチ＝0.97mm。7Fr内腔に6Frの子カテを入れると差は1Fr（0.33mm）しかなく、0.014インチ（0.36mm）は同時に通らない。",
+   "tags": "インチ ミリ 換算 25.4mm 0.014 0.018 0.035 0.038 ガイドワイヤ 内腔 子カテ 同時挿入"
+  },
+  {
+   "term": "セレクティブLBBAP",
+   "en": "Selective LBBAP",
+   "abbr": "",
+   "cat": "CRT・CSP",
+   "device": "PM / CRT",
+   "maker": "General",
+   "short": "左脚領域のみを捕捉し、局所心筋の直接捕捉を伴わない左脚領域ペーシング。ペーシング刺激とQRS波の間に等電位間隔がみられる。高出力から低出力へ下げながら、ノンセレクティブからの移行の有無を観察して判定する。",
+   "tags": "セレクティブLBBAP selective LBBAP 等電位間隔 isoelectric interval 高出力 低出力 移行 LBB捕捉"
+  },
+  {
+   "term": "ノンセレクティブLBBAP",
+   "en": "Non-selective LBBAP",
+   "abbr": "",
+   "cat": "CRT・CSP",
+   "device": "PM / CRT",
+   "maker": "General",
+   "short": "左脚領域と周囲の中隔心筋を同時に捕捉する左脚領域ペーシング。刺激とQRS波の間に等電位間隔がみられない。出力を変えながら、ノンセレクティブLBBAPからLV中隔捕捉への移行や、セレクティブLBBAPへの移行がないかを見極める。",
+   "tags": "ノンセレクティブLBBAP non-selective LBBAP 等電位間隔なし LVSP LV中隔捕捉 移行 出力差"
+  },
+  {
+   "term": "V6−V1 RWPT差",
+   "en": "V6-V1 interpeak interval",
+   "abbr": "",
+   "cat": "CRT・CSP",
+   "device": "PM / CRT",
+   "maker": "General",
+   "short": "V6誘導とV1誘導のR波ピーク到達時間の差。V1はRV中隔、V6は外側LVの脱分極を反映するため、差が大きいほど左脚を介した早い左室興奮が起きていることを示す。44ms超でセレクティブLBBAP、33ms超でノンセレクティブかセレクティブのいずれかが達成されている。",
+   "tags": "V6-V1 RWPT差 interpeak interval 44ms 33ms R波ピーク到達時間 V1 V6 LBB捕捉判定"
+  },
+  {
+   "term": "ペースマッピング（LBBAP）",
+   "en": "Pace mapping for LBBAP",
+   "abbr": "",
+   "cat": "CRT・CSP",
+   "device": "PM / CRT",
+   "maker": "Abbott",
+   "short": "留置部位を探すために行う単極ペーシング。VVIモードで固有心拍より10〜15bpm速く、振幅5Vまたは7V、パルス幅0.4msまたは0.5msで行う。目標波形は、第III誘導より第II誘導のR波の陽性成分が多く、aVRが陰性でaVLが陽性、V1でノッチのあるQS波形。右室流出路起源ではaVLもaVRも陰性になる。",
+   "tags": "ペースマッピング pace mapping VVI 10bpm 15bpm 5V 7V 0.4ms 0.5ms aVR aVL V1 QS ノッチ 右室流出路 Abbott LBBAP"
+  },
+  {
+   "term": "ヘリックス ロッキング ツール",
+   "en": "Helix Locking Tool",
+   "abbr": "HLT",
+   "cat": "植込み・手技",
+   "device": "PM / ICD / CRT",
+   "maker": "Abbott",
+   "short": "ヘリックスの伸展と格納を制御し、リードの固定を助ける専用ツール。Tendril™ STS 2088TC では時計回りに8〜18回転でヘリックスを伸展させ、中隔組織内に固定したあとさらに5回転させる。",
+   "tags": "ヘリックスロッキングツール HLT Helix Locking Tool 8回転 18回転 5回転 Tendril STS 2088TC 伸展 格納 Abbott"
+  },
+  {
+   "term": "リード本体の回転による前進（LBBAP）",
+   "en": "Lead body rotation",
+   "abbr": "",
+   "cat": "植込み・手技",
+   "device": "PM / CRT",
+   "maker": "Abbott",
+   "short": "中隔内へリードを進めるために、トルクを溜めないようリード本体を時計回りに回転させながら挿入する操作。深部へ進むとV1誘導にRBBB様波形（R波が陽性となり qR 群または rSR' 群）が現れる。ペーシングによる障害電流（COI）とインピーダンスを同時にモニターする。",
+   "tags": "リード本体 回転 トルク RBBB波形 qR rSR V1 COI インピーダンス 中隔 LBBAP Abbott"
+  },
+  {
+   "term": "単極ペーシング インピーダンス（LBBAP）",
+   "en": "Unipolar pacing impedance in LBBAP",
+   "abbr": "",
+   "cat": "植込み・手技",
+   "device": "PM / CRT",
+   "maker": "Abbott",
+   "short": "中隔の奥深くへ進むにつれて徐々に上昇し、リードがLV心内膜に近づくと低下する。大幅な低下がみられる場合は穿孔が生じている可能性がある。LVATが短く一貫していてインピーダンスが高いままであれば、さらに回転させて固定する。",
+   "tags": "単極ペーシングインピーダンス unipolar impedance 上昇 低下 穿孔 中隔 LV心内膜 LVAT Abbott LBBAP"
+  },
+  {
+   "term": "中隔穿孔（LBBAP）",
+   "en": "Septal perforation",
+   "abbr": "",
+   "cat": "植込み・手技",
+   "device": "PM / CRT",
+   "maker": "Abbott",
+   "short": "リードが中隔を貫通してLV内腔に達した状態。障害電流（COI）の大幅な変化や消失、インピーダンスの大幅な低下が手がかりになる。先端ユニポーラのCOIが陰性の場合、またはリングのCOIが先端のCOIより大きい場合は穿孔を疑う。",
+   "tags": "中隔穿孔 septal perforation COI 消失 陰性 リング 先端 インピーダンス低下 LBBAP Abbott"
+  },
+  {
+   "term": "LBBAP の測定目標値",
+   "en": "PSA targets for LBBAP",
+   "abbr": "",
+   "cat": "植込み・手技",
+   "device": "PM / CRT",
+   "maker": "Abbott",
+   "short": "ペーシング閾値は0.5msで1.5V未満、バイポーラセンシングは4mV超が良いとされる。顕著な障害電流があると最初は閾値が高く出ることがあるため、数分後に再テストする。",
+   "tags": "LBBAP 閾値 1.5V 0.5ms センシング 4mV 再テスト COI PSA測定 Abbott"
+  },
+  {
+   "term": "閾値テストによるLBB捕捉の判定",
+   "en": "Threshold test for LBB capture",
+   "abbr": "",
+   "cat": "CRT・CSP",
+   "device": "PM / CRT",
+   "maker": "General",
+   "short": "出力を下げながらV6−V1のRWPTの変化を見る方法。低出力でRWPTに15msを超える延長がみられた場合は、LV中隔心筋捕捉（セレクティブLBBAP捕捉）が消失している。",
+   "tags": "閾値テスト threshold test RWPT 15ms 延長 セレクティブ捕捉 消失 LBB capture"
+  },
+  {
+   "term": "LBBAP のプログラミング",
+   "en": "Programming for LBBAP",
+   "abbr": "",
+   "cat": "CRT・CSP",
+   "device": "PM / CRT",
+   "maker": "Abbott",
+   "short": "狭いQRS波を達成するには、ペース後AVディレイ（PAVD）とセンス後AVディレイ（SAVD）の最適化が必要になる。バイポーラペーシングで3.5〜5Vの高出力を用いると陽極刺激が観察されることがあり、その場合はV1誘導のR波の最後の部分が低減することがある。",
+   "tags": "LBBAP プログラミング PAVD SAVD AVディレイ 最適化 狭いQRS 陽極刺激 3.5V 5V バイポーラ V1 Abbott"
+  },
+  {
+   "term": "デリバリーカテーテルの向きの目安",
+   "en": "Catheter orientation tip",
+   "abbr": "",
+   "cat": "植込み・手技",
+   "device": "PM / CRT",
+   "maker": "Abbott",
+   "short": "正常な心臓では、カテーテルのフラッシュポートが患者の足の方向を向いているとき、カテーテル先端は中隔の向きになる。フラッシュポートのキャップは三方活栓に交換しておくとよい。",
+   "tags": "フラッシュポート 三方活栓 カテーテルの向き 中隔 足方向 LBBAP 手技のヒント Abbott"
+  },
+  {
+   "term": "心臓用カテーテルイントロデューサキット",
+   "en": "Cardiac catheter introducer kit",
+   "abbr": "",
+   "cat": "植込み・手技",
+   "device": "PM / ICD / CRT",
+   "maker": "General",
+   "short": "デリバリーカテーテルとダイレータからなる製品群の一般的名称（JMDN 10598000、高度管理医療機器）。ロケーター 3D などが該当する。",
+   "tags": "心臓用カテーテルイントロデューサキット JMDN 10598000 一般的名称 高度管理医療機器 ガイディングカテーテル ダイレータ ロケーター3D"
+  },
+  {
+   "term": "UltiPace™ リード",
+   "en": "UltiPace lead",
+   "abbr": "",
+   "cat": "リード",
+   "device": "PM / CRT",
+   "maker": "Abbott",
+   "short": "Tendril™ STS を前身とするペーシングリード。遠位部の断面はTendril STSと同一だが、近位部にPTFEの内側・外側ライナーを追加し外側絶縁体（Optim）の厚みを増して摩耗とリード損傷への耐性を高めている。先端に柔らかいシャフト部を設けず、チップ電極からリング電極まで14.5mmの剛体部として硬さを保つ設計。シースイントロデューサ径は6Frのまま。",
+   "tags": "UltiPace アルティペース LPA1231 Tendril STS PTFEライナー Optim 14.5mm 剛体部 6Fr 摩耗 リード損傷 Abbott"
+  },
+  {
+   "term": "Aveir AR2",
+   "en": "Aveir AR2",
+   "abbr": "",
+   "cat": "リードレス",
+   "device": "Leadless",
+   "maker": "Abbott",
+   "short": "第2世代の心房用リードレスペースメーカ（LSP203A）。デバイスサイズは従来のままで、シングル・デュアルチャンバの全ペーシングモードで従来比 約25％の電池寿命向上が示されている。AAI(R) または AAI(R)＋VVI で使用した場合、電池寿命は10年以上と予測されている。",
+   "tags": "Aveir AR2 AVEIR AR2 LSP203A 第2世代 心房用 リードレス 25% 10年以上 アヴェイル LP Abbott"
+  },
+  {
+   "term": "AAI(R)＋VVI モード",
+   "en": "AAI(R) + VVI mode",
+   "abbr": "",
+   "cat": "モード",
+   "device": "Leadless",
+   "maker": "Abbott",
+   "short": "AVEIR のリードレス2デバイス構成で選べるモード。心房ペーシングを主体とし、必要に応じて心室のバックアップペーシングを行う。常時 DDD(R) で通信するより消費電力が小さく、両デバイスの寿命延長が期待できる。房室伝導が保たれた洞不全症候群が主な対象。",
+   "tags": "AAI(R)+VVI AAI VVI バックアップペーシング リードレス AVEIR 寿命延長 洞不全症候群 Abbott"
+  },
+  {
+   "term": "AVEIR DR i2i™ 試験",
+   "en": "AVEIR DR i2i study",
+   "abbr": "",
+   "cat": "エビデンス",
+   "device": "Leadless",
+   "maker": "Abbott",
+   "short": "デュアルチャンバ リードレスペースメーカの1年間の安全性と性能を評価した試験（Knops RE ほか、Circ Arrhythm Electrophysiol 2025;18(4):e013619）。植込み後6〜12か月の平均心房ペーシング率は、洞不全症候群患者群で42.6％、房室ブロック患者群で14.0％と報告されている。",
+   "tags": "AVEIR DR i2i 試験 Knops Circulation Arrhythmia Electrophysiology 2025 42.6% 14.0% 心房ペーシング率 デュアルチャンバ リードレス"
+  },
+  {
+   "term": "心房ペーシング率",
+   "en": "Atrial pacing percentage (leadless)",
+   "abbr": "AP%",
+   "cat": "フォロー",
+   "device": "PM / Leadless",
+   "maker": "General",
+   "short": "観察期間に心房がペーシングされていた割合。電池寿命の見積りに直結する。リードレスのデュアルチャンバでは、洞不全症候群で高く（AVEIR DR i2i 試験で平均42.6％）、房室ブロックでは低い（同14.0％）ため、疾患によって想定が大きく変わる。",
+   "tags": "心房ペーシング率 AP% atrial pacing percentage 42.6% 14.0% 洞不全症候群 房室ブロック 電池寿命 リードレス"
   }
  ],
  "feats": [
